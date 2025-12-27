@@ -1,145 +1,160 @@
-// NAVIGACE
-function switchTab(viewId, navElement) {
-    document.querySelectorAll('.view').forEach(el => {
-        el.classList.remove('active');
-        el.classList.add('hidden'); // Zajistí skrytí
-    });
-    document.getElementById(viewId).classList.remove('hidden');
-    document.getElementById(viewId).classList.add('active');
+// --- LOGIKA APLIKACE (CLEAN VERSION) ---
 
-    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-    navElement.classList.add('active');
-}
-
-// WIKI RENDER
+// 1. GLOBÁLNÍ PROMĚNNÉ
 const cardsGrid = document.getElementById('cards-grid');
 const searchInput = document.getElementById('searchInput');
 
-function renderCards(data) {
-    cardsGrid.innerHTML = '';
-    
-    // Seřadíme data podle hodnocení (nepovinné, ale vypadá to líp)
-    // data.sort((a, b) => b.rating - a.rating); 
-
-    data.forEach((item, index) => {
-        const card = document.createElement('div');
-        
-        // Přidáme základní třídy
-        card.className = `card ${item.colorType}`;
-        
-        // --- MAGIE ANIMACE ---
-        // Každá karta dostane zpoždění o 0.05s větší než ta předchozí.
-        // Vytvoří to efekt "domina".
-        card.style.animationDelay = `${index * 0.05}s`;
-
-        // Barva pro hodnocení
-        let rateColor = '#fff';
-        if(item.colorType === 'green') rateColor = 'var(--neon-green)';
-        if(item.colorType === 'yellow') rateColor = 'var(--neon-yellow)';
-        if(item.colorType === 'red') rateColor = 'var(--neon-red)';
-
-        card.onclick = () => openDetailView(item);
-        
-        // Nová HTML struktura karty
-        card.innerHTML = `
-            <div class="card-header">
-                <span class="card-category">${item.category}</span>
-                <div class="card-rating" style="color:${rateColor}">
-                    ${item.rating}
-                </div>
-            </div>
-            
-            <h3>${item.name}</h3>
-            <p class="card-desc">${item.shortDesc}</p>
-        `;
-        
-        cardsGrid.appendChild(card);
+// 2. NAVIGACE (TABS)
+function switchTab(viewId, navElement) {
+    // Skrýt všechny views
+    document.querySelectorAll('.view').forEach(el => {
+        el.classList.remove('active');
+        el.classList.add('hidden');
     });
+    // Zobrazit vybraný
+    document.getElementById(viewId).classList.remove('hidden');
+    document.getElementById(viewId).classList.add('active');
+
+    // Upravit menu (spodní lištu)
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    if(navElement) {
+        navElement.classList.add('active');
+    }
 }
 
-searchInput.addEventListener('input', (e) => {
-    const term = e.target.value.toLowerCase();
-    const filtered = supplementsData.filter(i => i.name.toLowerCase().includes(term));
-    renderCards(filtered);
-});
-
-// MODAL LOGIC
-const detailOverlay = document.getElementById('detail-overlay');
-// Funkce pro otevření Detailu (nahrazuje openModal)
+// 3. FULL SCREEN DETAIL LOGIKA
 function openDetailView(item) {
-    // 1. Nastavíme barvy podle typu (Green/Yellow/Red)
+    // Nastavení barev podle typu
     let themeColor = 'var(--ui-accent)';
-    let glowColor = 'rgba(255,255,255,0.1)';
+    let glowColor = 'rgba(0, 243, 255, 0.4)';
     
-    if(item.colorType === 'green') { themeColor = 'var(--neon-green)'; glowColor = 'rgba(0, 255, 65, 0.4)'; }
-    if(item.colorType === 'yellow') { themeColor = 'var(--neon-yellow)'; glowColor = 'rgba(255, 234, 0, 0.4)'; }
-    if(item.colorType === 'red') { themeColor = 'var(--neon-red)'; glowColor = 'rgba(255, 0, 60, 0.4)'; }
+    if(item.colorType === 'green') { themeColor = 'var(--neon-green)'; glowColor = 'rgba(0, 255, 65, 0.5)'; }
+    if(item.colorType === 'yellow') { themeColor = 'var(--neon-yellow)'; glowColor = 'rgba(255, 234, 0, 0.5)'; }
+    if(item.colorType === 'red') { themeColor = 'var(--neon-red)'; glowColor = 'rgba(255, 0, 60, 0.5)'; }
 
-    // 2. Naplníme data do HTML
-    document.getElementById('detail-main-title').innerText = item.name;
-    document.getElementById('detail-main-title').style.color = themeColor;
+    // Plnění dat do HTML elementů v detailu
+    const titleEl = document.getElementById('detail-main-title');
+    titleEl.innerText = item.name;
+    titleEl.style.color = themeColor;
     
     document.getElementById('detail-category-badge').innerText = item.category;
-    document.getElementById('detail-rating-big').innerText = item.rating + '/10';
-    document.getElementById('detail-rating-big').style.color = themeColor;
-    document.getElementById('detail-rating-big').style.border = `1px solid ${themeColor}`;
+    
+    const ratingEl = document.getElementById('detail-rating-big');
+    ratingEl.innerText = item.rating + '/10';
+    ratingEl.style.color = themeColor;
+    ratingEl.style.borderColor = themeColor;
 
-    // Nastavení "hero" efektu (záře na pozadí)
+    // Nastavení "hero" záře na pozadí
     document.querySelector('.detail-hero').style.setProperty('--glow-color', glowColor);
 
-    // Placeholder pro obrázek (zobrazí první písmeno nebo ikonku)
-    // Pokud bys měl v data.js u látky: image: 'obrazek.jpg', dal bys sem <img> tag.
+    // Placeholder obrázku
     const placeholder = document.getElementById('detail-image-placeholder');
-    placeholder.innerText = item.name.substring(0, 2).toUpperCase(); // První 2 písmena
-    placeholder.style.border = `2px solid ${themeColor}`;
+    placeholder.innerText = item.name.substring(0, 2).toUpperCase();
+    placeholder.style.borderColor = themeColor;
     placeholder.style.color = themeColor;
-    placeholder.style.boxShadow = `0 0 20px ${glowColor}`;
+    placeholder.style.boxShadow = `0 0 25px ${glowColor}`;
 
-    // Texty
-    document.getElementById('detail-type-text').innerText = item.colorType.toUpperCase();
-    document.getElementById('detail-dose-short').innerText = item.dosage.split(' ')[0] + '...'; // Jen kousek textu
+    // Texty a popisy
+    const typeText = document.getElementById('detail-type-text');
+    typeText.innerText = item.colorType.toUpperCase();
+    typeText.style.color = themeColor;
     
+    // Zkrácení dávkování pro hlavičku (pokud existuje)
+    let shortDose = item.dosage ? item.dosage.split(' ')[0] : 'N/A';
+    document.getElementById('detail-dose-short').innerText = shortDose;
+
     document.getElementById('detail-full-desc').innerText = item.fullDesc;
-    // Pokud nemáš v datech "benefits", použijeme obecný text nebo description
+    // Pokud nemáš v datech "benefits", použijeme fullDesc nebo jiný text
     document.getElementById('detail-benefits').innerText = item.fullDesc; 
     document.getElementById('detail-dosage-long').innerText = item.dosage;
     document.getElementById('detail-warning-long').innerText = item.warning;
 
-    // 3. Přepneme View (Skryjeme Wiki, Zobrazíme Detail)
+    // PŘEPNUTÍ POHLEDU (Z Wiki na Detail)
     document.getElementById('view-wiki').classList.remove('active');
     document.getElementById('view-wiki').classList.add('hidden');
     
-    // Skryjeme Search bar v headeru (volitelné, vypadá to líp)
-    document.querySelector('header').style.display = 'none';
-
     document.getElementById('view-detail').classList.remove('hidden');
     document.getElementById('view-detail').classList.add('active');
+    
+    // Skrytí navigace (hlavičky a patičky) pro "ponoření" do obsahu
+    document.body.classList.add('detail-active');
     
     // Scroll nahoru
     window.scrollTo(0,0);
 }
 
-// Funkce Zpět
 function closeDetailView() {
+    // Zavřít detail
     document.getElementById('view-detail').classList.remove('active');
     document.getElementById('view-detail').classList.add('hidden');
 
+    // Otevřít zpět Wiki
     document.getElementById('view-wiki').classList.remove('hidden');
     document.getElementById('view-wiki').classList.add('active');
     
-    // Zobrazit header
-    document.querySelector('header').style.display = 'block';
+    // Zobrazení navigace zpět
+    document.body.classList.remove('detail-active');
 }
 
+// 4. RENDEROVÁNÍ KARET (WIKI)
+function renderCards(data) {
+    cardsGrid.innerHTML = '';
+    
+    if(!data) { console.error("Žádná data pro renderCards!"); return; }
 
-// DENÍK & CYKLY
+    data.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = `card ${item.colorType}`;
+        // Kaskádová animace (každá karta se objeví o trochu později)
+        card.style.animationDelay = `${index * 0.05}s`; 
+
+        // Po kliknutí otevřít detail
+        card.onclick = () => openDetailView(item);
+        
+        // Barva ratingu
+        let rateColor = '#fff';
+        if(item.colorType === 'green') rateColor = 'var(--neon-green)';
+        if(item.colorType === 'yellow') rateColor = 'var(--neon-yellow)';
+        if(item.colorType === 'red') rateColor = 'var(--neon-red)';
+
+        card.innerHTML = `
+            <div class="card-header">
+                <span class="card-category">${item.category}</span>
+                <div class="card-rating" style="color:${rateColor}; border-color:${rateColor}">
+                    ${item.rating}
+                </div>
+            </div>
+            <h3>${item.name}</h3>
+            <p class="card-desc">${item.shortDesc}</p>
+        `;
+        cardsGrid.appendChild(card);
+    });
+}
+
+// Vyhledávání
+searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    // Filtrujeme globální proměnnou supplementsData (načtenou z data.js)
+    if(typeof supplementsData !== 'undefined') {
+        const filtered = supplementsData.filter(i => i.name.toLowerCase().includes(term));
+        renderCards(filtered);
+    }
+});
+
+
+// 5. DENÍK & CYKLY (Logika)
 let myDiary = JSON.parse(localStorage.getItem('supplez_diary_v2')) || [];
 
 function addDiaryEntry(moodColor) {
-    const name = document.getElementById('diary-name').value;
-    const dose = document.getElementById('diary-dose').value;
-    const cycle = document.getElementById('diary-cycle').value || "Obecné"; // Default tag
-    const note = document.getElementById('diary-note').value;
+    const nameInput = document.getElementById('diary-name');
+    const doseInput = document.getElementById('diary-dose');
+    const cycleInput = document.getElementById('diary-cycle');
+    const noteInput = document.getElementById('diary-note');
+
+    const name = nameInput.value;
+    const dose = doseInput.value;
+    const cycle = cycleInput.value || "Obecné"; 
+    const note = noteInput.value;
 
     if(!name) { alert("Napiš název látky!"); return; }
 
@@ -154,10 +169,10 @@ function addDiaryEntry(moodColor) {
     saveData();
     renderDiary();
     
-    // Reset polí (kromě cyklu, ten asi chceš nechat stejný)
-    document.getElementById('diary-name').value = '';
-    document.getElementById('diary-dose').value = '';
-    document.getElementById('diary-note').value = '';
+    // Vyčistit pole (kromě cyklu)
+    nameInput.value = '';
+    doseInput.value = '';
+    noteInput.value = '';
 }
 
 function deleteEntry(id) {
@@ -168,12 +183,10 @@ function deleteEntry(id) {
     }
 }
 
-// Renderování deníku s filtrem
 function renderDiary() {
     const list = document.getElementById('diary-list');
     const filterVal = document.getElementById('cycle-filter').value;
     
-    // Aktualizace filtru (dropdownu)
     updateFilterDropdown();
 
     list.innerHTML = '';
@@ -208,13 +221,11 @@ function renderDiary() {
     });
 }
 
-// Dynamické naplnění dropdownu podle existujících cyklů
 function updateFilterDropdown() {
     const select = document.getElementById('cycle-filter');
     const currentVal = select.value;
     const uniqueCycles = [...new Set(myDiary.map(item => item.cycle))];
     
-    // Zachováme "Vše", smažeme zbytek a znovu naplníme
     select.innerHTML = '<option value="all">Zobrazit vše</option>';
     
     uniqueCycles.forEach(c => {
@@ -224,7 +235,6 @@ function updateFilterDropdown() {
         select.appendChild(opt);
     });
 
-    // Pokud vybraná hodnota stále existuje, nastavíme ji zpět
     if(uniqueCycles.includes(currentVal) || currentVal === 'all') {
         select.value = currentVal;
     }
@@ -234,9 +244,7 @@ function saveData() {
     localStorage.setItem('supplez_diary_v2', JSON.stringify(myDiary));
 }
 
-
-// NASTAVENÍ (EXPORT / IMPORT)
-
+// 6. NASTAVENÍ (EXPORT / IMPORT / CLEAR)
 function exportData() {
     const dataStr = JSON.stringify(myDiary, null, 2);
     const blob = new Blob([dataStr], { type: "application/json" });
@@ -283,6 +291,14 @@ function clearAllData() {
     }
 }
 
-// INIT
-renderCards(supplementsData);
+// 7. INICIALIZACE APLIKACE
+// Kontrola, zda jsou data načtena ze souboru data.js
+if(typeof supplementsData !== 'undefined') {
+    renderCards(supplementsData);
+} else {
+    cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px;">Chyba: Data nenačtena.<br>Ujisti se, že "data.js" je v index.html načten PŘED "script.js".</p>';
+    console.error("supplementsData is not defined");
+}
+
+// Inicializace deníku
 renderDiary();
