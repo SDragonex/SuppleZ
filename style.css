@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #000000;
+    --card-bg: #0a0a0a;
+    --input-bg: #111;
+    --text-main: #e0e0e0;
+    --text-dim: #888;
+    
+    /* Barvy indikátorů */
+    --neon-green: #00ff41;
+    --neon-yellow: #ffea00; /* Nová žlutá */
+    --neon-red: #ff003c;
+    
+    /* Hlavní barva UI (zůstává modrá) */
+    --ui-accent: #00f3ff; 
+    
+    --nav-height: 65px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: calc(var(--nav-height) + 20px);
+}
+
+/* Header & UI */
+header {
+    background: rgba(0,0,0,0.9); padding: 15px; text-align: center;
+    border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 50; backdrop-filter: blur(5px);
+}
+.logo { font-family: 'Rajdhani', sans-serif; font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; color: #fff; }
+.highlight { color: var(--ui-accent); text-shadow: 0 0 10px var(--ui-accent); }
+.section-title { font-family: 'Rajdhani', sans-serif; margin-bottom: 15px; color: var(--ui-accent); border-left: 3px solid var(--ui-accent); padding-left: 10px; }
+
+/* Inputs & Forms */
+input, textarea, select {
+    width: 100%; background: var(--input-bg); border: 1px solid #333; color: #fff;
+    padding: 12px; margin-bottom: 10px; border-radius: 8px; font-family: inherit; outline: none;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--ui-accent); }
+.row { display: flex; gap: 10px; }
+
+/* WIKI Cards */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
+.card {
+    background: var(--card-bg); border: 1px solid #222; border-radius: 12px; padding: 15px;
+    cursor: pointer; transition: 0.2s; position: relative; overflow: hidden;
+}
+.card:hover { transform: translateY(-3px); border-color: #444; }
+
+/* Barevné proužky nahoře */
+.card.green { border-top: 3px solid var(--neon-green); }
+.card.yellow { border-top: 3px solid var(--neon-yellow); }
+.card.red { border-top: 3px solid var(--neon-red); }
+
+.card h3 { font-family: 'Rajdhani'; margin-bottom: 5px; font-size: 1.2rem; }
+.card-desc { font-size: 0.8rem; color: var(--text-dim); }
+.rating-badge { position: absolute; top: 10px; right: 10px; font-size: 0.7rem; font-weight: bold; }
+
+/* DIARY Styles */
+.diary-input-box { background: #080808; padding: 15px; border-radius: 12px; border: 1px solid #222; margin-bottom: 20px; }
+.diary-buttons { display: flex; gap: 10px; margin-top: 5px; }
+.diary-buttons button {
+    flex: 1; padding: 10px; border: none; border-radius: 6px; color: #000; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 0.8rem;
+}
+
+/* Tlačítka nálady */
+.btn-green { background: var(--neon-green); box-shadow: 0 0 10px rgba(0,255,65,0.2); }
+.btn-yellow { background: var(--neon-yellow); box-shadow: 0 0 10px rgba(255,234,0,0.2); }
+.btn-red { background: var(--neon-red); box-shadow: 0 0 10px rgba(255,0,60,0.2); }
+
+/* Filtr box */
+.filter-box { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #888; font-size: 0.9rem; }
+.filter-box select { margin-bottom: 0; padding: 8px; width: auto; flex: 1; }
+.small-icon { font-size: 1.2rem; vertical-align: middle; }
+
+/* Položka seznamu */
+.diary-entry {
+    background: #0f0f0f; border-left: 4px solid #555; padding: 15px;
+    margin-bottom: 10px; border-radius: 0 8px 8px 0; position: relative;
+}
+.diary-entry.green { border-left-color: var(--neon-green); }
+.diary-entry.yellow { border-left-color: var(--neon-yellow); }
+.diary-entry.red { border-left-color: var(--neon-red); }
+
+.entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; }
+.entry-name { font-weight: bold; font-size: 1.1rem; color: #fff; }
+.entry-cycle { font-size: 0.7rem; background: #222; padding: 2px 6px; border-radius: 4px; color: #aaa; text-transform: uppercase; margin-left: 5px; }
+.entry-meta { font-size: 0.75rem; color: #666; }
+.entry-note { font-style: italic; color: #ccc; margin-top: 5px; font-size: 0.9rem; }
+.delete-btn { background: none; border: none; color: #444; cursor: pointer; padding: 5px; position: absolute; bottom: 5px; right: 5px; }
+.delete-btn:hover { color: var(--neon-red); }
+
+/* Settings */
+.settings-card { background: var(--card-bg); padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #222; }
+.settings-btns { display: flex; gap: 10px; margin-top: 10px; }
+.btn-outline { background: transparent; border: 1px solid var(--ui-accent); color: var(--ui-accent); padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; text-align: center; display: inline-block;}
+.btn-outline-red { background: transparent; border: 1px solid var(--neon-red); color: var(--neon-red); padding: 8px 15px; border-radius: 6px; cursor: pointer; width: 100%; }
+.link-blue { color: var(--ui-accent); text-decoration: none; }
+
+/* Navigace */
+.bottom-nav {
+    position: fixed; bottom: 0; left: 0; width: 100%; height: var(--nav-height);
+    background: #000; border-top: 1px solid #222;
+    display: flex; justify-content: space-around; align-items: center; z-index: 100;
+}
+.nav-item { background: none; border: none; color: #444; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
+.nav-item.active { color: var(--ui-accent); }
+.nav-item .material-icons { font-size: 1.6rem; margin-bottom: 2px; }
+
+/* Views Animations */
+.view { display: none; animation: fadeIn 0.3s ease; }
+.view.active { display: block; }
+.hidden { display: none !important; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Modal Detail (stejný) */
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; display: flex; justify-content: center; align-items: center; }
+.detail-container { background: #050505; width: 90%; max-height: 85vh; overflow-y: auto; padding: 25px; border-radius: 15px; border: 1px solid #333; position: relative; box-shadow: 0 0 40px rgba(0,0,0,1); }
+.close-btn { position: absolute; top: 10px; right: 15px; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; }
+.badge { background: #222; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; color: #aaa; }
+.rating-value { font-size: 1.5rem; font-weight: bold; margin-left: 10px; }

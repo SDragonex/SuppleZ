@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SuppleZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">SUPPLE<span class="highlight">Z</span></div>
+    </header>
+
+    <main id="main-content">
+        
+        <section id="view-wiki" class="view active">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Hledat látku (např. Citrullin)...">
+            </div>
+            <div id="cards-grid" class="cards-grid">
+                </div>
+        </section>
+
+        <section id="view-diary" class="view hidden">
+            <h2 class="section-title">Deník & Cykly</h2>
+            
+            <div class="diary-input-box">
+                <div class="row">
+                    <input type="text" id="diary-name" placeholder="Látka (např. Nakopávač)" style="flex:2">
+                    <input type="text" id="diary-dose" placeholder="Dávka" style="flex:1">
+                </div>
+                <input type="text" id="diary-cycle" placeholder="Název cyklu / Tag (např. Objem 2024)">
+                <textarea id="diary-note" placeholder="Poznámky, pocity, pumpa..."></textarea>
+                
+                <div class="diary-buttons">
+                    <button onclick="addDiaryEntry('green')" class="btn-green">Super</button>
+                    <button onclick="addDiaryEntry('yellow')" class="btn-yellow">Ujde to</button>
+                    <button onclick="addDiaryEntry('red')" class="btn-red">Špatné</button>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <label><span class="material-icons small-icon">filter_list</span> Filtrovat cyklus:</label>
+                <select id="cycle-filter" onchange="renderDiary()">
+                    <option value="all">Zobrazit vše</option>
+                    </select>
+            </div>
+
+            <div id="diary-list">
+                </div>
+        </section>
+
+        <section id="view-settings" class="view hidden">
+            <h2 class="section-title">Nastavení</h2>
+            
+            <div class="settings-card">
+                <h3><span class="material-icons">save</span> Záloha Dat</h3>
+                <p>Ulož si svá data do souboru nebo je nahraj zpět.</p>
+                <div class="settings-btns">
+                    <button onclick="exportData()" class="btn-outline">Stáhnout zálohu</button>
+                    <label for="import-file" class="btn-outline">Nahrát zálohu</label>
+                    <input type="file" id="import-file" style="display:none" onchange="importData(this)">
+                </div>
+            </div>
+
+            <div class="settings-card">
+                <h3>Info</h3>
+                <p>Verze: <strong>3.0</strong></p>
+                <p>Dev: <a href="https://github.com/SDragonex" target="_blank" class="link-blue">SDragonex</a></p>
+            </div>
+
+            <div class="settings-card danger-zone">
+                <h3>Reset</h3>
+                <button onclick="clearAllData()" class="btn-outline-red">Smazat všechna data</button>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" onclick="switchTab('view-wiki', this)">
+            <span class="material-icons">science</span><span>Wiki</span>
+        </button>
+        <button class="nav-item" onclick="switchTab('view-diary', this)">
+            <span class="material-icons">edit_note</span><span>Deník</span>
+        </button>
+        <button class="nav-item" onclick="switchTab('view-settings', this)">
+            <span class="material-icons">settings</span><span>Nastavení</span>
+        </button>
+    </nav>
+
+    <div id="detail-overlay" class="overlay hidden">
+        <div class="detail-container">
+            <button id="close-btn" class="close-btn">&times;</button>
+            <div class="detail-header">
+                <h2 id="detail-title">Název</h2>
+                <span id="detail-category" class="badge">Kategorie</span>
+            </div>
+            <div class="rating-box">
+                <span>Hodnocení:</span>
+                <div id="detail-rating" class="rating-value">0/10</div>
+            </div>
+            <div class="detail-content">
+                <p id="detail-desc" class="desc-text">Popis...</p>
+                <h3>Dávkování</h3>
+                <p id="detail-dosage">...</p>
+                <h3>Varování & Side Effects</h3>
+                <p id="detail-warning">...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
