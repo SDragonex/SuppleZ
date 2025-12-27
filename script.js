@@ -38,7 +38,7 @@ function renderCards(data) {
         if(item.colorType === 'yellow') rateColor = 'var(--neon-yellow)';
         if(item.colorType === 'red') rateColor = 'var(--neon-red)';
 
-        card.onclick = () => openModal(item);
+        card.onclick = () => openDetailView(item);
         
         // Nová HTML struktura karty
         card.innerHTML = `
@@ -65,28 +65,71 @@ searchInput.addEventListener('input', (e) => {
 
 // MODAL LOGIC
 const detailOverlay = document.getElementById('detail-overlay');
-function openModal(item) {
-    document.getElementById('detail-title').innerText = item.name;
-    document.getElementById('detail-category').innerText = item.category;
-    
-    // Barvení detailů
+// Funkce pro otevření Detailu (nahrazuje openModal)
+function openDetailView(item) {
+    // 1. Nastavíme barvy podle typu (Green/Yellow/Red)
     let themeColor = 'var(--ui-accent)';
-    if(item.colorType === 'green') themeColor = 'var(--neon-green)';
-    if(item.colorType === 'yellow') themeColor = 'var(--neon-yellow)';
-    if(item.colorType === 'red') themeColor = 'var(--neon-red)';
-
-    document.querySelector('.detail-container').style.borderTop = `4px solid ${themeColor}`;
-    document.getElementById('detail-rating').style.color = themeColor;
-    document.getElementById('detail-rating').innerText = `${item.rating}/10`;
-
-    document.getElementById('detail-desc').innerText = item.fullDesc;
-    document.getElementById('detail-dosage').innerText = item.dosage;
-    document.getElementById('detail-warning').innerText = item.warning;
+    let glowColor = 'rgba(255,255,255,0.1)';
     
-    detailOverlay.classList.remove('hidden');
+    if(item.colorType === 'green') { themeColor = 'var(--neon-green)'; glowColor = 'rgba(0, 255, 65, 0.4)'; }
+    if(item.colorType === 'yellow') { themeColor = 'var(--neon-yellow)'; glowColor = 'rgba(255, 234, 0, 0.4)'; }
+    if(item.colorType === 'red') { themeColor = 'var(--neon-red)'; glowColor = 'rgba(255, 0, 60, 0.4)'; }
+
+    // 2. Naplníme data do HTML
+    document.getElementById('detail-main-title').innerText = item.name;
+    document.getElementById('detail-main-title').style.color = themeColor;
+    
+    document.getElementById('detail-category-badge').innerText = item.category;
+    document.getElementById('detail-rating-big').innerText = item.rating + '/10';
+    document.getElementById('detail-rating-big').style.color = themeColor;
+    document.getElementById('detail-rating-big').style.border = `1px solid ${themeColor}`;
+
+    // Nastavení "hero" efektu (záře na pozadí)
+    document.querySelector('.detail-hero').style.setProperty('--glow-color', glowColor);
+
+    // Placeholder pro obrázek (zobrazí první písmeno nebo ikonku)
+    // Pokud bys měl v data.js u látky: image: 'obrazek.jpg', dal bys sem <img> tag.
+    const placeholder = document.getElementById('detail-image-placeholder');
+    placeholder.innerText = item.name.substring(0, 2).toUpperCase(); // První 2 písmena
+    placeholder.style.border = `2px solid ${themeColor}`;
+    placeholder.style.color = themeColor;
+    placeholder.style.boxShadow = `0 0 20px ${glowColor}`;
+
+    // Texty
+    document.getElementById('detail-type-text').innerText = item.colorType.toUpperCase();
+    document.getElementById('detail-dose-short').innerText = item.dosage.split(' ')[0] + '...'; // Jen kousek textu
+    
+    document.getElementById('detail-full-desc').innerText = item.fullDesc;
+    // Pokud nemáš v datech "benefits", použijeme obecný text nebo description
+    document.getElementById('detail-benefits').innerText = item.fullDesc; 
+    document.getElementById('detail-dosage-long').innerText = item.dosage;
+    document.getElementById('detail-warning-long').innerText = item.warning;
+
+    // 3. Přepneme View (Skryjeme Wiki, Zobrazíme Detail)
+    document.getElementById('view-wiki').classList.remove('active');
+    document.getElementById('view-wiki').classList.add('hidden');
+    
+    // Skryjeme Search bar v headeru (volitelné, vypadá to líp)
+    document.querySelector('header').style.display = 'none';
+
+    document.getElementById('view-detail').classList.remove('hidden');
+    document.getElementById('view-detail').classList.add('active');
+    
+    // Scroll nahoru
+    window.scrollTo(0,0);
 }
-document.getElementById('close-btn').onclick = () => detailOverlay.classList.add('hidden');
-detailOverlay.onclick = (e) => { if(e.target === detailOverlay) detailOverlay.classList.add('hidden'); };
+
+// Funkce Zpět
+function closeDetailView() {
+    document.getElementById('view-detail').classList.remove('active');
+    document.getElementById('view-detail').classList.add('hidden');
+
+    document.getElementById('view-wiki').classList.remove('hidden');
+    document.getElementById('view-wiki').classList.add('active');
+    
+    // Zobrazit header
+    document.querySelector('header').style.display = 'block';
+}
 
 
 // DENÍK & CYKLY

@@ -27,6 +27,58 @@
                 </div>
         </section>
 
+        <section id="view-detail" class="view hidden">
+            
+            <div class="detail-nav">
+                <button onclick="closeDetailView()" class="back-btn">
+                    <span class="material-icons">arrow_back</span> Zpět
+                </button>
+            </div>
+
+            <div class="detail-hero">
+                <div id="detail-image-placeholder" class="img-placeholder"></div>
+                
+                <div class="detail-header-info">
+                    <span id="detail-category-badge" class="badge">Kategorie</span>
+                    <h1 id="detail-main-title">Název Látky</h1>
+                    <div id="detail-rating-big" class="rating-big">0/10</div>
+                </div>
+            </div>
+
+            <div class="detail-body">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="material-icons">science</span>
+                        <span id="detail-type-text">Typ</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="material-icons">medication</span>
+                        <span id="detail-dose-short">Dávka</span>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3><span class="material-icons icon-inline">info</span> Popis</h3>
+                    <p id="detail-full-desc">...</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3><span class="material-icons icon-inline">bolt</span> Efekty & Benefity</h3>
+                    <p id="detail-benefits">Detailní popis účinků...</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3><span class="material-icons icon-inline">scale</span> Dávkování</h3>
+                    <p id="detail-dosage-long">...</p>
+                </div>
+
+                <div class="detail-section warning-box">
+                    <h3><span class="material-icons icon-inline">warning</span> Rizika & Varování</h3>
+                    <p id="detail-warning-long">...</p>
+                </div>
+            </div>
+        </section>
+
         <section id="view-diary" class="view hidden">
             <h2 class="section-title">Deník & Cykly</h2>
             
@@ -93,27 +145,6 @@
             <span class="material-icons">settings</span><span>Nastavení</span>
         </button>
     </nav>
-
-    <div id="detail-overlay" class="overlay hidden">
-        <div class="detail-container">
-            <button id="close-btn" class="close-btn">&times;</button>
-            <div class="detail-header">
-                <h2 id="detail-title">Název</h2>
-                <span id="detail-category" class="badge">Kategorie</span>
-            </div>
-            <div class="rating-box">
-                <span>Hodnocení:</span>
-                <div id="detail-rating" class="rating-value">0/10</div>
-            </div>
-            <div class="detail-content">
-                <p id="detail-desc" class="desc-text">Popis...</p>
-                <h3>Dávkování</h3>
-                <p id="detail-dosage">...</p>
-                <h3>Varování & Side Effects</h3>
-                <p id="detail-warning">...</p>
-            </div>
-        </div>
-    </div>
 
     <script src="data.js"></script>
     <script src="script.js"></script>

@@ -102,6 +102,141 @@ input:focus, textarea:focus, select:focus { border-color: var(--ui-accent); }
 .card.yellow::after { background: var(--neon-yellow); box-shadow: 0 0 10px var(--neon-yellow); }
 .card.red::after { background: var(--neon-red); box-shadow: 0 0 10px var(--neon-red); }
 
+/* --- DETAIL VIEW (FULL SCREEN) --- */
+
+/* Navigace Zpět */
+.detail-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Hero sekce (Obrázek/Nadpis) */
+.detail-hero {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pokud nemáš obrázky, toto vytvoří cool barevný čtverec */
+.img-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+/* Záře na pozadí */
+.detail-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, var(--glow-color) 0%, transparent 60%);
+    opacity: 0.2;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.detail-header-info { position: relative; z-index: 2; }
+
+#detail-main-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.rating-big {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    margin-top: 10px;
+}
+
+/* Tělo detailu */
+.detail-body { padding: 20px; padding-bottom: 80px; }
+
+/* Mřížka statistik */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+.stat-box .material-icons { color: #888; font-size: 1.5rem; }
+
+/* Sekce textu */
+.detail-section { margin-bottom: 30px; }
+
+.detail-section h3 {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--ui-accent);
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-section p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.warning-box {
+    background: rgba(255, 0, 60, 0.1);
+    border: 1px solid var(--neon-red);
+    padding: 15px;
+    border-radius: 10px;
+}
+.warning-box h3 { color: var(--neon-red); border: none; }
 
 /* Vnitřek karty */
 .card-header {
