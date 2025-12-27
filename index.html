@@ -147,5 +147,18 @@
 
     <script src="data.js"></script>
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrován s rozsahem:', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('Registrace Service Workeru selhala:', err);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
