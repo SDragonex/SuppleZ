@@ -41,22 +41,112 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus { border-color: var(--ui-accent); }
 .row { display: flex; gap: 10px; }
 
-/* WIKI Cards */
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
-.card {
-    background: var(--card-bg); border: 1px solid #222; border-radius: 12px; padding: 15px;
-    cursor: pointer; transition: 0.2s; position: relative; overflow: hidden;
+/* --- WIKI CARDS (VYLEPŠENÝ DESIGN) --- */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Trochu širší karty */
+    gap: 20px;
+    padding-bottom: 20px;
 }
-.card:hover { transform: translateY(-3px); border-color: #444; }
 
-/* Barevné proužky nahoře */
-.card.green { border-top: 3px solid var(--neon-green); }
-.card.yellow { border-top: 3px solid var(--neon-yellow); }
-.card.red { border-top: 3px solid var(--neon-red); }
+/* Animace pro přílet karet */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
-.card h3 { font-family: 'Rajdhani'; margin-bottom: 5px; font-size: 1.2rem; }
-.card-desc { font-size: 0.8rem; color: var(--text-dim); }
-.rating-badge { position: absolute; top: 10px; right: 10px; font-size: 0.7rem; font-weight: bold; }
+.card {
+    background: rgba(15, 15, 15, 0.6); /* Průhlednější pozadí */
+    backdrop-filter: blur(10px);        /* Efekt rozmazaného skla */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    
+    /* Defaultně skryté pro animaci */
+    opacity: 0; 
+    animation: slideUpFade 0.5s forwards; /* Spustí animaci */
+}
+
+/* Efekt při najetí myší / dotyku */
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(25, 25, 25, 0.8);
+}
+
+/* Záře podle barvy (Green/Yellow/Red) */
+.card.green:hover { box-shadow: 0 10px 30px -10px rgba(0, 255, 65, 0.3); border-top: 1px solid var(--neon-green); }
+.card.yellow:hover { box-shadow: 0 10px 30px -10px rgba(255, 234, 0, 0.3); border-top: 1px solid var(--neon-yellow); }
+.card.red:hover { box-shadow: 0 10px 30px -10px rgba(255, 0, 60, 0.3); border-top: 1px solid var(--neon-red); }
+
+/* Barevný proužek dole místo nahoře (vypadá moderněji) */
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 3px;
+    opacity: 0.7;
+}
+.card.green::after { background: var(--neon-green); box-shadow: 0 0 10px var(--neon-green); }
+.card.yellow::after { background: var(--neon-yellow); box-shadow: 0 0 10px var(--neon-yellow); }
+.card.red::after { background: var(--neon-red); box-shadow: 0 0 10px var(--neon-red); }
+
+
+/* Vnitřek karty */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-rating {
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    border: 1px solid #333;
+}
+
+.card h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.card-category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
 /* DIARY Styles */
 .diary-input-box { background: #080808; padding: 15px; border-radius: 12px; border: 1px solid #222; margin-bottom: 20px; }

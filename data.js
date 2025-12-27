@@ -1,6 +1,3 @@
-// --- 1. DATABÁZE LÁTEK (Obsáhlá verze) ---
-// colorType: 'green' (Bezpečné), 'yellow' (Pozor/Stimulant), 'red' (Risk/Hardcore)
-
 const supplementsData = [
     // --- KATEGORIE: ZÁKLAD & ZDRAVÍ (GREEN) ---
     {

@@ -17,22 +17,42 @@ const searchInput = document.getElementById('searchInput');
 
 function renderCards(data) {
     cardsGrid.innerHTML = '';
-    data.forEach(item => {
+    
+    // Seřadíme data podle hodnocení (nepovinné, ale vypadá to líp)
+    // data.sort((a, b) => b.rating - a.rating); 
+
+    data.forEach((item, index) => {
         const card = document.createElement('div');
-        card.className = `card ${item.colorType}`;
-        card.onclick = () => openModal(item);
         
-        // Barva ratingu
+        // Přidáme základní třídy
+        card.className = `card ${item.colorType}`;
+        
+        // --- MAGIE ANIMACE ---
+        // Každá karta dostane zpoždění o 0.05s větší než ta předchozí.
+        // Vytvoří to efekt "domina".
+        card.style.animationDelay = `${index * 0.05}s`;
+
+        // Barva pro hodnocení
         let rateColor = '#fff';
         if(item.colorType === 'green') rateColor = 'var(--neon-green)';
         if(item.colorType === 'yellow') rateColor = 'var(--neon-yellow)';
         if(item.colorType === 'red') rateColor = 'var(--neon-red)';
 
+        card.onclick = () => openModal(item);
+        
+        // Nová HTML struktura karty
         card.innerHTML = `
-            <div class="rating-badge" style="color:${rateColor}">${item.rating}</div>
+            <div class="card-header">
+                <span class="card-category">${item.category}</span>
+                <div class="card-rating" style="color:${rateColor}">
+                    ${item.rating}
+                </div>
+            </div>
+            
             <h3>${item.name}</h3>
             <p class="card-desc">${item.shortDesc}</p>
         `;
+        
         cardsGrid.appendChild(card);
     });
 }
