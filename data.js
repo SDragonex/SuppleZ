@@ -1,0 +1,764 @@
+// --- 1. DATABÁZE LÁTEK (Obsáhlá verze) ---
+// colorType: 'green' (Bezpečné), 'yellow' (Pozor/Stimulant), 'red' (Risk/Hardcore)
+
+const supplementsData = [
+    // --- KATEGORIE: ZÁKLAD & ZDRAVÍ (GREEN) ---
+    {
+        id: 1, name: "Kreatin Monohydrát", category: "Síla / Objem", rating: 9.9, colorType: "green",
+        shortDesc: "Král doplňků. Zvyšuje sílu ATP.",
+        fullDesc: "Základní doplněk pro každého sportovce. Zvyšuje zásoby fosfokreatinu ve svalech, což vede k vyšší výbušné síle a svalovému objemu. Nejbezpečnější a nejvíce prozkoumaný.",
+        dosage: "5g denně kdykoliv. Dlouhodobě.",
+        warning: "Nutný pitný režim. Mírné zvýšení váhy vodou."
+    },
+    {
+        id: 2, name: "Syrovátkový Protein (Whey)", category: "Bílkoviny", rating: 9.5, colorType: "green",
+        shortDesc: "Rychlý zdroj bílkovin po tréninku.",
+        fullDesc: "Rychle stravitelný protein z mléka. Ideální po tréninku pro nastartování proteosyntézy (růstu svalů). Obsahuje kompletní spektrum aminokyselin.",
+        dosage: "30-40g po tréninku nebo na svačinu.",
+        warning: "Může nadýmat osoby s intolerancí laktózy (volte Isolate/Hydro)."
+    },
+    {
+        id: 3, name: "Magnesium Bisglycinát", category: "Spánek / Regenerace", rating: 9.5, colorType: "green",
+        shortDesc: "Nejlepší forma hořčíku na noc.",
+        fullDesc: "Hořčík v chelátové vazbě s glycinem. Zklidňuje nervovou soustavu, zlepšuje spánek a nefunguje jako projímadlo.",
+        dosage: "300-400mg před spaním.",
+        warning: "Žádné výrazné vedlejší účinky."
+    },
+    {
+        id: 4, name: "Omega 3 (Fish Oil)", category: "Zdraví", rating: 9.0, colorType: "green",
+        shortDesc: "Srdce, mozek, zánětlivost.",
+        fullDesc: "Esenciální mastné kyseliny EPA a DHA. Snižují záněty v těle, podporují zdraví srdce a mozku. Většina lidí jich má nedostatek.",
+        dosage: "2-4g rybího oleje denně s jídlem.",
+        warning: "Při extrémních dávkách ředí krev."
+    },
+    {
+        id: 5, name: "Vitamín D3 + K2", category: "Imunita / Hormony", rating: 9.2, colorType: "green",
+        shortDesc: "Sluneční vitamín. Nutný pro testosteron.",
+        fullDesc: "Klíčový pro imunitu, zdraví kostí a produkci hormonů. Většina populace má deficit, zejména v zimě. K2 směřuje vápník do kostí.",
+        dosage: "2000 - 5000 IU denně s tukem.",
+        warning: "Nepřekračovat 10 000 IU dlouhodobě bez krevních testů."
+    },
+    {
+        id: 6, name: "Zinek (Bisglycinát)", category: "Hormony / Pleť", rating: 8.8, colorType: "green",
+        shortDesc: "Podpora testosteronu a imunity.",
+        fullDesc: "Důležitý minerál pro produkci testosteronu a zdravou pleť. Ztrácí se pocením.",
+        dosage: "15-30mg denně, ideálně večer.",
+        warning: "Nebrat na lačno (nevolnost). Dlouhodobě vysoké dávky snižují měď."
+    },
+    {
+        id: 7, name: "Glutamin", category: "Regenerace / Střeva", rating: 7.0, colorType: "green",
+        shortDesc: "Zdraví střev a imunita.",
+        fullDesc: "Aminokyselina, která primárně vyživuje střevní stěnu a podporuje imunitu po těžkém tréninku. Pro růst svalů má menší význam než se tvrdilo.",
+        dosage: "5-10g po tréninku nebo před spaním.",
+        warning: "Bezpečný."
+    },
+
+    // --- KATEGORIE: ORGAN SUPPORT & ZDRAVÍ (NUTNOST PRO CYKLY) ---
+    {
+        id: 100, name: "NAC (N-Acetyl Cysteine)", category: "Játra / Antioxidant", rating: 9.9, colorType: "green",
+        shortDesc: "Nejlepší ochrana jater a plic.",
+        fullDesc: "Prekurzor glutathionu, nejsilnějšího antioxidantu v těle. Chrání játra před toxicitou orálních steroidů/léků a ředí hlen v plicích.",
+        dosage: "600-1200mg denně (ráno na lačno).",
+        warning: "Může dráždit žaludek, zapít hodně vodou."
+    },
+    {
+        id: 101, name: "TUDCA", category: "Játra", rating: 9.8, colorType: "green",
+        shortDesc: "Záchranná brzda pro játra.",
+        fullDesc: "Žlučová sůl, která zprůchodňuje toky žluči. Absolutní nutnost při užívání 17-alpha alkylovaných steroidů nebo silných SARMs k prevenci cholestázy.",
+        dosage: "250-500mg denně (jen během cyklu).",
+        warning: "Nepoužívat dlouhodobě preventivně, jen při zátěži."
+    },
+    {
+        id: 102, name: "Ostropestřec Mariánský", category: "Játra", rating: 7.5, colorType: "green",
+        shortDesc: "Základní bylinka na játra.",
+        fullDesc: "Obsahuje silymarin. Podporuje regeneraci jaterních buněk. Slabší než NAC nebo TUDCA, ale dobrý základ.",
+        dosage: "Podle extraktu (cca 200-400mg silymarinu).",
+        warning: "Může ovlivnit vstřebávání některých léků."
+    },
+    {
+        id: 103, name: "Berberine", category: "GDA / Cukr", rating: 9.2, colorType: "green",
+        shortDesc: "Přírodní Metformin. Krotí cukr.",
+        fullDesc: "Silný GDA (Glucose Disposal Agent). Pomáhá tělu efektivně využít sacharidy do svalů místo do tuku. Zlepšuje inzulínovou citlivost.",
+        dosage: "500mg před jídlem s vysokým obsahem sacharidů.",
+        warning: "Může způsobit hypoglykémii (třes, hlad), pokud nejíte dost cukrů."
+    },
+    {
+        id: 104, name: "Astragalus", category: "Ledviny / Srdce", rating: 9.0, colorType: "green",
+        shortDesc: "Ochránce ledvin.",
+        fullDesc: "Klíčový doplněk pro zdraví ledvin (snížení eGFR) při užívání kreatinu, vysokém příjmu bílkovin nebo PEDs.",
+        dosage: "1-3g denně.",
+        warning: "Bezpečný."
+    },
+    {
+        id: 105, name: "Coenzym Q10 (Ubiquinol)", category: "Srdce", rating: 9.5, colorType: "green",
+        shortDesc: "Energie pro srdce.",
+        fullDesc: "Zásadní pro zdraví srdce a mitochondrií. Snižuje krevní tlak a oxidační stres. Nutnost pro uživatele stimulantů.",
+        dosage: "100-200mg denně (forma Ubiquinol je lepší).",
+        warning: "Bez vedlejších účinků."
+    },
+    {
+        id: 106, name: "P5P (Vitamín B6)", category: "Hormony", rating: 8.8, colorType: "green",
+        shortDesc: "Kontrola prolaktinu.",
+        fullDesc: "Aktivní forma B6. Pomáhá snižovat hladinu prolaktinu (prevence 'Deca Dick' nebo gynekomastie z Nandrolonu/Trenbolonu).",
+        dosage: "50-100mg denně.",
+        warning: "Vysoké dávky nad 200mg dlouhodobě mohou poškodit nervy."
+    },
+    {
+        id: 107, name: "Saw Palmetto", category: "Prostata / Vlasy", rating: 7.0, colorType: "green",
+        shortDesc: "Ochrana prostaty.",
+        fullDesc: "Blokuje přeměnu testosteronu na DHT (dihydrotestosteron). Pomáhá chránit prostatu a omezit padání vlasů.",
+        dosage: "320mg extraktu denně.",
+        warning: "Může mírně snížit libido."
+    },
+    {
+        id: 108, name: "Vitamín C (Liposomální)", category: "Imunita", rating: 9.0, colorType: "green",
+        shortDesc: "Antioxidant a kortizol blocker.",
+        fullDesc: "Liposomální forma má násobně vyšší vstřebatelnost. Snižuje kortizol po tréninku a podporuje tvorbu kolagenu.",
+        dosage: "1000-2000mg denně.",
+        warning: "Vysoké dávky obyčejného 'C' dráždí žaludek."
+    },
+    {
+        id: 109, name: "Boron (Bór)", category: "Testosteron", rating: 8.5, colorType: "green",
+        shortDesc: "Uvolňuje testosteron.",
+        fullDesc: "Stopový prvek, který snižuje SHBG, čímž zvyšuje hladinu VOLNÉHO testosteronu v krvi.",
+        dosage: "3-9mg denně (cyklovat 2 týdny on/1 týden off).",
+        warning: "Při stálém užívání efekt mizí."
+    },
+    {
+        id: 110, name: "Kurkumin (s Piperinem)", category: "Zánětlivost", rating: 9.0, colorType: "green",
+        shortDesc: "Přírodní lék na bolest kloubů.",
+        fullDesc: "Silně protizánětlivý. Pomáhá na bolavé klouby a šlachy. Nutno kombinovat s černým pepřem (piperin) pro vstřebatelnost.",
+        dosage: "500-1000mg denně.",
+        warning: "Ředí krev (pozor před operací)."
+    },
+    {
+        id: 111, name: "Elektrolyty", category: "Hydratace", rating: 9.5, colorType: "green",
+        shortDesc: "Sodík, Draslík, Hořčík.",
+        fullDesc: "Základ pro svalovou kontrakci a prevenci křečí. Nutné při dietě (low carb) a pocení.",
+        dosage: "Během tréninku do vody.",
+        warning: "Příliš draslíku najednou může být nebezpečné pro srdce."
+    },
+    {
+        id: 112, name: "Trávicí enzymy", category: "Trávení", rating: 8.5, colorType: "green",
+        shortDesc: "Pro objemovku.",
+        fullDesc: "Směs enzymů (Amyláza, Proteáza, Lipáza) pomáhající vstřebat velké množství jídla v objemu.",
+        dosage: "S každým velkým jídlem.",
+        warning: "Tělo si na ně může zvyknout."
+    },
+    {
+        id: 113, name: "Melatonin", category: "Spánek", rating: 9.0, colorType: "green",
+        shortDesc: "Hormon tmy.",
+        fullDesc: "Reguluje cirkadiánní rytmus. Pomáhá rychleji usnout. Je to také silný antioxidant.",
+        dosage: "0.5mg - 5mg cca 30 min před spaním.",
+        warning: "Vysoké dávky mohou způsobit ranní ospalost a divoké sny."
+    },
+    {
+        id: 114, name: "L-Theanine", category: "Relax / Focus", rating: 9.0, colorType: "green",
+        shortDesc: "Klidná mysl. Parťák kofeinu.",
+        fullDesc: "Aminokyselina ze zeleného čaje. Tlumí nervozitu z kofeinu, ale zachovává soustředění. Ideální do stacku.",
+        dosage: "100-200mg s kávou.",
+        warning: "Bez sedativních účinků, jen relaxace."
+    },
+
+    // --- KATEGORIE: PUMPA & VÝKON (GREEN/YELLOW) ---
+    {
+        id: 10, name: "Citrullin Malát", category: "Pumpa", rating: 9.2, colorType: "green",
+        shortDesc: "Maximální prokrvení svalů.",
+        fullDesc: "Zvyšuje oxid dusnatý (NO) lépe než Arginin. Zlepšuje průtok krve, pumpu a oddaluje únavu svalů.",
+        dosage: "6-8g cca 30 min před tréninkem.",
+        warning: "Kyselá chuť."
+    },
+    {
+        id: 11, name: "Beta-Alanin", category: "Vytrvalost", rating: 7.8, colorType: "yellow",
+        shortDesc: "Snižuje zakyselení. Způsobuje svědění.",
+        fullDesc: "Zvyšuje karnosin ve svalech, oddaluje svalové selhání u sérií trvajících 30-60s. Známý pro efekt mravenčení kůže.",
+        dosage: "3-4g denně.",
+        warning: "Parestézie (neškodné svědění obličeje a končetin)."
+    },
+    {
+        id: 12, name: "Glycerol", category: "Hydratace / Pumpa", rating: 8.5, colorType: "green",
+        shortDesc: "Extrémní hydratace svalů.",
+        fullDesc: "Váže vodu do svalových buněk (hyperhydratace). Dává svalům plný, 'vodnatý' vzhled a zvyšuje výdrž.",
+        dosage: "2-5g s velkým množstvím vody před tréninkem.",
+        warning: "Nutno hodně pít, jinak hrozí dehydratace ze střev (průjem)."
+    },
+    {
+        id: 13, name: "Arginin A.K.G.", category: "Pumpa", rating: 6.5, colorType: "green",
+        shortDesc: "Starší brácha Citrullinu.",
+        fullDesc: "Prekurzor NO. Funguje kratší dobu než Citrullin a má horší vstřebatelnost, ale pro rychlou pumpu stačí.",
+        dosage: "3-5g před tréninkem.",
+        warning: "Při vyšších dávkách žaludeční potíže."
+    },
+
+    // --- KATEGORIE: VÝKON, AMINOKYSELINY & PUMPA ---
+    {
+        id: 120, name: "EAA (Esenciální Aminokyseliny)", category: "Regenerace / Růst", rating: 9.5, colorType: "green",
+        shortDesc: "Mnohem lepší než BCAA.",
+        fullDesc: "Obsahují všech 9 esenciálních aminokyselin, které tělo potřebuje k tvorbě svalů. Na rozdíl od BCAA (které mají jen 3) dokáží EAA reálně spustit a udržet proteosyntézu. Ideální intra-workout (při tréninku).",
+        dosage: "10-15g během tréninku.",
+        warning: "Bez vedlejších účinků."
+    },
+    {
+        id: 121, name: "BCAA", category: "Regenerace", rating: 6.0, colorType: "green",
+        shortDesc: "Chutná voda, ale slabý efekt.",
+        fullDesc: "Leucin, Isoleucin, Valin. Chrání svaly před rozpadem (katabolismem), ale samy o sobě svaly nebudují. Dobré spíše na chuť vody nebo při tréninku na lačno.",
+        dosage: "5-10g.",
+        warning: "Zbytečné, pokud máte dostatek bílkovin ve stravě."
+    },
+    {
+        id: 122, name: "Taurin", category: "Pumpa / Křeče", rating: 8.8, colorType: "green",
+        shortDesc: "Hydratace a prevence křečí.",
+        fullDesc: "Aminokyselina, která pomáhá s hydratací buněk a funkcí nervů. Zásadní doplněk pro uživatele Clenbuterolu nebo beta-agonistů proti křečím. Zlepšuje 'Back Pumps' (bolest zad z pumpy).",
+        dosage: "2-5g před tréninkem.",
+        warning: "Soutěží o vstřebání s Beta-Alaninem (nebrat vteřinu po sobě)."
+    },
+    {
+        id: 123, name: "Betain Anhydrous", category: "Síla / Výkon", rating: 8.0, colorType: "green",
+        shortDesc: "Bratranec Kreatinu.",
+        fullDesc: "Zlepšuje svalovou výbušnost a syntézu bílkovin. Často se přidává do kvalitních pre-workoutů. Snižuje homocystein (zdraví srdce).",
+        dosage: "2.5g denně (ideálně před tréninkem).",
+        warning: "Může způsobit rybí zápach potu u lidí s poruchou metabolismu (vzácné)."
+    },
+    {
+        id: 124, name: "L-Carnitine Tartrate", category: "Metabolismus / Androgeny", rating: 8.0, colorType: "green",
+        shortDesc: "Přenašeč tuků a recepory.",
+        fullDesc: "Pomáhá transportovat mastné kyseliny do mitochondrií (spalování). Ve vysokých dávkách zvyšuje hustotu androgenních receptorů ve svalech (lépe funguje testosteron).",
+        dosage: "2-4g orálně (nebo 500mg injekčně).",
+        warning: "Orální vstřebatelnost je mizerná bez inzulínu (nutno jíst se sacharidy)."
+    },
+    {
+        id: 125, name: "Extrakt z Červené řepy", category: "Pumpa", rating: 8.5, colorType: "green",
+        shortDesc: "Přírodní dusičnany.",
+        fullDesc: "Zdroj nitrátů, které se v těle mění na NO (oxid dusnatý). Zlepšuje vytrvalost a pumpu jinou cestou než Citrullin.",
+        dosage: "Cca 500mg nitrátů (nebo 200-300ml šťávy).",
+        warning: "Barví moč do červena (neleknout se)."
+    },
+    {
+        id: 126, name: "Jedlá soda (Sodium Bicarbonate)", category: "Výkon", rating: 8.5, colorType: "yellow",
+        shortDesc: "Stará škola na vytrvalost.",
+        fullDesc: "Extrémně účinný buffer kyselosti. Neutralizuje kyselinu mléčnou, dovoluje delší sprinty a více opakování. Levné a funkční.",
+        dosage: "0.3g na kg váhy (cca 20-30g) před výkonem.",
+        warning: "Vysoké riziko 'výbuchu' střev (průjem). Nutno popíjet pomalu!"
+    },
+    {
+        id: 127, name: "HMB", category: "Regenerace", rating: 6.5, colorType: "green",
+        shortDesc: "Metabolit Leucinu.",
+        fullDesc: "Antikatabolický doplněk. Má smysl pouze pro úplné začátečníky nebo při tréninku v extrémním kalorickém deficitu/zranění. Pro pokročilé v objemu zbytečné.",
+        dosage: "3g denně.",
+        warning: "Drahé na to, co to umí."
+    },
+    {
+        id: 128, name: "Dextróza / Maltodextrin", category: "Energie", rating: 9.0, colorType: "green",
+        shortDesc: "Rychlé cukry.",
+        fullDesc: "Palivo pro trénink. Zvyšuje inzulín (nejvíce anabolický hormon). Ideální potréninkový koktejl s proteinem a kreatinem pro doplnění glykogenu.",
+        dosage: "30-50g po tréninku.",
+        warning: "Pozor na tloustnutí, pokud nejste v deficitu nebo tvrdě nedřete."
+    },
+    {
+        id: 129, name: "Cyclic Dextrin (HBCD)", category: "Energie", rating: 9.5, colorType: "green",
+        shortDesc: "Ferrari mezi cukry.",
+        fullDesc: "Vysoce větvený cyklický dextrin. Poskytuje energii postupně, nezvedá tolik inzulín a netíží v žaludku. Top volba pro intra-workout.",
+        dosage: "25g během tréninku.",
+        warning: "Vyšší cena."
+    },
+    
+    // --- SPALOVAČE TUKŮ (LEGAL & GRAY ZONE) ---
+    {
+        id: 135, name: "EGCG (Zelený čaj)", category: "Spalovač", rating: 7.5, colorType: "green",
+        shortDesc: "Metabolismus a zdraví.",
+        fullDesc: "Extrakt ze zeleného čaje. Mírně zvyšuje výdej energie a oxidaci tuků. Funguje synergicky s kofeinem.",
+        dosage: "400-500mg EGCG.",
+        warning: "Na lačno může způsobit nevolnost."
+    },
+    {
+        id: 136, name: "Synefrin", category: "Spalovač", rating: 7.0, colorType: "yellow",
+        shortDesc: "Legální náhrada efedrinu.",
+        fullDesc: "Extrakt z hořkého pomeranče. Působí na beta-3 receptory, zvyšuje termogenezi. Slabší, ale bezpečnější než zakázané látky.",
+        dosage: "10-20mg (max 30mg).",
+        warning: "Zvyšuje krevní tlak a tep."
+    },
+    {
+        id: 137, name: "Kapsaicin (Cayenne)", category: "Spalovač", rating: 7.0, colorType: "green",
+        shortDesc: "Pálí v puse i v tuku.",
+        fullDesc: "Zvyšuje tělesnou teplotu a výdej energie. Potlačuje chuť k jídlu.",
+        dosage: "Dle tolerance (kapsle pálí méně v žaludku).",
+        warning: "Pálení žáhy."
+    },
+    {
+        id: 138, name: "Chromium Picolinate", category: "Cukr / Dieta", rating: 7.5, colorType: "green",
+        shortDesc: "Zabiják chutí na sladké.",
+        fullDesc: "Zlepšuje citlivost na inzulín a stabilizuje hladinu krevního cukru. Výborné pro potlačení 'vlčího hladu' a chuti na čokoládu.",
+        dosage: "200-400mcg s jídlem.",
+        warning: "Bezpečné."
+    },
+    {
+        id: 139, name: "Forskolin", category: "Spalovač / Testosteron", rating: 7.2, colorType: "green",
+        shortDesc: "Zvyšuje cAMP.",
+        fullDesc: "Bylina (Coleus Forskohlii). Zvyšuje buněčnou molekulu cAMP, což pomáhá spalovat tuk a mírně podporuje testosteron.",
+        dosage: "250mg (10% extrakt) 2x denně.",
+        warning: "Může způsobit průjem a nízký tlak."
+    },
+    {
+        id: 140, name: "Salbutamol", category: "Spalovač (Lék)", rating: 8.5, colorType: "red",
+        shortDesc: "Bezpečnější brácha Clenbuterolu.",
+        fullDesc: "Beta-2 agonista (lék na astma). Má kratší poločas rozpadu než Clenbuterol, takže méně narušuje spánek a je šetrnější k srdci. Anabolický efekt je minimální.",
+        dosage: "4-8mg (vyžaduje časté dávkování).",
+        warning: "Třes rukou, bušení srdce. Je to doping."
+    },
+
+    // --- KATEGORIE: ADAPTOGENY & TESTOSTERON (GREEN/YELLOW) ---
+    {
+        id: 20, name: "Ashwagandha (KSM-66)", category: "Adaptogen", rating: 8.5, colorType: "green",
+        shortDesc: "Krotitel stresu a kortizolu.",
+        fullDesc: "Ajurvédská bylina. Snižuje kortizol, zlepšuje spánek a regeneraci. Může optimalizovat testosteron.",
+        dosage: "300-600mg večer.",
+        warning: "Možná letargie/anhedonie při dlouhodobém užívání."
+    },
+    {
+        id: 21, name: "Tongkat Ali", category: "Libido / Testosteron", rating: 8.0, colorType: "yellow",
+        shortDesc: "Malajský ženšen pro libido.",
+        fullDesc: "Silný extrakt (např. LJ100) prokazatelně zvyšuje volný testosteron a libido tím, že snižuje SHBG.",
+        dosage: "200-400mg denně, cyklovat.",
+        warning: "Může způsobit nevolnost, pokud se nebere s jídlem."
+    },
+    {
+        id: 22, name: "Fadogia Agrestis", category: "Libido / Testosteron", rating: 7.5, colorType: "yellow",
+        shortDesc: "Napodobuje LH hormon.",
+        fullDesc: "Africká bylina, která stimuluje varlata k produkci testosteronu. Velmi populární v USA (Huberman).",
+        dosage: "300-600mg denně.",
+        warning: "Možná toxicita pro varlata při vysokých dávkách. Nutno cyklovat."
+    },
+    {
+        id: 23, name: "Shilajit", category: "Minerály / Energie", rating: 8.2, colorType: "green",
+        shortDesc: "Horská pryskyřice plná minerálů.",
+        fullDesc: "Obsahuje kyselinu fulvovou a 84+ minerálů. Zvyšuje energii na buněčné úrovni a podporuje hormonální rovnováhu.",
+        dosage: "200-500mg pryskyřice denně.",
+        warning: "Specifická chuť a vůně."
+    },
+    {
+        id: 24, name: "Maca Peruánská", category: "Libido", rating: 7.0, colorType: "green",
+        shortDesc: "Superpotravina pro libido.",
+        fullDesc: "Kořen z And. Zvyšuje chuť na sex a energii, ale přímo nezvyšuje testosteron.",
+        dosage: "1.5 - 3g denně (gelatinized forma).",
+        warning: "Bezpečné."
+    },
+
+    // --- KATEGORIE: NOOTROPIKA & FOCUS (BLUE/YELLOW) ---
+    {
+        id: 30, name: "L-Tyrosine", category: "Focus", rating: 8.0, colorType: "green",
+        shortDesc: "Palivo pro dopamin.",
+        fullDesc: "Aminokyselina nutná pro tvorbu dopaminu a adrenalinu. Pomáhá při stresu a multitaskingu.",
+        dosage: "1-2g před zátěží.",
+        warning: "Nefunguje dobře s jídlem (konkurence aminokyselin)."
+    },
+    {
+        id: 31, name: "Alpha GPC", category: "Focus", rating: 9.0, colorType: "yellow",
+        shortDesc: "Vysoce efektivní cholin.",
+        fullDesc: "Nejlepší forma cholinu. Přechází do mozku a zvyšuje acetylcholin -> učení, paměť a 'mind-muscle connection'.",
+        dosage: "300-600mg před tréninkem/prací.",
+        warning: "Může způsobit bolest hlavy (přebytek acetylcholinu)."
+    },
+    {
+        id: 32, name: "Lví hříva (Hericium)", category: "Mozek", rating: 8.5, colorType: "green",
+        shortDesc: "Houba pro růst neuronů.",
+        fullDesc: "Medicinální houba podporující NGF (Nerve Growth Factor). Dlouhodobě zlepšuje paměť a kognici.",
+        dosage: "1-2g extraktu denně.",
+        warning: "Snižuje libido (inhibuje DHT) u některých jedinců."
+    },
+    {
+        id: 33, name: "Huperzine A", category: "Focus", rating: 8.8, colorType: "yellow",
+        shortDesc: "Zabraňuje rozpadu soustředění.",
+        fullDesc: "Inhibitor acetylcholinesterázy. Udržuje hladinu acetylcholinu v mozku vysoko po dlouhou dobu.",
+        dosage: "200mcg (mikrogramů!).",
+        warning: "Nutno cyklovat, má dlouhý poločas rozpadu."
+    },
+    {
+        id: 34, name: "Modafinil", category: "Nootropikum", rating: 9.5, colorType: "red",
+        shortDesc: "Lék na bdělost.",
+        fullDesc: "Silné farmaceutikum. Eliminuje únavu a drží mozek v chodu 12+ hodin. Používáno piloty a CEO.",
+        dosage: "100-200mg (Lék na předpis).",
+        warning: "Bolesti hlavy, dehydratace, kožní reakce. Není to doplněk stravy!"
+    },
+    {
+        id: 35, name: "Noopept", category: "Nootropikum", rating: 8.0, colorType: "yellow",
+        shortDesc: "Ruský syntetický peptid.",
+        fullDesc: "Údajně 1000x silnější než Piracetam. Zostřuje vnímání barev a zraku, zlepšuje paměť.",
+        dosage: "10-30mg.",
+        warning: "Krátkodobá paměť může být dočasně horší ('brain fog' po vysazení)."
+    },
+
+    // --- KATEGORIE: NOOTROPIKA & BIO-HACKING MOZKU ---
+    {
+        id: 150, name: "Piracetam", category: "Nootropikum", rating: 7.5, colorType: "yellow",
+        shortDesc: "Otec všech nootropik.",
+        fullDesc: "První syntetické nootropikum. Zlepšuje prokrvení mozku, fluiditu buněčných membrán a komunikaci mezi hemisférami. Efekt nabíhá týdny.",
+        dosage: "1200-4800mg denně (rozdělit do dávek).",
+        warning: "Nutné brát s Cholinem (vejce/Alpha GPC), jinak bolí hlava."
+    },
+    {
+        id: 151, name: "Rhodiola Rosea", category: "Adaptogen / Energie", rating: 9.0, colorType: "green",
+        shortDesc: "Proti únavě a vyhoření.",
+        fullDesc: "Vikingové ji používali pro sílu. Snižuje vnímání únavy a vyčerpání. Zvyšuje serotonin a dopamin. Skvělá v dietě nebo při náročné práci.",
+        dosage: "300-500mg (standardizováno na 3% rosavinů).",
+        warning: "Nekombinovat s SSRI antidepresivy."
+    },
+    {
+        id: 152, name: "Bacopa Monnieri", category: "Paměť", rating: 8.5, colorType: "green",
+        shortDesc: "Dlouhodobá paměť.",
+        fullDesc: "Bylina, která prokazatelně zlepšuje formování paměti a rychlost učení. Růst nových nervových spojení (dendritů). Efekt je cítit až po 4-6 týdnech.",
+        dosage: "300mg (extrakt 50% bacosidů) s tukem.",
+        warning: "Může způsobovat únavu a demotivaci (nebrat před tréninkem)."
+    },
+    {
+        id: 153, name: "Phenibut", category: "Relax / Spánek", rating: 9.5, colorType: "red",
+        shortDesc: "Sociální bůh v prášku.",
+        fullDesc: "Derivát GABA vyvinutý pro kosmonauty. Eliminuje úzkost, dává extrémní sociální sebevědomí a hluboký spánek. Funguje podobně jako alkohol bez opilosti.",
+        dosage: "250-1000mg (MAX 1-2x týdně!).",
+        warning: "EXTRÉMNÍ RIZIKO ZÁVISLOSTI! Abstinenční příznaky jsou peklo. Nikdy nemíchat s alkoholem."
+    },
+    {
+        id: 154, name: "Mucuna Pruriens", category: "Mood / Dopamin", rating: 8.0, colorType: "yellow",
+        shortDesc: "Přírodní L-Dopa.",
+        fullDesc: "Obsahuje L-Dopa, přímý prekurzor dopaminu. Zlepšuje náladu, libido a motivaci. Používá se i ke snížení prolaktinu.",
+        dosage: "Extrakt odpovídající 100-200mg L-Dopy.",
+        warning: "Dlouhodobé užívání může down-regulovat vlastní tvorbu dopaminu."
+    },
+    {
+        id: 155, name: "Ginkgo Biloba", category: "Prokrvení", rating: 7.0, colorType: "green",
+        shortDesc: "Krev do mozku a končetin.",
+        fullDesc: "Zlepšuje mikrocirkulaci krve. Dobré pro paměť u starších lidí a pro 'studené ruce/nohy'.",
+        dosage: "120mg extraktu.",
+        warning: "Ředí krev."
+    },
+    {
+        id: 156, name: "Phosphatidylserine", category: "Cortisol Blocker", rating: 9.2, colorType: "green",
+        shortDesc: "Vypínač stresu.",
+        fullDesc: "Fosfolipid klíčový pro mozkové buňky. Efektivně snižuje kortizol po tréninku nebo večer, čímž pomáhá usnout a chrání svaly.",
+        dosage: "400-600mg.",
+        warning: "Dražší doplněk."
+    },
+    {
+        id: 157, name: "Theacrine (Teacrine)", category: "Energie", rating: 8.0, colorType: "green",
+        shortDesc: "Kofein bez tolerance.",
+        fullDesc: "Strukturálně podobný kofeinu, ale nevytváří se na něj tak rychle tolerance a nezvyšuje tolik krevní tlak. Hladší energie.",
+        dosage: "50-100mg.",
+        warning: "Pomalý nástup."
+    },
+    {
+        id: 158, name: "5-HTP", category: "Nálada / Spánek", rating: 7.5, colorType: "yellow",
+        shortDesc: "Prekurzor serotoninu.",
+        fullDesc: "Mění se v mozku na serotonin. Zlepšuje náladu a potlačuje chuť k jídlu (na sacharidy). Večer pomáhá s melatoninem.",
+        dosage: "50-200mg.",
+        warning: "Nikdy nekombinovat s antidepresivy (SSRI) - riziko serotoninového syndromu!"
+    },
+    
+    // --- KATEGORIE: SPÁNEK & REGENERACE & LONGEVITY ---
+    {
+        id: 160, name: "CBD (Full Spectrum)", category: "Relax / Zánět", rating: 8.5, colorType: "green",
+        shortDesc: "Klid bez rauše.",
+        fullDesc: "Kanabidiol. Působí protizánětlivě a anxiolyticky (proti úzkosti). Zlepšuje hluboký spánek a regeneraci CNS.",
+        dosage: "20-50mg oleje/kapsle.",
+        warning: "Může ovlivnit jaterní enzymy (pozor pokud berete léky)."
+    },
+    {
+        id: 161, name: "Glycin", category: "Spánek", rating: 8.8, colorType: "green",
+        shortDesc: "Snížení tělesné teploty.",
+        fullDesc: "Sladká aminokyselina. Před spaním snižuje tělesnou teplotu, což signalizuje tělu, že je čas spát. Zlepšuje kvalitu spánku a ranní svěžest.",
+        dosage: "3-5g před spaním.",
+        warning: "Bezpečné."
+    },
+    {
+        id: 162, name: "Apigenin", category: "Spánek", rating: 8.5, colorType: "green",
+        shortDesc: "Síla heřmánku.",
+        fullDesc: "Bioflavonoid z heřmánku. Váže se na GABA receptory a pomáhá 'vypnout mozek' před spaním. Populární v Hubermanově spánkovém koktejlu.",
+        dosage: "50mg.",
+        warning: "Bezpečné."
+    },
+    {
+        id: 163, name: "GABA", category: "Relax", rating: 6.5, colorType: "green",
+        shortDesc: "Zklidnění (s otazníkem).",
+        fullDesc: "Hlavní inhibiční neurotransmiter. Syntetická GABA ale špatně prochází do mozku (hematoencefalická bariéra). Funguje spíše na uvolnění těla.",
+        dosage: "500-1000mg.",
+        warning: "Může způsobit dušnost nebo brnění kůže (krátkodobě)."
+    },
+    {
+        id: 164, name: "NMN / NR", category: "Longevity", rating: 9.0, colorType: "green",
+        shortDesc: "Anti-aging molekula.",
+        fullDesc: "Prekurzory NAD+. S věkem hladina NAD+ klesá, což vede ke stárnutí. NMN doplňuje palivo pro mitochondrie a opravu DNA.",
+        dosage: "500-1000mg ráno.",
+        warning: "Velmi drahé. Nutno skladovat v chladu."
+    },
+    {
+        id: 165, name: "Resveratrol", category: "Longevity", rating: 8.0, colorType: "green",
+        shortDesc: "Molekula z červeného vína.",
+        fullDesc: "Aktivuje sirtuiny (geny dlouhověkosti). Silný antioxidant. Funguje synergicky s NMN.",
+        dosage: "500-1000mg (nutno brát s tukem, např. jogurt).",
+        warning: "Nízká vstřebatelnost bez tuku."
+    },
+    {
+        id: 166, name: "Valeriána (Kozlík)", category: "Spánek", rating: 7.0, colorType: "green",
+        shortDesc: "Přírodní sedativum.",
+        fullDesc: "Smrdutá bylinka, která funguje. Zvyšuje GABA a zkracuje dobu usínání. Dobré na stres.",
+        dosage: "300-600mg extraktu.",
+        warning: "Při dlouhodobém užívání efekt slábne. Smrdí jako staré ponožky."
+    },
+    {
+        id: 167, name: "Inositol (Myo-Inositol)", category: "Psychika / Hormony", rating: 8.5, colorType: "green",
+        shortDesc: "Proti OCD a úzkosti.",
+        fullDesc: "Vitaminu podobná látka. Ve vysokých dávkách pomáhá při OCD, depresích a u žen při PCOS (syndrom polycystických ovarií).",
+        dosage: "2-10g (vysoké dávky pro psychiku).",
+        warning: "Ve vyšších dávkách projímá."
+    },
+
+    // --- KATEGORIE: STIMULANTY (YELLOW/RED) ---
+    {
+        id: 40, name: "Kofein Anhydrous", category: "Stimulant", rating: 8.0, colorType: "yellow",
+        shortDesc: "Klasika. Energie.",
+        fullDesc: "Čistý kofein v prášku/tableta. Rychlý nástup účinku. Blokuje únavu.",
+        dosage: "200mg je zlatý standard.",
+        warning: "Nespavost, úzkost, tolerance."
+    },
+    {
+        id: 41, name: "Synephrine", category: "Spalovač / Stim", rating: 6.5, colorType: "yellow",
+        shortDesc: "Legální alternativa efedrinu.",
+        fullDesc: "Extrakt z hořkého pomeranče. Mírně zvyšuje metabolismus a potlačuje chuť k jídlu.",
+        dosage: "10-20mg.",
+        warning: "Zvyšuje krevní tlak."
+    },
+    {
+        id: 42, name: "Yohimbine HCL", category: "Spalovač", rating: 7.5, colorType: "yellow",
+        shortDesc: "Na tvrdohlavý tuk.",
+        fullDesc: "Blokuje alfa-2 receptory v tukové tkáni. Ideální pro rýsování břicha/boků. Funguje jen nalačno.",
+        dosage: "2.5 - 10mg (pozor na dávku!).",
+        warning: "Studený pot, úzkost, bušení srdce. Nevhodné pro úzkostlivé lidi."
+    },
+    {
+        id: 43, name: "DMAA", category: "Hardcore Stim", rating: 9.0, colorType: "red",
+        shortDesc: "Zakázaný král pre-workoutů.",
+        fullDesc: "Geranamine. Extrémní energie, euforie, tunelové vidění. Většina dnešních 'pre' se mu nevyrovná.",
+        dosage: "25-50mg (Risk).",
+        warning: "Vysoký tlak, crash (náhlá únava), vazokonstrikce (zúžení cév)."
+    },
+    {
+        id: 44, name: "DMHA", category: "Hardcore Stim", rating: 8.5, colorType: "red",
+        shortDesc: "Nástupce DMAA.",
+        fullDesc: "Podobné účinky jako DMAA, ale o něco jemnější nástup a méně drastický crash. Stále v šedé zóně.",
+        dosage: "100-150mg.",
+        warning: "Podobné jako DMAA, vysoký tlak."
+    },
+    {
+        id: 45, name: "Nikotin (Sáčky)", category: "Stimulant / Nootropikum", rating: 7.0, colorType: "yellow",
+        shortDesc: "Fokus a uvolnění.",
+        fullDesc: "Zvyšuje dopamin a acetylcholin. Používáno pro práci nebo potlačení hladu v dietě.",
+        dosage: "2-4mg.",
+        warning: "Vysoce návykové! Vazokonstrikce."
+    },
+
+    // --- KATEGORIE: PCT (POST CYCLE THERAPY) - NUTNOST PO CYKLU ---
+    {
+        id: 200, name: "Nolvadex (Tamoxifen)", category: "PCT / Anti-Estrogen", rating: 9.5, colorType: "yellow",
+        shortDesc: "První pomoc při Gyno.",
+        fullDesc: "SERM (Selektivní modulátor estrogenových receptorů). Blokuje estrogen v prsní žláze (zastavuje gynekomastii). Používá se v PCT k nastartování vlastní tvorby testosteronu.",
+        dosage: "10-20mg denně.",
+        warning: "Snižuje IGF-1 (lehce brzdí růst svalů), riziko krevních sraženin."
+    },
+    {
+        id: 201, name: "Clomid (Clomiphene)", category: "PCT", rating: 9.0, colorType: "yellow",
+        shortDesc: "Startér varlat.",
+        fullDesc: "Silnější než Tamoxifen v stimulaci LH (Luteinizačního hormonu). Nutí varlata znovu pracovat po cyklu steroidů/SARM.",
+        dosage: "25-50mg denně.",
+        warning: "Způsobuje silné výkyvy nálad (pláč, deprese) a poruchy zraku."
+    },
+    {
+        id: 202, name: "HCG", category: "PCT / Plodnost", rating: 9.8, colorType: "yellow",
+        shortDesc: "Napodobuje signál mozku.",
+        fullDesc: "Peptid (hormon), který napodobuje LH. Udržuje varlata plná a funkční i během cyklu. Zásadní pro udržení plodnosti.",
+        dosage: "250-500 IU 2x týdně (injekčně).",
+        warning: "Při nadužívání může znecitlivět receptory ve varlatech."
+    },
+    {
+        id: 203, name: "Arimidex (Anastrozole)", category: "Anti-Estrogen (AI)", rating: 8.5, colorType: "red",
+        shortDesc: "Snižuje estrogen.",
+        fullDesc: "Aromatase Inhibitor. Přímo blokuje enzym, který mění testosteron na estrogen. Používá se jen při 'High E2' symptomech (oteklost, akné, tlak).",
+        dosage: "0.5mg (jen dle potřeby!).",
+        warning: "Může srazit estrogen na nulu -> nulové libido, bolest kloubů, deprese. Nebrat preventivně!"
+    },
+    {
+        id: 204, name: "Cabergoline", category: "Prolaktin", rating: 9.0, colorType: "red",
+        shortDesc: "Proti prolaktinu (Deca/Tren).",
+        fullDesc: "Lék na snížení prolaktinu. Nutnost při užívání 19-nor steroidů (Trenbolon, Nandrolon), pokud selže B6. Zkracuje refrakterní dobu po sexu (můžete hned znovu).",
+        dosage: "0.25mg 1x-2x týdně.",
+        warning: "Při vysokých dávkách poškozuje srdeční chlopeň."
+    },
+
+    // --- KATEGORIE: HARDCORE SARMS & EXPERIMENTY (RED) ---
+    {
+        id: 210, name: "YK-11", category: "Myostatin Inhibitor", rating: 8.5, colorType: "red",
+        shortDesc: "SARM se strukturou steroidu.",
+        fullDesc: "Unikátní látka. Částečně SARM, částečně inhibitor myostatinu (odstraňuje genetický limit růstu svalů). Extrémně silný.",
+        dosage: "5-10mg denně.",
+        warning: "Toxický pro játra, velká neznámá ohledně dlouhodobých dopadů. Zátěž pro šlachy (svaly rostou rychleji než úpony)."
+    },
+    {
+        id: 211, name: "S-23", category: "SARM", rating: 9.0, colorType: "red",
+        shortDesc: "Mužská antikoncepce.",
+        fullDesc: "Nejsilnější ne-steroidní SARM. Dává extrémní tvrdost a žilnatost (Winstrol efekt). Dočasně způsobuje neplodnost.",
+        dosage: "10-20mg denně.",
+        warning: "Kompletně vypne vlastní testosteron (Shutdown). Nutno brát s Testosteronem (TRT base)."
+    },
+    {
+        id: 212, name: "SR-9009 (Stenabolic)", category: "Metabolismus", rating: 7.0, colorType: "red",
+        shortDesc: "Cardio v pilulce.",
+        fullDesc: "Rev-ErbA agonista. Mění cirkadiánní rytmus buněk. Zvyšuje počet mitochondrií. Myši na něm běhaly o 50% déle bez tréninku.",
+        dosage: "10-20mg (nízká orální vstřebatelnost).",
+        warning: "Nespavost (ovlivňuje spánek), nutno brát 3x denně kvůli krátkému poločasu."
+    },
+    {
+        id: 213, name: "RU-58841", category: "Vlasy", rating: 9.0, colorType: "yellow",
+        shortDesc: "Ochrana vlasů před DHT.",
+        fullDesc: "Topický anti-androgen. Aplikuje se na hlavu. Váže se na receptory ve vlasových folikulech a brání DHT, aby je zničil. Zachraňuje vlasy na cyklu.",
+        dosage: "50mg roztok lokálně na hlavu.",
+        warning: "Může způsobit bolest hlavy nebo únavu, pokud se dostane do krve."
+    },
+
+    // --- KATEGORIE: EXPERIMENTAL PEPTIDES (YELLOW/GREEN) ---
+    {
+        id: 220, name: "GHK-Cu", category: "Peptid / Kůže", rating: 9.5, colorType: "green",
+        shortDesc: "Měděný peptid mládí.",
+        fullDesc: "Extrémní podpora tvorby kolagenu, hojení kůže a růstu vlasů. Používá se v kosmetice nebo injekčně pro celkové omlazení.",
+        dosage: "Topicky nebo 2mg denně injekčně.",
+        warning: "Při injekci velmi pálí (bolestivé místo vpichu)."
+    },
+    {
+        id: 221, name: "PT-141 (Bremelanotide)", category: "Libido", rating: 9.0, colorType: "yellow",
+        shortDesc: "Viagra pro mozek.",
+        fullDesc: "Nefunguje na principu průtoku krve (jako Viagra), ale stimuluje receptory v mozku zodpovědné za vzrušení. Funguje u mužů i žen.",
+        dosage: "1-2mg podkožně cca 2h před akcí.",
+        warning: "Způsobuje nevolnost (nutkání na zvracení) prvních 15 minut po aplikaci."
+    },
+    {
+        id: 222, name: "Ipamorelin + CJC-1295", category: "GH Peptid", rating: 9.5, colorType: "green",
+        shortDesc: "Bezpečný růstový hormon.",
+        fullDesc: "Zlatý standard anti-agingu. Stimuluje vlastní produkci růstového hormonu v pulzech. Zlepšuje spánek, kůži a spalování tuku bez hladu.",
+        dosage: "100mcg každého před spaním (na lačno).",
+        warning: "Drahé. Musí být nalačno (inzulín blokuje účinek)."
+    },
+
+    // --- KATEGORIE: NEBEZPEČNÉ SPALOVAČE (DEATH ZONE) ---
+    {
+        id: 230, name: "DNP (2,4-Dinitrophenol)", category: "JED / Spalovač", rating: 1.0, colorType: "red",
+        shortDesc: "JED NA KRYSY. NEUŽÍVAT.",
+        fullDesc: "Průmyslová chemikálie, ne lék. Odpojuje oxidativní fosforylaci. Energie z jídla se nemění na ATP, ale přímo na TEPLO. Doslova vaří orgány zevnitř. Neexistuje protilátka.",
+        dosage: "SMRTELNÉ RIZIKO při jakékoliv chybě.",
+        warning: "V případě předávkování neexistuje pomoc. Smrt přehřátím. Způsobuje šedý zákal a neuropatii."
+    },
+    
+    // --- KATEGORIE: SARMS & PEPTIDY (RED - RISK) ---
+    {
+        id: 50, name: "MK-677 (Ibutamoren)", category: "Sekretagog", rating: 8.0, colorType: "red",
+        shortDesc: "Zvyšuje růstový hormon a hlad.",
+        fullDesc: "Není SARM, ale sekretagog GH. Zvyšuje IGF-1, zlepšuje spánek, pleť a extrémně zvyšuje chuť k jídlu.",
+        dosage: "10-25mg večer.",
+        warning: "Zadržování vody, inzulínová rezistence (nutno hlídat cukr), extrémní hlad."
+    },
+    {
+        id: 51, name: "Ostarine (MK-2866)", category: "SARM", rating: 8.5, colorType: "red",
+        shortDesc: "SARM na klouby a udržení svalů.",
+        fullDesc: "Nejslabší, ale nejbezpečnější SARM. Skvělý v dietě na ochranu svalů a léčení kloubů/šlach.",
+        dosage: "10-20mg denně.",
+        warning: "Mírné potlačení vlastního testosteronu."
+    },
+    {
+        id: 52, name: "LGD-4033 (Ligandrol)", category: "SARM", rating: 9.0, colorType: "red",
+        shortDesc: "Objemový SARM.",
+        fullDesc: "Silný anabolický efekt. Rychlý nárůst hmoty a síly (včetně vody a glykogenu).",
+        dosage: "5-10mg denně.",
+        warning: "Výrazné potlačení testosteronu (nutná PCT), 'LGD flu' (chřipka po začátku)."
+    },
+    {
+        id: 53, name: "RAD-140 (Testolone)", category: "SARM", rating: 9.5, colorType: "red",
+        shortDesc: "Síla a agresivita.",
+        fullDesc: "Nejsilnější běžný SARM. Obrovský nárůst síly, tvrdosti svalů a žilnatosti. Působí neuroprotektivně.",
+        dosage: "10-20mg denně.",
+        warning: "Agresivita, nespavost, silná suprese testosteronu, zátěž jater."
+    },
+    {
+        id: 54, name: "Cardarine (GW-501516)", category: "Spalovač / Výdrž", rating: 9.0, colorType: "red",
+        shortDesc: "Vytrvalost v pilulce.",
+        fullDesc: "Není SARM. Mění způsob, jak tělo využívá energii (upřednostňuje tuky). Extrémní nárůst kardio výdrže.",
+        dosage: "10-20mg před tréninkem.",
+        warning: "Kontroverzní studie na myších ohledně rakoviny (při extrémních dávkách). U lidí neprokázáno."
+    },
+    {
+        id: 55, name: "BPC-157", category: "Peptid", rating: 9.8, colorType: "green",
+        shortDesc: "Zázračné hojení zranění.",
+        fullDesc: "Peptid odvozený ze žaludečních šťáv. Extrémně urychluje hojení šlach, svalů, vazů i střev. (Injekční/Orální).",
+        dosage: "250-500mcg denně lokálně.",
+        warning: "Velmi bezpečný."
+    },
+    {
+        id: 56, name: "TB-500", category: "Peptid", rating:  9.0, colorType: "green",
+        shortDesc: "Hojení svalů a flexibilita.",
+        fullDesc: "Syntetická verze thymosinu beta-4. Podporuje migraci buněk a hojení tkání, snižuje zánět.",
+        dosage: "2-5mg týdně.",
+        warning: "Injekční aplikace."
+    },
+    {
+        id: 57, name: "Melanotan II", category: "Peptid", rating: 8.0, colorType: "red",
+        shortDesc: "Opalování a libido.",
+        fullDesc: "Stimuluje produkci melaninu (opálení bez slunce) a silně zvyšuje libido (erekce).",
+        dosage: "Velmi nízké dávky (start 250mcg).",
+        warning: "Nevolnost po aplikaci, ztmavnutí mateřských znamének, priapismus."
+    },
+
+    // --- KATEGORIE: HARDCORE PEDS / STEROIDS (RED - EDUKATIVNÍ) ---
+    {
+        id: 60, name: "Clenbuterol", category: "Spalovač", rating: 5.0, colorType: "red",
+        shortDesc: "Brutální spalovač.",
+        fullDesc: "Zvyšuje tělesnou teplotu a metabolismus. Používán před soutěží. Velmi účinný, ale ničí srdce.",
+        dosage: "20-100mcg (pyramida).",
+        warning: "Třes, křeče, nekróza srdeční tkáně. Velmi nebezpečné."
+    },
+    {
+        id: 61, name: "T3 (Liothyronin)", category: "Spalovač", rating: 6.0, colorType: "red",
+        shortDesc: "Hormon štítné žlázy.",
+        fullDesc: "Syntetický hormon štítné žlázy. Zrychluje metabolismus všeho (tuků i svalů).",
+        dosage: "25-75mcg.",
+        warning: "Riziko svalového katabolismu. Při špatném užívání rozhození štítné žlázy."
+    },
+    {
+        id: 62, name: "Anavar (Oxandrolone)", category: "Steroid", rating: 9.0, colorType: "red",
+        shortDesc: "Mild steroid pro sílu.",
+        fullDesc: "Jeden z nejbezpečnějších AAS. Zvyšuje sílu a syntézu kolagenu bez velké retence vody. Oblíbený i u žen.",
+        dosage: "20-50mg denně.",
+        warning: "Zátěž jater (orální), zhoršení lipidového profilu (cholesterol)."
+    },
+    {
+        id: 63, name: "Trenbolone", category: "Steroid", rating: 9.5, colorType: "red",
+        shortDesc: "Král i Ďábel.",
+        fullDesc: "Nejsilnější injekční steroid. Buduje svaly a pálí tuk zároveň. Dává '3D' vzhled svalů.",
+        dosage: "Nízké dávky.",
+        warning: "Extrémní vedlejší účinky: 'Tren cough', nespavost, paranoia, agrese, noční pocení. Toxický."
+    },
+    {
+        id: 64, name: "Dianabol (Methandienone)", category: "Steroid", rating: 7.5, colorType: "red",
+        shortDesc: "Arnoldova snídaně.",
+        fullDesc: "Klasický objemový steroid ze zlaté éry. Rychlý nárůst hmoty a síly, ale hodně vody.",
+        dosage: "30-50mg denně.",
+        warning: "Vysoká aromatizace na estrogen (gynekomastie), toxický pro játra."
+    },
+    {
+        id: 65, name: "Testosteron Enanthate", category: "Steroid", rating: 9.8, colorType: "red",
+        shortDesc: "Základ každého cyklu.",
+        fullDesc: "Syntetický testosteron s dlouhým esterem. Základ pro budování svalů a regeneraci. Tělu vlastní hormon.",
+        dosage: "250-500mg týdně.",
+        warning: "Nutná PCT, kontrola estradiolu, akné, padání vlasů."
+    },
+    {
+        id: 66, name: "Superdrol", category: "Steroid", rating: 8.0, colorType: "red",
+        shortDesc: "Nejsilnější orální steroid.",
+        fullDesc: "Extrémní plnost svalů a síla během pár dnů. Původně prodáván jako doplněk, než byl zakázán.",
+        dosage: "10-20mg (max 3-4 týdny).",
+        warning: "Extrémně toxický pro játra (žloutenka), letargie, ztráta apetitu."
+    }
+];

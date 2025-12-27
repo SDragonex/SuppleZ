@@ -1,0 +1,21 @@
+{
+"name": "SuppleZ",
+"short_name": "SuppleZ",
+"start_url": "https://sdragonex.github.io/SuppleZ/",
+"display": "standalone",
+"background_color": "#000000",
+"theme_color": "#00f3ff",
+"icons":
+[
+    {
+        "src": "https://cdn-icons-png.flaticon.com/512/3063/3063212.png", 
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "https://cdn-icons-png.flaticon.com/512/3063/3063212.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+]
+}
