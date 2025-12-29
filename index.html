@@ -1,164 +1,226 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SuppleZ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#00f3ff">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3063/3063212.png">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>SuppleZ</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="manifest" href="manifest.json" />
+		<meta name="theme-color" content="#00f3ff" />
+		<link
+			rel="apple-touch-icon"
+			href="https://cdn-icons-png.flaticon.com/512/3063/3063212.png"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<div class="logo">SUPPLE<span class="highlight">Z</span></div>
+		</header>
 
-    <header>
-        <div class="logo">SUPPLE<span class="highlight">Z</span></div>
-    </header>
+		<main id="main-content">
+			<section id="view-wiki" class="view active">
+				<div class="search-bar">
+					<input
+						type="text"
+						id="searchInput"
+						placeholder="Hledat látku (např. Citrullin)..."
+					/>
+				</div>
+				<div id="cards-grid" class="cards-grid"></div>
+			</section>
 
-    <main id="main-content">
-        
-        <section id="view-wiki" class="view active">
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Hledat látku (např. Citrullin)...">
-            </div>
-            <div id="cards-grid" class="cards-grid">
-                </div>
-        </section>
+			<section id="view-detail" class="view hidden">
+				<div class="detail-nav">
+					<button onclick="closeDetailView()" class="back-btn">
+						<span class="material-icons">arrow_back</span> Zpět
+					</button>
+				</div>
 
-        <section id="view-detail" class="view hidden">
-            <div class="detail-nav">
-                <button onclick="closeDetailView()" class="back-btn">
-                    <span class="material-icons">arrow_back</span> Zpět
-                </button>
-            </div>
+				<div class="detail-hero">
+					<div id="detail-image-placeholder" class="img-placeholder"></div>
 
-            <div class="detail-hero">
-                <div id="detail-image-placeholder" class="img-placeholder"></div>
-                
-                <div class="detail-header-info">
-                    <span id="detail-category-badge" class="badge">Kategorie</span>
-                    <h1 id="detail-main-title">Název Látky</h1>
-                    <div id="detail-rating-big" class="rating-big">0/10</div>
-                </div>
-            </div>
+					<div class="detail-header-info">
+						<span id="detail-category-badge" class="badge">Kategorie</span>
+						<h1 id="detail-main-title">Název Látky</h1>
+						<div id="detail-rating-big" class="rating-big">0/10</div>
+					</div>
+				</div>
 
-            <div class="detail-body">
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <span class="material-icons">science</span>
-                        <span id="detail-type-text">Typ</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="material-icons">medication</span>
-                        <span id="detail-dose-short">Dávka</span>
-                    </div>
-                </div>
+				<div class="detail-body">
+					<div class="stats-grid">
+						<div class="stat-box">
+							<span class="material-icons">science</span>
+							<span id="detail-type-text">Typ</span>
+						</div>
+						<div class="stat-box">
+							<span class="material-icons">medication</span>
+							<span id="detail-dose-short">Dávka</span>
+						</div>
+					</div>
 
-                <div class="detail-section">
-                    <h3><span class="material-icons icon-inline">info</span> Popis</h3>
-                    <p id="detail-full-desc">...</p>
-                </div>
-                
-                <div class="detail-section">
-                    <h3><span class="material-icons icon-inline">bolt</span> Efekty</h3>
-                    <p id="detail-benefits">...</p>
-                </div>
+					<div class="detail-section">
+						<h3><span class="material-icons icon-inline">info</span> Popis</h3>
+						<p id="detail-full-desc">...</p>
+					</div>
 
-                <div class="detail-section">
-                    <h3><span class="material-icons icon-inline">scale</span> Dávkování</h3>
-                    <p id="detail-dosage-long">...</p>
-                </div>
+					<div class="detail-section">
+						<h3><span class="material-icons icon-inline">bolt</span> Efekty</h3>
+						<p id="detail-benefits">...</p>
+					</div>
 
-                <div class="detail-section warning-box">
-                    <h3><span class="material-icons icon-inline">warning</span> Varování</h3>
-                    <p id="detail-warning-long">...</p>
-                </div>
-            </div>
-        </section>
+					<div class="detail-section">
+						<h3>
+							<span class="material-icons icon-inline">scale</span> Dávkování
+						</h3>
+						<p id="detail-dosage-long">...</p>
+					</div>
 
-        <section id="view-diary" class="view hidden">
-            <h2 class="section-title">Deník & Cykly</h2>
-            
-            <div class="diary-input-box">
-                <div class="row">
-                    <input type="text" id="diary-name" placeholder="Látka (např. Nakopávač)" style="flex:2">
-                    <input type="text" id="diary-dose" placeholder="Dávka" style="flex:1">
-                </div>
-                <input type="text" id="diary-cycle" placeholder="Název cyklu / Tag (např. Objem 2024)">
-                <textarea id="diary-note" placeholder="Poznámky, pocity, pumpa..."></textarea>
-                
-                <div class="diary-buttons">
-                    <button onclick="addDiaryEntry('green')" class="btn-green">Super</button>
-                    <button onclick="addDiaryEntry('yellow')" class="btn-yellow">Ujde to</button>
-                    <button onclick="addDiaryEntry('red')" class="btn-red">Špatné</button>
-                </div>
-            </div>
+					<div class="detail-section warning-box">
+						<h3>
+							<span class="material-icons icon-inline">warning</span> Varování
+						</h3>
+						<p id="detail-warning-long">...</p>
+					</div>
+				</div>
+			</section>
 
-            <div class="filter-box">
-                <label><span class="material-icons small-icon">filter_list</span> Filtrovat cyklus:</label>
-                <select id="cycle-filter" onchange="renderDiary()">
-                    <option value="all">Zobrazit vše</option>
-                    </select>
-            </div>
+			<section id="view-diary" class="view hidden">
+				<h2 class="section-title">Deník & Cykly</h2>
 
-            <div id="diary-list">
-                </div>
-        </section>
+				<div class="diary-input-box">
+					<div class="row">
+						<input
+							type="text"
+							id="diary-name"
+							placeholder="Látka (např. Nakopávač)"
+							style="flex: 2"
+						/>
+						<input
+							type="text"
+							id="diary-dose"
+							placeholder="Dávka"
+							style="flex: 1"
+						/>
+					</div>
+					<input
+						type="text"
+						id="diary-cycle"
+						placeholder="Název cyklu / Tag (např. Objem 2024)"
+					/>
+					<textarea
+						id="diary-note"
+						placeholder="Poznámky, pocity, pumpa..."
+					></textarea>
 
-        <section id="view-settings" class="view hidden">
-            <h2 class="section-title">Nastavení</h2>
-            
-            <div class="settings-card">
-                <h3><span class="material-icons">save</span> Záloha Dat</h3>
-                <p>Ulož si svá data do souboru nebo je nahraj zpět.</p>
-                <div class="settings-btns">
-                    <button onclick="exportData()" class="btn-outline">Stáhnout zálohu</button>
-                    <label for="import-file" class="btn-outline">Nahrát zálohu</label>
-                    <input type="file" id="import-file" style="display:none" onchange="importData(this)">
-                </div>
-            </div>
+					<div class="diary-buttons">
+						<button onclick="addDiaryEntry('green')" class="btn-green">
+							Super
+						</button>
+						<button onclick="addDiaryEntry('yellow')" class="btn-yellow">
+							Ujde to
+						</button>
+						<button onclick="addDiaryEntry('red')" class="btn-red">
+							Špatné
+						</button>
+					</div>
+				</div>
 
-            <div class="settings-card">
-                <h3>Info</h3>
-                <p>Verze: <strong>3.0</strong></p>
-                <p>Dev: <a href="https://github.com/SDragonex" target="_blank" class="link-blue">SDragonex</a></p>
-            </div>
+				<div class="filter-box">
+					<label
+						><span class="material-icons small-icon">filter_list</span>
+						Filtrovat cyklus:</label
+					>
+					<select id="cycle-filter" onchange="renderDiary()">
+						<option value="all">Zobrazit vše</option>
+					</select>
+				</div>
 
-            <div class="settings-card danger-zone">
-                <h3>Reset</h3>
-                <button onclick="clearAllData()" class="btn-outline-red">Smazat všechna data</button>
-            </div>
-        </section>
-    </main>
+				<div id="diary-list"></div>
+			</section>
 
-    <nav class="bottom-nav">
-        <button class="nav-item active" onclick="switchTab('view-wiki', this)">
-            <span class="material-icons">science</span><span>Wiki</span>
-        </button>
-        <button class="nav-item" onclick="switchTab('view-diary', this)">
-            <span class="material-icons">edit_note</span><span>Deník</span>
-        </button>
-        <button class="nav-item" onclick="switchTab('view-settings', this)">
-            <span class="material-icons">settings</span><span>Nastavení</span>
-        </button>
-    </nav>
+			<section id="view-settings" class="view hidden">
+				<h2 class="section-title">Nastavení</h2>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(registration => {
-                        console.log('Service Worker registrován s rozsahem:', registration.scope);
-                    })
-                    .catch(err => {
-                        console.log('Registrace Service Workeru selhala:', err);
-                    });
-            });
-        }
-    </script>
-</body>
+				<div class="settings-card">
+					<h3><span class="material-icons">save</span> Záloha Dat</h3>
+					<p>Ulož si svá data do souboru nebo je nahraj zpět.</p>
+					<div class="settings-btns">
+						<button onclick="exportData()" class="btn-outline">
+							Stáhnout zálohu
+						</button>
+						<label for="import-file" class="btn-outline">Nahrát zálohu</label>
+						<input
+							type="file"
+							id="import-file"
+							style="display: none"
+							onchange="importData(this)"
+						/>
+					</div>
+				</div>
+
+				<div class="settings-card">
+					<h3>Info</h3>
+					<p>Verze: <strong>3.0</strong></p>
+					<p>
+						Dev:
+						<a
+							href="https://github.com/SDragonex"
+							target="_blank"
+							class="link-blue"
+							>SDragonex</a
+						>
+					</p>
+				</div>
+
+				<div class="settings-card danger-zone">
+					<h3>Reset</h3>
+					<button onclick="clearAllData()" class="btn-outline-red">
+						Smazat všechna data
+					</button>
+				</div>
+			</section>
+		</main>
+
+		<nav class="bottom-nav">
+			<button class="nav-item active" onclick="switchTab('view-wiki', this)">
+				<span class="material-icons">science</span><span>Wiki</span>
+			</button>
+			<button class="nav-item" onclick="switchTab('view-diary', this)">
+				<span class="material-icons">edit_note</span><span>Deník</span>
+			</button>
+			<button class="nav-item" onclick="switchTab('view-settings', this)">
+				<span class="material-icons">settings</span><span>Nastavení</span>
+			</button>
+		</nav>
+
+		<script src="script.js"></script>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker
+						.register("./sw.js")
+						.then((registration) => {
+							console.log(
+								"Service Worker registrován s rozsahem:",
+								registration.scope
+							);
+						})
+						.catch((err) => {
+							console.log("Registrace Service Workeru selhala:", err);
+						});
+				});
+			}
+		</script>
+	</body>
 </html>
