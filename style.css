@@ -440,7 +440,7 @@ select:focus {
 
 /* Hero sekce */
 .detail-hero {
-	padding: 30px 20px;
+	padding: 40px 20px;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
@@ -515,6 +515,50 @@ select:focus {
 	justify-content: center;
 	gap: 5px;
 	min-height: 80px; /* Aby byly stejně vysoké */
+}
+
+/* --- FILTRY KATEGORIÍ (SCROLL) --- */
+.category-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    /* Skrytí posuvníku */
+    scrollbar-width: none; 
+}
+.category-scroll::-webkit-scrollbar { display: none; }
+
+.filter-chip {
+    background: #111;
+    border: 1px solid #333;
+    color: #888;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.filter-chip.active {
+    background: var(--ui-accent); /* Modrá aktivní */
+    color: #000;
+    border-color: var(--ui-accent);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+}
+
+/* --- VELKÉ HVĚZDY V DETAILU --- */
+.hero-stars {
+    font-size: 4rem; /* Obří velikost */
+    margin: 10px 0 20px 0;
+    line-height: 1;
+    letter-spacing: 5px;
+    /* Barva se nastaví přes JS, ale default je zlatá */
+    color: var(--glow-text-color, #fff); 
+    text-shadow: 0 0 20px var(--glow-color, rgba(255,255,255,0.5));
 }
 
 /* Styl pro kategorii v levém boxu */

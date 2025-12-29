@@ -1,4 +1,4 @@
-const CACHE_NAME = "supplez-cache";
+const CACHE_NAME = "supplez-cache-v1";
 const ASSETS_TO_CACHE = [
 	"./",
 	"./index.html",

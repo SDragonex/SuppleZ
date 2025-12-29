@@ -1,136 +1,144 @@
 // --- LOGIKA APLIKACE ---
 
-// 1. GLOBÁLNÍ PROMĚNNÉ
 const cardsGrid = document.getElementById("cards-grid");
 const searchInput = document.getElementById("searchInput");
+const categoryContainer = document.getElementById("category-filters");
 
-// Lazy Load proměnné
+// Proměnné
 let globalData = [];
 let displayedCount = 0;
 const ITEMS_PER_BATCH = 20;
+let activeCategory = "Vše"; // Sleduje vybraný filtr
 
 // 2. NAČTENÍ DATABÁZE
 fetch('./database.json')
-    .then(response => {
-        if (!response.ok) throw new Error("Nelze načíst database.json");
-        return response.json();
-    })
+    .then(res => res.json())
     .then(data => {
         globalData = data;
+        generateCategoryFilters(); // Vygenerovat tlačítka filtrů
         loadMoreCards();
     })
-    .catch(error => {
-        console.error('Chyba:', error);
-        cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px">Chyba databáze. Zkontroluj JSON soubor (čárky, uvozovky).</p>';
-    });
+    .catch(err => console.error(err));
 
-// 3. NAVIGACE
-function switchTab(viewId, navElement) {
-    document.querySelectorAll(".view").forEach((el) => {
-        el.classList.remove("active");
-        el.classList.add("hidden");
+// --- 3. FILTRY KATEGORIÍ ---
+function generateCategoryFilters() {
+    // Získáme unikátní kategorie z dat
+    const categories = ["Vše", ...new Set(globalData.map(item => item.category))];
+    
+    categoryContainer.innerHTML = "";
+    
+    categories.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.className = "filter-chip";
+        if (cat === "Vše") btn.classList.add("active");
+        btn.innerText = cat;
+        
+        btn.onclick = () => {
+            // Změna aktivního tlačítka
+            document.querySelectorAll(".filter-chip").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            
+            activeCategory = cat;
+            displayedCount = 0; // Reset lazy loadu
+            cardsGrid.innerHTML = ""; // Vyčistit grid
+            loadMoreCards(); // Načíst znovu s filtrem
+        };
+        
+        categoryContainer.appendChild(btn);
     });
-    document.getElementById(viewId).classList.remove("hidden");
-    document.getElementById(viewId).classList.add("active");
-
-    document.querySelectorAll(".nav-item").forEach((el) => el.classList.remove("active"));
-    if (navElement) navElement.classList.add("active");
 }
 
-// 4. LOGIKA TLAČÍTKA ZPĚT (HISTORY API)
-window.addEventListener('popstate', (event) => {
-    if (document.body.classList.contains('detail-active')) {
-        closeDetailView(false);
+// Upravená funkce pro načítání karet (bere v potaz hledání I kategorii)
+function loadMoreCards() {
+    const searchTerm = searchInput.value.toLowerCase();
+    
+    // Filtrujeme data
+    let filteredData = globalData.filter(item => {
+        const matchesSearch = item.name.toLowerCase().includes(searchTerm);
+        const matchesCategory = activeCategory === "Vše" || item.category === activeCategory;
+        return matchesSearch && matchesCategory;
+    });
+
+    // Vezmeme jen další várku
+    const nextBatch = filteredData.slice(displayedCount, displayedCount + ITEMS_PER_BATCH);
+    
+    if (nextBatch.length > 0) {
+        renderCards(nextBatch, true);
+        displayedCount += nextBatch.length;
+    } else if (displayedCount === 0) {
+        cardsGrid.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px">Nic nenalezeno.</div>';
+    }
+}
+
+// Listener pro vyhledávání
+searchInput.addEventListener("input", () => {
+    displayedCount = 0;
+    cardsGrid.innerHTML = "";
+    loadMoreCards();
+});
+
+// Listener pro Scroll (Lazy Load)
+window.addEventListener('scroll', () => {
+    if (document.getElementById('view-wiki').classList.contains('hidden')) return;
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+        loadMoreCards();
     }
 });
 
-// 5. DETAIL VIEW
+
+// --- DETAIL VIEW (Upravený pro hvězdy nahoře) ---
 function openDetailView(item) {
-    // History API
     window.history.pushState({ view: 'detail' }, '', '#detail');
 
-    // Barvy
     let themeColor = "var(--ui-accent)";
     let glowColor = "rgba(0, 243, 255, 0.4)";
 
-    if (item.colorType === "green") { themeColor = "var(--neon-green)"; glowColor = "rgba(0, 255, 65, 0.5)"; }
-    if (item.colorType === "yellow") { themeColor = "var(--neon-yellow)"; glowColor = "rgba(255, 234, 0, 0.5)"; }
-    if (item.colorType === "red") { themeColor = "var(--neon-red)"; glowColor = "rgba(255, 0, 60, 0.5)"; }
+    if (item.colorType === "green") { themeColor = "var(--neon-green)"; glowColor = "rgba(0, 255, 65, 0.6)"; }
+    if (item.colorType === "yellow") { themeColor = "var(--neon-yellow)"; glowColor = "rgba(255, 234, 0, 0.6)"; }
+    if (item.colorType === "red") { themeColor = "var(--neon-red)"; glowColor = "rgba(255, 0, 60, 0.6)"; }
 
-    // --- HLAVIČKA ---
+    // Nadpis
     const titleEl = document.getElementById("detail-main-title");
     titleEl.innerText = item.name;
-    titleEl.style.color = themeColor;
+    titleEl.style.color = themeColor; // Barva nadpisu
 
-    // Skrytí starého badge (pokud v HTML ještě je)
-    const oldBadge = document.getElementById("detail-category-badge");
-    if(oldBadge) oldBadge.style.display = 'none';
-
-    // --- RATING (Hvězdičky) ---
-    const ratingEl = document.getElementById("detail-rating-big");
+    // --- HVĚZDY MÍSTO OBRÁZKU ---
+    const starContainer = document.getElementById("detail-stars-hero");
+    let r = Math.round(item.rating);
+    if (r > 5) r = 5; if (r < 0) r = 0;
+    const stars = '★'.repeat(r) + '☆'.repeat(5 - r);
     
-    // BEZPEČNOSTNÍ OPRAVA: Zaokrouhlení, aby .repeat() nepadalo na desetinných číslech
-    let starCount = Math.round(item.rating); 
-    if (starCount > 5) starCount = 5;
-    if (starCount < 0) starCount = 0;
+    starContainer.innerHTML = stars;
+    // Nastavíme barvu textu hvězd a barvu záře (text-shadow)
+    starContainer.style.setProperty('--glow-text-color', themeColor);
+    starContainer.style.setProperty('--glow-color', glowColor);
 
-    const stars = '★'.repeat(starCount) + '☆'.repeat(5 - starCount);
-    
-    ratingEl.innerHTML = `<span class="rating-stars" style="color:${themeColor}">${stars}</span>`;
-    ratingEl.style.border = 'none';
-    ratingEl.style.background = 'transparent';
-
-    // Hero Glow
+    // Glow pozadí Hero sekce
     document.querySelector(".detail-hero").style.setProperty("--glow-color", glowColor);
 
-    // Placeholder obrázku
-    const placeholder = document.getElementById("detail-image-placeholder");
-    placeholder.innerText = item.name.substring(0, 2).toUpperCase();
-    placeholder.style.borderColor = themeColor;
-    placeholder.style.color = themeColor;
-    placeholder.style.boxShadow = `0 0 25px ${glowColor}`;
-
-    // --- STAT BOXY (Nové) ---
-    // Kategorie
-    const categoryBox = document.getElementById("detail-type-text");
-    if(categoryBox) {
-        categoryBox.innerText = item.category;
-        categoryBox.style.color = themeColor;
-        categoryBox.style.fontWeight = "bold";
-        categoryBox.style.textTransform = "uppercase";
-    }
-
-    // CSS proměnná pro odrážky seznamu
-    document.documentElement.style.setProperty('--list-bullet-color', themeColor);
-
-    // Dávkování (Krátké)
-    const shortDoseEl = document.getElementById("detail-dose-short");
-    if(shortDoseEl) {
-        shortDoseEl.innerText = item.dosageShort || "Viz popis";
-    }
-
     // --- TEXTY ---
-    document.getElementById("detail-full-desc").innerText = item.description || item.fullDesc || "Popis chybí";
+    document.getElementById("detail-type-text").innerText = item.category;
+    document.getElementById("detail-type-text").style.color = themeColor;
+    document.documentElement.style.setProperty('--list-bullet-color', themeColor); // Odrážky
 
-    // Efekty (Seznam)
+    document.getElementById("detail-dose-short").innerText = item.dosageShort || "Viz popis";
+    document.getElementById("detail-full-desc").innerText = item.description || item.fullDesc;
+    
+    // Efekty
     const benefitsContainer = document.getElementById("detail-benefits");
     if (Array.isArray(item.effects)) {
         let htmlList = '<ul class="effects-list">';
-        item.effects.forEach(effect => {
-            htmlList += `<li style="--ui-accent: ${themeColor}">${effect}</li>`;
-        });
+        item.effects.forEach(ef => htmlList += `<li style="--ui-accent: ${themeColor}">${ef}</li>`);
         htmlList += '</ul>';
         benefitsContainer.innerHTML = htmlList;
     } else {
-        benefitsContainer.innerText = item.effects || "Žádné specifické efekty.";
+        benefitsContainer.innerText = item.effects;
     }
 
-    // Dávkování (Dlouhé) & Varování
-    document.getElementById("detail-dosage-long").innerText = item.dosageLong || item.dosage || "Neuvedeno";
-    document.getElementById("detail-warning-long").innerText = item.warning || "Žádné";
+    document.getElementById("detail-dosage-long").innerText = item.dosageLong || item.dosage;
+    document.getElementById("detail-warning-long").innerText = item.warning;
 
-
-    // --- PŘEPNUTÍ POHLEDU ---
+    // Zobrazit detail
     document.getElementById("view-wiki").classList.remove("active");
     document.getElementById("view-wiki").classList.add("hidden");
     document.getElementById("view-detail").classList.remove("hidden");

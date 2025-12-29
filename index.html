@@ -29,71 +29,63 @@
 		</header>
 
 		<main id="main-content">
-			<section id="view-wiki" class="view active">
-				<div class="search-bar">
-					<input
-						type="text"
-						id="searchInput"
-						placeholder="Hledat látku (např. Citrullin)..."
-					/>
-				</div>
-				<div id="cards-grid" class="cards-grid"></div>
-			</section>
+        
+        <section id="view-wiki" class="view active">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Hledat látku...">
+            </div>
 
-			<section id="view-detail" class="view hidden">
-				<div class="detail-nav">
-					<button onclick="closeDetailView()" class="back-btn">
-						<span class="material-icons">arrow_back</span> Zpět
-					</button>
-				</div>
+            <div id="category-filters" class="category-scroll">
+                </div>
 
-				<div class="detail-hero">
-					<div id="detail-image-placeholder" class="img-placeholder"></div>
+            <div id="cards-grid" class="cards-grid">
+                </div>
+        </section>
 
-					<div class="detail-header-info">
-						<span id="detail-category-badge" class="badge">Kategorie</span>
-						<h1 id="detail-main-title">Název Látky</h1>
-						<div id="detail-rating-big" class="rating-big">0/10</div>
-					</div>
-				</div>
+        <section id="view-detail" class="view hidden">
+            <div class="detail-nav">
+                <button onclick="closeDetailView()" class="back-btn">
+                    <span class="material-icons">arrow_back</span> Zpět
+                </button>
+            </div>
 
-				<div class="detail-body">
-					<div class="stats-grid">
-						<div class="stat-box">
-							<span class="material-icons">science</span>
-							<span id="detail-type-text">Typ</span>
-						</div>
-						<div class="stat-box">
-							<span class="material-icons">medication</span>
-							<span id="detail-dose-short">Dávka</span>
-						</div>
-					</div>
+            <div class="detail-hero">
+                <div id="detail-stars-hero" class="hero-stars">★★★★★</div>
+                
+                <div class="detail-header-info">
+                    <h1 id="detail-main-title">Název Látky</h1>
+                    </div>
+            </div>
 
-					<div class="detail-section">
-						<h3><span class="material-icons icon-inline">info</span> Popis</h3>
-						<p id="detail-full-desc">...</p>
-					</div>
-
-					<div class="detail-section">
-						<h3><span class="material-icons icon-inline">bolt</span> Efekty</h3>
-						<p id="detail-benefits">...</p>
-					</div>
-
-					<div class="detail-section">
-						<h3>
-							<span class="material-icons icon-inline">scale</span> Dávkování
-						</h3>
-						<p id="detail-dosage-long">...</p>
-					</div>
-
-					<div class="detail-section warning-box">
-						<h3>
-							<span class="material-icons icon-inline">warning</span> Varování
-						</h3>
-						<p id="detail-warning-long">...</p>
-					</div>
-				</div>
-			</section>
+            <div class="detail-body">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="material-icons">science</span>
+                        <span id="detail-type-text">Typ</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="material-icons">medication</span>
+                        <span id="detail-dose-short">Dávka</span>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <h3><span class="material-icons icon-inline">info</span> Popis</h3>
+                    <p id="detail-full-desc">...</p>
+                </div>
+                <div class="detail-section">
+                    <h3><span class="material-icons icon-inline">bolt</span> Efekty</h3>
+                    <p id="detail-benefits">...</p>
+                </div>
+                <div class="detail-section">
+                    <h3><span class="material-icons icon-inline">scale</span> Dávkování</h3>
+                    <p id="detail-dosage-long">...</p>
+                </div>
+                <div class="detail-section warning-box">
+                    <h3><span class="material-icons icon-inline">warning</span> Varování</h3>
+                    <p id="detail-warning-long">...</p>
+                </div>
+            </div>
+        </section>
 
 			<section id="view-diary" class="view hidden">
 				<h2 class="section-title">Deník & Cykly</h2>
