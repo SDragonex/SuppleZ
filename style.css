@@ -502,6 +502,7 @@ select:focus {
 	gap: 15px;
 	margin-bottom: 30px;
 }
+/* Úprava stat-boxu pro kategorii */
 .stat-box {
 	background: #111;
 	border: 1px solid #222;
@@ -511,7 +512,51 @@ select:focus {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	gap: 5px;
+	min-height: 80px; /* Aby byly stejně vysoké */
+}
+
+/* Styl pro kategorii v levém boxu */
+#detail-category-box {
+	font-family: "Rajdhani", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* Styl pro hvězdičky */
+.rating-stars {
+	color: #ffd700; /* Zlatá barva */
+	font-size: 1.8rem;
+	letter-spacing: 5px;
+	text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Seznam efektů (odrážky) */
+.effects-list {
+	list-style: none;
+	padding: 0;
+}
+
+.effects-list li {
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 12px;
+	color: #ccc;
+	line-height: 1.5;
+}
+
+/* Vlastní odrážka (billec/šipka) */
+.effects-list li::before {
+	content: "➤"; /* Nebo jiný znak */
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: var(--ui-accent); /* Bude se měnit přes JS podle barvy látky */
+	font-size: 0.8rem;
+	line-height: 1.6;
 }
 .stat-box .material-icons {
 	font-size: 1.5rem;
@@ -536,6 +581,14 @@ select:focus {
 	color: #bbb;
 	line-height: 1.6;
 	font-size: 1rem;
+}
+
+#detail-category-box {
+	font-family: "Rajdhani", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .warning-box {
