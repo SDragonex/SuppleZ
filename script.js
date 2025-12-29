@@ -1,30 +1,176 @@
-// --- LOGIKA APLIKACE ---
-
+// ==========================================
+// 1. GLOBÁLNÍ PROMĚNNÉ A NASTAVENÍ
+// ==========================================
 const cardsGrid = document.getElementById("cards-grid");
 const searchInput = document.getElementById("searchInput");
 const categoryContainer = document.getElementById("category-filters");
 
-// Proměnné
+// Lazy Load a Data proměnné
 let globalData = [];
 let displayedCount = 0;
 const ITEMS_PER_BATCH = 20;
-let activeCategory = "Vše"; // Sleduje vybraný filtr
+let activeCategory = "Vše";
 
-// 2. NAČTENÍ DATABÁZE
+// ==========================================
+// 2. NAČTENÍ DATABÁZE (FETCH)
+// ==========================================
 fetch('./database.json')
-    .then(res => res.json())
+    .then(response => {
+        if (!response.ok) throw new Error("Nelze načíst database.json");
+        return response.json();
+    })
     .then(data => {
         globalData = data;
-        generateCategoryFilters(); // Vygenerovat tlačítka filtrů
-        loadMoreCards();
+        generateCategoryFilters(); // Vygeneruje tlačítka filtrů
+        loadMoreCards();           // Načte první karty
     })
-    .catch(err => console.error(err));
+    .catch(error => {
+        console.error('Chyba:', error);
+        if(cardsGrid) {
+            cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px">Chyba databáze. Zkontroluj JSON soubor.</p>';
+        }
+    });
 
-// --- 3. FILTRY KATEGORIÍ ---
-function generateCategoryFilters() {
-    // Získáme unikátní kategorie z dat
-    const categories = ["Vše", ...new Set(globalData.map(item => item.category))];
+// ==========================================
+// 3. NAVIGACE (SPODNÍ LIŠTA)
+// ==========================================
+function switchTab(viewId, navElement) {
+    // 1. Skrýt všechny sekce
+    document.querySelectorAll(".view").forEach((el) => {
+        el.classList.remove("active");
+        el.classList.add("hidden");
+    });
     
+    // 2. Zobrazit vybranou sekci
+    const targetView = document.getElementById(viewId);
+    if(targetView) {
+        targetView.classList.remove("hidden");
+        targetView.classList.add("active");
+    }
+
+    // 3. Přebarvit aktivní tlačítko v menu
+    document.querySelectorAll(".nav-item").forEach((el) => el.classList.remove("active"));
+    if (navElement) {
+        navElement.classList.add("active");
+    }
+
+    // 4. Scroll nahoru
+    window.scrollTo(0, 0);
+}
+
+// ==========================================
+// 4. LOGIKA DETAILU (Full Screen & Zpět)
+// ==========================================
+
+// Posluchač pro tlačítko Zpět na mobilu
+window.addEventListener('popstate', (event) => {
+    if (document.body.classList.contains('detail-active')) {
+        closeDetailView(false); // false = nevolat history.back, protože uživatel už ho zmáčkl
+    }
+});
+
+function openDetailView(item) {
+    // Přidat záznam do historie (aby fungovalo tlačítko Zpět)
+    window.history.pushState({ view: 'detail' }, '', '#detail');
+
+    // Nastavení barev
+    let themeColor = "var(--ui-accent)";
+    let glowColor = "rgba(0, 243, 255, 0.4)";
+
+    if (item.colorType === "green") { themeColor = "var(--neon-green)"; glowColor = "rgba(0, 255, 65, 0.5)"; }
+    if (item.colorType === "yellow") { themeColor = "var(--neon-yellow)"; glowColor = "rgba(255, 234, 0, 0.5)"; }
+    if (item.colorType === "red") { themeColor = "var(--neon-red)"; glowColor = "rgba(255, 0, 60, 0.5)"; }
+
+    // -- HLAVIČKA --
+    const titleEl = document.getElementById("detail-main-title");
+    titleEl.innerText = item.name;
+    titleEl.style.color = themeColor;
+
+    // -- HVĚZDY --
+    const starContainer = document.getElementById("detail-stars-hero");
+    let r = Math.round(item.rating);
+    if (r > 5) r = 5; if (r < 0) r = 0;
+    const stars = '★'.repeat(r) + '☆'.repeat(5 - r);
+    
+    starContainer.innerHTML = stars;
+    starContainer.style.setProperty('--glow-text-color', themeColor);
+    starContainer.style.setProperty('--glow-color', glowColor);
+
+    // Glow efekt pozadí
+    document.querySelector(".detail-hero").style.setProperty("--glow-color", glowColor);
+
+    // -- STAT BOXY --
+    // Kategorie
+    const categoryBox = document.getElementById("detail-type-text");
+    if(categoryBox) {
+        categoryBox.innerText = item.category;
+        categoryBox.style.color = themeColor;
+        categoryBox.style.fontWeight = "bold";
+        categoryBox.style.textTransform = "uppercase";
+    }
+    
+    // Barva odrážek
+    document.documentElement.style.setProperty('--list-bullet-color', themeColor);
+
+    // Dávka (krátká)
+    const shortDoseEl = document.getElementById("detail-dose-short");
+    if(shortDoseEl) shortDoseEl.innerText = item.dosageShort || "Viz popis";
+
+    // -- TEXTY --
+    document.getElementById("detail-full-desc").innerText = item.description || item.fullDesc || "Popis chybí.";
+
+    // Efekty (Seznam)
+    const benefitsContainer = document.getElementById("detail-benefits");
+    if (Array.isArray(item.effects)) {
+        let htmlList = '<ul class="effects-list">';
+        item.effects.forEach(ef => htmlList += `<li style="--ui-accent: ${themeColor}">${ef}</li>`);
+        htmlList += '</ul>';
+        benefitsContainer.innerHTML = htmlList;
+    } else {
+        benefitsContainer.innerText = item.effects || "Žádné specifické efekty.";
+    }
+
+    document.getElementById("detail-dosage-long").innerText = item.dosageLong || item.dosage || "Neuvedeno";
+    document.getElementById("detail-warning-long").innerText = item.warning || "Žádné";
+
+    // -- PŘEPNUTÍ POHLEDU --
+    document.getElementById("view-wiki").classList.remove("active");
+    document.getElementById("view-wiki").classList.add("hidden");
+    
+    document.getElementById("view-detail").classList.remove("hidden");
+    document.getElementById("view-detail").classList.add("active");
+    
+    document.body.classList.add("detail-active");
+    window.scrollTo(0, 0);
+}
+
+function closeDetailView(goBack = true) {
+    // Pokud klikl na tlačítko v aplikaci, zavoláme history.back()
+    if (goBack) {
+        window.history.back();
+        return; 
+    }
+
+    // Zavření detailu
+    document.getElementById("view-detail").classList.remove("active");
+    document.getElementById("view-detail").classList.add("hidden");
+    
+    // Otevření Wiki
+    document.getElementById("view-wiki").classList.remove("hidden");
+    document.getElementById("view-wiki").classList.add("active");
+    
+    document.body.classList.remove("detail-active");
+}
+
+// ==========================================
+// 5. FILTRY A KARTY
+// ==========================================
+
+function generateCategoryFilters() {
+    if (!categoryContainer) return;
+    
+    // Získat unikátní kategorie
+    const categories = ["Vše", ...new Set(globalData.map(item => item.category))];
     categoryContainer.innerHTML = "";
     
     categories.forEach(cat => {
@@ -34,134 +180,19 @@ function generateCategoryFilters() {
         btn.innerText = cat;
         
         btn.onclick = () => {
-            // Změna aktivního tlačítka
             document.querySelectorAll(".filter-chip").forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
             
             activeCategory = cat;
-            displayedCount = 0; // Reset lazy loadu
-            cardsGrid.innerHTML = ""; // Vyčistit grid
-            loadMoreCards(); // Načíst znovu s filtrem
+            displayedCount = 0;
+            cardsGrid.innerHTML = "";
+            loadMoreCards();
         };
         
         categoryContainer.appendChild(btn);
     });
 }
 
-// Upravená funkce pro načítání karet (bere v potaz hledání I kategorii)
-function loadMoreCards() {
-    const searchTerm = searchInput.value.toLowerCase();
-    
-    // Filtrujeme data
-    let filteredData = globalData.filter(item => {
-        const matchesSearch = item.name.toLowerCase().includes(searchTerm);
-        const matchesCategory = activeCategory === "Vše" || item.category === activeCategory;
-        return matchesSearch && matchesCategory;
-    });
-
-    // Vezmeme jen další várku
-    const nextBatch = filteredData.slice(displayedCount, displayedCount + ITEMS_PER_BATCH);
-    
-    if (nextBatch.length > 0) {
-        renderCards(nextBatch, true);
-        displayedCount += nextBatch.length;
-    } else if (displayedCount === 0) {
-        cardsGrid.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px">Nic nenalezeno.</div>';
-    }
-}
-
-// Listener pro vyhledávání
-searchInput.addEventListener("input", () => {
-    displayedCount = 0;
-    cardsGrid.innerHTML = "";
-    loadMoreCards();
-});
-
-// Listener pro Scroll (Lazy Load)
-window.addEventListener('scroll', () => {
-    if (document.getElementById('view-wiki').classList.contains('hidden')) return;
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
-        loadMoreCards();
-    }
-});
-
-
-// --- DETAIL VIEW (Upravený pro hvězdy nahoře) ---
-function openDetailView(item) {
-    window.history.pushState({ view: 'detail' }, '', '#detail');
-
-    let themeColor = "var(--ui-accent)";
-    let glowColor = "rgba(0, 243, 255, 0.4)";
-
-    if (item.colorType === "green") { themeColor = "var(--neon-green)"; glowColor = "rgba(0, 255, 65, 0.6)"; }
-    if (item.colorType === "yellow") { themeColor = "var(--neon-yellow)"; glowColor = "rgba(255, 234, 0, 0.6)"; }
-    if (item.colorType === "red") { themeColor = "var(--neon-red)"; glowColor = "rgba(255, 0, 60, 0.6)"; }
-
-    // Nadpis
-    const titleEl = document.getElementById("detail-main-title");
-    titleEl.innerText = item.name;
-    titleEl.style.color = themeColor; // Barva nadpisu
-
-    // --- HVĚZDY MÍSTO OBRÁZKU ---
-    const starContainer = document.getElementById("detail-stars-hero");
-    let r = Math.round(item.rating);
-    if (r > 5) r = 5; if (r < 0) r = 0;
-    const stars = '★'.repeat(r) + '☆'.repeat(5 - r);
-    
-    starContainer.innerHTML = stars;
-    // Nastavíme barvu textu hvězd a barvu záře (text-shadow)
-    starContainer.style.setProperty('--glow-text-color', themeColor);
-    starContainer.style.setProperty('--glow-color', glowColor);
-
-    // Glow pozadí Hero sekce
-    document.querySelector(".detail-hero").style.setProperty("--glow-color", glowColor);
-
-    // --- TEXTY ---
-    document.getElementById("detail-type-text").innerText = item.category;
-    document.getElementById("detail-type-text").style.color = themeColor;
-    document.documentElement.style.setProperty('--list-bullet-color', themeColor); // Odrážky
-
-    document.getElementById("detail-dose-short").innerText = item.dosageShort || "Viz popis";
-    document.getElementById("detail-full-desc").innerText = item.description || item.fullDesc;
-    
-    // Efekty
-    const benefitsContainer = document.getElementById("detail-benefits");
-    if (Array.isArray(item.effects)) {
-        let htmlList = '<ul class="effects-list">';
-        item.effects.forEach(ef => htmlList += `<li style="--ui-accent: ${themeColor}">${ef}</li>`);
-        htmlList += '</ul>';
-        benefitsContainer.innerHTML = htmlList;
-    } else {
-        benefitsContainer.innerText = item.effects;
-    }
-
-    document.getElementById("detail-dosage-long").innerText = item.dosageLong || item.dosage;
-    document.getElementById("detail-warning-long").innerText = item.warning;
-
-    // Zobrazit detail
-    document.getElementById("view-wiki").classList.remove("active");
-    document.getElementById("view-wiki").classList.add("hidden");
-    document.getElementById("view-detail").classList.remove("hidden");
-    document.getElementById("view-detail").classList.add("active");
-    document.body.classList.add("detail-active");
-    window.scrollTo(0, 0);
-}
-
-// Funkce pro zavření
-function closeDetailView(goBack = true) {
-    if (goBack) {
-        window.history.back();
-        return;
-    }
-
-    document.getElementById("view-detail").classList.remove("active");
-    document.getElementById("view-detail").classList.add("hidden");
-    document.getElementById("view-wiki").classList.remove("hidden");
-    document.getElementById("view-wiki").classList.add("active");
-    document.body.classList.remove("detail-active");
-}
-
-// 6. RENDEROVÁNÍ KARET
 function renderCards(dataToRender, append = false) {
     if (!append) cardsGrid.innerHTML = "";
     if (!dataToRender) return;
@@ -177,14 +208,14 @@ function renderCards(dataToRender, append = false) {
         if (item.colorType === "yellow") rateColor = "var(--neon-yellow)";
         if (item.colorType === "red") rateColor = "var(--neon-red)";
 
-        // Ošetření ratingu pro kartu (aby to nepsalo undefined)
-        const displayRating = item.rating ? item.rating : "?";
+        // Ošetření ratingu
+        const r = Math.round(item.rating || 0);
 
         card.innerHTML = `
             <div class="card-header">
                 <span class="card-category">${item.category}</span>
                 <div class="card-rating" style="color:${rateColor}; border-color:${rateColor}">
-                    ${displayRating}/5
+                    ${r}/5
                 </div>
             </div>
             <h3>${item.name}</h3>
@@ -195,14 +226,26 @@ function renderCards(dataToRender, append = false) {
 }
 
 function loadMoreCards() {
-    if (searchInput.value.length > 0) return;
-    const nextBatch = globalData.slice(displayedCount, displayedCount + ITEMS_PER_BATCH);
+    const term = searchInput ? searchInput.value.toLowerCase() : "";
+    
+    // Filtrace
+    let filteredData = globalData.filter(item => {
+        const matchesSearch = item.name.toLowerCase().includes(term);
+        const matchesCategory = activeCategory === "Vše" || item.category === activeCategory;
+        return matchesSearch && matchesCategory;
+    });
+
+    const nextBatch = filteredData.slice(displayedCount, displayedCount + ITEMS_PER_BATCH);
+    
     if (nextBatch.length > 0) {
         renderCards(nextBatch, true);
         displayedCount += nextBatch.length;
+    } else if (displayedCount === 0) {
+        cardsGrid.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px">Nic nenalezeno.</div>';
     }
 }
 
+// Event Listenery pro Scroll a Search
 window.addEventListener('scroll', () => {
     if (document.getElementById('view-wiki').classList.contains('hidden')) return;
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
@@ -210,19 +253,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
-searchInput.addEventListener("input", (e) => {
-    const term = e.target.value.toLowerCase();
-    cardsGrid.innerHTML = "";
-    if (term === '') {
+if(searchInput) {
+    searchInput.addEventListener("input", () => {
         displayedCount = 0;
+        cardsGrid.innerHTML = "";
         loadMoreCards();
-    } else {
-        const filtered = globalData.filter((i) => i.name.toLowerCase().includes(term));
-        renderCards(filtered, false);
-    }
-});
+    });
+}
 
-// 6. DENÍK & CYKLY (Zůstává stejné)
+// ==========================================
+// 6. DENÍK (LocalStorage)
+// ==========================================
 let myDiary = JSON.parse(localStorage.getItem("supplez_diary_v2")) || [];
 
 function addDiaryEntry(moodColor) {
@@ -264,8 +305,13 @@ function deleteEntry(id) {
 
 function renderDiary() {
     const list = document.getElementById("diary-list");
-    const filterVal = document.getElementById("cycle-filter").value;
+    const filterSelect = document.getElementById("cycle-filter");
+    
+    if(!list) return; // Ochrana pokud jsme na jiné stránce
+
+    const filterVal = filterSelect ? filterSelect.value : "all";
     updateFilterDropdown();
+
     list.innerHTML = "";
 
     const filteredData = filterVal === "all" ? myDiary : myDiary.filter((e) => e.cycle === filterVal);
@@ -298,8 +344,11 @@ function renderDiary() {
 
 function updateFilterDropdown() {
     const select = document.getElementById("cycle-filter");
+    if(!select) return;
+
     const currentVal = select.value;
     const uniqueCycles = [...new Set(myDiary.map((item) => item.cycle))];
+    
     select.innerHTML = '<option value="all">Zobrazit vše</option>';
     uniqueCycles.forEach((c) => {
         const opt = document.createElement("option");
@@ -307,6 +356,7 @@ function updateFilterDropdown() {
         opt.innerText = c;
         select.appendChild(opt);
     });
+    
     if (uniqueCycles.includes(currentVal) || currentVal === "all") {
         select.value = currentVal;
     }
@@ -314,7 +364,9 @@ function updateFilterDropdown() {
 
 function saveData() { localStorage.setItem("supplez_diary_v2", JSON.stringify(myDiary)); }
 
-// 7. NASTAVENÍ
+// ==========================================
+// 7. NASTAVENÍ (Export/Import/Reset)
+// ==========================================
 function exportData() {
     const dataStr = JSON.stringify(myDiary, null, 2);
     const blob = new Blob([dataStr], { type: "application/json" });
@@ -355,5 +407,8 @@ function clearAllData() {
     }
 }
 
-// Inicializace deníku
+// ==========================================
+// 8. INICIALIZACE
+// ==========================================
+// Spustíme render deníku, pokud jsme na stránce
 renderDiary();

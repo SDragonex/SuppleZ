@@ -407,10 +407,6 @@ select:focus {
 	}
 }
 
-/* =========================================
-   NOVÝ VZHLED DETAILU (FULL SCREEN)
-   ========================================= */
-
 /* Navigační lišta detailu */
 .detail-nav {
 	position: sticky;
