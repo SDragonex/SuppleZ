@@ -29,63 +29,104 @@
 		</header>
 
 		<main id="main-content">
-        
-        <section id="view-wiki" class="view active">
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Hledat látku...">
-            </div>
+			<section id="view-wiki" class="view active">
+				<div class="search-container">
+					<div class="search-bar-wrapper">
+						<input type="text" id="searchInput" placeholder="Hledat látku..." />
+					</div>
+					<button id="open-filter-btn" class="filter-toggle-btn">
+						<span class="material-icons">tune</span>
+					</button>
+				</div>
 
-            <div id="category-filters" class="category-scroll">
-                </div>
+				<div id="active-filters-bar" class="hidden">
+					<span id="active-filter-label">Vše</span>
+					<button onclick="resetFilters()" class="clear-filter-btn">
+						<span class="material-icons">close</span>
+					</button>
+				</div>
 
-            <div id="cards-grid" class="cards-grid">
-                </div>
-        </section>
+				<div id="filter-modal" class="filter-overlay hidden">
+					<div class="filter-content">
+						<div class="filter-header">
+							<h3>Filtrovat & Řadit</h3>
+							<button id="close-filter-btn" class="close-icon">
+								<span class="material-icons">close</span>
+							</button>
+						</div>
 
-        <section id="view-detail" class="view hidden">
-            <div class="detail-nav">
-                <button onclick="closeDetailView()" class="back-btn">
-                    <span class="material-icons">arrow_back</span> Zpět
-                </button>
-            </div>
+						<div class="filter-section">
+							<h4>Řadit podle</h4>
+							<div class="sort-options">
+								<button class="sort-btn active" onclick="setSort('rating')">
+									Nejlépe hodnocené
+								</button>
+								<button class="sort-btn" onclick="setSort('az')">A - Z</button>
+							</div>
+						</div>
 
-            <div class="detail-hero">
-                <div id="detail-stars-hero" class="hero-stars">★★★★★</div>
-                
-                <div class="detail-header-info">
-                    <h1 id="detail-main-title">Název Látky</h1>
-                    </div>
-            </div>
+						<div class="filter-section">
+							<h4>Kategorie</h4>
+							<div id="modal-categories" class="categories-grid"></div>
+						</div>
 
-            <div class="detail-body">
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <span class="material-icons">science</span>
-                        <span id="detail-type-text">Typ</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="material-icons">medication</span>
-                        <span id="detail-dose-short">Dávka</span>
-                    </div>
-                </div>
-                <div class="detail-section">
-                    <h3><span class="material-icons icon-inline">info</span> Popis</h3>
-                    <p id="detail-full-desc">...</p>
-                </div>
-                <div class="detail-section">
-                    <h3><span class="material-icons icon-inline">bolt</span> Efekty</h3>
-                    <p id="detail-benefits">...</p>
-                </div>
-                <div class="detail-section">
-                    <h3><span class="material-icons icon-inline">scale</span> Dávkování</h3>
-                    <p id="detail-dosage-long">...</p>
-                </div>
-                <div class="detail-section warning-box">
-                    <h3><span class="material-icons icon-inline">warning</span> Varování</h3>
-                    <p id="detail-warning-long">...</p>
-                </div>
-            </div>
-        </section>
+						<button id="apply-filters-btn" class="btn-full-green">
+							Zobrazit výsledky
+						</button>
+					</div>
+				</div>
+
+				<div id="cards-grid" class="cards-grid"></div>
+			</section>
+
+			<section id="view-detail" class="view hidden">
+				<div class="detail-nav">
+					<button onclick="closeDetailView()" class="back-btn">
+						<span class="material-icons">arrow_back</span> Zpět
+					</button>
+				</div>
+
+				<div class="detail-hero">
+					<div id="detail-stars-hero" class="hero-stars">★★★★★</div>
+
+					<div class="detail-header-info">
+						<h1 id="detail-main-title">Název Látky</h1>
+					</div>
+				</div>
+
+				<div class="detail-body">
+					<div class="stats-grid">
+						<div class="stat-box">
+							<span class="material-icons">science</span>
+							<span id="detail-type-text">Typ</span>
+						</div>
+						<div class="stat-box">
+							<span class="material-icons">medication</span>
+							<span id="detail-dose-short">Dávka</span>
+						</div>
+					</div>
+					<div class="detail-section">
+						<h3><span class="material-icons icon-inline">info</span> Popis</h3>
+						<p id="detail-full-desc">...</p>
+					</div>
+					<div class="detail-section">
+						<h3><span class="material-icons icon-inline">bolt</span> Efekty</h3>
+						<p id="detail-benefits">...</p>
+					</div>
+					<div class="detail-section">
+						<h3>
+							<span class="material-icons icon-inline">scale</span> Dávkování
+						</h3>
+						<p id="detail-dosage-long">...</p>
+					</div>
+					<div class="detail-section warning-box">
+						<h3>
+							<span class="material-icons icon-inline">warning</span> Varování
+						</h3>
+						<p id="detail-warning-long">...</p>
+					</div>
+				</div>
+			</section>
 
 			<section id="view-diary" class="view hidden">
 				<h2 class="section-title">Deník & Cykly</h2>
