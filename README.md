@@ -32,13 +32,11 @@ Tento projekt můžeš používat:
 
 ## ⭐️ 2. Hlavní funkce
 
-✅ Zobrazení seznamu suplementů
-✅ Rychlé vyhledávání v databázi
-✅ Interaktivní uživatelské rozhraní
-✅ Statická webová aplikace vhodná pro publikaci (např. GitHub Pages)
-✅ Podpora offline použití (service worker)
-
-*(Detaily funkcí doplň podle reálného chování aplikace – mohu upravit, když mi pošleš ukázku výstupu.)*
+* ✅ Zobrazení seznamu suplementů
+* ✅ Rychlé vyhledávání v databázi
+* ✅ Interaktivní uživatelské rozhraní
+* ✅ Statická webová aplikace vhodná pro publikaci (např. GitHub Pages)
+* ✅ Podpora offline použití (service worker)
 
 ---
 
@@ -101,7 +99,6 @@ SuppleZ/
 
 * Kliknutím na suplement získáš detailní informace (např. popis, použití, dávkování).
 
-*(Tato sekce může být upravena podle konkrétní implementace UI.)*
 
 ---
 
@@ -146,7 +143,7 @@ Repozitář: [https://github.com/SDragonex/SuppleZ](https://github.com/SDragonex
 
 ## 📌 Plány do budoucna
 
-✨ Doplnit stránku s přehledem kategorií suplementů
-✨ Přidat stránku „O projektu“ s filozofií suplementace
-✨ Přidat dynamické načítání dat přes API
-✨ Umožnit uživatelům přidávat suplementy (formulář + backend)
+* ✨ Doplnit stránku s přehledem kategorií suplementů
+* ✨ Přidat stránku „O projektu“ s filozofií suplementace
+* ✨ Přidat dynamické načítání dat přes API
+* ✨ Umožnit uživatelům přidávat suplementy (formulář + backend)
