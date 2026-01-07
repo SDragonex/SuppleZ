@@ -9,8 +9,6 @@ Aplikace nevyžaduje internet (po prvním načtení) a ukládá data uživatele 
 - **Pro biohackery:** Experimentování s nootropiky, adaptogeny a dalšími látkami.
 - **Pro všechny:** Bezpečné a informované rozhodování o doplňcích stravy.
 
-Projekt je inspirován open-source filozofií a je navržen pro snadnou rozšiřitelnost. Pokud máte nápady na vylepšení, podívejte se na sekci [Přispívání](#-8-přispívání-a-vývoj).
-
 ---
 
 ## ⭐️ 2. Klíčové funkce
@@ -126,7 +124,6 @@ SuppleZ/
 - **Jak přidat novou látku?** Uprav `database.json` a vytvoř pull request.
 - **Funguje na starších prohlížečích?** Podporuje moderní prohlížeče; pro starší verze může být omezená funkcionalita.
 - **Co když ztratím data?** Exportujte deník pravidelně jako JSON.
-- **Je to zdarma?** Ano, open-source pod Apache-2.0.
 
 ---
 
