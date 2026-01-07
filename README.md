@@ -143,7 +143,7 @@ Nápady? Otevři issue na GitHubu!
 
 ## 📜 11. Licence
 
-Tento projekt je open-source pod licencí Apache-2.0. Můžeš ho volně používat, upravovat a sdílet.
+Tento projekt není open-source.
 
-**Autor:** SDragonex  
+**Autor:** [SDragonex](https://github.com/SDragonex)
 > "Built for performance, designed for knowledge." 💊
