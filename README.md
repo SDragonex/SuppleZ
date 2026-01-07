@@ -1,14 +1,3 @@
-<think>
-Nejprve pochopím požadavek: Uživatel chce vylepšit a rozšířit dokumentaci pro projekt SuppleZ, který je PWA aplikací pro suplementy. Dokumentace je v češtině, takže odpověď by měla být také v češtině.
-
-</think># 📘 SuppleZ – Osobní Suplementová Wiki & Deník
-
-**SuppleZ** je moderní, interaktivní **PWA (Progressive Web App)** aplikace určená pro sportovce, biohackery a všechny, kdo se zajímají o doplňky stravy. Slouží jako encyklopedie doplňků stravy a zároveň jako osobní deník pro sledování účinků suplementace.
-
-Projekt je postaven jako čistě klientská aplikace (Vanilla JS), je plně responzivní a díky Service Workeru funguje i **offline** jako nativní mobilní aplikace. Bez reklam, bez sledování – jen čisté informace a osobní data.
-
----
-
 ## 🚀 Obsah
 
 1. [O projektu](#-1-o-projektu)
