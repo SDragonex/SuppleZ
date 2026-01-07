@@ -1,149 +1,121 @@
-# 📘 SuppleZ – Suplementová Wiki
+# 📘 SuppleZ – Osobní Suplementová Wiki & Deník
 
-SuppleZ je interaktivní **webová aplikace (supplement wiki)** určená k přehlednému zobrazení informací o výživových doplňcích (supletech), jejich vlastnostech a použití. Projekt je postaven jako klient-side aplikace pomocí **HTML, CSS a JavaScriptu** a může být hostován jako statická stránka (např. GitHub Pages).
+SuppleZ je moderní, interaktivní **PWA (Progressive Web App)** aplikace určená pro sportovce a biohackery. Slouží jako encyklopedie doplňků stravy a zároveň jako osobní deník pro sledování účinků suplementace.
+
+Projekt je postaven jako čistě klientská aplikace (Vanilla JS), je plně responzivní a díky Service Workeru funguje i **offline** jako nativní mobilní aplikace.
+
 
 ---
 
 ## 🚀 Obsah dokumentace
 
 1. **O projektu**
-2. **Funkce**
-3. **Instalace & spuštění**
-4. **Struktura repozitáře**
-5. **Technologie**
-6. **Použití**
-7. **Přispívání**
-8. **Licence**
-9. **Kontakt**
+2. **Klíčové funkce**
+3. **Technologie**
+4. **Instalace a spuštění**
+5. **Struktura dat (Jak přidat látky)**
+6. **Offline režim (PWA)**
+7. **Správa dat (Deník)**
+8. **Struktura repozitáře**
+9. **Licence**
 
 ---
 
 ## 🧠 1. O projektu
 
-SuppleZ je jednoduchá, čistá a přehledná wiki aplikace zaměřená na **výživové doplňky (suplementy)**. Umožňuje procházet databázi, zobrazovat informace o jednotlivých suplementech a může sloužit jako referenční zdroj pro uživatele, kteří chtějí rychle najít informace o konkrétních doplňcích.
+Cílem SuppleZ je poskytnout **čisté, rychlé a přehledné rozhraní** bez reklam a zbytečného balastu. Uživatel zde najde ověřené informace o dávkování, účincích a rizicích jednotlivých látek.
 
-Tento projekt můžeš používat:
-
-* jako **osobní referenční web**
-* jako základ pro větší suplementovou encyklopedii
-* jako **frontend školního/koníčkového projektu**
+Aplikace nevyžaduje internet (po prvním načtení) a ukládá data uživatele (deník) pouze do lokálního úložiště prohlížeče, což zaručuje **100% soukromí**.
 
 ---
 
-## ⭐️ 2. Hlavní funkce
+## ⭐️ 2. Klíčové funkce
 
-* ✅ Zobrazení seznamu suplementů
-* ✅ Rychlé vyhledávání v databázi
-* ✅ Interaktivní uživatelské rozhraní
-* ✅ Statická webová aplikace vhodná pro publikaci (např. GitHub Pages)
-* ✅ Podpora offline použití (service worker)
+### 📚 Wiki Část
+* **Chytré vyhledávání:** Okamžité filtrování látek podle názvu.
+* **Filtrování a Řazení:** Moderní "Bottom Sheet" panel pro filtrování podle kategorií (Zdraví, Síla, Spánek...) a řazení (Nejlepší hodnocení, A-Z).
+* **Detailní karty:** Full-screen zobrazení s hodnocením (1-5 hvězd), dávkováním, seznamem benefitů a varováním.
+* **Vizuální indikátory:** Barevné rozlišení bezpečnosti/typu (Zelená = Safe, Žlutá = Pozor, Červená = Hardcore).
+
+### 📝 Osobní Deník
+* **Tracking:** Zaznamenávání užitých látek, dávek a pocitů.
+* **Barevné nálady:** Hodnocení efektu (Super / Ujde / Špatné).
+* **Cyklování:** Možnost přiřadit záznam ke konkrétnímu cyklu (např. "Objem 2024").
+
+### ⚙️ Nastavení a Data
+* **Import / Export:** Možnost zálohovat deník do JSON souboru a přenést ho na jiné zařízení.
+* **Dark Mode UI:** Design inspirovaný cyberpunk/sci-fi estetikou (Glassmorphism).
 
 ---
 
-## 🛠️ 3. Instalace a spuštění
+## 🧩 3. Technologie
 
-> **Nejsou potřeba žádné složité nástroje ani backend.**
-> Aplikace běží čistě z HTML/JS souborů.
+| Technologie | Popis |
+| :--- | :--- |
+| **HTML5** | Sémantická struktura |
+| **CSS3** | Flexbox, Grid, CSS Variables, Backdrop-filter |
+| **Vanilla JS** | ES6+, Fetch API, History API, LocalStorage |
+| **JSON** | Externí databáze suplementů |
+| **Service Worker** | Cache strategie (Network First) pro offline běh |
 
-### 📌 Lokální spuštění
+---
 
+## 🛠️ 4. Instalace a spuštění
+
+Protože aplikace používá `fetch()` pro načítání JSON databáze, **nebude fungovat správně, pokud ji otevřeš jen dvojklikem na soubor** (protokol `file://` blokuje externí zdroje).
+
+### 🖥️ Možnost A: GitHub Pages (Doporučeno)
+1. Nahraj repozitář na GitHub.
+2. V nastavení repozitáře aktivuj **GitHub Pages**.
+3. Aplikace poběží na adrese `https://tvoje-jmeno.github.io/SuppleZ`.
+
+### 💻 Možnost B: Lokální vývoj (VS Code)
 1. Naklonuj repozitář:
-
    ```bash
-   git clone https://github.com/SDragonex/SuppleZ.git
-   ```
-2. Otevři soubor `index.html` v prohlížeči
+   git clone [https://github.com/SDragonex/SuppleZ.git](https://github.com/SDragonex/SuppleZ.git)
 
-   * dvojklikem
-   * nebo pomocí Live Server ve VSCode
+ * Nainstaluj rozšíření Live Server do VS Code.
+ * Klikni pravým na index.html a zvol "Open with Live Server".
+📊 5. Struktura dat (Jak přidat látky)
+Veškerá data o suplementech jsou v souboru database.json. Pro přidání nové látky zkopíruj tento vzor a vlož ho do pole:
+{
+    "id": 1,
+    "name": "Název Látky",
+    "category": "Kategorie (např. Síla)",
+    "rating": 5,
+    "colorType": "green", 
+    "shortDesc": "Krátký popisek na kartu.",
+    "description": "Dlouhý detailní popis...",
+    "effects": [
+        "Bod 1 - účinek",
+        "Bod 2 - účinek"
+    ],
+    "dosageShort": "5g",
+    "dosageLong": "Detailní instrukce k dávkování...",
+    "warning": "Na co si dát pozor."
+}
 
----
-
-## 📂 4. Struktura projektu
-
-```
+Poznámka: colorType může být green, yellow nebo red.
+📱 6. Offline režim (PWA)
+Aplikace obsahuje soubor sw.js (Service Worker) a manifest.json.
+ * Instalace: Na mobilu (Android/iOS) můžeš v prohlížeči zvolit "Přidat na plochu". Aplikace se nainstaluje jako nativní appka.
+ * Aktualizace: Databáze látek se stahuje strategií Network First – pokud jsi online, stáhne se nejnovější verze. Pokud jsi offline, použije se verze z paměti.
+📂 7. Struktura repozitáře
 SuppleZ/
-├─ 📄 index.html          – hlavní HTML stránka
-├─ 📄 style.css           – styly webu
-├─ 📄 script.js           – hlavní JavaScript
-├─ 📄 data.js             – data suplementů
-├─ 📄 database.json       – zdrojová databáze suplementů
-├─ 📄 manifest.json       – konfigurace PWA
-├─ 📄 sw.js               – service worker pro offline režim
-├─ 📄 README.md           – tato dokumentace
-├─ 📄 LICENSE             – licence projektu
-```
+├─ 📄 index.html          – Hlavní struktura (Views: Wiki, Detail, Diary, Settings)
+├─ 📄 style.css           – Design (Dark theme, Animations, Responsive)
+├─ 📄 script.js           – Veškerá logika (Routing, Rendering, Filters, Storage)
+├─ 📄 database.json       – Data suplementů
+├─ 📄 sw.js               – Service Worker (Offline logika)
+├─ 📄 manifest.json       – PWA Konfigurace (Ikony, Barvy)
+├─ 📄 README.md           – Dokumentace
+└─ 📂 icons/              – Ikony pro PWA (volitelné)
 
----
-
-## 🧩 5. Použité technologie
-
-| Technologie    | Účel                           |
-| -------------- | ------------------------------ |
-| HTML           | Struktura stránky              |
-| CSS            | Stylování UI                   |
-| JavaScript     | Interaktivita, logika aplikace |
-| JSON           | Data suplementů                |
-| Service Worker | Offline podpora                |
-
----
-
-## 📖 6. Jak používat
-
-### 🔍 Procházení suplementů
-
-* Po otevření stránky se zobrazí seznam suplementů z `data.js/json`.
-* Pomocí vyhledávacího pole můžeš filtrovat suplementy podle názvu.
-
-### 🧠 Detail suplementu
-
-* Kliknutím na suplement získáš detailní informace (např. popis, použití, dávkování).
-
-
----
-
-## 🤝 7. Přispívání
-
-Chceš přidat nové suplementy, funkce nebo upravit UI? 🛠️
-Návod pro přispívání:
-
-1. Forkni tento repozitář
-2. Vytvoř novou větev:
-
-   ```bash
-   git checkout -b feature/nova-funkce
-   ```
-3. Udělej své úpravy
-4. Pošli pull request
-
-Prosím, přidej krátký popis změn.
-
----
-
-## 📜 8. Licence
-
-Tento projekt je licencován pod **Apache-2.0 License**.
-
-Můžeš:
-
-* volně používat
-* šířit
-* upravovat
-
-*(Viz LICENSE soubor v repozitáři)*
-
----
-
-## 📬 9. Kontakt
-
-Autor: **SDragonex**
-Repozitář: [https://github.com/SDragonex/SuppleZ](https://github.com/SDragonex/SuppleZ)
-
----
-
-## 📌 Plány do budoucna
-
-* ✨ Doplnit stránku s přehledem kategorií suplementů
-* ✨ Přidat stránku „O projektu“ s filozofií suplementace
-* ✨ Přidat dynamické načítání dat přes API
-* ✨ Umožnit uživatelům přidávat suplementy (formulář + backend)
+📜 8. Licence
+Tento projekt je open-source pod licencí Apache-2.0.
+Můžeš ho volně používat, upravovat a sdílet.
+📬 Kontakt
+Dev: SDragonex
+Web: https://sdragonex.github.io/SuppleZ/
+> "Built for performance, designed for knowledge." 💊
+> 
