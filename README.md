@@ -94,8 +94,8 @@ Veškerá data o suplementech jsou uložena v souboru `database.json`. Pro přid
     "dosageLong": "Detailní instrukce k dávkování...",
     "warning": "Na co si dát pozor."
 }
+```
 
-Poznámka: colorType může být green, yellow nebo red. rating je číslo 0-5.
 📱 6. Offline režim (PWA)
 Aplikace obsahuje soubor sw.js (Service Worker) a manifest.json.
  * Instalace: Na mobilu (Android/iOS) otevři menu prohlížeče a zvol "Přidat na plochu" (Add to Home Screen). Aplikace se nainstaluje bez horní lišty prohlížeče.
