@@ -1,19 +1,3 @@
-## 🚀 Obsah
-
-1. [O projektu](#-1-o-projektu)
-2. [Klíčové funkce](#-2-klíčové-funkce)
-3. [Technologie](#-3-technologie)
-4. [Instalace a spuštění](#-4-instalace-a-spuštění)
-5. [Struktura dat](#-5-struktura-dat)
-6. [Offline režim (PWA)](#-6-offline-režim-pwa)
-7. [Struktura repozitáře](#-7-struktura-repozitáře)
-8. [Přispívání a vývoj](#-8-přispívání-a-vývoj)
-9. [Často kladené otázky (FAQ)](#-9-často-kladené-otázky-faq)
-10. [Roadmap a budoucí funkce](#-10-roadmap-a-budoucí-funkce)
-11. [Licence](#-11-licence)
-
----
-
 ## 🧠 1. O projektu
 
 Cílem SuppleZ je poskytnout **čisté, rychlé a přehledné rozhraní** bez reklam a zbytečného balastu. Uživatel zde najde ověřené informace o dávkování, účincích a rizicích jednotlivých látek, založené na vědeckých zdrojích a komunitních zkušenostech.
@@ -68,27 +52,6 @@ Aplikace je optimalizována pro výkon: Lazy loading obrázků, minimalizace bun
 
 ---
 
-## 🛠️ 4. Instalace a spuštění
-
-⚠️ **Důležité:** Protože aplikace používá `fetch()` pro načítání externí JSON databáze, **nebude fungovat správně, pokud ji otevřeš jen dvojklikem na soubor v počítači** (protokol `file://` blokuje načítání dat z bezpečnostních důvodů).
-
-### 🖥️ Možnost A: GitHub Pages (Doporučeno)
-1. Nahraj tento repozitář na GitHub (forkni [https://github.com/SDragonex/SuppleZ](https://github.com/SDragonex/SuppleZ)).
-2. V nastavení repozitáře (**Settings > Pages**) aktivuj **GitHub Pages** (vyber větev `main` nebo `master`).
-3. Aplikace poběží na adrese `https://tvoje-jmeno.github.io/SuppleZ`.
-4. Pro instalaci jako PWA: Otevři v prohlížeči a klikni na "Přidat na plochu" (Add to Home Screen).
-
-### 💻 Možnost B: Lokální vývoj (VS Code)
-1. Otevři složku projektu ve **VS Code**.
-2. Nainstaluj rozšíření **Live Server**.
-3. Klikni pravým tlačítkem na `index.html` a zvol **"Open with Live Server"**.
-4. Pro testování PWA použij nástroje jako Lighthouse v Chrome DevTools.
-
-### 📱 Možnost C: Mobilní zařízení
-- Otevři aplikaci v mobilním prohlížeči (Chrome na Androidu, Safari na iOS).
-- Přidej na plochu pro offline přístup.
-
----
 
 ## 📊 5. Struktura dat
 
@@ -124,7 +87,6 @@ Veškerá data o suplementech jsou uložena v souboru `database.json`. Pro přid
   - `effects`: Pole benefitů.
   - `dosageShort/Long`: Dávkování.
   - `warning`: Varování.
-  - `sources`: Odkazy na zdroje (nové pole pro věrohodnost).
 
 Pro rozšíření databáze vytvořte pull request na GitHubu.
 
@@ -158,20 +120,6 @@ SuppleZ/
 
 ---
 
-## 🤝 8. Přispívání a vývoj
-
-Chcete přispět? Výborně! SuppleZ je open-source projekt.
-
-1. **Forkni repozitář:** [https://github.com/SDragonex/SuppleZ](https://github.com/SDragonex/SuppleZ).
-2. **Vytvoř branch:** Pro novou funkci nebo opravu.
-3. **Přidej změny:** Dodržuj ES6 standardy, komentuj kód.
-4. **Otestuj:** Použij Lighthouse pro PWA testy.
-5. **Pull request:** Popiš změny a proč jsou užitečné.
-
-Pro vývojáře: Používáme Vanilla JS bez frameworků pro maximální rychlost. Pro testování použij `npm test` (pokud přidáme testy).
-
----
-
 ## ❓ 9. Často kladené otázky (FAQ)
 
 - **Je aplikace bezpečná?** Ano, všechny data zůstávají lokálně. Žádné sledování ani reklamy.
@@ -199,5 +147,3 @@ Tento projekt je open-source pod licencí Apache-2.0. Můžeš ho volně použí
 
 **Autor:** SDragonex  
 > "Built for performance, designed for knowledge." 💊
-
-[🔗 Odkaz na GitHub](https://github.com/SDragonex/SuppleZ) | [🌐 Živá demo](https://sdragonex.github.io/SuppleZ) (pokud aktivní)
