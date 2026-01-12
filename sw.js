@@ -1,4 +1,4 @@
-const CACHE_NAME = 'supplez-cache-v4';
+const CACHE_NAME = 'supplez-cache-v3.1';
 
 const ASSETS_TO_CACHE = [
     './',
@@ -63,4 +63,5 @@ self.addEventListener('fetch', (event) => {
             })
         );
     }
+
 });
