@@ -37,7 +37,7 @@
 	},
 	{
 		"id": 3,
-		"name": "Magnesium Bisglycinát",
+		"name": "Magnesium Bisglycinát (Hořčík)",
 		"category": "Spánek",
 		"rating": 5,
 		"colorType": "green",
@@ -265,3 +265,4 @@
 		"warning": "Pokud máte intoleranci laktózy, volte verzi 'Isolate' nebo 'Hydro'."
 	}
 ]
+
