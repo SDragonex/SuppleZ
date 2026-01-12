@@ -1,146 +1,185 @@
-## 🧠 1. O projektu
+# 🧠 SuppleZ
 
-Cílem SuppleZ je poskytnout **čisté, rychlé a přehledné rozhraní** bez reklam a zbytečného balastu. Uživatel zde najde ověřené informace o dávkování, účincích a rizicích jednotlivých látek, založené na vědeckých zdrojích a komunitních zkušenostech.
+**SuppleZ** je minimalistická webová aplikace (PWA) zaměřená na **suplementy, nootropika a biohacking**.
+Cílem projektu je nabídnout **čisté, rychlé a přehledné rozhraní** bez reklam, sledování a zbytečných informací.
 
-Aplikace nevyžaduje internet (po prvním načtení) a ukládá data uživatele (deník) pouze do lokálního úložiště prohlížeče (`localStorage`), což zaručuje **100% soukromí**. Žádná data se neposílají na servery – vše zůstává na vašem zařízení.
+Aplikace funguje **offline**, nevyžaduje registraci a **ukládá veškerá data pouze lokálně** do prohlížeče uživatele.
+Žádná data nejsou odesílána na servery – **100% soukromí**.
 
-### 🎯 Proč SuppleZ?
-- **Pro sportovce:** Sledování suplementace během tréninkových cyklů.
-- **Pro biohackery:** Experimentování s nootropiky, adaptogeny a dalšími látkami.
-- **Pro všechny:** Bezpečné a informované rozhodování o doplňcích stravy.
-
----
-
-## ⭐️ 2. Klíčové funkce
-
-### 📚 Wiki Část
-- **Chytré vyhledávání:** Okamžité filtrování látek podle názvu s podporou diakritiky a synonym.
-- **Filtrování a Řazení:** Moderní vysouvací panel (modal) pro filtrování podle kategorií (Zdraví, Síla, Spánek, Nootropika, Adaptogeny atd.) a řazení (Nejlepší hodnocení, A-Z, Z-A, Nejnovější).
-- **Detailní karty:** Full-screen zobrazení s hodnocením (1-5 hvězd), dávkováním, seznamem benefitů, varováním a odkazy na zdroje (např. PubMed, Examine.com).
-- **Vizuální indikátory:** Barevné rozlišení bezpečnosti/typu (Zelená = Bezpečné pro běžné použití, Žlutá = Vyžaduje opatrnost, Červená = Hardcore nebo experimentální).
-- **Oblíbené látky:** Možnost označit látky jako oblíbené pro rychlý přístup.
-
-### 📝 Osobní Deník
-- **Tracking:** Zaznamenávání užitých látek, dávek, času užití a pocitů (volný text).
-- **Barevné nálady:** Hodnocení efektu (Zelená = Super, Žlutá = Ujde, Červená = Špatné) s možností přidat poznámky.
-- **Cyklování:** Možnost přiřadit záznam ke konkrétnímu cyklu (např. "Objem 2024", "Kondice Q1") pro lepší sledování dlouhodobých efektů.
-- **Statistiky:** Základní přehledy, jako počet dnů užívání, průměrné hodnocení nebo trendy v účincích.
-- **Export záznamů:** Možnost exportovat deník jako CSV pro analýzu v Excelu nebo Google Sheets.
-
-### ⚙️ Nastavení a Data
-- **Import / Export:** Zálohování deníku do JSON souboru a přenos na jiné zařízení. Podpora pro synchronizaci přes cloud (volitelné, pomocí vlastního API).
-- **Dark Mode UI:** Design inspirovaný cyberpunk/sci-fi estetikou (Glassmorphism, Neon glow) s možností přepínání mezi světlým a tmavým režimem.
-- **Jazyková podpora:** Aktuálně čeština, plánována angličtina a další jazyky.
-- **Aktualizace databáze:** Automatické stahování nových látek při připojení k internetu.
+> Built for performance. Designed for knowledge. 💊
 
 ---
 
-## 🧩 3. Technologie
+## 🎯 Proč SuppleZ?
 
-| Technologie | Popis |
-| :--- | :--- |
-| **HTML5** | Sémantická struktura aplikace s přístupností (ARIA atributy). |
-| **CSS3** | Flexbox, Grid, CSS Variables, Backdrop-filter (efekt skla), animace a responzivní design. |
-| **Vanilla JS** | ES6+, Fetch API, History API (ovládání tlačítka zpět), LocalStorage, IndexedDB pro větší databáze. |
-| **JSON** | Externí databáze suplementů (`database.json`) s možností rozšíření. |
-| **Service Worker** | Strategie "Network First" pro offline funkčnost (PWA), caching a aktualizace. |
-| **Manifest.json** | Konfigurace PWA pro instalaci jako nativní app. |
-
-Aplikace je optimalizována pro výkon: Lazy loading obrázků, minimalizace bundle a podpora pro moderní prohlížeče (Chrome, Firefox, Safari, Edge).
+* **Sportovci** – sledování suplementace během tréninkových cyklů
+* **Biohackeři** – experimentování s nootropiky, adaptogeny a dalšími látkami
+* **Běžní uživatelé** – bezpečné a informované rozhodování o doplňcích stravy
 
 ---
 
+## ⭐ Klíčové funkce
 
-## 📊 5. Struktura dat
+### 📚 Wiki – Databáze suplementů
 
-Veškerá data o suplementech jsou uložena v souboru `database.json`. Pro přidání nové látky zkopíruj tento vzor a vlož ho do pole `supplements`:
+* 🔍 **Chytré vyhledávání** – okamžité filtrování podle názvu (včetně diakritiky a synonym)
+* 🧩 **Filtrování & řazení** – kategorie (Zdraví, Síla, Spánek, Nootropika, Adaptogeny…) + řazení (A–Z, Z–A, hodnocení, nejnovější)
+* 📄 **Detail látky (fullscreen)**:
+
+  * hodnocení (1–5 ⭐)
+  * dávkování (stručné i detailní)
+  * účinky (benefity)
+  * varování a rizika
+  * odkazy na vědecké zdroje (PubMed, Examine.com)
+* 🎨 **Vizuální indikátory bezpečnosti**:
+
+  * 🟢 zelená – běžně bezpečné
+  * 🟡 žlutá – vyžaduje opatrnost
+  * 🔴 červená – hardcore / experimentální
+* ⭐ **Oblíbené látky** – rychlý přístup k často používaným suplementům
+
+---
+
+### 📝 Osobní deník
+
+* 📅 **Záznam užití** – látka, dávka, čas, subjektivní pocity
+* 🎭 **Barevné hodnocení efektu**:
+
+  * 🟢 super
+  * 🟡 ujde
+  * 🔴 špatné
+* 🔁 **Cyklování** – přiřazení záznamů ke konkrétním cyklům (např. „Objem 2024“)
+* 📊 **Statistiky**:
+
+  * počet dnů užívání
+  * průměrné hodnocení
+  * základní trendy účinků
+* 📤 **Export dat** – CSV pro Excel / Google Sheets
+
+---
+
+### ⚙️ Nastavení & data
+
+* 🔐 **Import / Export** – záloha deníku do JSON
+* 🌙 **Dark Mode** – cyberpunk / sci-fi styl (glassmorphism, neon glow)
+* 🌍 **Vícejazyčnost** – aktuálně čeština, plánována angličtina
+* 🔄 **Aktualizace databáze** – nové látky se stáhnou při připojení k internetu
+
+---
+
+## 🧩 Technologie
+
+| Technologie           | Popis                                             |
+| --------------------- | ------------------------------------------------- |
+| **HTML5**             | Sémantická struktura, přístupnost (ARIA)          |
+| **CSS3**              | Flexbox, Grid, CSS proměnné, animace, glass efekt |
+| **Vanilla JS (ES6+)** | Routing, rendering, filtry, LocalStorage          |
+| **JSON**              | Databáze suplementů                               |
+| **Service Worker**    | Offline režim, cache strategie                    |
+| **PWA**               | Instalace jako aplikace (Android / Desktop)       |
+
+Optimalizováno pro výkon:
+
+* lazy loading
+* minimální JS
+* podpora moderních prohlížečů (Chrome, Firefox, Safari, Edge)
+
+---
+
+## 📊 Struktura dat (`database.json`)
+
+Každý suplement je uložen jako objekt v poli `supplements`.
 
 ```json
 {
-    "id": 1,
-    "name": "Název Látky",
-    "category": "Kategorie (např. Síla)",
-    "rating": Počet hvězdiček (1 - 5),
-    "colorType": "Barva (green / yellow / red)", 
-    "shortDesc": "Krátký popisek na kartu.",
-    "description": "Dlouhý detailní popis...",
-    "effects": [
-        "Bod 1 - účinek",
-        "Bod 2 - účinek"
-    ],
-    "dosageShort": "dávka (10mg / 5g)",
-    "dosageLong": "Detailní instrukce k dávkování...",
-    "warning": "Na co si dát pozor."
+  "id": 1,
+  "name": "Název látky",
+  "category": "Síla",
+  "rating": 4,
+  "colorType": "green",
+  "shortDesc": "Krátký popisek na kartu.",
+  "description": "Detailní popis látky.",
+  "effects": [
+    "Zlepšení výkonu",
+    "Rychlejší regenerace"
+  ],
+  "dosageShort": "5 g",
+  "dosageLong": "5 g denně před tréninkem.",
+  "warning": "Nevhodné pro děti a těhotné."
 }
 ```
 
-- **Pole:**
-  - `id`: Unikátní číslo.
-  - `name`: Název látky.
-  - `category`: Kategorie (např. Síla, Zdraví).
-  - `rating`: Hodnocení 1-5.
-  - `colorType`: green/yellow/red.
-  - `shortDesc`: Krátký popis.
-  - `description`: Detailní popis.
-  - `effects`: Pole benefitů.
-  - `dosageShort/Long`: Dávkování.
-  - `warning`: Varování.
+### Pole:
 
-Pro rozšíření databáze vytvořte pull request na GitHubu.
+* `id` – unikátní ID
+* `name` – název látky
+* `category` – typ (Síla, Zdraví…)
+* `rating` – 1 až 5
+* `colorType` – `green / yellow / red`
+* `shortDesc` – krátký popis
+* `description` – detailní informace
+* `effects` – seznam účinků
+* `dosageShort / dosageLong` – dávkování
+* `warning` – upozornění
 
----
-
-## 📱 6. Offline režim (PWA)
-
-Aplikace obsahuje `sw.js` (Service Worker) a `manifest.json`.
-- **Instalace:** Na mobilu otevři menu prohlížeče a zvol "Přidat na plochu". Aplikace se nainstaluje bez lišty prohlížeče.
-- **Aktualizace:** Databáze se stahuje strategií "Network First" – online stáhne nejnovější verzi, offline použije cache.
-- **Cache strategie:** Statické soubory (HTML, CSS, JS) se cachují pro okamžité načtení. Databáze se aktualizuje při připojení.
-- **Výhody:** Funguje bez internetu, rychlé načítání, podobné nativní app.
+➡️ Pro přidání nové látky vytvoř **pull request**.
 
 ---
 
-## 📂 7. Struktura repozitáře
+## 📱 Offline režim (PWA)
+
+* 📥 **Instalace** – „Přidat na plochu“ v prohlížeči
+* 🌐 **Network First strategie** – online stáhne nová data, offline použije cache
+* ⚡ **Rychlé načítání** – statické soubory uložené v cache
+* 📦 **Plně funkční bez internetu**
+
+---
+
+## 📂 Struktura repozitáře
 
 ```
 SuppleZ/
-├─ 📄 index.html          – Hlavní struktura (Views: Wiki, Detail, Diary, Settings)
-├─ 📄 style.css           – Design (Dark theme, Animations, Responsive)
-├─ 📄 script.js           – Logika (Routing, Rendering, Filters, Storage)
-├─ 📄 database.json       – Data suplementů
-├─ 📄 sw.js               – Service Worker (Offline logika)
-├─ 📄 manifest.json       – PWA Konfigurace (Ikony, Barvy)
-├─ 📄 README.md           – Tato dokumentace
-├─ 📂 icons/              – Ikony pro PWA (různé velikosti)
-├─ 📂 assets/             – Obrázky, fonty (volitelné)
-└─ 📂 tests/              – Jednotkové testy (volitelné, pro budoucí vývoj)
+├─ index.html        # Hlavní UI (Wiki, Detail, Deník, Nastavení)
+├─ style.css         # Design a animace
+├─ script.js         # Logika aplikace
+├─ database.json     # Databáze suplementů
+├─ sw.js             # Service Worker
+├─ manifest.json     # PWA konfigurace
+├─ icons/            # PWA ikony
+├─ assets/           # Obrázky / fonty
+└─ README.md
 ```
 
 ---
 
-## ❓ 9. Často kladené otázky (FAQ)
+## ❓ FAQ
 
-- **Je aplikace bezpečná?** Ano, všechny data zůstávají lokálně. Žádné sledování ani reklamy.
-- **Jak přidat novou látku?** Uprav `database.json` a vytvoř pull request.
-- **Funguje na starších prohlížečích?** Podporuje moderní prohlížeče; pro starší verze může být omezená funkcionalita.
-- **Co když ztratím data?** Exportujte deník pravidelně jako JSON.
+**Je aplikace bezpečná?**
+Ano. Všechna data zůstávají lokálně, bez sledování a reklam.
 
----
+**Mohu data ztratit?**
+Ano, při vymazání úložiště prohlížeče – doporučeno pravidelně exportovat JSON.
 
-## 🗺️ 10. Roadmap a budoucí funkce
-
-- **Q2 2024:** Přidání anglické lokalizace a rozšířené statistiky v deníku.
-- **Q3 2024:** Integrace s API pro synchronizaci dat (volitelné).
-- **Q4 2024:** Mobilní app verze (React Native) a pokročilé filtry.
-- **Dlouhodobě:** AI doporučení na základě deníku, integrace s fitness trackery.
-
-Nápady? Otevři issue na GitHubu!
+**Je projekt open-source?**
+Ne.
 
 ---
 
-## 📜 11. Licence
+## 🗺️ Roadmap
 
-Tento projekt není open-source.
+* 🌍 Anglická lokalizace
+* 📊 Pokročilé statistiky
+* ☁️ Volitelná cloud synchronizace
+* 🤖 AI doporučení na základě deníku
+* 📱 Mobilní app (React Native)
+
+---
+
+## 📜 Licence
+
+Tento projekt **není open-source**.
+Veškerá práva vyhrazena.
 
 **Autor:** [SDragonex](https://github.com/SDragonex)
-> "Built for performance, designed for knowledge." 💊
+
+---
