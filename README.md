@@ -121,7 +121,7 @@ Každý suplement je uložen jako objekt v poli `supplements`.
 * `dosageShort / dosageLong` – dávkování
 * `warning` – upozornění
 
-###➡️ Pro přidání nové látky vytvoř **pull request**.
+### ➡️ Pro přidání nové látky vytvoř **pull request**.
 
 ---
 
