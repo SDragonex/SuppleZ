@@ -30,7 +30,6 @@ Aplikace funguje **offline**, nevyžaduje registraci a **ukládá veškerá data
   * dávkování (stručné i detailní)
   * účinky (benefity)
   * varování a rizika
-  * odkazy na vědecké zdroje (PubMed, Examine.com)
 * 🎨 **Vizuální indikátory bezpečnosti**:
 
   * 🟢 zelená – běžně bezpečné
@@ -122,7 +121,23 @@ Každý suplement je uložen jako objekt v poli `supplements`.
 * `dosageShort / dosageLong` – dávkování
 * `warning` – upozornění
 
-➡️ Pro přidání nové látky vytvoř **pull request**.
+###➡️ Pro přidání nové látky vytvoř **pull request**.
+
+---
+
+## 🧠 Logika ID (kategoriální rozsahy)
+
+| Rozsah ID | Kategorie               | Popis |
+|----------|--------------------------|-------|
+| 100–199  | Zdraví                   | Dlouhodobá podpora zdraví, imunity, srdce a mozku |
+| 200–299  | Síla & Výkon             | Výkon, síla, energie, svalový růst |
+| 300–399  | Spánek & Regenerace      | Spánek, relaxace, nervová soustava, regenerace |
+| 400–499  | Spalování tuku           | Metabolismus, redukce tuku |
+| 500–599  | Hormony (natural)        | Přirozená hormonální optimalizace |
+| 600–699  | Nootropika               | Mozek, paměť, focus, produktivita |
+| 700–799  | SARMs                    | Experimentální výkonnostní látky |
+| 800–899  | Steroidy                 | Anabolické steroidy, vysoké riziko |
+| 900–999  | PCT / Ochrana            | Post-cycle terapie, ochrana zdraví |
 
 ---
 
@@ -145,7 +160,6 @@ SuppleZ/
 ├─ database.json     # Databáze suplementů
 ├─ sw.js             # Service Worker
 ├─ manifest.json     # PWA konfigurace
-├─ icons/            # PWA ikony
 ├─ assets/           # Obrázky / fonty
 └─ README.md
 ```
@@ -171,7 +185,7 @@ Ne.
 * 📊 Pokročilé statistiky
 * ☁️ Volitelná cloud synchronizace
 * 🤖 AI doporučení na základě deníku
-* 📱 Mobilní app (React Native)
+* 📱 Mobilní app
 
 ---
 
