@@ -91,35 +91,49 @@ Každý suplement je uložen jako objekt v poli `supplements`.
 
 ```json
 {
-  "id": 1,
-  "name": "Název látky",
-  "category": "Síla",
-  "rating": 4,
-  "colorType": "green",
-  "shortDesc": "Krátký popisek na kartu.",
-  "description": "Detailní popis látky.",
-  "effects": [
-    "Zlepšení výkonu",
-    "Rychlejší regenerace"
+  "id": "<number – unikátní ID dle kategoriálního rozsahu>",
+  "name": "<string – název látky>",
+  "categoryKey": "<string – hlavní kategorie (health | performance | sleep | ...)>",
+  "tags": [
+    "<string – efekt / vlastnost>",
+    "<string – efekt / vlastnost>"
   ],
-  "dosageShort": "5 g",
-  "dosageLong": "5 g denně před tréninkem.",
-  "warning": "Nevhodné pro děti a těhotné."
+  "rating": "<number 1–5 – celkové hodnocení>",
+  "colorType": "<string – green | yellow | red (bezpečnost)>",
+  "shortDesc": "<string – krátký popis zobrazený na kartě>",
+  "description": "<string – detailní popis látky>",
+  "effects": [
+    "<string – hlavní účinek>",
+    "<string – hlavní účinek>"
+  ],
+  "dosage": {
+    "short": "<string – stručné dávkování>",
+    "long": "<string – detailní dávkování a kontext>"
+  },
+  "warning": "<string – upozornění, rizika, kontraindikace>"
 }
 ```
 
-### Pole:
+---
 
-* `id` – unikátní ID
-* `name` – název látky
-* `category` – typ (Síla, Zdraví…)
-* `rating` – 1 až 5
-* `colorType` – `green / yellow / red`
-* `shortDesc` – krátký popis
-* `description` – detailní informace
-* `effects` – seznam účinků
-* `dosageShort / dosageLong` – dávkování
-* `warning` – upozornění
+## 🧩 Popis polí
+
+| Pole           | Typ    | Popis                                         |
+| -------------- | ------ | --------------------------------------------- |
+| `id`           | number | Unikátní ID (viz ID rozsahy níže)             |
+| `name`         | string | Název látky                                   |
+| `categoryKey`  | string | Hlavní kategorie suplementu                   |
+| `tags`         | array  | Tagy / efekty (stimulant, adaptogen, pumpa…)  |
+| `rating`       | number | Hodnocení 1–5 ⭐                               |
+| `colorType`    | string | `green / yellow / red` (indikace bezpečnosti) |
+| `shortDesc`    | string | Krátký popis na kartu                         |
+| `description`  | string | Detailní informace                            |
+| `effects`      | array  | Seznam hlavních účinků                        |
+| `dosage.short` | string | Stručné dávkování                             |
+| `dosage.long`  | string | Detailní dávkování                            |
+| `warning`      | string | Upozornění a rizika                           |
+
+---
 
 ### ➡️ Pro přidání nové látky vytvoř **pull request**.
 
@@ -127,19 +141,44 @@ Každý suplement je uložen jako objekt v poli `supplements`.
 
 ## 🧠 Logika ID (kategoriální rozsahy)
 
-| Rozsah ID | Kategorie               | Popis |
-|----------|--------------------------|-------|
-| 100–199  | Zdraví                   | Dlouhodobá podpora zdraví, imunity, srdce a mozku |
-| 200–299  | Síla & Výkon             | Výkon, síla, energie, svalový růst |
-| 300–399  | Spánek & Regenerace      | Spánek, relaxace, nervová soustava, regenerace |
-| 400–499  | Spalování tuku           | Metabolismus, redukce tuku |
-| 500–599  | Hormony (natural)        | Přirozená hormonální optimalizace |
-| 600–699  | Nootropika               | Mozek, paměť, focus, produktivita |
-| 700–799  | SARMs                    | Experimentální výkonnostní látky |
-| 800–899  | Steroidy                 | Anabolické steroidy, vysoké riziko |
-| 900–999  | PCT / Ochrana            | Post-cycle terapie, ochrana zdraví |
+ID určuje hlavní kategorii suplementu.
+Každý nový záznam musí spadat do odpovídajícího rozsahu.
+
+| Rozsah ID | Kategorie (`categoryKey`) | Popis                                  |
+| --------- | ------------------------- | -------------------------------------- |
+| 100–199   | `health`                  | Základní zdraví, imunita, dlouhověkost |
+| 200–299   | `performance`             | Síla, výkon, energie, svalový růst     |
+| 300–399   | `sleep`                   | Spánek, regenerace, nervová soustava   |
+| 400–499   | `fatloss`                 | Metabolismus, redukce tuku             |
+| 500–599   | `hormones`                | Přirozená hormonální optimalizace      |
+| 600–699   | `nootropics`              | Mozek, paměť, focus, produktivita      |
+| 700–799   | `experimental`            | SARMs, experimentální látky            |
+| 800–899   | `steroids`                | Anabolické steroidy (vysoké riziko)    |
+| 900–999   | `pct`                     | PCT, ochrana zdraví                    |
 
 ---
+
+## 🏷️ Tagy (detailní filtrování)
+
+Tagy slouží k popisu **konkrétních efektů** a nahrazují původní jemné kategorie.
+
+Příklady tagů:
+
+* `stimulant`
+* `pumpa`
+* `adaptogen`
+* `imunita`
+* `protein`
+* `focus`
+* `regenerace`
+* `pre-workout`
+* `post-workout`
+* `beginner-friendly`
+
+> 🔎 Jeden suplement může mít **více tagů**, ale **pouze jednu hlavní kategorii**.
+
+```
+
 
 ## 📱 Offline režim (PWA)
 
