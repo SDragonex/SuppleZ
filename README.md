@@ -133,8 +133,6 @@ Každý suplement je uložen jako objekt v poli `supplements`.
 | `dosage.long`  | string | Detailní dávkování                            |
 | `warning`      | string | Upozornění a rizika                           |
 
----
-
 ### ➡️ Pro přidání nové látky vytvoř **pull request**.
 
 ---
@@ -177,8 +175,7 @@ Příklady tagů:
 
 > 🔎 Jeden suplement může mít **více tagů**, ale **pouze jednu hlavní kategorii**.
 
-```
-
+---
 
 ## 📱 Offline režim (PWA)
 
