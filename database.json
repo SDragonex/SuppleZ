@@ -263,7 +263,7 @@
 		"dosageShort": "30-40g",
 		"dosageLong": "1 odměrka (30g) po tréninku smíchaná s vodou. Lze použít i do kaše nebo jako svačinu.",
 		"warning": "Pokud máte intoleranci laktózy, volte verzi 'Isolate' nebo 'Hydro'."
-	}
+	},
 	{
 		"id": 16,
 		"name": "Vápník (Calcium)",
@@ -284,5 +284,6 @@
 	}
 
 ]
+
 
 
