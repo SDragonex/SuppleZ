@@ -264,5 +264,25 @@
 		"dosageLong": "1 odměrka (30g) po tréninku smíchaná s vodou. Lze použít i do kaše nebo jako svačinu.",
 		"warning": "Pokud máte intoleranci laktózy, volte verzi 'Isolate' nebo 'Hydro'."
 	}
+	{
+		"id": 16,
+		"name": "Vápník (Calcium)",
+		"category": "Zdraví",
+		"rating": 5,
+		"colorType": "green",
+		"shortDesc": "Zdravé kosti, zuby a svaly.",
+		"description": "Základní minerál nezbytný pro pevnost kostí a zubů, správnou funkci svalů, nervové soustavy a srážlivost krve. Důležitý zejména při sportu, růstu a vyšší fyzické zátěži.",
+		"effects": [
+			"Podpora zdraví kostí a zubů",
+			"Správná funkce svalů a nervů",
+			"Prevence svalových křečí",
+			"Podpora srážlivosti krve"
+		],
+		"dosageShort": "500-1000mg",
+		"dosageLong": "500-1000mg denně, ideálně rozdělit do dvou dávek a užívat s jídlem. Pro lepší vstřebávání kombinujte s vitamínem D.",
+		"warning": "Dlouhodobé vysoké dávky mohou vést k tvorbě ledvinových kamenů. Nepřekračujte doporučené dávkování."
+	}
+
 ]
+
 
