@@ -230,6 +230,6 @@ Ne.
 Tento projekt **není open-source**.
 Veškerá práva vyhrazena.
 
-**Autor:** [SDragonex](https://github.com/SDragonex) & [MarekPolak3](https://github.com/marekpolak3)
+**Autor:** [Dany Chaker](https://github.com/SDragonex) & [Marek Polák](https://github.com/marekpolak3)
 
 ---
