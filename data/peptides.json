@@ -688,22 +688,6 @@
     "warning": "Experimentální."
   },
   {
-    "id": 743,
-    "name": "ACTH Fragment 1-24",
-    "categoryKey": "experimental",
-    "tags": ["hormony", "stres"],
-    "rating": 2,
-    "colorType": "red",
-    "shortDesc": "Fragment adrenokortikotropního hormonu.",
-    "description": "ACTH fragment ovlivňuje osu HPA a reakci na stres.",
-    "effects": ["stimulace kortizolu"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Pouze výzkumné použití."
-    },
-    "warning": "Silný hormonální zásah."
-  },
-  {
     "id": 744,
     "name": "Thymosin Beta-4",
     "categoryKey": "experimental",
@@ -814,22 +798,6 @@
       "long": "Výzkumné použití."
     },
     "warning": "Komplexní CNS účinky."
-  },
-  {
-    "id": 751,
-    "name": "VIP Fragment",
-    "categoryKey": "experimental",
-    "tags": ["nervová soustava", "cévní systém"],
-    "rating": 2,
-    "colorType": "red",
-    "shortDesc": "Fragment vasoaktivního intestinálního peptidu.",
-    "description": "Fragmenty VIP se studují pro selektivnější účinky než plný peptid.",
-    "effects": ["vazodilatace"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Bez klinických protokolů."
-    },
-    "warning": "Hypotenze, nejasná bezpečnost."
   },
   {
     "id": 752,
@@ -990,101 +958,5 @@
       "long": "Bez standardizace."
     },
     "warning": "Riziko imunitní reakce."
-  },
-  {
-    "id": 762,
-    "name": "Dermorphin",
-    "categoryKey": "experimental",
-    "tags": ["bolest", "opioidní"],
-    "rating": 1,
-    "colorType": "red",
-    "shortDesc": "Silný opioidní peptid.",
-    "description": "Dermorphin je extrémně potentní peptid působící na opioidní receptory.",
-    "effects": ["analgezie"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Nevhodné pro běžné použití."
-    },
-    "warning": "Vysoké riziko závislosti a respirační deprese."
-  },
-  {
-    "id": 763,
-    "name": "Dynorphin",
-    "categoryKey": "experimental",
-    "tags": ["bolest", "stres"],
-    "rating": 1,
-    "colorType": "red",
-    "shortDesc": "Endogenní opioidní peptid.",
-    "description": "Dynorphiny se podílejí na regulaci bolesti a stresové odpovědi.",
-    "effects": ["modulace bolesti"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Pouze výzkumné použití."
-    },
-    "warning": "Komplexní CNS účinky."
-  },
-  {
-    "id": 764,
-    "name": "Substance P",
-    "categoryKey": "experimental",
-    "tags": ["bolest", "zánět"],
-    "rating": 2,
-    "colorType": "red",
-    "shortDesc": "Neuropeptid spojený s bolestí a zánětem.",
-    "description": "Substance P hraje roli v přenosu bolesti a neurogenním zánětu.",
-    "effects": ["přenos bolesti", "zánětlivá odpověď"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Bez terapeutického protokolu."
-    },
-    "warning": "Nevhodné pro suplementaci."
-  },
-  {
-    "id": 765,
-    "name": "Urocortin",
-    "categoryKey": "experimental",
-    "tags": ["stres", "hpa osa"],
-    "rating": 2,
-    "colorType": "red",
-    "shortDesc": "Peptid příbuzný CRH.",
-    "description": "Urocortin ovlivňuje stresovou odpověď a kardiovaskulární systém.",
-    "effects": ["regulace stresu"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Pouze výzkum."
-    },
-    "warning": "Zásah do HPA osy."
-  },
-  {
-    "id": 766,
-    "name": "Orexin-A",
-    "categoryKey": "experimental",
-    "tags": ["bdělost", "spánek"],
-    "rating": 3,
-    "colorType": "red",
-    "shortDesc": "Neuropeptid regulující bdělost.",
-    "description": "Orexin-A je klíčový regulátor cyklu spánek–bdění a motivace.",
-    "effects": ["zvýšení bdělosti"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Bez schválených protokolů."
-    },
-    "warning": "Silný CNS účinek."
-  },
-  {
-    "id": 767,
-    "name": "Orexin-B",
-    "categoryKey": "experimental",
-    "tags": ["bdělost", "energie"],
-    "rating": 3,
-    "colorType": "red",
-    "shortDesc": "Alternativní forma orexinu.",
-    "description": "Orexin-B působí na energetickou rovnováhu a bdělost.",
-    "effects": ["energie", "bdělost"],
-    "dosage": {
-      "short": "experimentální",
-      "long": "Výzkumné použití."
-    },
-    "warning": "Narušení spánku."
   }
 ]
