@@ -1,1 +1,1090 @@
-
+[
+  {
+    "id": 700,
+    "name": "BPC-157",
+    "categoryKey": "experimental",
+    "tags": ["regenerace", "hojení", "střeva"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Peptid podporující regeneraci tkání a hojení.",
+    "description": "BPC-157 je syntetický peptid odvozený z lidské žaludeční šťávy. Zkoumá se pro své potenciální regenerační účinky na svaly, šlachy, vazy a gastrointestinální trakt.",
+    "effects": ["urychlení hojení", "podpora regenerace", "ochrana žaludku"],
+    "dosage": {
+      "short": "200–500 mcg denně",
+      "long": "Typicky 200–500 mcg denně, rozděleno do 1–2 dávek. Užívání probíhá v cyklech."
+    },
+    "warning": "Experimentální látka. Omezené klinické studie u lidí."
+  },
+  {
+    "id": 701,
+    "name": "TB-500",
+    "categoryKey": "experimental",
+    "tags": ["regenerace", "hojení", "svaly"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Syntetická forma thymosinu beta-4.",
+    "description": "TB-500 je peptid zkoumaný pro regeneraci svalů a pojivových tkání. Často spojován s rychlejším hojením zranění.",
+    "effects": ["regenerace svalů", "zvýšená flexibilita", "hojení"],
+    "dosage": {
+      "short": "2–5 mg týdně",
+      "long": "Nasycovací fáze několik týdnů, poté udržovací dávkování. Pouze cyklické užívání."
+    },
+    "warning": "Vysoká experimentálnost. Neurčeno pro dlouhodobé užívání."
+  },
+  {
+    "id": 702,
+    "name": "GHK-Cu",
+    "categoryKey": "experimental",
+    "tags": ["kůže", "anti-aging", "vlasy"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Měděný peptid s účinky na pokožku a regeneraci.",
+    "description": "GHK-Cu je přirozeně se vyskytující peptid vázaný na měď. Studuje se hlavně v oblasti anti-agingu a regenerace kůže.",
+    "effects": ["zlepšení kvality kůže", "podpora růstu vlasů", "hojení"],
+    "dosage": {
+      "short": "topicky nebo 1–2 mg týdně",
+      "long": "Často se používá lokálně. Injekční použití je experimentální."
+    },
+    "warning": "Při vyšších dávkách může způsobit podráždění."
+  },
+  {
+    "id": 703,
+    "name": "Ipamorelin",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "spánek", "regenerace"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Sekretagog růstového hormonu.",
+    "description": "Ipamorelin stimuluje uvolňování růstového hormonu bez výrazného zvýšení kortizolu nebo prolaktinu.",
+    "effects": ["zvýšení GH", "lepší regenerace", "kvalitnější spánek"],
+    "dosage": {
+      "short": "200–300 mcg denně",
+      "long": "Často před spaním nebo rozděleno do více dávek."
+    },
+    "warning": "Pouze experimentální použití. Dlouhodobá data chybí."
+  },
+  {
+    "id": 704,
+    "name": "CJC-1295",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "anti-aging", "regenerace"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Peptid zvyšující hladinu růstového hormonu.",
+    "description": "CJC-1295 je analog GHRH, který prodlužuje pulzy růstového hormonu v těle.",
+    "effects": ["zvýšení GH", "zlepšení regenerace", "podpora svalového růstu"],
+    "dosage": {
+      "short": "1–2 mg týdně",
+      "long": "Podává se 1–2× týdně dle varianty (DAC / bez DAC)."
+    },
+    "warning": "Silný zásah do hormonální osy. Vysoké riziko při zneužití."
+  },
+  {
+    "id": 705,
+    "name": "Melanotan II",
+    "categoryKey": "experimental",
+    "tags": ["pigmentace", "libido", "kůže"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Peptid ovlivňující pigmentaci kůže.",
+    "description": "Melanotan II stimuluje produkci melaninu a je známý pro vliv na opálení a libido.",
+    "effects": ["zvýšená pigmentace", "potlačení chuti k jídlu", "libido"],
+    "dosage": {
+      "short": "250–500 mcg",
+      "long": "Postupná titrace dávky kvůli vedlejším účinkům."
+    },
+    "warning": "Nevolnost, zvýšený krevní tlak, nejasná dlouhodobá rizika."
+  },
+  {
+    "id": 706,
+    "name": "PT-141 (Bremelanotide)",
+    "categoryKey": "experimental",
+    "tags": ["libido", "sexuální zdraví"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Peptid zaměřený na zvýšení libida.",
+    "description": "PT-141 působí na centrální nervový systém a ovlivňuje sexuální touhu nezávisle na hladinách hormonů.",
+    "effects": ["zvýšení libida", "sexuální funkce"],
+    "dosage": {
+      "short": "500–1000 mcg",
+      "long": "Pouze příležitostné použití, ne denně."
+    },
+    "warning": "Možné zvýšení krevního tlaku a nevolnost."
+  },
+  {
+    "id": 707,
+    "name": "Semax",
+    "categoryKey": "experimental",
+    "tags": ["nootropikum", "focus", "paměť"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Nootropní peptid ovlivňující kognitivní funkce.",
+    "description": "Semax je syntetický peptid odvozený z ACTH. Studuje se pro zlepšení paměti, koncentrace a neuroprotekci.",
+    "effects": ["zlepšení paměti", "focus", "neuroprotekce"],
+    "dosage": {
+      "short": "300–600 mcg denně",
+      "long": "Nejčastěji intranazálně, rozděleno do několika dávek."
+    },
+    "warning": "Dlouhodobá bezpečnost není dostatečně prozkoumána."
+  },
+  {
+    "id": 708,
+    "name": "Selank",
+    "categoryKey": "experimental",
+    "tags": ["úzkost", "nálada", "nootropikum"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Anxiolytický nootropní peptid.",
+    "description": "Selank je peptid s potenciálním anxiolytickým účinkem bez sedace. Často popisován jako jemný stabilizátor nálady.",
+    "effects": ["snížení úzkosti", "stabilizace nálady", "lepší soustředění"],
+    "dosage": {
+      "short": "250–500 mcg denně",
+      "long": "Typicky intranazální aplikace, krátké cykly."
+    },
+    "warning": "Experimentální látka, omezená klinická data."
+  },
+  {
+    "id": 709,
+    "name": "DSIP",
+    "categoryKey": "experimental",
+    "tags": ["spánek", "regenerace", "nervová soustava"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Peptid spojovaný s regulací spánku.",
+    "description": "DSIP (Delta Sleep-Inducing Peptide) je studován pro vliv na kvalitu spánku a regeneraci CNS.",
+    "effects": ["hlubší spánek", "regenerace", "zklidnění CNS"],
+    "dosage": {
+      "short": "100–300 mcg",
+      "long": "Obvykle před spaním, individuální odezva se liší."
+    },
+    "warning": "Smíšené výsledky studií, účinek není garantovaný."
+  },
+  {
+    "id": 710,
+    "name": "Thymosin Alpha-1",
+    "categoryKey": "experimental",
+    "tags": ["imunita", "zánět"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Imunomodulační peptid.",
+    "description": "Thymosin Alpha-1 je zkoumán pro podporu imunitního systému a regulaci zánětlivých procesů.",
+    "effects": ["posílení imunity", "regulace zánětu"],
+    "dosage": {
+      "short": "1–2 mg 2× týdně",
+      "long": "Používá se v cyklech, často v období zvýšené zátěže."
+    },
+    "warning": "Zásah do imunitního systému – nevhodné bez znalostí."
+  },
+  {
+    "id": 711,
+    "name": "ARA-290",
+    "categoryKey": "experimental",
+    "tags": ["neuroprotekce", "zánět"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Peptid s potenciální neuroprotektivní funkcí.",
+    "description": "ARA-290 je derivát erytropoetinu studovaný pro ochranu nervové tkáně bez vlivu na tvorbu červených krvinek.",
+    "effects": ["neuroprotekce", "snížení zánětu"],
+    "dosage": {
+      "short": "1–4 mg týdně",
+      "long": "Pouze krátké experimentální protokoly."
+    },
+    "warning": "Velmi omezená data u lidí."
+  },
+  {
+    "id": 712,
+    "name": "Hexarelin",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "síla", "regenerace"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Silný stimulátor růstového hormonu.",
+    "description": "Hexarelin je GHRP peptid s výrazným účinkem na uvolňování růstového hormonu.",
+    "effects": ["zvýšení GH", "regenerace", "zvýšení síly"],
+    "dosage": {
+      "short": "100–200 mcg denně",
+      "long": "Rychlá desenzitizace – nutné cyklování."
+    },
+    "warning": "Může zvyšovat prolaktin a kortizol."
+  },
+  {
+    "id": 713,
+    "name": "Kisspeptin-10",
+    "categoryKey": "experimental",
+    "tags": ["hormony", "testosteron"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Peptid ovlivňující osu HPTA.",
+    "description": "Kisspeptin stimuluje uvolňování GnRH a nepřímo ovlivňuje produkci testosteronu.",
+    "effects": ["aktivace HPTA", "podpora testosteronu"],
+    "dosage": {
+      "short": "100–300 mcg",
+      "long": "Pouze krátkodobé experimentální použití."
+    },
+    "warning": "Zásah do hormonální regulace."
+  },
+  {
+    "id": 714,
+    "name": "FOXO4-DRI",
+    "categoryKey": "experimental",
+    "tags": ["anti-aging", "senolytika"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Experimentální senolytický peptid.",
+    "description": "FOXO4-DRI je zkoumán pro schopnost odstraňovat senescentní buňky a potenciální anti-aging efekt.",
+    "effects": ["eliminace senescentních buněk"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze laboratorní a preklinický výzkum."
+    },
+    "warning": "Extrémně experimentální. Vysoká neznámá rizika."
+  },
+  {
+    "id": 715,
+    "name": "Epitalon",
+    "categoryKey": "experimental",
+    "tags": ["anti-aging", "spánek", "melatonin"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Peptid spojovaný s dlouhověkostí.",
+    "description": "Epitalon je peptid studovaný pro vliv na telomerázu, cirkadiánní rytmus a spánek.",
+    "effects": ["regulace spánku", "anti-aging"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátké kúry několikrát ročně."
+    },
+    "warning": "Kontroverzní účinky, omezená data."
+  },
+  {
+    "id": 716,
+    "name": "Pinealon",
+    "categoryKey": "experimental",
+    "tags": ["neuroprotekce", "anti-aging"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Krátký peptid s neuroprotektivním potenciálem.",
+    "description": "Pinealon je studován pro vliv na mozkové funkce a ochranu neuronů.",
+    "effects": ["neuroprotekce", "kognitivní stabilita"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátkodobé kúry."
+    },
+    "warning": "Nedostatek robustních klinických studií."
+  },
+  {
+    "id": 717,
+    "name": "MOTS-c",
+    "categoryKey": "experimental",
+    "tags": ["metabolismus", "výkon"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Mitochondriální peptid ovlivňující metabolismus.",
+    "description": "MOTS-c je mitochondriální peptid spojovaný se zlepšením citlivosti na inzulin a energetického metabolismu.",
+    "effects": ["lepší metabolismus", "zvýšení výdrže"],
+    "dosage": {
+      "short": "5–10 mg týdně",
+      "long": "Pouze experimentální protokoly."
+    },
+    "warning": "Velmi málo dat u lidí."
+  },
+  {
+    "id": 718,
+    "name": "LL-37",
+    "categoryKey": "experimental",
+    "tags": ["imunita", "antimikrobiální"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Antimikrobiální peptid imunitního systému.",
+    "description": "LL-37 je součást vrozené imunity, studovaný pro antimikrobiální a imunomodulační účinky.",
+    "effects": ["antimikrobiální aktivita", "imunitní odpověď"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardizovaného dávkování."
+    },
+    "warning": "Riziko silné imunitní reakce."
+  },
+  {
+    "id": 719,
+    "name": "IGF-1 LR3",
+    "categoryKey": "experimental",
+    "tags": ["růst", "svaly", "regenerace"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Silný růstový faktor.",
+    "description": "IGF-1 LR3 je dlouhodobě působící varianta IGF-1 s výrazným anabolickým potenciálem.",
+    "effects": ["svalový růst", "regenerace"],
+    "dosage": {
+      "short": "20–50 mcg",
+      "long": "Krátké cykly, velmi opatrné dávkování."
+    },
+    "warning": "Vysoké riziko hypoglykémie a dlouhodobých následků."
+  },
+  {
+    "id": 720,
+    "name": "Tesamorelin",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "tuk", "metabolismus"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "GHRH analog se silným efektem na GH.",
+    "description": "Tesamorelin stimuluje přirozené pulzy růstového hormonu a je známý vlivem na viscerální tuk.",
+    "effects": ["zvýšení GH", "redukce viscerálního tuku"],
+    "dosage": {
+      "short": "1–2 mg denně",
+      "long": "Denní aplikace, často dlouhodobější protokoly."
+    },
+    "warning": "Zásah do hormonální osy, možné metabolické změny."
+  },
+  {
+    "id": 721,
+    "name": "AOD-9604",
+    "categoryKey": "experimental",
+    "tags": ["fatloss", "metabolismus"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Fragment růstového hormonu zaměřený na spalování tuku.",
+    "description": "AOD-9604 je modifikovaný fragment HGH bez anabolických účinků, zkoumaný pro redukci tuku.",
+    "effects": ["lipolýza", "podpora metabolismu"],
+    "dosage": {
+      "short": "300–500 mcg denně",
+      "long": "Denní dávkování, účinek spíše mírný."
+    },
+    "warning": "Slabší účinnost, omezené klinické výsledky."
+  },
+  {
+    "id": 722,
+    "name": "Follistatin-344",
+    "categoryKey": "experimental",
+    "tags": ["svaly", "myostatin"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Inhibitor myostatinu.",
+    "description": "Follistatin-344 je peptid blokující myostatin, čímž může výrazně zvyšovat svalový růst.",
+    "effects": ["potlačení myostatinu", "svalový růst"],
+    "dosage": {
+      "short": "100 mcg denně",
+      "long": "Velmi krátké experimentální cykly."
+    },
+    "warning": "Extrémní zásah do růstových mechanismů."
+  },
+  {
+    "id": 723,
+    "name": "GHRP-2",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "hlad"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Sekretagog GH se silným vlivem na chuť k jídlu.",
+    "description": "GHRP-2 stimuluje uvolňování růstového hormonu, ale výrazně zvyšuje hlad.",
+    "effects": ["zvýšení GH", "zvýšení apetitu"],
+    "dosage": {
+      "short": "100–300 mcg denně",
+      "long": "Více dávek denně, nutné cyklování."
+    },
+    "warning": "Zvýšený prolaktin a kortizol."
+  },
+  {
+    "id": 724,
+    "name": "GHRP-6",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "hlad"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "GH peptid s extrémní stimulací hladu.",
+    "description": "GHRP-6 je známý výrazným zvýšením chuti k jídlu při stimulaci GH.",
+    "effects": ["zvýšení GH", "silný hlad"],
+    "dosage": {
+      "short": "100–300 mcg denně",
+      "long": "Pouze krátké cykly."
+    },
+    "warning": "Nevhodné při kontrole hmotnosti."
+  },
+  {
+    "id": 725,
+    "name": "MK-677 (Ibutamoren)",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "spánek", "síla"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Orální sekretagog růstového hormonu.",
+    "description": "MK-677 zvyšuje GH a IGF-1 bez injekční aplikace, často spojován se zlepšením spánku.",
+    "effects": ["zvýšení GH", "lepší spánek", "regenerace"],
+    "dosage": {
+      "short": "10–25 mg denně",
+      "long": "Dlouhodobější protokoly, sledovat glykemii."
+    },
+    "warning": "Zadržování vody, zvýšený hlad, inzulinová rezistence."
+  },
+  {
+    "id": 726,
+    "name": "BPC-157 Arginate",
+    "categoryKey": "experimental",
+    "tags": ["regenerace", "hojení"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Orálně stabilnější forma BPC-157.",
+    "description": "Arginate forma BPC-157 umožňuje perorální použití se zachováním účinků.",
+    "effects": ["hojení", "regenerace tkání"],
+    "dosage": {
+      "short": "500–1000 mcg denně",
+      "long": "Perorální užívání v cyklech."
+    },
+    "warning": "Stále experimentální varianta."
+  },
+  {
+    "id": 727,
+    "name": "KPV",
+    "categoryKey": "experimental",
+    "tags": ["zánět", "střeva"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Protizánětlivý tripeptid.",
+    "description": "KPV je fragment alfa-MSH, studovaný pro lokální protizánětlivé účinky.",
+    "effects": ["snížení zánětu", "podpora střev"],
+    "dosage": {
+      "short": "200–500 mcg",
+      "long": "Lokální nebo systémové experimentální použití."
+    },
+    "warning": "Omezené klinické důkazy."
+  },
+  {
+    "id": 728,
+    "name": "VIP (Vasoactive Intestinal Peptide)",
+    "categoryKey": "experimental",
+    "tags": ["nervová soustava", "imunita"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Regulační neuropeptid.",
+    "description": "VIP ovlivňuje cévní tonus, imunitu a nervový systém.",
+    "effects": ["vazodilatace", "regulace imunity"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardizovaného protokolu."
+    },
+    "warning": "Riziko hypotenzí a systémových reakcí."
+  },
+  {
+    "id": 729,
+    "name": "Thymalin",
+    "categoryKey": "experimental",
+    "tags": ["imunita", "anti-aging"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Peptidový extrakt brzlíku.",
+    "description": "Thymalin je zkoumán pro podporu imunitních funkcí a buněčné regulace.",
+    "effects": ["posílení imunity"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátké kúry několikrát ročně."
+    },
+    "warning": "Experimentální, omezená data."
+  },
+  {
+    "id": 730,
+    "name": "Thymogen",
+    "categoryKey": "experimental",
+    "tags": ["imunita"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Dipeptid s imunomodulačním účinkem.",
+    "description": "Thymogen je krátký peptid studovaný pro podporu imunitní odpovědi.",
+    "effects": ["imunitní regulace"],
+    "dosage": {
+      "short": "100–300 mcg",
+      "long": "Krátkodobé protokoly."
+    },
+    "warning": "Nízká úroveň klinických dat."
+  },
+  {
+    "id": 731,
+    "name": "P21",
+    "categoryKey": "experimental",
+    "tags": ["paměť", "neuroplasticita"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Experimentální kognitivní peptid.",
+    "description": "P21 je derivát CNTF studovaný pro podporu neuroplasticity a paměti.",
+    "effects": ["paměť", "neuroplasticita"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze výzkumné použití."
+    },
+    "warning": "Extrémně omezená data u lidí."
+  },
+  {
+    "id": 732,
+    "name": "Liraglutide",
+    "categoryKey": "experimental",
+    "tags": ["fatloss", "apetit", "metabolismus"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "GLP-1 agonista ovlivňující chuť k jídlu.",
+    "description": "Liraglutide zpomaluje vyprazdňování žaludku a snižuje apetit, což vede k úbytku hmotnosti.",
+    "effects": ["snížení chuti k jídlu", "redukce tuku"],
+    "dosage": {
+      "short": "0.6–3 mg denně",
+      "long": "Postupná titrace dávky kvůli toleranci."
+    },
+    "warning": "Nevolnost, zásah do glukózového metabolismu."
+  },
+  {
+    "id": 733,
+    "name": "Semaglutide",
+    "categoryKey": "experimental",
+    "tags": ["fatloss", "apetit"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Silný GLP-1 peptid pro kontrolu hmotnosti.",
+    "description": "Semaglutide má dlouhý poločas a výrazně potlačuje chuť k jídlu.",
+    "effects": ["fat loss", "kontrola apetitu"],
+    "dosage": {
+      "short": "0.25–2.4 mg týdně",
+      "long": "Týdenní aplikace s pozvolným navyšováním."
+    },
+    "warning": "Nevolnost, únava, možné GI obtíže."
+  },
+  {
+    "id": 734,
+    "name": "Tirzepatide",
+    "categoryKey": "experimental",
+    "tags": ["fatloss", "metabolismus"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Duální GIP/GLP-1 agonista.",
+    "description": "Tirzepatide kombinuje účinky GLP-1 a GIP s velmi silným efektem na redukci hmotnosti.",
+    "effects": ["výrazná redukce tuku", "zlepšení citlivosti na inzulin"],
+    "dosage": {
+      "short": "2.5–15 mg týdně",
+      "long": "Titrace dávky je nutná."
+    },
+    "warning": "Silný metabolický zásah, vedlejší účinky."
+  },
+  {
+    "id": 735,
+    "name": "GLOW (GH Releasing Hexapeptide)",
+    "categoryKey": "experimental",
+    "tags": ["růstový hormon", "regenerace"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Méně známý GH-releasing peptid.",
+    "description": "GLOW je výzkumný peptid zkoumaný pro mírnou stimulaci GH.",
+    "effects": ["zvýšení GH", "regenerace"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardního protokolu."
+    },
+    "warning": "Minimum dat u lidí."
+  },
+  {
+    "id": 736,
+    "name": "Obestatin",
+    "categoryKey": "experimental",
+    "tags": ["apetit", "metabolismus"],
+    "rating": 2,
+    "colorType": "yellow",
+    "shortDesc": "Peptid spojený s regulací hladu.",
+    "description": "Obestatin je hormonálně aktivní peptid s nejasným vlivem na apetit.",
+    "effects": ["regulace chuti k jídlu"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Účinky nejsou konzistentní."
+    },
+    "warning": "Nejasná účinnost."
+  },
+  {
+    "id": 737,
+    "name": "Cartalax",
+    "categoryKey": "experimental",
+    "tags": ["klouby", "regenerace"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Peptid zaměřený na chrupavky.",
+    "description": "Cartalax je krátký peptid studovaný pro podporu regenerace kloubní chrupavky.",
+    "effects": ["podpora kloubů", "regenerace chrupavky"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátké kúry několikrát ročně."
+    },
+    "warning": "Omezené klinické důkazy."
+  },
+  {
+    "id": 738,
+    "name": "Vesugen",
+    "categoryKey": "experimental",
+    "tags": ["cévní systém", "anti-aging"],
+    "rating": 2,
+    "colorType": "yellow",
+    "shortDesc": "Peptid pro cévní integritu.",
+    "description": "Vesugen je studován pro podporu zdraví cévní stěny.",
+    "effects": ["podpora cév"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátkodobé protokoly."
+    },
+    "warning": "Nízká úroveň důkazů."
+  },
+  {
+    "id": 739,
+    "name": "Endoluten",
+    "categoryKey": "experimental",
+    "tags": ["anti-aging", "hormony"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Peptid ovlivňující epifýzu.",
+    "description": "Endoluten je zkoumán pro vliv na hormonální regulaci a cirkadiánní rytmy.",
+    "effects": ["hormonální rovnováha"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátké kúry."
+    },
+    "warning": "Experimentální použití."
+  },
+  {
+    "id": 740,
+    "name": "Prostamax",
+    "categoryKey": "experimental",
+    "tags": ["prostata", "zdraví mužů"],
+    "rating": 2,
+    "colorType": "yellow",
+    "shortDesc": "Peptid pro zdraví prostaty.",
+    "description": "Prostamax je krátký peptid studovaný pro podporu funkce prostaty.",
+    "effects": ["podpora prostaty"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátké experimentální kúry."
+    },
+    "warning": "Velmi omezená data."
+  },
+  {
+    "id": 741,
+    "name": "Bronchogen",
+    "categoryKey": "experimental",
+    "tags": ["dýchací systém"],
+    "rating": 2,
+    "colorType": "yellow",
+    "shortDesc": "Peptid zaměřený na respirační systém.",
+    "description": "Bronchogen je studován pro podporu buněk dýchacích cest.",
+    "effects": ["podpora plic"],
+    "dosage": {
+      "short": "5–10 mg cyklus",
+      "long": "Krátkodobé použití."
+    },
+    "warning": "Nízká evidence."
+  },
+  {
+    "id": 742,
+    "name": "Pinealon-A",
+    "categoryKey": "experimental",
+    "tags": ["neuroprotekce", "paměť"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Varianta Pinealonu s CNS zaměřením.",
+    "description": "Pinealon-A je výzkumný peptid studovaný pro vliv na neurony.",
+    "effects": ["ochrana neuronů", "paměť"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardního dávkování."
+    },
+    "warning": "Experimentální."
+  },
+  {
+    "id": 743,
+    "name": "ACTH Fragment 1-24",
+    "categoryKey": "experimental",
+    "tags": ["hormony", "stres"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Fragment adrenokortikotropního hormonu.",
+    "description": "ACTH fragment ovlivňuje osu HPA a reakci na stres.",
+    "effects": ["stimulace kortizolu"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze výzkumné použití."
+    },
+    "warning": "Silný hormonální zásah."
+  },
+  {
+    "id": 744,
+    "name": "Thymosin Beta-4",
+    "categoryKey": "experimental",
+    "tags": ["regenerace", "hojení", "angiogeneze"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Peptid podporující opravu tkání a cév.",
+    "description": "Thymosin Beta-4 je přirozený peptid zapojený do buněčné migrace a hojení.",
+    "effects": ["hojení tkání", "angiogeneze"],
+    "dosage": {
+      "short": "2–5 mg týdně",
+      "long": "Krátké regenerační cykly."
+    },
+    "warning": "Experimentální, omezená data u lidí."
+  },
+  {
+    "id": 745,
+    "name": "EPO-Derived Peptide (Helix B)",
+    "categoryKey": "experimental",
+    "tags": ["neuroprotekce", "zánět"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Neerytropoetický derivát EPO.",
+    "description": "Helix B peptidy jsou zkoumány pro ochranu nervové tkáně bez vlivu na hematokrit.",
+    "effects": ["neuroprotekce", "snížení zánětu"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze výzkumné protokoly."
+    },
+    "warning": "Minimum klinických dat."
+  },
+  {
+    "id": 746,
+    "name": "Bremelanotide Acetate",
+    "categoryKey": "experimental",
+    "tags": ["libido", "nervová soustava"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Alternativní forma PT-141.",
+    "description": "Acetátová forma bremelanotidu se studuje pro centrální vliv na sexuální funkce.",
+    "effects": ["zvýšení libida"],
+    "dosage": {
+      "short": "500–1000 mcg",
+      "long": "Pouze příležitostné použití."
+    },
+    "warning": "Nevolnost, zvýšení krevního tlaku."
+  },
+  {
+    "id": 747,
+    "name": "GH Fragment 176-191",
+    "categoryKey": "experimental",
+    "tags": ["fatloss", "metabolismus"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Lipolytický fragment růstového hormonu.",
+    "description": "Fragment 176-191 je zkoumán pro selektivní spalování tuku bez anabolických účinků.",
+    "effects": ["lipolýza"],
+    "dosage": {
+      "short": "250–500 mcg denně",
+      "long": "Denní aplikace, mírný efekt."
+    },
+    "warning": "Účinnost se liší mezi jedinci."
+  },
+  {
+    "id": 748,
+    "name": "Oxytocin",
+    "categoryKey": "experimental",
+    "tags": ["nálada", "sociální chování"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Neuropeptid spojený se sociální vazbou.",
+    "description": "Oxytocin ovlivňuje sociální chování, stres a emoční vazby.",
+    "effects": ["zlepšení nálady", "snížení stresu"],
+    "dosage": {
+      "short": "10–40 IU",
+      "long": "Nejčastěji intranazálně."
+    },
+    "warning": "Krátkodobý účinek, individuální reakce."
+  },
+  {
+    "id": 749,
+    "name": "Angiotensin (1-7)",
+    "categoryKey": "experimental",
+    "tags": ["kardiovaskulární", "regenerace"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Peptid ovlivňující cévní rovnováhu.",
+    "description": "Angiotensin (1-7) je zkoumán pro ochranné účinky na kardiovaskulární systém.",
+    "effects": ["vazodilatace", "ochrana cév"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardního dávkování."
+    },
+    "warning": "Zásah do krevního tlaku."
+  },
+  {
+    "id": 750,
+    "name": "Neuropeptide Y",
+    "categoryKey": "experimental",
+    "tags": ["apetit", "stres"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Neuropeptid regulující stres a hlad.",
+    "description": "NPY hraje roli v regulaci chuti k jídlu a stresové odpovědi.",
+    "effects": ["zvýšení apetitu", "regulace stresu"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Výzkumné použití."
+    },
+    "warning": "Komplexní CNS účinky."
+  },
+  {
+    "id": 751,
+    "name": "VIP Fragment",
+    "categoryKey": "experimental",
+    "tags": ["nervová soustava", "cévní systém"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Fragment vasoaktivního intestinálního peptidu.",
+    "description": "Fragmenty VIP se studují pro selektivnější účinky než plný peptid.",
+    "effects": ["vazodilatace"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez klinických protokolů."
+    },
+    "warning": "Hypotenze, nejasná bezpečnost."
+  },
+  {
+    "id": 752,
+    "name": "Kisspeptin-54",
+    "categoryKey": "experimental",
+    "tags": ["hormony", "reprodukce"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Delší forma kisspeptinu.",
+    "description": "Kisspeptin-54 silně stimuluje GnRH a reprodukční hormony.",
+    "effects": ["aktivace HPTA"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze krátkodobé protokoly."
+    },
+    "warning": "Výrazný hormonální zásah."
+  },
+  {
+    "id": 753,
+    "name": "Thymopentin",
+    "categoryKey": "experimental",
+    "tags": ["imunita"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Pentapeptid s imunomodulačním účinkem.",
+    "description": "Thymopentin je syntetický fragment thymopoetinu.",
+    "effects": ["podpora imunity"],
+    "dosage": {
+      "short": "1–5 mg týdně",
+      "long": "Krátké kúry."
+    },
+    "warning": "Omezená moderní data."
+  },
+  {
+    "id": 754,
+    "name": "DSIP Analog",
+    "categoryKey": "experimental",
+    "tags": ["spánek", "regenerace"],
+    "rating": 2,
+    "colorType": "yellow",
+    "shortDesc": "Modifikovaný analog DSIP.",
+    "description": "Analogy DSIP se zkoumají pro stabilnější účinek na spánek.",
+    "effects": ["zlepšení spánku"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardizace."
+    },
+    "warning": "Nejednoznačné výsledky."
+  },
+  {
+    "id": 755,
+    "name": "Cerebrolysin (Peptide Mix)",
+    "categoryKey": "experimental",
+    "tags": ["neuroprotekce", "kognice"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Směs neuropeptidů z mozkové tkáně.",
+    "description": "Cerebrolysin obsahuje nízkomolekulární peptidy studované pro neuroprotekci.",
+    "effects": ["ochrana neuronů", "kognitivní podpora"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze lékařské / výzkumné použití."
+    },
+    "warning": "Kontroverzní a experimentální."
+  },
+  {
+    "id": 756,
+    "name": "B7-33",
+    "categoryKey": "experimental",
+    "tags": ["hormony", "fertilita"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Selektivní analog relaxinu.",
+    "description": "B7-33 je výzkumný peptid odvozený od hormonu relaxin, zkoumaný pro vliv na reprodukční a kardiovaskulární systém.",
+    "effects": ["hormonální modulace"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze preklinický výzkum."
+    },
+    "warning": "Velmi omezená data u lidí."
+  },
+  {
+    "id": 757,
+    "name": "Relaxin-2",
+    "categoryKey": "experimental",
+    "tags": ["cévní systém", "anti-fibrotické"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Peptid ovlivňující vazodilataci a remodelaci tkání.",
+    "description": "Relaxin-2 je hormonální peptid studovaný pro účinky na cévy a pojivové tkáně.",
+    "effects": ["vazodilatace", "snížení fibrózy"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardního dávkování."
+    },
+    "warning": "Zásah do hormonální regulace."
+  },
+  {
+    "id": 758,
+    "name": "Elamipretide (SS-31)",
+    "categoryKey": "experimental",
+    "tags": ["mitochondrie", "anti-aging"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Mitochondriální ochranný peptid.",
+    "description": "Elamipretide cílí na mitochondriální membrány a je studován pro zlepšení buněčné energie.",
+    "effects": ["ochrana mitochondrií", "zvýšení energie"],
+    "dosage": {
+      "short": "1–5 mg denně",
+      "long": "Pouze experimentální protokoly."
+    },
+    "warning": "Omezené dlouhodobé údaje."
+  },
+  {
+    "id": 759,
+    "name": "Humanin",
+    "categoryKey": "experimental",
+    "tags": ["neuroprotekce", "mitochondrie"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Endogenní mitochondriální peptid.",
+    "description": "Humanin je přirozeně se vyskytující peptid spojený s ochranou buněk před stresem.",
+    "effects": ["ochrana neuronů", "buněčné přežití"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Výzkumné použití."
+    },
+    "warning": "Nedostatek klinických studií."
+  },
+  {
+    "id": 760,
+    "name": "Zinc Thymulin",
+    "categoryKey": "experimental",
+    "tags": ["imunita", "zinek"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Imunitní peptid vázaný na zinek.",
+    "description": "Zinc Thymulin je bioaktivní forma thymulinu důležitá pro funkci T-lymfocytů.",
+    "effects": ["podpora imunity"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Krátké imunomodulační protokoly."
+    },
+    "warning": "Nízká úroveň moderní evidence."
+  },
+  {
+    "id": 761,
+    "name": "Beta-Defensin",
+    "categoryKey": "experimental",
+    "tags": ["imunita", "antimikrobiální"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Antimikrobiální peptid vrozené imunity.",
+    "description": "Beta-defensiny jsou přirozené peptidy s antimikrobiální aktivitou.",
+    "effects": ["ochrana proti patogenům"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez standardizace."
+    },
+    "warning": "Riziko imunitní reakce."
+  },
+  {
+    "id": 762,
+    "name": "Dermorphin",
+    "categoryKey": "experimental",
+    "tags": ["bolest", "opioidní"],
+    "rating": 1,
+    "colorType": "red",
+    "shortDesc": "Silný opioidní peptid.",
+    "description": "Dermorphin je extrémně potentní peptid působící na opioidní receptory.",
+    "effects": ["analgezie"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Nevhodné pro běžné použití."
+    },
+    "warning": "Vysoké riziko závislosti a respirační deprese."
+  },
+  {
+    "id": 763,
+    "name": "Dynorphin",
+    "categoryKey": "experimental",
+    "tags": ["bolest", "stres"],
+    "rating": 1,
+    "colorType": "red",
+    "shortDesc": "Endogenní opioidní peptid.",
+    "description": "Dynorphiny se podílejí na regulaci bolesti a stresové odpovědi.",
+    "effects": ["modulace bolesti"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze výzkumné použití."
+    },
+    "warning": "Komplexní CNS účinky."
+  },
+  {
+    "id": 764,
+    "name": "Substance P",
+    "categoryKey": "experimental",
+    "tags": ["bolest", "zánět"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Neuropeptid spojený s bolestí a zánětem.",
+    "description": "Substance P hraje roli v přenosu bolesti a neurogenním zánětu.",
+    "effects": ["přenos bolesti", "zánětlivá odpověď"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez terapeutického protokolu."
+    },
+    "warning": "Nevhodné pro suplementaci."
+  },
+  {
+    "id": 765,
+    "name": "Urocortin",
+    "categoryKey": "experimental",
+    "tags": ["stres", "hpa osa"],
+    "rating": 2,
+    "colorType": "red",
+    "shortDesc": "Peptid příbuzný CRH.",
+    "description": "Urocortin ovlivňuje stresovou odpověď a kardiovaskulární systém.",
+    "effects": ["regulace stresu"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Pouze výzkum."
+    },
+    "warning": "Zásah do HPA osy."
+  },
+  {
+    "id": 766,
+    "name": "Orexin-A",
+    "categoryKey": "experimental",
+    "tags": ["bdělost", "spánek"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Neuropeptid regulující bdělost.",
+    "description": "Orexin-A je klíčový regulátor cyklu spánek–bdění a motivace.",
+    "effects": ["zvýšení bdělosti"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Bez schválených protokolů."
+    },
+    "warning": "Silný CNS účinek."
+  },
+  {
+    "id": 767,
+    "name": "Orexin-B",
+    "categoryKey": "experimental",
+    "tags": ["bdělost", "energie"],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Alternativní forma orexinu.",
+    "description": "Orexin-B působí na energetickou rovnováhu a bdělost.",
+    "effects": ["energie", "bdělost"],
+    "dosage": {
+      "short": "experimentální",
+      "long": "Výzkumné použití."
+    },
+    "warning": "Narušení spánku."
+  }
+]
