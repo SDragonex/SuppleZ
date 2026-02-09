@@ -1,1 +1,1458 @@
-
+[
+  {
+    "id": 500,
+    "name": "Testosterone",
+    "categoryKey": "hormones",
+    "tags": ["androgen", "síla", "libido"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Hlavní mužský pohlavní hormon.",
+    "description": "Testosteron je klíčový androgen ovlivňující svalovou hmotu, sílu, libido, náladu a celkovou vitalitu.",
+    "effects": ["svalový růst", "libido", "energie"],
+    "dosage": {
+      "short": "individuální",
+      "long": "Endogenní hormon. Exogenní použití spadá do hormonální terapie nebo dopingu."
+    },
+    "warning": "Potlačení vlastní produkce, vliv na HPTA osu."
+  },
+  {
+    "id": 501,
+    "name": "Dihydrotestosterone (DHT)",
+    "categoryKey": "hormones",
+    "tags": ["androgen", "libido", "vlasy"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Silnější metabolit testosteronu.",
+    "description": "DHT je vysoce potentní androgen vznikající z testosteronu pomocí 5α-reduktázy.",
+    "effects": ["libido", "androgenní signalizace"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Není běžně suplementován."
+    },
+    "warning": "Vypadávání vlasů, prostata."
+  },
+  {
+    "id": 502,
+    "name": "Estradiol (E2)",
+    "categoryKey": "hormones",
+    "tags": ["estrogen", "kosti", "nálada"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Nejdůležitější estrogen.",
+    "description": "Estradiol je klíčový pro zdraví kostí, mozku, kardiovaskulárního systému i libido.",
+    "effects": ["zdraví kostí", "nálada"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Rovnováha je zásadní – nízké i vysoké hodnoty jsou problém."
+    },
+    "warning": "Hormonální disbalance při extrémech."
+  },
+  {
+    "id": 503,
+    "name": "Progesterone",
+    "categoryKey": "hormones",
+    "tags": ["stres", "spánek", "neuroprotekce"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Steroidní hormon s uklidňujícím účinkem.",
+    "description": "Progesteron působí neuroprotektivně a vyvažuje účinky estrogenu.",
+    "effects": ["zklidnění CNS", "podpora spánku"],
+    "dosage": {
+      "short": "individuální",
+      "long": "Citlivý hormon, běžně součást HRT."
+    },
+    "warning": "Ospalost, hormonální nerovnováha."
+  },
+  {
+    "id": 504,
+    "name": "Cortisol",
+    "categoryKey": "hormones",
+    "tags": ["stres", "energie", "metabolismus"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Hlavní stresový hormon.",
+    "description": "Kortizol reguluje metabolismus, zánět a stresovou odpověď.",
+    "effects": ["mobilizace energie", "regulace zánětu"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Chronicky zvýšený kortizol je problém."
+    },
+    "warning": "Katabolismus, potlačení imunity."
+  },
+  {
+    "id": 505,
+    "name": "DHEA",
+    "categoryKey": "hormones",
+    "tags": ["anti-aging", "androgen"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Prekurzor pohlavních hormonů.",
+    "description": "DHEA je hormon nadledvin sloužící jako stavební látka pro testosteron a estrogeny.",
+    "effects": ["energie", "libido"],
+    "dosage": {
+      "short": "10–50 mg denně",
+      "long": "Nízké dávky, sledovat krevní hodnoty."
+    },
+    "warning": "Akné, hormonální výkyvy."
+  },
+  {
+    "id": 506,
+    "name": "Pregnenolone",
+    "categoryKey": "hormones",
+    "tags": ["neurosteroid", "paměť"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Základní steroidní prekurzor.",
+    "description": "Pregnenolon je výchozí hormon pro většinu steroidních hormonů.",
+    "effects": ["kognice", "stresová odolnost"],
+    "dosage": {
+      "short": "5–25 mg denně",
+      "long": "Nízké dávky, individuální reakce."
+    },
+    "warning": "Úzkost při vysokých dávkách."
+  },
+  {
+    "id": 507,
+    "name": "Insulin",
+    "categoryKey": "hormones",
+    "tags": ["metabolismus", "glukóza"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Anabolický hormon regulující krevní cukr.",
+    "description": "Inzulin umožňuje vstup glukózy do buněk a podporuje anabolické procesy.",
+    "effects": ["ukládání živin"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní použití je vysoce rizikové."
+    },
+    "warning": "Hypoglykémie, život ohrožující stav."
+  },
+  {
+    "id": 508,
+    "name": "Melatonin",
+    "categoryKey": "hormones",
+    "tags": ["spánek", "cirkadiánní rytmus"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Hormon spánku.",
+    "description": "Melatonin reguluje cirkadiánní rytmus a kvalitu spánku.",
+    "effects": ["usínání", "regenerace"],
+    "dosage": {
+      "short": "0.3–3 mg",
+      "long": "Nízké dávky jsou často účinnější."
+    },
+    "warning": "Ospalost, posun rytmu při zneužití."
+  },
+  {
+    "id": 509,
+    "name": "Thyroxine (T4)",
+    "categoryKey": "hormones",
+    "tags": ["štítná žláza", "metabolismus"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Hlavní hormon štítné žlázy.",
+    "description": "T4 je prekurzor aktivního T3 a ovlivňuje rychlost metabolismu.",
+    "effects": ["zvýšení metabolismu"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Pouze při indikaci."
+    },
+    "warning": "Riziko hypertyreózy."
+  },
+  {
+    "id": 510,
+    "name": "Triiodothyronine (T3)",
+    "categoryKey": "hormones",
+    "tags": ["štítná žláza", "fatloss"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Aktivní hormon štítné žlázy.",
+    "description": "T3 přímo reguluje buněčný metabolismus a produkci tepla.",
+    "effects": ["spalování energie"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Velmi citlivé dávkování."
+    },
+    "warning": "Katabolismus, srdeční zátěž."
+  }[
+  {
+    "id": 511,
+    "name": "IGF-1",
+    "categoryKey": "hormones",
+    "tags": ["anabolismus", "regenerace", "svalový růst"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Insulin-like Growth Factor 1, podporuje růst a regeneraci.",
+    "description": "IGF-1 je klíčový hormon pro buněčný růst, regeneraci svalů a kostí. Vyšší hladiny jsou spojovány s lepší anabolismem.",
+    "effects": ["svalový růst", "regenerace", "proliferace buněk"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se jen klinicky. Exogenní podávání ovlivňuje HPTA a inzulinovou citlivost."
+    },
+    "warning": "Riziko hypoglykémie, nadměrný růst tkání."
+  },
+  {
+    "id": 512,
+    "name": "Prolactin",
+    "categoryKey": "hormones",
+    "tags": ["mléčná žláza", "regulace hormonů", "libido"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Hormon regulující laktaci a reprodukci.",
+    "description": "Prolaktin ovlivňuje produkci mléka, reprodukční funkce a chování.",
+    "effects": ["laktace", "hormonální rovnováha"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Normální hladiny jsou kritické, exogenní podání není běžné."
+    },
+    "warning": "Hyperprolaktinémie snižuje libido a testosteron."
+  },
+  {
+    "id": 513,
+    "name": "SHBG (Sex Hormone Binding Globulin)",
+    "categoryKey": "hormones",
+    "tags": ["transport hormonů", "libido"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Protein vážící pohlavní hormony.",
+    "description": "SHBG reguluje dostupnost testosteronu a estradiolu tím, že je váže v krvi.",
+    "effects": ["regulace volného testosteronu", "rovnováha hormonů"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Nemá suplementární použití, spíše marker hormonální rovnováhy."
+    },
+    "warning": "Vysoké SHBG může snižovat účinky testosteronu."
+  },
+  {
+    "id": 514,
+    "name": "Aldosterone",
+    "categoryKey": "hormones",
+    "tags": ["renin-angiotensin", "hydratace", "elektrolyty"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Mineralokortikoid regulující sodík a vodu.",
+    "description": "Aldosteron ovlivňuje krevní tlak, bilanci sodíku a draslíku.",
+    "effects": ["zadržování vody", "regulace krevního tlaku"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní použití pouze v medicíně."
+    },
+    "warning": "Nadměrné hladiny → hypertenze, hypokalémie."
+  },
+  {
+    "id": 515,
+    "name": "Cortisone",
+    "categoryKey": "hormones",
+    "tags": ["stres", "zánět", "metabolismus"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Prekurzor kortizolu, steroidní hormon.",
+    "description": "Cortisone je méně aktivní forma kortizolu a může být konvertována na aktivní hormon v tkáních.",
+    "effects": ["regulace zánětu", "stresová odpověď"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se terapeuticky, dlouhodobé podání může potlačit HPA osu."
+    },
+    "warning": "Katabolismus, oslabení imunity při dlouhodobém užití."
+  },
+  {
+    "id": 516,
+    "name": "Aldosterone Antagonist (Spironolactone)",
+    "categoryKey": "hormones",
+    "tags": ["blokátor aldosteronu", "antiandrogen"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Farmakologický modulátor aldosteronu.",
+    "description": "Spironolactone blokuje receptor aldosteronu, ovlivňuje vodní a sodíkovou bilanci a má antiandrogenní účinky.",
+    "effects": ["snížení krevního tlaku", "blok androgenů"],
+    "dosage": {
+      "short": "25–100 mg",
+      "long": "Používá se v medicíně, sledujte elektrolyty."
+    },
+    "warning": "Hyperkalémie, hormonální nerovnováha."
+  },
+  {
+    "id": 517,
+    "name": "LH (Luteinizing Hormone)",
+    "categoryKey": "hormones",
+    "tags": ["reprodukce", "testosteron", "ovulace"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Regulační hormon pohlavních žláz.",
+    "description": "LH stimuluje Leydigovy buňky k produkci testosteronu a ovulaci u žen.",
+    "effects": ["produkce testosteronu", "ovulace"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Používá se klinicky při fertilitě, jinak endogenní regulace."
+    },
+    "warning": "Exogenní stimulace může potlačit HPTA osu."
+  },
+  {
+    "id": 518,
+    "name": "FSH (Follicle Stimulating Hormone)",
+    "categoryKey": "hormones",
+    "tags": ["reprodukce", "spermatogeneze", "folikulární vývoj"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon stimulující pohlavní žlázy.",
+    "description": "FSH reguluje spermatogenezi u mužů a růst folikulů u žen.",
+    "effects": ["spermatogeneze", "folikulární růst"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Používá se klinicky při fertilitě."
+    },
+    "warning": "Nadměrné hladiny mohou narušit hormonální rovnováhu."
+  },
+  {
+    "id": 519,
+    "name": "Progestin (synthetic progesterone)",
+    "categoryKey": "hormones",
+    "tags": ["hormonální modulace", "HRT", "antikoncepce"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Syntetická forma progesteronu pro HRT a kontracepci.",
+    "description": "Progestiny se používají k hormonální substituci nebo antikoncepci a modulují reprodukční cyklus.",
+    "effects": ["kontrola cyklu", "hormonální rovnováha"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Dávkování podle předpisu. Sledujte hormonální hladiny."
+    },
+    "warning": "Možné změny nálady, libido, zadržování vody."
+  },
+  {
+    "id": 520,
+    "name": "Oxytocin",
+    "categoryKey": "hormones",
+    "tags": ["společenské chování", "mléčná žláza", "stres"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Hormon sociální vazby a laktace.",
+    "description": "Oxytocin podporuje sociální chování, bonding a vypuzování mléka u žen.",
+    "effects": ["bonding", "mléčná sekrece", "relaxace"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se klinicky, v suplementaci jen výzkumně."
+    },
+    "warning": "Nepřiměřené exogenní dávky mohou ovlivnit sociální chování."
+  }[
+  {
+    "id": 521,
+    "name": "Somatostatin",
+    "categoryKey": "hormones",
+    "tags": ["GH inhibitor", "digestive", "metabolism"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Hormon inhibující růstový hormon a další.",
+    "description": "Somatostatin inhibuje sekreci GH, TSH a některých gastrointestinálních hormonů.",
+    "effects": ["snížení GH", "regulace trávení"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní podání jen klinicky, ovlivňuje HPTA osu."
+    },
+    "warning": "Přílišná inhibice GH → snížený růst a regenerace."
+  },
+  {
+    "id": 522,
+    "name": "Ghrelin",
+    "categoryKey": "hormones",
+    "tags": ["hunger", "GH release", "metabolism"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon hladu a stimulátor GH.",
+    "description": "Ghrelin stimuluje chuť k jídlu a uvolňování růstového hormonu.",
+    "effects": ["zvýšení chuti k jídlu", "stimulace GH"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní podání pouze ve výzkumu."
+    },
+    "warning": "Nadměrná hladina → obezita, metabolické dysbalance."
+  },
+  {
+    "id": 523,
+    "name": "Leptin",
+    "categoryKey": "hormones",
+    "tags": ["appetite", "energy balance", "fat regulation"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Hormon regulující hlad a energetickou rovnováhu.",
+    "description": "Leptin signalizuje mozku stav tukových zásob a ovlivňuje hlad a metabolismus.",
+    "effects": ["snížení chuti k jídlu", "regulace energie"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní podání jen ve výzkumu."
+    },
+    "warning": "Leptinová rezistence je častá u obezity."
+  },
+  {
+    "id": 524,
+    "name": "Adrenocorticotropic Hormone (ACTH)",
+    "categoryKey": "hormones",
+    "tags": ["stres", "kortizol", "nadledviny"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Stimuluje nadledviny k produkci kortizolu.",
+    "description": "ACTH reguluje syntézu a uvolňování kortizolu a dalších glukokortikoidů.",
+    "effects": ["stresová odpověď", "kortizolová produkce"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní podání je čistě klinické."
+    },
+    "warning": "Chronická nadprodukce → Cushing."
+  },
+  {
+    "id": 525,
+    "name": "Aldosterone Modulator (Eplerenone)",
+    "categoryKey": "hormones",
+    "tags": ["aldosteron", "blokátor", "krevní tlak"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Selektivní blokátor aldosteronového receptoru.",
+    "description": "Eplerenone snižuje účinky aldosteronu, ovlivňuje krevní tlak a zadržování vody.",
+    "effects": ["snížení krevního tlaku", "antiandrogenní účinek"],
+    "dosage": {
+      "short": "50–200 mg",
+      "long": "Používá se v medicíně, sledujte elektrolyty."
+    },
+    "warning": "Hyperkalémie, hypotenze."
+  },
+  {
+    "id": 526,
+    "name": "Renin",
+    "categoryKey": "hormones",
+    "tags": ["RAAS", "metabolismus", "krevní tlak"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Enzym regulující systém renin-angiotenzin.",
+    "description": "Renin stimuluje produkci angiotenzinu I → II a ovlivňuje aldosteron.",
+    "effects": ["regulace krevního tlaku", "vodní bilance"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní podání není běžné."
+    },
+    "warning": "Nadměrná aktivita → hypertenze."
+  },
+  {
+    "id": 527,
+    "name": "Calcitonin",
+    "categoryKey": "hormones",
+    "tags": ["kosti", "kalcium"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Hormon regulující hladinu vápníku a kostní metabolismus.",
+    "description": "Calcitonin snižuje hladinu vápníku v krvi a podporuje ukládání do kostí.",
+    "effects": ["ochrana kostí", "snížení vápníku v krvi"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se při osteoporóze a hyperkalcémii."
+    },
+    "warning": "Při dlouhodobém užití nutné sledovat hladiny vápníku."
+  },
+  {
+    "id": 528,
+    "name": "Parathyroid Hormone (PTH)",
+    "categoryKey": "hormones",
+    "tags": ["kosti", "kalcium", "metabolismus"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Reguluje hladinu vápníku a fosfátů.",
+    "description": "PTH zvyšuje hladinu vápníku v krvi stimulací resorpce kostí a vstřebávání v ledvinách.",
+    "effects": ["zvýšení vápníku v krvi", "kostní metabolismus"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se jen v medicíně."
+    },
+    "warning": "Hyperkalcémie, kostní demineralizace při nadměrném podání."
+  },
+  {
+    "id": 529,
+    "name": "Calcitriol (Vitamin D3 Active)",
+    "categoryKey": "hormones",
+    "tags": ["vitamin D", "kosti", "metabolismus"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Aktivní forma vitamínu D regulující kalcium a fosfát.",
+    "description": "Calcitriol podporuje vstřebávání vápníku a fosfátů, důležitý pro kosti a imunitu.",
+    "effects": ["zvýšení vápníku a fosfátu", "podpora kostí"],
+    "dosage": {
+      "short": "0.25–1 μg denně",
+      "long": "Sledujte hladiny Ca a PTH."
+    },
+    "warning": "Hyperkalcémie při vysokých dávkách."
+  },
+  {
+    "id": 530,
+    "name": "Vitamin D2 (Ergocalciferol)",
+    "categoryKey": "hormones",
+    "tags": ["vitamin D", "kosti", "imunita"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Doplňková forma vitamínu D.",
+    "description": "Vitamin D2 je suplementární forma vitamínu D, podporuje zdraví kostí a imunitu.",
+    "effects": ["kosti", "imunitní funkce"],
+    "dosage": {
+      "short": "5000 IU týdně",
+      "long": "Alternativa k D3, vhodné sledovat hladiny vitamínu D."
+    },
+    "warning": "Předávkování → hyperkalcémie."
+  }[
+  {
+    "id": 531,
+    "name": "Triiodothyronine (T3)",
+    "categoryKey": "hormones",
+    "tags": ["štítná žláza", "metabolismus", "energetický výdej"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Aktivní hormon štítné žlázy, zvyšuje metabolismus.",
+    "description": "T3 zvyšuje bazální metabolismus, podporuje spalování tuků a termogenezi.",
+    "effects": ["zvýšení metabolismu", "regulace energie", "termogeneze"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se při hypotyreóze, exogenní podání může ovlivnit srdeční rytmus."
+    },
+    "warning": "Nadměrné dávky → palpitace, úzkost, katabolismus svalů."
+  },
+  {
+    "id": 532,
+    "name": "Thyroxine (T4)",
+    "categoryKey": "hormones",
+    "tags": ["štítná žláza", "metabolismus"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Prekurzor T3, hormon štítné žlázy.",
+    "description": "T4 je hlavní sekreční hormon štítné žlázy, v periferiích se konvertuje na aktivní T3.",
+    "effects": ["regulace metabolismu", "podpora energie"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Dávkování přesně podle lékařského předpisu."
+    },
+    "warning": "Nadměrné užití → hyperthyreóza, palpitace, nervozita."
+  },
+  {
+    "id": 533,
+    "name": "Thyroid Stimulating Hormone (TSH)",
+    "categoryKey": "hormones",
+    "tags": ["štítná žláza", "regulace hormonů"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon stimulující štítnou žlázu.",
+    "description": "TSH stimuluje produkci T4 a T3, klíčový regulátor štítné žlázy.",
+    "effects": ["stimulace T4/T3", "hormonální rovnováha"],
+    "dosage": {
+      "short": "endogenní",
+      "long": "Exogenní použití jen diagnosticky nebo ve fertilitě."
+    },
+    "warning": "Nadměrná stimulace → hypertrofie štítné žlázy."
+  },
+  {
+    "id": 534,
+    "name": "DHEA (Dehydroepiandrosterone)",
+    "categoryKey": "hormones",
+    "tags": ["androgen", "hormonální rovnováha", "energie"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Prekurzor androgenů a estrogenu, hormon nadledvin.",
+    "description": "DHEA je prekurzor pohlavních hormonů, ovlivňuje energii, náladu a libido.",
+    "effects": ["libido", "energie", "anabolismus"],
+    "dosage": {
+      "short": "25–50 mg denně",
+      "long": "Používá se jako doplněk pro hormonální rovnováhu, sledujte hladiny hormonů."
+    },
+    "warning": "Předávkování → akné, růst vlasů, hormonální nerovnováha."
+  },
+  {
+    "id": 535,
+    "name": "Melatonin",
+    "categoryKey": "hormones",
+    "tags": ["spánek", "cirkadiánní rytmus", "regenerace"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Hormon spánku, reguluje cirkadiánní rytmus.",
+    "description": "Melatonin reguluje spánek a bdění, podporuje regeneraci a antioxidační účinky.",
+    "effects": ["spánek", "relaxace", "antioxidant"],
+    "dosage": {
+      "short": "0.5–5 mg před spaním",
+      "long": "Užitečné při jet-lagu a spánkových poruchách."
+    },
+    "warning": "Může ovlivnit hormonální rovnováhu při dlouhodobém užití."
+  },
+  {
+    "id": 536,
+    "name": "Estradiol",
+    "categoryKey": "hormones",
+    "tags": ["estrogen", "hormonální rovnováha", "ženské zdraví"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Hlavní ženský estrogen.",
+    "description": "Estradiol ovlivňuje reprodukční systém, kosti, kardiovaskulární zdraví a náladu.",
+    "effects": ["reprodukce", "kosti", "kardiovaskulární zdraví"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se v HRT a kontracepci."
+    },
+    "warning": "Riziko trombózy, hormonální nerovnováha při vysokých dávkách."
+  },
+  {
+    "id": 537,
+    "name": "Testosterone",
+    "categoryKey": "hormones",
+    "tags": ["androgen", "síla", "libido", "svaly"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Hlavní mužský hormon, podporuje svalový růst a libido.",
+    "description": "Testosteron je klíčový androgen, ovlivňuje svalovou hmotu, energii, libido a náladu.",
+    "effects": ["svalový růst", "síla", "libido", "energie"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se v TRT, sledujte HPTA osu a hematologii."
+    },
+    "warning": "Exogenní použití může potlačit vlastní testosteron, způsobit akné, agresivitu."
+  },
+  {
+    "id": 538,
+    "name": "Progesterone",
+    "categoryKey": "hormones",
+    "tags": ["ženské zdraví", "HRT", "reprodukce"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Ženský hormon, reguluje menstruační cyklus a HRT.",
+    "description": "Progesterone je klíčový pro reprodukci, podporuje stabilitu endometria a HRT.",
+    "effects": ["reprodukce", "HRT", "hormonální rovnováha"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se perorálně, transdermálně nebo injekčně podle předpisu."
+    },
+    "warning": "Předávkování → změny nálady, zadržování vody."
+  },
+  {
+    "id": 539,
+    "name": "Cortisol",
+    "categoryKey": "hormones",
+    "tags": ["stres", "metabolismus", "katabolismus"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Glukokortikoid nadledvin, stresový hormon.",
+    "description": "Cortisol reguluje stresovou odpověď, hladinu cukru a katabolismus bílkovin.",
+    "effects": ["stres", "energie", "katabolismus"],
+    "dosage": {
+      "short": "endogenní / lékařské",
+      "long": "Exogenní podání jen pod lékařským dohledem, riziko potlačení HPA."
+    },
+    "warning": "Chronicky vysoké hladiny → Cushing, oslabení imunitního systému."
+  },
+  {
+    "id": 540,
+    "name": "Flutamide",
+    "categoryKey": "hormones",
+    "tags": ["antiandrogen", "blokátor receptorů", "HRT"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Antiandrogen používaný k blokaci účinků testosteronu.",
+    "description": "Flutamide blokuje androgenové receptory, používá se v medicíně a HRT.",
+    "effects": ["blok androgenů", "modulace hormonů"],
+    "dosage": {
+      "short": "250–750 mg denně",
+      "long": "Používá se pod dohledem lékaře, sledujte játra a hormonální profil."
+    },
+    "warning": "Hepatotoxicita, hormonální nerovnováha, gynekomastie."
+  }[
+  {
+    "id": 541,
+    "name": "IGF-1 (Insulin-like Growth Factor 1)",
+    "categoryKey": "hormones",
+    "tags": ["anabolismus", "svaly", "regenerace"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Hormon podporující růst svalů a regeneraci.",
+    "description": "IGF-1 je peptidový hormon stimulující růst svalů, kostí a buněk, silný anabolický účinek.",
+    "effects": ["svalový růst", "regenerace", "buněčný růst"],
+    "dosage": {
+      "short": "lékařské / research",
+      "long": "Exogenní podání jen v klinických studiích, sledujte IGF-1 hladiny."
+    },
+    "warning": "Příliš vysoké hladiny → zvýšené riziko diabetu a abnormalit růstu."
+  },
+  {
+    "id": 542,
+    "name": "IGF-1 LR3",
+    "categoryKey": "hormones",
+    "tags": ["anabolismus", "svaly", "regenerace", "dlouhodobý účinek"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Dlouhodobě působící forma IGF-1.",
+    "description": "IGF-1 LR3 má prodlouženou biologickou dostupnost, výrazný anabolický efekt.",
+    "effects": ["svalový růst", "buněčná regenerace", "dlouhodobý účinek"],
+    "dosage": {
+      "short": "lékařské / research",
+      "long": "Používá se experimentálně, sledování IGF-1 kritické."
+    },
+    "warning": "Vysoké riziko abnormalit buněčného růstu, potenciál tumorogeneze."
+  },
+  {
+    "id": 543,
+    "name": "IGF-1 DES",
+    "categoryKey": "hormones",
+    "tags": ["anabolismus", "svaly", "rychlý účinek"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Krátkodobě působící forma IGF-1.",
+    "description": "IGF-1 DES má velmi rychlý nástup účinku, cíleně na svaly a regeneraci.",
+    "effects": ["rychlý svalový růst", "regenerace"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, monitorování IGF-1 hladin nezbytné."
+    },
+    "warning": "Stejně jako IGF-1 LR3, riziko abnormalit růstu a metabolických komplikací."
+  },
+  {
+    "id": 544,
+    "name": "Insulin",
+    "categoryKey": "hormones",
+    "tags": ["glukóza", "anabolismus", "energie"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Klíčový hormon regulující hladinu cukru a anabolismus.",
+    "description": "Insulin podporuje vstřebávání glukózy a aminokyselin do buněk, silný anabolický hormon.",
+    "effects": ["regulace cukru", "svalový anabolismus"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Pouze pod lékařským dohledem, nebezpečí hypoglykémie."
+    },
+    "warning": "Nesprávné dávkování → hypoglykémie, koma, smrt."
+  },
+  {
+    "id": 545,
+    "name": "IGF-2",
+    "categoryKey": "hormones",
+    "tags": ["růst", "buněčná regenerace"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon podobný IGF-1, účinkuje na růst a regeneraci.",
+    "description": "IGF-2 podporuje růst buněk a regeneraci, méně silný než IGF-1.",
+    "effects": ["buněčný růst", "regenerace"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledování růstových markerů doporučeno."
+    },
+    "warning": "Experimentální, potenciál pro abnormální buněčný růst."
+  },
+  {
+    "id": 546,
+    "name": "Growth Hormone Secretagogues (GHRP-2)",
+    "categoryKey": "hormones",
+    "tags": ["GH stimulace", "anabolismus", "regenerace"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Peptidový GHRP pro stimulaci GH.",
+    "description": "GHRP-2 stimuluje endogenní sekreci růstového hormonu, podporuje regeneraci a anabolismus.",
+    "effects": ["GH stimulace", "svalový růst", "regenerace"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se v experimentálních studiích, sledovat GH a IGF-1."
+    },
+    "warning": "Riziko zvýšené sekrece GH, metabolických komplikací."
+  },
+  {
+    "id": 547,
+    "name": "Growth Hormone Secretagogues (GHRP-6)",
+    "categoryKey": "hormones",
+    "tags": ["GH stimulace", "anabolismus", "regenerace", "chuť k jídlu"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Peptidový GHRP podporující GH a chuť k jídlu.",
+    "description": "GHRP-6 stimuluje sekreci GH, zvyšuje chuť k jídlu a regeneraci svalů.",
+    "effects": ["GH stimulace", "svalový růst", "zvýšení chuti k jídlu"],
+    "dosage": {
+      "short": "research",
+      "long": "Pouze experimentálně, sledování GH a metabolických markerů."
+    },
+    "warning": "Stejné riziko jako u GHRP-2, plus možné zvýšení apetitu."
+  },
+  {
+    "id": 548,
+    "name": "MK-677 (Ibutamoren)",
+    "categoryKey": "hormones",
+    "tags": ["GH stimulace", "IGF-1", "spánek", "anabolismus"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Orální mimetik GH, zvyšuje IGF-1 a podporuje regeneraci.",
+    "description": "MK-677 stimuluje sekreci GH a IGF-1, zlepšuje spánek a anabolismus bez injekcí.",
+    "effects": ["GH stimulace", "IGF-1 zvýšení", "regenerace", "svalový růst"],
+    "dosage": {
+      "short": "10–25 mg denně",
+      "long": "Používá se researchově, sledujte hladiny GH/IGF-1."
+    },
+    "warning": "Zadržování vody, zvýšení chuti k jídlu, možné inzulinové dysbalance."
+  },
+  {
+    "id": 549,
+    "name": "Clomiphene",
+    "categoryKey": "hormones",
+    "tags": ["SERM", "LH/FSH", "fertilita"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "SERM modulující HPTA, zvyšuje endogenní testosteron.",
+    "description": "Clomiphene blokuje estrogenové receptory, zvyšuje LH/FSH a stimuluje vlastní testosteron.",
+    "effects": ["zvýšení testosteronu", "fertilita", "HPTA stimulace"],
+    "dosage": {
+      "short": "25–50 mg denně",
+      "long": "Používá se v medicíně při hypogonadismu, sledujte hormonální profil."
+    },
+    "warning": "Hormonální nerovnováha, změny nálady."
+  },
+  {
+    "id": 550,
+    "name": "Tamoxifen",
+    "categoryKey": "hormones",
+    "tags": ["SERM", "estrogen blokace", "fertilita"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "SERM blokující účinky estrogenu, často při PCT.",
+    "description": "Tamoxifen blokuje estrogenové receptory, pomáhá obnovit HPTA po steroidní terapii.",
+    "effects": ["blok estrogenů", "HPTA stimulace", "fertilita"],
+    "dosage": {
+      "short": "20–40 mg denně",
+      "long": "Používá se v medicíně i PCT, sledujte hormonální profil."
+    },
+    "warning": "Hormonální nerovnováha, riziko trombózy při vyšších dávkách."
+  }[
+  {
+    "id": 551,
+    "name": "Sermorelin",
+    "categoryKey": "hormones",
+    "tags": ["GH stimulace", "anabolismus", "regenerace"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Peptid stimulující endogenní růstový hormon.",
+    "description": "Sermorelin je GHRH analog, který podporuje produkci vlastního GH, zlepšuje regeneraci a anabolismus.",
+    "effects": ["GH stimulace", "svalový růst", "regenerace"],
+    "dosage": {
+      "short": "0.2–0.5 mg denně",
+      "long": "Používá se subkutánně, monitorovat IGF-1 a GH hladiny."
+    },
+    "warning": "Možné reakce v místě vpichu, zvýšení IGF-1 nad normu."
+  },
+  {
+    "id": 552,
+    "name": "CJC-1295 without DAC",
+    "categoryKey": "hormones",
+    "tags": ["GH stimulace", "anabolismus", "regenerace"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Peptid stimulující GH, krátkodobý účinek.",
+    "description": "CJC-1295 bez DAC prodlužuje pulsní sekreci GH a IGF-1, podporuje regeneraci a anabolismus.",
+    "effects": ["GH stimulace", "IGF-1 zvýšení", "regenerace"],
+    "dosage": {
+      "short": "1–2 mg 2–3× týdně",
+      "long": "Používá se researchově, sledovat IGF-1."
+    },
+    "warning": "Riziko hyperglykémie, otoky, zvýšená citlivost na GH."
+  },
+  {
+    "id": 553,
+    "name": "CJC-1295 with DAC",
+    "categoryKey": "hormones",
+    "tags": ["GH stimulace", "dlouhodobý účinek", "anabolismus"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Peptid stimulující GH s prodlouženou účinností.",
+    "description": "CJC-1295 s DAC prodlužuje účinek až na týden, podporuje IGF-1 a anabolismus.",
+    "effects": ["GH stimulace", "IGF-1 zvýšení", "svalový růst"],
+    "dosage": {
+      "short": "1 mg 1–2× týdně",
+      "long": "Pouze researchově, sledovat hladiny GH a IGF-1."
+    },
+    "warning": "Riziko hyperglykémie, retence vody, abnormality buněk."
+  },
+  {
+    "id": 554,
+    "name": "Exemestane",
+    "categoryKey": "hormones",
+    "tags": ["aromatáza inhibitor", "estrogen blokace", "HRT"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Aromatáza inhibitor, snižuje estrogen.",
+    "description": "Exemestane inhibuje aromatázu a snižuje konverzi androgenů na estrogen, často PCT nebo HRT.",
+    "effects": ["blokace estrogenu", "podpora testosteronu", "HPTA ochrana"],
+    "dosage": {
+      "short": "25 mg denně",
+      "long": "Používá se podle lékařského předpisu, sledovat hormonální profil."
+    },
+    "warning": "Horké záblesky, úbytek kostní hmoty při dlouhodobém užití."
+  },
+  {
+    "id": 555,
+    "name": "Anastrozole",
+    "categoryKey": "hormones",
+    "tags": ["aromatáza inhibitor", "estrogen blokace", "PCT"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Aromatáza inhibitor, snižuje estrogen během PCT.",
+    "description": "Anastrozole blokuje aromatázu, snižuje hladinu estrogenu, pomáhá obnovit HPTA po steroidní terapii.",
+    "effects": ["blok estrogenů", "HPTA stimulace", "fertilita"],
+    "dosage": {
+      "short": "0.5–1 mg denně",
+      "long": "Používá se při PCT, sledovat hormonální profil a kostní hustotu."
+    },
+    "warning": "Snížení hustoty kostí, možný vliv na lipidový profil."
+  },
+  {
+    "id": 556,
+    "name": "Pregnenolone",
+    "categoryKey": "hormones",
+    "tags": ["prekurzor steroidů", "kognice", "energie"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Prekurzor steroidních hormonů, může zlepšit kognici.",
+    "description": "Pregnenolone je prekurzor progesteronu, kortizolu, DHEA, podporuje náladu a energii.",
+    "effects": ["hormonální rovnováha", "energie", "kognice"],
+    "dosage": {
+      "short": "5–50 mg denně",
+      "long": "Doplněk pro hormonální podporu a náladu, sledujte hladiny hormonů."
+    },
+    "warning": "Možné změny nálady, hormonální nerovnováha při vysokých dávkách."
+  },
+  {
+    "id": 557,
+    "name": "Pregnenolone Sulfate",
+    "categoryKey": "hormones",
+    "tags": ["prekurzor steroidů", "kognice", "neuroaktivní"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Sulfátová forma pregnenolonu, neuroaktivní.",
+    "description": "Pregnenolone Sulfate ovlivňuje GABA a NMDA receptory, podporuje kognici a náladu.",
+    "effects": ["kognice", "neuroprotekce", "hormonální rovnováha"],
+    "dosage": {
+      "short": "5–50 mg denně",
+      "long": "Používá se pro experimentální kognitivní podporu, sledujte hladiny hormonů."
+    },
+    "warning": "Možné změny nálady a spánku."
+  },
+  {
+    "id": 558,
+    "name": "Oxytocin",
+    "categoryKey": "hormones",
+    "tags": ["sociální chování", "nálada", "regenerace"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Hormon spojený s důvěrou, sociálním chováním a regenerací.",
+    "description": "Oxytocin podporuje sociální interakce, vazbu, regeneraci a relaxaci.",
+    "effects": ["sociální chování", "nálada", "relaxace"],
+    "dosage": {
+      "short": "nasálně / injekčně",
+      "long": "Používá se experimentálně, sledujte psychologické účinky."
+    },
+    "warning": "Experimentální použití, možné emoční výkyvy."
+  },
+  {
+    "id": 559,
+    "name": "Vasopressin",
+    "categoryKey": "hormones",
+    "tags": ["voda", "nálada", "stres"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon regulující zadržování vody a stresovou reakci.",
+    "description": "Vasopressin ovlivňuje retenci vody, krevní tlak a sociální chování.",
+    "effects": ["regulace vody", "stres", "sociální chování"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se v medicíně, experimentální použití vyžaduje monitorování vody a tlaku."
+    },
+    "warning": "Riziko hypertenze a zadržování vody při nadměrném podání."
+  },
+  {
+    "id": 560,
+    "name": "Adrenocorticotropic Hormone (ACTH)",
+    "categoryKey": "hormones",
+    "tags": ["kortizol", "stres", "nadledviny"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon stimulující nadledviny k produkci kortizolu.",
+    "description": "ACTH stimuluje nadledviny k produkci glukokortikoidů, podílí se na stresové odpovědi.",
+    "effects": ["stresová odpověď", "kortizol", "energie"],
+    "dosage": {
+      "short": "lékařské",
+      "long": "Používá se při Addisonově nemoci nebo diagnosticky, sledujte hladiny kortizolu."
+    },
+    "warning": "Při nadměrném podání → zvýšení kortizolu, hypertenze, katabolismus."
+  }[
+  {
+    "id": 561,
+    "name": "DHEA (Dehydroepiandrosterone)",
+    "categoryKey": "hormones",
+    "tags": ["prekurzor androgenů", "energie", "imunita", "anti-aging"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Prekurzor steroidních hormonů, podpora vitality a hormonální rovnováhy.",
+    "description": "DHEA je prekurzor testosteronu a estrogenů, ovlivňuje energii, náladu a imunitní systém.",
+    "effects": ["hormonální rovnováha", "energie", "imunita", "anti-aging"],
+    "dosage": {
+      "short": "25–50 mg denně",
+      "long": "Doplněk pro hormonální podporu, doporučeno sledovat hladiny DHEA a androgenů."
+    },
+    "warning": "Nadměrné dávky mohou zvýšit hladinu androgenů a estrogenů, hormonální nerovnováha."
+  },
+  {
+    "id": 562,
+    "name": "Pregabalin",
+    "categoryKey": "hormones",
+    "tags": ["nervový systém", "GABA", "relaxace"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Nehormonální modulátor GABA pro nervový systém.",
+    "description": "Pregabalin ovlivňuje GABA neurotransmisi, snižuje úzkost a napětí, podporuje spánek.",
+    "effects": ["relaxace", "spánek", "úzkost"],
+    "dosage": {
+      "short": "75–150 mg denně",
+      "long": "Používá se medicínsky, sledovat CNS účinky a interakce s jinými léky."
+    },
+    "warning": "Závislost a sedace při vyšších dávkách."
+  },
+  {
+    "id": 563,
+    "name": "Thyroxine (T4)",
+    "categoryKey": "hormones",
+    "tags": ["thyroid", "metabolismus", "energie"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Hlavní thyroidní hormon regulující metabolismus.",
+    "description": "T4 je prekurzor aktivního T3, ovlivňuje metabolismus, energii a tělesnou teplotu.",
+    "effects": ["metabolismus", "energie", "termoregulace"],
+    "dosage": {
+      "short": "25–100 µg denně",
+      "long": "Používá se medicínsky při hypotyreóze, monitorujte TSH a T4."
+    },
+    "warning": "Nadměrné dávky → hyperthyreóza, úzkost, palpitace."
+  },
+  {
+    "id": 564,
+    "name": "Triiodothyronine (T3)",
+    "categoryKey": "hormones",
+    "tags": ["thyroid", "metabolismus", "energie", "hubnutí"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Aktivní thyroidní hormon, zvyšuje metabolismus.",
+    "description": "T3 je biologicky aktivní thyroidní hormon, podporuje metabolismus, energii a redukci tuku.",
+    "effects": ["metabolismus", "energie", "hubnutí"],
+    "dosage": {
+      "short": "12.5–50 µg denně",
+      "long": "Používá se medicínsky, sledovat TSH a srdeční rytmus."
+    },
+    "warning": "Riziko palpitací, úzkosti, katabolismu svalů při nadměrném užití."
+  },
+  {
+    "id": 565,
+    "name": "Cortisol (hydrocortisone)",
+    "categoryKey": "hormones",
+    "tags": ["stres", "kortizol", "energie", "zánět"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hlavní stresový hormon, reguluje metabolismus a imunitní reakce.",
+    "description": "Cortisol ovlivňuje metabolismus, imunitu a reakci na stres.",
+    "effects": ["stresová odpověď", "metabolismus", "protizánětlivé"],
+    "dosage": {
+      "short": "10–20 mg denně",
+      "long": "Používá se medicínsky, sledujte hladiny kortizolu a tlak."
+    },
+    "warning": "Dlouhodobé vysoké dávky → katabolismus, hypertenze, imunosuprese."
+  },
+  {
+    "id": 566,
+    "name": "Melatonin",
+    "categoryKey": "hormones",
+    "tags": ["spánek", "circadian rhythm", "regenerace"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Hormon regulující spánek a cirkadiánní rytmus.",
+    "description": "Melatonin podporuje spánek, synchronizuje cirkadiánní rytmus a podporuje regeneraci.",
+    "effects": ["spánek", "regenerace", "hormony"],
+    "dosage": {
+      "short": "0.5–5 mg večer",
+      "long": "Používá se doplňkově, ideálně 30–60 min před spaním."
+    },
+    "warning": "Sedace během dne, snížení vigilance."
+  },
+  {
+    "id": 567,
+    "name": "Pregabalin",
+    "categoryKey": "hormones",
+    "tags": ["nervový systém", "relaxace", "spánek"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Podpora spánku a GABA aktivity.",
+    "description": "Používá se pro zklidnění nervového systému a zlepšení spánku, ovlivňuje neurotransmise GABA.",
+    "effects": ["relaxace", "spánek", "úzkost"],
+    "dosage": {
+      "short": "75–150 mg denně",
+      "long": "Pouze medicínsky, sledovat účinky na CNS."
+    },
+    "warning": "Závislost a sedace při vyšších dávkách."
+  },
+  {
+    "id": 568,
+    "name": "Pregnenolone",
+    "categoryKey": "hormones",
+    "tags": ["prekurzor steroidů", "energie", "kognice"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Prekurzor steroidních hormonů a kognitivní podpora.",
+    "description": "Podporuje tvorbu steroidních hormonů a ovlivňuje kognici a energii.",
+    "effects": ["energie", "kognice", "hormonální rovnováha"],
+    "dosage": {
+      "short": "5–50 mg denně",
+      "long": "Doplněk pro hormonální a kognitivní podporu."
+    },
+    "warning": "Možné hormonální výkyvy při vysokých dávkách."
+  },
+  {
+    "id": 569,
+    "name": "Thyrotropin-Releasing Hormone (TRH)",
+    "categoryKey": "hormones",
+    "tags": ["thyroid", "HPTA stimulace", "metabolismus"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Hypotalamický hormon stimulující TSH.",
+    "description": "TRH stimuluje hypofýzu k sekreci TSH, ovlivňuje štítnou žlázu a metabolismus.",
+    "effects": ["TSH stimulace", "thyroid aktivita", "metabolismus"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat TSH, T3, T4."
+    },
+    "warning": "Experimentální, riziko thyroidní nerovnováhy."
+  },
+  {
+    "id": 570,
+    "name": "Cytokines Modulators (IGF-1 modulátory)",
+    "categoryKey": "hormones",
+    "tags": ["IGF-1", "hormonální rovnováha", "regenerace"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Modulátory cytokínů a IGF-1 pro regeneraci.",
+    "description": "Modulují hladiny IGF-1 a podporují regeneraci buněk, experimentální použití.",
+    "effects": ["regenerace", "svalový růst", "IGF-1 modulace"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat IGF-1 a celkovou hormonální rovnováhu."
+    },
+    "warning": "Experimentální, možné metabolické a hormonální komplikace."
+  }[
+  {
+    "id": 571,
+    "name": "Human Chorionic Gonadotropin (hCG)",
+    "categoryKey": "hormones",
+    "tags": ["LH mimik", "testosteron stimulace", "fertilita"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Stimuluje Leydigovy buňky k produkci testosteronu.",
+    "description": "hCG působí jako luteinizační hormon (LH) a podporuje endogenní tvorbu testosteronu, často při PCT.",
+    "effects": ["testosteron stimulace", "fertilita", "HPTA podpora"],
+    "dosage": {
+      "short": "500–2000 IU 2–3× týdně",
+      "long": "Používá se při PCT nebo hypogonadismu, monitorovat testosteron a estradiol."
+    },
+    "warning": "Možný nadbytek estradiolu, gynkomastie, retence vody."
+  },
+  {
+    "id": 572,
+    "name": "Clomiphene Citrate (Clomid)",
+    "categoryKey": "hormones",
+    "tags": ["SERM", "HPTA stimulace", "fertilita", "PCT"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Selektivní modulátor estrogenových receptorů, podporuje testosteron.",
+    "description": "Clomiphene stimuluje hypofýzu ke zvýšení LH a FSH, podporuje obnovu HPTA po steroidní terapii.",
+    "effects": ["testosteron stimulace", "fertilita", "HPTA podpora"],
+    "dosage": {
+      "short": "50 mg denně 4 týdny",
+      "long": "Používá se při PCT, sledovat testosteron a estradiol."
+    },
+    "warning": "Možné změny nálady, vizuální efekty, nadměrná stimulace HPTA."
+  },
+  {
+    "id": 573,
+    "name": "Tamoxifen",
+    "categoryKey": "hormones",
+    "tags": ["SERM", "PCT", "estrogen blokace", "fertilita"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "SERM blokující estrogen, podporuje HPTA a PCT.",
+    "description": "Tamoxifen stimuluje hypofýzu ke zvýšení LH a FSH, snižuje riziko gynekomastie a podporuje endogenní testosteron.",
+    "effects": ["HPTA stimulace", "estrogen blokace", "fertilita"],
+    "dosage": {
+      "short": "20–40 mg denně",
+      "long": "Používá se při PCT, sledovat hormonální profil."
+    },
+    "warning": "Možné změny nálady, únava, riziko trombózy."
+  },
+  {
+    "id": 574,
+    "name": "Finasteride",
+    "categoryKey": "hormones",
+    "tags": ["DHT blokace", "hormony", "vlasy"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Inhibitor 5α-reduktázy, snižuje konverzi testosteronu na DHT.",
+    "description": "Finasteride snižuje DHT, pomáhá při androgenní alopecii a ovlivňuje hormonální osu.",
+    "effects": ["blokace DHT", "ochrana vlasů", "hormonální rovnováha"],
+    "dosage": {
+      "short": "1 mg denně",
+      "long": "Používá se preventivně proti vypadávání vlasů, monitorujte libido a hormonální profil."
+    },
+    "warning": "Možné snížení libida, erektilní dysfunkce, hormonální nerovnováha."
+  },
+  {
+    "id": 575,
+    "name": "Letrozole",
+    "categoryKey": "hormones",
+    "tags": ["aromatáza inhibitor", "estrogen blokace", "PCT"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Silný aromatáza inhibitor, snižuje estrogen.",
+    "description": "Letrozole blokuje enzym aromatázu, výrazně snižuje hladinu estrogenů a podporuje HPTA po steroidní terapii.",
+    "effects": ["blok estrogenů", "HPTA stimulace", "fertilita"],
+    "dosage": {
+      "short": "0.25–2.5 mg denně",
+      "long": "Používá se při PCT nebo HRT, sledovat kostní denzitu a lipidový profil."
+    },
+    "warning": "Riziko osteoporózy, únavy, snížení libida."
+  },
+  {
+    "id": 576,
+    "name": "Hydrocortisone",
+    "categoryKey": "hormones",
+    "tags": ["kortizol", "stres", "energie"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Kortizol pro podporu stresové reakce a metabolismu.",
+    "description": "Hydrokortizon se používá k regulaci stresu, metabolismu a imunitní odpovědi.",
+    "effects": ["stresová odpověď", "energie", "protizánětlivé účinky"],
+    "dosage": {
+      "short": "10–20 mg denně",
+      "long": "Používá se medicínsky, sledovat hladinu kortizolu a krevní tlak."
+    },
+    "warning": "Dlouhodobé užívání → katabolismus, hypertenze, imunosuprese."
+  },
+  {
+    "id": 577,
+    "name": "Fludrocortisone",
+    "categoryKey": "hormones",
+    "tags": ["aldosteron", "retence vody", "tenze"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Mineralokortikoid pro regulaci elektrolytů a krevního tlaku.",
+    "description": "Fludrocortisone podporuje retenci sodíku, zvyšuje krevní tlak a upravuje elektrolytovou rovnováhu.",
+    "effects": ["elektrolyty", "retence vody", "tenze"],
+    "dosage": {
+      "short": "0.1 mg denně",
+      "long": "Používá se medicínsky, monitorujte tlak a hladiny elektrolytů."
+    },
+    "warning": "Riziko hypertenze a retence vody."
+  },
+  {
+    "id": 578,
+    "name": "Desmopressin",
+    "categoryKey": "hormones",
+    "tags": ["ADH analog", "voda", "moč"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Analog antidiuretického hormonu, kontroluje retenci vody.",
+    "description": "Desmopressin reguluje zadržování vody a koncentraci moči, medicínské použití.",
+    "effects": ["retence vody", "moč", "stres hormonální"],
+    "dosage": {
+      "short": "0.1–0.4 mg denně",
+      "long": "Používá se pro diabetes insipidus, sledovat elektrolyty a vodní bilanci."
+    },
+    "warning": "Riziko hyponatrémie při nadměrném podání."
+  },
+  {
+    "id": 579,
+    "name": "Leptin",
+    "categoryKey": "hormones",
+    "tags": ["appetite", "metabolism", "energie"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon regulující hlad a energetický metabolismus.",
+    "description": "Leptin signalizuje mozku stav energetických zásob, ovlivňuje chuť k jídlu a metabolismus.",
+    "effects": ["apetit", "metabolismus", "energie"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat tělesnou hmotnost a metabolismus."
+    },
+    "warning": "Experimentální použití, hormonální výkyvy."
+  },
+  {
+    "id": 580,
+    "name": "Ghrelin",
+    "categoryKey": "hormones",
+    "tags": ["apetit", "GH stimulace", "metabolismus"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Hormon stimulující hlad a podporující GH sekreci.",
+    "description": "Ghrelin zvyšuje chuť k jídlu, stimuluje GH a ovlivňuje energetický metabolismus.",
+    "effects": ["GH stimulace", "apetit", "metabolismus"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat GH a metabolismus."
+    },
+    "warning": "Experimentální použití, riziko nadměrného příjmu kalorií."
+  }[
+  {
+    "id": 581,
+    "name": "Anastrozole",
+    "categoryKey": "hormones",
+    "tags": ["aromatáza inhibitor", "estrogen blokace", "PCT"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Aromatáza inhibitor snižující hladinu estrogenu.",
+    "description": "Anastrozole blokuje enzym aromatázu, snižuje hladinu estrogenu a podporuje HPTA obnovu po steroidní terapii.",
+    "effects": ["blok estrogenů", "HPTA stimulace", "fertilita"],
+    "dosage": {
+      "short": "0.5–1 mg denně",
+      "long": "Používá se při PCT nebo HRT, sledovat TSH a kostní denzitu."
+    },
+    "warning": "Riziko osteoporózy, snížení libida, únava."
+  },
+  {
+    "id": 582,
+    "name": "Raloxifene",
+    "categoryKey": "hormones",
+    "tags": ["SERM", "estrogen modulace", "PCT"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Selektivní modulátor estrogenových receptorů, chrání kosti a podporuje HPTA.",
+    "description": "Raloxifene blokuje estrogenové receptory v některých tkáních a stimuluje HPTA, snižuje riziko gynekomastie.",
+    "effects": ["HPTA stimulace", "estrogen modulace", "kosti"],
+    "dosage": {
+      "short": "60 mg denně",
+      "long": "Používá se při PCT a prevenci osteoporózy, sledovat lipidový profil."
+    },
+    "warning": "Možné změny nálady, riziko trombózy."
+  },
+  {
+    "id": 583,
+    "name": "Dutasteride",
+    "categoryKey": "hormones",
+    "tags": ["DHT blokace", "vlasy", "hormony"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Inhibitor 5α-reduktázy, blokuje přeměnu testosteronu na DHT.",
+    "description": "Dutasteride výrazně snižuje DHT, pomáhá při alopecii a ovlivňuje hormonální rovnováhu.",
+    "effects": ["blok DHT", "ochrana vlasů", "hormonální rovnováha"],
+    "dosage": {
+      "short": "0.5 mg denně",
+      "long": "Používá se preventivně proti vypadávání vlasů, monitorovat libido a hormonální profil."
+    },
+    "warning": "Možné snížení libida, erektilní dysfunkce."
+  },
+  {
+    "id": 584,
+    "name": "Oxytocin",
+    "categoryKey": "hormones",
+    "tags": ["sociální vazby", "stres", "hormonální modulace"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Hormon podporující sociální interakce a vazby.",
+    "description": "Oxytocin ovlivňuje sociální chování, stresovou reakci a interpersonální vazby.",
+    "effects": ["sociální vazby", "relaxace", "stres"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat emocionální stav a sociální chování."
+    },
+    "warning": "Experimentální, riziko psychologických efektů."
+  },
+  {
+    "id": 585,
+    "name": "Kisspeptin",
+    "categoryKey": "hormones",
+    "tags": ["GnRH stimulace", "LH/FSH stimulace", "fertilita"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Peptid stimulující hypotalamus a HPTA osu.",
+    "description": "Kisspeptin aktivuje GnRH sekreci, podporuje LH a FSH, stimuluje testosteron a ovulaci.",
+    "effects": ["HPTA stimulace", "LH/FSH zvýšení", "fertilita"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat hormonální profil."
+    },
+    "warning": "Experimentální použití, riziko hormonálních výkyvů."
+  },
+  {
+    "id": 586,
+    "name": "GHRH (Growth Hormone Releasing Hormone)",
+    "categoryKey": "hormones",
+    "tags": ["GH stimulace", "regenerace", "svalový růst"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Stimuluje endogenní sekreci růstového hormonu.",
+    "description": "GHRH aktivuje hypofýzu k produkci GH, podporuje regeneraci, metabolismus a svalový růst.",
+    "effects": ["GH stimulace", "regenerace", "svalový růst"],
+    "dosage": {
+      "short": "research",
+      "long": "Experimentální, sledovat IGF-1 a hormonální profil."
+    },
+    "warning": "Experimentální použití, riziko nadměrného růstu tkání."
+  },
+  {
+    "id": 587,
+    "name": "Somatostatin",
+    "categoryKey": "hormones",
+    "tags": ["GH blokace", "insulin", "IGF-1"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Hormon inhibující GH a IGF-1 sekreci.",
+    "description": "Somatostatin snižuje sekreci GH, IGF-1 a inzulinu, ovlivňuje metabolismus a růst.",
+    "effects": ["GH inhibice", "IGF-1 modulace", "metabolismus"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat GH, IGF-1 a metabolické parametry."
+    },
+    "warning": "Experimentální, riziko snížení regenerace a anabolismu."
+  },
+  {
+    "id": 588,
+    "name": "ACTH (Adrenocorticotropic Hormone)",
+    "categoryKey": "hormones",
+    "tags": ["kortizol stimulace", "nadledviny", "stres"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Stimuluje nadledviny k produkci kortizolu.",
+    "description": "ACTH aktivuje kůru nadledvin, podporuje produkci kortizolu a steroidů nadledvin.",
+    "effects": ["kortizol stimulace", "nadledviny", "stres"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat kortizol a krevní tlak."
+    },
+    "warning": "Experimentální, riziko nadměrného kortizolu."
+  },
+  {
+    "id": 589,
+    "name": "Thymosin Beta-4",
+    "categoryKey": "hormones",
+    "tags": ["regenerace", "hojení", "svaly"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Peptid podporující regeneraci a hojení tkání.",
+    "description": "Thymosin Beta-4 stimuluje migraci buněk a hojení svalové a pojivové tkáně.",
+    "effects": ["regenerace", "hojení", "svaly"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat regeneraci a hojivé procesy."
+    },
+    "warning": "Experimentální použití, riziko hormonálních efektů."
+  },
+  {
+    "id": 590,
+    "name": "IGF-1 LR3",
+    "categoryKey": "hormones",
+    "tags": ["IGF-1", "regenerace", "svalový růst"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Dlouhodobě působící IGF-1 analog pro anabolický efekt.",
+    "description": "IGF-1 LR3 podporuje růst svalů, regeneraci a buněčný anabolismus, experimentální použití.",
+    "effects": ["svalový růst", "regenerace", "IGF-1 stimulace"],
+    "dosage": {
+      "short": "research",
+      "long": "Používá se experimentálně, sledovat IGF-1 a metabolismus."
+    },
+    "warning": "Experimentální použití, riziko nadměrného růstu tkání a hormonální nerovnováhy."
+  }
+]
