@@ -227,9 +227,6 @@ Ne.
 
 ## 📜 Licence
 
-Tento projekt **není open-source**.
-Veškerá práva vyhrazena.
-
 **Autor:** [Dany Chaker](https://github.com/SDragonex) & [Marek Polák](https://github.com/marekpolak3)
 
 ---
