@@ -6,7 +6,15 @@ const ASSETS_TO_CACHE = [
     './style.css',
     './script.js',
     './manifest.json',
-    './database.json',
+    './data/health.json',
+    './data/performance.json',
+    './data/sleep.json',
+    './data/fatloss.json',
+    './data/hormones.json',
+    './data/nootropics.json',
+    './data/experimental.json',
+    './data/steroids.json',
+    './data/pct.json',
     'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap',
     'https://fonts.googleapis.com/icon?family=Material+Icons'
 ];
@@ -36,7 +44,9 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    if (event.request.url.includes('database.json')) {
+    const url = event.request.url;
+    
+    if (url.includes('/data/') && url.endsWith('.json')) {
         event.respondWith(
             fetch(event.request)
                 .then((response) => {
@@ -53,7 +63,7 @@ self.addEventListener('fetch', (event) => {
                         if (cachedResponse) {
                             return cachedResponse;
                         }
-                        return new Response(JSON.stringify([]), {
+                        return new Response('[]', {
                             headers: {'Content-Type': 'application/json'}
                         });
                     });
