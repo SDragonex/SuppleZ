@@ -1,1 +1,244 @@
-
+[
+  {
+    "id": 300,
+    "name": "L-Theanin",
+    "categoryKey": "sleep",
+    "tags": ["relaxace", "focus", "GABA", "alfa vlny"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Aminokyselina z čaje podporující relaxaci bez sedace.",
+    "description": "L-theanin je neproteinogenní aminokyselina z listů čajovníku (Camellia sinensis). Zvyšuje hladiny GABA, serotoninu a dopaminu. Indukuje alfa mozkové vlny (relaxovaná bdělost) bez sedace. Synergický efekt s kofeinem (vyvážení stimulace).",
+    "effects": ["relaxace", "zvýšení alfa vln", "kognitivní focus", "snížení stresu"],
+    "dosage": {
+      "short": "100–200mg",
+      "long": "100–200mg 30–60 min před spaním nebo s ranním kofeinem. Pro spánek vyšší dávky 200–400mg. Bezpečný i při dlouhodobém užívání."
+    },
+    "warning": "Vzácně bolesti hlavy nebo nevolnost. Může snižit krevní tlak (additive s antihypertenzivy).",
+    "mechanism": "Antagonismus glutamátových receptorů (AMPA, kainát, NMDA), zvýšení GABA, alfa-vlnná aktivita",
+    "halfLife": "2–3 hodiny",
+    "interactions": ["kofein (synergický)", "sedativa", "antihypertenziva"],
+    "evidenceLevel": "A",
+    "naturalSources": ["zelený čaj", "černý čaj"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 301,
+    "name": "GABA (Gamma-aminobutyřská kyselina)",
+    "categoryKey": "sleep",
+    "tags": ["relaxace", "spánek", "CNS", "inhibice"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Hlavní inhibiční neurotransmitter CNS.",
+    "description": "GABA je primární inhibiční neurotransmitter v CNS. Oralní bioavailability je diskutabilní (transpřes BBB je omezený), ale některé studie ukazují efekt přes enterický nervový systém a BBB transportéry. Podporuje relaxaci a usínání. Fosfopeptidová forma (PharmaGABA) má lepší vstřebání.",
+    "effects": ["relaxace", "usnadnění usínání", "snížení úzkosti", "svalová relaxace"],
+    "dosage": {
+      "short": "100–750mg",
+      "long": "100–750mg 30 min před spaním. Nižší dávky (100–200mg) pro denní relaxaci. Vyšší dávky (500–750mg) pro spánek. PharmaGABA forma preferována."
+    },
+    "warning": "Vzácně paradoxní stimulace u některých jedinců. Teoreticky interakce s benzodiazepiny (additivní efekt).",
+    "mechanism": "Agonismus GABA-A a GABA-B receptorů, hyperpolarizace neuronů (Cl- influx)",
+    "halfLife": "2–4 hodiny",
+    "interactions": ["benzodiazepiny", "alkohol", "barbituráty", "sedativa"],
+    "evidenceLevel": "B",
+    "naturalSources": ["fermentované potraviny (kimchi, kefír)", "zelený čaj", "ořechy"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 302,
+    "name": "Glycin",
+    "categoryKey": "sleep",
+    "tags": ["spánek", "CNS", "regenerace", "teplota"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Inhibiční neurotransmitter zlepšující kvalitu spánku.",
+    "description": "Glycin je nejjednodušší aminokyselina, působí jako inhibiční neurotransmitter v míchě a inhibiční modulátor v mozku (NMDA receptor). Zlepšuje kvalitu spánku snížením core teploty těla (vasodilatace). Také prekurzor kreatinu a kolagenu.",
+    "effects": ["zlepšení kvality spánku", "snížení čas usínání", "regenerace", "svalová ochrana"],
+    "dosage": {
+      "short": "3g před spaním",
+      "long": "3g 30–60 min před spaním. Vyšší dávky (5g) také bezpečné. Chuť je sladká, řešit kapslemi nebo práškem v nápoji."
+    },
+    "warning": "Vzácně nevolnost při vysokých dávkách. Může snižit krevní tlak (opatrnost u hypotenzních jedinců).",
+    "mechanism": "Aktivace glycin receptorů (Cl- kanál), snížení core teploty, NMDA receptor co-agonista",
+    "halfLife": "2–4 hodiny",
+    "interactions": ["klonazepam", "sedativa", "antipsychotika"],
+    "evidenceLevel": "B",
+    "naturalSources": ["želatina", "kolagen", "maso", "luštěniny"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 303,
+    "name": "L-Tryptofan",
+    "categoryKey": "sleep",
+    "tags": ["serotonin", "melatonin", "spánek", "nálada"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Esenciální aminokyselina prekurzor serotoninu a melatoninu.",
+    "description": "L-tryptofan je esenciální aminokyselina, prekurzor 5-HTP → serotonin → melatonin. Efektivnější než 5-HTP (lepší regulace přes rate-limiting enzym TPH). Zlepšuje kvalitu spánku a náladu. Používán při sezónní afektivní poruše a nespavosti.",
+    "effects": ["zlepšení spánku", "zvýšení serotoninu", "nálada", "regulace cirkadiánního rytmu"],
+    "dosage": {
+      "short": "500mg–2g před spaním",
+      "long": "500mg–2g 30–60 min před spaním. Prázdný žaludek pro lepší vstřebání. Cyklovat (4 týdny ON, 1–2 týdny OFF) pro udržení receptorové citlivosti."
+    },
+    "warning": "EMS (eosinofilie-myalgie) kontaminace v 90. letech (dnes vyřešeno). Interakce s SSRI, MAO inhibitory (riziko serotoninového syndromu). Může způsobit somnolenci ve dne.",
+    "mechanism": "Konverze na 5-HTP (tryptofan hydroxyláza), pak na serotonin a melatonin",
+    "halfLife": "2–4 hodiny",
+    "interactions": ["SSRI", "MAO inhibitory", "5-HTP", "tramadol"],
+    "evidenceLevel": "B",
+    "naturalSources": ["krůtí maso", "mléko", "vejce", "banány", "ořechy"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 304,
+    "name": "5-HTP (5-hydroxytryptofan)",
+    "categoryKey": "sleep",
+    "tags": ["serotonin", "spánek", "nálada", "chutě"],
+    "rating": 3,
+    "colorType": "yellow",
+    "shortDesc": "Přímý prekurzor serotoninu, silnější než tryptofan.",
+    "description": "5-HTP je intermediát mezi tryptofanem a serotoninem. Překonává rate-limiting krok (tryptofan hydroxylázu), proto je silnější, ale méně regulovaný než tryptofan. Používán pro spánek, úzkost a potlačení chutí k sladkému. Vždy s EGCG (zelený čaj) pro prevenci konverze na serotonin v periférii.",
+    "effects": ["zlepšení spánku", "snížení úzkosti", "potlačení chutí", "nálada"],
+    "dosage": {
+      "short": "100–300mg",
+      "long": "100–300mg 30 min před spaním. VŽDY s EGCG (zelený čaj extrakt) 100–200mg pro inhibici periferní aromatické L-amino kyseliny dekarboxylázy (zabraňuje kardiotoxicity). Cyklovat."
+    },
+    "warning": "Riziko serotoninového syndromu s SSRI/MAO. Periferní konverze na serotonin může poškodit srdeční chlopně (řešeno EGCG). Fibromyalgie a EMS historie. Kontrolovat jaterní funkce při dlouhodobém užívání.",
+    "mechanism": "Přímá konverze na serotonin (AA dekarboxyláza), pak na melatonin",
+    "halfLife": "2–3 hodiny",
+    "interactions": ["SSRI", "MAO inhibitory", "tramadol", "triptany", "karbidopa"],
+    "evidenceLevel": "B",
+    "naturalSources": ["Griffonia simplicifolia (extrakt)", "syntetický"],
+    "bannedStatus": "legal (omezeno v některých zemích)"
+  },
+  {
+    "id": 305,
+    "name": "Ashwagandha (KSM-66)",
+    "categoryKey": "sleep",
+    "tags": ["adaptogen", "kortizol", "spánek", "úzkost"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Adaptogen snižující kortizol a zlepšující spánek.",
+    "description": "Ashwagandha (Withania somnifera) je adaptogenní byliny používaná v Ajurvédě. Standardizované extrakty (KSM-66, Sensoril) obsahují withanolidy. Silně snižuje kortizol, zlepšuje kvalitu spánku a snižuje úzkost. KSM-66 je full-spectrum extrakt (z kořene), Sensoril má vyšší koncentraci withanolidů.",
+    "effects": ["snížení kortizolu", "zlepšení spánku", "snížení úzkosti", "testosteron"],
+    "dosage": {
+      "short": "300–600mg KSM-66",
+      "long": "300–600mg KSM-66 (5% withanolidů) denně, rozděleno do 2 dávek. Nebo 125–250mg Sensoril (10% withanolidů). Večerní dávka podporuje spánek."
+    },
+    "warning": "Může zvýšit hladinu štítných hormonů (T3/T4) – opatrnost u hyperthyreózy. Interakce s imunosupresivy, sedativy, léky na štítnou žlázu. Autoimunitní onemocnění konzultovat lékaře.",
+    "mechanism": "Modulace HPA osy, snížení CRH a kortizolu, GABA-mimetické účinky",
+    "halfLife": "6–8 hodin",
+    "interactions": ["imunosupresiva", "benzodiazepiny", "léky na štítnou žlázu", "hypnotika"],
+    "evidenceLevel": "A",
+    "naturalSources": ["kořen Withania somnifera"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 306,
+    "name": "Magnesium Glycinate",
+    "categoryKey": "sleep",
+    "tags": ["relaxace", "spánek", "CNS", "svaly"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Nejlepší forma hořčíku pro spánek a relaxaci.",
+    "description": "Magnesium glycinate (bisglycinát) je chelát hořčíku s glycinem. Má nejvyšší biologickou dostupnost ze všech forem hořčíku a minimální laxativní efekt. Glycin má samostatný sedativní efekt. Ideální pro spánek, úzkost a svalové křeče.",
+    "effects": ["svalová relaxace", "zlepšení spánku", "snížení úzkosti", "CNS zklidnění"],
+    "dosage": {
+      "short": "200–400mg elementárního Mg",
+      "long": "200–400mg elementárního hořčíku (1–2g bisglycinátu) 1–2 hodiny před spaním. Vyšší dávky pro svalové křeče."
+    },
+    "warning": "Průjem je vzácný (na rozdíl od oxidu nebo citrátu). Opatrnost při renální insuficienci.",
+    "mechanism": "NMDA receptor antagonismus (neuroprotekce), GABA receptor modulace, svalová relaxace",
+    "halfLife": "4–6 hodin",
+    "interactions": ["antibiotika", "bisphosphonáty", "hypnotika"],
+    "evidenceLevel": "A",
+    "naturalSources": ["listová zelenina", "ořechy"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 307,
+    "name": "Valerián (Valeriana officinalis)",
+    "categoryKey": "sleep",
+    "tags": ["spánek", "GABA", "sedace", "bylina"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Tradiční bylina na spánek s GABAergním účinkem.",
+    "description": "Kořen valeriány obsahuje valepotriáty a kyselinu isovalerovou, které modulují GABA-A receptory (podobně jako benzodiazepiny, ale slaběji). Zlepšuje latenci usínání a kvalitu spánku bez hangover efektu. Efekt se projevuje po 2–4 týdnech pravidelného užívání.",
+    "effects": ["zkrácení doby usínání", "zlepšení hlubokého spánku", "sedace", "anxiolytikum"],
+    "dosage": {
+      "short": "300–600mg extraktu",
+      "long": "300–600mg standardizovaného extraktu (0.8% kyseliny valerové) 30–60 min před spaním. Nebo 2–3g sušeného kořene. Dlouhodobé užívání je bezpečné."
+    },
+    "warning": "Interakce s alkoholem a CNS depresanty. Paradoxní stimulace u ~10% uživatelů. Teoreticky hepatotoxicita (valepotriáty) při extrémních dávkách. Nepoužívat s barbituráty.",
+    "mechanism": "Inhibice GABA transaminázy (zvyšuje GABA), modulace GABA-A receptorů, adenosinová aktivita",
+    "halfLife": "4–6 hodin",
+    "interactions": ["alkohol", "benzodiazepiny", "barbituráty", "opiáty"],
+    "evidenceLevel": "B",
+    "naturalSources": ["kořen Valeriana officinalis"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 308,
+    "name": "Passionflower (Passiflora incarnata)",
+    "categoryKey": "sleep",
+    "tags": ["spánek", "GABA", "úzkost", "bylina"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Anxiolytická bylina s GABAergní aktivitou.",
+    "description": "Passiflora incarnata (mučenka) obsahuje flavonoidy (chrysin, vitexin), které modulují GABA-A receptory. Slabší sedativum než valerián, ale lepší pro úzkost. Používá se pro nespavost spojenou s nervozitou. Bezpečná i pro dlouhodobé užívání.",
+    "effects": ["snížení úzkosti", "usnadnění usínání", "svalová relaxace", "GABAergní efekt"],
+    "dosage": {
+      "short": "500mg–1g extraktu",
+      "long": "500mg–1g extraktu (nebo 4–8g sušené byliny jako čaj) 30–60 min před spaním. Standardizace na flavonoidy (2–4%)."
+    },
+    "warning": "Interakce s MAO inhibitory (obsahuje MAOI ve stopách). Sedace s CNS depresanty. Teoreticky uterotonický efekt (těhotenství kontraindikováno).",
+    "mechanism": "Modulace GABA-A receptorů (benzodiazepinové místo), inhibice MAO (slabě)",
+    "halfLife": "4–6 hodin",
+    "interactions": ["alkohol", "sedativa", "MAO inhibitory"],
+    "evidenceLevel": "B",
+    "naturalSources": ["Passiflora incarnata"],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 309,
+    "name": "CBD (Kanabidiol)",
+    "categoryKey": "sleep",
+    "tags": ["spánek", "úzkost", "bolest", "relaxace"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Nepsychoaktivní kanabinoid podporující spánek.",
+    "description": "CBD je nepsychoaktivní fytokanabinoid z konopí. Nemá intoxikační efekt (na rozdíl od THC). Moduluje endokanabinoidní systém (ECS), snižuje úzkost a bolest, což zlepšuje spánek. Full-spectrum extrakty obsahují i terpeny (myrcen, linalool) s vlastními sedativními účinky.",
+    "effects": ["snížení úzkosti", "analgeze", "zlepšení spánku", "svalová relaxace"],
+    "dosage": {
+      "short": "25–75mg před spaním",
+      "long": "25–75mg sublingválně nebo perorálně 30–60 min před spaním. Vyšší dávky (100–200mg) pro chronickou bolest. Full-spectrum (0.3% THC) efektivnější než isolate."
+    },
+    "warning": "Interakce s CYP450 (inhibice 3A4, 2C19) – ovlivňuje metabolismus mnoha léků. Suchá ústa, únava. Teoretický vliv na játra při vysokých dávkách. Legální status variabilní.",
+    "mechanism": "Modulace CB1/CB2 receptorů (indirect), zvýšení anandamidu (FAAH inhibice), 5-HT1A agonizmus",
+    "halfLife": "18–32 hodin",
+    "interactions": ["CYP3A4 substráty", "CYP2C19 substráty", "warfarin", "antiepileptika"],
+    "evidenceLevel": "B",
+    "naturalSources": ["Cannabis sativa L. (konopí)"],
+    "bannedStatus": "legal (THC <0.3%), controlled některé země"
+  },
+  {
+    "id": 310,
+    "name": "Apigenin",
+    "categoryKey": "sleep",
+    "tags": ["spánek", "GABA", "zánět", "flavonoid"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Flavonoid z heřmánku s anxiolytickým účinkem.",
+    "description": "Apigenin je flavonoid přítomný v heřmánku (Matricaria chamomilla), petrželi a celeru. Moduluje GABA-A receptory (benzodiazepinové místo) bez sedace a závislosti. Má také protizánětlivé a neuroprotektivní vlastnosti. Používán pro úzkost a spánek.",
+    "effects": ["anxiolýza", "zlepšení spánku", "protizánětlivé", "neuroprotekce"],
+    "dosage": {
+      "short": "50mg denně",
+      "long": "50mg standardizovaného extraktu denně (nebo 3–4 šálky heřmánkového čaje). Vyšší dávky (100mg) pro akutní úzkost."
+    },
+    "warning": "Vysoké koncentrace in vitro ukazují estrogenické účinky (teoreticky kontraindikováno u hormonálně senzitivních nádorů, ale lidská data chybí). Interakce s CNS depresanty.",
+    "mechanism": "Modulace GABA-A receptorů (benzodiazepinové místo), COX-2 inhibice",
+    "halfLife": "6–8 hodin",
+    "interactions": ["benzodiazepiny", "CNS depresanty"],
+    "evidenceLevel": "B",
+    "naturalSources": ["heřmánek", "petržel", "celer", "pomerančová kůra"],
+    "bannedStatus": "legal"
+  }
+]
