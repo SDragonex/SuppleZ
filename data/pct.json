@@ -1,1 +1,244 @@
-
+[
+  {
+    "id": 900,
+    "name": "Tamoxifen Citrate",
+    "categoryKey": "pct",
+    "tags": ["SERM", "estrogen", "PCT", "fertilita", "antagonista"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Selektivní modulátor ER pro obnovu HPTA.",
+    "description": "Tamoxifen (Nolvadex) je SERM (Selective Estrogen Receptor Modulator), který antagonizuje estrogenové receptory v hypotalamu (zvýšení LH/FSH) a agonizuje v kostech. Zlatý standard pro PCT. Blokuje gynekomastii, obnovuje přirozenou produkci testosteronu po steroidním cyklu.",
+    "effects": ["obnova HPTA", "zvýšení LH/FSH", "blokace gynekomastie", "kostní ochrana"],
+    "dosage": {
+      "short": "20–40mg denně",
+      "long": "PCT: 40mg denně první 2 týdny, pak 20mg denně 2–4 týdny. Celkem 4–6 týdnů. Gynekomastie: 20–40mg denně dokud se nezlepší."
+    },
+    "warning": "Zvýšení endogenního estrogenu (blok receptorů → zpětná vazba), riziko trombózy (DVT/PE), změny nálady, deprese, únava, křeče, zhoršení lipidového profilu (snížení HDL).",
+    "mechanism": "Antagonista ER v hypotalamu (zvýšení GnRH→LH/FSH), antagonista v prsní tkáni, agonista v kostech",
+    "halfLife": "5–7 dní (aktivní metabolity)",
+    "interactions": ["antidepresiva (CYP2D6)", "warfarin", "aromatáza inhibitory (neužívat současně)"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 901,
+    "name": "Clomiphene Citrate",
+    "categoryKey": "pct",
+    "tags": ["SERM", "fertilita", "PCT", "HPTA", "stimulace"],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "SERM silněji stimulující HPTA než Tamoxifen.",
+    "description": "Clomiphen (Clomid) je SERM s estrogen-antagonistickými účinky v hypotalamu. Silnější stimulace LH/FSH než Tamoxifen. Používán pro ovulaci u žen a PCT u mužů. Méně účinný pro gynekomastii než Tamoxifen. Zlepšuje fertilitu.",
+    "effects": ["silná stimulace HPTA", "zvýšení testosteronu", "fertilita", "PCT"],
+    "dosage": {
+      "short": "25–50mg denně",
+      "long": "PCT: 50mg denně 2 týdny, pak 25mg denně 2–4 týdny. Nebo 25mg denně 6–8 týdnů. Monoterapie hypogonadismu: 25–50mg EOD."
+    },
+    "warning": "Vizuální poruchy (rozmazané vidění, záblesky – reverzibilní), změny nálady (podrážděnost, deprese), zvýšení SHBG (snižuje volný testosteron), akné, gynekomastie (paradoxně).",
+    "mechanism": "Blok ER v hypotalamu → zvýšení GnRH pulzů → LH/FSH → testosteron",
+    "halfLife": "5–7 dní",
+    "interactions": ["antidepresiva", "danazol"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 902,
+    "name": "hCG (Human Chorionic Gonadotropin)",
+    "categoryKey": "pct",
+    "tags": ["LH mimik", "testosteron", "fertilita", "ochrana"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Mimik LH pro udržení testikulární funkce během cyklu.",
+    "description": "hCG je glykoproteinový hormon produkovaný placentou, strukturálně podobný LH. Stimuluje Leydigovy buňky ve varlatech k produkci testosteronu. Používán během steroidního cyklu (TRT) pro prevenci atrofie varlat a udržení fertility. Také na konci cyklu před PCT.",
+    "effects": ["prevence atrofie varlat", "udržení fertility", "testosteron", "estetika varlat"],
+    "dosage": {
+      "short": "250–500 IU 2–3x týdně",
+      "long": "Během cyklu/TRT: 250–500 IU 2–3x týdně (EOD). Před PCT: 1000–1500 IU EOD poslední 2–3 týdny cyklu. Nepoužívat déle než 3 měsíce (desenzitizace Leydigových buněk)."
+    },
+    "warning": "Desenzitizace Leydigových buněk při dlouhodobém/vysokém dávkování (steroidogeneze), zvýšení estradiolu (aromatizace v varlatech), akné, gynekomastie. Drahé.",
+    "mechanism": "Agonismus LH receptorů na Leydigových buňkách → steroidogeneze",
+    "halfLife": "24–36 hodin",
+    "interactions": ["aromatáza inhibitory (současně)", "testosteron"],
+    "evidenceLevel": "A",
+    "naturalSources": ["urin těhotných žen (původní zdroj), rekombinantní DNA"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 903,
+    "name": "Anastrozol",
+    "categoryKey": "pct",
+    "tags": ["AI", "aromatáza", "estrogen", "gynekomastie"],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Aromatáza inhibitor pro kontrolu estrogenu.",
+    "description": "Anastrozol (Arimidex) je non-steroidní aromatáza inhibitor (AI), který irreversibilně inhibuje enzym aromatázu (konverze androgenů na estrogeny). Používán pro kontrolu estradiolu během cyklů (testosteron, aromatizující steroidy) a při PCT (opatrně). Prevence gynekomastie.",
+    "effects": ["snížení estradiolu", "prevence gynekomastie", "snížení zadržování vody", "zlepšení definice"],
+    "dosage": {
+      "short": "0.25–1mg EOD",
+      "long": "0.25–1mg každý druhý den (EOD) nebo 0.5mg denně při vysokých dávkách testosteronu. Kontrolovat estradiol (cíl: 20–30 pg/ml). Při PCT 0.25mg EOD první 2 týdny (opatrně)."
+    },
+    "warning": "Přílišné snížení estrogenu (bolesti kloubů, deprese, nízké libido, kardiovaskulární rizika, osteoporóza). Rebound efekt při vysazení. Lipidový profil (snížení HDL).",
+    "mechanism": "Irreversibilní inhibice aromatázy (CYP19A1), snížení konverze T→E2",
+    "halfLife": "40–50 hodin",
+    "interactions": ["tamoxifen (snižuje účinek)", "testosteron", "estrogen"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 904,
+    "name": "Letrozol",
+    "categoryKey": "pct",
+    "tags": ["AI", "aromatáza", "silný", "gynekomastie"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Nejsilnější aromatáza inhibitor pro akutní gynekomastii.",
+    "description": "Letrozol (Femara) je non-steroidní AI, silnější než Anastrozol (snížení estrogenu o 98% vs 85%). Používán při existující gynekomastii (reverzibilní v raných fázích) nebo při extrémních dávkách aromatizujících steroidů. Velmi silný – riziko crush estrogenu.",
+    "effects": ["maximální snížení estrogenu", "reverze gynekomastie", "snížení vody"],
+    "dosage": {
+      "short": "0.25–2.5mg denně",
+      "long": "0.25–2.5mg denně (začít 0.25mg EOD). Gynekomastie: 2.5mg denně 1–2 týdny, pak titrace dolů. Kontrolovat estradiol."
+    },
+    "warning": "Extrémní snížení estrogenu (deprese, bolesti kloubů, kardiovaskulární rizika, osteoporóza rychleji než Anastrozol). Lipidový profil (velmi špatný). Rebound.",
+    "mechanism": "Irreversibilní inhibice aromatázy (CYP19A1), silnější než Anastrozol",
+    "halfLife": "2 dny",
+    "interactions": ["tamoxifen", "testosteron"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 905,
+    "name": "Exemestan",
+    "categoryKey": "pct",
+    "tags": ["AI", "steroidní", "aromatáza", "suicidní"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Suicidní aromatáza inhibitor (steroidní).",
+    "description": "Exemestan (Aromasin) je steroidní suicidní (irreversibilní) aromatáza inhibitor. Deaktivuje aromatázu permanentně (tělo musí syntetizovat novou). Mírně androgenní (DHT derivát). Méně negativní vliv na lipidový profil než non-steroidní AI. Používán v onkologii (rakovina prsu) a PCT.",
+    "effects": ["snížení estrogenu", "mírný androgenní efekt", "menší dopad na lipidy"],
+    "dosage": {
+      "short": "12.5–25mg denně",
+      "long": "12.5–25mg denně (polovina tablety 25mg). Při PCT 12.5mg EOD nebo denně první 2–4 týdny. Kontrolovat estradiol."
+    },
+    "warning": "Suicidní inhibice (nelze rychle zvrátit). Androgenní vedlejší účinky (DHT). Osteoporóza při dlouhodobém užívání. Unavenost, bolesti kloubů.",
+    "mechanism": "Suicidní inhibice aromatázy (irreversibilní), strukturálně podobný androgenům",
+    "halfLife": "27 hodin (ale irreversibilní)",
+    "interactions": ["estrogen", "testosteron"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 906,
+    "name": "Cabergolin",
+    "categoryKey": "pct",
+    "tags": ["prolaktin", "D2 agonista", "19-nor", "libido"],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Dopaminový agonista snižující prolaktin.",
+    "description": "Cabergolin (Dostinex) je dopaminový D2 receptor agonista, který inhibuje sekreci prolaktinu z hypofýzy. Používán při 19-nor steroidech (Nandrolon, Trenbolon), které zvyšují prolaktin (progestinová aktivita). Zlepšuje libido, snižuje retenci vody od prolaktinu, prevence gynekomastie od prolaktinu.",
+    "effects": ["snížení prolaktinu", "zlepšení libida", "prevence gynekomastie (prolaktin)", "snížení vody"],
+    "dosage": {
+      "short": "0.25–0.5mg 2x týdně",
+      "long": "0.25–0.5mg dvakrát týdně (E3.5D). Při vysokém prolaktinu 0.5mg 2x týdně. Dlouhý poločas (týdenní dávkování možné)."
+    },
+    "warning": "Nausea, závratě (ortostatická hypotenze), únava, deprese (dopaminergní), valvulopatie srdečních chlopní (při vysokých dávkách/dlouhodobě), dyskineze, psychóza (vzácně).",
+    "mechanism": "Agonismus D2 receptorů v hypofýze → inhibice sekrece prolaktinu",
+    "halfLife": "63–69 hodin (dlouhý)",
+    "interactions": ["antipsychotika", "metoclopramid", "19-nor steroidy"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 907,
+    "name": "Finasterid",
+    "categoryKey": "pct",
+    "tags": ["DHT", "5-AR", "vlasy", "prostata"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Inhibitor 5-alfa reduktázy typu II.",
+    "description": "Finasterid inhibuje 5-alfa reduktázu typu II (konverze testosteronu na DHT). Používán pro BPH (zvětšená prostata) a androgenní alopecii (vypadávání vlasů). Snížení DHT o 60–70%. Méně účinný pro steroidy (některé používají typ I 5-AR).",
+    "effects": ["snížení DHT", "prevence vypadávání vlasů", "zmenšení prostaty"],
+    "dosage": {
+      "short": "1mg denně (vlasy) nebo 5mg (prostata)",
+      "long": "1mg denně pro vlasy (Propecia), 5mg pro BPH (Proscar). Užívat dlouhodobě (3–6 měsíců pro viditelné efekty)."
+    },
+    "warning": "Post-Finasterid Syndrome (PFS) – persistentní sexuální dysfunkce, deprese, kognitivní potíže (kontroverzní, ale FDA varování). Gynekomastie (zvýšení T→E2). Maskování PSA (marker rakoviny prostaty).",
+    "mechanism": "Inhibice 5α-reduktázy typu II (konverze T→DHT v prostatě a kůži)",
+    "halfLife": "6–8 hodin (ale dlouhodobý efekt na enzym)",
+    "interactions": ["testosteron", "DHT deriváty (neúčinné)"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 908,
+    "name": "Dutasterid",
+    "categoryKey": "pct",
+    "tags": ["DHT", "5-AR", "silný", "vlasy", "prostata"],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Inhibitor 5-alfa reduktázy typu I a II.",
+    "description": "Dutasterid inhibuje oba typy 5-alfa reduktázy (I a II), snížení DHT o 90–95%. Silnější než Finasterid. Používán pro BPH. Efektivnější pro vypadávání vlasů, ale vyšší riziko vedlejších účinků (PFS).",
+    "effects": ["maximální snížení DHT", "prevence vypadávání vlasů", "zmenšení prostaty"],
+    "dosage": {
+      "short": "0.5mg denně",
+      "long": "0.5mg denně jednou denně. Dlouhý poločas (měsíce k návratu DHT)."
+    },
+    "warning": "Vyšší riziko Post-Finasterid Syndrome než Finasterid (permanentní vedlejší účinky). Sexuální dysfunkce, deprese, gynekomastie. Maskování PSA.",
+    "mechanism": "Inhibice 5α-reduktázy typu I a II (téměř úplné snížení DHT)",
+    "halfLife": "5 týdnů (velmi dlouhý)",
+    "interactions": ["testosteron", "DHT deriváty"],
+    "evidenceLevel": "A",
+    "naturalSources": ["syntetický"],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 909,
+    "name": "TUDCA",
+    "categoryKey": "pct",
+    "tags": ["játra", "hepatoprotekce", "žluč", "detox"],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Tauro-ursodeoxycholová kyselina pro ochranu jater.",
+    "description": "TUDCA (Tauroursodeoxycholic acid) je konjugovaná žlučová kyselina s hepatoprotektivními vlastnostmi. Stabilizuje mitochondriální membrány v hepatocytech, snižuje apoptózu, zlepšuje tok žluče (choleretikum). Používán při orálních steroidech (C17-alkylace) pro ochranu jater.",
+    "effects": ["hepatoprotekce", "zlepšení toku žluče", "snížení jaterních enzymů", "antioxidant"],
+    "dosage": {
+      "short": "250–500mg denně",
+      "long": "Prevence: 250–500mg denně během orálních steroidů. Terapeuticky: 1000–1500mg denně při jaterní zátěži. Užívat s jídlem."
+    },
+    "warning": "Bezpečný, ale drahý. Průjem při vysokých dázkách. Teoreticky může interferovat s absorpčně léků (žlučové kyseliny).",
+    "mechanism": "Stabilizace mitochondrií v hepatocytech, anti-apoptotické, choleretické",
+    "halfLife": "6–8 hodin",
+    "interactions": ["orální steroidy (ochrana)", "léky metabolizované v játrech"],
+    "evidenceLevel": "B",
+    "naturalSources": ["žluč medvěda (původní zdroj), syntetický"],
+    "bannedStatus": "legal (doplněk)"
+  },
+  {
+    "id": 910,
+    "name": "NAC (Pro PCT)",
+    "categoryKey": "pct",
+    "tags": ["játra", "glutathion", "antioxidant", "detox"],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Prekurzor glutathionu pro jaterní detoxikaci.",
+    "description": "NAC (N-acetylcystein) je prekurzor L-cysteinu pro syntézu glutathionu (GSH), hlavního intracelulárního antioxidantu v játrech. Používán při paracetamolové intoxikaci a jako hepatoprotektivum během cyklů. Méně účinný než TUDCA pro steroidní hepatotoxicitu, ale levnější.",
+    "effects": ["zvýšení glutathionu", "detoxikace jater", "antioxidant", "mukolytikum"],
+    "dosage": {
+      "short": "600–1200mg denně",
+      "long": "600–1200mg denně během cyklu. Rozděleno do 2–3 dávek. Užívat mezi jídly."
+    },
+    "warning": "Průjem při vysokých dávkách. Interakce s nitroglycerinem (hypotenze). Teoreticky zhoršení astma. TMAO produkce (kardiovaskulární rizika – diskutabilní).",
+    "mechanism": "Prekurzor GSH, konjugace s toxiny (fáze II detoxikace)",
+    "halfLife": "6–8 hodin",
+    "interactions": ["nitroglycerin", "antikoagulancia"],
+    "evidenceLevel": "A",
+    "naturalSources": ["žádné přímé zdroje"],
+    "bannedStatus": "legal"
+  }
+]
