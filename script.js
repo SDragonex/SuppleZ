@@ -1,24 +1,16 @@
-// ==========================================
-// 1. GLOBÁLNÍ PROMĚNNÉ
-// ==========================================
 const cardsGrid = document.getElementById("cards-grid");
 const searchInput = document.getElementById("searchInput");
-
-// Elementy pro Filtry (Modal)
 const filterModal = document.getElementById("filter-modal");
 const modalCategories = document.getElementById("modal-categories");
 const activeFilterBar = document.getElementById("active-filters-bar");
 const activeFilterLabel = document.getElementById("active-filter-label");
 
-// Data a Stav
 let globalData = [];
 let displayedCount = 0;
 const ITEMS_PER_BATCH = 20;
-
 let currentCategory = "Vše";
-let currentSort = "rating"; // 'rating' nebo 'az'
+let currentSort = "rating";
 
-// Mapování kategorií na české názvy pro UI
 const categoryLabels = {
     "health": "Zdraví",
     "performance": "Výkon", 
@@ -31,29 +23,33 @@ const categoryLabels = {
     "pct": "PCT & Ochrana"
 };
 
-// ==========================================
-// 2. NAČTENÍ DATABÁZE (FETCH)
-// ==========================================
-fetch('./database.json')
-    .then(response => {
-        if (!response.ok) throw new Error("Nelze načíst database.json");
-        return response.json();
-    })
-    .then(data => {
-        globalData = data;
-        initFilters();   // Nastaví tlačítka a modal
-        loadMoreCards(); // Načte první karty
-    })
-    .catch(error => {
-        console.error('Chyba:', error);
-        if(cardsGrid) {
-            cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px">Chyba databáze. Zkontroluj JSON soubor.</p>';
-        }
-    });
+const DATA_FILES = [
+    './data/health.json',
+    './data/performance.json',
+    './data/sleep.json',
+    './data/fatloss.json',
+    './data/hormones.json',
+    './data/nootropics.json',
+    './data/experimental.json',
+    './data/steroids.json',
+    './data/pct.json'
+];
 
-// ==========================================
-// 3. NAVIGACE (SPODNÍ LIŠTA)
-// ==========================================
+Promise.all(DATA_FILES.map(url => 
+    fetch(url).then(res => res.json()).catch(() => [])
+))
+.then(results => {
+    globalData = results.flat();
+    initFilters();
+    loadMoreCards();
+})
+.catch(error => {
+    console.error('Chyba:', error);
+    if(cardsGrid) {
+        cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px">Chyba databáze.</p>';
+    }
+});
+
 function switchTab(viewId, navElement) {
     document.querySelectorAll(".view").forEach((el) => {
         el.classList.remove("active");
@@ -73,10 +69,6 @@ function switchTab(viewId, navElement) {
     window.scrollTo(0, 0);
 }
 
-// ==========================================
-// 4. LOGIKA DETAILU (Full Screen & Zpět)
-// ==========================================
-
 window.addEventListener('popstate', (event) => {
     if (document.body.classList.contains('detail-active')) {
         closeDetailView(false);
@@ -93,12 +85,10 @@ function openDetailView(item) {
     if (item.colorType === "yellow") { themeColor = "var(--neon-yellow)"; glowColor = "rgba(255, 234, 0, 0.5)"; }
     if (item.colorType === "red") { themeColor = "var(--neon-red)"; glowColor = "rgba(255, 0, 60, 0.5)"; }
 
-    // Texty
     const titleEl = document.getElementById("detail-main-title");
     titleEl.innerText = item.name;
     titleEl.style.color = themeColor;
 
-    // Hvězdy
     const starContainer = document.getElementById("detail-stars-hero");
     let r = Math.round(item.rating);
     if (r > 5) r = 5; if (r < 0) r = 0;
@@ -109,7 +99,6 @@ function openDetailView(item) {
     starContainer.style.setProperty('--glow-color', glowColor);
     document.querySelector(".detail-hero").style.setProperty("--glow-color", glowColor);
 
-    // Kategorie - používáme categoryKey a mapujeme na český název
     const categoryBox = document.getElementById("detail-type-text");
     if(categoryBox) {
         const catKey = item.categoryKey || item.category || "unknown";
@@ -120,7 +109,6 @@ function openDetailView(item) {
     }
     document.documentElement.style.setProperty('--list-bullet-color', themeColor);
 
-    // Obsah - základní pole
     const shortDoseEl = document.getElementById("detail-dose-short");
     if(shortDoseEl) shortDoseEl.innerText = item.dosage?.short || "Viz popis";
 
@@ -136,7 +124,6 @@ function openDetailView(item) {
         benefitsContainer.innerText = item.effects || "Žádné specifické efekty.";
     }
 
-    // Dávkování - nová struktura
     const dosageLongEl = document.getElementById("detail-dosage-long");
     if (item.dosage?.long) {
         dosageLongEl.innerText = item.dosage.long;
@@ -150,21 +137,18 @@ function openDetailView(item) {
 
     document.getElementById("detail-warning-long").innerText = item.warning || "Žádné specifické varování.";
 
-    // NOVÁ POLE - Mechanismus
     const mechanismEl = document.getElementById("detail-mechanism");
     if(mechanismEl) {
         mechanismEl.innerText = item.mechanism || "Mechanismus účinku není detailně popsán.";
         mechanismEl.style.color = themeColor;
     }
 
-    // NOVÁ POLE - Poločas
     const halflifeEl = document.getElementById("detail-halflife");
     if(halflifeEl) {
         halflifeEl.innerText = item.halfLife || "N/A";
         halflifeEl.style.color = themeColor;
     }
 
-    // NOVÁ POLE - Evidence Level
     const evidenceEl = document.getElementById("detail-evidence");
     if(evidenceEl) {
         const evidence = item.evidenceLevel || "C";
@@ -176,7 +160,6 @@ function openDetailView(item) {
         evidenceEl.style.color = themeColor;
     }
 
-    // NOVÁ POLE - Legal Status
     const legalEl = document.getElementById("detail-legal");
     if(legalEl) {
         const status = item.bannedStatus || "unknown";
@@ -191,7 +174,6 @@ function openDetailView(item) {
         legalEl.style.color = themeColor;
     }
 
-    // NOVÁ POLE - Interakce
     const interactionsSection = document.getElementById("interactions-section");
     const interactionsList = document.getElementById("detail-interactions");
     if(interactionsSection && interactionsList) {
@@ -205,7 +187,6 @@ function openDetailView(item) {
         }
     }
 
-    // NOVÁ POLE - Přírodní zdroje
     const sourcesSection = document.getElementById("sources-section");
     const sourcesList = document.getElementById("detail-sources");
     if(sourcesSection && sourcesList) {
@@ -219,7 +200,6 @@ function openDetailView(item) {
         }
     }
 
-    // Zobrazení
     document.getElementById("view-wiki").classList.remove("active");
     document.getElementById("view-wiki").classList.add("hidden");
     document.getElementById("view-detail").classList.remove("hidden");
@@ -240,12 +220,7 @@ function closeDetailView(goBack = true) {
     document.body.classList.remove("detail-active");
 }
 
-// ==========================================
-// 5. FILTRY (MODAL & LOGIKA)
-// ==========================================
-
 function initFilters() {
-    // 1. Otevírání Modalu
     const openBtn = document.getElementById("open-filter-btn");
     if(openBtn) {
         openBtn.onclick = () => {
@@ -254,7 +229,6 @@ function initFilters() {
         };
     }
 
-    // 2. Zavírání Modalu
     const closeModal = () => {
         filterModal.classList.remove("open");
         setTimeout(() => filterModal.classList.add("hidden"), 300);
@@ -265,11 +239,8 @@ function initFilters() {
     if(closeBtn) closeBtn.onclick = closeModal;
     if(applyBtn) applyBtn.onclick = closeModal;
 
-    // 3. Generování kategorií z dat - používáme categoryKey
     if(modalCategories) {
-        // Získáme unikátní categoryKey z dat
         const categoriesKeys = [...new Set(globalData.map(item => item.categoryKey || item.category))].filter(Boolean);
-        // Seřadíme podle definovaného pořadí
         const orderedCategories = ["health", "performance", "sleep", "fatloss", "hormones", "nootropics", "experimental", "steroids", "pct"];
         const sortedKeys = categoriesKeys.sort((a, b) => {
             const idxA = orderedCategories.indexOf(a);
@@ -281,19 +252,17 @@ function initFilters() {
         
         modalCategories.innerHTML = "";
         
-        // Tlačítko "Vše"
         const allBtn = document.createElement("button");
         allBtn.className = "cat-select-btn active";
         allBtn.innerText = "Vše";
         allBtn.onclick = () => selectCategory("Vše", allBtn);
         modalCategories.appendChild(allBtn);
         
-        // Tlačítka pro každou kategorii
         sortedKeys.forEach(catKey => {
             const btn = document.createElement("button");
             btn.className = "cat-select-btn";
             btn.innerText = categoryLabels[catKey] || catKey;
-            btn.dataset.key = catKey; // Uložíme klíč pro pozdější použití
+            btn.dataset.key = catKey;
             
             btn.onclick = () => selectCategory(catKey, btn);
             modalCategories.appendChild(btn);
@@ -302,9 +271,7 @@ function initFilters() {
 }
 
 function selectCategory(catKey, btnElement) {
-    // Odstranit aktivní ze všech
     document.querySelectorAll(".cat-select-btn").forEach(b => b.classList.remove("active"));
-    // Přidat aktivní na kliknuté
     btnElement.classList.add("active");
     
     currentCategory = catKey;
@@ -314,7 +281,6 @@ function selectCategory(catKey, btnElement) {
     cardsGrid.innerHTML = "";
     loadMoreCards();
     
-    // Zavřít modal
     const filterModal = document.getElementById("filter-modal");
     if(filterModal) {
         filterModal.classList.remove("open");
@@ -322,12 +288,10 @@ function selectCategory(catKey, btnElement) {
     }
 }
 
-// Funkce pro řazení (volaná z HTML tlačítek)
 function setSort(type) {
     currentSort = type;
     document.querySelectorAll(".sort-btn").forEach(b => b.classList.remove("active"));
     
-    // Najít tlačítka a označit aktivní
     const btns = document.querySelectorAll(".sort-btn");
     if(btns.length > 0) {
         if(type === 'rating') btns[0].classList.add("active");
@@ -365,14 +329,9 @@ function resetFilters() {
     loadMoreCards();
 }
 
-// ==========================================
-// 6. RENDER KARET & NAČÍTÁNÍ
-// ==========================================
-
 function loadMoreCards() {
     const term = searchInput ? searchInput.value.toLowerCase() : "";
     
-    // 1. Filtrace - používáme categoryKey
     let filteredData = globalData.filter(item => {
         const matchesSearch = item.name.toLowerCase().includes(term);
         const itemCat = item.categoryKey || item.category;
@@ -380,14 +339,12 @@ function loadMoreCards() {
         return matchesSearch && matchesCategory;
     });
 
-    // 2. Řazení
     if (currentSort === 'rating') {
         filteredData.sort((a, b) => b.rating - a.rating);
     } else if (currentSort === 'az') {
         filteredData.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    // 3. Lazy Load
     const nextBatch = filteredData.slice(displayedCount, displayedCount + ITEMS_PER_BATCH);
     
     if (nextBatch.length > 0) {
@@ -431,7 +388,6 @@ function renderCards(dataToRender, append = false) {
     });
 }
 
-// Event Listenery
 window.addEventListener('scroll', () => {
     if (document.getElementById('view-wiki') && document.getElementById('view-wiki').classList.contains('hidden')) return;
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
@@ -447,9 +403,6 @@ if(searchInput) {
     });
 }
 
-// ==========================================
-// 7. DENÍK & NASTAVENÍ (NEMĚNNÉ)
-// ==========================================
 let myDiary = JSON.parse(localStorage.getItem("supplez_diary_v2")) || [];
 
 function addDiaryEntry(moodColor) {
@@ -588,5 +541,4 @@ function clearAllData() {
     }
 }
 
-// Inicializace
 renderDiary();
