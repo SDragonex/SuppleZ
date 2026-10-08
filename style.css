@@ -746,3 +746,55 @@ body.detail-active .bottom-nav {
 body.detail-active {
 	padding-bottom: 0;
 }
+
+/* Grid pro 3 sloupce */
+.stats-grid.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Info grid pro mechanismus */
+.info-grid {
+    background: rgba(0, 243, 255, 0.05);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.info-grid h3 {
+    color: var(--ui-accent);
+    border: none;
+    margin-bottom: 10px;
+}
+
+/* Responzivita pro mobil */
+@media (max-width: 480px) {
+    .stats-grid.three-cols {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .stat-box {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: auto;
+        padding: 12px;
+    }
+    
+    .stat-box .material-icons {
+        font-size: 1.2rem;
+    }
+}
