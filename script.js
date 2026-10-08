@@ -18,6 +18,19 @@ const ITEMS_PER_BATCH = 20;
 let currentCategory = "Vše";
 let currentSort = "rating"; // 'rating' nebo 'az'
 
+// Mapování kategorií na české názvy pro UI
+const categoryLabels = {
+    "health": "Zdraví",
+    "performance": "Výkon", 
+    "sleep": "Spánek",
+    "fatloss": "Redukce",
+    "hormones": "Hormony",
+    "nootropics": "Nootropika",
+    "experimental": "Experimentální",
+    "steroids": "Steroidy",
+    "pct": "PCT & Ochrana"
+};
+
 // ==========================================
 // 2. NAČTENÍ DATABÁZE (FETCH)
 // ==========================================
@@ -96,19 +109,20 @@ function openDetailView(item) {
     starContainer.style.setProperty('--glow-color', glowColor);
     document.querySelector(".detail-hero").style.setProperty("--glow-color", glowColor);
 
-    // Kategorie
+    // Kategorie - používáme categoryKey a mapujeme na český název
     const categoryBox = document.getElementById("detail-type-text");
     if(categoryBox) {
-        categoryBox.innerText = item.category;
+        const catKey = item.categoryKey || item.category || "unknown";
+        categoryBox.innerText = categoryLabels[catKey] || catKey;
         categoryBox.style.color = themeColor;
         categoryBox.style.fontWeight = "bold";
         categoryBox.style.textTransform = "uppercase";
     }
     document.documentElement.style.setProperty('--list-bullet-color', themeColor);
 
-    // Obsah
+    // Obsah - základní pole
     const shortDoseEl = document.getElementById("detail-dose-short");
-    if(shortDoseEl) shortDoseEl.innerText = item.dosageShort || "Viz popis";
+    if(shortDoseEl) shortDoseEl.innerText = item.dosage?.short || "Viz popis";
 
     document.getElementById("detail-full-desc").innerText = item.description || item.fullDesc || "Popis chybí.";
 
@@ -122,8 +136,88 @@ function openDetailView(item) {
         benefitsContainer.innerText = item.effects || "Žádné specifické efekty.";
     }
 
-    document.getElementById("detail-dosage-long").innerText = item.dosageLong || item.dosage || "Neuvedeno";
-    document.getElementById("detail-warning-long").innerText = item.warning || "Žádné";
+    // Dávkování - nová struktura
+    const dosageLongEl = document.getElementById("detail-dosage-long");
+    if (item.dosage?.long) {
+        dosageLongEl.innerText = item.dosage.long;
+    } else if (item.dosageLong) {
+        dosageLongEl.innerText = item.dosageLong;
+    } else if (item.dosage) {
+        dosageLongEl.innerText = item.dosage;
+    } else {
+        dosageLongEl.innerText = "Neuvedeno";
+    }
+
+    document.getElementById("detail-warning-long").innerText = item.warning || "Žádné specifické varování.";
+
+    // NOVÁ POLE - Mechanismus
+    const mechanismEl = document.getElementById("detail-mechanism");
+    if(mechanismEl) {
+        mechanismEl.innerText = item.mechanism || "Mechanismus účinku není detailně popsán.";
+        mechanismEl.style.color = themeColor;
+    }
+
+    // NOVÁ POLE - Poločas
+    const halflifeEl = document.getElementById("detail-halflife");
+    if(halflifeEl) {
+        halflifeEl.innerText = item.halfLife || "N/A";
+        halflifeEl.style.color = themeColor;
+    }
+
+    // NOVÁ POLE - Evidence Level
+    const evidenceEl = document.getElementById("detail-evidence");
+    if(evidenceEl) {
+        const evidence = item.evidenceLevel || "C";
+        let evidenceText = evidence;
+        if(evidence === "A") evidenceText = "A - Silné důkazy";
+        if(evidence === "B") evidenceText = "B - Střední důkazy";
+        if(evidence === "C") evidenceText = "C - Omezené důkazy";
+        evidenceEl.innerText = evidenceText;
+        evidenceEl.style.color = themeColor;
+    }
+
+    // NOVÁ POLE - Legal Status
+    const legalEl = document.getElementById("detail-legal");
+    if(legalEl) {
+        const status = item.bannedStatus || "unknown";
+        const statusMap = {
+            "legal": "Legální",
+            "controlled": "Kontrolované",
+            "prescription-only": "Na předpis",
+            "banned-sport": "Zakázáno ve sportu",
+            "banned": "Nelegální"
+        };
+        legalEl.innerText = statusMap[status] || status;
+        legalEl.style.color = themeColor;
+    }
+
+    // NOVÁ POLE - Interakce
+    const interactionsSection = document.getElementById("interactions-section");
+    const interactionsList = document.getElementById("detail-interactions");
+    if(interactionsSection && interactionsList) {
+        if(Array.isArray(item.interactions) && item.interactions.length > 0) {
+            interactionsSection.style.display = "block";
+            let htmlList = '';
+            item.interactions.forEach(inter => htmlList += `<li style="--ui-accent: ${themeColor}">${inter}</li>`);
+            interactionsList.innerHTML = htmlList;
+        } else {
+            interactionsSection.style.display = "none";
+        }
+    }
+
+    // NOVÁ POLE - Přírodní zdroje
+    const sourcesSection = document.getElementById("sources-section");
+    const sourcesList = document.getElementById("detail-sources");
+    if(sourcesSection && sourcesList) {
+        if(Array.isArray(item.naturalSources) && item.naturalSources.length > 0) {
+            sourcesSection.style.display = "block";
+            let htmlList = '';
+            item.naturalSources.forEach(src => htmlList += `<li style="--ui-accent: ${themeColor}">${src}</li>`);
+            sourcesList.innerHTML = htmlList;
+        } else {
+            sourcesSection.style.display = "none";
+        }
+    }
 
     // Zobrazení
     document.getElementById("view-wiki").classList.remove("active");
@@ -171,30 +265,60 @@ function initFilters() {
     if(closeBtn) closeBtn.onclick = closeModal;
     if(applyBtn) applyBtn.onclick = closeModal;
 
-    // 3. Generování kategorií
+    // 3. Generování kategorií z dat - používáme categoryKey
     if(modalCategories) {
-        const categories = ["Vše", ...new Set(globalData.map(item => item.category))];
+        // Získáme unikátní categoryKey z dat
+        const categoriesKeys = [...new Set(globalData.map(item => item.categoryKey || item.category))].filter(Boolean);
+        // Seřadíme podle definovaného pořadí
+        const orderedCategories = ["health", "performance", "sleep", "fatloss", "hormones", "nootropics", "experimental", "steroids", "pct"];
+        const sortedKeys = categoriesKeys.sort((a, b) => {
+            const idxA = orderedCategories.indexOf(a);
+            const idxB = orderedCategories.indexOf(b);
+            if(idxA === -1) return 1;
+            if(idxB === -1) return -1;
+            return idxA - idxB;
+        });
+        
         modalCategories.innerHTML = "";
         
-        categories.forEach(cat => {
+        // Tlačítko "Vše"
+        const allBtn = document.createElement("button");
+        allBtn.className = "cat-select-btn active";
+        allBtn.innerText = "Vše";
+        allBtn.onclick = () => selectCategory("Vše", allBtn);
+        modalCategories.appendChild(allBtn);
+        
+        // Tlačítka pro každou kategorii
+        sortedKeys.forEach(catKey => {
             const btn = document.createElement("button");
             btn.className = "cat-select-btn";
-            if(cat === "Vše") btn.classList.add("active");
-            btn.innerText = cat;
+            btn.innerText = categoryLabels[catKey] || catKey;
+            btn.dataset.key = catKey; // Uložíme klíč pro pozdější použití
             
-            btn.onclick = () => {
-                document.querySelectorAll(".cat-select-btn").forEach(b => b.classList.remove("active"));
-                btn.classList.add("active");
-                
-                currentCategory = cat;
-                updateActiveFilterUI();
-                
-                displayedCount = 0;
-                cardsGrid.innerHTML = "";
-                loadMoreCards();
-            };
+            btn.onclick = () => selectCategory(catKey, btn);
             modalCategories.appendChild(btn);
         });
+    }
+}
+
+function selectCategory(catKey, btnElement) {
+    // Odstranit aktivní ze všech
+    document.querySelectorAll(".cat-select-btn").forEach(b => b.classList.remove("active"));
+    // Přidat aktivní na kliknuté
+    btnElement.classList.add("active");
+    
+    currentCategory = catKey;
+    updateActiveFilterUI();
+    
+    displayedCount = 0;
+    cardsGrid.innerHTML = "";
+    loadMoreCards();
+    
+    // Zavřít modal
+    const filterModal = document.getElementById("filter-modal");
+    if(filterModal) {
+        filterModal.classList.remove("open");
+        setTimeout(() => filterModal.classList.add("hidden"), 300);
     }
 }
 
@@ -222,7 +346,8 @@ function updateActiveFilterUI() {
         activeFilterBar.classList.add("hidden");
     } else {
         activeFilterBar.classList.remove("hidden");
-        if(activeFilterLabel) activeFilterLabel.innerText = `${currentCategory}`;
+        const label = categoryLabels[currentCategory] || currentCategory;
+        if(activeFilterLabel) activeFilterLabel.innerText = label;
     }
 }
 
@@ -247,10 +372,11 @@ function resetFilters() {
 function loadMoreCards() {
     const term = searchInput ? searchInput.value.toLowerCase() : "";
     
-    // 1. Filtrace
+    // 1. Filtrace - používáme categoryKey
     let filteredData = globalData.filter(item => {
         const matchesSearch = item.name.toLowerCase().includes(term);
-        const matchesCategory = currentCategory === "Vše" || item.category === currentCategory;
+        const itemCat = item.categoryKey || item.category;
+        const matchesCategory = currentCategory === "Vše" || itemCat === currentCategory;
         return matchesSearch && matchesCategory;
     });
 
@@ -289,10 +415,11 @@ function renderCards(dataToRender, append = false) {
         if (item.colorType === "red") rateColor = "var(--neon-red)";
 
         const r = Math.round(item.rating || 0);
+        const catLabel = categoryLabels[item.categoryKey || item.category] || (item.categoryKey || item.category);
 
         card.innerHTML = `
             <div class="card-header">
-                <span class="card-category">${item.category}</span>
+                <span class="card-category">${catLabel}</span>
                 <div class="card-rating" style="color:${rateColor}; border-color:${rateColor}">
                     ${r}/5
                 </div>
