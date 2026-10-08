@@ -1,334 +1,297 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>SuppleZ</title>
-    <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#00f3ff" />
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3063/3063212.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <style>
-:root {
-    --bg-color: #000000;
-    --card-bg: #0a0a0a;
-    --input-bg: #111;
-    --text-main: #e0e0e0;
-    --text-dim: #888;
-    --neon-green: #00ff41;
-    --neon-yellow: #ffea00;
-    --neon-red: #ff003c;
-    --ui-accent: #00f3ff;
-    --nav-height: 65px;
-}
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta name="google-site-verification" content="RpU0YnihxO-e2ZrodRtZ7zSEdZaUQjjRcVXY1FUNCU8" />
+		<title>SuppleZ</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="manifest" href="manifest.json" />
+		<meta name="theme-color" content="#00f3ff" />
+		<link
+			rel="apple-touch-icon"
+			href="https://cdn-icons-png.flaticon.com/512/3063/3063212.png"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<div class="logo">SUPPLE<span class="highlight">Z</span></div>
+		</header>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+		<main id="main-content">
+			<section id="view-wiki" class="view active">
+				<div class="search-container">
+					<div class="search-bar-wrapper">
+						<input type="text" id="searchInput" placeholder="Hledat látku..." />
+					</div>
+					<button id="open-filter-btn" class="filter-toggle-btn">
+						<span class="material-icons">tune</span>
+					</button>
+				</div>
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    font-family: "Roboto", sans-serif;
-    padding-bottom: calc(var(--nav-height) + 20px);
-}
+				<div id="active-filters-bar" class="hidden">
+					<span id="active-filter-label">Vše</span>
+					<button onclick="resetFilters()" class="clear-filter-btn">
+						<span class="material-icons">close</span>
+					</button>
+				</div>
 
-header {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #222;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    backdrop-filter: blur(5px);
-}
+				<div id="filter-modal" class="filter-overlay hidden">
+					<div class="filter-content">
+						<div class="filter-header">
+							<h3>Filtrovat & Řadit</h3>
+							<button id="close-filter-btn" class="close-icon">
+								<span class="material-icons">close</span>
+							</button>
+						</div>
 
-.logo {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #fff;
-}
+						<div class="filter-section">
+							<h4>Řadit podle</h4>
+							<div class="sort-options">
+								<button class="sort-btn active" onclick="setSort('rating')">
+									Nejlépe hodnocené
+								</button>
+								<button class="sort-btn" onclick="setSort('az')">A - Z</button>
+							</div>
+						</div>
 
-.highlight {
-    color: var(--ui-accent);
-    text-shadow: 0 0 10px var(--ui-accent);
-}
+						<div class="filter-section">
+							<h4>Kategorie</h4>
+							<div id="modal-categories" class="categories-grid"></div>
+						</div>
 
-.section-title {
-    font-family: "Rajdhani", sans-serif;
-    margin-bottom: 15px;
-    color: var(--ui-accent);
-    border-left: 3px solid var(--ui-accent);
-    padding-left: 10px;
-}
+						<button id="apply-filters-btn" class="btn-full-green">
+							Zobrazit výsledky
+						</button>
+					</div>
+				</div>
 
-input, textarea, select {
-    width: 100%;
-    background: var(--input-bg);
-    border: 1px solid #333;
-    color: #fff;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    font-family: inherit;
-    outline: none;
-}
+				<div id="cards-grid" class="cards-grid"></div>
+			</section>
 
-input:focus, textarea:focus, select:focus {
-    border-color: var(--ui-accent);
-}
+			<section id="view-detail" class="view hidden">
+				<div class="detail-nav">
+					<button onclick="closeDetailView()" class="back-btn">
+						<span class="material-icons">arrow_back</span> Zpět
+					</button>
+				</div>
 
-.row {
-    display: flex;
-    gap: 10px;
-}
+				<div class="detail-hero">
+					<div id="detail-stars-hero" class="hero-stars">★★★★★</div>
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
-    padding-bottom: 20px;
-}
+					<div class="detail-header-info">
+						<h1 id="detail-main-title">Název Látky</h1>
+					</div>
+				</div>
 
-@keyframes slideUpFade {
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
+				<div class="detail-body">
+					<div class="stats-grid">
+						<div class="stat-box">
+							<span class="material-icons">science</span>
+							<span id="detail-type-text">Typ</span>
+						</div>
+						<div class="stat-box">
+							<span class="material-icons">medication</span>
+							<span id="detail-dose-short">Dávka</span>
+						</div>
+					</div>
 
-.card {
-    background: rgba(15, 15, 15, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 16px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    animation: slideUpFade 0.5s forwards;
-}
+					<div class="stats-grid three-cols">
+						<div class="stat-box">
+							<span class="material-icons">timer</span>
+							<span class="stat-label">Poločas</span>
+							<span id="detail-halflife" class="stat-value">N/A</span>
+						</div>
+						<div class="stat-box">
+							<span class="material-icons">verified</span>
+							<span class="stat-label">Důkazy</span>
+							<span id="detail-evidence" class="stat-value">C</span>
+						</div>
+						<div class="stat-box">
+							<span class="material-icons">gavel</span>
+							<span class="stat-label">Status</span>
+							<span id="detail-legal" class="stat-value">Legální</span>
+						</div>
+					</div>
 
-.card:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(25, 25, 25, 0.8);
-}
+					<div class="detail-section">
+						<h3><span class="material-icons icon-inline">info</span> Popis</h3>
+						<p id="detail-full-desc">...</p>
+					</div>
 
-.card.green:hover {
-    box-shadow: 0 10px 30px -10px rgba(0, 255, 65, 0.3);
-    border-top: 1px solid var(--neon-green);
-}
+					<div class="detail-section info-grid">
+						<h3><span class="material-icons icon-inline">biotech</span> Mechanismus účinku</h3>
+						<p id="detail-mechanism">...</p>
+					</div>
 
-.card.yellow:hover {
-    box-shadow: 0 10px 30px -10px rgba(255, 234, 0, 0.3);
-    border-top: 1px solid var(--neon-yellow);
-}
+					<div class="detail-section">
+						<h3><span class="material-icons icon-inline">bolt</span> Efekty</h3>
+						<p id="detail-benefits">...</p>
+					</div>
 
-.card.red:hover {
-    box-shadow: 0 10px 30px -10px rgba(255, 0, 60, 0.3);
-    border-top: 1px solid var(--neon-red);
-}
+					<div class="detail-section">
+						<h3>
+							<span class="material-icons icon-inline">scale</span> Dávkování
+						</h3>
+						<p id="detail-dosage-long">...</p>
+					</div>
 
-.card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    opacity: 0.7;
-}
+					<div class="detail-section" id="interactions-section" style="display: none;">
+						<h3><span class="material-icons icon-inline">medication_liquid</span> Interakce</h3>
+						<ul id="detail-interactions" class="effects-list"></ul>
+					</div>
 
-.card.green::after {
-    background: var(--neon-green);
-    box-shadow: 0 0 10px var(--neon-green);
-}
+					<div class="detail-section" id="sources-section" style="display: none;">
+						<h3><span class="material-icons icon-inline">spa</span> Přírodní zdroje</h3>
+						<ul id="detail-sources" class="effects-list"></ul>
+					</div>
 
-.card.yellow::after {
-    background: var(--neon-yellow);
-    box-shadow: 0 0 10px var(--neon-yellow);
-}
+					<div class="detail-section warning-box">
+						<h3>
+							<span class="material-icons icon-inline">warning</span> Varování
+						</h3>
+						<p id="detail-warning-long">...</p>
+					</div>
+				</div>
+			</section>
 
-.card.red::after {
-    background: var(--neon-red);
-    box-shadow: 0 0 10px var(--neon-red);
-}
+			<section id="view-diary" class="view hidden">
+				<h2 class="section-title">Deník & Cykly</h2>
 
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
+				<div class="diary-input-box">
+					<div class="row">
+						<input
+							type="text"
+							id="diary-name"
+							placeholder="Látka (např. Nakopávač)"
+							style="flex: 2"
+						/>
+						<input
+							type="text"
+							id="diary-dose"
+							placeholder="Dávka"
+							style="flex: 1"
+						/>
+					</div>
+					<input
+						type="text"
+						id="diary-cycle"
+						placeholder="Název cyklu / Tag (např. Objem 2024)"
+					/>
+					<textarea
+						id="diary-note"
+						placeholder="Poznámky, pocity, pumpa..."
+					></textarea>
 
-.card-rating {
-    font-size: 0.85rem;
-    font-weight: 800;
-    padding: 4px 8px;
-    border-radius: 6px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
-    border: 1px solid #333;
-}
+					<div class="diary-buttons">
+						<button onclick="addDiaryEntry('green')" class="btn-green">
+							Super
+						</button>
+						<button onclick="addDiaryEntry('yellow')" class="btn-yellow">
+							Ujde to
+						</button>
+						<button onclick="addDiaryEntry('red')" class="btn-red">
+							Špatné
+						</button>
+					</div>
+				</div>
 
-.card h3 {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #fff;
-    line-height: 1.2;
-}
+				<div class="filter-box">
+					<label
+						><span class="material-icons small-icon">filter_list</span>
+						Filtrovat cyklus:</label
+					>
+					<select id="cycle-filter" onchange="renderDiary()">
+						<option value="all">Zobrazit vše</option>
+					</select>
+				</div>
 
-.card-category {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #aaa;
-    margin-bottom: 8px;
-    display: block;
-}
+				<div id="diary-list"></div>
+			</section>
 
-.card-desc {
-    font-size: 0.85rem;
-    color: #888;
-    line-height: 1.4;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+			<section id="view-settings" class="view hidden">
+				<h2 class="section-title">Nastavení</h2>
 
-.diary-input-box {
-    background: #080808;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #222;
-    margin-bottom: 20px;
-}
+				<div class="settings-card">
+					<h3><span class="material-icons">save</span> Záloha Dat</h3>
+					<p>Ulož si svá data do souboru nebo je nahraj zpět.</p>
+					<div class="settings-btns">
+						<button onclick="exportData()" class="btn-outline">
+							Stáhnout zálohu
+						</button>
+						<label for="import-file" class="btn-outline">Nahrát zálohu</label>
+						<input
+							type="file"
+							id="import-file"
+							style="display: none"
+							onchange="importData(this)"
+						/>
+					</div>
+				</div>
 
-.diary-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
-}
+				<div class="settings-card">
+					<h3>Info</h3>
+					<p>Verze: <strong>3.0</strong></p>
+					<p>
+						Dev:
+						<a
+							href="https://github.com/SDragonex"
+							target="_blank"
+							class="link-blue"
+							>SDragonex</a
+						>
+					</p>
+				</div>
 
-.diary-buttons button {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-}
+				<div class="settings-card danger-zone">
+					<h3>Reset</h3>
+					<button onclick="clearAllData()" class="btn-outline-red">
+						Smazat všechna data
+					</button>
+				</div>
+			</section>
+		</main>
 
-.btn-green {
-    background: var(--neon-green);
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
-}
+		<nav class="bottom-nav">
+			<button class="nav-item active" onclick="switchTab('view-wiki', this)">
+				<span class="material-icons">science</span><span>Wiki</span>
+			</button>
+			<button class="nav-item" onclick="switchTab('view-diary', this)">
+				<span class="material-icons">edit_note</span><span>Deník</span>
+			</button>
+			<button class="nav-item" onclick="switchTab('view-settings', this)">
+				<span class="material-icons">settings</span><span>Nastavení</span>
+			</button>
+		</nav>
 
-.btn-yellow {
-    background: var(--neon-yellow);
-    box-shadow: 0 0 10px rgba(255, 234, 0, 0.2);
-}
-
-.btn-red {
-    background: var(--neon-red);
-    box-shadow: 0 0 10px rgba(255, 0, 60, 0.2);
-}
-
-.filter-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    color: #888;
-    font-size: 0.9rem;
-}
-
-.filter-box select {
-    margin-bottom: 0;
-    padding: 8px;
-    width: auto;
-    flex: 1;
-}
-
-.diary-entry {
-    background: #0f0f0f;
-    border-left: 4px solid #555;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 0 8px 8px 0;
-    position: relative;
-}
-
-.diary-entry.green {
-    border-left-color: var(--neon-green);
-}
-
-.diary-entry.yellow {
-    border-left-color: var(--neon-yellow);
-}
-
-.diary-entry.red {
-    border-left-color: var(--neon-red);
-}
-
-.entry-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 5px;
-}
-
-.entry-name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #fff;
-}
-
-.entry-cycle {
-    font-size: 0.7rem;
-    background: #222;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #aaa;
-    text-transform: uppercase;
-    margin-left: 5px;
-}
-
-.entry-meta {
-    font-size: 0.75rem;
-    color: #666;
-}
-
-.entry-note {
-    font-style: italic;
-    color: #ccc;
-    margin-top: 5px;
-    font-size: 0.9rem;
-}
-
-.delete-btn {
-    background: none;
-    border: none;
-    color: #444;
-    cursor: pointer;
-    padding: 5px;
-    position:
+		<script src="script.js"></script>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker
+						.register("./sw.js")
+						.then((registration) => {
+							console.log(
+								"Service Worker registrován s rozsahem:",
+								registration.scope
+							);
+						})
+						.catch((err) => {
+							console.log("Registrace Service Workeru selhala:", err);
+						});
+				});
+			}
+		</script>
+	</body>
+</html>
