@@ -1,188 +1,136 @@
-# 🧠 SuppleZ
+# 🧠 SuppleZ v4.0
 
-**SuppleZ** je minimalistická webová aplikace (PWA) zaměřená na **suplementy, nootropika a biohacking**.
-Cílem projektu je nabídnout **čisté, rychlé a přehledné rozhraní** bez reklam, sledování a zbytečných informací.
+**SuppleZ** je minimalistická progresivní webová aplikace (PWA) zaměřená na **suplementy, nootropika, peptidy a biohacking**. 
+Cílem je nabídnout čisté, rychlé a přehledné rozhraní bez reklam, sledování a zbytečných informací.
 
-Aplikace funguje **offline**, nevyžaduje registraci a **ukládá veškerá data pouze lokálně** do prohlížeče uživatele.
-Žádná data nejsou odesílána na servery – **100% soukromí**.
+Aplikace funguje **offline**, nevyžaduje registraci a ukládá veškerá data pouze lokálně do prohlížeče uživatele.
 
-> Built for performance. Designed for knowledge. 💊
-
----
-
-## 🎯 Proč SuppleZ?
-
-* **Sportovci** – sledování suplementace během tréninkových cyklů
-* **Biohackeři** – experimentování s nootropiky, adaptogeny a dalšími látkami
-* **Běžní uživatelé** – bezpečné a informované rozhodování o doplňcích stravy
+> Built for performance. Designed for knowledge. 🔬
 
 ---
 
 ## ⭐ Klíčové funkce
 
 ### 📚 Wiki – Databáze suplementů
-
-* 🔍 **Chytré vyhledávání** – okamžité filtrování podle názvu (včetně diakritiky a synonym)
-* 🧩 **Filtrování & řazení** – kategorie (Zdraví, Síla, Spánek, Nootropika, Adaptogeny…) + řazení (A–Z, Z–A, hodnocení, nejnovější)
-* 📄 **Detail látky (fullscreen)**:
-
-  * hodnocení (1–5 ⭐)
-  * dávkování (stručné i detailní)
-  * účinky (benefity)
-  * varování a rizika
-* 🎨 **Vizuální indikátory bezpečnosti**:
-
-  * 🟢 zelená – běžně bezpečné
-  * 🟡 žlutá – vyžaduje opatrnost
-  * 🔴 červená – hardcore / experimentální
-* ⭐ **Oblíbené látky** – rychlý přístup k často používaným suplementům
-
----
+- **9 kategorií**: Zdraví, Výkon, Spánek, Redukce, Hormony, Nootropika, Experimentální, Steroidy, PCT
+- **Rozšířené informace**: Mechanismus účinku, poločas, interakce, úroveň vědeckých důkazů, legální status
+- **Bezpečnostní indikátory**: 🟢 Zelená (bezpečné), 🟡 Žlutá (opatrnost), 🔴 Červená (vysoké riziko)
+- **Chytré vyhledávání** s diakritikou a synonymy
+- **Filtrování & řazení** podle kategorií a hodnocení
 
 ### 📝 Osobní deník
+- Záznamy užití s dávkou, časem a subjektivním hodnocením
+- Cyklování suplementace (např. "Objem 2024")
+- Barevné hodnocení efektu (🟢 Super / 🟡 Ujde / 🔴 Špatné)
+- Export/import dat (JSON)
 
-* 📅 **Záznam užití** – látka, dávka, čas, subjektivní pocity
-* 🎭 **Barevné hodnocení efektu**:
-
-  * 🟢 super
-  * 🟡 ujde
-  * 🔴 špatné
-* 🔁 **Cyklování** – přiřazení záznamů ke konkrétním cyklům (např. „Objem 2024“)
-* 📊 **Statistiky**:
-
-  * počet dnů užívání
-  * průměrné hodnocení
-  * základní trendy účinků
-* 📤 **Export dat** – CSV pro Excel / Google Sheets
-
----
-
-### ⚙️ Nastavení & data
-
-* 🔐 **Import / Export** – záloha deníku do JSON
-* 🌙 **Dark Mode** – cyberpunk / sci-fi styl (glassmorphism, neon glow)
-* 🌍 **Vícejazyčnost** – aktuálně čeština, plánována angličtina
-* 🔄 **Aktualizace databáze** – nové látky se stáhnou při připojení k internetu
+### ⚙️ Nastavení & PWA
+- Dark mode (cyberpunk glassmorphism design)
+- Offline režim s aktualizací databáze
+- Záloha dat
+- Instalace jako nativní aplikace (Android/Desktop)
 
 ---
 
 ## 🧩 Technologie
 
-| Technologie           | Popis                                             |
-| --------------------- | ------------------------------------------------- |
-| **HTML5**             | Sémantická struktura, přístupnost (ARIA)          |
-| **CSS3**              | Flexbox, Grid, CSS proměnné, animace, glass efekt |
-| **Vanilla JS (ES6+)** | Routing, rendering, filtry, LocalStorage          |
-| **JSON**              | Databáze suplementů                               |
-| **Service Worker**    | Offline režim, cache strategie                    |
-| **PWA**               | Instalace jako aplikace (Android / Desktop)       |
-
-Optimalizováno pro výkon:
-
-* lazy loading
-* minimální JS
-* podpora moderních prohlížečů (Chrome, Firefox, Safari, Edge)
+| Technologie | Popis |
+|-------------|-------|
+| **HTML5** | Sémantická struktura, ARIA |
+| **CSS3** | Flexbox, Grid, CSS proměnné, animace, glassmorphism |
+| **Vanilla JS (ES6+)** | Routing, rendering, lazy loading, LocalStorage |
+| **JSON** | Databáze suplementů (database.json) |
+| **Service Worker** | Offline režim, Network First strategie |
+| **PWA** | Manifest, instalace, cache API |
 
 ---
 
-## 📊 Struktura dat (`database.json`)
+## 📊 Struktura databáze (`database.json`)
 
-Každý suplement je uložen jako objekt v poli `supplements`.
+Každý suplement obsahuje kompletní informace:
 
 ```json
 {
-  "id": "<number – unikátní ID dle kategoriálního rozsahu>",
-  "name": "<string – název látky>",
-  "categoryKey": "<string – hlavní kategorie (health | performance | sleep | ...)>",
-  "tags": [
-    "<string – efekt / vlastnost>",
-    "<string – efekt / vlastnost>"
-  ],
-  "rating": "<number 1–5 – celkové hodnocení>",
-  "colorType": "<string – green | yellow | red (bezpečnost)>",
-  "shortDesc": "<string – krátký popis zobrazený na kartě>",
-  "description": "<string – detailní popis látky>",
-  "effects": [
-    "<string – hlavní účinek>",
-    "<string – hlavní účinek>"
-  ],
+  "id": 101,
+  "name": "Vitamín D3",
+  "categoryKey": "health",
+  "tags": ["imunita", "kosti", "hormony"],
+  "rating": 5,
+  "colorType": "green",
+  "shortDesc": "Esenciální vitamín pro imunitu a hormonální rovnováhu.",
+  "description": "Podrobný popis...",
+  "effects": ["posílení imunity", "absorbce vápníku"],
   "dosage": {
-    "short": "<string – stručné dávkování>",
-    "long": "<string – detailní dávkování a kontext>"
+    "short": "2000–4000 IU denně",
+    "long": "2000–4000 IU denně s jídlem..."
   },
-  "warning": "<string – upozornění, rizika, kontraindikace>"
+  "warning": "Hyperkalcémie při předávkování...",
+  "mechanism": "Váže se na VDR receptor, reguluje transkripci genů...",
+  "halfLife": "15–20 dní",
+  "interactions": ["antikoagulancia", "kortikosteroidy"],
+  "evidenceLevel": "A",
+  "naturalSources": ["sluneční expozice", "tučné ryby"],
+  "bannedStatus": "legal"
 }
 ```
 
----
+### Popis polí
 
-## 🧩 Popis polí
+| Pole | Typ | Popis |
+|------|-----|-------|
+| `id` | number | Unikátní ID (viz rozsahy níže) |
+| `name` | string | Název látky |
+| `categoryKey` | string | Klíč kategorie |
+| `tags` | array | Efekty/vlastnosti |
+| `rating` | number | 1–5 ⭐ |
+| `colorType` | string | `green`/`yellow`/`red` |
+| `shortDesc` | string | Krátký popis |
+| `description` | string | Detailní popis |
+| `effects` | array | Seznam účinků |
+| `dosage.short` | string | Stručné dávkování |
+| `dosage.long` | string | Detailní dávkování |
+| `warning` | string | Varování a rizika |
+| `mechanism` | string | Mechanismus účinku |
+| `halfLife` | string | Poločas látky |
+| `interactions` | array | Interakce s léky/suplementy |
+| `evidenceLevel` | string | `A`/`B`/`C` (úroveň důkazů) |
+| `naturalSources` | array | Přírodní zdroje |
+| `bannedStatus` | string | `legal`/`controlled`/`prescription-only`/`banned-sport` |
 
-| Pole           | Typ    | Popis                                         |
-| -------------- | ------ | --------------------------------------------- |
-| `id`           | number | Unikátní ID (viz ID rozsahy níže)             |
-| `name`         | string | Název látky                                   |
-| `categoryKey`  | string | Hlavní kategorie suplementu                   |
-| `tags`         | array  | Tagy / efekty (stimulant, adaptogen, pumpa…)  |
-| `rating`       | number | Hodnocení 1–5 ⭐                               |
-| `colorType`    | string | `green / yellow / red` (indikace bezpečnosti) |
-| `shortDesc`    | string | Krátký popis na kartu                         |
-| `description`  | string | Detailní informace                            |
-| `effects`      | array  | Seznam hlavních účinků                        |
-| `dosage.short` | string | Stručné dávkování                             |
-| `dosage.long`  | string | Detailní dávkování                            |
-| `warning`      | string | Upozornění a rizika                           |
+### ID rozsahy (kategorie)
 
-### ➡️ Pro přidání nové látky vytvoř **pull request**.
-
----
-
-## 🧠 Logika ID (kategoriální rozsahy)
-
-ID určuje hlavní kategorii suplementu.
-Každý nový záznam musí spadat do odpovídajícího rozsahu.
-
-| Rozsah ID | Kategorie (`categoryKey`) | Popis                                  |
-| --------- | ------------------------- | -------------------------------------- |
-| 100–199   | `health`                  | Základní zdraví, imunita, dlouhověkost |
-| 200–299   | `performance`             | Síla, výkon, energie, svalový růst     |
-| 300–399   | `sleep`                   | Spánek, regenerace, nervová soustava   |
-| 400–499   | `fatloss`                 | Metabolismus, redukce tuku             |
-| 500–599   | `hormones`                | Přirozená hormonální optimalizace      |
-| 600–699   | `nootropics`              | Mozek, paměť, focus, produktivita      |
-| 700–799   | `experimental`            | SARMs, experimentální látky            |
-| 800–899   | `steroids`                | Anabolické steroidy (vysoké riziko)    |
-| 900–999   | `pct`                     | PCT, ochrana zdraví                    |
+| Rozsah | Kategorie | Popis |
+|--------|-----------|-------|
+| 100–199 | `health` | Základní zdraví, vitamíny, minerály |
+| 200–299 | `performance` | Sportovní výkon, pre-workout |
+| 300–399 | `sleep` | Spánek, relaxace |
+| 400–499 | `fatloss` | Redukce tuku, termogeneze |
+| 500–599 | `hormones` | Hormonální optimalizace |
+| 600–699 | `nootropics` | Kognice, mozek, focus |
+| 700–799 | `experimental` | Peptidy, SARMs, výzkumné látky |
+| 800–899 | `steroids` | Anabolické steroidy |
+| 900–999 | `pct` | PCT, ochrana zdraví |
 
 ---
 
-## 🏷️ Tagy (detailní filtrování)
+## 🏷️ Tagy
 
-Tagy slouží k popisu **konkrétních efektů** a nahrazují původní jemné kategorie.
-
-Příklady tagů:
-
-* `stimulant`
-* `pumpa`
-* `adaptogen`
-* `imunita`
-* `protein`
-* `focus`
-* `regenerace`
-* `pre-workout`
-* `post-workout`
-* `beginner-friendly`
-
-> 🔎 Jeden suplement může mít **více tagů**, ale **pouze jednu hlavní kategorii**.
+- `stimulant`, `adaptogen`, `nootropic`
+- `pumpa`, `síla`, `vytrvalost`
+- `imunita`, `zánět`, `antioxidant`
+- `spánek`, `relaxace`, `stres`
+- `testosteron`, `estrogen`, `prolaktin`
+- `sarm`, `peptid`, `steroid`, `oral`
 
 ---
 
 ## 📱 Offline režim (PWA)
 
-* 📥 **Instalace** – „Přidat na plochu“ v prohlížeči
-* 🌐 **Network First strategie** – online stáhne nová data, offline použije cache
-* ⚡ **Rychlé načítání** – statické soubory uložené v cache
-* 📦 **Plně funkční bez internetu**
+1. **Instalace**: "Přidat na plochu" v prohlížeči
+2. **Strategie**: 
+   - Statické soubory (CSS/JS): Cache First
+   - Database.json: Network First (aktualizace při připojení)
+3. **Záloha**: Export JSON před vymazáním prohlížeče
 
 ---
 
@@ -190,38 +138,25 @@ Příklady tagů:
 
 ```
 SuppleZ/
-├─ index.html        # Hlavní UI (Wiki, Detail, Deník, Nastavení)
-├─ style.css         # Design a animace
-├─ script.js         # Logika aplikace
-├─ database.json     # Databáze suplementů
-├─ sw.js             # Service Worker
-├─ manifest.json     # PWA konfigurace
-├─ assets/           # Obrázky / fonty
-└─ README.md
+├─ index.html          # Hlavní UI
+├─ style.css           # Design (glassmorphism)
+├─ script.js           # Logika aplikace
+├─ database.json       # Databáze suplementů
+├─ sw.js               # Service Worker (offline)
+├─ manifest.json       # PWA konfigurace
+└─ assets/             # Ikony, obrázky
 ```
-
----
-
-## ❓ FAQ
-
-**Je aplikace bezpečná?**
-Ano. Všechna data zůstávají lokálně, bez sledování a reklam.
-
-**Mohu data ztratit?**
-Ano, při vymazání úložiště prohlížeče – doporučeno pravidelně exportovat JSON.
-
-**Je projekt open-source?**
-Ne.
 
 ---
 
 ## 🗺️ Roadmap
 
-* 🌍 Anglická lokalizace
-* 📊 Pokročilé statistiky
-* ☁️ Volitelná cloud synchronizace
-* 🤖 AI doporučení na základě deníku
-* 📱 Mobilní app
+- [x] Rozšířená databáze s mechanismy a interakcemi
+- [x] Offline režim s aktualizací dat
+- [ ] Anglická lokalizace
+- [ ] Pokročilé statistiky v deníku
+- [ ] Volitelná cloud synchronizace (end-to-end encrypted)
+- [ ] AI doporučení na základě deníku
 
 ---
 
@@ -229,4 +164,4 @@ Ne.
 
 **Autor:** [Dany Chaker](https://github.com/SDragonex) & [Marek Polák](https://github.com/marekpolak3)
 
----
+**Upozornění:** Informace v aplikaci mají pouze informativní charakter. Nejedná se o lékařskou radu. Před užíváním jakýchkoli suplementů konzultujte lékaře.
