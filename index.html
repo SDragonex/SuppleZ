@@ -187,6 +187,9 @@
 						<button class="btn-detail-action diary-btn" onclick="addCurrentItemToDiary()">
 							<span class="material-icons">edit_note</span> Zapsat do deníku
 						</button>
+						<button id="detail-calc-btn" class="btn-detail-action calc-btn" onclick="openCurrentItemInCalculator()" style="display: none;">
+							<span class="material-icons">biotech</span> Spočítat ředění
+						</button>
 					</div>
 				</div>
 
@@ -202,20 +205,15 @@
 						</div>
 					</div>
 
-					<div class="stats-grid three-cols">
+					<div class="stats-grid two-cols">
 						<div class="stat-box">
 							<span class="material-icons">timer</span>
-							<span class="stat-label">Poločas</span>
+							<span class="stat-label">Poločas eliminace (T½)</span>
 							<span id="detail-halflife" class="stat-value">N/A</span>
 						</div>
 						<div class="stat-box">
-							<span class="material-icons">verified</span>
-							<span class="stat-label">Důkazy</span>
-							<span id="detail-evidence" class="stat-value">C</span>
-						</div>
-						<div class="stat-box">
 							<span class="material-icons">gavel</span>
-							<span class="stat-label">Status</span>
+							<span class="stat-label">Status (WADA / Reg.)</span>
 							<span id="detail-legal" class="stat-value">Legální</span>
 						</div>
 					</div>
@@ -240,6 +238,27 @@
 							<span class="material-icons icon-inline">scale</span> Dávkování
 						</h3>
 						<p id="detail-dosage-long">...</p>
+					</div>
+
+					<div class="detail-section peptide-prep-card" id="peptide-prep-section" style="display: none;">
+						<h3><span class="material-icons icon-inline">science</span> Protokol ředění & Manipulace</h3>
+						<div class="peptide-prep-grid">
+							<div class="prep-item">
+								<span class="prep-title">Doporučené rozpouštědlo</span>
+								<span class="prep-val">Bakteriostatická voda (BAC water 0.9% benzylalkohol)</span>
+							</div>
+							<div class="prep-item">
+								<span class="prep-title">Skladování & Teplota</span>
+								<span class="prep-val">2–8 °C v chladničce, chránit před UV světlem</span>
+							</div>
+							<div class="prep-item">
+								<span class="prep-title">Stabilita naředěného roztoku</span>
+								<span class="prep-val">30–40 dní při stálé teplotě (netřepat, pouze kroužit)</span>
+							</div>
+						</div>
+						<button class="btn-outline-peptide" onclick="openCurrentItemInCalculator()">
+							<span class="material-icons">calculate</span> Otevřít v kalkulačce ředění a stříkačky
+						</button>
 					</div>
 
 					<div class="detail-section" id="interactions-section" style="display: none;">
@@ -317,6 +336,19 @@
 
 			<section id="view-calculator" class="view hidden">
 				<h2 class="section-title">Kalkulačka ředění peptidů</h2>
+
+				<div class="presets-container" style="margin-bottom: 16px;">
+					<div class="presets-label"><span class="material-icons">biotech</span> Rychlé předvolby peptidů:</div>
+					<div class="presets-chips">
+						<button class="preset-chip" onclick="applyPeptideFullPreset(5, 2, 250, 'u100_1ml')">BPC-157 (250 mcg)</button>
+						<button class="preset-chip" onclick="applyPeptideFullPreset(5, 2, 2000, 'u100_1ml')">TB-500 (2 mg)</button>
+						<button class="preset-chip" onclick="applyPeptideFullPreset(10, 2, 2000, 'u100_1ml')">Retatrutide / Tirzepatid (2 mg)</button>
+						<button class="preset-chip" onclick="applyPeptideFullPreset(5, 2, 500, 'u100_1ml')">Semaglutid (500 mcg)</button>
+						<button class="preset-chip" onclick="applyPeptideFullPreset(2, 2, 100, 'u100_1ml')">Ipamorelin (100 mcg)</button>
+						<button class="preset-chip" onclick="applyPeptideFullPreset(50, 5, 1500, 'u100_1ml')">GHK-Cu (1.5 mg)</button>
+						<button class="preset-chip" onclick="applyPeptideFullPreset(10, 2, 5000, 'u100_1ml')">Epithalon (5 mg)</button>
+					</div>
+				</div>
 
 				<div class="calc-card">
 					<div class="calc-grid">
@@ -526,22 +558,6 @@
 								<span class="source-type">Čistota & Testy</span>
 							</div>
 							<p class="source-desc">Nezávislé certifikované laboratorní testy čistoty suplementů, mikrobiální kontaminace a detekce těžkých kovů.</p>
-						</div>
-					</div>
-
-					<div class="evidence-scale-box">
-						<h4 style="font-family:'Rajdhani',sans-serif; color:var(--ui-accent); margin-bottom:8px; font-size:1rem;">Stupnice vědecké průkaznosti (Evidence Levels)</h4>
-						<div class="evidence-scale-row">
-							<span class="evidence-badge-item ev-a">Úroveň A</span>
-							<span class="evidence-scale-text"><strong>Robustní důkazy:</strong> Podloženo rozsáhlými metaanalýzami nebo vícečetnými randomizovanými klinickými studiemi (RCT) na lidských subjektech.</span>
-						</div>
-						<div class="evidence-scale-row">
-							<span class="evidence-badge-item ev-b">Úroveň B</span>
-							<span class="evidence-scale-text"><strong>Střední důkazy:</strong> Pozitivní výsledky z menších nebo pilotních klinických studií na lidech, vyžaduje další výzkum.</span>
-						</div>
-						<div class="evidence-scale-row">
-							<span class="evidence-badge-item ev-c">Úroveň C</span>
-							<span class="evidence-scale-text"><strong>Předběžné / Teoretické:</strong> Mechanistická data, předklinické studie na zvířecích modelech nebo in vitro buněčných kulturách.</span>
 						</div>
 					</div>
 				</div>

@@ -495,5 +495,334 @@
     ],
     "bannedStatus": "legal",
     "id": 612
+  },
+  {
+    "id": 613,
+    "name": "Magnesium L-Threonát (Magtein)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "mozek",
+      "paměť",
+      "spánek",
+      "synapse"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Jediná forma hořčíku efektivně překonávající hematoencefalickou bariéru.",
+    "description": "Magnesium L-Threonát (vyvinutý vědci z MIT pod patentovaným názvem Magtein) je specifická chelátová forma hořčíku navázaná na kyselinu threonovou. Na rozdíl od běžných forem hořčíku (citrát, oxid, dokonce i bisglycinát) prokazatelně zvyšuje koncentraci hořčíku přímo v mozkomíšním moku a neuronální tkáni. Zvyšuje hustotu a plasticitu nervových synapsí v hipokampu, zlepšuje krátkodobou i dlouhodobou paměť a usnadňuje hluboký spánek.",
+    "effects": [
+      "zvýšení hladiny hořčíku v mozku a mozkomíšním moku",
+      "zvýšení synaptické plasticity a hustoty nervových spojení",
+      "zlepšení pracovní paměti, učení a kognitivní rychlosti",
+      "zklidnění nervového systému a podpora spánkové architektury"
+    ],
+    "dosage": {
+      "short": "1500–2000 mg denně (poskytuje 108–144 mg elementárního Mg)",
+      "long": "Standardní dávka Magteinu je 1500–2000 mg denně. Obvykle se rozděluje na 1000 mg odpoledne a 1000 mg cca 1 hodinu před spaním."
+    },
+    "warning": "Výborná tolerance bez projímavých účinků typických pro jiné formy hořčíku. U malého procenta lidí může v prvních dnech vyvolat živé sny nebo lehkou bolest hlavy z adaptace průtoku krve.",
+    "mechanism": "Přestup přes hematoencefalickou bariéru via glukózové transportéry; aktivace NMDA receptorů zvýšením hustoty funkčních synapsí; upregulace exprese NR2B podjednotek.",
+    "halfLife": "Plazmatický poločas elementárního Mg cca 24 hodin, akumulace v mozkové tkáni trvá 2–4 týdny",
+    "interactions": [
+      "Apigenin / L-Theanin (synergické zklidnění CNS před spaním)",
+      "tetracyklinová a chinolonová antibiotika (oddělit od hořčíku o 3 hodiny)"
+    ],
+    "naturalSources": [
+      "pouze syntetická chelátová vazba s L-threonátem (metabolit vitamínu C)"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 614,
+    "name": "Bromantan (Ladasten)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "dopamin",
+      "aktoprotektor",
+      "vytrvalost",
+      "anxiolytikum"
+    ],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Ruský aktoprotektor zvyšující dopamin bez vyčerpání a tolerance.",
+    "description": "Bromantan (N-(2-adamantyl)-N-(4-bromofenyl)amin) je unikátní syntetický derivát adamantanu vyvinutý v Rusku v 80. letech. Patří do vzácné skupiny „aktoprotektorů“ – látek zvyšujících fyzickou a mentální výkonnost v extrémních podmínkách bez zvýšení spotřeby kyslíku nebo přehřátí organismu. Na rozdíl od klasických stimulantů (kofein, amfetaminy) nezpůsobuje závislost, náhlý propad energie ani toleranci, protože působí epigenetickou upregulací enzymů tvořících dopamin.",
+    "effects": [
+      "stimulace syntézy dopaminu a tyrosin hydroxylázy",
+      "zvýšení fyzické vytrvalosti a mentálního soustředění",
+      "anxiolytický účinek (odstranění úzkosti bez sedace)",
+      "imunostimulační a termoprotektivní vlastnosti"
+    ],
+    "dosage": {
+      "short": "50–100 mg ráno sublinguálně nebo orálně",
+      "long": "Užívá se 50–100 mg ráno, ideálně s jídlem obsahujícím tuky nebo sublinguálně (pod jazyk) pro lepší absorpci. Neužívat odpoledne a večer kvůli riziku nespavosti. Cykluje se 2–4 týdny s následnou pauzou."
+    },
+    "warning": "Zakázáno v profesionálním sportu pod WADA (skupina stimulancií S6). Při orálním požití nalačno má nízkou biodostupnost.",
+    "mechanism": "Transkripční upregulace enzymů tyrosin hydroxylázy (TH) a aromatické L-aminokyselinové dekarboxylázy (AADC) v substantia nigra; slabá inhibice zpětného vychytávání dopaminu a serotoninu.",
+    "halfLife": "11–12 hodin (dlouhé stabilní působení)",
+    "interactions": [
+      "L-Tyrosin (dodání substrátu pro syntézu dopaminu)",
+      "MAO-A / MAO-B inhibitory (riziko dopaminergní toxicity)",
+      "silná psychostimulancia (zvýšené riziko agitovanosti)"
+    ],
+    "naturalSources": [
+      "pouze syntetická sloučenina (adamantanový derivát)"
+    ],
+    "bannedStatus": "banned-sport"
+  },
+  {
+    "id": 615,
+    "name": "Sulbutiamin (Arcalion)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "energie",
+      "thiamin",
+      "únava",
+      "paměť"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Lipofilní dimer vitamínu B1 s vysokou afinitou pro mozkovou tkáň.",
+    "description": "Sulbutiamin je syntetická molekula skládající se ze dvou molekul thiaminu (vitamínu B1) spojených disulfidickým můstkem. Díky extrémní lipofilitě snadno prochází hematoencefalickou bariérou mnohem efektivněji než běžný thiamin. V mozku zvyšuje hladiny thiamin trifosfátu, moduluje cholinergní, dopaminergní a glutamátergní neurotransmisi a klinicky se využívá proti astenii a chronické únavě.",
+    "effects": [
+      "potlačení chronické psychické i fyzické únavy",
+      "zlepšení konsolidace dlouhodobé paměti",
+      "zvýšení motivace a bdělosti",
+      "modulace dopaminu v prefrontálním kortexu"
+    ],
+    "dosage": {
+      "short": "200–400 mg ráno s tuky",
+      "long": "Běžná dávka je 200–400 mg denně ráno se snídaní. Vzhledem k vysoké rozpustnosti v tucích je nezbytné užívat s jídlem. Doporučuje se užívat v cyklech (např. 5 dní v týdnu), aby nedocházelo k adaptaci receptorů."
+    },
+    "warning": "Neužívejte večer (může narušit usínání). Při každodenním kontinuálním užívání po několik měsíců může slábnout stimulační účinek.",
+    "mechanism": "Zvýšení syntézy thiamin trifosfátu v neuronech, downregulace a následná upregulace D1 dopaminových receptorů v prefrontální kůře, modulace acetylcholinu v hipokampu.",
+    "halfLife": "Cca 5 hodin",
+    "interactions": [
+      "Cholinergní látky (Alfa-GPC, Huperzin A - synergie v paměťových procesech)",
+      "kofein (zesílený stimulační efekt)"
+    ],
+    "naturalSources": [
+      "syntetický derivát thiaminu vyvinutý v Japonsku"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 616,
+    "name": "Fasoracetam (NS-105)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "gaba",
+      "adhd",
+      "fokus",
+      "glutamát"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Racetam upregulující GABA-B receptory a modulující glutamát.",
+    "description": "Fasoracetam je moderní člen rodiny racetamů zkoumaný pro terapii ADHD a kognitivních poruch. Jeho nejvýznamnější unikátní vlastností je schopnost upregulovat (zvyšovat hustotu) GABA-B receptorů při opakovaném podávání, což z něj činí vysoce ceněné nootropikum pro zklidnění přestimulovaného mozku a obnovu citlivosti po užívání látek jako phenibut.",
+    "effects": [
+      "upregulace a resenzitizace GABA-B receptorů",
+      "zlepšení soustředění a potlačení symptomů ADHD",
+      "anxiolýza bez útlumu kognice",
+      "podpora acetylcholinu v mozkové kůře"
+    ],
+    "dosage": {
+      "short": "10–20 mg 1–2x denně sublinguálně nebo perorálně",
+      "long": "Začíná se na nízké dávce 10 mg 1–2x denně. Lze užívat sublinguálně pro okamžitější nástup. Maximální denní dávka je obvykle 50 mg."
+    },
+    "warning": "Výzkumné nootropikum. Vyvarujte se kombinace s vysokými dávkami agonistů GABA-B.",
+    "mechanism": "Agonismus metabotropních glutamátových receptorů mGluR II/III; upregulace hustoty GABA-B receptorů v mozkové kůře a hipokampu; stimulace vychytávání cholinu.",
+    "halfLife": "4–6 hodin",
+    "interactions": [
+      "Alfa-GPC / Cholin (prevence vyčerpání acetylcholinu typického pro racetamy)",
+      "Phenibut / Baclofen (komplexní interakce na GABA-B, může blokovat nebo naopak senzibilizovat)"
+    ],
+    "naturalSources": [
+      "pouze syntetická sloučenina"
+    ],
+    "bannedStatus": "experimental"
+  },
+  {
+    "id": 617,
+    "name": "Aniracetam",
+    "categoryKey": "nootropics",
+    "tags": [
+      "ampa",
+      "anxiolytikum",
+      "kreativita",
+      "cholin"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Lipofilní racetam stimulující AMPA receptory s anxiolytickým efektem.",
+    "description": "Aniracetam je v tucích rozpustný analog piracetamu vyvinutý v 70. letech firmou Hoffmann-La Roche. Funguje jako pozitivní alosterický modulátor AMPA receptorů a vykazuje specifický duální účinek: stimuluje kognitivní funkce a slovní plynulost a zároveň působí jako silné anxiolytikum díky modulaci serotoninových (5-HT2A) a dopaminových (D2) receptorů.",
+    "effects": [
+      "zlepšení verbální plynulosti a holistického myšlení",
+      "výrazná anxiolýza a snížení sociální úzkosti",
+      "zvýšení synaptické plasticity přes AMPA receptory",
+      "neuroprotekce proti excitotoxicitě"
+    ],
+    "dosage": {
+      "short": "750 mg 1–2x denně s tuky",
+      "long": "Standardní dávka je 750 mg jednou až dvakrát denně. Jelikož je rozpustný v tucích, je nutné jej zapít mlékem, olejem nebo užít po jídle s obsahem lipidů. Vždy kombinovat se zdrojem cholinu (např. 250 mg Alfa-GPC)."
+    },
+    "warning": "Při užití bez cholinu může způsobit typickou 'racetamovou bolest hlavy'.",
+    "mechanism": "Pozitivní alosterická modulace AMPA receptorů (zpomalení jejich desenzitizace); stimulace uvolňování acetylcholinu, dopaminu a serotoninu v prefrontální kůře a hipokampu.",
+    "halfLife": "1–2.5 hodiny (krátký poločas, metabolity zůstávají aktivní déle)",
+    "interactions": [
+      "Alfa-GPC / Citicolin (nutný zdroj cholinu pro acetylcholin)",
+      "kofein / L-theanin (synergie kognitivního toku)"
+    ],
+    "naturalSources": [
+      "pouze syntetická sloučenina"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 618,
+    "name": "Oxiracetam",
+    "categoryKey": "nootropics",
+    "tags": [
+      "paměť",
+      "stimulace",
+      "logika",
+      "energie"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Mírně stimulační ve vodě rozpustný racetam podporující logické myšlení.",
+    "description": "Oxiracetam je hydroxylovaný derivát piracetamu. Na rozdíl od aniracetamu je plně rozpustný ve vodě a má spíše čistě stimulační, pro-kognitivní profil zaměřený na logické operace, matematické myšlení a zpracování dat. Zvyšuje hladiny ATP v mozku a stimuluje syntézu proteinů nezbytných pro dlouhodobou potenciaci (LTP).",
+    "effects": [
+      "stimulace logického uvažování a analytického myšlení",
+      "zvýšení mentální energie a oddálení kognitivního vyčerpání",
+      "urychlení konsolidace paměťových stop",
+      "stimulace metabolismu mozkového ATP"
+    ],
+    "dosage": {
+      "short": "600–800 mg 1–2x denně",
+      "long": "Standardní dávka je 600–800 mg ráno a v poledne zapitá vodou. Lze užívat nalačno. Neužívejte v pozdních odpoledních hodinách, aby nenarušil spánek."
+    },
+    "warning": "Jako u všech racetamů je nutné zajistit dostatečný příjem cholinu k prevenci bolestí hlavy.",
+    "mechanism": "Pozitivní modulace AMPA a NMDA glutamátových receptorů; aktivace proteinkinázy C (PKC) a stimulace uvolňování acetylcholinu v hipokampu.",
+    "halfLife": "6–8 hodin (stabilnější než aniracetam)",
+    "interactions": [
+      "Alfa-GPC (dodávka acetylcholinu)",
+      "Modafinil (silná aditivní bdělost, nutná opatrnost)"
+    ],
+    "naturalSources": [
+      "pouze syntetická sloučenina"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 619,
+    "name": "Sabroxy (Oroxylin A)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "dopamin",
+      "bdnf",
+      "fokus",
+      "rostlinný"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní inhibitor zpětného vychytávání dopaminu a stimulátor BDNF.",
+    "description": "Sabroxy je standardizovaný extrakt z kůry stromu Oroxylum indicum obsahující vysoké koncentrace oroxylinu A. Jedná se o jedno z mála vědecky doložených rostlinných nootropik, které funguje jako účinný inhibitor zpětného vychytávání dopaminu (DRI) a negativní alosterický modulátor GABA-A receptorů. Výrazně zvyšuje hladinu mozkového neurotrofického faktoru (BDNF) a neurogenezi v hipokampu.",
+    "effects": [
+      "výrazné zostření pozornosti a soustředění",
+      "zvýšení motivace a dopaminergního tonusu",
+      "masivní stimulace exprese BDNF a neuroplasticity",
+      "podpora pracovní paměti"
+    ],
+    "dosage": {
+      "short": "100–500 mg ráno",
+      "long": "Začátečníci 100 mg ráno. Zkušení uživatelé 250–500 mg nalačno před mentálním výkonem. Nepodávat po 14:00 hodině."
+    },
+    "warning": "Díky inhibici GABA-A může u predisponovaných jedinců vyvolat mírnou nervozitu nebo úzkost při vysokých dávkách. Lze kombinovat s L-theaninem pro vyhlazení stimulace.",
+    "mechanism": "Inhibice dopaminového transportéru (DAT), inhibice vazby na benzodiazepinové vazebné místo GABA-A receptorů a stimulace CREB fosforylace vedoucí k uvolnění BDNF.",
+    "halfLife": "Cca 2–4 hodiny",
+    "interactions": [
+      "L-Theanin (vynikající synergie pro fokus bez nervozity)",
+      "kofein (aditivní stimulace)",
+      "antikonvulziva (vyhýbat se kvůli negativní modulaci GABA)"
+    ],
+    "naturalSources": [
+      "kůra stromu Oroxylum indicum (oroxylum indické)",
+      "Scutellaria baicalensis"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 620,
+    "name": "7,8-Dihydroxyflavon (7,8-DHF)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "bdnf",
+      "trkb",
+      "neurogeneze",
+      "paměť"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní molekula přímo aktivující receptor TrkB jako mimetikum BDNF.",
+    "description": "7,8-Dihydroxyflavon (7,8-DHF) je monomerní flavonoid přítomný v listech stromu Godmania aesculifolia a Tridax procumbens. Je průlomový tím, že funguje jako přímý, biologicky dostupný orální agonista receptoru tropomyosin-receptorové kinázy B (TrkB) – hlavního receptoru pro BDNF (mozkový neurotrofický faktor). Zatímco samotný BDNF nemůže projít přes hematoencefalickou bariéru, 7,8-DHF jí prochází snadno a spouští identické neuroplastické a neuroprotektivní signály.",
+    "effects": [
+      "přímá aktivace TrkB receptoru (simulace BDNF)",
+      "indukce synaptogeneze a dendritického větvení",
+      "obnova plasticity hipokampu a dlouhodobé paměti",
+      "neuroprotekce proti oxidačnímu stresu a excitotoxicitě"
+    ],
+    "dosage": {
+      "short": "25–50 mg ráno sublinguálně",
+      "long": "Běžná dávka je 25–50 mg denně ráno. Vzhledem k jaternímu first-pass metabolismu se silně doporučuje sublinguální aplikace (podržet pod jazykem 5–10 minut)."
+    },
+    "warning": "Při orálním spolknutí má nižší biologickou dostupnost (kolem 5 %), proto je preferována sublinguální forma.",
+    "mechanism": "Přímá vazba na extracelulární doménu receptoru TrkB, jeho autofosforylace a spuštění signálních kaskád MAPK/ERK a PI3K/Akt.",
+    "halfLife": "Cca 2 hodiny v plazmě, downstream neurotrofické účinky přetrvávají dny",
+    "interactions": [
+      "Lion's Mane (synergická stimulace neurogeneze NGF + TrkB)",
+      "Magnesium L-Threonát (synergická výstavba synapsí)"
+    ],
+    "naturalSources": [
+      "strom Godmania aesculifolia",
+      "bylina Tridax procumbens",
+      "Primula veris"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 621,
+    "name": "Centrophenoxine (Meclofenoxát)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "cholin",
+      "lipofuscin",
+      "mozek",
+      "energie"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Výkonný donor cholinu a odstraňovač buněčného pigmentu stárnutí.",
+    "description": "Centrophenoxine (Meclofenoxát) je ester dimethylaminoethanolu (DMAE) a kyseliny parachlorfenoxyoctové (pCPA). Proniká hematoencefalickou bariérou podstatně efektivněji než čistý DMAE. V mozku působí jako silný prekurzor acetylcholinu a vykazuje mimořádnou, klinicky ověřenou schopnost čistit neurony od lipofuscinu – toxického „pigmentu stárnutí“, který se s věkem hromadí v buňkách mozku a srdce.",
+    "effects": [
+      "odstraňování lipofuscinu z neuronů a buněk mozku",
+      "zvýšení hladiny acetylcholinu v CNS",
+      "zlepšení průtoku krve a absorpce kyslíku v mozku",
+      "zvýšení mentální energie a koncentrace"
+    ],
+    "dosage": {
+      "short": "250–500 mg 1–2x denně ráno/v poledne",
+      "long": "Obvyklá dávka je 250–500 mg ráno s jídlem. Pro intenzivní kognitivní očistu lze užívat 500 mg 2x denně po dobu 1–2 měsíců. Neužívat večer."
+    },
+    "warning": "Může způsobit svalové napětí v čelisti nebo krku při předávkování (přebytek acetylcholinu). V takovém případě snížit dávku.",
+    "mechanism": "Konverze na DMAE a následně fosfatidylcholin; stimulace syntézy acetylcholinu; aktivace enzymů degradujících lipofuscinové agregáty v lysozomech.",
+    "halfLife": "2–4 hodiny",
+    "interactions": [
+      "Racetamy (perfektní cholinergní základ pro piracetam, aniracetam)",
+      "inhibitory acetylcholinesterázy (sčítání cholinergního účinku)"
+    ],
+    "naturalSources": [
+      "pouze syntetická sloučenina (vyvinuto v Institut Pasteur)"
+    ],
+    "bannedStatus": "legal"
   }
 ]

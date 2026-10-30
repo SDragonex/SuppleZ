@@ -523,7 +523,10 @@
     "warning": "Klinický vývoj byl ukončen farmaceutickou firmou kvůli zjištěnému zvýšenému výskytu tumorů u hlodavců při vysokých celoživotních dávkách.",
     "mechanism": "Aktivace transkripčního faktoru PPAR-delta, stimulace genů pro beta-oxidaci mastných kyselin",
     "halfLife": "24 hodin",
-    "interactions": [],
+    "interactions": [
+      "Stenabolic (SR-9009 - synergická podpora mitochondriální vytrvalosti)",
+      "L-Karnitin (podpora transportu mastných kyselin do mitochondrií)"
+    ],
     "evidenceLevel": "B",
     "naturalSources": [
       "syntetická výzkumná látka"

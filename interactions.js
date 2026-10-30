@@ -74,6 +74,34 @@ const SYNERGIES = [
         title: 'Glycin + NAC (GlyNAC)',
         mechanism: 'Kombinace tvoří přímé prekurzory pro syntézu glutathionu – hlavního buněčného antioxidantu v lidském těle. Klinické studie prokazují obnovu mitochondriální funkce a snížení oxidačního stresu.',
         tags: ['longevity', 'mitochondrie', 'detoxikace']
+    },
+    {
+        id: 'tongkat_boron',
+        items: ['tongkat ali', 'bor'],
+        title: 'Tongkat Ali + Bór',
+        mechanism: 'Duální optimalizace volného testosteronu. Eurycomanon stimuluje Leydigovy buňky a bór prokazatelně sráží hladinu SHBG v krevní plazmě, čímž maximalizuje biologicky aktivní frakci volného testosteronu.',
+        tags: ['hormony', 'testosteron', 'SHBG', 'vitalita']
+    },
+    {
+        id: 'cjc_ipamorelin',
+        items: ['cjc-1295', 'ipamorelin'],
+        title: 'CJC-1295 (Mod GRF 1-29) + Ipamorelin',
+        mechanism: 'Dokonalý synergický peptidový stack pro růstový hormon. GHRH analog (CJC) otevírá receptorová stavidla v adenohypofýze a GHRP agonista ghrelinu (Ipamorelin) spouští mohutný fyziologický pulz HGH bez stimulace kortizolu či prolaktinu.',
+        tags: ['peptidy', 'HGH', 'regenerace', 'spánek']
+    },
+    {
+        id: 'semax_selank',
+        items: ['semax', 'selank'],
+        title: 'Semax + Selank (Neurokognitivní stack)',
+        mechanism: 'Ruský nootropní zlatý standard. Semax dramaticky stimuluje BDNF, pozornost a mentální energii, zatímco Selank přes modulaci GABA odstraňuje úzkost, stres a roztěkanost bez sedace.',
+        tags: ['nootropika', 'BDNF', 'klid', 'paměť']
+    },
+    {
+        id: 'spermidine_nmn',
+        items: ['spermidin', 'nmn'],
+        title: 'Spermidin + NMN / Resveratrol',
+        mechanism: 'Komplexní buněčné omlazení. NMN zvyšuje hladinu NAD+ pro aktivaci sirtuinů a opravy DNA enzymy PARP, zatímco spermidin spouští masivní buněčnou autofagii a recyklaci poškozených mitochondrií.',
+        tags: ['longevity', 'autofagie', 'sirtuiny', 'buňky']
     }
 ];
 
@@ -232,6 +260,27 @@ const PRESET_STACKS = [
             { id: 202, name: 'Citrullin Malát (2:1)' },
             { id: 201, name: 'Beta-Alanin' },
             { id: 111, name: 'Coenzyme Q10 (Ubiquinol)' }
+        ]
+    },
+    {
+        id: 'peptide_recovery',
+        name: 'Peptidová regenerace (Wolverine)',
+        desc: 'Špičkový protokol pro hojení šlach, svalů, cév a obnovu kolagenu.',
+        items: [
+            { id: 700, name: 'BPC-157' },
+            { id: 701, name: 'TB-500 (Thymosin Beta-4 fragment)' },
+            { id: 702, name: 'GHK-Cu (Měďnatý tripeptid)' }
+        ]
+    },
+    {
+        id: 'cellular_longevity',
+        name: 'Buněčná dlouhověkost & Autofagie',
+        desc: 'Podpora sirtuinů, mitochondrií, epigenetických enzymů a buněčné očisty.',
+        items: [
+            { id: 120, name: 'NMN (Nikotinamid Mononukleotid)' },
+            { id: 124, name: 'Spermidin' },
+            { id: 121, name: 'Resveratrol (Trans-Resveratrol)' },
+            { id: 126, name: 'Ca-AKG (Alfa-ketoglutarát vápenatý)' }
         ]
     }
 ];

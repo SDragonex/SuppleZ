@@ -1,11 +1,11 @@
 /**
  * SuppleZ Service Worker (sw.js)
- * Verze: 5.0 (Network-First PWA)
+ * Verze: 6.1 (Peptide protocol bridge & interactive reconstitution integration)
  * Strategie: Network-First pro aplikaci a data (vždy čerstvé změny),
  * s okamžitou zálohou v mezipaměti pro spolehlivý offline provoz.
  */
 
-const CACHE_NAME = 'supplez-cache-v5.0';
+const CACHE_NAME = 'supplez-cache-v6.1';
 
 const STATIC_ASSETS = [
     './',

@@ -199,6 +199,42 @@ function addCurrentItemToDiary() {
     if (nameInput) nameInput.focus();
 }
 
+function openCurrentItemInCalculator() {
+    if (!currentItemInDetail) return;
+    const item = currentItemInDetail;
+    const nameLower = item.name.toLowerCase();
+
+    closeDetailView(false);
+    switchTab('view-calculator', document.querySelectorAll('.nav-item')[2]);
+
+    if (nameLower.includes('bpc-157') || nameLower.includes('bpc 157')) {
+        applyPeptideFullPreset(5, 2, 250, 'u100_1ml');
+    } else if (nameLower.includes('tb-500') || nameLower.includes('tb 500')) {
+        applyPeptideFullPreset(5, 2, 2000, 'u100_1ml');
+    } else if (nameLower.includes('retatrutid') || nameLower.includes('tirzepatid')) {
+        applyPeptideFullPreset(5, 2, 2000, 'u100_1ml');
+    } else if (nameLower.includes('semaglutid')) {
+        applyPeptideFullPreset(5, 2, 500, 'u100_1ml');
+    } else if (nameLower.includes('ghk')) {
+        applyPeptideFullPreset(50, 3, 1500, 'u100_1ml');
+    } else if (nameLower.includes('epithalon')) {
+        applyPeptideFullPreset(10, 2, 5000, 'u100_1ml');
+    } else if (nameLower.includes('ipamorelin') || nameLower.includes('cjc')) {
+        applyPeptideFullPreset(5, 2, 100, 'u100_1ml');
+    } else {
+        let doseMcg = 250;
+        const doseText = (item.dosage?.short || "").toLowerCase();
+        if (doseText.includes('mcg')) {
+            const m = doseText.match(/(\d+)\s*mcg/);
+            if (m) doseMcg = parseInt(m[1]);
+        } else if (doseText.includes('mg')) {
+            const m = doseText.match(/([\d\.]+)\s*mg/);
+            if (m) doseMcg = parseFloat(m[1]) * 1000;
+        }
+        applyPeptideFullPreset(5, 2, doseMcg, 'u100_1ml');
+    }
+}
+
 function openDetailView(item, updateHistory = true) {
     currentItemInDetail = item;
     const slug = item.slug || slugify(item.name);
@@ -286,17 +322,6 @@ function openDetailView(item, updateHistory = true) {
         halflifeEl.style.color = themeColor;
     }
 
-    const evidenceEl = document.getElementById("detail-evidence");
-    if(evidenceEl) {
-        const evidence = item.evidenceLevel || "C";
-        let evidenceText = evidence;
-        if(evidence === "A") evidenceText = "A - Silné důkazy";
-        if(evidence === "B") evidenceText = "B - Střední důkazy";
-        if(evidence === "C") evidenceText = "C - Omezené důkazy";
-        evidenceEl.innerText = evidenceText;
-        evidenceEl.style.color = themeColor;
-    }
-
     const legalEl = document.getElementById("detail-legal");
     if(legalEl) {
         const status = item.bannedStatus || "unknown";
@@ -335,6 +360,22 @@ function openDetailView(item, updateHistory = true) {
         } else {
             sourcesSection.style.display = "none";
         }
+    }
+
+    // Detekce peptidu pro kalkulačku a přípravný protokol (inspirováno PeptideWiki)
+    const cat = item.categoryKey || item.category || '';
+    const isPeptide = cat === 'experimental' || 
+                      (Array.isArray(item.tags) && item.tags.some(t => (t || '').toLowerCase().includes('peptid'))) ||
+                      ['bpc-157', 'tb-500', 'ghk-cu', 'retatrutid', 'tirzepatid', 'semaglutid', 'ipamorelin', 'cjc-1295', 'epithalon', 'kpv', 'mots-c', 'ss-31', 'dihexa', 'semax', 'selank', 'follistatin', 'aod-9604'].some(p => (item.name || '').toLowerCase().includes(p));
+
+    const calcBtn = document.getElementById("detail-calc-btn");
+    if (calcBtn) {
+        calcBtn.style.display = isPeptide ? "inline-flex" : "none";
+    }
+
+    const prepSection = document.getElementById("peptide-prep-section");
+    if (prepSection) {
+        prepSection.style.display = isPeptide ? "block" : "none";
     }
 
     document.getElementById("view-wiki").classList.remove("active");
@@ -604,12 +645,6 @@ function renderCards(dataToRender, append = false) {
         const catKey = item.categoryKey || item.category;
         const catLabel = categoryLabels[catKey] || catKey;
 
-        // Evidence level badge
-        const evidence = item.evidenceLevel || 'B';
-        let evidenceClass = 'ev-b';
-        if (evidence === 'A') evidenceClass = 'ev-a';
-        if (evidence === 'C') evidenceClass = 'ev-c';
-
         // Dávkování nebo poločas
         const doseHint = item.dosage?.short || (typeof item.dosage === 'string' ? item.dosage : '');
         const doseHtml = doseHint ? `<span class="card-chip dose"><span class="material-icons">medication</span>${doseHint}</span>` : '';
@@ -623,7 +658,6 @@ function renderCards(dataToRender, append = false) {
             <div class="card-header">
                 <div class="card-badges">
                     <span class="card-category">${catLabel}</span>
-                    <span class="card-evidence ${evidenceClass}">Důkazy ${evidence}</span>
                 </div>
                 <div class="card-rating" style="color:${rateColor}; border-color:${rateColor}">
                     ${r}/5
@@ -1227,6 +1261,24 @@ function setCalcPreset(type, value) {
         if (el) el.value = value;
     }
     runPeptideCalculation();
+}
+
+function applyPeptideFullPreset(vialMg, waterMl, doseMcg, syringeType = 'u100_1ml') {
+    const vialEl = document.getElementById("calc-vial-mg");
+    const waterEl = document.getElementById("calc-water-ml");
+    const doseEl = document.getElementById("calc-dose-mcg");
+    const syringeEl = document.getElementById("calc-syringe-type");
+
+    if (vialEl) vialEl.value = vialMg;
+    if (waterEl) waterEl.value = waterMl;
+    if (doseEl) doseEl.value = doseMcg;
+    if (syringeEl) syringeEl.value = syringeType;
+
+    runPeptideCalculation();
+    if (typeof showToast === 'function') {
+        const displayDose = doseMcg >= 1000 ? (doseMcg / 1000) + ' mg' : doseMcg + ' mcg';
+        showToast(`Předvolba: vialka ${vialMg} mg, dávka ${displayDose}`, "tune", "var(--ui-accent)");
+    }
 }
 
 function runPeptideCalculation() {

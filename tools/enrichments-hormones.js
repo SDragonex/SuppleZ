@@ -1,0 +1,1749 @@
+/**
+ * SuppleZ Complete Hormones Dataset (62 compounds)
+ * Fully detailed medical intelligence covering:
+ * - All forms of Testosterone (Enanthate, Cypionate, Propionate, Undecanoate, Suspension, Sustanon, Gel)
+ * - Active metabolites (DHT, Free Testosterone, SHBG, DHEA, DHEA-S)
+ * - Progestins & Estrogens (Pregnenolone, Progesterone, Estradiol, Estrone, Estriol, Prolactin)
+ * - Adrenal & Glucocorticoids (Cortisol, Cortisone, Aldosterone, Fludrocortisone, Spironolactone)
+ * - Growth & Metabolic hormones (HGH, IGF-1, Insulin, Glucagon, Leptin, Ghrelin)
+ * - Pineal & Pituitary (Melatonin, Oxytocin, Vasopressin, Desmopressin, LH, FSH, TSH, ACTH, Kisspeptin, GHRH, TRH, CRH, GnRH, Somatostatin)
+ * - Thyroid & Bone (Thyroxine T4, Triiodothyronine T3, Reverse T3, PTH, Calcitonin, EPO, Adrenaline, Noradrenaline, Renin)
+ * - Natural Hormonal Optimizers (Tongkat Ali, Fadogia Agrestis, Shilajit, Cistanche, Maca, Saw Palmetto, Tribulus, Fenugreek, DIM, Boron)
+ */
+
+const hormonesData = [
+  {
+    id: 500,
+    name: "Testosteron Enanthate",
+    categoryKey: "hormones",
+    tags: ["testosteron", "TRT", "androgen", "anabolikum", "ester"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Zlatý standard substituční léčby (TRT) s dlouhým 7-uhlíkovým esterem.",
+    description: "Testosteron Enanthate je esterifikovaný derivát primárního mužského androgenu navázaný na kyselinu enanthovou. Pomalé uvolňování ze svalového depa poskytuje stabilní plazmatické koncentrace testosteronu. Je klinickým zlatým standardem pro léčbu primárního i sekundárního hypogonadismu a základním kamenem anabolických protokolů. V těle podléhá konverzi na silnější dihydrotestosteron (5-alfa reduktázou) a na estradiol (aromatázou).",
+    effects: [
+      "výrazná stimulace proteosyntézy a hypertrofie svalů",
+      "zvýšení síly, neuromuskulárního tonusu a hustoty kostí",
+      "obnova libida, erektilní funkce a vitality",
+      "zvýšení erytropoézy a saturace tkání kyslíkem",
+      "zlepšení kognitivní asertivity a nálady"
+    ],
+    dosage: {
+      "short": "TRT: 100–150 mg týdně (rozděleno do 2 aplikací)",
+      "long": "Při substituční terapii (TRT) se podává 100–150 mg týdně, ideálně rozděleno do dvou menších injekcí (např. 50–75 mg každých 3.5 dne - pondělí ráno / čtvrtek večer) hluboko intramuskulárně (gluteus, ventrogluteus, deltoid) nebo subkutánně pro stabilnější hladiny a minimalizaci estrogenních špiček. Sportovní cykly: 300–500 mg týdně."
+    },
+    warning: "Exogenní podání zcela potlačuje vlastní osu HPTA (zástava produkce LH a FSH) vedoucí k atrofii varlat a dočasné neplodnosti. Riziko gynekomastie (při vysokém estradiolu), akné, alopecie (vlivem DHT), retence sodíku a zvýšení hematokritu (nutno sledovat krevní obraz, lipidogram a PSA).",
+    mechanism: "Vazba na intracelulární androgenní receptory (AR), translokace komplexu do buněčného jádra, vazba na hormon-responzivní elementy (ARE) a indukce transkripce anabolických strukturních bílkovin s retencí dusíku.",
+    halfLife: "4.5–5 dní (plazmatický poločas eliminace esteru; plné ustálení rovnovážného stavu za 4–5 týdnů)",
+    interactions: [
+      "Inhibitory aromatázy (Anastrozol, Exemestan - regulace estradiolu)",
+      "Inhibitory 5-alfa reduktázy (Finasterid, Dutasterid - blokáda konverze na DHT)",
+      "Antikoagulancia (zvýšení účinku warfarinu)",
+      "Inzulín a perorální antidiabetika (zvýšení inzulínové senzitivity)"
+    ],
+    naturalSources: ["endogenní hormon syntetizovaný v Leydigových buňkách varlat z cholesterolu"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 501,
+    name: "Testosteron Cypionate",
+    categoryKey: "hormones",
+    tags: ["testosteron", "TRT", "androgen", "cypionat", "ester"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Dlouhý 8-uhlíkový ester testosteronu velmi populární v amerických TRT protokolech.",
+    description: "Testosteron Cypionate (cyklopentylpropionát) je ester testosteronu velmi podobný enanthátu, s mírně delším uhlíkovým řetězcem (8 uhlíků). Poskytuje velmi hladkou farmakokinetickou křivku uvolňování. Používá se pro dlouhodobou substituční terapii mužského hypogonadismu.",
+    effects: [
+      "stimulace anabolismu a retence dusíku ve svalech",
+      "stabilizace hladin volného androgenu v séru",
+      "posílení kostní denzity a syntézy kolagenu",
+      "podpora libida a psychické odolnosti"
+    ],
+    dosage: {
+      "short": "TRT: 100–160 mg týdně (aplikace 1–2x týdně)",
+      "long": "TRT protokol: 100–160 mg týdně rozděleno do dvou injekcí intramuskulárně nebo subkutánně (např. 60 mg každé 3.5 dne). Plazmatický vrchol nastává za 24–48 hodin po injekci."
+    },
+    warning: "Kompletní suprese endogenní osy HPTA. Vyžaduje pravidelné monitorování krevního tlaku, jaterních enzymů, lipidového profilu, hematokritu a hladin volného estradiolu.",
+    mechanism: "Aktivace jaderných androgenních receptorů s následnou stimulací transkripce genů pro syntézu kontraktilních svalových proteinů (aktin, myosin) a stimulace uvolňování IGF-1.",
+    halfLife: "5–8 dní (terminální eliminační poločas)",
+    interactions: [
+      "Inhibitory aromatázy",
+      "SERMy (Tamoxifen, Enclomifen)",
+      "léky ovlivňující krevní srážlivost"
+    ],
+    naturalSources: ["syntetický ester bioidentického testosteronu"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 502,
+    name: "Testosteron Propionate",
+    categoryKey: "hormones",
+    tags: ["testosteron", "krátký-ester", "androgen", "rychlý-nástup"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Rychle působící krátký 3-uhlíkový ester s minimální retencí vody.",
+    description: "Testosteron Propionate je krátký ester testosteronu s rychlým nástupem účinku a rychlým vyloučením z organismu. Je vysoce ceněn pro možnost precizní kontroly hladin v krvi, minimální zadržování podkožní vody a rychlé odeznění případných nežádoucích účinků po vysazení. Vyžaduje však velmi časté injekční aplikace.",
+    effects: [
+      "okamžitý nárůst síly a svalové tvrdosti bez nadměrné retence vody",
+      "rychlé zvýšení libida a energie",
+      "snadná regulace plazmatických hladin",
+      "vhodný do předsoutěžních a rýsovacích fází"
+    ],
+    dosage: {
+      "short": "50–100 mg každý druhý den (EOD) nebo denně",
+      "long": "Vzhledem ke krátkému poločasu je nutná aplikace 50–100 mg každý druhý den (EOD) nebo 25–50 mg denně intramuskulárně. Větší náchylnost k lokální bolestivosti v místě vpichu (PIP) kvůli kratšímu esteru."
+    },
+    warning: "Vyžaduje časté vpichy, což zvyšuje riziko tvorby jizevnaté tkáně v místech aplikace. Rychlé výkyvy hladin při nepravidelném dávkování mohou vyvolat akné a kolísání nálad.",
+    mechanism: "Rychlé odštěpení propionátového esteru tkáňovými esterázami a následná vazba volného testosteronu na androgenní receptor.",
+    halfLife: "19–24 hodin (vyžaduje aplikaci minimálně obden)",
+    interactions: [
+      "Inhibitory aromatázy",
+      "antiandrogeny",
+      "antidiabetika"
+    ],
+    naturalSources: ["syntetický krátký ester"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 503,
+    name: "Testosteron Undecanoate (Nebido)",
+    categoryKey: "hormones",
+    tags: ["testosteron", "ultra-dlouhý", "TRT", "nebido"],
+    rating: 4,
+    colorType: "red",
+    shortDesc: "Ultra-dlouhý ester pro kvartální depotní aplikaci v oficiální medicíně.",
+    description: "Testosteron Undecanoate (známý pod obchodním názvem Nebido v Evropě nebo Aveed v USA) je alifatický 11-uhlíkový ester testosteronu rozpuštěný v ricinovém oleji. Byl vyvinut pro maximální komfort pacientů na TRT s aplikačním intervalem jednou za 10 až 14 týdnů. Existuje také v perorální formě (Andriol) vstřebávané lymfatickým systémem.",
+    effects: [
+      "stabilní dlouhodobá normalizace testosteronémie",
+      "eliminace nutnosti častých injekcí",
+      "podpora kostní denzity a prevence osteoporózy",
+      "zlepšení metabolického syndromu u mužů s deficitem"
+    ],
+    dosage: {
+      "short": "1000 mg intramuskulárně jednou za 10–14 týdnů",
+      "long": "Injekce 1000 mg (4 ml roztoku) se aplikuje velmi pomalu hluboko do gluteálního svalu. Po první injekci následuje druhá obvykle po 6 týdnech pro vytvoření ustálené hladiny, poté každých 10–12 týdnů dle hladiny celkového testosteronu."
+    },
+    warning: "Aplikační objem 4 ml může být nepříjemný. Riziko mikroembolie plicních cév ricinovým olejem při nechtěném intravenózním podání (nutná pomalá aplikace zdravotníkem). Menší flexibilita při potřebě rychlé úpravy dávkování.",
+    mechanism: "Extrémně pomalé uvolňování z hydrofobního ricinového depa s postupným hydrolytickým štěpením esterázy na bioidentický testosteron.",
+    halfLife: "20–34 dní (velmi dlouhý eliminační poločas)",
+    interactions: [
+      "perorální antikoagulancia",
+      "inzulín (snížení glykémie)",
+      "kortikosteroidy (zvýšené riziko edémů)"
+    ],
+    naturalSources: ["syntetický ester s kyselinou undecanovou"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 504,
+    name: "Testosteron Suspenze (Vodní báze)",
+    categoryKey: "hormones",
+    tags: ["testosteron", "suspenze", "okamžitý-nástup", "bez-esteru"],
+    rating: 4,
+    colorType: "red",
+    shortDesc: "Čistý neesterifikovaný krystalický testosteron ve vodním roztoku.",
+    description: "Testosteron Suspenze je nejstarší injekční forma testosteronu (vyvinutá ve 30. letech). Neobsahuje žádný navázaný ester – jde o mikrokrystaly 100% čistého volného testosteronu suspendované ve sterilní vodě. 100 mg suspenze odpovídá reálně celým 100 mg čistého testosteronu (na rozdíl od enanthátu, kde ester tvoří cca 30 % hmotnosti). Způsobuje okamžitý explozivní nárůst androgenu v krvi během několika desítek minut.",
+    effects: [
+      "okamžitý nárůst agresivity, síly a centrální nervové aktivace",
+      "masivní okamžitá stimulace glykogenogeneze",
+      "100% účinné látky bez váhy esteru",
+      "velmi rychlé vyplavení z těla (výhodné před dopingovými kontrolami)"
+    ],
+    dosage: {
+      "short": "50–100 mg denně (nebo 1–2 hodiny před výkonem)",
+      "long": "Aplikuje se 50–100 mg denně intramuskulárně. Před natažením je nutné ampuli důkladně protřepat, aby vznikla homogenní mléčná suspenze. Často se podává 1–2 hodiny před silovým nebo bojovým výkonem."
+    },
+    warning: "Extrémně bolestivé injekce (PIP), vysoké riziko vzniku sterilních i bakteriálních abscesů v místě vpichu. Rychlý masivní skok estradiolu a krevního tlaku. Vyžaduje jehlu většího průměru, aby krystaly neucpaly kanylu.",
+    mechanism: "Okamžitá absorpce volného neesterifikovaného testosteronu z mezibuněčného prostoru svalu přímo do kapilárního oběhu bez nutnosti enzymatické hydrolýzy.",
+    halfLife: "2–4 hodiny (hladiny padají zpět k normálu během 24 hodin)",
+    interactions: [
+      "Inhibitory aromatázy (nutná okamžitá dostupnost)",
+      "antihypertenziva (akutní zátěž cévního tonu)"
+    ],
+    naturalSources: ["syntetický mikrokrystalický testosteron"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 505,
+    name: "Sustanon 250",
+    categoryKey: "hormones",
+    tags: ["testosteron", "směs-esterů", "sustanon", "anabolikum"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Legendární čtyřsložková směs krátkých, středních a dlouhých esterů.",
+    description: "Sustanon 250 (původně vyvinutý firmou Organon) je přesně kalibrovaná směs čtyř různých esterů testosteronu: 30 mg propionátu, 60 mg fenylpropionátu, 60 mg isokaproátu a 100 mg dekanoátu v 1 ml olejového roztoku. Cílem této formulace bylo zajistit jak okamžitý nástup účinku (díky propionátu), tak dlouhodobé působení po dobu několika týdnů (díky dekanoátu).",
+    effects: [
+      "kombinace rychlého nástupu a prodlouženého působení",
+      "vysoký anabolický účinek na nárůst svalové tkáně a síly",
+      "stimulace regenerace a syntézy červených krvinek",
+      "stabilizace hladin bez nutnosti každodenní aplikace"
+    ],
+    dosage: {
+      "short": "250 mg každých 3–5 dní (TRT: 250 mg za 2–3 týdny)",
+      "long": "V medicíně se aplikuje 250 mg jednou za 2–3 týdny. V kulturistice a sportovní praxi se kvůli propionátové složce aplikuje 250–500 mg rozděleno do dávek každé 3 až 4 dny (např. pondělí/čtvrtek), aby se předešlo kolísání hladin."
+    },
+    warning: "Při aplikaci jednou za 3 týdny (dle starých příbalových letáků) dochází k obrovským výkyvům hladin (horská dráha hormonů), což vede k akné, výkyvům nálad a vysoké aromatizaci v prvních dnech.",
+    mechanism: "Sekvenční enzymatická hydrolýza jednotlivých esterů od nejkratšího (propionát, t½ 1 den) přes střední (fenylpropionát a isokaproát) až po dlouhý (dekanoát, t½ 15 dní).",
+    halfLife: "Kompozitní poločas: propionát (1 den), fenylpropionát (2.5 dne), isokaproát (4 dny), dekanoát (15 dní)",
+    interactions: [
+      "Inhibitory aromatázy",
+      "antikoagulancia",
+      "antidiabetika"
+    ],
+    naturalSources: ["farmaceutická směs syntetických esterů"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 506,
+    name: "Transdermální Testosteron Gel (Androgel)",
+    categoryKey: "hormones",
+    tags: ["testosteron", "transdermální", "gel", "TRT", "neinvazivní"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Neinvazivní hydroalkoholický gel pro denní transdermální vstřebávání.",
+    description: "Transdermální gel (Androgel 1% / 1.62%, Testogel) představuje neinvazivní formu substituční léčby aplikovanou na kůži ramen, paží nebo břicha. Po nanesení alkohol rychle vyprchá a testosteron se ukládá do stratum corneum kůže, odkud se pozvolna uvolňuje do krevního oběhu. V kůži je však přítomna vysoká koncentrace enzymu 5-alfa reduktázy, což vede k výrazně vyšší konverzi na dihydrotestosteron (DHT) než u injekcí.",
+    effects: [
+      "napodobení přirozeného cirkadiánního rytmu (vrchol ráno)",
+      "neinvazivní aplikace bez injekcí a jehel",
+      "obnova fyziologické hladiny androgenů",
+      "zvýšená hladina DHT (může výrazně stimulovat libido)"
+    ],
+    dosage: {
+      "short": "20.25–40.5 mg denně ráno na suchou pokožku",
+      "long": "Aplikuje se ráno po sprše na čistou a suchou kůži ramen nebo horní části paží. Neaplikovat na genitálie! Po aplikaci nechat zaschnout 3–5 minut a důkladně si umýt ruce mýdlem. Nekoupat se minimálně 2 hodiny po nanesení."
+    },
+    warning: "Kritické riziko sekundárního přenosu na ženy a děti kontaktem kůže na kůži (může způsobit virilizaci u dětí). Kolísavá kožní absorpce (pouze 9–14 % látky projde kůží). Vysoká hladina DHT může urychlit vypadávání vlasů u geneticky disponovaných mužů.",
+    mechanism: "Pasivní difúze lipofilního volného testosteronu přes lipidové lamely stratum corneum s tvorbou kožního depa a postupným vstupem do dermálního kapilárního řečiště.",
+    halfLife: "Po omytí pokožky klesá hladina v krvi s poločasem cca 12–24 hodin",
+    interactions: [
+      "Tělová mléka a opalovací krémy (aplikovat až s odstupem kvůli změně permeability kůže)",
+      "Finasterid (výrazně ovlivňuje metabolismus gelu v kůži)"
+    ],
+    naturalSources: ["syntetický mikronizovaný bioidentický testosteron"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 507,
+    name: "Dihydrotestosteron (DHT / Androstanolon)",
+    categoryKey: "hormones",
+    tags: ["DHT", "androgen", "síla", "CNS", "neestrogenní"],
+    rating: 4,
+    colorType: "red",
+    shortDesc: "Nejsilnější čistý endogenní androgen – 5x vyšší afinita k receptoru než testosteron.",
+    description: "Dihydrotestosteron (DHT) je biologicky nejaktivnější přirozený androgen v lidském těle. Vzniká ireverzibilní redukcí testosteronu enzymem 5-alfa reduktázou. DHT se nemůže aromatizovat na estrogen, nepůsobí retenci vody ani gynekomastii. Je primárně zodpovědný za mužskou sexuální diferenciaci, vývoj penisu, vousů, tělesného ochlupení, hustotu svalového tonu a centrální neuromuskulární sílu.",
+    effects: [
+      "obrovská stimulace centrální nervové soustavy (CNS síla a drive)",
+      "čistá svalová tvrdost bez retence vody",
+      "maximální podpora libida a kvality erekce",
+      "přirozený antagonismus vůči estrogenním účinkům v prsní tkáni"
+    ],
+    dosage: {
+      "short": "Endogenní metabolit (transdermální gel: 25–50 mg denně)",
+      "long": "V lékařství dostupný jako transdermální gel (Andractim). Využívá se k terapii gynekomastie a mikrofalie. Běžná dávka je 25–50 mg gelu aplikovaného lokálně."
+    },
+    warning: "Silná androgenita: urychluje androgenetickou alopacii (vypadávání vlasů na temeni u disponovaných mužů), stimuluje růst prostaty (BPH) a může způsobit těžké akné na zádech a ramenou.",
+    mechanism: "Afinita k androgennímu receptoru (AR) je 2–5x vyšší než u testosteronu a rychlost disociace z receptoru je 5x pomalejší; nulová afinita k aromatáze.",
+    halfLife: "Plazmatický poločas volného DHT je cca 1–2 hodiny",
+    interactions: [
+      "Inhibitory 5-alfa reduktázy (Finasterid, Dutasterid blokují jeho vznik)",
+      "Saw Palmetto (mírná rostlinná inhibice syntézy DHT)"
+    ],
+    naturalSources: ["endogenní metabolit tvořený v prostatě, kůži, játrech a varlatech"],
+    bannedStatus: "banned-sport (WADA S1.1a), prescription-only"
+  },
+  {
+    id: 508,
+    name: "Volný Testosteron (Free Testosterone)",
+    categoryKey: "hormones",
+    tags: ["volný-testosteron", "biomarker", "anabolismus", "SHBG"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Biologicky aktivní frakce testosteronu nevázaná na transportní proteiny (1–2 %).",
+    description: "Volný testosteron (Free T) představuje pouze 1 až 2 % z celkového množství testosteronu cirkulujícího v krvi. Zbylých cca 44 % je pevně vázáno na SHBG (a je biologicky neaktivní) a cca 54 % je volně vázáno na albumin. Pouze volný a albuminem vázaný testosteron (tzv. bioavailable testosteron) dokáže volně pronikat přes buněčné membrány do cílových tkání a vázat se na androgenní receptory. Je to klíčový marker reálného androgenního statusu.",
+    effects: [
+      "přímá aktivace anabolických procesů v buňkách",
+      "skutečný korelát vitality, libida a svalové síly",
+      "ovlivnění hustoty kostí a erytropoézy",
+      "přímý vstup do neuronů v mozku"
+    ],
+    dosage: {
+      "short": "Referenční mez: 250–700 pmol/l (nebo 8.7–25 pg/ml)",
+      "long": "Jde o diagnostický parametr v séru. Optimalizace se dosahuje snížením nadměrného SHBG (suplementací bóru, Tongkat Ali, optimalizací inzulínu) nebo zvýšením celkové produkce testosteronu."
+    },
+    warning: "Nízký volný testosteron při normálním celkovém testosteronu indikuje vysoké SHBG – stav, kdy je muž klinicky hypogonadální, ačkoliv celkový testosteron vypadá v normě.",
+    mechanism: "Pasivní transmembránový přenos volné nenavázané lipofilní steroidní molekuly do cytoplazmy cílové buňky.",
+    halfLife: "Volná molekula má velmi rychlý obrat v řádu minut",
+    interactions: [
+      "Bór (citrát bóru 10 mg denně prokazatelně snižuje SHBG a zvyšuje Free T)",
+      "Tongkat Ali (eurycomanon uvolňuje testosteron z vazby na SHBG)"
+    ],
+    naturalSources: ["endogenní volná frakce steroidní sekrece"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 509,
+    name: "SHBG (Sex Hormone-Binding Globulin)",
+    categoryKey: "hormones",
+    tags: ["SHBG", "glykoprotein", "regulace", "játra"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Jaterní transportní glykoprotein regulující biologickou dostupnost pohlavních hormonů.",
+    description: "Sex Hormone-Binding Globulin (SHBG) je homodimerní glykoprotein syntetizovaný v játrech. Pevně na sebe váže androgeny a estrogeny (nejvyšší afinitu má k DHT, poté k testosteronu a nejnižší k estradiolu). Funguje jako biologický nárazník chránící hormony před rychlou degradací. Vysoké SHBG snižuje volný testosteron (časté při nízkosacharidových dietách a stárnutí), zatímco příliš nízké SHBG zvyšuje clearance hormonů a bývá spojeno s inzulínovou rezistencí a steatózou jater.",
+    effects: [
+      "regulace rovnováhy mezi volnými a vázanými steroidy",
+      "ochrana pohlavních hormonů před okamžitým jaterním odbouráním",
+      "udržování stabilního rezervoáru cirkulujících steroidů",
+      "ovlivnění buněčné signalizace přes specifický SHBG receptor"
+    ],
+    dosage: {
+      "short": "Referenční mez u mužů: 18–54 nmol/l",
+      "long": "Laboratorní biomarker. Cílem je udržovat SHBG v optimálním středu (cca 25–35 nmol/l). Příliš vysoké hodnoty (>50) uzamykají volný testosteron; příliš nízké (<15) značí metabolickou dysfunkci."
+    },
+    warning: "Drastické hladovění, keto diety a nadměrný příjem kofeinu zvyšují SHBG. Obezita, vysoký inzulín a orální anabolické steroidy naopak srážejí SHBG k nule.",
+    mechanism: "Specifická stereoselektivní vazba hydrofobního steroidního jádra do vazebné kapsy tvořené N-terminální laminin G-like doménou SHBG.",
+    halfLife: "Cirkulační poločas glykoproteinu v plazmě cca 7 dní",
+    interactions: [
+      "Bór (10 mg/den prokazatelně sráží nadměrné SHBG)",
+      "Proviron (Mesterolon - extrémně vysoká afinita k SHBG, vytěsňuje testosteron do volné formy)"
+    ],
+    naturalSources: ["endogenní jaterní glykoprotein"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 510,
+    name: "DHEA (Dehydroepiandrosteron)",
+    categoryKey: "hormones",
+    tags: ["DHEA", "nadledviny", "prekurzor", "longevity"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Nejhojnější cirkulující steroidní prohormon nadledvin a neurosteroid.",
+    description: "DHEA je hlavní cirkulující steroid v lidském těle syntetizovaný v zona reticularis kůry nadledvin a v mozku z pregnenolonu. Slouží jako klíčový metabolický uzel pro syntézu androgenů i estrogenů. Jeho hladina vrcholí kolem 25. roku života a s věkem dramaticky klesá (ve věku 70 let dosahuje pouze 10–20 % maxima). Působí také jako přímý neurosteroid stimulující plasticitu mozku a antagonista kortizolu.",
+    effects: [
+      "prekurzor pro endogenní syntézu testosteronu a estrogenů",
+      "přirozený antagonista katabolických účinků kortizolu",
+      "podpora imunitního systému a kardiovaskulárního zdraví",
+      "zlepšení hustoty kostí a elasticity pokožky"
+    ],
+    dosage: {
+      "short": "25–50 mg denně ráno (ženy: 5–15 mg)",
+      "long": "U mužů se obvykle začíná na 25 mg ráno se snídaní. Po 4 týdnech zkontrolovat hladinu DHEA-S v séru a případně navýšit na 50 mg. Dávky nad 100 mg mohou vést k nadměrné aromatizaci na estrogeny."
+    },
+    warning: "Může konvertovat na estrogen i DHT – u predisponovaných jedinců hrozí akné, mastná pleť nebo citlivost bradavek. V profesionálním sportu zakázáno (WADA).",
+    mechanism: "Působí jako substrát pro enzymy 3β-HSD a 17β-HSD s konverzí na androstendion a testosteron; přímý pozitivní alosterický modulátor NMDA receptorů a antagonista GABA-A receptorů.",
+    halfLife: "Plazmatický poločas volného DHEA je cca 15–30 minut (jeho sulfát DHEA-S má poločas 16–20 hodin)",
+    interactions: [
+      "Pregnenolon (upstream prekurzor)",
+      "kortikosteroidy (antagonistické působení)",
+      "antidiabetika (zvyšuje inzulínovou senzitivitu)"
+    ],
+    naturalSources: ["endogenní hormon kůry nadledvin"],
+    bannedStatus: "banned-sport (WADA S1.2), v ČR na předpis / doplněk v USA"
+  },
+  {
+    id: 511,
+    name: "DHEA-S (DHEA Sulfát)",
+    categoryKey: "hormones",
+    tags: ["DHEA-S", "nadledviny", "sulfát", "biomarker"],
+    rating: 4,
+    colorType: "green",
+    shortDesc: "Stabilní zásobní cirkulující pool DHEA vázaný na sulfátovou skupinu.",
+    description: "DHEA sulfát (DHEA-S) je sulfatovaná forma DHEA vznikající v nadledvinách působením enzymu sulfotransferázy (SULT2A1). Na rozdíl od volného DHEA nepodléhá cirkadiánnímu kolísání, má velmi pomalý jaterní metabolismus a v krvi cirkuluje v řádově vyšších koncentracích pevně vázaný na albumin. Je to nejpřesnější klinický laboratorní marker funkční kapacity kůry nadledvin a biologického věku.",
+    effects: [
+      "stabilní dlouhodobý zásobník pro syntézu tkáňových steroidů",
+      "přesný biomarker funkce nadledvin a vitality",
+      "neurosteroidní ochrana v centrálním nervovém systému",
+      "udržování integrity cévního endotelu"
+    ],
+    dosage: {
+      "short": "Referenční mez muži: 4.5–12.0 µmol/l (dle věku)",
+      "long": "Laboratorní marker v séru. Při suplementaci volného DHEA dochází k přirozenému nárůstu DHEA-S, který slouží ke kontrole správného nastavení dávky."
+    },
+    warning: "Extrémně vysoké hodnoty mohou značit hyperplazii nebo adenom kůry nadledvin.",
+    mechanism: "Reverzibilní desulfatace enzymem steroidní sulfatáza (STS) v periferních tkáních uvolňuje aktivní volný DHEA přesně tam, kde je potřeba pro intrakrinní steroidogenezi.",
+    halfLife: "16–20 hodin (velmi stabilní plazmatická koncentrace)",
+    interactions: [
+      "Inhibitory steroidní sulfatázy",
+      "perorální antikoncepce a estrogeny (mohou snižovat hladinu)"
+    ],
+    naturalSources: ["endogenní sulfatovaný steroid nadledvin"],
+    bannedStatus: "banned-sport (WADA S1.2)"
+  },
+  {
+    id: 512,
+    name: "Pregnenolon",
+    categoryKey: "hormones",
+    tags: ["neurosteroid", "mateřský-hormon", "mozek", "paměť"],
+    rating: 5,
+    colorType: "yellow",
+    shortDesc: "Mateřský hormon celé steroidogeneze a mocný prokognitivní neurosteroid.",
+    description: "Pregnenolon je mateřský prohormon, ze kterého v těle vznikají všechny ostatní steroidní hormony – DHEA, progesteron, testosteron, estrogeny, kortizol i aldosteron. Vzniká přímo v mitochondriích z cholesterolu odštěpením postranního řetězce enzymem CYP11A1 (P450scc). Kromě role v endokrinním systému je jedním z nejvýznamnějších neurosteroidů v mozku: posiluje paměť, stimuluje růst nových synapsí a chrání neurony před neurotoxicitou.",
+    effects: [
+      "zlepšení konsolidace paměti a rychlosti učení",
+      "prekurzor pro rovnovážnou tvorbu všech steroidních hormonů",
+      "zvýšení mentální jasnosti a potlačení mozkové mlhy",
+      "modulace nálady a redukce úzkosti (přes metabolity)"
+    ],
+    dosage: {
+      "short": "25–50 mg denně ráno (sublinguálně nebo orálně)",
+      "long": "Začíná se na 25 mg ráno se snídaní. V případě potřeby hlubší neurokognitivní podpory lze navýšit na 50 mg. Vyšší dávky (>100 mg) mohou vést k nadměrné sedaci nebo naopak excitaci dle individuálního metabolického větvení."
+    },
+    warning: "Může konvertovat do sedativních metabolitů (allopregnanolon) nebo excitačních (pregnenolon sulfát). Lidé s epilepsií by měli užívat pouze pod lékařským dohledem.",
+    mechanism: "Pozitivní alosterická modulace NMDA receptorů a negativní modulace GABA-A receptorů (pregnenolon sulfát); prekurzor steroidních kaskád.",
+    halfLife: "Cca 2–4 hodiny (metabolity přetrvávají déle)",
+    interactions: [
+      "Benzodiazepiny a alkohol (kompetice na GABA-A receptoru)",
+      "DHEA (synergická kombinace pro neuroendokrinní obnovu)"
+    ],
+    naturalSources: ["syntetizován v mitochondriích nadledvin, gonád a gliových buněk mozku"],
+    bannedStatus: "legal (v ČR na předpis / v USA volně prodejné)"
+  },
+  {
+    id: 513,
+    name: "Progesteron",
+    categoryKey: "hormones",
+    tags: ["progesteron", "gestagen", "neuroprotekce", "GABA"],
+    rating: 4,
+    colorType: "green",
+    shortDesc: "Klíčový hormon ženského cyklu a důležitý neuroprotektivní regulátor u mužů.",
+    description: "Progesteron je steroidní hormon syntetizovaný ve vaječnících (žluté tělísko), nadledvinách a u mužů v malé míře také ve varlatech. U žen řídí druhou polovinu menstruačního cyklu a těhotenství. U mužů hraje zásadní a často opomíjenou roli: je antagonistou estrogenů, působí jako přírodní inhibitor 5-alfa reduktázy (chrání prostatu) a metabolizuje se na allopregnanolon – nejsilnější endogenní zklidňující látku stimulující GABA-A receptory v mozku.",
+    effects: [
+      "hluboký zklidňující účinek na nervovou soustavu (indukce spánku)",
+      "přirozená protiváha nadbytku estrogenů a prevence estrogenové dominance",
+      "neuroprotekce po poranění mozku a podpora tvorby myelinu",
+      "přirozená kompetitivní inhibice enzymu 5-alfa reduktázy"
+    ],
+    dosage: {
+      "short": "Ženy: 100–200 mg na noc (luteální fáze); Muži: 5–15 mg",
+      "long": "Ženy v menopauze nebo s estrogenovou dominancí: 100–200 mg mikronizovaného bioidentického progesteronu (Utrogestan) orálně nebo vaginálně večer. U mužů se používá nízká dávka v transdermálním krému (5–10 mg) k modulaci DHT a spánku."
+    },
+    warning: "Perorální forma vyvolává ospalost kvůli jaterní konverzi na allopregnanolon – užívat výhradně těsně před spaním. Syntetické progestiny (např. medroxyprogesteron) mají odlišné, často škodlivé účinky a nesmí být zaměňovány s bioidentickým progesteronem.",
+    mechanism: "Vazba na intracelulární progesteronové receptory (PR-A, PR-B); metabolická konverze na allopregnanolon, který funguje jako pozitivní alosterický modulátor GABA-A receptorů; kompetitivní antagonismus aldosteronových receptorů.",
+    halfLife: "Cca 5–18 hodin (mikronizovaná perorální forma)",
+    interactions: [
+      "Sedativa, alkohol a léky na spaní (aditivní útlum CNS)",
+      "estrogeny (komplementární hormonální vyvážení)"
+    ],
+    naturalSources: ["corpus luteum vaječníků, placenta, kůra nadledvin"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 514,
+    name: "Estradiol (E2)",
+    categoryKey: "hormones",
+    tags: ["estrogen", "E2", "kosti", "kardioprotekce", "mozek"],
+    rating: 5,
+    colorType: "yellow",
+    shortDesc: "Nejsilnější přirozený estrogen – naprosto nezbytný pro kosti, cévy, mozek a libido i u mužů.",
+    description: "Estradiol (17β-estradiol) je biologicky nejaktivnější forma estrogenu. U žen je hlavním hormonem plodnosti. U mužů vzniká periferní aromatizací testosteronu enzymem aromatáza v tukové tkáni, mozku a varlatech. V mužském těle je naprosto kritický: jeho úplné potlačení (např. předávkováním aromatázových inhibitorů) vede k destrukci kostní denzity, vypadávání vlasů, ztrátě libida, erektilní dysfunkci, depresi a masivnímu zvýšení kardiovaskulárního rizika.",
+    effects: [
+      "udržení kostní minerální hustoty (mineralizace kostí)",
+      "kardioprotekce: podpora endoteliální syntézy oxidu dusnatého (eNOS) a zdravý lipidový profil",
+      "klíčový regulátor libida a sexuální potence u obou pohlaví",
+      "ochrana neuronů před oxidačním stresem a podpora kognice"
+    ],
+    dosage: {
+      "short": "Muži v séru: 70–150 pmol/l (20–40 pg/ml)",
+      "long": "Diagnostický parametr. U mužů na TRT je cílem udržovat estradiol v optimálním poměru k testosteronu (poměr Total T : E2 cca 15:1 až 20:1), nikoliv jej agresivně srážet k nule. U žen v HRT: transdermální náplast 25–50 mcg denně nebo gel."
+    },
+    warning: "Příliš vysoký estradiol u mužů způsobuje gynekomastii, zadržování vody, emoční labilitu a hypertenzi. Příliš nízký estradiol (<50 pmol/l) je však ještě nebezpečnější: způsobuje bolesti kloubů, impotenci a riziko osteoporózy.",
+    mechanism: "Vazba na jaderné estrogenové receptory ER-alfa a ER-beta regulující genovou transkripci; rychlá membránová signalizace přes receptor spřažený s G-proteinem GPER (GPR30).",
+    halfLife: "Plazmatický poločas volného E2 je cca 30–60 minut",
+    interactions: [
+      "Inhibitory aromatázy (blokují vznik E2 z testosteronu)",
+      "SERMy (blokují estrogenové receptory v určitých tkáních)"
+    ],
+    naturalSources: ["vaječníky (ženy), periferní aromatizace z testosteronu (muži)"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 515,
+    name: "Estron (E1)",
+    categoryKey: "hormones",
+    tags: ["estrogen", "E1", "menopauza", "tuková-tkáň"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Slabší estrogen převažující po menopauze a syntetizovaný v tukové tkáni.",
+    description: "Estron (E1) je jedním ze tří hlavních endogenních estrogenů. Má přibližně 10x nižší biologickou aktivitu než estradiol. Vzniká převážně v tukové tkáni aromatizací androstendionu. U žen v postmenopauze se stává dominantním cirkulujícím estrogenem. Může být v tkáních reverzibilně konvertován na estradiol enzymem 17β-HSD typ 1.",
+    effects: [
+      "udržování bazální estrogenní signalizace po menopauze",
+      "podpora metabolismu kostní tkáně",
+      "zásobní pool pro konverzi na estradiol"
+    ],
+    dosage: {
+      "short": "Diagnostický marker v krevním séru",
+      "long": "Běžně se samostatně nesuplementuje; je součástí některých kombinovaných preparátů (např. konjugované koňské estrogeny). Sleduje se poměr E1 k E2."
+    },
+    warning: "Zvýšené hladiny estronu u obézních jedinců mohou zvyšovat riziko hormonálně dependentních nádorů prsu a endometria.",
+    mechanism: "Slabá parciální vazba na ER-alfa a ER-beta receptory.",
+    halfLife: "Cca 2–3 hodiny",
+    interactions: ["Inhibitory aromatázy (snižují hladinu estronu)"],
+    naturalSources: ["tuková tkáň, kůra nadledvin, vaječníky"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 516,
+    name: "Estriol (E3)",
+    categoryKey: "hormones",
+    tags: ["estrogen", "E3", "bezpečný", "sliznice"],
+    rating: 4,
+    colorType: "green",
+    shortDesc: "Nejslabší a nejbezpečnější estrogen specifický pro sliznice a těhotenství.",
+    description: "Estriol (E3) je slabý estrogen produkovaný ve velkém množství placentou během těhotenství. Mimo graviditu vzniká hydroxylací estronu a estradiolu v játrech. Má 80x slabší afinitu k receptorům než estradiol a váže se preferenčně na ER-beta receptory. Díky tomu má výjimečný bezpečnostní profil – nestimuluje proliferaci prsní ani děložní tkáně a je zlatým standardem lokální léčby vaginální atrofie a suchosti sliznic.",
+    effects: [
+      "obnova elasticity a hydratace sliznic a močových cest",
+      "selektivní vazba na ER-beta s protizánětlivým účinkem",
+      "vysoký bezpečnostní profil bez rizika stimulace prsní žlázy",
+      "ochrana před urogenitálními infekcemi v menopauze"
+    ],
+    dosage: {
+      "short": "0.5–1 mg lokálně v krému nebo čípku",
+      "long": "Nejčastěji ve formě vaginálního krému (Ovestin) 0.5 mg denně po dobu prvních 2–3 týdnů, poté udržovací dávka 2x týdně."
+    },
+    warning: "Velmi bezpečný lék s minimální systémovou absorpcí při lokálním podání.",
+    mechanism: "Krátkodobá slabá vazba na estrogenové receptory (zejména ER-beta) s rychlou disociací z jádra, což brání stimulaci buněčného dělení.",
+    halfLife: "Plazmatický poločas cca 20–30 minut",
+    interactions: ["Léky ovlivňující jaterní enzymy CYP"],
+    naturalSources: ["placenta, játra"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 517,
+    name: "Prolaktin",
+    categoryKey: "hormones",
+    tags: ["prolaktin", "hypofýza", "dopamin", "refrakterní-fáze"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Peptidový hormon adenohypofýzy – antagonista dopaminu řídící refrakterní fázi.",
+    description: "Prolaktin je polypeptidový hormon (199 aminokyselin) vylučovaný laktotrofními buňkami předního laloku hypofýzy. U žen stimuluje laktaci. U mužů je jeho sekrece přísně tlumena dopaminem (který funguje jako prolactin-inhibiting factor). Zvýšená hladina prolaktinu nastává bezprostředně po ejakulaci (způsobuje sexuální refrakterní fázi – únavu, ztrátu erekce a libida). Chronická hyperprolaktinémie u mužů způsobuje impotenci, ztrátu libida a gynekomastii.",
+    effects: [
+      "regulace laktace a mateřského chování (ženy)",
+      "modulace imunitního systému a proliferace lymfocytů",
+      "spouštěč sexuální sytosti a refrakterní fáze po orgasmu"
+    ],
+    dosage: {
+      "short": "Referenční mez muži: 80–350 mIU/l (4–15 ng/ml)",
+      "long": "Biomarker v séru. Při hyperprolaktinémii způsobené stresem, léky nebo 19-nor steroidy (trenbolon, nandrolon) se snižuje dopaminovými agonisty (Cabergolin 0.25 mg)."
+    },
+    warning: "Chronicky vysoký prolaktin sráží testosteron, blokuje erekci, způsobuje galaktoreu (výtok z bradavek) a může značit prolaktinom (benigní adenom hypofýzy).",
+    mechanism: "Vazba na membránové prolaktinové receptory aktivující kaskádu JAK2/STAT5.",
+    halfLife: "20–50 minut",
+    interactions: [
+      "Dopaminergní látky (Cabergolin, Bromokriptin, P5P masivně snižují prolaktin)",
+      "Antipsychotika a antidepresiva (zvyšují prolaktin blokádou D2)"
+    ],
+    naturalSources: ["laktotrofní buňky adenohypofýzy"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 518,
+    name: "Kortizol (Hydrokortizon)",
+    categoryKey: "hormones",
+    tags: ["kortizol", "stres", "glukokortikoid", "energie", "katabolismus"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Hlavní glukokortikoid kůry nadledvin řídící adaptaci na stres a ranní probuzení.",
+    description: "Kortizol je životně nezbytný steroidní hormon produkovaný v zona fasciculata kůry nadledvin pod taktovkou ACTH. Má výrazný cirkadiánní rytmus s maximem cca 30–45 minut po probuzení (Cortisol Awakening Response - CAR), který člověka probudí, mobilizuje glukózu a nastartuje krevní tlak. V akutním stresu je záchranným mechanismem; chronicky zvýšený kortizol je však silně katabolický, pálí svalovou tkáň, ukládá viscerální tuk a suprimuje imunitu.",
+    effects: [
+      "mobilizace glukózy glukoneogenezí v játrech",
+      "přirozený cirkadiánní budíček a ranní bdělost",
+      "silný protizánětlivý a imunosupresivní účinek",
+      "udržení cévního tonu a krevního tlaku"
+    ],
+    dosage: {
+      "short": "Ranní norma v séru: 140–550 nmol/l",
+      "long": "Při substituční léčbě Addisonovy choroby se podává 15–25 mg hydrokortizonu denně rozděleno do 2–3 dávek kopírujících fyziologický rytmus (nejvíce ráno). Biohackeři sledují slinný 4bodový kortizolový profil."
+    },
+    warning: "Chronický nadbytek vede k Cushingovu syndromu (obezita trupu, tenké končetiny, hyperglykémie, atrofie kůže). Deficit vede k Addisonově krizi (život ohrožující kolaps krevního tlaku).",
+    mechanism: "Vazba na intracelulární glukokortikoidní receptory (GR), translokace do jádra a inhibice prozánětlivého faktoru NF-kB (transreprese); stimulace genů glukoneogeneze (transaktivace).",
+    halfLife: "60–90 minut",
+    interactions: [
+      "Ashwagandha (KSM-66 prokazatelně snižuje chronicky zvýšený kortizol až o 30 %)",
+      "Fosfatidylserin (400–800 mg tlumí kortizolový skok po těžkém tréninku)"
+    ],
+    naturalSources: ["kůra nadledvin"],
+    bannedStatus: "banned-sport (systémové podání glukokortikoidů WADA S9), prescription-only"
+  },
+  {
+    id: 519,
+    name: "Kortizon",
+    categoryKey: "hormones",
+    tags: ["kortizon", "metabolit", "glukokortikoid", "ledviny"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Inaktivní metabolit kortizolu chránící mineralokortikoidní receptory.",
+    description: "Kortizon je metabolicky neaktivní 11-keto forma kortizolu. V těle vzniká činností enzymu 11β-HSD2 (přítomného v ledvinách), který přeměňuje aktivní kortizol na neaktivní kortizon. Tento mechanismus je životně důležitý: chrání receptory pro aldosteron před zaplavením kortizolem. V játrech může být enzymem 11β-HSD1 přeměněn zpět na aktivní kortizol.",
+    effects: [
+      "ochrana ledvin před nadměrnou retencí sodíku",
+      "zásobní pool pro rychlou aktivaci v játrech",
+      "regulace lokální dostupnosti glukokortikoidů v tkáních"
+    ],
+    dosage: {
+      "short": "25 mg kortizon acetátu = cca 20 mg hydrokortizonu",
+      "long": "Klinicky se používá jako proléčivo (kortizon acetát), které se v játrech musí nejprve metabolizovat na hydrokortizon."
+    },
+    warning: "Lékořice (kyselina glycyrrhizová) blokuje enzym 11β-HSD2, což způsobí, že kortizol nekontrolovaně aktivuje aldosteronové receptory, což vede k těžké hypertenzi a ztrátě draslíku.",
+    mechanism: "Neaktivní molekula s minimální afinitou ke GR receptorům; vyžaduje redukci na 11β-hydroxylovou skupinu.",
+    halfLife: "Cca 30 minut",
+    interactions: ["Lékořice (glycyrrhizin - inhibice deaktivace)"],
+    naturalSources: ["játra, ledviny"],
+    bannedStatus: "banned-sport (WADA S9), prescription-only"
+  },
+  {
+    id: 520,
+    name: "Aldosteron",
+    categoryKey: "hormones",
+    tags: ["aldosteron", "tlak", "elektrolyty", "ledviny", "sodík"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Hlavní mineralokortikoid řídící retenci sodíku, vylučování draslíku a tlak krve.",
+    description: "Aldosteron je steroidní hormon produkovaný v zona glomerulosa kůry nadledvin. Je koncovým vykonavatelem osy RAAS (renin-angiotensin-aldosteron). Reaguje na pokles krevního tlaku nebo vzestup draslíku v krvi tím, že stimuluje ledviny k masivnímu zpětnému vstřebávání sodíku a vody z primární moči výměnou za vylučování draslíku a vodíkových iontů. Zásadně určuje objem extracelulární tekutiny a krevní tlak.",
+    effects: [
+      "zadržování sodíku a vody v oběhu",
+      "udržení fyziologického krevního tlaku a objemu plazmy",
+      "vylučování přebytečného draslíku ledvinami",
+      "regulace acidobazické rovnováhy"
+    ],
+    dosage: {
+      "short": "Referenční mez v séru: 100–800 pmol/l (dle polohy těla)",
+      "long": "Diagnostický parametr. Při primárním hyperaldosteronismu (Connův syndrom) je tlak vysoký a draslík nízký. K blokádě se používá Spironolakton nebo Eplerenon."
+    },
+    warning: "Nadbytek aldosteronu vede k hypertenzi, otokům a srdeční fibróze. Nedostatek (Addisonova choroba) vede k dehydrataci, hyponatrémii a fatálnímu poklesu tlaku.",
+    mechanism: "Vazba na mineralokortikoidní receptor (MR) v distálním tubulu a sběracím kanálku nefronu, upregulace exprese epiteliálních sodíkových kanálů (ENaC) a Na+/K+-ATPázy.",
+    halfLife: "15–20 minut",
+    interactions: [
+      "Spironolakton a Eplerenon (kompetitivní blokátory receptoru)",
+      "Telmisartan (blokáda upstream stimulace přes AT1)"
+    ],
+    naturalSources: ["zona glomerulosa kůry nadledvin"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 521,
+    name: "Růstový hormon (HGH / Somatotropin)",
+    categoryKey: "hormones",
+    tags: ["HGH", "somatotropin", "lipolyza", "regenerace", "peptid"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "191-aminokyselinový polypeptid z adenohypofýzy – master regenerace tkání a spalování tuků.",
+    description: "Lidský růstový hormon (HGH / somatotropin) je 191-aminokyselinový protein vylučovaný somatotrofními buňkami předního laloku hypofýzy v pulzech, zejména v prvních fázích hlubokého pomalovlnného spánku (SWS). Působí přímo na buňky (stimuluje masivní lipolýzu a mobilizaci mastných kyselin) a nepřímo stimulací syntézy IGF-1 v játrech, který zprostředkovává anabolické, reparační a mitogenní účinky na svaly, šlachy a chrupavky.",
+    effects: [
+      "výrazné urychlení spalování viscerálního i podkožního tuku",
+      "urychlení hojení šlach, vazů, chrupavek a kostí",
+      "zlepšení elasticity kůže, syntézy kolagenu a tloušťky dermis",
+      "hluboká regenerace nervového systému a kvality spánku",
+      "stimulace jaterní produkce IGF-1"
+    ],
+    dosage: {
+      "short": "Anti-aging / regenerace: 1–2 IU denně; Sport: 3–6 IU denně",
+      "long": "Aplikuje se subkutánně (SubQ) inzulínovou stříkačkou večer před spaním nebo ráno nalačno. Pro regeneraci a anti-aging postačují 1–2 IU denně. Po naředění bakteriostatickou vodou skladovat výhradně v chladničce při 2–8 °C a netřepat (molekula je křehká)."
+    },
+    warning: "Vyšší dávky (>4 IU) způsobují syndrom karpálního tunelu, retenci vody v rukou a nohou, inzulínovou rezistenci (HGH působí proti inzulínu) a riziko akromegalie (růst čelisti, dlaní a vnitřních orgánů). Kontraindikováno při aktivním onkologickém onemocnění.",
+    mechanism: "Dimerizace membránových GHR receptorů na hepatocytech a adipocytech; aktivace kinázy JAK2 a fosforylace STAT5; stimulace exprese IGF-1 a aktivace hormon-senzitivní lipázy (HSL).",
+    halfLife: "Plazmatický poločas volného HGH je pouze 20–30 minut (jeho downstream mediátor IGF-1 má poločas cca 15–20 hodin)",
+    interactions: [
+      "Inzulín (antagonistické působení na glykémii; při vysokých dávkách HGH nutno hlídat hladinu cukru)",
+      "Hormony štítné žlázy (HGH urychluje konverzi T4 na T3)",
+      "GHRH a GHRP peptidy (synergická endogenní stimulace pulzů)"
+    ],
+    naturalSources: ["somatotrofní buňky adenohypofýzy"],
+    bannedStatus: "banned-sport (WADA S2.1), prescription-only"
+  },
+  {
+    id: 522,
+    name: "IGF-1 (Somatomedin C)",
+    categoryKey: "hormones",
+    tags: ["IGF-1", "anabolismus", "hyperplazie", "peptid", "svaly"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Primární tkáňový mediátor anabolického účinku růstového hormonu.",
+    description: "Insulin-like Growth Factor 1 (IGF-1 / Somatomedin C) je 70-aminokyselinový peptidový hormon syntetizovaný primárně v játrech po stimulaci růstovým hormonem. Strukturálně se podobá proinzulínu. Na rozdíl od většiny látek, které způsobují pouze svalovou hypertrofii (zvětšení stávajících buněk), dokáže IGF-1 aktivovat satelitní kmenové buňky a indukovat svalovou hyperplazii (vznik nových svalových vláken).",
+    effects: [
+      "aktivace satelitních buněk a vznik nových svalových jader",
+      "silná podpora syntézy bílkovin a potlačení proteolýzy",
+      "obnova chrupavek, šlach a neuronálních sítí",
+      "zvýšení citlivosti na příjem živin v cílové tkáni"
+    ],
+    dosage: {
+      "short": "20–50 mcg denně subkutánně (nebo IGF-1 LR3)",
+      "long": "Rekombinantní lidský IGF-1 (Increlex) se aplikuje subkutánně. V biohackingu a sportu se častěji používá upravený analog IGF-1 LR3 (s prodlouženým poločasem), aplikovaný v dávkách 20–50 mcg po tréninku."
+    },
+    warning: "Riziko akutní hypoglykémie (má inzulínu podobnou aktivitu – nutno přijmout sacharidy). Silný mitogen – stimuluje dělení všech buněk v těle, striktně kontraindikováno při jakémkoliv nádorovém riziku.",
+    mechanism: "Vazba na tyrozinkinázový IGF-1R receptor, spuštění signalizace PI3K/Akt/mTORC1 a dráhy MAPK/ERK podporující přežití a hypertrofii buněk.",
+    halfLife: "Nativní volný IGF-1 má poločas cca 10–20 minut (v komplexu s vazebným proteinem IGFBP-3 až 16 hodin)",
+    interactions: [
+      "Sacharidy a inzulín (prevence hypoglykémie)",
+      "HGH (komplementární působení)",
+      "metformin (může mírně snižovat hladinu IGF-1)"
+    ],
+    naturalSources: ["syntéza v játrech a autokrinně/parakrinně ve svalech"],
+    bannedStatus: "banned-sport (WADA S2.2), prescription-only"
+  },
+  {
+    id: 523,
+    name: "Inzulín",
+    categoryKey: "hormones",
+    tags: ["inzulin", "anabolismus", "glukoza", "slinivka", "peptid"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Nejsilnější skladovací a anabolický hormon lidského těla.",
+    description: "Inzulín je peptidový hormon tvořený dvěma disulfidicky spojenými řetězci (A a B), produkovaný beta-buňkami Langerhansových ostrůvků pankreatu. Je hlavním regulátorem energetického metabolismu: reaguje na vzestup glukózy a aminokyselin v krvi tím, že otevírá buněčné transportéry GLUT4 a přesouvá živiny z krve do svalů, jater a tukové tkáně. Zastavuje veškerý katabolismus, lipolýzu a stimuluje syntézu glykogenu i svalových bílkovin.",
+    effects: [
+      "masivní transport glukózy a aminokyselin do svalových buněk",
+      "okamžité zastavení katabolismu a rozpadu svalových bílkovin",
+      "rychlé doplnění svalového a jaterního glykogenu",
+      "stimulace proteosyntézy"
+    ],
+    dosage: {
+      "short": "Diabetologie: dle glykémie; Sport: extrémně rizikové!",
+      "long": "V medicíně přísně dle hladin glukózy a sacharidových jednotek. V kulturistice se zneužívají rychle působící analogy (Humalog, NovoRapid) v dávkách 5–10 IU bezprostředně po tréninku, vždy zapité minimálně 10 g rychlých sacharidů na každou 1 IU inzulínu."
+    },
+    warning: "KRITICKÉ NEBEZPEČÍ: Špatné odhadnutí dávky nebo nedostatek sacharidů vede k těžké hypoglykémii, bezvědomí, poškození mozku a smrti během několika minut. Jedna z nejnebezpečnějších látek při neodborném použití. Riziko ukládání masivního množství tuku.",
+    mechanism: "Vazba na inzulínový tyrozinkinázový receptor (IR), autofosforylace a fosforylace substrátů IRS-1/2, aktivace PI3K/Akt a následná translokace vezikul s glukózovými transportéry GLUT4 k buněčné membráně.",
+    halfLife: "Plazmatický poločas nativního inzulínu je 4–6 minut",
+    interactions: [
+      "Rychlé sacharidy / dextróza (životně nutný kofaktor)",
+      "Beta-blokátory (maskují varovné příznaky hypoglykémie, jako je třes a pocení)"
+    ],
+    naturalSources: ["beta-buňky Langerhansových ostrůvků slinivky břišní"],
+    bannedStatus: "banned-sport (WADA S4.4), prescription-only"
+  },
+  {
+    id: 524,
+    name: "Glukagon",
+    categoryKey: "hormones",
+    tags: ["glukagon", "glykemie", "slinivka", "lipolyza"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Pankreatický antagonista inzulínu mobilizující glukózu z jaterních zásob.",
+    description: "Glukagon je 29-aminokyselinový polypeptid produkovaný alfa-buňkami pankreatu. Působí v přímé opozici vůči inzulínu: vyplavuje se při poklesu glykémie a stimuluje játra k okamžitému štěpení glykogenu (glykogenolýza) a tvorbě nové glukózy z aminokyselin a glycerolu (glukoneogeneze). Funguje také jako záchranná injekce při těžké inzulínové hypoglykémii.",
+    effects: [
+      "rychlé zvýšení hladiny krevního cukru při hypoglykémii",
+      "stimulace jaterní glykogenolýzy a glukoneogeneze",
+      "podpora lipolýzy v tukové tkáni",
+      "záchranná léčba při těžké inzulínové reakci"
+    ],
+    dosage: {
+      "short": "Záchranná dávka: 1 mg subkutánně / intramuskulárně",
+      "long": "Pohotovostní injekční set (GlucaGen HypoKit) obsahuje 1 mg lyofilizovaného prášku a sterilní vodu. Aplikuje se okamžitě při těžké hypoglykémii s poruchou vědomí."
+    },
+    warning: "Nefunguje u pacientů s vyčerpaným jaterním glykogenem (např. po dlouhém hladovění nebo těžkém vytrvalostním výkonu). Po aplikaci může způsobit nauzeu a zvracení.",
+    mechanism: "Vazba na glukagonový receptor spřažený s Gs-proteinem v hepatocytech, aktivace adenylátcyklázy, vzestup cAMP a aktivace proteinkinázy A (PKA).",
+    halfLife: "3–6 minut",
+    interactions: ["Inzulín (vzájemní fyziologičtí antagonisté)"],
+    naturalSources: ["alfa-buňky pankreatu"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 525,
+    name: "Melatonin",
+    categoryKey: "hormones",
+    tags: ["melatonin", "spanek", "cirkadianni", "antioxidant", "epifyza"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Hormon tmy z epifýzy řídící cirkadiánní rytmus a master mitochondriální antioxidant.",
+    description: "Melatonin (N-acetyl-5-methoxytryptamin) je neurohormon syntetizovaný v epifýze (pineální žláze) z aminokyseliny L-tryptofanu přes serotonin. Jeho produkce je přísně blokována modrým světlem dopadajícím na ipRGC buňky sítnice. Se setměním stoupá a signalizuje tělu příchod biologické noci. Mimo epifýzu je syntetizován ve velkém množství v mitochondriích všech buněk, kde funguje jako nejsilnější známý přímý antioxidant chránící mitochondriální DNA.",
+    effects: [
+      "zkrácení doby nutné k usnutí a optimalizace spánkové architektury",
+      "synchronizace cirkadiánního rytmu (řešení jet lag a práce na směny)",
+      "mimořádně silná mitochondriální antioxidační ochrana",
+      "modulace imunitního systému a protizánětlivý účinek"
+    ],
+    dosage: {
+      "short": "0.3–3 mg 30–60 minut před spaním",
+      "long": "Pro fyziologickou indukci spánku postačuje mikrodávka 0.3–0.5 mg. Běžná dávka je 1–3 mg cca 30–60 minut před spaním v naprosté tmě. Při silném jet lagu až 5 mg. Vyšší dávky mohou způsobit ranní otupělost."
+    },
+    warning: "Užívat pouze v noci před spaním! Užití ve dne narušuje cirkadiánní hodiny. Vyhýbat se modrému světlu z displejů, které okamžitě zastavuje sekreci melatoninu.",
+    mechanism: "Vazba na membránové receptory MT1 (indukce spánku přes inhibici neuronů SCN) a MT2 (fázový posun cirkadiánních hodin); přímá neutralizace volných hydroxylových radikálů v mitochondriích.",
+    halfLife: "30–50 minut (rychlá eliminace)",
+    interactions: [
+      "Kofein (antagonizuje účinek a snižuje produkci melatoninu)",
+      "fluvoxamin (silný inhibitor CYP1A2 masivně zvyšuje hladinu melatoninu)",
+      "GABA modulátory (synergické uklidnění)"
+    ],
+    naturalSources: ["epifýza, vičně, vlašské ořechy, rajčata"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 526,
+    name: "Oxytocin",
+    categoryKey: "hormones",
+    tags: ["oxytocin", "bonding", "duvera", "peptid", "orgasmus"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Neuropeptid lásky, důvěry, sociálního pouta a orgasmu.",
+    description: "Oxytocin je nonapeptidový neuropeptid syntetizovaný v paraventrikulárním a supraoptickém jádře hypotalamu a vylučovaný neurohypofýzou. Je známý svou rolí při porodu a kojení, avšak v lidské psychice je centrálním hormonem sociální vazby, empatie, partnerské důvěry a snižování strachu v amygdale. Vyplavuje se při fyzickém kontaktu, objetí, masáži a během sexuálního orgasmu.",
+    effects: [
+      "prohloubení partnerské intimity, důvěry a sociální empatie",
+      "výrazné snížení hladiny kortizolu a úzkosti v sociálních situacích",
+      "modulace sexuálního vyvrcholení a intenzity orgasmu",
+      "regenerace svalových kmenových buněk a protizánětlivý účinek"
+    ],
+    dosage: {
+      "short": "Intranasální sprej: 10–24 IU (1–2 vstřiky)",
+      "long": "Aplikuje se intranasálně (nosní sprej) 15–30 minut před sociální interakcí nebo intimním stykem. Nosní sliznice umožňuje částečný přímý transport podél čichového nervu do mozku."
+    },
+    warning: "Při chronickém vysokém dávkování může paradoxně zvýšit etnocentrismus a podezíravost vůči cizím lidem mimo vlastní skupinu. Na předpis.",
+    mechanism: "Vazba na oxytocinové receptory (OXTR) spřažené s Gq-proteinem, aktivace fosfolipázy C a vzestup intracelulárního vápníku; inhibice aktivity centrálního jádra amygdaly.",
+    halfLife: "Plazmatický poločas 3–5 minut (v mozkomíšním moku cca 20–30 minut)",
+    interactions: [
+      "MDMA / entaktogeny (způsobují masivní uvolnění oxytocinu)",
+      "alkohol (snižuje přirozenou sekreci oxytocinu)"
+    ],
+    naturalSources: ["hypotalamus, neurohypofýza"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 527,
+    name: "Vazopresin (Antidiuretický hormon / ADH)",
+    categoryKey: "hormones",
+    tags: ["vazopresin", "ADH", "hydratace", "ledviny", "pamet"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Peptidový hormon řídící retenci čisté vody v ledvinách a krevní tlak.",
+    description: "Vazopresin (arginin-vazopresin / ADH) je nonapeptid produkovaný v hypotalamu a skladovaný v zadním laloku hypofýzy. Je hlavním regulátorem vodní homeostázy. Reaguje na zvýšení osmolality krevní plazmy (dehydrataci) tím, že zabudovává vodní kanály akvaporiny do ledvinných sběracích kanálků, čímž zabraňuje ztrátě vody močí. V mozku hraje roli v paměťových procesech, soustředění a teritoriálním chování.",
+    effects: [
+      "zabránění ztrátám vody močí při dehydrataci",
+      "udržení stabilní osmolality plazmy",
+      "vazokonstrikce cév při těžkém poklesu krevního tlaku",
+      "podpora paměťových procesů a kognitivního soustředění"
+    ],
+    dosage: {
+      "short": "Endogenní regulátor; klinicky Desmopresin",
+      "long": "Přirozená produkce stoupá v noci, aby člověk nemusel močit během spánku. Alkohol silně blokuje vylučování ADH, což způsobuje masivní dehydrataci a ranní kocovinu."
+    },
+    warning: "Nadbytek ADH (syndrom SIADH) vede k intoxikaci vodou a nebezpečné hyponatrémii (otok mozku). Nedostatek vede k diabetes insipidus (žíznivka, vylučování až 15 litrů moči denně).",
+    mechanism: "Vazba na V2 receptory v ledvinách spouští exocytózu vezikul s akvaporinem-2 (AQP2) do apikální membrány buněk sběracího kanálku; vazba na V1a receptory způsobuje vazokonstrikci cév.",
+    halfLife: "15–25 minut",
+    interactions: ["Alkohol (přímý inhibitor sekrece vazopresinu vedoucí k dehydrataci)"],
+    naturalSources: ["hypotalamus, neurohypofýza"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 528,
+    name: "Desmopresin (DDAVP)",
+    categoryKey: "hormones",
+    tags: ["desmopresin", "vazopresin", "nocturie", "hydratace"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Syntetický analog vazopresinu se selektivním antidiuretickým účinkem.",
+    description: "Desmopresin (1-deamino-8-D-arginin vazopresin) je syntetický analog vazopresinu upravený tak, že má 4000x vyšší antidiuretickou aktivitu (přes V2 receptory) a téměř nulový vazokonstrikční vliv na krevní tlak (V1 receptory). Používá se k léčbě nočního pomočování, diabetes insipidus a v hematologii ke zvýšení hladiny srážecího faktoru VIII a von Willebrandova faktoru.",
+    effects: [
+      "zástava nadměrného močení a eliminace nočního probouzení (nykturie)",
+      "obnova vodní rovnováhy u centrální žíznivky",
+      "stimulace uvolnění von Willebrandova faktoru při poruchách srážlivosti"
+    ],
+    dosage: {
+      "short": "0.1–0.2 mg sublinguálně nebo perorálně na noc",
+      "long": "Při nočním buzení kvůli močení se podává 60–120 mcg orálně dispergovatelného lyofilizátu na noc pod jazyk. Během působení přísně omezit příjem tekutin."
+    },
+    warning: "Při užití léku a současném vypití velkého množství vody hrozí smrtelně nebezpečná hyponatrémie a edém mozku! Nutno monitorovat hladinu sodíku v séru.",
+    mechanism: "Vysokoselektivní agonismus V2 receptorů v bazolaterální membráně sběracích kanálků nefronu.",
+    halfLife: "2.8–3.5 hodiny (podstatně delší působení než přirozený vazopresin)",
+    interactions: ["Diuretika", "NSAID (zvyšují antidiuretický účinek)"],
+    naturalSources: ["syntetický peptidový analog"],
+    bannedStatus: "banned-sport (WADA S5 maskovací látky), prescription-only"
+  },
+  {
+    id: 529,
+    name: "LH (Luteinizační hormon)",
+    categoryKey: "hormones",
+    tags: ["LH", "hypofyza", "testosteron", "gonadotropin"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Hypofyzární gonadotropin přímo poroučející varlatům vyrábět testosteron.",
+    description: "Luteinizační hormon (LH) je heterodimerní glykoproteinový hormon produkovaný gonadotropními buňkami předního laloku hypofýzy v reakci na pulzy GnRH z hypotalamu. U mužů se váže na receptory na Leydigových buňkách ve varlatech a spouští přeměnu cholesterolu na testosteron. Je to primární signál, jehož hladina indikuje, zda hypofýza správně stimuluje varlata. Exogenní steroidy jej srážejí k nule.",
+    effects: [
+      "přímý spouštěč syntézy testosteronu v Leydigových buňkách",
+      "udržování intratektikulární koncentrace androgenů",
+      "vyvolání ovulace a tvorba žlutého tělíska (u žen)"
+    ],
+    dosage: {
+      "short": "Referenční mez muži: 1.7–8.6 IU/l",
+      "long": "Laboratorní marker v séru. Pokud je LH nízké a testosteron nízký, jde o sekundární hypogonadismus (problém v hypofýze). K jeho stimulaci se v PCT používají SERMy (Enclomifen, Nolvadex)."
+    },
+    warning: "Při užívání anabolických steroidů klesá LH na neměřitelné hodnoty (<0.1 IU/l), což vede k atrofii Leydigových buněk.",
+    mechanism: "Vazba na LHCGR receptor (G-protein spřažený receptor) stimuluje adenylátcyklázu a protein kinázu A, která aktivuje transportní protein StAR pro transport cholesterolu do mitochondrií.",
+    halfLife: "20–30 minut (pulzní sekrece)",
+    interactions: [
+      "SERMy (Enclomifen, Tamoxifen zvyšují sekreci LH)",
+      "Exogenní androgeny a estrogeny (okamžitá zpětnovazebná suprese)"
+    ],
+    naturalSources: ["gonadotrofní buňky adenohypofýzy"],
+    bannedStatus: "banned-sport (hCG/LH u mužů WADA S2.1), prescription-only"
+  },
+  {
+    id: 530,
+    name: "FSH (Folikulostimulační hormon)",
+    categoryKey: "hormones",
+    tags: ["FSH", "spermatogeneze", "plodnost", "hypofyza"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Hypofyzární hormon stimulující Sertoliho buňky a produkci spermií.",
+    description: "Folikulostimulační hormon (FSH) je glykoproteinový gonadotropin vylučovaný adenohypofýzou. U mužů působí na Sertoliho buňky v semenotvorných kanálcích varlat, kde řídí a udržuje spermatogenezi (tvorbu zralých spermií) a produkci androgen-binding proteinu (ABP). Bez dostatečné hladiny FSH dochází k azoospermii (nepřítomnosti spermií v ejakulátu) a neplodnosti.",
+    effects: [
+      "zahájení a udržení spermatogeneze u mužů",
+      "vývoj ovariálních folikulů u žen",
+      "stimulace sekrece inhibinu B a ABP Sertoliho buňkami"
+    ],
+    dosage: {
+      "short": "Referenční mez muži: 1.5–12.4 IU/l",
+      "long": "Diagnostický biomarker plodnosti. Při obnově plodnosti po cyklu anabolik se podává rekombinantní FSH (Gonal-F) v kombinaci s hCG."
+    },
+    warning: "Při užívání steroidů je FSH silně potlačen. Jeho obnova po cyklu bývá často pomalejší než obnova LH (může trvat několik měsíců).",
+    mechanism: "Aktivace FSHR receptorů na Sertoliho buňkách s následnou stimulací proteosyntézy a podporou vyzrávání spermatogonií.",
+    halfLife: "3–4 hodiny (delší než LH)",
+    interactions: [
+      "Inhibin B (endogenní negativní zpětná vazba varlat přímo na hypofýzu)",
+      "hMG (lidský menopauzální gonadotropin obsahuje přirozenou směs LH a FSH)"
+    ],
+    naturalSources: ["gonadotrofní buňky adenohypofýzy"],
+    bannedStatus: "banned-sport (WADA S2.1), prescription-only"
+  },
+  {
+    id: 531,
+    name: "TSH (Thyrotropin)",
+    categoryKey: "hormones",
+    tags: ["TSH", "stitna-zlaza", "metabolismus", "hypofyza"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Hlavní řídicí hormon hypofýzy pro funkci štítné žlázy a rychlost metabolismu.",
+    description: "Thyrotropin (TSH / thyroid-stimulating hormone) je glykoprotein produkovaný adenohypofýzou. Je hlavním regulátorem štítné žlázy: stimuluje vychytávání jódu a syntézu hormonů tyroxinu (T4) a trijodtyroninu (T3). Funguje na principu přísné negativní zpětné vazby – pokud je v těle málo T3/T4, TSH stoupá (hypotyreóza); pokud je hormonů nadbytek, TSH klesá k nule (hypertyreóza).",
+    effects: [
+      "stimulace syntézy a sekrece T4 a T3 ve štítné žláze",
+      "zvýšení vychytávání jódu folikulárními buňkami",
+      "regulace bazálního metabolismu a termogeneze"
+    ],
+    dosage: {
+      "short": "Optimální mez: 1.0–2.5 mIU/l (laboratorní norma až 4.5)",
+      "long": "Laboratorní marker. Funkční medicína považuje za optimální hodnoty mezi 1.0 a 2.0 mIU/l. Hodnoty nad 3.0 často značí subklinickou hypotyreózu (únava, zpomalený metabolismus, přibírání tuku)."
+    },
+    warning: "TSH samo o sobě neodráží tkáňový metabolismus; vždy je nutné vyšetřit také volné hormony fT3, fT4 a reverzní rT3.",
+    mechanism: "Vazba na TSHR receptory na tyreocytech, aktivace Gs-proteinu, cAMP kaskády a stimulace tyreoperoxidázy (TPO) a tyreoglobulinu.",
+    halfLife: "Cca 60 minut",
+    interactions: [
+      "Levotyroxin (T4) a Liothyronin (T3) - způsobují zpětnovazebné snížení TSH",
+      "Jód a Selen (esenciální mikronutrienty pro odpověď štítné žlázy)"
+    ],
+    naturalSources: ["tyreotrofní buňky adenohypofýzy"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 532,
+    name: "Thyroxin (T4 / Levotyroxin)",
+    categoryKey: "hormones",
+    tags: ["T4", "levotyroxin", "stitna-zlaza", "metabolismus"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Hlavní prohormon štítné žlázy se čtyřmi atomy jódu a dlouhým poločasem.",
+    description: "Thyroxin (T4) tvoří přibližně 80–90 % veškeré produkce hormonů štítné žlázy. Sám o sobě je metabolicky téměř neaktivní prohormon. V játrech, ledvinách a cílových tkáních musí být odštěpením jednoho atomu jódu enzymem 5'-dejodázou (enzym závislý na selenu) přeměněn na aktivní trijodtyronin (T3). Slouží jako stabilní cirkulující zásobník energie.",
+    effects: [
+      "stabilní rezervoár pro periferní tvorbu aktivního T3",
+      "udržování bazálního energetického výdeje",
+      "regulace růstu tkání a vývoje centrální nervové soustavy"
+    ],
+    dosage: {
+      "short": "Klinicky: 50–150 mcg denně nalačno",
+      "long": "Lék Levothyroxin (Euthyrox, Letrox). Užívá se striktně ráno nalačno minimálně 30 minut před snídaní a zapíjí se pouze čistou vodou. Káva nebo minerály (vápník, železo) dramaticky snižují absorpci."
+    },
+    warning: "Předávkování způsobuje palpitace srdce, pocení, úzkost, třes rukou a nespavost. U lidí se špatnou konverzí (nedostatek selenu, chronický stres) může vést k hromadění neaktivního rT3 místo T3.",
+    mechanism: "Periferní monodejodace na T3 v tkáních.",
+    halfLife: "7 dní (extrémně stabilní týdenní poločas)",
+    interactions: [
+      "Selen (nutný kofaktor selenodejodáz pro konverzi na T3)",
+      "vápník, železo, sója (blokují vstřebávání T4 ze střeva - odstup 4 hodiny)"
+    ],
+    naturalSources: ["folikulární buňky štítné žlázy"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 533,
+    name: "Trijodtyronin (T3 / Liothyronin)",
+    categoryKey: "hormones",
+    tags: ["T3", "liothyronin", "metabolismus", "spalovani-tuku", "stitna-zlaza"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Aktivní hormon štítné žlázy – 4x silnější než T4, absolutní akcelerátor metabolismu.",
+    description: "Trijodtyronin (T3 / Liothyronin) je skutečný biologicky aktivní hormon štítné žlázy. Má čtyřikrát vyšší afinitu k jaderným receptorům než T4. Přímo zvyšuje bazální metabolický výdej (BMR), zrychluje spalování tuků i sacharidů, zvyšuje počet beta-adrenergních receptorů v srdci a svalech a stimuluje mitochondriální dýchání a spotřebu kyslíku ve všech buňkách.",
+    effects: [
+      "extrémní zrychlení bazálního metabolismu a termogeneze",
+      "masivní podpora lipolýzy a oxidace tukových zásob",
+      "regulace tělesné teploty a energetické hladiny",
+      "zrychlení střevní motility a proteosyntézy (ve fyziologických dávkách)"
+    ],
+    dosage: {
+      "short": "Klinicky: 12.5–25 mcg denně; Sportovní redukce: 25–50 mcg",
+      "long": "Lék Liothyronin (Cytomel). Začíná se na 12.5 mcg ráno. Vzhledem ke krátkému poločasu se vyšší dávky (25–50 mcg) dělí na 2 porce (ráno a brzy odpoledne). Nikdy neužívat večer."
+    },
+    warning: "Vyšší dávky (>50 mcg) jsou silně svalově katabolické (spalují svalovou tkáň společně s tukem). Riziko srdečních arytmií, tachykardie, třesu a úzkosti. Po vysazení dochází k dočasnému utlumení vlastní štítné žlázy.",
+    mechanism: "Přímá vazba na jaderné receptory pro hormony štítné žlázy (TR-alfa, TR-beta) s indukcí transkripce genů pro Na+/K+-ATPázu a mitochondriální odpřahující proteiny (UCP-1, UCP-3), které mění energii přímo na teplo.",
+    halfLife: "18–24 hodin (rychlý nástup i odeznění)",
+    interactions: [
+      "Klenbuterol a beta-stimulanty (nebezpečná aditivní kardiovaskulární zátěž)",
+      "anabolické steroidy (často kombinováno k ochraně svalů před katabolismem T3)"
+    ],
+    naturalSources: ["štítná žláza (20 %), periferní konverze z T4 (80 %)"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 534,
+    name: "Reverzní T3 (rT3)",
+    categoryKey: "hormones",
+    tags: ["rT3", "metabolicka-brzda", "stres", "stitna-zlaza"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Inaktivní metabolická brzda blokující receptory pro aktivní T3 při stresu a dietách.",
+    description: "Reverzní T3 (rT3 / 3,3',5'-trijodtyronin) je neaktivní izomer T3, který vzniká z T4 působením enzymu 5-dejodázy (místo 5'-dejodázy). Funguje jako evoluční záchranná brzda metabolismu: při těžkém kalorickém deficitu, chronickém stresu, nemoci nebo zánětu tělo přesměruje konverzi T4 do rT3. Tento metabolit zasedne na jaderné receptory pro T3, ale neaktivuje je – čímž zablokuje metabolismus a zabrání vyčerpání energetických zásob.",
+    effects: [
+      "zpomalení bazálního metabolismu v období hladovění a stresu",
+      "konkurenční blokáda receptorů pro aktivní T3",
+      "ochrana tkání před nadměrným katabolismem v nemoci"
+    ],
+    dosage: {
+      "short": "Laboratorní poměr: Free T3 / rT3 by měl být > 20",
+      "long": "Diagnostický marker. Zvýšené rT3 vysvětluje, proč má člověk příznaky zpomaleného metabolismu (chlad, únava, nemožnost zhubnout), i když běžné krevní testy TSH a T4 jsou v normě."
+    },
+    warning: "Zvýšené rT3 nelze vyřešit podáváním T4 (to stav ještě zhorší). Řešením je odstranění chronického stresu, doplnění selenu/železa nebo dočasné přemostění čistým T3.",
+    mechanism: "Kompetitivní inhibice vazebného místa na receptorech štítné žlázy bez schopnosti spustit transkripční aktivitu.",
+    halfLife: "Cca 4–6 hodin",
+    interactions: ["Kortizol (vysoký kortizol přímo stimuluje tvorbu rT3)"],
+    naturalSources: ["periferní tkáně, játra"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 535,
+    name: "Parathormon (PTH)",
+    categoryKey: "hormones",
+    tags: ["PTH", "vapnik", "kosti", "ledviny"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Hlavní regulátor hladiny vápníku v krvi mobilizující vápník z kostí.",
+    description: "Parathormon (PTH) je 84-aminokyselinový polypeptid tvořený v příštítných tělískách. Jeho úkolem je udržovat stabilní hladinu vápníku v krevní plazmě. Jakmile vápník klesne, PTH okamžitě stoupá: stimuluje uvolňování vápníku z kostní tkáně (aktivací osteoklastů), zvyšuje zpětné vstřebávání vápníku v ledvinách a aktivuje vitamín D na kalcitriol pro maximální absorpci vápníku ze střeva.",
+    effects: [
+      "udržení kalcémie nezbytné pro nervosvalový přenos a srdce",
+      "aktivace finálního kroku syntézy aktivního vitamínu D v ledvinách",
+      "vylučování přebytečných fosfátů močí"
+    ],
+    dosage: {
+      "short": "Referenční mez v séru: 1.6–6.9 pmol/l (15–65 pg/ml)",
+      "long": "Biomarker v séru. Při nedostatku vitamínu D parathormon kompenzačně stoupá a vyplavuje vápník z kostí (sekundární hyperparatyreóza)."
+    },
+    warning: "Chronicky vysoký PTH vede k odvápnění kostí, osteoporóze a tvorbě ledvinových kamenů.",
+    mechanism: "Vazba na PTH1R receptor spřažený s Gs a Gq proteiny v osteoblastech a buňkách proximálního a distálního tubulu ledvin.",
+    halfLife: "Pouze 4–5 minut",
+    interactions: ["Vitamín D3 a K2 (normalizují hladinu PTH a směřují vápník do kostí)"],
+    naturalSources: ["hlavní buňky příštítných tělísek"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 536,
+    name: "Kalcitonin",
+    categoryKey: "hormones",
+    tags: ["kalcitonin", "vapnik", "kosti", "stitna-zlaza"],
+    rating: 3,
+    colorType: "green",
+    shortDesc: "Hormon parafolikulárních C-buněk snižující vápník v krvi a chránící kosti.",
+    description: "Kalcitonin je 32-aminokyselinový peptidový hormon syntetizovaný v parafolikulárních buňkách (C-buňkách) štítné žlázy. Působí jako přirozený fyziologický antagonista parathormonu. Při vzestupu kalcémie se vylučuje a okamžitě inhibuje činnost osteoklastů, čímž zastavuje odbourávání kostí a napomáhá ukládání vápníku do kostní hmoty.",
+    effects: [
+      "ochrana kostní tkáně před nadměrnou resorpcí",
+      "rychlé snížení vysoké hladiny vápníku v séru",
+      "podpora ukládání minerálů do kostní matrix"
+    ],
+    dosage: {
+      "short": "Norma v séru muži: <10 ng/l",
+      "long": "Klinicky se používá lososí kalcitonin (Miacalcic) ve formě nosního spreje nebo injekcí pro léčbu osteoporózy a Pagetovy choroby."
+    },
+    warning: "Používá se jako nádorový marker pro medulární karcinom štítné žlázy.",
+    mechanism: "Vazba na kalcitoninové receptory na osteoklastech vedoucí k rychlé inaktivaci jejich resorpční motility.",
+    halfLife: "Cca 10–15 minut",
+    interactions: ["Bisfosfonáty", "vápníkové doplňky"],
+    naturalSources: ["parafolikulární C-buňky štítné žlázy"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 537,
+    name: "Leptin",
+    categoryKey: "hormones",
+    tags: ["leptin", "sytost", "tukova-tkan", "metabolismus", "hlad"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Hormon sytosti z tukových buněk informující mozek o stavu energetických zásob.",
+    description: "Leptin (z řeckého leptos = štíhlý) je 16-kDa proteinový hormon produkovaný bílou tukovou tkání (adipocyty). Informuje hypotalamus o velikosti energetických zásob těla. Při dostatku tuku je hladina leptinu vysoká, což v mozku potlačuje chuť k jídlu a stimuluje energetický výdej. Při přísné dietě hladina leptinu prudce padá, což vyvolá vlčí hlad a zpomalení metabolismu. U obézních lidí dochází k leptinové rezistenci – mozek signál sytosti neslyší.",
+    effects: [
+      "potlačení chuti k jídlu na úrovni hypotalamu",
+      "stimulace sympatického nervového systému a výdeje energie",
+      "udržení reprodukčních a imunitních funkcí při dostatku energie",
+      "modulace inzulínové senzitivity"
+    ],
+    dosage: {
+      "short": "Norma v séru: závislá na % tělesného tuku (muži obvykle 1–5 ng/ml)",
+      "long": "Laboratorní biomarker. K obnově citlivosti na leptin po dietě slouží plánované sacharidové refeed dny (zvýšení příjmu sacharidů dočasně zvedne leptin a uklidní hypotalamus)."
+    },
+    warning: "Chronický zánět a vysoká fruktóza způsobují rezistenci na leptin v hypotalamu.",
+    mechanism: "Vazba na Ob-Rb receptory v nucleus arcuatus hypotalamu; stimulace anorexigenních neuronů POMC/CART a inhibice orexigenních neuronů NPY/AgRP přes dráhu JAK2/STAT3.",
+    halfLife: "Cca 25–30 minut",
+    interactions: [
+      "Inzulín (inzulín stimuluje syntézu leptinu)",
+      "Refeed dny se sacharidy (nejúčinnější způsob zvednutí leptinu při redukční dietě)"
+    ],
+    naturalSources: ["bílá tuková tkáň (adipocyty)"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 538,
+    name: "Ghrelin",
+    categoryKey: "hormones",
+    tags: ["ghrelin", "hlad", "zaludek", "HGH-stimulant"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Hormon hladu ze žaludku a přirozený spouštěč sekrece růstového hormonu.",
+    description: "Ghrelin je 28-aminokyselinový peptid vylučovaný endokrinními buňkami žaludeční sliznice nalačno. Působí v přímé opozici vůči leptinu: putuje do hypotalamu a vyvolává akutní pocit hladu, vyhledávání potravy a přípravu trávicího traktu. Zároveň se váže na receptory GHS-R1a v hypofýze, čímž působí jako silný fyziologický sekretagog růstového hormonu (GH).",
+    effects: [
+      "spuštění pocitu hladu a motivace k příjmu potravy",
+      "přirozená stimulace pulzů růstového hormonu v hypofýze",
+      "podpora motility žaludku a vyprazdňování",
+      "kardioprotektivní a protizánětlivý účinek"
+    ],
+    dosage: {
+      "short": "Endogenní peptid; klesá 30–60 minut po nasycení",
+      "long": "Na ghrelinový receptor cílí syntetické GHRP peptidy (GHRP-2, GHRP-6, Ipamorelin) a molekula MK-677."
+    },
+    warning: "Při chronickém nevyspání hladina ghrelinu stoupá až o 30 %, což vede k nezvladatelným chutím na sladká a tučná jídla.",
+    mechanism: "Vazba acylovaného ghrelinu na receptor pro sekretagogy růstového hormonu (GHS-R1a), aktivace fosfolipázy C a uvolnění intracelulárního vápníku.",
+    halfLife: "30–60 minut",
+    interactions: [
+      "Ipamorelin a MK-677 (syntetičtí agonisté ghrelinového receptoru)",
+      "bílkoviny a vláknina (nejefektivněji srážejí hladinu ghrelinu po jídle)"
+    ],
+    naturalSources: ["P/D1 buňky fundu žaludku"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 539,
+    name: "Erytropoetin (EPO)",
+    categoryKey: "hormones",
+    tags: ["EPO", "erytropoeza", "vytrvalost", "ledviny", "krev"],
+    rating: 5,
+    colorType: "red",
+    shortDesc: "Ledvinný glykoprotein řídící tvorbu červených krvinek a dodávku kyslíku do svalů.",
+    description: "Erytropoetin (EPO) je glykoproteinový hormon (165 aminokyselin) syntetizovaný intersticiálními buňkami ledvin v reakci na buněčnou hypoxii (nedostatek kyslíku). Cestuje do kostní dřeně, kde stimuluje přežití, proliferaci a diferenciaci erytroidních prekurzorů na zralé červené krvinky (erytrocyty). Tím dramaticky zvyšuje hematokrit, hladinu hemoglobinu a kapacitu krve přenášet kyslík (VO2 max).",
+    effects: [
+      "masivní nárůst tvorby červených krvinek a hemoglobinu",
+      "extrémní zvýšení aerobní vytrvalosti a oddálení svalového vyčerpání",
+      "neuroprotekce a tkáňová ochrana před ischemií",
+      "zvýšení VO2 max"
+    ],
+    dosage: {
+      "short": "Klinicky: 20–50 IU/kg 3x týdně; Sport: nebezpečný doping!",
+      "long": "V nefrologii se podává rekombinantní lidský EPO (Epoetin alfa/beta, Darbepoetin) subkutánně u pacientů se selháním ledvin nebo anémií. Vždy je nutná současná masivní suplementace železa (intravenózně nebo perorálně)."
+    },
+    warning: "EXTRÉMNÍ RIZIKO: Nadměrný vzestup hematokritu (>52 % u mužů) vede k hyperviskozitě (zahuštění krve do konzistence sirupu), což způsobuje fatální krevní sraženiny, mrtvice, plicní embolie a infarkty během spánku (desítky úmrtí profesionálních cyklistů v 90. letech).",
+    mechanism: "HIF-1alfa dependentní transkripce v ledvinách; vazba na homodimerní EPOR receptor v kostní dřeni s aktivací JAK2/STAT5 dráhy a zástavou apoptózy erytroblastů.",
+    halfLife: "Epoetin alfa cca 5–8 hodin; Darbepoetin alfa až 25–48 hodin",
+    interactions: [
+      "Železo (esenciální stavební kámen pro hemoglobin)",
+      "kyselina listová a vitamín B12 (nezbytné pro dělení erytrocytů)",
+      "aspirin (protisrážlivá prevence)"
+    ],
+    naturalSources: ["intersticiální peritubulární buňky kůry ledvin"],
+    bannedStatus: "banned-sport (WADA S2.1), prescription-only"
+  },
+  {
+    id: 540,
+    name: "ACTH (Adrenokortikotropní hormon)",
+    categoryKey: "hormones",
+    tags: ["ACTH", "hypofyza", "kortizol", "stres", "HPA"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Hypofyzární peptid velící kůře nadledvin k produkci kortizolu a DHEA.",
+    description: "Adrenokortikotropní hormon (ACTH / kortikotropin) je 39-aminokyselinový polypeptid vznikající štěpením proopiomelanokortinu (POMC) v adenohypofýze. Je klíčovým přenašečem stresového signálu v ose HPA (hypotalamus-hypofýza-nadledviny): v reakci na hypotalamický CRH putuje krví do kůry nadledvin a stimuluje okamžitou syntézu a vyplavení kortizolu, kortikosteronu a slabých androgenů (DHEA).",
+    effects: [
+      "stimulace biosyntézy a sekrece glukokortikoidů v nadledvinách",
+      "udržení trofiky a velikosti kůry nadledvin (prevence atrofie)",
+      "mírná stimulace kožních melanocytů (při nadbytku způsobuje bronzové zbarvení kůže)"
+    ],
+    dosage: {
+      "short": "Ranní referenční mez v séru: 10–60 pg/ml (2.2–13.3 pmol/l)",
+      "long": "Využívá se především v diagnostice (Synacthen test – aplikace 250 mcg syntetického ACTH pro otestování funkční rezervy nadledvin)."
+    },
+    warning: "Nádorový nadbytek způsobuje centrální Cushingovu chorobu. Primární selhání nadledvin vede k masivnímu vzestupu ACTH s typickou hyperpigmentací kůže.",
+    mechanism: "Vazba na melanokortinový receptor typu 2 (MC2R) v zona fasciculata kůry nadledvin, stimulace adenylátcyklázy a zvýšení transportu cholesterolu do mitochondrií.",
+    halfLife: "Cca 10–20 minut",
+    interactions: [
+      "Kortikosteroidy (dexamethason způsobuje kompletní supresi ACTH)",
+      "CRH (přímý spouštěč)"
+    ],
+    naturalSources: ["kortikotrofní buňky adenohypofýzy"],
+    bannedStatus: "banned-sport (WADA S2.1), prescription-only"
+  },
+  {
+    id: 541,
+    name: "Adrenalin (Epinefrin)",
+    categoryKey: "hormones",
+    tags: ["adrenalin", "katecholamin", "sympatikus", "akutni-stres"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Akutní nouzový katecholamin spouštějící okamžitou reakci boj nebo útěk.",
+    description: "Adrenalin (epinefrin) je klíčový katecholaminový hormon syntetizovaný v dřeni nadledvin z tyrosinu přes dopamin a noradrenalin. Je hlavním exekutorem akutní reakce „boj nebo útěk“ (fight-or-flight): během sekund zrychluje tep, zvyšuje krevní tlak, rozšiřuje dýchací cesty (bronchodilatace), odkrvuje kůži i trávicí trakt a maximalizuje přítok krve a glukózy do kosterních svalů a srdce.",
+    effects: [
+      "okamžitá maximalizace srdečního výdeje a krevního tlaku",
+      "masivní dilatace průdušek pro maximální ventilaci kyslíku",
+      "blesková glykogenolýza v játrech i svalech",
+      "záchrana života při anafylaktickém šoku a srdeční zástavě"
+    ],
+    dosage: {
+      "short": "Anafylaxe autoinjektor (EpiPen): 0.3 mg intramuskulárně",
+      "long": "Pohotovostní autoinjektor s 0.3 mg adrenalinu se aplikuje do vnější strany stehna při těžké alergické anafylaxi (otok hrdla, kolaps tlaku)."
+    },
+    warning: "Extrémní tachykardie, palpitace, riziko komorových arytmií a masivního vzestupu krevního tlaku.",
+    mechanism: "Silný neselektivní agonismus alfa-1, alfa-2, beta-1, beta-2 a beta-3 adrenergních receptorů.",
+    halfLife: "Pouze 1–2 minuty (extrémně rychlá clearance)",
+    interactions: [
+      "Beta-blokátory (blokují účinek, mohou způsobit nekontrolovanou vazokonstrikci přes alfa receptory)",
+      "stimulancia"
+    ],
+    naturalSources: ["chromafinní buňky dřeně nadledvin"],
+    bannedStatus: "legal (nouzový lék; ve sportu lokální aplikace povolena)"
+  },
+  {
+    id: 542,
+    name: "Noradrenalin (Norepinefrin)",
+    categoryKey: "hormones",
+    tags: ["noradrenalin", "katecholamin", "vazokonstrikce", "bdelost"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Vazokonstrikční hormon dřeně nadledvin a neurotransmiter bdělosti a pozornosti.",
+    description: "Noradrenalin (norepinefrin) funguje v mozku jako zásadní neurotransmiter řídící bdělost, soustředění a pohotovost (vychází z locus coeruleus) a v periferním těle jako hormon dřeně nadledvin a postgangliových sympatických neuronů. Na rozdíl od adrenalinu působí silněji na alfa-1 receptory a vyvolává masivní vazokonstrikci většiny cévního řečiště se zvýšením celkového periferního odporu a krevního tlaku.",
+    effects: [
+      "zvýšení periferní cévní rezistence a udržení perfuzního tlaku",
+      "centrální bdělost, soustředění a exekutivní kognitivní kontrola",
+      "podpora lipolýzy v tukových buňkách",
+      "přesun krve do životně důležitých orgánů při šoku"
+    ],
+    dosage: {
+      "short": "Klinická kontinuální IV infuze na JIP (0.05–1.0 mcg/kg/min)",
+      "long": "Využívá se na jednotkách intenzivní péče jako lék první volby pro septický a distribuční šok k obnově krevního tlaku."
+    },
+    warning: "Může způsobit těžkou periferní ischemii končetin při vysokých dávkách.",
+    mechanism: "Převážný agonismus alfa-1 a beta-1 adrenergních receptorů; slabší vliv na beta-2 receptory.",
+    halfLife: "1–2 minuty",
+    interactions: ["SNRI antidepresiva (zvyšují hladinu noradrenalinu v synapsích)", "inhibitory MAO"],
+    naturalSources: ["dřeň nadledvin, sympatická nervová zakončení, locus coeruleus"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 543,
+    name: "Kisspeptin-10",
+    categoryKey: "hormones",
+    tags: ["kisspeptin", "HPTA", "GnRH", "plodnost", "peptid"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Vrcholný řídicí peptid stojící nad GnRH, obnovující přirozenou pulzní tvorbu LH.",
+    description: "Kisspeptin-10 je 10-aminokyselinový biologicky aktivní C-terminální fragment peptidu kisspeptinu (produkovaného genem KISS1). V endokrinní hierarchii stojí na samém vrcholu reprodukční osy: aktivuje neurony v hypotalamu k pulznímu vylučování GnRH, což spouští fyziologické vyplavení LH a FSH a následnou produkci vlastního testosteronu. Je schopen obnovit pulsaci hormonální osy bez rizika desenzitizace receptorů typické pro přímé analogy GnRH.",
+    effects: [
+      "přirozená stimulace pulzní sekrece hypotalamického GnRH",
+      "následný vzestup hypofyzárního LH a FSH",
+      "obnova přirozené sekrece testosteronu a libida",
+      "potenciální alternativa hCG v moderních PCT protokolech"
+    ],
+    dosage: {
+      "short": "100–200 mcg subkutánně 1–3x týdně",
+      "long": "Aplikuje se subkutánně inzulínovou stříkačkou. Používá se pulzně (např. 100 mcg obden po dobu 2–3 týdnů) pro 'nakopnutí' utlumeného hypotalamu po vysazení exogenních hormonů."
+    },
+    warning: "Výzkumný peptid. Nepodávat v kontinuální infuzi (kontinuální podávání vede k desenzitizaci KISS1R receptorů).",
+    mechanism: "Vazba na receptor spřažený s G-proteinem KISS1R (GPR54) na GnRH neuronech, depolarizace neuronů a vyvolání synchronních pulzů gonadoliberinu.",
+    halfLife: "Plazmatický poločas cca 4–10 minut, fyziologický pulzní účinek přetrvává hodiny",
+    interactions: [
+      "SERMy (synergická centrální obnova osy HPTA)",
+      "vysoké dávky estrogenů (negativní zpětná vazba na kisspeptinové neurony)"
+    ],
+    naturalSources: ["nucleus infundibularis hypotalamu"],
+    bannedStatus: "experimental / research chemical"
+  },
+  {
+    id: 544,
+    name: "GHRH (Sermorelin / Somatoliberin)",
+    categoryKey: "hormones",
+    tags: ["GHRH", "somatoliberin", "HGH-stimulace", "hypotalamus"],
+    rating: 4,
+    colorType: "green",
+    shortDesc: "Hypotalamický hormon řídící přirozené pulzní vylučování růstového hormonu.",
+    description: "Růstový hormon uvolňující hormon (GHRH / somatoliberin) je 44-aminokyselinový peptid produkovaný v nucleus arcuatus hypotalamu. Putuje hypofyzárním portálním systémem do adenohypofýzy, kde se váže na receptory somatotrofních buněk a spouští syntézu a pulzní výdej růstového hormonu (HGH). V medicíně se používá jeho plně funkční zkrácený syntetický analog Sermorelin (GHRH 1-29).",
+    effects: [
+      "stimulace fyziologických pulzů vlastního růstového hormonu",
+      "zachování přirozené zpětné vazby somatostatinu (nemožnost předávkování)",
+      "podpora hlubokého NREM spánku a noční regenerace",
+      "omlazení tělesné kompozice a kvality tkání"
+    ],
+    dosage: {
+      "short": "100–300 mcg na noc subkutánně (Sermorelin)",
+      "long": "Aplikuje se těsně před spaním subkutánně nalačno (minimálně 2 hodiny po jídle bez sacharidů a tuků). Vynikající synergie s GHRP (např. Ipamorelin 100 mcg)."
+    },
+    warning: "Zvýšená hladina krevního cukru nebo mastných kyselin v krvi blokuje účinek GHRH (aplikovat výhradně nalačno).",
+    mechanism: "Vazba na GHRHR receptor somatotrofů, stimulace Gs proteinu, vzestup cAMP a otevření vápníkových kanálů vyvolávající exocytózu granulí s HGH.",
+    halfLife: "Nativní GHRH cca 5–10 minut; Sermorelin cca 10–12 minut",
+    interactions: [
+      "Ipamorelin / GHRP-2 (masivní synergické zesílení pulzu HGH)",
+      "Somatostatin (přirozený endogenní blokátor)"
+    ],
+    naturalSources: ["hypotalamus"],
+    bannedStatus: "banned-sport (WADA S2.2), prescription-only"
+  },
+  {
+    id: 545,
+    name: "TRH (Thyreoliberin)",
+    categoryKey: "hormones",
+    tags: ["TRH", "hypotalamus", "stitna-zlaza", "TSH", "prolaktin"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Hypotalamický tripeptid stimulující sekreci TSH a prolaktinu v hypofýze.",
+    description: "Thyreotropin-releasing hormone (TRH / thyreoliberin) je miniaturní tripeptid (pyroGlu-His-Pro-NH2) tvořený v paraventrikulárním jádře hypotalamu. Řídí činnost štítné žlázy tím, že stimuluje hypofýzu k uvolnění TSH. Zároveň působí jako silný stimulátor vylučování prolaktinu (proto neléčená těžká hypotyreóza často vede k vysokému prolaktinu a galaktoree).",
+    effects: [
+      "iniciace sekrece TSH v adenohypofýze",
+      "stimulace syntézy prolaktinu",
+      "modulace tělesné teploty v reakci na chlad"
+    ],
+    dosage: {
+      "short": "Diagnostický TRH test: 200–400 mcg intravenózně",
+      "long": "Využívá se především v klinické endokrinologii k diferenciální diagnostice centrálních poruch štítné žlázy a hypofýzy."
+    },
+    warning: "Při aplikaci může způsobit náhlé nutkání na močení, kovovou pachuť v ústech a návaly horka.",
+    mechanism: "Aktivace TRHR receptorů spřažených s Gq proteinem s aktivací fosfolipázy C a vzestupem intracelulárního vápníku v tyreotrofech.",
+    halfLife: "4–5 minut",
+    interactions: ["Hormony štítné žlázy T3/T4 (zpětnovazebně tlumí syntézu TRH)"],
+    naturalSources: ["paraventrikulární jádro hypotalamu"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 546,
+    name: "CRH (Kortikoliberin)",
+    categoryKey: "hormones",
+    tags: ["CRH", "hypotalamus", "stres", "HPA", "ACTH"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Centrální hypotalamický peptid spouštějící celou stresovou osu HPA.",
+    description: "Corticotropin-releasing hormone (CRH / kortikoliberin) je 41-aminokyselinový neuropeptid syntetizovaný v hypotalamu. Je prvotním centrálním spouštěčem stresové reakce organismu: v reakci na fyzický, infekční či psychický stres se vyplaví do hypofyzárního portálního oběhu a vyvolá okamžitou sekreci ACTH, což následně vede k syntéze kortizolu v nadledvinách. Působí také v mozku jako mediátor úzkosti a potlačení chuti k jídlu.",
+    effects: [
+      "aktivace hypofyzární sekrece ACTH",
+      "spuštění komplexní hormonální stresové adaptace",
+      "centrální potlačení reprodukční osy a chuti k jídlu při akutním stresu"
+    ],
+    dosage: {
+      "short": "Klinický diagnostický test: 1 mcg/kg IV",
+      "long": "Diagnostická látka pro odlišení hypofyzární a ektopické příčiny Cushingova syndromu."
+    },
+    warning: "Chronická nadprodukce v mozku je spojena s těžkou depresí, úzkostnými poruchami a nespavostí.",
+    mechanism: "Vazba na CRHR1 receptory v kortikotrofních buňkách adenohypofýzy s aktivací cAMP kaskády.",
+    halfLife: "Cca 4–10 minut (plazma)",
+    interactions: ["Kortizol (silná negativní zpětná vazba přímo na hypotalamus)"],
+    naturalSources: ["hypotalamus"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 547,
+    name: "GnRH (Gonadoliberin)",
+    categoryKey: "hormones",
+    tags: ["GnRH", "gonadoliberin", "plodnost", "LH", "FSH"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Pulzní hypotalamický dekapeptid řídící uvolňování LH a FSH z hypofýzy.",
+    description: "Gonadotropin-releasing hormone (GnRH / gonadoliberin) je dekapeptid produkovaný v hypotalamu. Je naprosto zásadní tím, že musí být vylučován výhradně v pulzech (cca jednou za 60–90 minut). Každý pulz vyvolá v hypofýze uvolnění LH a FSH. Kontinuální (nepulzní) podávání GnRH naopak způsobí kompletní zablokování receptorů (chemickou kastraci), což se využívá při léčbě rakoviny prostaty.",
+    effects: [
+      "pulzní stimulace tvorby a výdeje LH a FSH",
+      "udržení integrity celé reprodukční osy HPTA",
+      "při kontinuálním podání: kompletní zástava hormonální produkce"
+    ],
+    dosage: {
+      "short": "Diagnosticky nebo v pulzní infuzní pumpě",
+      "long": "Pro obnovu plodnosti se podává výhradně pulzní mikropumpou simulující přirozené pulzy těla."
+    },
+    warning: "Kontinuální aplikace depotních analog (Leuprorelin, Goserelin) zcela vypne produkci testosteronu na nulu.",
+    mechanism: "Vazba na GnRHR receptory v gonadotrofních buňkách; pulzní stimulace uvolňuje gonadotropiny, kontinuální expozice vede k internalizaci a desenzitizaci receptorů.",
+    halfLife: "2–4 minuty (extrémně krátký poločas)",
+    interactions: ["Sexuální steroidy (testosteron a estrogeny tlumí jeho výdej)"],
+    naturalSources: ["preoptická oblast hypotalamu"],
+    bannedStatus: "banned-sport (WADA S2.1), prescription-only"
+  },
+  {
+    id: 548,
+    name: "Somatostatin (GHIH)",
+    categoryKey: "hormones",
+    tags: ["somatostatin", "GHIH", "inhibitor", "traveni"],
+    rating: 3,
+    colorType: "yellow",
+    shortDesc: "Univerzální inhibiční hormon těla tlumící sekreci HGH, inzulínu i trávicích enzymů.",
+    description: "Somatostatin (Growth Hormone-Inhibiting Hormone / GHIH) je cyklický peptidový hormon (vyskytující se ve formách se 14 nebo 28 aminokyselinami) vylučovaný hypotalamem, delta-buňkami pankreatu a sliznicí žaludku. Funguje jako univerzální brzda endokrinního a trávicího systému: tlumí sekreci růstového hormonu (HGH), TSH, inzulínu, glukagonu, gastrinu a snižuje průtok krve trávicím traktem.",
+    effects: [
+      "přirozená inhibice nadměrné sekrece růstového hormonu",
+      "útlum sekrece inzulínu a glukagonu v pankreatu",
+      "snížení žaludeční kyselosti a motolity střev",
+      "využití syntetických analogů (Octreotid) při léčbě akromegalie a krvácení"
+    ],
+    dosage: {
+      "short": "Klinicky: syntetický analog Oktreotid 50–100 mcg SubQ",
+      "long": "Využívá se v gastroenterologii a endokrinologii k zástavě masivního krvácení z jícnových varixů nebo léčbě neuroendokrinních nádorů."
+    },
+    warning: "Může způsobit tvorbu žlučových kamenů a malabsorpci tuků.",
+    mechanism: "Aktivace somatostatinových receptorů (SSTR1–5) spřažených s Gi proteinem, inhibice adenylátcyklázy a blokáda vápníkových kanálů.",
+    halfLife: "1–3 minuty (Oktreotid má poločas cca 90 minut)",
+    interactions: ["GHRH (vzájemní antagonisté)", "inzulín"],
+    naturalSources: ["hypotalamus, delta-buňky pankreatu, D-buňky žaludku"],
+    bannedStatus: "prescription-only"
+  },
+  {
+    id: 549,
+    name: "Renin",
+    categoryKey: "hormones",
+    tags: ["renin", "ledviny", "tlak", "RAAS", "enzym"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Ledvinný enzymatický hormon stojící na začátku kaskády řízení tlaku RAAS.",
+    description: "Renin je enzymatický peptidový hormon vylučovaný juxtaglomerulárními buňkami ledvin v reakci na pokles renálního krevního tlaku nebo nízkou hladinu sodíku v distálním tubulu. V krevní plazmě štěpí jaterní angiotensinogen na angiotensin I, čímž spouští celou kaskádu RAAS vedoucí k vazokonstrikci a sekreci aldosteronu. Je primárním biomarkerem pro diagnostiku příčin hypertenze.",
+    effects: [
+      "iniciace enzymatické kaskády RAAS",
+      "udržení filtračního tlaku v glomerulech ledvin",
+      "dlouhodobá regulace objemu tělesných tekutin"
+    ],
+    dosage: {
+      "short": "Norma plazmatické reninové aktivity (PRA): 0.5–4.0 ng/ml/h",
+      "long": "Diagnostický parametr. Měří se poměr aldosteron / renin (ARR) k odlišení primárního a sekundárního hyperaldosteronismu."
+    },
+    warning: "Vysoká aktivita reninu vede k refrakterní hypertenzi a poškození cév.",
+    mechanism: "Specifické endopeptidázové štěpení vazby Leu-Val na molekule cirkulujícího angiotensinogenu.",
+    halfLife: "Cca 10–20 minut",
+    interactions: [
+      "ACE inhibitory a sartany (zpětnovazebně zvyšují renin)",
+      "Beta-blokátory (potlačují sekreci reninu v ledvinách)"
+    ],
+    naturalSources: ["juxtaglomerulární buňky ledvinných arteriol"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 550,
+    name: "Spironolakton",
+    categoryKey: "hormones",
+    tags: ["spironolakton", "diuretikum", "antiandrogen", "aldosteron"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Draslík šetřící diuretikum a kompetitivní antagonista aldosteronu i androgenů.",
+    description: "Spironolakton (Verospiron) je syntetický steroidní lakton fungující jako kompetitivní antagonista mineralokortikoidních receptorů pro aldosteron. Působí v ledvinách: zvyšuje vylučování sodíku a vody z těla, zatímco šetří draslík. Zároveň vykazuje významné antiandrogenní účinky (blokuje androgenní receptory a inhibuje 5-alfa reduktázu), pročež se v biohackingu a dermatologii používá proti akné a ženskému vypadávání vlasů.",
+    effects: [
+      "odstranění zadržované podkožní vody a snížení krevního tlaku",
+      "šetření draslíku v těle (prevence hypokalémie)",
+      "silná blokáda androgenních receptorů v kůži a vlasech",
+      "redukce otoků při srdečním selhání a hyperaldosteronismu"
+    ],
+    dosage: {
+      "short": "25–100 mg denně ráno s jídlem",
+      "long": "Při hypertenzi a edémech 25–50 mg denně. U žen k léčbě akné a hirsutismu 50–100 mg denně. U mužů se dlouhodobému užívání vyhýbá kvůli riziku gynekomastie."
+    },
+    warning: "U mužů způsobuje gynekomastii, ztrátu libida a erektilní dysfunkci. Riziko nebezpečné hyperkalémie (nadbytku draslíku) – nekombinovat s draslíkem ani náhražkami soli!",
+    mechanism: "Kompetitivní blokáda vazby aldosteronu na cytoplazmatický mineralokortikoidní receptor v kortikálním sběracím tubulu; slabá kompetitivní blokáda androgenního receptoru (AR).",
+    halfLife: "Mateřská látka 1.4 hodiny, aktivní metabolit kanrenon 16.5 hodiny",
+    interactions: [
+      "Doplňky draslíku a ACE inhibitory (vysoké riziko fatální hyperkalémie)",
+      "NSAID (snižují účinnost)"
+    ],
+    naturalSources: ["pouze syntetické léčivo"],
+    bannedStatus: "banned-sport (WADA S5 diuretika a maskovací látky), prescription-only"
+  },
+  {
+    id: 551,
+    name: "Fludrokortizon",
+    categoryKey: "hormones",
+    tags: ["fludrokortizon", "mineralokortikoid", "tlak", "addison"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Extrémně potentní syntetický mineralokortikoid pro náhradu aldosteronu.",
+    description: "Fludrokortizon je syntetický fluorovaný kortikosteroid s masivní mineralokortikoidní aktivitou (je přibližně 100x účinnější v retenci sodíku než hydrokortizon). Používá se jako nenahraditelná substituční léčba u pacientů s primární nedostatečností nadledvin (Addisonova choroba), po oboustranné adrenalektomii a při těžké ortostatické hypotenzi (kolapsu tlaku při postavení).",
+    effects: [
+      "masivní retence sodíku a expanze intravaskulárního objemu",
+      "normalizace krevního tlaku u těžké hypotenze a selhání nadledvin",
+      "prevence fatální ztráty minerálů močí"
+    ],
+    dosage: {
+      "short": "0.05–0.2 mg denně ráno",
+      "long": "Běžná substituční dávka u Addisonovy nemoci je 0.1 mg (1 tableta) denně ráno zapitá vodou."
+    },
+    warning: "Snadno způsobí těžkou hypertenzi, otoky a hypokalémii (ztrátu draslíku). Vyžaduje pravidelné měření tlaku a ionogramu.",
+    mechanism: "Vysoce afinní vazba na mineralokortikoidní receptory v distálním nefronu.",
+    halfLife: "Plazmatický poločas 3.5 hodiny, biologický tkáňový účinek 18–36 hodin",
+    interactions: ["Diuretika (antagonistické působení)", "draslík (nutno hlídat hladinu v séru)"],
+    naturalSources: ["pouze syntetická farmaceutická substance"],
+    bannedStatus: "banned-sport (WADA S9), prescription-only"
+  },
+  {
+    id: 552,
+    name: "Tongkat Ali (Eurycoma longifolia)",
+    categoryKey: "hormones",
+    tags: ["tongkat-ali", "testosteron", "bylina", "libido", "SHBG"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Malajský přírodní zázrak standardizovaný na eurycomanon snižující SHBG a zvyšující volný T.",
+    description: "Tongkat Ali (Eurycoma longifolia / Malajský ženšen) je jihovýchodoasijský keř, jehož kořen je jedním z nejlépe vědecky doložených přírodních modulátorů testosteronu. Klíčovou účinnou látkou je eurycomanon. V klinických studiích na lidech prokázal schopnost snižovat SHBG (čímž uvolňuje vázaný testosteron na biologicky aktivní volný testosteron), stimulovat Leydigovy buňky a snižovat hladinu stresového kortizolu.",
+    effects: [
+      "výrazné zvýšení volného i celkového testosteronu",
+      "snížení hladiny SHBG a uvolnění vázaných androgenů",
+      "prokazatelné snížení hladiny kortizolu a stresu",
+      "masivní podpora libida, vitality a regenerace"
+    ],
+    dosage: {
+      "short": "200–400 mg denně standardizovaného extraktu (100:1 / 2–3% eurycomanon)",
+      "long": "Užívá se 200–400 mg denně ráno po snídani. Doporučuje se cyklovat (např. 5 dní užívání a 2 dny pauza, nebo 4 týdny užívání a 1 týden pauza), aby nedocházelo k adaptaci receptorů."
+    },
+    warning: "Nekvalitní neověřené extrakty na trhu mohou být kontaminovány těžkými kovy (rtuť) nebo adulterovány léky na erekci. Užívejte pouze laboratorně testované extrakty. Může dráždit žaludek nalačno.",
+    mechanism: "Eurycomanon inhibuje fosfodiesterázy a stimuluje CYP17 enzym v Leydigových buňkách; zároveň vytěsňuje testosteron z vazby na SHBG.",
+    halfLife: "Biologicky aktivní metabolity účinkují cca 12–24 hodin",
+    interactions: [
+      "Fadogia Agrestis (často kombinováno pro maximální stimulaci varlat)",
+      "Bór (synergické srážení SHBG)"
+    ],
+    naturalSources: ["kořen stromu Eurycoma longifolia (Malajsie, Indonésie)"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 553,
+    name: "Fadogia Agrestis",
+    categoryKey: "hormones",
+    tags: ["fadogia", "LH", "testosteron", "afrodiziakum", "bylina"],
+    rating: 4,
+    colorType: "yellow",
+    shortDesc: "Nigerijská bylina stimulující hypofýzu k vyšší sekreci luteinizačního hormonu (LH).",
+    description: "Fadogia Agrestis je africký keř z čeledi mořenovitých tradičně využívaný v nigerijské medicíně jako silné afrodiziakum a tonikum pro muže. Do popředí moderního biohackingu se dostala díky studiím prokazujícím dramatické zvýšení hladiny luteinizačního hormonu (LH) a následný nárůst testosteronu a velikosti varlat. Na rozdíl od Tongkat Ali působí více centrálně na úrovni hypofýzy.",
+    effects: [
+      "zvýšení sekrece luteinizačního hormonu (LH)",
+      "nárůst přirozené produkce testosteronu ve varlatech",
+      "zvýšení objemu varlat a spermatogeneze",
+      "silná podpora libida a sexuální výdrže"
+    ],
+    dosage: {
+      "short": "300–600 mg denně standardizovaného extraktu (10:1)",
+      "long": "Užívejte 300–600 mg denně ráno s jídlem. Z DŮVODU BEZPEČNOSTI JE NUTNÉ CYKLOVAT: maximálně 3–4 týdny v kuse, poté minimálně 2 týdny úplná pauza."
+    },
+    warning: "Preklinické studie na hlodavcích naznačily možnost renální a jaterní toxicity při dlouhodobém nepřetržitém užívání vysokých dávek. Dodržujte striktní cyklování a nepřekračujte doporučené dávky.",
+    mechanism: "Alkaloidy a saponiny stimulují uvolňování LH z hypofýzy a aktivují enzymatickou kaskádu steroidogeneze.",
+    halfLife: "Cca 12–18 hodin",
+    interactions: ["Tongkat Ali (populární synergický stack pro natural testosteron)"],
+    naturalSources: ["stonky a kořeny rostliny Fadogia agrestis (Nigérie)"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 554,
+    name: "Shilajit (Mumio standardizované)",
+    categoryKey: "hormones",
+    tags: ["shilajit", "mumio", "mineraly", "fulvova-kyselina", "plodnost"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Himalájská minerální pryskyřice s kyselinou fulvovou prokazatelně zvyšující testosteron a spermie.",
+    description: "Shilajit (Mumio) je přírodní pryskyřičná substance vznikající po staletí pomalým rozkladem rostlinné biomasy pod tlakem himalájských skal. Obsahuje přes 84 iontových minerálů a vysokou koncentraci bioaktivní kyseliny fulvové. Dvojitě zaslepená placebem kontrolovaná klinická studie u mužů ve věku 45–55 let prokázala po 90 dnech užívání 500 mg čištěného Shilajitu zvýšení celkového testosteronu o 23.5 % a volného testosteronu o 19 %.",
+    effects: [
+      "klinicky ověřené zvýšení celkového i volného testosteronu",
+      "masivní zlepšení počtu a motility spermií (až o 60 %)",
+      "zvýšení buněčné produkce ATP v mitochondriích",
+      "chelatační transport minerálů přímo do buněk"
+    ],
+    dosage: {
+      "short": "250–500 mg denně standardizovaného extraktu (50% fulvová kyselina)",
+      "long": "Užívá se 250–500 mg ráno a zapíjí se vlažnou vodou nebo mlékem. Pro maximální účinek užívat kontinuálně minimálně 8–12 týdnů."
+    },
+    warning: "Nekupujte surový nečištěný shilajit přímo z pochybných zdrojů – může obsahovat těžké kovy, plísně a mykotoxiny. Používejte pouze patentované čištěné formy (např. PrimaVie).",
+    mechanism: "Kyselina fulvová působí jako elektronový nosič v mitochondriálním dýchacím řetězci; dibenzo-alfa-pyrony chrání koenzym Q10 před degradací a stimulují steroidogenezi.",
+    halfLife: "Vstřebávání minerálů probíhá kontinuálně",
+    interactions: ["Koenzym Q10 (obrovská synergie pro buněčné ATP a spermie)"],
+    naturalSources: ["himalájská minerální pryskyřice z vysokých nadmořských výšek"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 555,
+    name: "Cistanche Tubulosa",
+    categoryKey: "hormones",
+    tags: ["cistanche", "echinacosid", "testosteron", "longevity", "bylina"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Pouštní bylina tradiční čínské medicíny standardizovaná na echinacosid pro masivní podporu steroidogeneze.",
+    description: "Cistanche Tubulosa (tzv. Pouštní ženšen) je parazitická bylina rostoucí v nehostinných pouštích. V tradiční medicíně je považována za nejlepší tonikum pro ledviny a esenci Jing. Moderní věda identifikovala klíčové fenylethanoidní glykosidy – echinacosid a acteosid. Výzkumy ukazují, že echinacosid prochází do varlat, kde aktivuje enzymy steroidogeneze (CYP11A1, 3β-HSD, CYP17A1), což vede k signifikantnímu nárůstu testosteronu a ochraně varlat před toxiny.",
+    effects: [
+      "přímá aktivace enzymů tvořících testosteron ve varlatech",
+      "zlepšení prokrvení pánve a erektilní funkce via eNOS",
+      "silná neuroprotekce a stimulace faktoru BDNF v mozku",
+      "podpora zdraví tlustého střeva a mikrobiomu"
+    ],
+    dosage: {
+      "short": "200–400 mg denně standardizovaného extraktu",
+      "long": "Užívá se 200–400 mg standardizovaného extraktu (ideálně s garantovaným obsahem min. 30 % echinacosidu a 10 % acteosidu) s jídlem obsahujícím tuky (např. večeře). Má příjemný relaxační profil."
+    },
+    warning: "Výborný bezpečnostní profil. Může mírně snížit krevní tlak u citlivých jedinců.",
+    mechanism: "Upregulace exprese steroidogenního akutního regulačního proteinu (StAR) v Leydigových buňkách; stimulace exprese oxidu dusnatého (NO).",
+    halfLife: "Aktivní metabolity mají poločas cca 6–10 hodin",
+    interactions: ["Cholesterolem bohatá strava (dodává základní surovinu pro steroidogenezi)"],
+    naturalSources: ["stonky parazitické pouštní rostliny Cistanche tubulosa"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 556,
+    name: "Maca Peruánská (Lepidium meyenii)",
+    categoryKey: "hormones",
+    tags: ["maca", "libido", "adaptogen", "energie", "plodnost"],
+    rating: 4,
+    colorType: "green",
+    shortDesc: "Vysokohorský andský kořen dramaticky zvyšující libido a plodnost bez vlivu na hormony.",
+    description: "Maca peruánská (Lepidium meyenii) je kořenová zelenina pěstovaná v extrémních výškách peruánských And (nad 4000 m n. m.). Obsahuje unikátní bioaktivní sloučeniny macamidy a macaeny. V klinických studiích konzistentně prokazuje silné zvýšení sexuální touhy, libida a objemu spermií, aniž by přímo měnila hladiny testosteronu či estrogenu v krvi. Působí na úrovni receptorů a neurotransmiterů.",
+    effects: [
+      "výrazné zvýšení libida a sexuální touhy u mužů i žen",
+      "zvýšení objemu ejakulátu a počtu spermií",
+      "adaptogenní podpora proti chronické únavě",
+      "zlepšení nálady a zmírnění symptomů menopauzy"
+    ],
+    dosage: {
+      "short": "1500–3000 mg denně (ideálně želatinizovaná forma)",
+      "long": "Doporučuje se 1.5–3 g denně ráno nebo před tréninkem. Vždy volte 'želatinizovanou' macu – proces odstranění škrobů, který zabraňuje trávicím potížím a koncentruje účinné látky."
+    },
+    warning: "Syrová (neželatinizovaná) maca obsahuje těžce stravitelné škroby a může způsobovat nadýmání a křeče v břiše.",
+    mechanism: "Macamidy působí jako inhibitory enzymu FAAH (amidohydroláza mastných kyselin), což zvyšuje hladinu endokanabinoidu anandamidu ('molekuly blaženosti') v mozku.",
+    halfLife: "Metabolity FAAH inhibice účinkují 6–8 hodin",
+    interactions: ["L-Arginin / Citrulin (synergie pro erekci a prokrvení)"],
+    naturalSources: ["kořen Lepidium meyenii (černá, červená a žlutá maca)"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 557,
+    name: "Saw Palmetto (Serenoa repens)",
+    categoryKey: "hormones",
+    tags: ["saw-palmetto", "prostata", "DHT", "vlasy", "bylina"],
+    rating: 4,
+    colorType: "green",
+    shortDesc: "Přírodní liposterolový extrakt chránící prostatu a vlasové folikuly před nadbytkem DHT.",
+    description: "Saw Palmetto (Serenoa plazivá) je malá palma původem z jihovýchodu USA. Z jejích bobulí se extrahuje frakce bohatá na volné mastné kyseliny a fytosteroly (zejména beta-sitosterol). Je nejpopulárnějším přírodním prostředkem pro léčbu benigní hyperplazie prostaty (BPH). Funguje jako mírný přírodní inhibitor obou izoenzymů 5-alfa reduktázy, čímž tlumí nadměrnou lokální konverzi testosteronu na DHT v prostatě a vlasových folikulech.",
+    effects: [
+      "zlepšení močení a redukce nykturie při zvětšené prostatě",
+      "tlumení konverze testosteronu na DHT",
+      "podpora prevence androgenetického vypadávání vlasů",
+      "protizánětlivý účinek na urogenitální trakt"
+    ],
+    dosage: {
+      "short": "160–320 mg denně standardizovaného lipofilního extraktu (85–95 % mastných kyselin)",
+      "long": "Standardní terapeutická dávka je 160 mg 2x denně nebo 320 mg 1x denně s jídlem obsahujícím tuky. Účinek na močové cesty se plně rozvíjí po 4–8 týdnech."
+    },
+    warning: "Nezaměňovat mletý suchý prášek z bobulí s koncentrovaným extraktem. Suchý prášek obsahuje pouze 5–10 % aktivních lipidů a je neúčinný.",
+    mechanism: "Nekompetitivní inhibice enzymů 5α-reduktázy typu I a II; kompetitivní blokáda vazby DHT na intracelulární receptory v prostatě.",
+    halfLife: "Cca 12 hodin",
+    interactions: [
+      "Finasterid / Dutasterid (aditivní inhibice 5-AR)",
+      "Kopřiva dvoudomá (Urtica dioica - silná synergie pro prostatu)"
+    ],
+    naturalSources: ["zralé plody palmy Serenoa repens (Florida)"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 558,
+    name: "Tribulus Terrestris (Kotvičník zemní)",
+    categoryKey: "hormones",
+    tags: ["tribulus", "protodioscin", "libido", "erekce", "bylina"],
+    rating: 3,
+    colorType: "green",
+    shortDesc: "Tradiční bylinné afrodiziakum standardizované na protodioscin pro masivní stimulaci libida.",
+    description: "Kotvičník zemní (Tribulus terrestris) je plazivá bylina bohatá na steroidní furostanolové saponiny, z nichž nejdůležitější je protodioscin. Ačkoliv byl v minulosti mylně propagován jako přímý anabolický 'booster' testosteronu u zdravých mladých sportovců (kde hladinu testosteronu přímo nezvyšuje), spolehlivě funguje jako mimořádně silné afrodiziakum: zvyšuje hustotu androgenních receptorů v mozku, stimuluje produkci oxidu dusnatého (NO) a zlepšuje erektilní funkci.",
+    effects: [
+      "masivní nárůst sexuálního apetitu a libida",
+      "zvýšení produkce oxidu dusnatého (eNOS) pro tvrdost erekce",
+      "zvýšení hustoty androgenních receptorů v mozkových strukturách",
+      "podpora kardiovaskulárního zdraví a lipidového profilu"
+    ],
+    dosage: {
+      "short": "500–1500 mg denně (standardizováno na min. 60–90 % saponinů)",
+      "long": "Užívá se 500 mg 2–3x denně s jídlem. Zásadní je kvalita suroviny: hledejte extrakt z bulharského kotvičníku standardizovaný na protodioscin (nikoliv levné čínské či indické extrakty z kořenů bez obsahu saponinů)."
+    },
+    warning: "Může způsobit podráždění žaludku při užití nalačno. Neužívat při těžkém zánětu žaludku.",
+    mechanism: "Protodioscin se v těle metabolizuje na dehydroepiandrosteronové deriváty; stimulace uvolňování oxidu dusnatého z cévního endotelu a corpora cavernosa penisu.",
+    halfLife: "8–12 hodin",
+    interactions: ["Maca / Horny Goat Weed (synergický afrodiziakální stack)"],
+    naturalSources: ["nadzemní části byliny Tribulus terrestris"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 559,
+    name: "Pískavice řecké seno (Fenugreek / Testofen)",
+    categoryKey: "hormones",
+    tags: ["fenugreek", "testofen", "volny-testosteron", "cukr", "bylina"],
+    rating: 4,
+    colorType: "green",
+    shortDesc: "Extrakt ze semen pískavice standardizovaný na fenusidy zvyšující volný testosteron.",
+    description: "Pískavice řecké seno (Trigonella foenum-graecum) je luštěnina známá ze středomořské a ajurvédské medicíny. Patentovaný extrakt ze semen (Testofen) je standardizovaný na vysoký obsah specifických furostanolových glykosidů (fenusidů). V klinických studiích u mužů prokázal schopnost udržovat vysokou hladinu volného testosteronu (částečnou inhibicí aromatázy a 5-alfa reduktázy), zlepšovat tělesnou kompozici a stabilizovat hladinu krevního cukru.",
+    effects: [
+      "zvýšení volného testosteronu v plazmě",
+      "podpora libida a frekvence ranních erekcí",
+      "zlepšení inzulínové senzitivity a glykémie po jídle",
+      "podpora regenerace a svalového tonu"
+    ],
+    dosage: {
+      "short": "500–600 mg denně standardizovaného extraktu Testofen",
+      "long": "Užívá se 300 mg 2x denně nebo 600 mg 1x denně s jídlem. Účinky na libido a energii se projevují po 4–6 týdnech pravidelného užívání."
+    },
+    warning: "Způsobuje neškodnou, ale velmi typickou vůni potu a moči po javorovém sirupu (vlivem látky sotolon). Diabetici by měli sledovat glykémii (může snížit cukr v krvi).",
+    mechanism: "Furostanolové glykosidy modulují metabolismus steroidů mírnou duální inhibicí aromatázy a 5-alfa reduktázy; aminokyselina 4-hydroxyisoleucin stimuluje sekreci inzulínu závislou na glukóze.",
+    halfLife: "Cca 12 hodin",
+    interactions: ["Antidiabetika (aditivní snížení krevního cukru)"],
+    naturalSources: ["semena Trigonella foenum-graecum"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 560,
+    name: "DIM (Diindolylmethan)",
+    categoryKey: "hormones",
+    tags: ["DIM", "estrogen", "metabolismus", "aromatizace", "prostata"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Přírodní metabolit z brokolice optimalizující poměr prospěšných a rizikových metabolitů estrogenu.",
+    description: "DIM (Diindolylmethan) je bioaktivní molekula vznikající v žaludku kyselou dimerizací indol-3-karbinolu (I3C) obsaženého v brukvovité zelenině. Funguje jako chytrý regulátor estrogenního metabolismu: stimuluje jaterní cytochromy k preferenční tvorbě 'dobrého' 2-hydroxyestronu (který chrání buňky a prsa) na úkor 'špatného' 16-alfa-hydroxyestronu a 4-hydroxyestronu (které jsou silně proliferativní a mutagenní). U mužů pomáhá předcházet estrogenní dominanci na TRT.",
+    effects: [
+      "posun metabolismu estrogenů k protektivnímu 2-hydroxyestronu",
+      "prevence estrogenové dominance a zadržování vody",
+      "ochrana prsní a prostatické tkáně",
+      "přirozená optimalizace hormonálního profilu u mužů na TRT"
+    ],
+    dosage: {
+      "short": "100–200 mg denně s jídlem",
+      "long": "Standardní dávka je 100–200 mg denně s jídlem. Vzhledem k nízké krystalické absorpci je vhodné volit bioavailable formy (např. BioResponse DIM s fytosomy/fosfolipidy)."
+    },
+    warning: "Při velmi vysokých dávkách (>300 mg) může paradoxně působit jako slabý inhibitor aromatázy nebo narušit metabolismus hormonů. Může ztmavit moč do oranžovo-hnědého tónu (zcela neškodný metabolit).",
+    mechanism: "Upregulace jaterního enzymu CYP1A2 (vedoucího k 2-hydroxylaci) a downregulace CYP1B1 a CYP3A4; mírná vazba na arylhydrokarbonový receptor (AhR).",
+    halfLife: "Cca 4–7 hodin",
+    interactions: [
+      "Testosteron / TRT protokoly (vynikající prevence rozvoje gynekomastie)",
+      "perorální antikoncepce"
+    ],
+    naturalSources: ["brokolice, růžičková kapusta, květák, kadeřávek"],
+    bannedStatus: "legal"
+  },
+  {
+    id: 561,
+    name: "Bor (Bór citrát / aspartát)",
+    categoryKey: "hormones",
+    tags: ["bor", "stopovy-prvek", "SHBG", "volny-testosteron", "kosti"],
+    rating: 5,
+    colorType: "green",
+    shortDesc: "Stopový prvek s klinicky prokázanou schopností srazit SHBG a zvednout volný testosteron během týdne.",
+    description: "Bór je biologicky esenciální stopový prvek hrající mimořádnou roli v mineralizaci kostí a hormonální homeostáze. Klinická studie (Naghii et al.) prokázala, že suplementace 10 mg elementárního bóru denně u zdravých mužů po pouhých 7 dnech signifikantně snížila hladinu SHBG v krevní plazmě a vedla k masivnímu vzestupu biologicky aktivního volného testosteronu o téměř 30 % spolu s poklesem zánětlivých markerů (hs-CRP, TNF-alfa).",
+    effects: [
+      "rychlé a prokazatelné snížení hladiny SHBG v krevním séru",
+      "výrazné zvýšení volného (biologicky dostupného) testosteronu",
+      "snížení hladiny zánětlivých cytokinů (CRP, IL-6)",
+      "zlepšení absorpce a retence vápníku a hořčíku v kostech"
+    ],
+    dosage: {
+      "short": "6–10 mg elementárního bóru denně ráno s jídlem",
+      "long": "Pro hormonální optimalizaci (snížení SHBG) se užívá 10 mg elementárního bóru (např. ve formě citrátu, glycinátu nebo aspartátu) ráno se snídaní. Doporučuje se cyklus: 2–3 týdny užívání, 1 týden pauza."
+    },
+    warning: "Maximální bezpečná horní hranice (UL) pro dospělé je 20 mg denně. Při dlouhodobém kontinuálním užívání vysokých dávek bez pauzy může stoupat i hladina estradiolu, proto je vhodné cyklovat.",
+    mechanism: "Bór vytváří stabilní reverzibilní komplexy s polyoly a sacharidovými řetězci na povrchu molekuly SHBG, čímž snižuje její vazebnou kapacitu pro testosteron; stimuluje metabolismus vitamínu D.",
+    halfLife: "Plazmatický eliminační poločas bóru je cca 21 hodin (vylučuje se ledvinami)",
+    interactions: [
+      "Vitamín D3 a Hořčík (silná synergie pro hustotu kostí a hormonální zdraví)",
+      "Tongkat Ali (komplementární působení na SHBG)"
+    ],
+    naturalSources: ["rozinky, sušené švestky, mandle, vlašské ořechy, avokádo"],
+    bannedStatus: "legal"
+  }
+];
+
+console.log(`Loaded ${hormonesData.length} comprehensive hormone definitions.`);
+module.exports = { hormonesData };

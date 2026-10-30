@@ -188,29 +188,6 @@ select:focus {
 	font-weight: 600;
 	margin-bottom: 0;
 }
-.card-evidence {
-	font-size: 0.65rem;
-	font-weight: 700;
-	padding: 2px 6px;
-	border-radius: 4px;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-.card-evidence.ev-a {
-	background: rgba(0, 255, 65, 0.12);
-	color: var(--neon-green);
-	border: 1px solid rgba(0, 255, 65, 0.3);
-}
-.card-evidence.ev-b {
-	background: rgba(0, 243, 255, 0.12);
-	color: var(--ui-accent);
-	border: 1px solid rgba(0, 243, 255, 0.3);
-}
-.card-evidence.ev-c {
-	background: rgba(255, 234, 0, 0.12);
-	color: var(--neon-yellow);
-	border: 1px solid rgba(255, 234, 0, 0.3);
-}
 
 .card-rating {
 	font-size: 0.82rem;
@@ -959,7 +936,14 @@ body.detail-active {
 	padding-bottom: 0;
 }
 
-/* Grid pro 3 sloupce */
+/* Grid pro sloupce v detailu */
+.stats-grid.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
 .stats-grid.three-cols {
     grid-template-columns: repeat(3, 1fr);
 }
@@ -1507,6 +1491,85 @@ body.detail-active {
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
 
+.btn-detail-action.calc-btn {
+    border-color: rgba(0, 229, 255, 0.4);
+    color: #00e5ff;
+}
+
+.btn-detail-action.calc-btn:hover {
+    background: rgba(0, 229, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+/* --- PEPTIDE PROTOCOL CARD (Inspired by PeptideWiki) --- */
+.peptide-prep-card {
+    background: rgba(0, 229, 255, 0.04);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 25px;
+}
+
+.peptide-prep-card h3 {
+    color: #00e5ff;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.peptide-prep-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 14px 0 18px 0;
+}
+
+.prep-item {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.prep-title {
+    display: block;
+    font-size: 0.72rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
+}
+
+.prep-val {
+    font-size: 0.88rem;
+    color: #eee;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.btn-outline-peptide {
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    color: #00e5ff;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-outline-peptide:hover {
+    background: rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 14px rgba(0, 229, 255, 0.35);
+    color: #fff;
+}
+
 /* --- APP TOAST NOTIFICATION --- */
 .app-toast {
     position: fixed;
@@ -1582,39 +1645,6 @@ body.detail-active {
 .source-desc {
     font-size: 0.82rem;
     color: #aaa;
-    line-height: 1.4;
-}
-
-.evidence-scale-box {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 8px;
-    padding: 14px;
-    margin-top: 15px;
-}
-.evidence-scale-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #1a1a1a;
-}
-.evidence-scale-row:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-.evidence-badge-item {
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    padding: 3px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-}
-.evidence-scale-text {
-    font-size: 0.82rem;
-    color: #bbb;
-    line-height: 1.4;
 }
 
 /* ========================================================
@@ -1648,9 +1678,6 @@ body.detail-active {
     .card-category {
         font-size: 0.62rem;
     }
-    .card-evidence {
-        display: none;
-    }
     .card-desc {
         font-size: 0.75rem;
         line-height: 1.35;
@@ -1681,6 +1708,7 @@ body.detail-active {
     .detail-actions-bar {
         flex-direction: column;
     }
+    .stats-grid.two-cols,
     .stats-grid.three-cols {
         grid-template-columns: 1fr;
     }
@@ -1742,10 +1770,6 @@ body.detail-active {
     }
     .card-category {
         font-size: 0.78rem;
-    }
-    .card-evidence {
-        font-size: 0.72rem;
-        padding: 3px 8px;
     }
     .card-rating {
         font-size: 0.95rem;

@@ -629,7 +629,10 @@
     "warning": "Pacienti s renální dysfunkcí by měli dávkování konzultovat s nefrologem.",
     "mechanism": "Substrát pro syntézu nukleotidů enterocytů, upregulace exprese claudinu a occludinu",
     "halfLife": "1 hodina",
-    "interactions": [],
+    "interactions": [
+      "BPC-157 (silná synergie pro obnovu střevní integrity)",
+      "Probiotika (synergická výživa střevního mikrobiomu)"
+    ],
     "evidenceLevel": "A",
     "naturalSources": [
       "kostní vývar",
@@ -934,5 +937,318 @@
     ],
     "bannedStatus": "legal",
     "id": 123
+  },
+  {
+    "id": 124,
+    "name": "Spermidin",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "autofagie",
+      "kardiovaskulární",
+      "buňky"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní polyamin stimulující autofagii a buněčné čištění.",
+    "description": "Spermidin je tělu vlastní alifatický polyamin obsažený v pšeničných klíčcích, sóji a zrajících sýrech. Je jedním z nejlépe prozkoumaných induktorů autofagie – procesu, při němž buňky rozkládají a recyklují poškozené organely a agregované bílkoviny. Podporuje kardiovaskulární zdraví, buněčné omlazení a kognitivní funkce.",
+    "effects": [
+      "indukce buněčné autofagie",
+      "kardioprotekce a elasticita cév",
+      "podpora dlouhověkosti",
+      "ochrana mitochondrií"
+    ],
+    "dosage": {
+      "short": "1–3 mg denně (čistý spermidin)",
+      "long": "Běžná dávka je 1–3 mg čistého spermidinu denně (odpovídá 800–1200 mg standardizovaného extraktu z pšeničných klíčků). Užívá se s jídlem ráno nebo v poledne."
+    },
+    "warning": "Výborný bezpečnostní profil. U onkologických pacientů s aktivním tumorem konzultovat s lékařem kvůli vlivu polyaminů na buněčný růst.",
+    "mechanism": "Inhibice acetyltransferázy EP300, hypusilace translačního faktoru eIF5A a upregulace transkripce autofagických genů (ATG5, ATG7).",
+    "halfLife": "Cirkulující v plazmě cca 1–2 hodiny, intracelulární metabolický obrat 24–48 hodin",
+    "interactions": [
+      "resveratrol (aditivní autofagický efekt)",
+      "NMN / NAD+ donory (synergická buněčná oprava)",
+      "inhibitory polyaminové syntézy"
+    ],
+    "naturalSources": [
+      "pšeničné klíčky",
+      "sójové boby (natto)",
+      "zrající sýry",
+      "houby shiitake"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 125,
+    "name": "Fisetin",
+    "categoryKey": "health",
+    "tags": [
+      "senolytikum",
+      "longevity",
+      "flavonoid",
+      "antioxidant"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Silný rostlinný flavonoid se senolytickým a protizánětlivým účinkem.",
+    "description": "Fisetin je přírodní polyfenolický flavonoid přítomný v jahodách, jablkách a persimonech. V preklinických studiích Mayo Clinic prokázal mimořádnou schopnost selektivně eliminovat senescentní („zombie“) buňky, které vylučují prozánětlivé cytokiny SASP. Podporuje zdravé stárnutí tkání, elasticitu cév a kognitivní funkce.",
+    "effects": [
+      "selektivní senolýza stárnoucích buněk",
+      "redukce chronického systémového zánětu (SASP)",
+      "aktivace sirtuinů (SIRT1)",
+      "ochrana mozkových neuronů"
+    ],
+    "dosage": {
+      "short": "100–500 mg denně nebo pulzně 20 mg/kg",
+      "long": "Pro běžnou antioxidační podporu 100–300 mg denně s tuky. Pro senolytický pulzní protokol (Mayo Clinic protokol) se podává 20 mg/kg tělesné hmotnosti po dobu 2–3 po sobě jdoucích dnů jednou za měsíc."
+    },
+    "warning": "Dobře snášen. Vzhledem k lipofilní povaze vyžaduje konzumaci s kvalitními tuky (např. olivový olej nebo lecitin) pro dostatečnou biologickou dostupnost.",
+    "mechanism": "Downregulace anti-apoptotických drah BCL-2 a BCL-xL v senescentních buňkách, inhibice PI3K/Akt/mTOR osy a aktivace AMPK.",
+    "halfLife": "3–4 hodiny (v plazmě), biologické senolytické účinky přetrvávají týdny",
+    "interactions": [
+      "kvercetin (senolytická synergie)",
+      "antikoagulancia (mírné antiagregační působení)",
+      "léčiva metabolizovaná CYP3A4"
+    ],
+    "naturalSources": [
+      "jahody",
+      "jablka",
+      "persimony",
+      "cibule",
+      "okurky"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 126,
+    "name": "Ca-AKG (Alfa-ketoglutarát vápenatý)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "epigenetika",
+      "mitochondrie",
+      "kosti"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Klíčový meziprodukt Krebsova cyklu pro epigenetické omlazení.",
+    "description": "Alfa-ketoglutarát vápenatý (Ca-AKG) je stabilní vápenatá sůl centrálního metabolitu Krebsova cyklu. Hladina AKG v těle dramaticky klesá mezi 40. a 80. rokem života až o 90 %. Suplementace Ca-AKG prokázala schopnost zvrátit biologický věk (měřený DNA metylačními hodinami) a podporovat syntézu kolagenu, kostní minerální hustotu a buněčné dýchání.",
+    "effects": [
+      "modulace epigenetických DNA demetyláz",
+      "podpora mitochondriální produkce ATP",
+      "syntéza prolinu a hydroxyprolinu pro kolagen",
+      "snížení systémových zánětlivých markerů"
+    ],
+    "dosage": {
+      "short": "1000–1500 mg denně",
+      "long": "Doporučená dávka je 1000 mg denně nalačno nebo s lehkým jídlem ráno. Při intenzivní longevity kůře až 1500 mg rozděleno do dvou dávek."
+    },
+    "warning": "Velmi bezpečný profil. U jedinců s poruchou metabolismu vápníku nebo hyperkalcémií kontrolovat příjem vápníku.",
+    "mechanism": "Kofaktor pro TET enzymy a JmjC demetylázy histonů; inhibice ATP syntázy vedoucí k aktivaci AMPK a autofagie; regulace mTOR dráhy.",
+    "halfLife": "Plazmatický poločas cca 60–90 minut, intracelulární metabolické ovlivnění dlouhodobé",
+    "interactions": [
+      "NMN / NR (zesílení energetického metabolismu)",
+      "vápníkové blokátory (nutno zohlednit vázaný iont vápníku)",
+      "tetracyklinová antibiotika (oddělit o 3 hodiny kvůli vápníku)"
+    ],
+    "naturalSources": [
+      "endogenní metabolit Krebsova cyklu",
+      "stopově ve fermentovaných potravinách"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 127,
+    "name": "Astaxanthin",
+    "categoryKey": "health",
+    "tags": [
+      "antioxidant",
+      "oči",
+      "kůže",
+      "mitochondrie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Král karotenoidů chránící buněčné membrány zevnitř i zvenčí.",
+    "description": "Astaxanthin je červený keto-karotenoid získávaný z mikrořasy Haematococcus pluvialis. Na rozdíl od jiných antioxidantů jeho unikátní molekulární struktura překlenuje celou fosfolipidovou dvojvrstvu buněčné membrány, čímž chrání buňku zevnitř i zvenku bez rizika, že by se stal pro-oxidantem. Má 6000x vyšší antioxidační kapacitu než vitamín C proti volným hydroxylovým radikálům.",
+    "effects": [
+      "ochrana buněčných membrán a mitochondrií",
+      "zlepšení elasticity kůže a ochrana před UV zářením",
+      "snížení únavy očí a podpora makulárního pigmentu",
+      "urychlení svalové regenerace po zátěži"
+    ],
+    "dosage": {
+      "short": "4–12 mg denně s jídlem",
+      "long": "Základní protektivní dávka je 4–8 mg denně. Pro sportovce a při zvýšené zátěži očí nebo kůže 12 mg denně. Vždy užívat společně s jídlem obsahujícím tuky pro maximální vstřebatelnost."
+    },
+    "warning": "Zcela netoxický. Při velmi vysokých dávkách (>24 mg) může dojít k neškodnému oranžovému zabarvení stolice a mírnému tónování pokožky.",
+    "mechanism": "Překlenutí membránové lipidové dvojvrstvy a neutralizace reaktivních forem kyslíku (ROS); aktivace dráhy Nrf2-ARE; inhibice NF-kB.",
+    "halfLife": "16–21 hodin (výborná stabilní tkáňová akumulace)",
+    "interactions": [
+      "Omega-3 EPA/DHA (synergická absorpce v tucích)",
+      "lutein a zeaxantin (komplementární ochrana sítnice)",
+      "statiny (astaxanthin redukuje statiny indukovanou myopatii)"
+    ],
+    "naturalSources": [
+      "řasa Haematococcus pluvialis",
+      "divoký losos",
+      "krill",
+      "krevety"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 128,
+    "name": "Sulforafan",
+    "categoryKey": "health",
+    "tags": [
+      "detoxikace",
+      "nrf2",
+      "antioxidant",
+      "epigenetika"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Nejsilnější přírodní aktivátor buněčné antioxidační obrany Nrf2.",
+    "description": "Sulforafan je organosírová sloučenina ze skupiny isothiokyanátů vznikající štěpením glukorafaninu enzymem myrosinázou v brukvovité zelenině (zejména v brokolicových klíčcích). Funguje jako master-spínač buněčné obrany tím, že aktivuje transkripční faktor Nrf2, který spouští produkci stovek endogenních detoxikačních enzymů 2. fáze a antioxidačních enzymů včetně glutathionu.",
+    "effects": [
+      "masivní stimulace Nrf2 antioxidační dráhy",
+      "indukce detoxikačních enzymů II. fáze v játrech",
+      "podpora eliminace karcinogenů a toxických zplodin",
+      "inhibice HDAC (epigenetická ochrana DNA)"
+    ],
+    "dosage": {
+      "short": "10–30 mg volného sulforafanu denně",
+      "long": "Doporučuje se 10–30 mg stabilizovaného volného sulforafanu (nebo extrakt z brokolicových klíčků s garantovaným obsahem aktivní myrosinázy) ráno na lačno nebo s lehkým jídlem."
+    },
+    "warning": "U extraktů bez myrosinázy je konverze z glukorafaninu ve střevech velmi nízká. Může mírně dráždit citlivý žaludek nalačno.",
+    "mechanism": "Alkylace cysteinových zbytků proteinu Keap1, disociace transkripčního faktoru Nrf2 a jeho translokace do buněčného jádra s vazbou na sekvence ARE (Antioxidant Response Element).",
+    "halfLife": "2–3 hodiny v krvi, epigenetická indukce enzymů trvá 48–72 hodin",
+    "interactions": [
+      "selen (synergie pro syntézu glutathion peroxidázy)",
+      "léky metabolizované cytochromem P450 fáze I (modulace aktivity)"
+    ],
+    "naturalSources": [
+      "brokolicové klíčky (3–4 dny staré)",
+      "syrová brokolice",
+      "růžičková kapusta",
+      "rukola"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 129,
+    "name": "PQQ (Pyrrolochinolin chinon)",
+    "categoryKey": "health",
+    "tags": [
+      "mitochondrie",
+      "energie",
+      "mozek",
+      "biogeneze"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Mitochondriální kofaktor stimulující vznik nových buněčných elektráren.",
+    "description": "PQQ (Pyrrolochinolin chinon) je redoxní kofaktor a mikronutrient s unikátní schopností stimulovat mitochondriální biogenezi – tedy tvorbu zcela nových mitochondrií v buňkách s vysokým energetickým výdejem (mozek, srdce, kosterní svaly). Vykazuje 20 000x vyšší katalytickou kapacitu redoxního cyklování než vitamín C.",
+    "effects": [
+      "mitochondriální biogeneze (vznik nových mitochondrií)",
+      "zvýšení buněčné produkce energie (ATP)",
+      "neuroprotekce a stimulace faktoru NGF",
+      "kardioprotekce srdečního svalu"
+    ],
+    "dosage": {
+      "short": "10–20 mg denně ráno",
+      "long": "Standardní terapeutická dávka je 10–20 mg disodné soli PQQ denně ráno se snídaní. Vynikající synergie s koenzymem Q10 (100–200 mg)."
+    },
+    "warning": "Výborně snášen, bez známých nežádoucích účinků při doporučeném dávkování.",
+    "mechanism": "Aktivace cAMP-responzivního elementu CREB a transkripčního koaktivátoru PGC-1alfa, který přímo řídí replikaci a tvorbu nových mitochondrií.",
+    "halfLife": "Plazmatický poločas eliminace cca 3–5 hodin, bioenergetický efekt přetrvává",
+    "interactions": [
+      "Koenzym Q10 (silná klinicky ověřená synergie pro kognici a ATP)",
+      "NMN / NR (komplementární podpora mitochondriálního zdraví)"
+    ],
+    "naturalSources": [
+      "fermentované sójové boby (natto)",
+      "zelený čaj",
+      "papáje",
+      "petržel",
+      "mateřské mléko"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 130,
+    "name": "Kyselina hyaluronová",
+    "categoryKey": "health",
+    "tags": [
+      "klouby",
+      "kůže",
+      "hydratace",
+      "vazy"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Vysokomolekulární glykosaminoglykan pro hydrataci tkání a kloubní maz.",
+    "description": "Kyselina hyaluronová (hyaluronan) je přirozený nesulfatovaný glykosaminoglykan tvořící hlavní složku extracelulární matrix, synoviální tekutiny v kloubech a dermis. Dokáže na sebe navázat až 1000násobek své hmotnosti ve vodě. Orální suplementace kombinuje vysokomolekulární formu (promazání kloubů a střevní bariéra) a nízkomolekulární formu (vstřebání do krevního oběhu a hydratace hlubokých vrstev kůže).",
+    "effects": [
+      "zvýšení viskozity synoviální kloubní tekutiny",
+      "hloubková hydratace a elasticita pokožky",
+      "redukce tření a opotřebení kloubních chrupavek",
+      "urychlení regenerace pojivových tkání"
+    ],
+    "dosage": {
+      "short": "100–200 mg denně",
+      "long": "Užívejte 100–200 mg denně zapité velkým množstvím vody (nejlépe 300–400 ml). Účinek se plně rozvíjí po 4–8 týdnech pravidelného užívání."
+    },
+    "warning": "Bezpečná látka přirozená tělu. Klíčové je pít dostatek tekutin, jinak hyaluronan nemůže plnit svou hydratační funkci.",
+    "mechanism": "Vazba na buněčný povrchový receptor CD44 na chondrocytech a fibroblastech, stimulace endogenní syntézy hyaluronanu a inhibice degradativních enzymů MMP.",
+    "halfLife": "V tkáních 1–3 dny (v synoviální tekutině až několik dní)",
+    "interactions": [
+      "kolagenní peptidy (synergická výstavba kloubní matrix)",
+      "vitamín C (nezbytný kofaktor pro kolagenní a vazivové syntézy)"
+    ],
+    "naturalSources": [
+      "kostní vývary",
+      "drůbeží a hovězí chrupavky",
+      "endogenní syntéza hyaluronansyntázami"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 131,
+    "name": "Kolagenní peptidy (Hydrolyzovaný kolagen)",
+    "categoryKey": "health",
+    "tags": [
+      "klouby",
+      "šlachy",
+      "kůže",
+      "regenerace"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Specifické bioaktivní peptidy pro obnovu šlach, vazů a chrupavek.",
+    "description": "Hydrolyzované kolagenní peptidy jsou enzymaticky naštěpené fragmenty kolagenu typu I, II a III s nízkou molekulovou hmotností (kolem 2–5 kDa). Obsahují vysoké koncentrace unikátních aminokyselin glycinu, prolinu a hydroxyprolinu v di- a tripeptidických vazbách (Pro-Hyp), které se vstřebávají intaktní a přímo stimulují fibroblasty a chondrocyty k syntéze vlastní extracelulární matrix.",
+    "effects": [
+      "obnova a posílení šlach, vazů a kloubní chrupavky",
+      "zlepšení elasticity a pevnosti pokožky",
+      "podpora syntézy endogenního kolagenu",
+      "zkrácení doby hojení pohybového aparátu"
+    ],
+    "dosage": {
+      "short": "10–15 g denně s vitamínem C",
+      "long": "Standardní dávka je 10–15 g hydrolyzovaného kolagenu denně rozmíchaného ve vodě nebo nápoji. Pro maximální účinek na šlachy užívejte 30–60 minut před tréninkem nebo rehabilitací spolu s 50–100 mg vitamínu C."
+    },
+    "warning": "Velmi bezpečné. U citlivých jedinců může zpočátku způsobit mírné nadýmání při jednorázové vysoké dávce (>20 g).",
+    "mechanism": "Akumulace bioaktivních dipeptidů Prolyl-hydroxyprolin (Pro-Hyp) v chrupavkách a šlachách, stimulace receptorů integrinů a aktivace syntézy proteoglykanů.",
+    "halfLife": "Absorpce dipeptidů vrcholí za 1–2 hodiny, tkáňový metabolismus probíhá kontinuálně",
+    "interactions": [
+      "Vitamín C (esenciální kofaktor enzymů prolyl- a lysylhydroxylázy)",
+      "Kyselina hyaluronová (komplementární hydratace matrix)"
+    ],
+    "naturalSources": [
+      "kostní vývar",
+      "hovězí a rybí kůže a chrupavky"
+    ],
+    "bannedStatus": "legal"
   }
 ]

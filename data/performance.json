@@ -466,7 +466,10 @@
     "warning": "U osob s intolerancí laktózy může způsobit nadýmání (doporučen Whey Isolate nebo Hydrolyzát).",
     "mechanism": "Rychlé zvýšení plazmatické hladiny aminokyselin (hyperaminoacidémie), stimulace mTORC1 komplexu",
     "halfLife": "1.5–2 hodiny",
-    "interactions": [],
+    "interactions": [
+      "Kreatin (synergická stimulace proteosyntézy po tréninku)",
+      "Rychlé sacharidy (zvýšení vstřebávání aminokyselin inzulínem)"
+    ],
     "evidenceLevel": "A",
     "naturalSources": [
       "kravské mléko",
@@ -575,7 +578,10 @@
     "warning": "Mírný zápach potu nebo trávicí obtíže při vysokých jednorázových dávkách.",
     "mechanism": "Methylace homocysteinu enzymem BHMT, osmoregulace a syntéza kreatinu",
     "halfLife": "14 hodin",
-    "interactions": [],
+    "interactions": [
+      "Kreatin (Betain slouží jako donor methylových skupin pro endogenní syntézu kreatinu)",
+      "Cholin"
+    ],
     "evidenceLevel": "A",
     "naturalSources": [
       "červená řepa",
@@ -648,7 +654,10 @@
     "warning": "Vysoké riziko průjmu a zvracení při rychlém požití. Zvyšuje příjem sodíku.",
     "mechanism": "Zvýšení extracelulárního pufrování H+ iontů přes bikarbonátový pufrační systém",
     "halfLife": "2–3 hodiny",
-    "interactions": [],
+    "interactions": [
+      "Beta-Alanin (duální pufracní kapacita: bikarbonát extracelulárně + karnosin intracelulárně)",
+      "Kofein"
+    ],
     "evidenceLevel": "A",
     "naturalSources": [
       "minerální prameny",
@@ -682,7 +691,10 @@
     "warning": "Nadbytečný příjem sacharidů může vést k ukládání tuku při absenci adekvátního energetického výdeje.",
     "mechanism": "Nízká osmolalita urychluje žaludeční evakuaci, postupné štěpení alfa-amylázou",
     "halfLife": "1–2 hodiny",
-    "interactions": [],
+    "interactions": [
+      "Elektrolyty (optimální osmolalita iontového nápoje)",
+      "BCAA / EAA (intratréninkový anabolický transport)"
+    ],
     "evidenceLevel": "A",
     "naturalSources": [
       "kukuřičný škrob enzymaticky upravený"
@@ -713,7 +725,10 @@
     "warning": "Při dostatečném příjmu bílkovin ve stravě mají BCAA minimální přidaný benefit.",
     "mechanism": "Přímá aktivace sestavy mTORC1 leucinem, soutěž o LNAA transportér v mozku",
     "halfLife": "2 hodiny",
-    "interactions": [],
+    "interactions": [
+      "Syrovátkový protein (doplnění kompletního spektra esenciálních aminokyselin)",
+      "Citrulin"
+    ],
     "evidenceLevel": "B",
     "naturalSources": [
       "maso",
