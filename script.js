@@ -7,7 +7,7 @@ const activeFilterLabel = document.getElementById("active-filter-label");
 
 let globalData = [];
 let displayedCount = 0;
-const ITEMS_PER_BATCH = 20;
+const ITEMS_PER_BATCH = 36;
 let currentCategory = "Vše";
 let currentSort = "rating";
 
@@ -21,7 +21,7 @@ const categoryLabels = {
     "fatloss": "Redukce",
     "hormones": "Hormony",
     "nootropics": "Nootropika",
-    "experimental": "Experimentální",
+    "experimental": "Peptidy",
     "steroids": "Steroidy",
     "pct": "PCT & Ochrana"
 };
@@ -53,14 +53,17 @@ function slugify(text) {
  * Preferuje IndexedDB cache / unified bundle, s fallbackem na jednotlivé JSON soubory.
  */
 async function initDatabaseAndLoad() {
-    // 1. Inicializovat IndexedDB vrstvu (pokud je dostupná)
+    // 1. Nejprve zkusit okamžitý start z IndexedDB cache pro bleskové načtení
     if (window.SuppleZ_DB) {
         try {
             await window.SuppleZ_DB.init();
             const cachedItems = await window.SuppleZ_DB.getAllSupplements();
             if (cachedItems && cachedItems.length > 0) {
                 globalData = cachedItems;
+                renderCategoryPills();
                 initFilters();
+                displayedCount = 0;
+                if (cardsGrid) cardsGrid.innerHTML = "";
                 loadMoreCards();
                 handleUrlRouting();
             }
@@ -69,11 +72,12 @@ async function initDatabaseAndLoad() {
         }
     }
 
-    // 2. Načíst data ze sjednoceného bundlu nebo jednotlivých JSON souborů
+    // 2. Vždy načíst čerstvá data ze sjednoceného bundlu s cache-bustingem
     try {
         let loadedData = null;
         try {
-            const bundleRes = await fetch('./data/supplements.bundle.json');
+            const cacheBuster = `?v=${Date.now()}`;
+            const bundleRes = await fetch(`./data/supplements.bundle.json${cacheBuster}`, { cache: 'no-cache' });
             if (bundleRes.ok) {
                 const bundle = await bundleRes.json();
                 if (Array.isArray(bundle) && bundle.length > 0) {
@@ -85,8 +89,9 @@ async function initDatabaseAndLoad() {
         }
 
         if (!loadedData) {
+            const cacheBuster = `?v=${Date.now()}`;
             const results = await Promise.all(DATA_FILES.map(url => 
-                fetch(url).then(res => res.json()).catch(err => {
+                fetch(`${url}${cacheBuster}`, { cache: 'no-cache' }).then(res => res.json()).catch(err => {
                     console.error('Chyba čtení ' + url, err);
                     return [];
                 })
@@ -102,6 +107,7 @@ async function initDatabaseAndLoad() {
                 window.SuppleZ_DB.syncSupplements(globalData);
             }
 
+            renderCategoryPills();
             initFilters();
             displayedCount = 0;
             if (cardsGrid) cardsGrid.innerHTML = "";
@@ -111,7 +117,7 @@ async function initDatabaseAndLoad() {
     } catch (error) {
         console.error('Kritická chyba načítání databáze:', error);
         if (cardsGrid && (!globalData || globalData.length === 0)) {
-            cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px">Chyba databáze při načítání.</p>';
+            cardsGrid.innerHTML = '<p style="color:var(--neon-red); text-align:center; margin-top:20px">Chyba databáze při načítání.</p>';
         }
     }
 }
@@ -359,6 +365,43 @@ function closeDetailView(goBack = true) {
     document.body.classList.remove("detail-active");
 }
 
+function renderCategoryPills() {
+    const pillsContainer = document.getElementById("wiki-category-pills");
+    if (!pillsContainer || !globalData || globalData.length === 0) return;
+
+    const counts = {};
+    globalData.forEach(item => {
+        const cat = item.categoryKey || item.category || 'unknown';
+        counts[cat] = (counts[cat] || 0) + 1;
+    });
+
+    const orderedCategories = [
+        { key: "Vše", label: "Vše", count: globalData.length },
+        { key: "health", label: categoryLabels["health"] || "Zdraví", count: counts["health"] || 0 },
+        { key: "performance", label: categoryLabels["performance"] || "Výkon", count: counts["performance"] || 0 },
+        { key: "sleep", label: categoryLabels["sleep"] || "Spánek", count: counts["sleep"] || 0 },
+        { key: "fatloss", label: categoryLabels["fatloss"] || "Redukce", count: counts["fatloss"] || 0 },
+        { key: "hormones", label: categoryLabels["hormones"] || "Hormony", count: counts["hormones"] || 0 },
+        { key: "nootropics", label: categoryLabels["nootropics"] || "Nootropika", count: counts["nootropics"] || 0 },
+        { key: "experimental", label: categoryLabels["experimental"] || "Peptidy", count: counts["experimental"] || 0 },
+        { key: "steroids", label: categoryLabels["steroids"] || "Steroidy", count: counts["steroids"] || 0 },
+        { key: "pct", label: categoryLabels["pct"] || "PCT & Ochrana", count: counts["pct"] || 0 }
+    ];
+
+    pillsContainer.innerHTML = "";
+    orderedCategories.forEach(cat => {
+        const pill = document.createElement("button");
+        pill.className = `category-pill ${currentCategory === cat.key ? "active" : ""}`;
+        pill.dataset.key = cat.key;
+        pill.innerHTML = `<span class="pill-title">${cat.label}</span><span class="pill-count">${cat.count}</span>`;
+        pill.onclick = () => {
+            selectCategory(cat.key);
+            pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        };
+        pillsContainer.appendChild(pill);
+    });
+}
+
 function initFilters() {
     const openBtn = document.getElementById("open-filter-btn");
     if(openBtn) {
@@ -379,27 +422,19 @@ function initFilters() {
     if(applyBtn) applyBtn.onclick = closeModal;
 
     if(modalCategories) {
-        const categoriesKeys = [...new Set(globalData.map(item => item.categoryKey || item.category))].filter(Boolean);
         const orderedCategories = ["health", "performance", "sleep", "fatloss", "hormones", "nootropics", "experimental", "steroids", "pct"];
-        const sortedKeys = categoriesKeys.sort((a, b) => {
-            const idxA = orderedCategories.indexOf(a);
-            const idxB = orderedCategories.indexOf(b);
-            if(idxA === -1) return 1;
-            if(idxB === -1) return -1;
-            return idxA - idxB;
-        });
-        
         modalCategories.innerHTML = "";
         
         const allBtn = document.createElement("button");
-        allBtn.className = "cat-select-btn active";
+        allBtn.className = `cat-select-btn ${currentCategory === "Vše" ? "active" : ""}`;
+        allBtn.dataset.key = "Vše";
         allBtn.innerText = "Vše";
         allBtn.onclick = () => selectCategory("Vše", allBtn);
         modalCategories.appendChild(allBtn);
         
-        sortedKeys.forEach(catKey => {
+        orderedCategories.forEach(catKey => {
             const btn = document.createElement("button");
-            btn.className = "cat-select-btn";
+            btn.className = `cat-select-btn ${currentCategory === catKey ? "active" : ""}`;
             btn.innerText = categoryLabels[catKey] || catKey;
             btn.dataset.key = catKey;
             
@@ -410,12 +445,16 @@ function initFilters() {
 }
 
 function selectCategory(catKey, btnElement) {
-    document.querySelectorAll(".cat-select-btn").forEach(b => b.classList.remove("active"));
-    if (btnElement && btnElement.classList) {
-        btnElement.classList.add("active");
-    }
-    
     currentCategory = catKey;
+
+    // Synchronizovat tlačítka v modalu i v horizontální liště pills
+    document.querySelectorAll(".cat-select-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.key === catKey || (catKey === "Vše" && b.innerText === "Vše"));
+    });
+    document.querySelectorAll(".category-pill").forEach(p => {
+        p.classList.toggle("active", p.dataset.key === catKey);
+    });
+    
     updateActiveFilterUI();
     
     displayedCount = 0;
@@ -423,7 +462,7 @@ function selectCategory(catKey, btnElement) {
     loadMoreCards();
     
     const filterModal = document.getElementById("filter-modal");
-    if(filterModal) {
+    if(filterModal && filterModal.classList.contains("open")) {
         filterModal.classList.remove("open");
         setTimeout(() => filterModal.classList.add("hidden"), 300);
     }
@@ -457,44 +496,91 @@ function updateActiveFilterUI() {
 }
 
 function resetFilters() {
-    currentCategory = "Vše";
-    updateActiveFilterUI();
-    
-    document.querySelectorAll(".cat-select-btn").forEach(b => {
-        b.classList.remove("active");
-        if(b.innerText === "Vše") b.classList.add("active");
-    });
-
-    displayedCount = 0;
-    if (cardsGrid) cardsGrid.innerHTML = "";
-    loadMoreCards();
+    selectCategory("Vše");
 }
 
-function loadMoreCards() {
+function getFilteredData() {
     const term = searchInput ? searchInput.value.toLowerCase().trim() : "";
     
     let filteredData = globalData.filter(item => {
         const matchesSearch = item.name.toLowerCase().includes(term) ||
-                              (Array.isArray(item.tags) && item.tags.some(t => t.toLowerCase().includes(term)));
+                              (Array.isArray(item.tags) && item.tags.some(t => t.toLowerCase().includes(term))) ||
+                              (item.shortDesc && item.shortDesc.toLowerCase().includes(term));
         const itemCat = item.categoryKey || item.category;
         const matchesCategory = currentCategory === "Vše" || itemCat === currentCategory;
         return matchesSearch && matchesCategory;
     });
 
     if (currentSort === 'rating') {
-        filteredData.sort((a, b) => b.rating - a.rating);
+        filteredData.sort((a, b) => (b.rating || 0) - (a.rating || 0));
     } else if (currentSort === 'az') {
         filteredData.sort((a, b) => a.name.localeCompare(b.name, 'cs'));
     }
 
+    return filteredData;
+}
+
+function updatePaginationStatus(totalFiltered) {
+    const statusEl = document.getElementById("wiki-count-status");
+    const loadMoreBtn = document.getElementById("load-more-btn");
+    const loadAllBtn = document.getElementById("load-all-btn");
+
+    if (statusEl) {
+        if (totalFiltered === 0) {
+            statusEl.innerText = "Nebyly nalezeny žádné látky odpovídající filtru.";
+        } else {
+            statusEl.innerText = `Zobrazeno ${Math.min(displayedCount, totalFiltered)} z ${totalFiltered} látek`;
+        }
+    }
+
+    const hasMore = displayedCount < totalFiltered;
+    if (loadMoreBtn) {
+        loadMoreBtn.style.display = hasMore ? "inline-flex" : "none";
+        if (hasMore) {
+            const nextCount = Math.min(ITEMS_PER_BATCH, totalFiltered - displayedCount);
+            loadMoreBtn.innerHTML = `<span class="material-icons">expand_more</span> Načíst dalších ${nextCount} látek`;
+        }
+    }
+    if (loadAllBtn) {
+        loadAllBtn.style.display = (hasMore && totalFiltered > ITEMS_PER_BATCH) ? "inline-flex" : "none";
+    }
+}
+
+function loadMoreCards() {
+    const filteredData = getFilteredData();
     const nextBatch = filteredData.slice(displayedCount, displayedCount + ITEMS_PER_BATCH);
     
     if (nextBatch.length > 0) {
         renderCards(nextBatch, true);
         displayedCount += nextBatch.length;
     } else if (displayedCount === 0) {
-        if(cardsGrid) cardsGrid.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px">Nic nenalezeno.</div>';
+        if(cardsGrid) cardsGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align:center; padding: 40px 20px; color:#666;">
+                <span class="material-icons" style="font-size: 3rem; margin-bottom: 10px; color: #444;">search_off</span>
+                <p style="font-size: 1.1rem; color: #888;">Žádná látka neodpovídá zadání.</p>
+                <button onclick="resetFilters()" class="btn-outline" style="margin-top: 15px;">Zobrazit vše</button>
+            </div>
+        `;
     }
+
+    updatePaginationStatus(filteredData.length);
+
+    // Auto-fill: pokud je obrazovka vysoká (např. desktop 1440p) a ještě nevznikl posuvník,
+    // načíst další várku, aby uživatel neviděl useknutou stránku bez možnosti scrollovat.
+    if (displayedCount < filteredData.length && document.body.offsetHeight < window.innerHeight + 150) {
+        setTimeout(loadMoreCards, 40);
+    }
+}
+
+function loadAllCards() {
+    const filteredData = getFilteredData();
+    const remainingBatch = filteredData.slice(displayedCount);
+    
+    if (remainingBatch.length > 0) {
+        renderCards(remainingBatch, true);
+        displayedCount = filteredData.length;
+    }
+    updatePaginationStatus(filteredData.length);
 }
 
 function renderCards(dataToRender, append = false) {
@@ -504,8 +590,8 @@ function renderCards(dataToRender, append = false) {
 
     dataToRender.forEach((item, index) => {
         const card = document.createElement("div");
-        card.className = `card ${item.colorType}`;
-        card.style.animationDelay = `${index * 0.03}s`;
+        card.className = `card ${item.colorType || 'green'}`;
+        card.style.animationDelay = `${(index % 20) * 0.02}s`;
         card.onclick = () => openDetailView(item);
 
         let rateColor = "#fff";
@@ -514,7 +600,8 @@ function renderCards(dataToRender, append = false) {
         if (item.colorType === "red") rateColor = "var(--neon-red)";
 
         const r = Math.round(item.rating || 0);
-        const catLabel = categoryLabels[item.categoryKey || item.category] || (item.categoryKey || item.category);
+        const catKey = item.categoryKey || item.category;
+        const catLabel = categoryLabels[catKey] || catKey;
 
         card.innerHTML = `
             <div class="card-header">
@@ -524,15 +611,16 @@ function renderCards(dataToRender, append = false) {
                 </div>
             </div>
             <h3>${item.name}</h3>
-            <p class="card-desc">${item.shortDesc}</p>
+            <p class="card-desc">${item.shortDesc || ''}</p>
         `;
         cardsGrid.appendChild(card);
     });
 }
 
 window.addEventListener('scroll', () => {
-    if (document.getElementById('view-wiki') && document.getElementById('view-wiki').classList.contains('hidden')) return;
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+    const wikiView = document.getElementById('view-wiki');
+    if (wikiView && wikiView.classList.contains('hidden')) return;
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 150) {
         loadMoreCards();
     }
 });
