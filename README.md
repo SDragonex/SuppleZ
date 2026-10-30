@@ -18,17 +18,36 @@ Aplikace funguje **offline**, nevyžaduje registraci a ukládá veškerá data p
 - **Chytré vyhledávání** s diakritikou a synonymy
 - **Filtrování & řazení** podle kategorií a hodnocení
 
+### 🔬 Stack & Kontrola interakcí
+- **Sestavení vlastního stacku**: Rychlé vyhledávání a předvolené biohacking stacky
+- **Real-time analýza interakcí**:
+  - Synergie: Látky, které se navzájem posilují (např. Kofein + Theanin, D3 + K2 + Hořčík)
+  - Časové kompetice: Absorpční kolize (např. Zinek vs Železo, Vápník vs Hořčík)
+  - Kritická varování: Nebezpečné lékové interakce (např. 5-HTP + SSRI, Yohimbin + stimulanty)
+
+### ⏱️ Cirkadiánní rozvrh (Denní protokol)
+- Automatické rozřazení látek z vašeho stacku do 4 časových bloků:
+  - Ráno nalačno (např. Tyrosin, B-komplex, BPC-157)
+  - Dopoledne se snídaní s tuky (např. Vitamín D3 + K2, Omega 3)
+  - Před tréninkem / Odpolední fokus (např. Citrulin, Kofein, Alfa-GPC)
+  - Večer před spaním (např. Magnesium bisglycinát, Apigenin, Glycin)
+
+### 💉 Kalkulačka ředění peptidů (Reconstitution)
+- Výpočet koncentrace, objemu dávky a počtu dávek ve vialce (BPC-157, TB-500, GHK-Cu, GLP-1)
+- Interaktivní vizuální inzulínová stříkačka (U-100 / U-40) s přesným vyznačením dílků
+- Odborný protokol bezpečné manipulace a skladování
+
 ### 📝 Osobní deník
 - Záznamy užití s dávkou, časem a subjektivním hodnocením
 - Cyklování suplementace (např. "Objem 2024")
-- Barevné hodnocení efektu (🟢 Super / 🟡 Ujde / 🔴 Špatné)
-- Export/import dat (JSON)
+- 1-Click přidání z detailu suplementu přímo do deníku nebo do stacku
+- Export a import zálohy
 
 ### ⚙️ Nastavení & PWA
 - Dark mode (cyberpunk glassmorphism design)
-- Offline režim s aktualizací databáze
-- Záloha dat
-- Instalace jako nativní aplikace (Android/Desktop)
+- Zero-tracking, 100% soukromí bez reklam
+- Offline režim s IndexedDB asynchronním úložištěm
+- Instalace jako nativní aplikace (Android / iOS / Desktop)
 
 ---
 
