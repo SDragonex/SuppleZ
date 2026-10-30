@@ -459,16 +459,104 @@
 			</section>
 
 			<section id="view-settings" class="view hidden">
-				<h2 class="section-title">Nastavení</h2>
+				<h2 class="section-title">Nastavení & Metodika</h2>
 
+				<!-- Aktualizace & Stav mezipaměti -->
+				<div class="settings-card">
+					<h3><span class="material-icons">sync</span> Aktualizace & Systém</h3>
+					<p style="margin-bottom: 12px; font-size: 0.9rem; color: #aaa;">
+						Aplikace využívá <strong>Network-First PWA architekturu</strong> s offline zálohou. Změny a nové látky se stahují automaticky ze sítě.
+					</p>
+					<p style="font-size: 0.85rem; color: #888; margin-bottom: 15px;">
+						Verze jádra: <strong style="color: var(--ui-accent);">5.0 (Network-First)</strong> | Databáze: <strong style="color: var(--neon-green);">270 látek</strong>
+					</p>
+					<div class="settings-btns" style="flex-wrap: wrap;">
+						<button onclick="checkAppUpdate()" class="btn-outline">
+							<span class="material-icons">refresh</span> Zkontrolovat aktualizace
+						</button>
+						<button onclick="clearCacheAndReload()" class="btn-outline-yellow">
+							<span class="material-icons">delete_sweep</span> Vymazat mezipaměť a obnovit
+						</button>
+					</div>
+				</div>
+
+				<!-- Zdroje a vědecká metodika -->
+				<div class="settings-card">
+					<h3><span class="material-icons">menu_book</span> Zdroje informací & Metodika</h3>
+					<p style="font-size: 0.9rem; color: #bbb; line-height: 1.5; margin-bottom: 15px;">
+						Veškerá data v encyklopedii SuppleZ vycházejí z nezávislých recenzovaných vědeckých studií, klinických zkoušek a oficiálních farmakokinetických databází:
+					</p>
+
+					<div class="sources-list">
+						<div class="source-item">
+							<div class="source-header">
+								<span class="source-name"><span class="material-icons">biotech</span> PubMed / MEDLINE</span>
+								<span class="source-type">NIH & NLM</span>
+							</div>
+							<p class="source-desc">Národní lékařská knihovna USA. Primární celosvětový zdroj pro randomizované dvojitě zaslepené klinické studie (RCT), systematické přehledy a metaanalýzy u lidí.</p>
+						</div>
+
+						<div class="source-item">
+							<div class="source-header">
+								<span class="source-name"><span class="material-icons">verified</span> Examine.com</span>
+								<span class="source-type">Nezávislý výzkum</span>
+							</div>
+							<p class="source-desc">Největší nezávislá otevřená databáze analyzující vědecké studie o doplňcích stravy a nootropikách bez sponzoringu a střetu zájmů.</p>
+						</div>
+
+						<div class="source-item">
+							<div class="source-header">
+								<span class="source-name"><span class="material-icons">science</span> PubChem & DrugBank</span>
+								<span class="source-type">Farmakokinetika</span>
+							</div>
+							<p class="source-desc">Molekulární struktury, mechanismy receptorové vazby, metabolické dráhy a poločasy eliminace (T½) látek z lidské krevní plazmy.</p>
+						</div>
+
+						<div class="source-item">
+							<div class="source-header">
+								<span class="source-name"><span class="material-icons">gavel</span> WADA & SÚKL / EMA</span>
+								<span class="source-type">Regulace & Bezpečnost</span>
+							</div>
+							<p class="source-desc">Oficiální monitoring zakázaných látek v profesionálním sportu a bezpečnostní varování lékových agentur před rizikovými interakcemi.</p>
+						</div>
+
+						<div class="source-item">
+							<div class="source-header">
+								<span class="source-name"><span class="material-icons">fact_check</span> ConsumerLab & Labdoor</span>
+								<span class="source-type">Čistota & Testy</span>
+							</div>
+							<p class="source-desc">Nezávislé certifikované laboratorní testy čistoty suplementů, mikrobiální kontaminace a detekce těžkých kovů.</p>
+						</div>
+					</div>
+
+					<div class="evidence-scale-box">
+						<h4 style="font-family:'Rajdhani',sans-serif; color:var(--ui-accent); margin-bottom:8px; font-size:1rem;">Stupnice vědecké průkaznosti (Evidence Levels)</h4>
+						<div class="evidence-scale-row">
+							<span class="evidence-badge-item ev-a">Úroveň A</span>
+							<span class="evidence-scale-text"><strong>Robustní důkazy:</strong> Podloženo rozsáhlými metaanalýzami nebo vícečetnými randomizovanými klinickými studiemi (RCT) na lidských subjektech.</span>
+						</div>
+						<div class="evidence-scale-row">
+							<span class="evidence-badge-item ev-b">Úroveň B</span>
+							<span class="evidence-scale-text"><strong>Střední důkazy:</strong> Pozitivní výsledky z menších nebo pilotních klinických studií na lidech, vyžaduje další výzkum.</span>
+						</div>
+						<div class="evidence-scale-row">
+							<span class="evidence-badge-item ev-c">Úroveň C</span>
+							<span class="evidence-scale-text"><strong>Předběžné / Teoretické:</strong> Mechanistická data, předklinické studie na zvířecích modelech nebo in vitro buněčných kulturách.</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Záloha Dat -->
 				<div class="settings-card">
 					<h3><span class="material-icons">save</span> Záloha Dat</h3>
-					<p>Ulož si svá data do souboru nebo je nahraj zpět.</p>
+					<p style="margin-bottom: 12px; font-size: 0.9rem; color: #aaa;">Ulož si svá data deníku do souboru nebo je nahraj zpět na jiném zařízení.</p>
 					<div class="settings-btns">
 						<button onclick="exportData()" class="btn-outline">
-							Stáhnout zálohu
+							<span class="material-icons">download</span> Stáhnout zálohu
 						</button>
-						<label for="import-file" class="btn-outline">Nahrát zálohu</label>
+						<label for="import-file" class="btn-outline" style="cursor: pointer;">
+							<span class="material-icons">upload</span> Nahrát zálohu
+						</label>
 						<input
 							type="file"
 							id="import-file"
@@ -478,24 +566,11 @@
 					</div>
 				</div>
 
-				<div class="settings-card">
-					<h3>Info</h3>
-					<p>Verze: <strong>3.0</strong></p>
-					<p>
-						Dev:
-						<a
-							href="https://github.com/SDragonex"
-							target="_blank"
-							class="link-blue"
-							>SDragonex</a
-						>
-					</p>
-				</div>
-
 				<div class="settings-card danger-zone">
-					<h3>Reset</h3>
+					<h3><span class="material-icons">warning</span> Reset databáze deníku</h3>
+					<p style="font-size:0.85rem; color:#888; margin-bottom:12px;">Smaže všechny uložené záznamy z vašeho lokálního deníku a cyklů.</p>
 					<button onclick="clearAllData()" class="btn-outline-red">
-						Smazat všechna data
+						<span class="material-icons">delete_forever</span> Smazat záznamy deníku
 					</button>
 				</div>
 			</section>
@@ -529,14 +604,28 @@
 					navigator.serviceWorker
 						.register("./sw.js")
 						.then((registration) => {
-							console.log(
-								"Service Worker registrován s rozsahem:",
-								registration.scope
-							);
+							// Okamžitá kontrola aktualizace ze sítě
+							registration.update();
+							registration.addEventListener("updatefound", () => {
+								const installingWorker = registration.installing;
+								if (installingWorker) {
+									installingWorker.addEventListener("statechange", () => {
+										if (installingWorker.state === "installed" && navigator.serviceWorker.controller) {
+											if (typeof showToast === 'function') {
+												showToast("Byla stažena nová verze. Obnovte stránku.", "update", "var(--neon-green)");
+											}
+										}
+									});
+								}
+							});
 						})
 						.catch((err) => {
 							console.log("Registrace Service Workeru selhala:", err);
 						});
+				});
+
+				navigator.serviceWorker.addEventListener("controllerchange", () => {
+					console.log("[SW] Nový Service Worker je aktivní.");
 				});
 			}
 		</script>

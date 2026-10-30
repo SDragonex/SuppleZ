@@ -586,12 +586,13 @@ function loadAllCards() {
 function renderCards(dataToRender, append = false) {
     if (!cardsGrid) return;
     if (!append) cardsGrid.innerHTML = "";
-    if (!dataToRender) return;
+    if (!dataToRender || dataToRender.length === 0) return;
 
-    dataToRender.forEach((item, index) => {
+    const fragment = document.createDocumentFragment();
+
+    dataToRender.forEach((item) => {
         const card = document.createElement("div");
         card.className = `card ${item.colorType || 'green'}`;
-        card.style.animationDelay = `${(index % 20) * 0.02}s`;
         card.onclick = () => openDetailView(item);
 
         let rateColor = "#fff";
@@ -603,34 +604,136 @@ function renderCards(dataToRender, append = false) {
         const catKey = item.categoryKey || item.category;
         const catLabel = categoryLabels[catKey] || catKey;
 
+        // Evidence level badge
+        const evidence = item.evidenceLevel || 'B';
+        let evidenceClass = 'ev-b';
+        if (evidence === 'A') evidenceClass = 'ev-a';
+        if (evidence === 'C') evidenceClass = 'ev-c';
+
+        // Dávkování nebo poločas
+        const doseHint = item.dosage?.short || (typeof item.dosage === 'string' ? item.dosage : '');
+        const doseHtml = doseHint ? `<span class="card-chip dose"><span class="material-icons">medication</span>${doseHint}</span>` : '';
+        const halfLifeHtml = item.halfLife ? `<span class="card-chip timer"><span class="material-icons">timer</span>${item.halfLife}</span>` : '';
+
+        // První štítek / tag
+        const tag = (Array.isArray(item.tags) && item.tags.length > 0) ? item.tags[0] : '';
+        const tagHtml = tag ? `<span class="card-chip tag">#${tag}</span>` : '';
+
         card.innerHTML = `
             <div class="card-header">
-                <span class="card-category">${catLabel}</span>
+                <div class="card-badges">
+                    <span class="card-category">${catLabel}</span>
+                    <span class="card-evidence ${evidenceClass}">Důkazy ${evidence}</span>
+                </div>
                 <div class="card-rating" style="color:${rateColor}; border-color:${rateColor}">
                     ${r}/5
                 </div>
             </div>
             <h3>${item.name}</h3>
             <p class="card-desc">${item.shortDesc || ''}</p>
+            <div class="card-footer">
+                ${doseHtml || halfLifeHtml}
+                ${tagHtml}
+            </div>
         `;
-        cardsGrid.appendChild(card);
+        fragment.appendChild(card);
+    });
+
+    cardsGrid.appendChild(fragment);
+}
+
+// Vysoce optimalizovaný plynulý scroll (throttled přes requestAnimationFrame s passive listenerem)
+let isScrollThrottled = false;
+window.addEventListener('scroll', () => {
+    if (isScrollThrottled) return;
+    isScrollThrottled = true;
+    requestAnimationFrame(() => {
+        const wikiView = document.getElementById('view-wiki');
+        if (wikiView && !wikiView.classList.contains('hidden')) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 250) {
+                loadMoreCards();
+            }
+        }
+        isScrollThrottled = false;
+    });
+}, { passive: true });
+
+// Plynulé vyhledávání s debouncem 120ms (nulový lag při psaní)
+let searchDebounceTimer = null;
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+            displayedCount = 0;
+            if (cardsGrid) cardsGrid.innerHTML = "";
+            loadMoreCards();
+        }, 120);
     });
 }
 
-window.addEventListener('scroll', () => {
-    const wikiView = document.getElementById('view-wiki');
-    if (wikiView && wikiView.classList.contains('hidden')) return;
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 150) {
-        loadMoreCards();
+// Toast notifikace pro systémové hlášky
+function showToast(message, icon = 'info', color = 'var(--ui-accent)') {
+    let toast = document.getElementById('app-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'app-toast';
+        toast.className = 'app-toast';
+        document.body.appendChild(toast);
     }
-});
+    toast.innerHTML = `<span class="material-icons" style="color:${color}">${icon}</span><span>${message}</span>`;
+    toast.classList.add('visible');
+    clearTimeout(toast.hideTimeout);
+    toast.hideTimeout = setTimeout(() => {
+        toast.classList.remove('visible');
+    }, 3500);
+}
 
-if(searchInput) {
-    searchInput.addEventListener("input", () => {
-        displayedCount = 0;
-        if (cardsGrid) cardsGrid.innerHTML = "";
-        loadMoreCards();
-    });
+// Zkontrolovat dostupnost aktualizace ze sítě
+async function checkAppUpdate() {
+    showToast('Kontrola dostupnosti nové verze...', 'sync', 'var(--ui-accent)');
+    if ('serviceWorker' in navigator) {
+        try {
+            const reg = await navigator.serviceWorker.getRegistration();
+            if (reg) {
+                await reg.update();
+                setTimeout(() => {
+                    showToast('Aplikace je aktuální (Verze 5.0).', 'check_circle', 'var(--neon-green)');
+                }, 800);
+                return;
+            }
+        } catch (e) {
+            console.warn('[Update] Kontrola selhala:', e);
+        }
+    }
+    showToast('Aplikace běží v nejnovější verzi.', 'check_circle', 'var(--neon-green)');
+}
+
+// Vyčistit veškerou mezipaměť (CacheStorage + IndexedDB) a stáhnout čerstvá data
+async function clearCacheAndReload() {
+    showToast('Čištění mezipaměti a stahování čerstvých dat...', 'delete_sweep', 'var(--neon-yellow)');
+    try {
+        if ('caches' in window) {
+            const keys = await caches.keys();
+            await Promise.all(keys.map(k => caches.delete(k)));
+        }
+        if (window.SuppleZ_DB && window.SuppleZ_DB.db) {
+            try {
+                const tx = window.SuppleZ_DB.db.transaction(['supplements'], 'readwrite');
+                tx.objectStore('supplements').clear();
+            } catch (err) {
+                console.warn('[DB] Clear store:', err);
+            }
+        }
+        if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({ action: 'CLEAR_CACHE' });
+        }
+        setTimeout(() => {
+            window.location.reload(true);
+        }, 600);
+    } catch (err) {
+        console.error('Chyba při čištění mezipaměti:', err);
+        window.location.reload(true);
+    }
 }
 
 // --- LOGIKA DENÍKU (S IndexedDB PODPOROU) ---

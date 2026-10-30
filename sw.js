@@ -1,6 +1,13 @@
-const CACHE_NAME = 'supplez-cache-v4.3';
+/**
+ * SuppleZ Service Worker (sw.js)
+ * Verze: 5.0 (Network-First PWA)
+ * Strategie: Network-First pro aplikaci a data (vždy čerstvé změny),
+ * s okamžitou zálohou v mezipaměti pro spolehlivý offline provoz.
+ */
 
-const ASSETS_TO_CACHE = [
+const CACHE_NAME = 'supplez-cache-v5.0';
+
+const STATIC_ASSETS = [
     './',
     './index.html',
     './style.css',
@@ -28,7 +35,7 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(ASSETS_TO_CACHE);
+            return cache.addAll(STATIC_ASSETS);
         })
     );
     self.skipWaiting();
@@ -40,6 +47,7 @@ self.addEventListener('activate', (event) => {
             return Promise.all(
                 cacheNames.map((cache) => {
                     if (cache !== CACHE_NAME) {
+                        console.log('[SW] Odstraněna stará mezipaměť:', cache);
                         return caches.delete(cache);
                     }
                 })
@@ -49,41 +57,71 @@ self.addEventListener('activate', (event) => {
     self.clients.claim();
 });
 
+// Zpracování zpráv z klientské aplikace (např. ruční vymazání mezipaměti nebo skipWaiting)
+self.addEventListener('message', (event) => {
+    if (!event.data) return;
+    if (event.data.action === 'SKIP_WAITING') {
+        self.skipWaiting();
+    } else if (event.data.action === 'CLEAR_CACHE') {
+        caches.delete(CACHE_NAME).then(() => {
+            if (event.ports && event.ports[0]) {
+                event.ports[0].postMessage({ success: true });
+            }
+        });
+    }
+});
+
 self.addEventListener('fetch', (event) => {
-    const url = event.request.url;
-    
-    if (url.includes('/data/') && url.endsWith('.json')) {
+    const request = event.request;
+    const url = new URL(request.url);
+
+    // 1. Externí statické fonty (Google Fonts a Material Icons) -> Cache-First
+    if (url.origin.includes('fonts.googleapis.com') || url.origin.includes('fonts.gstatic.com')) {
         event.respondWith(
-            fetch(event.request)
-                .then((response) => {
-                    if (response.status === 200) {
-                        const responseClone = response.clone();
-                        caches.open(CACHE_NAME).then((cache) => {
-                            cache.put(event.request, responseClone);
-                        });
+            caches.match(request).then((cachedResponse) => {
+                if (cachedResponse) return cachedResponse;
+                return fetch(request).then((networkResponse) => {
+                    if (networkResponse && networkResponse.status === 200) {
+                        const copy = networkResponse.clone();
+                        caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
                     }
-                    return response;
-                })
-                .catch(() => {
-                    return caches.match(event.request).then((cachedResponse) => {
-                        if (cachedResponse) {
-                            return cachedResponse;
-                        }
-                        return new Response('[]', {
-                            headers: {'Content-Type': 'application/json'}
-                        });
-                    });
-                })
+                    return networkResponse;
+                }).catch(() => cachedResponse);
+            })
         );
-    } else {
-        event.respondWith(
-            caches.match(event.request).then((response) => {
-                return response || fetch(event.request).catch(() => {
-                    if (event.request.destination === 'document') {
-                        return caches.match('./index.html');
+        return;
+    }
+
+    // 2. Všechny aplikační soubory a data (HTML, JS, CSS, JSON) -> NETWORK-FIRST
+    // Zkusit stáhnout čerstvou verzi ze sítě. Při úspěchu uložit do cache a vrátit.
+    // Při výpadku sítě nebo offline režimu okamžitě použít verzi z mezipaměti.
+    event.respondWith(
+        fetch(request)
+            .then((networkResponse) => {
+                if (networkResponse && networkResponse.status === 200) {
+                    const responseClone = networkResponse.clone();
+                    caches.open(CACHE_NAME).then((cache) => {
+                        cache.put(request, responseClone);
+                    });
+                }
+                return networkResponse;
+            })
+            .catch(() => {
+                return caches.match(request).then((cachedResponse) => {
+                    if (cachedResponse) {
+                        return cachedResponse;
+                    }
+                    // Pokud je požadavek na navigaci v aplikaci a není v cache, vrátit hlavní index.html
+                    if (request.mode === 'navigate' || request.destination === 'document') {
+                        return caches.match('./index.html') || caches.match('./');
+                    }
+                    // Pro datové soubory vrátit prázdné pole místo chyby
+                    if (url.pathname.endsWith('.json')) {
+                        return new Response('[]', {
+                            headers: { 'Content-Type': 'application/json' }
+                        });
                     }
                 });
             })
-        );
-    }
+    );
 });

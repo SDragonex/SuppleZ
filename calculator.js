@@ -94,13 +94,9 @@ class PeptideCalculator {
         <svg viewBox="0 0 ${svgWidth} ${svgHeight}" class="syringe-svg" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="fluidGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.8" />
-                    <stop offset="100%" stop-color="#00ff41" stop-opacity="0.9" />
+                    <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#00ff41" stop-opacity="0.95" />
                 </linearGradient>
-                <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feGaussianBlur stdDeviation="3" result="blur" />
-                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                </filter>
             </defs>
 
             <!-- Jehla a koncovka (zarovnané na střed Y=${centerY}) -->
@@ -111,7 +107,7 @@ class PeptideCalculator {
             <rect x="${barrelStartX}" y="${barrelTopY}" width="${barrelWidth}" height="${barrelHeight}" rx="4" fill="#0d0d0d" stroke="#444" stroke-width="2" />
 
             <!-- Sloupec tekutiny -->
-            <rect x="${barrelStartX}" y="${barrelTopY + 2}" width="${fillWidth}" height="${barrelHeight - 4}" fill="url(#fluidGradient)" filter="url(#neonGlow)" opacity="0.85" />
+            <rect x="${barrelStartX}" y="${barrelTopY + 2}" width="${fillWidth}" height="${barrelHeight - 4}" fill="url(#fluidGradient)" opacity="0.9" />
 
             <!-- Rysky a měřítko -->
             ${ticksHtml}
