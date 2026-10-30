@@ -3,12 +3,22 @@
     "id": 100,
     "name": "Vitamín D3 (Cholecalciferol)",
     "categoryKey": "health",
-    "tags": ["imunita", "kosti", "hormony", "náladovost"],
+    "tags": [
+      "imunita",
+      "kosti",
+      "hormony",
+      "náladovost"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Esenciální vitamín pro imunitu, kosti a hormonální rovnováhu.",
     "description": "Vitamín D3 je steroidní prohormon syntetizovaný v kůži při UV expozici. Reguluje expresi více než 1000 genů. Kritický pro vstřebávání vápníku, funkci imunitního systému a testosteronovou syntézu. Deficit je běžný v zemích s omezenou sluneční expozicí.",
-    "effects": ["posílení imunity", "absorpce vápníku", "podpora testosteronu", "zlepšení nálady"],
+    "effects": [
+      "posílení imunity",
+      "absorpce vápníku",
+      "podpora testosteronu",
+      "zlepšení nálady"
+    ],
     "dosage": {
       "short": "2000–4000 IU denně",
       "long": "2000–4000 IU denně s jídlem obsahujícím tuky. Udržovat sérovou hladinu 25(OH)D mezi 50–80 ng/ml. Denní bezpečná horní hranice je 4000 IU bez lékařského dohledu."
@@ -16,21 +26,41 @@
     "warning": "Hyperkalcémie při chronickém předávkování (>10 000 IU dlouhodobě). Kontrolovat hladiny u pacientů s granulomatózními onemocněními (sarkoidóza).",
     "mechanism": "Váže se na VDR (Vitamin D Receptor), reguluje transkripci genů pro imunitu a mineralizaci kostí",
     "halfLife": "15–20 dní (zásobový vitamín)",
-    "interactions": ["tiazidová diuretika (riziko hyperkalcémie)", "kortikosteroidy (snižují hladinu)", "orlistat (snižuje vstřebání)"],
+    "interactions": [
+      "tiazidová diuretika (riziko hyperkalcémie)",
+      "kortikosteroidy (snižují hladinu)",
+      "orlistat (snižuje vstřebání)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["sluneční expozice", "tučné ryby", "žloutky", "houby"],
+    "naturalSources": [
+      "sluneční expozice",
+      "tučné ryby",
+      "žloutky",
+      "houby"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 101,
     "name": "Omega-3 (EPA/DHA)",
     "categoryKey": "health",
-    "tags": ["srdce", "zánět", "mozek", "klouby", "trénink"],
+    "tags": [
+      "srdce",
+      "zánět",
+      "mozek",
+      "klouby",
+      "trénink"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Esenciální mastné kyseliny s protizánětlivým účinkem.",
     "description": "Omega-3 mastné kyseliny EPA a DHA jsou esenciální lipidy nezbytné pro strukturální integritu buněčných membrán. EPA má silný protizánětlivý efekt (substrát pro resolviny), DHA je kritická pro neurální tkáň. Redukují triglyceridy, podporují kardiovaskulární zdraví a mohou zmírnit DOMS po tréninku.",
-    "effects": ["snížení zánětu", "kardioprotekce", "kognitivní funkce", "regenerace kloubů"],
+    "effects": [
+      "snížení zánětu",
+      "kardioprotekce",
+      "kognitivní funkce",
+      "regenerace kloubů"
+    ],
     "dosage": {
       "short": "2–3g EPA+DHA denně",
       "long": "2–3g kombinovaných EPA+DHA denně, ideálně v poměru 2:1 ve prospěch EPA. Užívat s jídlem pro lepší vstřebání. Pro tréninková DOMS až 3–4g."
@@ -38,21 +68,40 @@
     "warning": "Při dávkách >3g/den mírné ředění krve – opatrnost před chirurgickými zákroky. Možná interakce s antikoagulanty. Kvalita zdroje je kritická (oxidace rybího tuku).",
     "mechanism": "Konkurence s omega-6 o enzymy COX/LOX, syntéza specializovaných pro-resolving mediátorů (SPM)",
     "halfLife": "6–8 hodin",
-    "interactions": ["warfarin (INR může stoupnout)", "aspirin", "antihypertenziva"],
+    "interactions": [
+      "warfarin (INR může stoupnout)",
+      "aspirin",
+      "antihypertenziva"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["tučné mořské ryby (losos, sardinky, makrela)", "řasa Schizochytrium", "lněná semínka (ALA)"],
+    "naturalSources": [
+      "tučné mořské ryby (losos, sardinky, makrela)",
+      "řasa Schizochytrium",
+      "lněná semínka (ALA)"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 102,
     "name": "Magnesium (Bisglycinát)",
     "categoryKey": "health",
-    "tags": ["svaly", "spánek", "energie", "srdce", "CNS"],
+    "tags": [
+      "svaly",
+      "spánek",
+      "energie",
+      "srdce",
+      "CNS"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Kritický minerál pro 300+ enzymatických reakcí.",
     "description": "Magnesium je kofaktor pro ATP-dependentní enzymy, reguluje neuromuskulární přenos a kardiovaskulární funkci. Bisglycinátová forma má nejvyšší biologickou dostupnost a nejnižší laxativní efekt oproti oxidu nebo citrátu. Esenciální pro sportovce (ztráta potem).",
-    "effects": ["svalová relaxace", "prevence křečí", "kvalita spánku", "energetický metabolismus"],
+    "effects": [
+      "svalová relaxace",
+      "prevence křečí",
+      "kvalita spánku",
+      "energetický metabolismus"
+    ],
     "dosage": {
       "short": "200–400mg elementárního Mg denně",
       "long": "200–400mg elementárního hořčíku denně, rozděleno do 2 dávek. Večerní dávka podporuje spánek. Maximálně 350mg z doplňků (zbytek z potravy)."
@@ -60,21 +109,39 @@
     "warning": "Vysoké dávky mohou způsobit průjem (kromě bisglycinátu). Opatrnost při renální insuficienci. Interakce s antibiotiky (tetracykliny, fluorochinolony).",
     "mechanism": "Kofaktor ATPázy, blokáda NMDA receptorů (neuroprotekce), regulace parathormonu",
     "halfLife": "4–6 hodin (varuje se podle tkáně)",
-    "interactions": ["bisphosphonáty", "antibiotika", "léky na štítnou žlázu"],
+    "interactions": [
+      "bisphosphonáty",
+      "antibiotika",
+      "léky na štítnou žlázu"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["listová zelenina", "ořechy", "kakao", "celozrnné obiloviny"],
+    "naturalSources": [
+      "listová zelenina",
+      "ořechy",
+      "kakao",
+      "celozrnné obiloviny"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 103,
     "name": "Vitamín K2 (MK-7)",
     "categoryKey": "health",
-    "tags": ["kosti", "cévy", "srdce", "vápník"],
+    "tags": [
+      "kosti",
+      "cévy",
+      "srdce",
+      "vápník"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Karboxyluje matrix Gla-protein, řídí ukládání vápníku.",
     "description": "Vitamín K2 (menachinon-7) aktivuje proteiny závislé na vitamínu K (osteokalcin, MGP), které řídí ukládání vápníku do kostí a zabraňují jeho ukládání do cév. Synergický efekt s D3. Dlouhý poločas (MK-7) umožňuje denní dávkování.",
-    "effects": ["kostní denzita", "kardiovaskulární zdraví", "prevence kalcifikace cév"],
+    "effects": [
+      "kostní denzita",
+      "kardiovaskulární zdraví",
+      "prevence kalcifikace cév"
+    ],
     "dosage": {
       "short": "100–200 mcg denně",
       "long": "100–200 mcg MK-7 denně, ideálně současně s D3. Vyšší dávky (300–400mcg) studovány u osteoporózy."
@@ -82,21 +149,38 @@
     "warning": "Interakce s warfarinem (antagonizuje účinek). Při užívání antikoagulancií konzultovat lékaře.",
     "mechanism": "γ-karboxylace glutamátových zbytků v proteinech závislých na vitamínu K",
     "halfLife": "3 dny (MK-7)",
-    "interactions": ["warfarin (kontraindikace)", "antibiotika (snižují syntézu K2 střevními bakteriemi)"],
+    "interactions": [
+      "warfarin (kontraindikace)",
+      "antibiotika (snižují syntézu K2 střevními bakteriemi)"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["natto (fermentovaná sója)", "sýry (gouda, brie)", "žloutky"],
+    "naturalSources": [
+      "natto (fermentovaná sója)",
+      "sýry (gouda, brie)",
+      "žloutky"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 104,
     "name": "Zinek (Bisglycinát)",
     "categoryKey": "health",
-    "tags": ["imunita", "testosteron", "hojení", "kožní integrita"],
+    "tags": [
+      "imunita",
+      "testosteron",
+      "hojení",
+      "kožní integrita"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Esenciální stopový prvek pro imunitu a hormonální funkci.",
     "description": "Zinek je kofaktor pro více než 300 enzymů, kritický pro imunitní funkci, syntézu DNA a hormonální rovnováhu. Podporuje endogenní produkci testosteronu (5α-reduktáza je zinkový enzym) a hojení ran. Sportovci mají zvýšené ztráty potem.",
-    "effects": ["imunitní odpověď", "syntéza testosteronu", "hojení tkání", "antioxidant"],
+    "effects": [
+      "imunitní odpověď",
+      "syntéza testosteronu",
+      "hojení tkání",
+      "antioxidant"
+    ],
     "dosage": {
       "short": "15–30mg denně",
       "long": "15–30mg elementárního zinku denně, nalačno nebo s jídlem. Dlouhodobě nepřekračovat 40mg/den (měďový deficit). Cyklovat 3 měsíce ON, 1 měsíc OFF při vysokých dávkách."
@@ -104,21 +188,41 @@
     "warning": "Vysoké dávky (>50mg) dlouhodobě způsobují deficit mědi. Nalačno může způsobit nevolnost. Interakce s antibiotiky a penicilaminem.",
     "mechanism": "Strukturální komponenta transcription factors (zinc fingers), kofaktor 5α-reduktázy",
     "halfLife": "4–6 hodin",
-    "interactions": ["tetracykliny", "chinolony", "penicilamin", "měď (antagonismus)"],
+    "interactions": [
+      "tetracykliny",
+      "chinolony",
+      "penicilamin",
+      "měď (antagonismus)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["ústřice", "hovězí maso", "dýňová semínka", "kešu"],
+    "naturalSources": [
+      "ústřice",
+      "hovězí maso",
+      "dýňová semínka",
+      "kešu"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 105,
     "name": "Vitamín C (Kyselina askorbová)",
     "categoryKey": "health",
-    "tags": ["imunita", "antioxidant", "kolagen", "hojení"],
+    "tags": [
+      "imunita",
+      "antioxidant",
+      "kolagen",
+      "hojení"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Esenciální vitamín, kofaktor hydroxyláz, antioxidant.",
     "description": "Vitamín C je kofaktor pro hydroxylázy v syntéze kolagenu, kritický pro imunitní funkci (funkce leukocytů) a silný antioxidant (regenerace vitamínu E). Zvyšuje vstřebávání železa. Intenzivní trénink zvyšuje potřebu.",
-    "effects": ["imunitní funkce", "syntéza kolagenu", "antioxidant", "vstřebávání železa"],
+    "effects": [
+      "imunitní funkce",
+      "syntéza kolagenu",
+      "antioxidant",
+      "vstřebávání železa"
+    ],
     "dosage": {
       "short": "500–2000mg denně",
       "long": "500–2000mg denně v dávkách po 500mg pro lepší vstřebání. Užívat s jídlem pokud způsobuje žaludeční potíže. Lipozomální forma má vyšší biologickou dostupnost."
@@ -126,21 +230,41 @@
     "warning": "Vysoké dávky (>2000mg) mohou způsobit průjem. Riziko oxalátových ledvinových kamenů u predisponovaných jedinců. Interference s některými laboratorními testy.",
     "mechanism": "Elektronový donor (redukce), kofaktor pro hydroxylázy prolylu a lysylu (kolagen)",
     "halfLife": "2–3 hodiny",
-    "interactions": ["železo (zvýšené vstřebání)", "warfarin (snižuje účinek)", "chemoterapie (diskutabilní interakce)"],
+    "interactions": [
+      "železo (zvýšené vstřebání)",
+      "warfarin (snižuje účinek)",
+      "chemoterapie (diskutabilní interakce)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["paprika", "citrusy", "kiwi", "brokolice", "šípky"],
+    "naturalSources": [
+      "paprika",
+      "citrusy",
+      "kiwi",
+      "brokolice",
+      "šípky"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 106,
     "name": "Selen (L-selenomethionin)",
     "categoryKey": "health",
-    "tags": ["imunita", "thyroid", "antioxidant", "mužské zdraví"],
+    "tags": [
+      "imunita",
+      "thyroid",
+      "antioxidant",
+      "mužské zdraví"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Esenciální stopový prvek pro štítnou žlázu a antioxidanty.",
     "description": "Selen je součástí selenoproteinů (glutathion peroxidázy, thioredoxin reduktázy), kritických pro antioxidační obranu a funkci štítné žlázy (deiodinázy). Podporuje spermogenezi a imunitní odpověď. L-selenomethionin je nejbioaktivnější forma.",
-    "effects": ["funkce štítné žlázy", "antioxidační obrana", "spermogeneze", "imunita"],
+    "effects": [
+      "funkce štítné žlázy",
+      "antioxidační obrana",
+      "spermogeneze",
+      "imunita"
+    ],
     "dosage": {
       "short": "100–200 mcg denně",
       "long": "100–200 mcg denně. Bezpečný limit je 400 mcg/den. Brazilské ořechy mohou obsahovat extrémně vysoké dávky (až 90mcg/ořech)."
@@ -148,21 +272,36 @@
     "warning": "Selenóza (selenium toxicity) při >900mcg/den: vypadávání vlasů, nehtové změny, neurologické symptomy. Opatrnost u Hashimoto thyreoiditidy (může zhoršit autoimunitu).",
     "mechanism": "Součást selenocysteinových zbytků v enzymech (UGA kódon), kofaktor deiodináz",
     "halfLife": "120 dní (v zásobních tkáních)",
-    "interactions": ["vitamín C (vysoké dávky mohou snižovat vstřebání)", "chemoterapie"],
+    "interactions": [
+      "vitamín C (vysoké dávky mohou snižovat vstřebání)",
+      "chemoterapie"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["brazilské ořechy", "mořské plody", "hovězí játra"],
+    "naturalSources": [
+      "brazilské ořechy",
+      "mořské plody",
+      "hovězí játra"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 107,
     "name": "Jód (Draslík jodid)",
     "categoryKey": "health",
-    "tags": ["thyroid", "metabolismus", "mozek"],
+    "tags": [
+      "thyroid",
+      "metabolismus",
+      "mozek"
+    ],
     "rating": 4,
     "colorType": "yellow",
     "shortDesc": "Esenciální pro syntézu thyroidních hormonů.",
     "description": "Jód je nezbytný pro syntézu T3 a T4 ve štítné žláze. Deficit vede k hypothyreóze a strumě. Důležitý pro fetální vývoj mozku. V ČR mírně deficitní příjem (neiodizovaná sůl).",
-    "effects": ["funkce štítné žlázy", "kognitivní vývoj", "metabolismus"],
+    "effects": [
+      "funkce štítné žlázy",
+      "kognitivní vývoj",
+      "metabolismus"
+    ],
     "dosage": {
       "short": "150–250 mcg denně",
       "long": "150–250 mcg denně pro dospělé. Těhotné a kojící 220–290 mcg. Nepřekračovat 1100 mcg/den (UL)."
@@ -170,21 +309,40 @@
     "warning": "Hyperthyreóza u jedinců s nodulární strumou. Wolff-Chaikoff efekt při extrémních dávkách. Kontraindikace u autoimunitní tyreoiditidy bez lékařského dohledu.",
     "mechanism": "Organifikace v thyrocytech (TPO enzym), tvorba MIT/DIT a následně T3/T4",
     "halfLife": "10–12 hodin (v krvi), dlouhodobé zásoby v štítné žláze",
-    "interactions": ["lithium", "antithyreoidika", "warfarin"],
+    "interactions": [
+      "lithium",
+      "antithyreoidika",
+      "warfarin"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["mořské řasy (kombu)", "ryby", "jodizovaná sůl", "vejce"],
+    "naturalSources": [
+      "mořské řasy (kombu)",
+      "ryby",
+      "jodizovaná sůl",
+      "vejce"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 108,
     "name": "B-Komplex (Methylfolát/B12)",
     "categoryKey": "health",
-    "tags": ["energie", "nervy", "kognice", "homocystein"],
+    "tags": [
+      "energie",
+      "nervy",
+      "kognice",
+      "homocystein"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Esenciální vitamíny pro energetický metabolismus.",
     "description": "B-komplex zahrnuje 8 esenciálních vitamínů. Kritické jsou aktivní formy: methylkobalamin (B12), methylfolát (B9, místo kyseliny listové), P-5-P (B6). Podporují methylační cykly, syntézu neurotransmitterů a energetický metabolismus (mitochondrie).",
-    "effects": ["energie", "nervový systém", "syntéza červených krvinek", "regulace homocysteinu"],
+    "effects": [
+      "energie",
+      "nervový systém",
+      "syntéza červených krvinek",
+      "regulace homocysteinu"
+    ],
     "dosage": {
       "short": "dle RDA v methylformách",
       "long": "B12: 500–1000mcg, Folát: 400–800mcg (methylfolát), B6: 10–25mg (P-5-P). Užívat ráno (energie)."
@@ -192,21 +350,40 @@
     "warning": "B6 v dávkách >100mg dlouhodobě → periferní neuropatie. Folát maskuje B12 deficit. Kontrolovat hladiny u MTHFR polymorfismu.",
     "mechanism": "Kofaktory pro enzymy energetického metabolismu (TCA cyklus), methylační cyklus",
     "halfLife": "Různé (B12: 6 dní, B1: 1–2 dny)",
-    "interactions": ["metformin (snižuje B12)", "PPI inhibitory (snižují B12)", "methotrexat"],
+    "interactions": [
+      "metformin (snižuje B12)",
+      "PPI inhibitory (snižují B12)",
+      "methotrexat"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["hovězí játra", "vejce", "celozrnné obiloviny", "zelenina"],
+    "naturalSources": [
+      "hovězí játra",
+      "vejce",
+      "celozrnné obiloviny",
+      "zelenina"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 109,
     "name": "Boron (Bor)",
     "categoryKey": "health",
-    "tags": ["kosti", "hormony", "mozek", "zánět"],
+    "tags": [
+      "kosti",
+      "hormony",
+      "mozek",
+      "zánět"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Stopový prvek ovlivňující steroidní metabolismus.",
     "description": "Boron je esenciální stopový prvek (podle posledních výzkumů) ovlivňující metabolismus steroidních hormonů (testosteron, estradiol, vitamín D) a kognitivní funkce. Zvyšuje hladiny aktivních forem steroidů snížením SHBG a zlepšuje absorpci vápníku a hořčíku.",
-    "effects": ["hormonální optimalizace", "kostní zdraví", "kognitivní funkce", "protizánětlivé"],
+    "effects": [
+      "hormonální optimalizace",
+      "kostní zdraví",
+      "kognitivní funkce",
+      "protizánětlivé"
+    ],
     "dosage": {
       "short": "3–10mg denně",
       "long": "3–10mg denně (boroglycerát, chelát). Cyklovat 2 měsíce ON, 1 měsíc OFF. Užívat s hořčíkem."
@@ -214,21 +391,40 @@
     "warning": "Vysoké dávky (>20mg) mohou být toxické pro reprodukci. Opatrnost u renální insuficience.",
     "mechanism": "Inhibice hydroxyláz steroidů, snížení SHBG, interakce s membránovými iontovými kanály",
     "halfLife": "24 hodin",
-    "interactions": ["hormonální terapie", "léky na štítnou žlázu"],
+    "interactions": [
+      "hormonální terapie",
+      "léky na štítnou žlázu"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["hrozny", "meruňky", "lískové ořechy", "avokádo"],
+    "naturalSources": [
+      "hrozny",
+      "meruňky",
+      "lískové ořechy",
+      "avokádo"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 110,
     "name": "Křemík (Orthosilicic acid)",
     "categoryKey": "health",
-    "tags": ["kůže", "vlasy", "nehty", "kosti", "kolagen"],
+    "tags": [
+      "kůže",
+      "vlasy",
+      "nehty",
+      "kosti",
+      "kolagen"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Esenciální prvek pro syntézu kolagenu a elastinu.",
     "description": "Křemík (ve formě křemičité kyseliny) je důležitý pro strukturální integritu pojivových tkání. Aktivuje hydroxylázy prolylu a lysylu v syntéze kolagenu. Zlepšuje kvalitu vlasů, nehtů a kostní denzitu. Koncentrace klesá s věkem.",
-    "effects": ["syntéza kolagenu", "kvalita vlasů a nehtů", "kostní mineralizace", "cévní zdraví"],
+    "effects": [
+      "syntéza kolagenu",
+      "kvalita vlasů a nehtů",
+      "kostní mineralizace",
+      "cévní zdraví"
+    ],
     "dosage": {
       "short": "10–20mg Si denně",
       "long": "10–20mg elementárního křemíku denně (stabilizovaná ortokřemičitá kyselina). Dlouhodobé užívání."
@@ -236,21 +432,38 @@
     "warning": "Bezpečný prvek, ale vysoké dávky (>1000mg) mohou způsobat renální kameny (silikáty).",
     "mechanism": "Aktivace hydroxyláz pro kolagen, stabilizace glykosaminoglykanů",
     "halfLife": "2–3 hodiny",
-    "interactions": ["hliník (antagonizmus)"],
+    "interactions": [
+      "hliník (antagonizmus)"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["oves", "ječmen", "řepa", "celozrnné obiloviny"],
+    "naturalSources": [
+      "oves",
+      "ječmen",
+      "řepa",
+      "celozrnné obiloviny"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 111,
     "name": "Coenzyme Q10 (Ubiquinol)",
     "categoryKey": "health",
-    "tags": ["srdce", "energie", "mitochondrie", "antioxidant"],
+    "tags": [
+      "srdce",
+      "energie",
+      "mitochondrie",
+      "antioxidant"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Mitochondriální kofaktor pro ATP, antioxidant.",
     "description": "CoQ10 je lipidní kofaktor v respiračním řetězci mitochondrií (komplex I a II), kritický pro produkci ATP. Také lipofilní antioxidant. Hladiny klesají s věkem a statiny je výrazně snižují. Redukovaná forma ubiquinol má lepší vstřebatelnost.",
-    "effects": ["energetický metabolismus", "kardiovaskulární zdraví", "antioxidant", "statín-protekce"],
+    "effects": [
+      "energetický metabolismus",
+      "kardiovaskulární zdraví",
+      "antioxidant",
+      "statín-protekce"
+    ],
     "dosage": {
       "short": "100–200mg denně",
       "long": "100–200mg denně ve formě ubiquinolu (3x lepší vstřebání). Se statiny až 300–400mg. Užívat s tuky."
@@ -258,21 +471,40 @@
     "warning": "Může snižovat účinek warfarinu (strukturálně podobný vitamínu K). Hypotenze při vysokých dávkách. Teoretický vliv na hypoglykémii.",
     "mechanism": "Přenašeč elektronů v mitochondriálním řetězci (Q-cyklus), regenerace vitamínu E",
     "halfLife": "34 hodin (ubiquinon), 6–8 hodin (ubiquinol)",
-    "interactions": ["warfarin (snižuje INR)", "statiny (synergický efekt)", "chemoterapie"],
+    "interactions": [
+      "warfarin (snižuje INR)",
+      "statiny (synergický efekt)",
+      "chemoterapie"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["srdce zvířat", "sardinky", "hovězí maso", "sezamové semínko"],
+    "naturalSources": [
+      "srdce zvířat",
+      "sardinky",
+      "hovězí maso",
+      "sezamové semínko"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 112,
     "name": "NAC (N-acetylcystein)",
     "categoryKey": "health",
-    "tags": ["antioxidant", "játra", "dýchání", "imunita"],
+    "tags": [
+      "antioxidant",
+      "játra",
+      "dýchání",
+      "imunita"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Prekurzor glutathionu, antioxidant, mukolytikum.",
     "description": "NAC je prekurzor L-cysteinu pro syntézu glutathionu (hlavní intracelulární antioxidant). Používá se jako antidotum u paracetamolové intoxikace. Má mukolytické účinky (rozpouští disulfidové můstky v hlenu). Podporuje detoxikaci jater.",
-    "effects": ["zvýšení glutathionu", "detoxikace jater", "mukolytikum", "neuroprotekce"],
+    "effects": [
+      "zvýšení glutathionu",
+      "detoxikace jater",
+      "mukolytikum",
+      "neuroprotekce"
+    ],
     "dosage": {
       "short": "600–1200mg denně",
       "long": "600–1200mg denně, rozděleno do 2–3 dávek. Při zátěži jater až 2400mg. Nalačno nebo s jídlem."
@@ -280,21 +512,38 @@
     "warning": "Vysoké dávkypři intravenózním podání spojeny s trombocytopenií. Teoreticky může zhoršit astma (ztenčení hlenu). Interakce s nitroglycerinem (hypotenze).",
     "mechanism": "Dodávka cysteinu pro syntézu GSH, rozpouštění disulfidových vazeb",
     "halfLife": "6–8 hodin",
-    "interactions": ["nitroglycerin", "antikoagulancia", "chemoterapie (diskutabilní)"],
+    "interactions": [
+      "nitroglycerin",
+      "antikoagulancia",
+      "chemoterapie (diskutabilní)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["žádné přímé zdroje (doplněk)", "cystein v proteinu"],
+    "naturalSources": [
+      "žádné přímé zdroje (doplněk)",
+      "cystein v proteinu"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 113,
     "name": "Glutathion (Lipozomální)",
     "categoryKey": "health",
-    "tags": ["antioxidant", "játra", "imunita", "detox"],
+    "tags": [
+      "antioxidant",
+      "játra",
+      "imunita",
+      "detox"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Hlavní intracelulární antioxidant.",
     "description": "Glutathion (GSH) je tripeptid (glutamát-cystein-glycin), nejdůležitější intracelulární antioxidant a kofaktor detoxikačních enzymů (glutathion-S-transferázy). Lipozomální forma překonává problém se vstřebáváním (jinak hydrolyzován v GIT).",
-    "effects": ["antioxidant", "fáze II detoxikace", "imunitní regulace", "regenerace vitamínů C a E"],
+    "effects": [
+      "antioxidant",
+      "fáze II detoxikace",
+      "imunitní regulace",
+      "regenerace vitamínů C a E"
+    ],
     "dosage": {
       "short": "250–500mg denně",
       "long": "250–500mg lipozomálního GSH denně. Acetylcystein může být efektivnější pro zvýšení intracelulárních hladin (sporné)."
@@ -302,21 +551,39 @@
     "warning": "Vstřebatelní ne-lipozomálního GSH je diskutabilní. Astmatikům může vyvolat bronchokonstrikci (vzácně).",
     "mechanism": "Redukce ROS, konjugace s toxiny (fáze II), regenerace antioxidantů",
     "halfLife": "2–3 hodiny",
-    "interactions": ["chemoterapie", "paracetamol (antidotum)"],
+    "interactions": [
+      "chemoterapie",
+      "paracetamol (antidotum)"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["asparagus", "avokádo", "špenát", "brokolice (sulforafan indukuje syntézu)"],
+    "naturalSources": [
+      "asparagus",
+      "avokádo",
+      "špenát",
+      "brokolice (sulforafan indukuje syntézu)"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 114,
     "name": "Cholin (Alfa-GPC)",
     "categoryKey": "health",
-    "tags": ["mozek", "játra", "svaly", "membrány"],
+    "tags": [
+      "mozek",
+      "játra",
+      "svaly",
+      "membrány"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Esenciální živina pro membrány a acetylcholin.",
     "description": "Cholin je esenciální živina (nedávno klasifikován jako vitamin-like). Alfa-GPC je nejlepší forma s 40% cholinu a schopností překonat hematoencefalickou bariéru. Kritický pro syntézu fosfolipidů membrán a neurotransmitteru acetylcholinu. Podporuje svalovou kontrakci (motorické jednotky).",
-    "effects": ["kognitivní funkce", "svalová kontrakce", "zdraví jater", "membránová integrita"],
+    "effects": [
+      "kognitivní funkce",
+      "svalová kontrakce",
+      "zdraví jater",
+      "membránová integrita"
+    ],
     "dosage": {
       "short": "300–600mg denně",
       "long": "300–600mg Alfa-GPC denně (nebo 500–1000mg citrátu bitartrátu). Užívat ráno nebo před tréninkem."
@@ -324,9 +591,348 @@
     "warning": "Vysoké dávky (>1000mg) mohou způsobit bolesti hlavy (přebytek acetylcholinu), nevolnost. Teoreticky snižuje krevní tlak.",
     "mechanism": "Substrát pro syntézu fosfatidylcholinu a acetylcholinu (přes CDP-cholin pathway)",
     "halfLife": "4–6 hodin",
-    "interactions": ["anticholinergika", "nootropika"],
+    "interactions": [
+      "anticholinergika",
+      "nootropika"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["vejce (žloutky)", "hovězí játra", "sójové lecitin", "ryby"],
+    "naturalSources": [
+      "vejce (žloutky)",
+      "hovězí játra",
+      "sójové lecitin",
+      "ryby"
+    ],
     "bannedStatus": "legal"
+  },
+  {
+    "name": "Glutamin (L-Glutamin)",
+    "categoryKey": "health",
+    "tags": [
+      "střeva",
+      "imunita",
+      "regenerace",
+      "leaky gut"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Klíčové palivo pro enterocyty střevní sliznice a imunitní buňky.",
+    "description": "Podmíněně esenciální aminokyselina, která tvoří až 60 % volných aminokyselin ve svalech. Je primárním zdrojem energie pro buňky střevního epitelu a leukocyty. Nepostradatelný pro obnovu těsnosti střevní bariéry (tight junctions) při syndromu propustného střeva.",
+    "effects": [
+      "obnova střevní sliznice",
+      "podpora imunitních buněk",
+      "snížení zánětu střev"
+    ],
+    "dosage": {
+      "short": "5–10g denně",
+      "long": "5g ráno nalačno a 5g večer rozpuštěno ve vlažné vodě (horká voda glutamin ničí)."
+    },
+    "warning": "Pacienti s renální dysfunkcí by měli dávkování konzultovat s nefrologem.",
+    "mechanism": "Substrát pro syntézu nukleotidů enterocytů, upregulace exprese claudinu a occludinu",
+    "halfLife": "1 hodina",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "kostní vývar",
+      "hovězí maso",
+      "vejce"
+    ],
+    "bannedStatus": "legal",
+    "id": 115
+  },
+  {
+    "name": "Ostropestřec Mariánský (Silymarin)",
+    "categoryKey": "health",
+    "tags": [
+      "játra",
+      "detoxikace",
+      "antioxidant",
+      "hepatoprotekce"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Zlatý standard v ochraně a regeneraci jaterních buněk.",
+    "description": "Silymarin je komplex flavonolignanů (zejména silybinu) z plodů Silybum marianum. Chrání jaterní membrány před toxiny, zvyšuje syntézu jaterního glutathionu a stimuluje ribosomální proteosyntézu pro regeneraci poškozených hepatocytů.",
+    "effects": [
+      "hepatoprotekce",
+      "antioxidant",
+      "snížení jaterních enzymů ALT/AST"
+    ],
+    "dosage": {
+      "short": "200–400mg silymarinu denně",
+      "long": "140–200mg standardizovaného extraktu 2–3x denně s jídlem. Fytosomální forma má několikanásobně vyšší vstřebatelnost."
+    },
+    "warning": "Mírně laxativní účinek při vysokých dávkách. Může ovlivňovat enzymy CYP2C9 a CYP3A4.",
+    "mechanism": "Inhibice lipidové peroxidace, blokace vazby toxinů na membránové receptory hepatocytů",
+    "halfLife": "6 hodin",
+    "interactions": [
+      "léky metabolizované CYP3A4"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "semena ostropestřce mariánského"
+    ],
+    "bannedStatus": "legal",
+    "id": 116
+  },
+  {
+    "name": "Berberin (Berberine HCL)",
+    "categoryKey": "health",
+    "tags": [
+      "cukr",
+      "inzulin",
+      "dlouhověkost",
+      "metabolismus",
+      "ampk"
+    ],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Mocný rostlinný alkaloid aktivující AMPK srovnatelně s Metforminem.",
+    "description": "Kvartérní amoniový alkaloid z dřišťálu. Aktivuje AMPK (buněčný senzor energie), zvyšuje expresi GLUT-4 transportérů a snižuje glukoneogenezi v játrech. Výrazně zlepšuje glykemii nalačno, HbA1c a lipidový profil.",
+    "effects": [
+      "snížení krevního cukru",
+      "inzulinová senzitivita",
+      "redukce LDL cholesterolu"
+    ],
+    "dosage": {
+      "short": "500mg 2–3x denně s jídlem",
+      "long": "500mg cca 10–15 minut před hlavními jídly s obsahem sacharidů (celkem 1000–1500mg denně). Cyklovat 8 týdnů ON, 2 týdny OFF."
+    },
+    "warning": "Riziko hypoglykémie při kombinaci s antidiabetiky. Může způsobit zácpu nebo křeče. Silný inhibitor CYP3A4 a CYP2D6.",
+    "mechanism": "Aktivace enzymu AMPK nezávisle na inzulinu, inhibice mitochondriálního komplexu I",
+    "halfLife": "3–4 hodiny",
+    "interactions": [
+      "metformin",
+      "inzulin",
+      "statiny",
+      "léky metabolizované CYP450"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "Berberis vulgaris (Dřišťál obecný)",
+      "Coptis chinensis"
+    ],
+    "bannedStatus": "legal",
+    "id": 117
+  },
+  {
+    "name": "Astragalus (Kozinec blanitý)",
+    "categoryKey": "health",
+    "tags": [
+      "ledviny",
+      "imunita",
+      "srdce",
+      "telomeráza"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Adaptogen chránící ledviny, kardiovaskulární systém a endotel.",
+    "description": "Kořen Astragalus membranaceus obsahuje astragalosidy a polysacharidy. Zlepšuje glomerulární filtraci (eGFR), snižuje krevní tlak a proteinurii. Populární v biohackingu a sportu pro ochranu ledvin při vysokoproteinovém zatížení.",
+    "effects": [
+      "ochrana ledvin (eGFR)",
+      "imunomodulace",
+      "aktivace telomerázy (Astragalosid IV)"
+    ],
+    "dosage": {
+      "short": "1000–3000mg denně",
+      "long": "Standardizovaný extrakt (obsahující min. 0.5% astragalosidu IV) 500–1500mg 2x denně."
+    },
+    "warning": "Imunostimulační efekt – opatrnost u osob s autoimunitními chorobami.",
+    "mechanism": "Zvýšení renálního průtoku, inhibice transformujícího růstového faktoru beta-1 (TGF-beta1)",
+    "halfLife": "4 hodiny",
+    "interactions": [
+      "imunosupresiva"
+    ],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "Astragalus membranaceus"
+    ],
+    "bannedStatus": "legal",
+    "id": 118
+  },
+  {
+    "name": "P5P (Pyridoxal-5-Fosfát / Aktivní B6)",
+    "categoryKey": "health",
+    "tags": [
+      "prolaktin",
+      "neurotransmitery",
+      "b6",
+      "homocystein"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Aktivní koenzymová forma vitamínu B6 snižující prolaktin.",
+    "description": "P5P je metabolicky aktivní forma vitamínu B6, která nevyžaduje jaterní konverzi enzymem pyridoxalkinázou. Slouží jako esenciální kofaktor pro syntézu dopaminu, serotoninu a GABA. Efektivně snižuje zvýšený prolaktin stimulací dopaminových receptorů v hypofýze.",
+    "effects": [
+      "snížení prolaktinu",
+      "syntéza dopaminu a GABA",
+      "metabolismus bílkovin"
+    ],
+    "dosage": {
+      "short": "50–100mg denně",
+      "long": "50–100mg rozděleno do 2 dávek s jídlem. Pro snížení prolaktinu až 150–200mg denně."
+    },
+    "warning": "Při extrémních chronických dávkách (>300mg denně měsíce) riziko periferní neuropatie (výrazně méně než u pyridoxin HCl).",
+    "mechanism": "Kofaktor enzymu DOPA-dekarboxylázy (přeměna na dopamin, který inhibuje prolaktin)",
+    "halfLife": "15–20 dní",
+    "interactions": [
+      "levodopa"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "játra",
+      "losos",
+      "banány"
+    ],
+    "bannedStatus": "legal",
+    "id": 119
+  },
+  {
+    "name": "NMN (Nikotinamid Mononukleotid)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "nad+",
+      "mitochondrie",
+      "sirtuiny",
+      "energie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přímý prekurzor NAD+ aktivující enzymy dlouhověkosti Sirtuiny.",
+    "description": "NMN je nukleotid, který tělo bleskově konvertuje na NAD+ (nikotinamidadenindinukleotid). Hladina NAD+ s věkem po 30. roce rapidně klesá. NMN obnovuje mitochondriální respiraci, opravuje DNA přes PARP-1 enzymy a aktivuje sirtuiny SIRT1 a SIRT3.",
+    "effects": [
+      "zvýšení buněčné energie NAD+",
+      "oprava poškozené DNA",
+      "mitochondriální biogeneze"
+    ],
+    "dosage": {
+      "short": "500–1000mg ráno",
+      "long": "500–1000mg sublinguálně nebo perorálně ráno nalačno. Doporučeno kombinovat s TMG (betainem) pro zachování methylových skupin."
+    },
+    "warning": "Konzumuje methylové skupiny při odbourávání (nutný přísun TMG / methylfolátu).",
+    "mechanism": "Konverze na NAD+ přes NMNAT enzymy, substrát pro sirtuiny a PARP",
+    "halfLife": "1–2 hodiny (v buňkách se NAD+ drží déle)",
+    "interactions": [
+      "resveratrol (synergie)"
+    ],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "brokolice",
+      "okurka",
+      "avokádo",
+      "edamame"
+    ],
+    "bannedStatus": "legal (v USA regulováno FDA jako zkoumaný lék)",
+    "id": 120
+  },
+  {
+    "name": "Resveratrol (Trans-Resveratrol)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "sirtuiny",
+      "antioxidant",
+      "kardioprotekce"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní polyfenol a alosterický aktivátor sirtuinů SIRT1.",
+    "description": "Stilbenoid získávaný z křídlatky japonské. Působí jako mimetikum kalorické restrikce, aktivuje geny dlouhověkosti SIRT1 a má silné kardioprotektivní a protizánětlivé účinky.",
+    "effects": [
+      "aktivace SIRT1",
+      "ochrana endotelu cév",
+      "mitochondriální funkce"
+    ],
+    "dosage": {
+      "short": "250–500mg denně s tuky",
+      "long": "250–500mg trans-resveratrolu ráno se snídaní obsahující zdravé tuky (jogurt, ořechy, olivový olej) pro zajištění absorpce."
+    },
+    "warning": "Rychlý jaterní first-pass metabolismus (glukuronidace). Vyžaduje mikronizovanou formu.",
+    "mechanism": "Alosterická aktivace SIRT1, zvýšení autofagie a aktivace AMPK",
+    "halfLife": "9 hodin",
+    "interactions": [
+      "antikoagulancia (ředí krev)"
+    ],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "Polygonum cuspidatum (Křídlatka)",
+      "červené hrozny",
+      "borůvky"
+    ],
+    "bannedStatus": "legal",
+    "id": 121
+  },
+  {
+    "name": "Kurkumin (s Piperinem / BCM-95)",
+    "categoryKey": "health",
+    "tags": [
+      "zánět",
+      "klouby",
+      "mozek",
+      "antioxidant"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Nejsilnější přírodní protizánětlivý polyfenol s piperinem pro 2000% vstřebání.",
+    "description": "Kurkuminoidy z oddenku Curcuma longa blokují nukleární faktor NF-kB, který řídí chronický zánět v těle. Přidání piperinu (extrakt z černého pepře) inhibuje jaterní glukuronidaci a zvyšuje biologickou dostupnost kurkuminu o 2000 %.",
+    "effects": [
+      "výrazné snížení zánětu",
+      "úleva od bolesti kloubů",
+      "neuroprotekce"
+    ],
+    "dosage": {
+      "short": "500mg extraktu 1–2x denně",
+      "long": "500mg standardizovaného extraktu (95% kurkuminoidů) s 5mg piperinu s tučným jídlem."
+    },
+    "warning": "Piperin inhibuje enzymy CYP3A4 a P-glykoprotein, což může zvýšit hladinu léků v krvi.",
+    "mechanism": "Inhibice enzymů COX-2 a 5-LOX, blokace transkripčního faktoru NF-kB",
+    "halfLife": "6–7 hodin",
+    "interactions": [
+      "léky metabolizované CYP3A4",
+      "antikoagulancia"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "kurkuma dlouhá (oddenek)"
+    ],
+    "bannedStatus": "legal",
+    "id": 122
+  },
+  {
+    "name": "Elektrolyty (Sodík, Draslík, Hořčík)",
+    "categoryKey": "health",
+    "tags": [
+      "hydratace",
+      "nervy",
+      "krevní tlak",
+      "svaly"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Esenciální minerální ionty pro buněčnou homeostázu a vedení vzruchů.",
+    "description": "Kombinace sodíku (Na+), draslíku (K+) a hořčíku (Mg2+) v přesném poměru. Sodno-draselná pumpa (Na+/K+-ATPáza) spotřebovává až 30 % veškeré buněčné energie pro udržení membránového potenciálu.",
+    "effects": [
+      "prevence křečí a bolestí hlavy",
+      "stabilní krevní tlak",
+      "nervosvalový přenos"
+    ],
+    "dosage": {
+      "short": "1–2 dávky v 1 litru vody",
+      "long": "Poměr cca 1000mg sodíku, 200mg draslíku a 60mg hořčíku do tréninkové nebo ranní vody."
+    },
+    "warning": "Osoby s hypertenzí nebo chronickým onemocněním ledvin musí příjem sodíku a draslíku hlídat.",
+    "mechanism": "Udržování extracelulárního a intracelulárního objemu tekutin a elektrického potenciálu",
+    "halfLife": "Dynamická renální rovnováha",
+    "interactions": [
+      "ACE inhibitory (riziko hyperkalémie)"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "mořská sůl",
+      "kokosová voda",
+      "banány"
+    ],
+    "bannedStatus": "legal",
+    "id": 123
   }
 ]
