@@ -1,4 +1,4 @@
-const CACHE_NAME = 'supplez-cache-v4.2';
+const CACHE_NAME = 'supplez-cache-v4.3';
 
 const ASSETS_TO_CACHE = [
     './',
