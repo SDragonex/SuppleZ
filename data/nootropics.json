@@ -143,7 +143,8 @@
     "effects": ["kognitivní zlepšení", "fyzický výkon", "stimulace", "odolnost vůči stresu"],
     "dosage": {
       "short": "100–200mg denně",
-      "long": "100–200mg denně, rozděleno do 2 dávek. Užívat ráno (silné stimulace). Cyklovat 1 měsíc ON, 1 měsíc OFF (tolerance).",
+      "long": "100–200mg denně, rozděleno do 2 dávek. Užívat ráno (silné stimulace). Cyklovat 1 měsíc ON, 1 měsíc OFF (tolerance)."
+    },
     "warning": "Insomnie, úzkost, podrážděnost při vysokých dávkách. Tolerance se vyvíjí rychle. Interakce s antikonvulzivy. Teoreticky zvýšení krevního tlaku.",
     "mechanism": "Modulace AMPA receptorů, zvýšení dopaminu a noradrenalinu, aktivace NMDA",
     "halfLife": "3–5 hodin",
