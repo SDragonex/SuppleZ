@@ -173,7 +173,28 @@ function handleUrlRouting() {
     }
 }
 
+let currentItemInDetail = null;
+
+function addCurrentItemToStack() {
+    if (!currentItemInDetail) return;
+    addToStack(currentItemInDetail);
+    closeDetailView(false);
+    switchTab('view-stack', document.querySelectorAll('.nav-item')[1]);
+}
+
+function addCurrentItemToDiary() {
+    if (!currentItemInDetail) return;
+    closeDetailView(false);
+    switchTab('view-diary', document.querySelectorAll('.nav-item')[3]);
+    const nameInput = document.getElementById("diary-name");
+    const doseInput = document.getElementById("diary-dose");
+    if (nameInput) nameInput.value = currentItemInDetail.name;
+    if (doseInput) doseInput.value = currentItemInDetail.dosage?.short || "Doporučená dávka";
+    if (nameInput) nameInput.focus();
+}
+
 function openDetailView(item, updateHistory = true) {
+    currentItemInDetail = item;
     const slug = item.slug || slugify(item.name);
     const targetHash = `#item=${item.id}-${slug}`;
 
@@ -693,3 +714,389 @@ async function clearAllData() {
 
 // Počáteční vykreslení deníku
 renderDiary();
+
+// ==========================================
+// --- STACK BUILDER & INTERAKCE & ROZVRH ---
+// ==========================================
+
+let activeStack = JSON.parse(localStorage.getItem("supplez_user_stack_v1")) || [];
+let currentStackSubtab = 'interactions';
+
+function initStackUI() {
+    renderPresetChips();
+    renderActiveStack();
+    setupStackSearch();
+}
+
+function switchStackSubtab(subtab) {
+    currentStackSubtab = subtab;
+    const interBtn = document.getElementById("subtab-interactions-btn");
+    const circBtn = document.getElementById("subtab-circadian-btn");
+    const interView = document.getElementById("stack-subview-interactions");
+    const circView = document.getElementById("stack-subview-circadian");
+
+    if (subtab === 'interactions') {
+        if (interBtn) interBtn.classList.add("active");
+        if (circBtn) circBtn.classList.remove("active");
+        if (interView) interView.classList.remove("hidden");
+        if (circView) circView.classList.add("hidden");
+        runInteractionAnalysis();
+    } else {
+        if (interBtn) interBtn.classList.remove("active");
+        if (circBtn) circBtn.classList.add("active");
+        if (interView) interView.classList.add("hidden");
+        if (circView) circView.classList.remove("hidden");
+        renderCircadianTimeline();
+    }
+}
+
+function renderPresetChips() {
+    const container = document.getElementById("preset-chips-container");
+    if (!container || !window.SuppleZ_Interactions) return;
+
+    container.innerHTML = "";
+    window.SuppleZ_Interactions.PRESET_STACKS.forEach(preset => {
+        const chip = document.createElement("button");
+        chip.className = "preset-chip";
+        chip.innerText = preset.name;
+        chip.title = preset.desc;
+        chip.onclick = () => loadPresetStack(preset);
+        container.appendChild(chip);
+    });
+}
+
+function loadPresetStack(preset) {
+    if (!preset || !Array.isArray(preset.items)) return;
+    activeStack = [...preset.items];
+    saveActiveStack();
+    renderActiveStack();
+}
+
+function setupStackSearch() {
+    const input = document.getElementById("stack-search-input");
+    const suggestions = document.getElementById("stack-suggestions");
+    if (!input || !suggestions) return;
+
+    input.addEventListener("input", () => {
+        const query = input.value.trim().toLowerCase();
+        if (query.length < 2) {
+            suggestions.classList.add("hidden");
+            suggestions.innerHTML = "";
+            return;
+        }
+
+        const matches = globalData.filter(item => {
+            const matchesName = item.name.toLowerCase().includes(query);
+            const matchesTags = Array.isArray(item.tags) && item.tags.some(t => t.toLowerCase().includes(query));
+            const alreadyInStack = activeStack.some(s => s.id === item.id);
+            return (matchesName || matchesTags) && !alreadyInStack;
+        }).slice(0, 8);
+
+        if (matches.length === 0) {
+            suggestions.classList.add("hidden");
+            return;
+        }
+
+        suggestions.innerHTML = "";
+        matches.forEach(item => {
+            const div = document.createElement("div");
+            div.className = "suggestion-item";
+            const catLabel = categoryLabels[item.categoryKey] || item.categoryKey;
+            div.innerHTML = `
+                <span>${item.name}</span>
+                <span class="suggestion-cat">${catLabel}</span>
+            `;
+            div.onclick = () => {
+                addToStack(item);
+                input.value = "";
+                suggestions.classList.add("hidden");
+            };
+            suggestions.appendChild(div);
+        });
+        suggestions.classList.remove("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!input.contains(e.target) && !suggestions.contains(e.target)) {
+            suggestions.classList.add("hidden");
+        }
+    });
+}
+
+function addToStack(item) {
+    if (!item) return;
+    const exists = activeStack.some(s => s.id === item.id || s.name.toLowerCase() === item.name.toLowerCase());
+    if (exists) return;
+
+    activeStack.push({
+        id: item.id,
+        name: item.name,
+        categoryKey: item.categoryKey || item.category,
+        colorType: item.colorType || 'green'
+    });
+
+    saveActiveStack();
+    renderActiveStack();
+}
+
+function removeFromStack(id) {
+    activeStack = activeStack.filter(s => s.id !== id);
+    saveActiveStack();
+    renderActiveStack();
+}
+
+function clearStack() {
+    activeStack = [];
+    saveActiveStack();
+    renderActiveStack();
+}
+
+function saveActiveStack() {
+    localStorage.setItem("supplez_user_stack_v1", JSON.stringify(activeStack));
+}
+
+function renderActiveStack() {
+    const list = document.getElementById("stack-chips-list");
+    const countEl = document.getElementById("stack-count");
+    if (!list) return;
+
+    if (countEl) countEl.innerText = activeStack.length;
+
+    if (activeStack.length === 0) {
+        list.innerHTML = '<span style="color:#666; font-size:0.85rem;">Žádné látky ve stacku. Přidejte látky vyhledáním nebo vyberte předvolený stack výše.</span>';
+    } else {
+        list.innerHTML = "";
+        activeStack.forEach(item => {
+            const chip = document.createElement("div");
+            chip.className = "stack-item-chip";
+            chip.innerHTML = `
+                <span>${item.name}</span>
+                <button class="remove-chip-btn" onclick="removeFromStack(${item.id})">
+                    <span class="material-icons" style="font-size:1.1rem">close</span>
+                </button>
+            `;
+            list.appendChild(chip);
+        });
+    }
+
+    if (currentStackSubtab === 'interactions') {
+        runInteractionAnalysis();
+    } else {
+        renderCircadianTimeline();
+    }
+}
+
+function runInteractionAnalysis() {
+    const container = document.getElementById("interactions-results-container");
+    const summaryText = document.getElementById("interaction-summary-text");
+    if (!container || !window.SuppleZ_Interactions) return;
+
+    container.innerHTML = "";
+
+    if (activeStack.length < 2) {
+        if (summaryText) summaryText.innerText = "Vyberte alespoň 2 látky pro spuštění analýzy interakcí.";
+        return;
+    }
+
+    const analysis = window.SuppleZ_Interactions.analyzeStackInteractions(activeStack);
+
+    if (summaryText) {
+        summaryText.innerText = `Nalezeno: ${analysis.synergies.length} synergií, ${analysis.conflicts.length} časových kompetic, ${analysis.warnings.length} varování.`;
+    }
+
+    // Žádné problémy a žádné synergie
+    if (analysis.synergies.length === 0 && analysis.conflicts.length === 0 && analysis.warnings.length === 0) {
+        container.innerHTML = `
+            <div class="interaction-card synergy">
+                <div class="interaction-card-header">
+                    <span class="material-icons">verified_user</span>
+                    <h4>Čistý stack (žádné známé kolize)</h4>
+                </div>
+                <p>Mezi vybranými látkami nebyly nalezeny žádné známé negativní lékové interakce ani absorpční kompetice.</p>
+            </div>
+        `;
+        return;
+    }
+
+    // 1. Kritická varování (červená)
+    analysis.warnings.forEach(warn => {
+        const card = document.createElement("div");
+        card.className = "interaction-card warning";
+        card.innerHTML = `
+            <div class="interaction-card-header">
+                <span class="material-icons">warning</span>
+                <h4>${warn.title}</h4>
+            </div>
+            <p>${warn.warning}</p>
+        `;
+        container.appendChild(card);
+    });
+
+    // 2. Časové kompetice (žlutá)
+    analysis.conflicts.forEach(conf => {
+        const card = document.createElement("div");
+        card.className = "interaction-card conflict";
+        card.innerHTML = `
+            <div class="interaction-card-header">
+                <span class="material-icons">schedule</span>
+                <h4>${conf.title}</h4>
+            </div>
+            <p>${conf.conflict}</p>
+            <div class="interaction-advice">Doporučení: ${conf.advice}</div>
+        `;
+        container.appendChild(card);
+    });
+
+    // 3. Synergie (zelená)
+    analysis.synergies.forEach(syn => {
+        const card = document.createElement("div");
+        card.className = "interaction-card synergy";
+        card.innerHTML = `
+            <div class="interaction-card-header">
+                <span class="material-icons">check_circle</span>
+                <h4>${syn.title}</h4>
+            </div>
+            <p>${syn.mechanism}</p>
+        `;
+        container.appendChild(card);
+    });
+}
+
+function renderCircadianTimeline() {
+    const container = document.getElementById("circadian-timeline-container");
+    if (!container || !window.SuppleZ_Interactions) return;
+
+    container.innerHTML = "";
+
+    if (activeStack.length === 0) {
+        container.innerHTML = '<div style="text-align:center; color:#666; padding:20px;">Přidejte látky do vašeho stacku pro sestavení rozvrhu.</div>';
+        return;
+    }
+
+    const schedule = window.SuppleZ_Interactions.buildCircadianSchedule(activeStack);
+
+    Object.keys(schedule).forEach(slotKey => {
+        const slot = schedule[slotKey];
+        if (slot.items.length === 0) return;
+
+        const slotCard = document.createElement("div");
+        slotCard.className = "timeline-slot";
+
+        let itemsHtml = '';
+        slot.items.forEach(item => {
+            itemsHtml += `
+                <div class="slot-item-card">
+                    <span class="slot-item-name">${item.name}</span>
+                    <span class="slot-item-reason">${slot.rule.reason}</span>
+                </div>
+            `;
+        });
+
+        slotCard.innerHTML = `
+            <div class="slot-header">
+                <span class="material-icons" style="color:${slot.rule.color}">${slot.rule.icon}</span>
+                <h3>${slot.rule.label}</h3>
+                <span class="slot-time-badge">${slot.rule.timeHint}</span>
+            </div>
+            <div class="slot-items-list">
+                ${itemsHtml}
+            </div>
+        `;
+        container.appendChild(slotCard);
+    });
+}
+
+// ==========================================
+// --- KALKULAČKA ŘEDĚNÍ PEPTIDŮ (UI) ---
+// ==========================================
+
+function initCalculatorUI() {
+    const vialInput = document.getElementById("calc-vial-mg");
+    const waterInput = document.getElementById("calc-water-ml");
+    const doseInput = document.getElementById("calc-dose-mcg");
+    const syringeSelect = document.getElementById("calc-syringe-type");
+
+    if (vialInput) vialInput.addEventListener("input", runPeptideCalculation);
+    if (waterInput) waterInput.addEventListener("input", runPeptideCalculation);
+    if (doseInput) doseInput.addEventListener("input", runPeptideCalculation);
+    if (syringeSelect) syringeSelect.addEventListener("change", runPeptideCalculation);
+
+    runPeptideCalculation();
+}
+
+function setCalcPreset(type, value) {
+    if (type === 'vial') {
+        const el = document.getElementById("calc-vial-mg");
+        if (el) el.value = value;
+    } else if (type === 'water') {
+        const el = document.getElementById("calc-water-ml");
+        if (el) el.value = value;
+    } else if (type === 'dose') {
+        const el = document.getElementById("calc-dose-mcg");
+        if (el) el.value = value;
+    }
+    runPeptideCalculation();
+}
+
+function runPeptideCalculation() {
+    if (!window.SuppleZ_Calculator) return;
+
+    const vialMg = parseFloat(document.getElementById("calc-vial-mg")?.value) || 0;
+    const waterMl = parseFloat(document.getElementById("calc-water-ml")?.value) || 1;
+    const doseMcg = parseFloat(document.getElementById("calc-dose-mcg")?.value) || 0;
+    const syringeType = document.getElementById("calc-syringe-type")?.value || 'u100_1ml';
+
+    window.SuppleZ_Calculator.vialMg = vialMg;
+    window.SuppleZ_Calculator.waterMl = waterMl;
+    window.SuppleZ_Calculator.doseMcg = doseMcg;
+    window.SuppleZ_Calculator.syringeType = syringeType;
+
+    const results = window.SuppleZ_Calculator.calculate();
+
+    // Render SVG
+    const svgContainer = document.getElementById("syringe-svg-container");
+    if (svgContainer) {
+        svgContainer.innerHTML = window.SuppleZ_Calculator.renderSvgSyringe(results);
+    }
+
+    // Výsledný text
+    const unitsOut = document.getElementById("syringe-units-output");
+    const subOut = document.getElementById("syringe-sub-output");
+
+    if (results.isOverflow) {
+        if (unitsOut) {
+            unitsOut.innerText = `Překročena kapacita (${results.units} IU)`;
+            unitsOut.style.color = "var(--neon-red)";
+        }
+        if (subOut) subOut.innerText = `Dávka ${results.doseVolumeMl} ml přesahuje kapacitu stříkačky. Zvyšte objem vody nebo zvolte větší stříkačku.`;
+    } else {
+        if (unitsOut) {
+            unitsOut.innerText = `Natáhněte přesně ${results.units} jednotek`;
+            unitsOut.style.color = "var(--neon-green)";
+        }
+        if (subOut) {
+            subOut.innerText = `Ryska ${results.units} na stříkačce (${results.doseVolumeMl} ml roztoku)`;
+        }
+    }
+
+    // Metriky
+    const concEl = document.getElementById("metric-concentration");
+    const volEl = document.getElementById("metric-volume");
+    const dosesEl = document.getElementById("metric-doses");
+
+    if (concEl) concEl.innerText = `${results.concentrationMcgPerMl.toLocaleString("cs-CZ")} mcg / ml`;
+    if (volEl) volEl.innerText = `${results.doseVolumeMl} ml`;
+    if (dosesEl) dosesEl.innerText = `${results.totalDoses} dávek`;
+}
+
+// Inicializace modulů po načtení
+window.addEventListener("DOMContentLoaded", () => {
+    initStackUI();
+    initCalculatorUI();
+});
+// Fallback spuštění pokud už byl DOM ready
+if (document.readyState === "complete" || document.readyState === "interactive") {
+    initStackUI();
+    initCalculatorUI();
+}
+
