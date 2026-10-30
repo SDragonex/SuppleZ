@@ -824,5 +824,395 @@
       "pouze syntetická sloučenina (vyvinuto v Institut Pasteur)"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 622,
+    "name": "Pramiracetam",
+    "categoryKey": "nootropics",
+    "tags": [
+      "racetam",
+      "pamet",
+      "HACU",
+      "soustredeni",
+      "cholin"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Nejvýkonnější racetam pro formování dlouhodobé paměti a logické myšlení.",
+    "description": "Pramiracetam je lipofilní derivát piracetamu s dipropylaminoethylovým řetězcem, díky čemuž je přibližně 30x účinnější než původní piracetam. Jeho specifickým a jedinečným mechanismem účinku je dramatická stimulace vysokoafinitního vychytávání cholinu (HACU - High-Affinity Choline Uptake) v hipokampu. Nemá sedativní ani stimulační vliv na kardiovaskulární systém, ale vyvolává intenzivní mentální fokus, podporuje kapacitu pro logické uvažování a urychluje konsolidaci paměťových stop.",
+    "effects": [
+      "mohutná podpora dlouhodobé a pracovní paměti",
+      "intenzivní stav 'tunelového' kognitivního soustředění",
+      "stimulace vysokoafinitního vychytávání cholinu v hipokampu",
+      "zrychlení rychlosti zpracování komplexních informací",
+      "neuroprotekce při hypoxii mozkové tkáně"
+    ],
+    "dosage": {
+      "short": "200–400 mg 1–2x denně s jídlem obsahujícím tuky",
+      "long": "Běžná dávka je 300 mg ráno a 300 mg brzy odpoledne. Vzhledem k vysoké rozpustnosti v tucích je nutné užívat s jídlem bohatým na lipidy nebo kvalitním olejem. Vždy doplňovat kvalitní zdroj cholinu (Alfa-GPC nebo CDP-Cholin)."
+    },
+    "warning": "Při nedostatku cholinu může vyvolat tupou bolest hlavy. Má velmi hořkou chuť (neužívejte volný prášek, vždy kapsle).",
+    "mechanism": "Specifické zesílení aktivity transportéru CHT1 v presynaptických cholinergních terminálách hipokampu; stimulace syntézy oxidu dusnatého (NOS) v kůře.",
+    "halfLife": "Cca 5–7 hodin",
+    "interactions": [
+      "Alfa-GPC / Citicolin (absolutní nutnost pro prevenci depletion acetylcholinu)",
+      "Aniracetam (synergická kombinace pro paměť a náladu)"
+    ],
+    "naturalSources": [
+      "syntetická sloučenina"
+    ],
+    "bannedStatus": "controlled"
+  },
+  {
+    "id": 623,
+    "name": "Phenylpiracetam Hydrazide",
+    "categoryKey": "nootropics",
+    "tags": [
+      "racetam",
+      "dopamin",
+      "energie",
+      "vytrvalost",
+      "chlad",
+      "stimulant"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Hydrazidová forma fenylpiracetamu se zvýšenou dopaminergní aktivitou a fyzickou bdělostí.",
+    "description": "Phenylpiracetam Hydrazide (Fonturacetam Hydrazide) je inovativní modifikace fenylpiracetamu, kde je amidová skupina nahrazena hydrazidovou. Tato změna zvyšuje afinitu k dopaminovému transportéru (DAT) a modulaci nikotinových acetylcholinových receptorů. Poskytuje čistý nárůst motivace, mentální bdělosti, potlačení únavy a výrazné zlepšení tolerance chladu a fyzické zátěže bez periferního třesu typického pro klasické amfetaminové stimulanty.",
+    "effects": [
+      "výrazný nárůst dopaminergní motivace a mentální energie",
+      "potlačení kognitivní a fyzické únavy",
+      "zvýšení operativní paměti a rychlosti reakcí",
+      "zvýšená adaptace a odolnost vůči extrémnímu chladu a stresu",
+      "antidepresivní a prokognitivní účinek"
+    ],
+    "dosage": {
+      "short": "50–100 mg ráno nebo před náročným výkonem",
+      "long": "Dávkování 50 až 100 mg nalačno nebo lehce po snídani. Neužívejte po 15. hodině, aby nebyl narušen spánek. Doporučuje se cyklovat (např. 3–4 dny v týdnu nebo jen v dny těžkého výkonu), aby nevznikla tolerance."
+    },
+    "warning": "WADA zakazuje fenylpiracetam i jeho analogy v soutěžním období. Nepřekračujte 150 mg denně. Při každodenním užívání dochází po 2 týdnech k poklesu stimulačního účinku.",
+    "mechanism": "Reverzibilní inhibice dopaminového transportéru (DAT), zvýšení hustoty NMDA, nikotinových acetylcholinových (nAChR) a D1/D2/D3 dopaminových receptorů v kortexu.",
+    "halfLife": "Cca 3–5 hodin",
+    "interactions": [
+      "CDP-Cholin (doplnění substrátu pro cholinergní obrat)",
+      "L-Theanin (zajištění klidného laserového fokusu)"
+    ],
+    "naturalSources": [
+      "syntetická sloučenina"
+    ],
+    "bannedStatus": "banned-sport (WADA S6)"
+  },
+  {
+    "id": 624,
+    "name": "Coluracetam (BCI-540)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "racetam",
+      "zrak",
+      "barvy",
+      "cholin",
+      "nalada",
+      "neuroplasticita"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Racetam zvyšující příjem cholinu se specifickým účinkem na zrakovou ostrost a sytost barev.",
+    "description": "Coluracetam (MKC-231) je syntetický nootropní racetam původně vyvíjený japonskou společností Mitsubishi Tanabe Pharma pro léčbu Alzheimerovy choroby a těžké deprese. Jeho primárním mechanismem je podpora vysokoafinitního transportu cholinu (HACU) i v poškozených či degenerovaných neuronech. Uživatelé a klinické zprávy popisují unikátní fenomén: okamžité rozjasnění zrakového vnímání, zvýraznění barevného kontrastu a sytosti (visual color enhancement) a zlepšení rozpoznávání tvarů.",
+    "effects": [
+      "zlepšení zrakové ostrosti a vnímání sytosti barev",
+      "obnova cholinergní transmise v hipokampu",
+      "anxiolytický a antidepresivní účinek",
+      "podpora prostorové a asociativní paměti",
+      "ochrana zrakového nervu a sítnice před toxicitou glutamátu"
+    ],
+    "dosage": {
+      "short": "10–20 mg 1–2x denně sublinguálně nebo orálně",
+      "long": "Běžná dávka je 10 až 20 mg rozpuštěná pod jazykem (sublinguálně pro rychlý nástup) nebo spolknutá s jídlem. Užívejte 1–2x denně."
+    },
+    "warning": "Velmi silná potence při nízkých miligramových dávkách – přesně vážit na laboratorní váze. Vyžaduje dostatek cholinu v dietě.",
+    "mechanism": "Allosterická upregulace aktivity cholinového transportéru 1 (CHT1) na presynaptických membránách; modulace AMPA receptorů v hipokampálních neuronech.",
+    "halfLife": "Cca 3 hodiny",
+    "interactions": [
+      "Alfa-GPC (synergické nasycení cholinergního systému)",
+      "Fasoracetam (komplexní cholinergní a GABA-B podpora)"
+    ],
+    "naturalSources": [
+      "syntetická sloučenina"
+    ],
+    "bannedStatus": "controlled"
+  },
+  {
+    "id": 625,
+    "name": "Nefiracetam",
+    "categoryKey": "nootropics",
+    "tags": [
+      "racetam",
+      "GABA",
+      "ACh",
+      "pamet",
+      "vapnik",
+      "nalada"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Hydrofobní racetam s duálním účinkem na acetylcholinové a GABAergní receptory.",
+    "description": "Nefiracetam (DM-9926) je strukturně odvozen od aniracetamu. Vyniká duálním působením: posiluje cholinergní transmisi přes nikotinové acetylcholinové receptory a současně interaguje s GABAergním systémem a L-typem i N-typem napěťově řízených vápníkových kanálů. Díky tomu současně stimuluje neuroplasticitu, formování nových spojení a vykazuje silné anxiolytické a náladu stabilizující účinky.",
+    "effects": [
+      "stimulace dlouhodobé paměti a schopnosti učení",
+      "anxiolytický a náladu pozvedající účinek",
+      "zlepšení průtoku krve a přežití neuronů při ischemii",
+      "modulace vápníkových kanálů v neuronech",
+      "usnadnění neurogeneze v hipokampu"
+    ],
+    "dosage": {
+      "short": "150–300 mg 1–2x denně s jídlem",
+      "long": "Doporučená dávka je 150 mg až 300 mg užitá s jídlem obsahujícím tuky (je rozpustný v lipidech). Maximálně 600 mg denně rozděleně."
+    },
+    "warning": "Při extrémních supraterapeutických dávkách byla v preklinických studiích na psech zaznamenána testikulární toxicita (u lidí v klinických dávkách nepotvrzeno, přesto nepřekračujte doporučené dávkování a cyklujte).",
+    "mechanism": "Potenciace nikotinových receptorů nAChR alfa4beta2, prodloužení otevírací doby L/N-typů vápníkových kanálů a pozitivní modulace GABA-A receptorů.",
+    "halfLife": "Cca 3–5 hodin",
+    "interactions": [
+      "Cholinové donory (Alfa-GPC, Citicolin)",
+      "Noopept (synergické posílení kognice)"
+    ],
+    "naturalSources": [
+      "syntetická sloučenina"
+    ],
+    "bannedStatus": "controlled"
+  },
+  {
+    "id": 626,
+    "name": "TAK-653",
+    "categoryKey": "nootropics",
+    "tags": [
+      "AMPA",
+      "PAM",
+      "LTP",
+      "neuroplasticita",
+      "fokus",
+      "inovace"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Průlomový ultra-selektivní pozitivní alosterický modulátor AMPA receptorů bez křečových rizik.",
+    "description": "TAK-653 je revoluční nootropní sloučenina vyvinutá farmaceutickým gigantem Takeda. Patří mezi pozitivní alosterické modulátory (PAM) glutamátových AMPA receptorů. Na rozdíl od starších ampakinů (jako Aniracetam či Sunifiram) byl TAK-653 vyprojektován tak, aby měl obrovské terapeutické okno (>1000násobné) a minimální desenzitizaci receptorů. Dramaticky zesiluje dlouhodobou potenciaci (LTP) v hipokampu, což vede k extrémnímu urychlení vstřebávání nových vědomostí a neuroplasticitě bez excitotoxického rizika.",
+    "effects": [
+      "extrémní stimulace dlouhodobé potenciace (LTP) v synapsích",
+      "výrazné zrychlení kognitivního zpracování a paměťové retence",
+      "antidepresivní účinek zprostředkovaný stimulací BDNF",
+      "široké terapeutické okno a nulová epileptogenní aktivita",
+      "obnova kognitivních deficitů a synaptické plasticity"
+    ],
+    "dosage": {
+      "short": "1–6 mg jednou denně ráno",
+      "long": "Jedná se o ultra-potentní sloučeninu. Klinické a experimentální dávky se pohybují mezi 1 mg a 6 mg jednou denně ráno. Přísně odvažovat na analytické mikrováze."
+    },
+    "warning": "Vysoce potentní výzkumná substance. Neužívejte s vysokými dávkami stimulantů nebo glutamatergních látek.",
+    "mechanism": "Vysoce selektivní pozitivní alosterická vazba na dimerní rozhraní ligand-vazebné domény (LBD) AMPA receptorů, čímž zpomaluje jejich deaktivaci a desenzitizaci v přítomnosti endogenního glutamátu.",
+    "halfLife": "Cca 24–36 hodin (umožňuje dávkování 1x denně)",
+    "interactions": [
+      "Semax (aditivní BDNF kaskáda)",
+      "Magnesium L-Threonát (stabilizace NMDA/AMPA synaptické hustoty)"
+    ],
+    "naturalSources": [
+      "syntetická výzkumná molekula"
+    ],
+    "bannedStatus": "controlled"
+  },
+  {
+    "id": 627,
+    "name": "Emoxypin (Mexidol)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "antioxidant",
+      "GABA",
+      "neuroprotekce",
+      "stres",
+      "prokrveni",
+      "alkohol"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Ruské membránové neuroprotektivum, silný antioxidant a modulátor GABA komplexu bez sedace.",
+    "description": "Emoxypin (chemicky 2-ethyl-6-methyl-3-hydroxypyridin sukcinát, v lékárnách Mexidol) je strukturní analog pyridoxinu (vitamínu B6) vyvinutý v Rusku. Působí jako mocný membránový antioxidant chránící lipidy buněčných membrán před peroxidací. Zvyšuje tekutost (fluiditu) neuronálních membrán, moduluje vazebná místa GABA benzodiazepinových receptorů a zvyšuje hladiny dopaminu v mozku. Eliminuje stres, úzkost, abstinenční příznaky po alkoholu a chrání mozek před ischemií bez únavy a rizika závislosti.",
+    "effects": [
+      "vysoká membránová antioxidační ochrana neuronů a endotelu",
+      "anxiolytický účinek bez sedace, ospalosti a myorelaxace",
+      "zlepšení mozkové mikrocirkulace a reologie krve",
+      "obnova kognitivních funkcí po intoxikaci alkoholem a hypoxii",
+      "snížení hladin celkového cholesterolu a LDL v krvi"
+    ],
+    "dosage": {
+      "short": "125–250 mg 2–3x denně s jídlem",
+      "long": "Běžná perorální dávka je 125 mg až 250 mg 2–3x denně po jídle. Kúra trvá typicky 2 až 6 týdnů. Při odvykání alkoholu se užívá 250 mg 3x denně."
+    },
+    "warning": "Velmi dobře snášen. Výjimečně může způsobit sucho v ústech nebo mírný pocit nevolnosti nalačno.",
+    "mechanism": "Inhibice volnoradikálové peroxidace lipidů v biomembránách; zvýšení aktivity enzymů superoxiddismutázy (SOD) a glutathionperoxidázy; allosterická modulace vazebného místa GABA-A receptoru.",
+    "halfLife": "Cca 4–5 hodin",
+    "interactions": [
+      "Noopept (komplexní neuroprotektivní a kognitivní synergie)",
+      "Phenibut (emoxypin zmírňuje rizika tolerance a tlumí neurotoxicitu)"
+    ],
+    "naturalSources": [
+      "syntetický derivát 3-hydroxypyridinu"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 628,
+    "name": "Picamilon (Nikotinoyl-GABA)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "GABA",
+      "niacin",
+      "mozek",
+      "prokrveni",
+      "klid",
+      "fokus"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Syntetické spojení GABA a niacinu pro masivní prokrvení mozku a klidné soustředění.",
+    "description": "Picamilon (kyselina N-nikotinoyl-gama-aminomáselná) byl syntetizován v Sovětském svazu v roce 1969. Jedná se o molekulární fúzi neurotransmitéru GABA a kyseliny nikotinové (vitamín B3). Samotná GABA nedokáže efektivně překročit hematoencefalickou bariéru, avšak vázaná na niacin je aktivně transportována do centrálního nervového systému, kde se hydrolyzuje na GABA a niacin. Výsledkem je současná aktivace GABA receptorů (odstranění strachu a tenze) a masivní vazodilatace mozkových kapilár (zvýšení průtoku krve a přísunu kyslíku bez flush efektu).",
+    "effects": [
+      "přímý transport GABA přes hematoencefalickou bariéru",
+      "výrazné rozšíření mozkových cév a zlepšení cerebrálního průtoku",
+      "rychlé odbourání psychické tenze, úzkosti a trémy",
+      "zlepšení rychlosti myšlení a koncentrace bez útlumu",
+      "zmírnění bolestí hlavy cévního původu"
+    ],
+    "dosage": {
+      "short": "50–100 mg 2–3x denně nalačno",
+      "long": "Pro klidné soustředění: 50 mg 2x denně. Pro zvládání akutního stresu či cévní bolesti hlavy: 100 mg jednorázově. Zapít vodou nalačno."
+    },
+    "warning": "Neužívejte s inhibitory monoaminooxidázy (IMAO) nebo silnými vasodilatancii bez konzultace. Může mírně snižovat krevní tlak.",
+    "mechanism": "Aktivní přestup přes hematoencefalickou bariéru přes specifické transportéry; enzymatická hydrolýza na volnou GABA (agonismus GABA-A i GABA-B) a niacin (indukce relaxace hladké svaloviny mozkových arteriol).",
+    "halfLife": "Cca 1–2 hodiny (biologické účinky přetrvávají 4–6 hodin)",
+    "interactions": [
+      "Kofein (odstraňuje třes a vazokonstrikci způsobenou kofeinem)",
+      "Piracetam / Phenylpiracetam (synergická kognitivní kombinace)"
+    ],
+    "naturalSources": [
+      "syntetická sloučenina"
+    ],
+    "bannedStatus": "controlled"
+  },
+  {
+    "id": 629,
+    "name": "Cordyceps Militaris (Cordycepin)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "adaptogen",
+      "ATP",
+      "mitochondrie",
+      "VO2max",
+      "imunita",
+      "energie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Vitální adaptogenní houba bohatá na cordycepin pro buněčnou syntézu ATP a okysličení mozku.",
+    "description": "Cordyceps militaris (housenice bojovná) je adaptogenní funkční houba ceněná v biohackingu a sportovní medicíně. Hlavní bioaktivní molekulou je cordycepin (3'-deoxyadenosin), strukturní analog adenosinu. Cordyceps prokazatelně zvyšuje buněčnou produkci adenosintrifosfátu (ATP) v mitochondriích až o 30 %, zlepšuje využití kyslíku tkáněmi (zvýšení VO2 max), působí jako silný neuroprotektivní adaptogen a stimuluje biosyntézu steroidních hormonů v Leydigových buňkách.",
+    "effects": [
+      "zvýšení buněčné produkce ATP v mitochondriích",
+      "významné zlepšení VO2 max a vytrvalostní kapacity",
+      "podpora prokrvení mozku a dodávky kyslíku neuronům",
+      "modulace imunitního systému přes beta-glukany",
+      "adaptogenní ochrana před chronickým vyčerpáním a přepětím"
+    ],
+    "dosage": {
+      "short": "500–1 500 mg standardizovaného extraktu ráno",
+      "long": "Užívejte 500 mg až 1 500 mg standardizovaného extraktu (ideálně s obsahem min. 0.3–1 % cordycepinu a 30 % beta-glukanů) ráno nalačno nebo 45 minut před sportovním či mentálním výkonem."
+    },
+    "warning": "Cordyceps má mírné protisrážlivé účinky – opatrnost při užívání antikoagulancií (warfarin, aspirin). Může stimulovat imunitní systém, opatrnost u autoimunitních poruch.",
+    "mechanism": "Fosforylace cordycepinu na cordycepin trifosfát inhibující terminaci mRNA transkripce v patologických buňkách; aktivace AMPK; stimulace exprese proteinu StAR v endokrinních tkáních.",
+    "halfLife": "Cca 1–2 hodiny v plazmě (mitochondriální stimulace trvá 6–8 hodin)",
+    "interactions": [
+      "Rhodiola Rosea (elitní adaptogenní vytrvalostní stack)",
+      "CoQ10 (maximalizace tvorby ATP v dýchacím řetězci)"
+    ],
+    "naturalSources": [
+      "housenice bojovná (Cordyceps militaris)",
+      "housenice čínská (Ophiocordyceps sinensis)"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 630,
+    "name": "Vinprocetin (Cavinton)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "prokrveni",
+      "PDE1",
+      "mozek",
+      "pamet",
+      "zrak",
+      "sluch"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Vincaminový derivát rozšiřující mozkové cévy a stimulující glukózový metabolismus neuronů.",
+    "description": "Vinprocetin je semisyntetický derivát alkaloidu vinkaminu, extrahovaného z brčálu menšího (Vinca minor). Je široce využíván v neurologii pro léčbu cerebrovaskulárních poruch, tinnitus (pískání v uších) a stařecké demence. Působí jako selektivní inhibitor enzymu fosfodiesterázy typu 1 (PDE1), což vede ke zvýšení intracelulárního cGMP a cAMP v hladkém svalstvu cév. Způsobuje výraznou vazodilataci mozkových tepének bez fenoménu 'steal syndromu' (nekrade krev zdravým tkáním) a urychluje transport glukózy do neuronů.",
+    "effects": [
+      "selektivní vazodilatace mozkových arteriol a zlepšení perfuze",
+      "zvýšení příjmu a utilizace glukózy a kyslíku neurony",
+      "neuroprotekce při ischemii a excitotoxicitě",
+      "zlepšení zrakových funkcí a prokrvení sítnice",
+      "terapeutický efekt při vaskulárním tinnitu a závratích"
+    ],
+    "dosage": {
+      "short": "10–20 mg 2–3x denně s jídlem",
+      "long": "Běžná nootropní dávka je 10 mg 2–3x denně (ráno a v poledne) vždy s jídlem obsahujícím tuky (nalačno je vstřebatelnost pouhých 7 %, s jídlem stoupá na 60–70 %)."
+    },
+    "warning": "Neužívejte při poruchách krevní srážlivosti nebo před plánovanou operací. Může mírně snižovat krevní tlak.",
+    "mechanism": "Inhibice Ca2+/kalmodulin-dependentní fosfodiesterázy typu 1 (PDE1); blokáda napěťově řízených sodíkových kanálů (ochrana před nadměrným uvolněním glutamátu); snížení viskozity krve potlačením agregace destiček.",
+    "halfLife": "Cca 1–2 hodiny",
+    "interactions": [
+      "Ginkgo Biloba (zesílení cerebrálního prokrvení)",
+      "Piracetam (klasický nootropní stack zkoumaný v neurologii)"
+    ],
+    "naturalSources": [
+      "polosyntetický derivát alkaloidu z brčálu menšího (Vinca minor)"
+    ],
+    "bannedStatus": "controlled"
+  },
+  {
+    "id": 631,
+    "name": "Sunifiram (DM-235)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "ampakin",
+      "pamet",
+      "stimulace",
+      "AMPA",
+      "acetylcholin",
+      "vyzkum"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Vysoce potentní piperazinový ampakin stimulující AMPA receptory a uvolňování acetylcholinu.",
+    "description": "Sunifiram (DM-235) je syntetická sloučenina odvozená od piperazinu a strukturně příbuzná racetamům, avšak s výrazně vyšší potencí (až 1 000x silnější než piracetam na molární bázi). Působí jako pozitivní modulátor AMPA receptorů a stimuluje fosforylaci NMDA receptorů i kinázy CaMKII. Vyvolává masivní uvolňování acetylcholinu v mozkové kůře, dramaticky zvyšuje mentální bdělost, zrychluje asociativní myšlení a formování paměťových drah.",
+    "effects": [
+      "extrémní zostření vnímání a mentální rychlosti",
+      "stimulace uvolňování acetylcholinu v prefrontálním kortexu",
+      "zrychlení konsolidace krátkodobé a dlouhodobé paměti",
+      "zvýšení senzorického vnímání a vizuální ostrosti",
+      "potlačení kognitivní únavy"
+    ],
+    "dosage": {
+      "short": "5–10 mg sublinguálně nebo orálně (striktně vážit!)",
+      "long": "Dávkování 5 mg až 10 mg jednou denně ráno. Začněte na nejnižší dávce 2–5 mg. Pro sublinguální podání je nástup účinku do 15 minut. Nikdy nepřekračujte 15 mg denně."
+    },
+    "warning": "Experimentální výzkumná molekula. Při předávkování může vyvolat bolesti hlavy, úzkost, pocení a excitotoxické riziko. Vždy doplňujte cholin.",
+    "mechanism": "Pozitivní allosterická modulace AMPA receptorů; aktivace proteinkinázy C alfa (PKC-alfa) a fosforylace podjednotky GluR1; facilitace acetylcholinové transmise v hipokampu.",
+    "halfLife": "Cca 1–2 hodiny (kognitivní efekt přetrvává cca 4 hodiny)",
+    "interactions": [
+      "Alfa-GPC (nezbytné pro zabránění vyčerpání zásob acetylcholinu)",
+      "Noopept (synergický nárůst neuroplasticity)"
+    ],
+    "naturalSources": [
+      "syntetická výzkumná chemikálie"
+    ],
+    "bannedStatus": "controlled"
   }
 ]

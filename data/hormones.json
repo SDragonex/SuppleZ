@@ -2242,5 +2242,240 @@
       "rozinky, sušené švestky, mandle, vlašské ořechy, avokádo"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 562,
+    "name": "GLP-2 (Glucagon-Like Peptide-2 / Teduglutid)",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "peptid",
+      "GLP-2",
+      "streva",
+      "sliznice",
+      "regenerace"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Endogenní střevní hormon stimulující epitelizaci sliznice a proliferaci střevních klků.",
+    "description": "GLP-2 (Glucagon-Like Peptide-2) je 33-aminokyselinový peptidový hormon tvořený posttranslačním štěpením proglukagonu v enteroendokrinních L-buňkách tenkého a tlustého střeva. Zatímco příbuzný GLP-1 řídí inzulín a chuť k jídlu, GLP-2 je specifickým růstovým a regeneračním hormonem střevního traktu. Způsobuje mohutnou proliferaci a hypertrofii střevních klků (villi), zvyšuje plochu pro absorpci živin, stimuluje průtok krve mezenteriálními cévami a hojí těžká poškození střevní sliznice (schválený lék Teduglutid pro syndrom krátkého střeva).",
+    "effects": [
+      "masivní stimulace proliferace a regenerace střevních klků (villi)",
+      "zvýšení absorpční plochy a vstřebávání živin v tenkém střevě",
+      "obnova epiteliální bariéry u těžkých forem střevního zánětu",
+      "zvýšení mezenteriálního prokrvení a hojení sliznice",
+      "inhibice apoptózy enterocytů a redukce střevní permeability"
+    ],
+    "dosage": {
+      "short": "0.05 mg/kg subkutánně jednou denně (lékařský dohled)",
+      "long": "V klinické praxi (Teduglutid): 0.05 mg na kg tělesné hmotnosti subkutánně 1x denně inzulínovou stříkačkou do břišní stěny. V experimentálních biohackingových protokolech 1–2 mg denně po dobu 3–6 týdnů."
+    },
+    "warning": "Léčivý přípravek. Vzhledem k silné stimulaci růstu střevního epitelu je přísně kontraindikován při anamnéze kolorektálního karcinomu nebo polypů tlustého střeva (před zahájením nutná kolonoskopie).",
+    "mechanism": "Vazba na G-protein spřažený receptor pro GLP-2 (GLP2R) v subepiteliálních myofibroblastech a enterických neuronech; uvolnění růstových faktorů IGF-1, KGF a VEGF stimulujících kryptální kmenové buňky.",
+    "halfLife": "Nativní GLP-2 cca 7 minut (degradován DPP-4), stabilní analog Teduglutid cca 2–3 hodiny",
+    "interactions": [
+      "BPC-157 (extrémní synergie v hojení gastrointestinálního traktu)",
+      "Glutamin (stavební substrát pro nově tvořené enterocyty)"
+    ],
+    "naturalSources": [
+      "přirozený lidský hormon L-buněk střeva"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), na lékařský předpis"
+  },
+  {
+    "id": 563,
+    "name": "Amylin (Islet Amyloid Polypeptide / IAPP)",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "peptid",
+      "amylin",
+      "glykemie",
+      "sytost",
+      "pankreas"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Pankreatický hormon ko-sekretovaný s inzulínem řídící pocit sytosti a postprandiální glukagon.",
+    "description": "Amylin (Islet Amyloid Polypeptide / IAPP) je 37-aminokyselinový peptidový hormon tvořený a vylučovaný beta-buňkami pankreatu společně s inzulínem v poměru přibližně 1:100. Působí jako klíčový komplementární partner inzulínu při zpracování potravy. Zatímco inzulín zajišťuje ukládání glukózy do buněk, amylin zpomaluje vyprazdňování žaludku, potlačuje nevhodnou sekreci glukagonu po jídle a přes specifické receptory v mozkovém kmeni vyvolává fyziologický pocit nasycení.",
+    "effects": [
+      "fyziologická regulace a navození pocitu sytosti po jídle",
+      "potlačení postprandiální sekrece glukagonu z alfa-buněk",
+      "zpomalení žaludeční evakuace pro plynulý nástup živin do krve",
+      "prevence prudkých glykemických výkyvů po sacharidovém jídle",
+      "centrální kontrola energetické rovnováhy v mozku"
+    ],
+    "dosage": {
+      "short": "Farmaceutický analog Pramlintid: 15–120 mcg SubQ před jídlem",
+      "long": "Přírodní amylin se pro svou tendenci tvořit amyloidní fibrily nepoužívá, aplikuje se stabilní syntetický analog Pramlintid (Symlin) v dávce 15 až 60 mcg subkutánně bezprostředně před hlavními jídly."
+    },
+    "warning": "Při aplikaci s inzulínem je nutné snížit dávku prandiálního inzulínu až o 50 %, jinak hrozí těžká hypoglykémie. Může vyvolat přechodnou nauzeu.",
+    "mechanism": "Vazba na kalcitoninové receptory spřažené s RAMP proteiny (AMY1, AMY2, AMY3) v area postrema centrálního nervového systému; tonická inhibice žaludečního větvení bloudivého nervu (n. vagus).",
+    "halfLife": "Nativní amylin cca 15 minut",
+    "interactions": [
+      "Inzulín (fyziologický partner – nutno upravit poměr kvůli hypoglykémii)",
+      "GLP-1 agonisté (aditivní potlačení chuti k jídlu)"
+    ],
+    "naturalSources": [
+      "endogenní hormon beta-buněk Langerhansových ostrůvků pankreatu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), na lékařský předpis"
+  },
+  {
+    "id": 564,
+    "name": "Adiponektin",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "adipokin",
+      "AMPK",
+      "tuk",
+      "inzulin",
+      "srdce"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Ochranný adipokin tukové tkáně aktivující AMPK a chránící před inzulínovou rezistencí.",
+    "description": "Adiponektin je nejhojnější proteinový hormon vylučovaný zralými tukovými buňkami (adipocyty). Na rozdíl od většiny ostatních adipokinů (jako leptin či TNF-alfa), jejichž hladina při obezitě roste a působí zánětlivě, hladina adiponektinu při nárůstu viscerálního tuku paradoxně klesá. Vysoké hladiny adiponektinu jsou celosvětově spojovány s dlouhověkostí, vynikající inzulínovou senzitivitou, čistými cévami bez aterosklerotických plátů a ochranou myokardu před ischemií.",
+    "effects": [
+      "mohutná stimulace oxidace mastných kyselin ve svalech a játrech",
+      "přímá aktivace AMPK a inzulínové senzitivity",
+      "silná protizánětlivá ochrana cévního endotelu před aterosklerózou",
+      "potlačení jaterní glukoneogeneze a akumulace triglyceridů",
+      "kardioprotektivní účinek a prevence hypertrofie myokardu"
+    ],
+    "dosage": {
+      "short": "Stimulace endogenní produkce: chladová terapie, půst, Omega-3, Berberin",
+      "long": "Přímý rekombinantní adiponektin je ve výzkumné fázi. Pro zvýšení endogenní hladiny adiponektinu se v biohackingu využívá: expozice chladu (ledové koupele zvyšují hladinu až o 60 %), intermitentní půst, aerobní cvičení a suplementace vysokodávkovými Omega-3 (3–4 g EPA/DHA)."
+    },
+    "warning": "Extrémně nízké hladiny korelují s vysokým rizikem infarktu myokardu a diabetu 2. typu.",
+    "mechanism": "Vazba na adiponektinové receptory AdipoR1 (kosterní sval) a AdipoR2 (játra); aktivace proteinu APPL1, fosforylace AMPK a aktivace PPAR-alfa; stimulace ceramidázové aktivity.",
+    "halfLife": "Cca 2.5–3 hodiny (vysokomolekulární komplexy HMW)",
+    "interactions": [
+      "Omega-3 EPA/DHA (klinicky prokázané zvýšení exprese adiponektinu)",
+      "Berberin a Metformin (aditivní aktivace společné AMPK kaskády)"
+    ],
+    "naturalSources": [
+      "endogenní hormon vylučovaný adipocyty lidského těla"
+    ],
+    "bannedStatus": "legal (endogenní biomarker)"
+  },
+  {
+    "id": 565,
+    "name": "Relaxin",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "peptid",
+      "relaxin",
+      "fibroza",
+      "srdce",
+      "vazivo",
+      "eNOS"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Peptidový hormon rozvolňující pojivové tkáně a působící silně antifibroticky na srdce.",
+    "description": "Relaxin je heterodimerní peptidový hormon z inzulínové rodiny, tvořený dvěma řetězci (A a B) spojenými disulfidickými můstky. Tradičně byl znám pro svou roli v těhotenství (rozvolnění stydké spony a děložního hrdla před porodem). Moderní kardiologie a regenerativní medicína však odhalila jeho revoluční antifibrotické účinky: rekombinantní lidský relaxin-2 (Serelaxin) stimuluje syntézu oxidu dusnatého, rozšiřuje cévy bez poklesu perfuze ledvin a aktivuje metaloproteinázy (MMP), které odbourávají tuhý patologický kolagen a zvracejí fibrózu myokardu a ledvin.",
+    "effects": [
+      "mohutné odbourávání patologické vazivové tkáně a jizev (antifibrotický účinek)",
+      "stimulace syntézy vaskulárního endoteliálního oxidu dusnatého (NO)",
+      "rozšíření cév v ledvinách a zvýšení glomerulární filtrace",
+      "zvýšení elasticity a poddajnosti cévních stěn a pojivových tkání",
+      "ochrana srdečního svalu před ischemicko-reperfuzním poškozením"
+    ],
+    "dosage": {
+      "short": "Serelaxin: 30 mcg/kg/den formou kontinuální infuze (nemocniční péče)",
+      "long": "V experimentálních a klinických protokolech: rekombinantní lidský relaxin-2 v infuzní nebo subkutánní formě. V biohackingu je předmětem zájmu pro léčbu těžkých jizev a orgánové fibrózy."
+    },
+    "warning": "Léčivo ve výzkumných fázích. Vzhledem k rozvolňování kolagenních vazů může při vysokých dávkách dočasně zvýšit mobilitu kloubních pouzder.",
+    "mechanism": "Vazba na receptor RXFP1 (Relaxin Family Peptide Receptor 1); aktivace adenylátcyklázy a dráhy PI3K/Akt/eNOS; indukce exprese matrixových metaloproteináz (MMP-2 a MMP-9) degradujících kolagen I a III.",
+    "halfLife": "Cca 1–2 hodiny",
+    "interactions": [
+      "BPC-157 (komplementární tkáňová remodelace bez nadměrné fibrózy)",
+      "Telmisartan (synergická antifibrotická ochrana srdce a ledvin)"
+    ],
+    "naturalSources": [
+      "endogenní lidský hormon corpus luteum a prostaty"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 566,
+    "name": "Inhibin B",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "Sertoli",
+      "plodnost",
+      "spermie",
+      "FSH",
+      "biomarker"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Dimerní glykoproteinový hormon Sertoliho buněk varlat – hlavní biomarker fertility a spermatogeneze.",
+    "description": "Inhibin B je heterodimerní glykoproteinový hormon patřící do rodiny transformujících růstových faktorů beta (TGF-beta), složený z alfa podjednotky a specifické beta-B podjednotky. U mužů je syntetizován výhradně Sertoliho buňkami varlat v těsné závislosti na stimulaci folikuly stimulujícím hormonem (FSH) a přítomnosti zrajících spermií. Působí jako přímá negativní zpětná vazba na hypofýzu (potlačuje sekreci FSH). V klinické andrologii a po anabolických cyklech představuje nejcitlivější přímý krevní marker funkční kapacity varlat a tvorby spermií.",
+    "effects": [
+      "nejpřesnější krevní laboratorní marker funkční kapacity varlat a tvorby spermií",
+      "přímá fyziologická kontrola a negativní zpětná vazba na sekreci hypofyzárního FSH",
+      "monitorování úspěšnosti zotavení po anabolických steroidech a PCT",
+      "posouzení poškození spermatogeneze po chemoterapii či ozáření",
+      "důležitý diagnostický ukazatel v andrologii a reprodukčních klinikách"
+    ],
+    "dosage": {
+      "short": "Laboratorní diagnostický biomarker (odběr nalačno z žilní krve)",
+      "long": "Fyziologická referenční hodnota u zdravých dospělých mužů je 100–350 pg/ml. Hodnoty pod 40 pg/ml indikují těžkou poruchu spermatogeneze (azoospermii) a vyžadují terapii pomocí hMG či klomifenu."
+    },
+    "warning": "Nejedná se o suplement, ale o klíčový endogenní hormon a laboratorní biomarker. Při hluboké atrofii po steroidech klesá k neměřitelným hodnotám.",
+    "mechanism": "Vazba na betaglykan a receptory activinu (ActRII), kde kompetitivně blokuje vazbu activinu, čímž zastavuje transkripci beta-podjednotky FSH v hypofyzárních gonadotropech.",
+    "halfLife": "Cca 12–18 hodin",
+    "interactions": [
+      "hMG / Menotropin (přímá stimulace Sertoliho buněk vedoucí ke zvýšení Inhibinu B)",
+      "FSH (Inhibin B je jeho přímým zrcadlem a fyziologickým regulátorem)"
+    ],
+    "naturalSources": [
+      "endogenní hormon Sertoliho buněk varlat a granulózových buněk ovarií"
+    ],
+    "bannedStatus": "legal (endogenní biomarker)"
+  },
+  {
+    "id": 567,
+    "name": "17-Hydroxyprogesteron (17-OHP)",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "steroid",
+      "prekurzor",
+      "kortizol",
+      "nadledviny",
+      "CAH"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Endogenní steroidní prekurzor pro tvorbu kortizolu a diagnostický marker funkce nadledvin.",
+    "description": "17-Hydroxyprogesteron (17-OHP) je klíčový endogenní C21-steroidní hormon vznikající hydroxylací progesteronu enzymem 17alfa-hydroxylázou (CYP17A1) v kůře nadledvin a gonádách. Slouží jako bezprostřední biosyntetický předstupeň pro tvorbu glukokortikoidu kortizolu a v gonádách se štěpí na androstendion a testosteron. V klinické endokrinologii je nejdůležitějším markerem pro odhalení vrozené adrenální hyperplazie (CAH způsobené deficitem 21-hydroxylázy), která vede k masivnímu hromadění 17-OHP a nadměrné tvorbě androgenů.",
+    "effects": [
+      "nezbytný intermediární prekurzor pro přirozenou syntézu kortizolu",
+      "výchozí substrát pro syntézu androgenů v nadledvinách i varlatech",
+      "klíčový diagnostický marker vrozené adrenální hyperplazie (CAH)",
+      "sledování steroidogeneze při syndromu chronické únavy nadledvin",
+      "udržení homeostázy mezi mineralokortikoidní a glukokortikoidní větví"
+    ],
+    "dosage": {
+      "short": "Krevní diagnostický marker (ranní odběr nalačno v klidovém stavu)",
+      "long": "Fyziologické rozmezí u mužů: cca 1.5–7.5 nmol/l (0.5–2.5 ng/ml). Masivní vzestup nad 30 nmol/l značí enzymatický blok (deficit 21-hydroxylázy). V těhotenství se syntetizuje v placentě."
+    },
+    "warning": "Endogenní hormon a metabolit. Při nadbytku v důsledku enzymatického bloku způsobuje virilizaci, akné a poruchy plodnosti.",
+    "mechanism": "Působením enzymu 21-hydroxylázy (CYP21A2) je 17-OHP přeměňován na 11-deoxykortizol a následně na kortizol; působením 17,20-lyázy konvertován na DHEA a androstendion.",
+    "halfLife": "Cca 1.5–2 hodiny v krevním oběhu",
+    "interactions": [
+      "Pregnenolon (výchozí mateřský neurosteroid pro tvorbu 17-OHP)",
+      "DHEA (navazující androgenní větev)"
+    ],
+    "naturalSources": [
+      "přirozený endogenní steroidní hormon kůry nadledvin a gonád"
+    ],
+    "bannedStatus": "legal (endogenní biomarker)"
   }
 ]

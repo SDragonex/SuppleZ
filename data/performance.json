@@ -774,5 +774,319 @@
     ],
     "bannedStatus": "legal",
     "id": 219
+  },
+  {
+    "id": 220,
+    "name": "Glycerol (GlycerPump 65%)",
+    "categoryKey": "performance",
+    "tags": [
+      "hydratace",
+      "pumpa",
+      "vytrvalost",
+      "objem",
+      "osmolyz",
+      "krevni-objem"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Masivní hyperhydratační činidlo zvyšující objem krevní plazmy a oddalující únavu.",
+    "description": "Glycerol (GlycerPump) je patentovaná stabilní forma 65% glycerolu vázaného na křemík, která na rozdíl od starého glycerolmonostearátu (GMS) netvoří hrudky a dokonale se rozpouští ve vodě. V těle působí jako mocný osmolyt: rapidně zvyšuje osmotický tlak v krevním řečišti a buňkách, čímž dočasně váže a zadržuje litry vody v cévním řečišti a kosterním svalstvu (stav hyperhydratace). To vede k obrovské svalové plnosti, brutální svalové pumpě, snížení srdeční frekvence při zátěži a dramatickému oddálení dehydratace a přehřátí.",
+    "effects": [
+      "stav hyperhydratace (zvýšení objemu cirkulující krevní plazmy)",
+      "masivní a dlouhotrvající svalová plnost a prokrvení (pumpa)",
+      "snížení tělesné teploty a oddálení vyčerpání v horkém prostředí",
+      "snížení kardiovaskulárního stresu a tepové frekvence při vytrvalosti",
+      "ochrana před křečemi z dehydratace"
+    ],
+    "dosage": {
+      "short": "2–5 g 30–45 minut před tréninkem s 750–1 000 ml vody",
+      "long": "Užijte 2 000 až 5 000 mg prášku GlycerPump přibližně 30–45 minut před fyzickou zátěží. KRITICKÉ: Vždy zapít minimálně 750 až 1 000 ml čisté vody (glycerol potřebuje vodu navázat, bez vody způsobí žaludeční křeče!)."
+    },
+    "warning": "Nutno zapít velkým množstvím tekutin! Při požití bez vody může způsobit nevolnost a průjem. V minulosti byl na seznamu WADA pro maskování dopingu, od roku 2018 byl WADA oficiálně vyškrtnut a je legální.",
+    "mechanism": "Zvýšení osmolarity krevní plazmy a renální tubulární reabsorpce vody; zvýšení vaskulárního objemu a stimulace endoteliálního tlaku v kapilárách.",
+    "halfLife": "Cca 1–2 hodiny (hydratační efekt trvá 3–4 hodiny)",
+    "interactions": [
+      "Citrulin Malát (extrémní synergická pumpa: oxid dusnatý + hyperhydratace)",
+      "Sodík a Elektrolyty (dramatické posílení retence vnitrocévní tekutiny)"
+    ],
+    "naturalSources": [
+      "přirozená součást rostlinných a živočišných triglyceridů"
+    ],
+    "bannedStatus": "legal (WADA povoleno od 2018)"
+  },
+  {
+    "id": 221,
+    "name": "L-Karnitin L-Tartrát (LCLT)",
+    "categoryKey": "performance",
+    "tags": [
+      "regenerace",
+      "androgenni-receptory",
+      "svaly",
+      "karnitin",
+      "testosteron"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Vysoce biodostupná forma karnitinu upregulující hustotu androgenních receptorů ve svalech.",
+    "description": "L-Karnitin L-Tartrát (LCLT) je sůl L-karnitinu a kyseliny vinné. Vyznačuje se výrazně rychlejším vstřebáváním oproti běžnému volnému karnitinu. Stěžejní klinické studie z University of Connecticut prokázaly, že suplementace LCLT po dobu 3 týdnů vedla k dramatickému zvýšení hustoty androgenních receptorů (AR) ve svalových buňkách po tréninku. To umožňuje svalové tkáni efektivněji vázat cirkulující testosteron, urychluje reparaci mikrotrhlin a snižuje bolestivost svalů po zátěži (DOMS).",
+    "effects": [
+      "upregulace hustoty androgenních receptorů ve svalové tkáni",
+      "významné snížení svalového poškození a bolesti po tréninku (DOMS)",
+      "zrychlení regenerace mezi těžkými tréninkovými jednotkami",
+      "zvýšení oxygenace svalů a mikrocirkulace",
+      "podpora transportu mastných kyselin do mitochondrií"
+    ],
+    "dosage": {
+      "short": "1 000–2 000 mg denně (ideálně rozděleně kolem tréninku)",
+      "long": "Doporučená dávka je 1 000 mg ráno a 1 000 mg ihned po tréninku se sacharidy a bílkovinami (inzulínový pulz výrazně zlepšuje svalové vychytávání karnitinu transportérem OCTN2)."
+    },
+    "warning": "Při velmi vysokých orálních dávkách (>4 g) může střevní mikrobiom metabolizovat karnitin na TMAO. Užívat nepřekračující doporučené dávky, případně kombinovat s česnekem (allicin tlumí tvorbu TMAO).",
+    "mechanism": "Upregulace exprese mRNA pro androgenní receptor v kosterním svalu; snížení produkce purinových katabolitů a poškození buněčných membrán cvičením; kofaktor transportéru CPT-1.",
+    "halfLife": "Cca 3–4 hodiny",
+    "interactions": [
+      "Syrovátkový protein a rychlé sacharidy (inzulín stimuluje svalový transportér OCTN2)",
+      "Kreatin (synergický potréninkový anabolický protokol)"
+    ],
+    "naturalSources": [
+      "červené maso (hovězí, zvěřina)",
+      "mléčné výrobky"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 222,
+    "name": "Injekční L-Karnitin",
+    "categoryKey": "performance",
+    "tags": [
+      "karnitin",
+      "injekce",
+      "tuk",
+      "mitochondrie",
+      "energie",
+      "TMAO-free"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Injekční protokol obcházející bariéru vstřebávání pro 100% systémovou dostupnost bez TMAO.",
+    "description": "Orální podání L-karnitinu má tristní biologickou dostupnost – pouze cca 5 až 15 %, přičemž nevstřebaný zbytek je ve střevě bakteriemi fermentován na aterogenní trimethylamin (TMA) a játry konvertován na TMAO. Injekční L-karnitin (aplikovaný subkutánně nebo intramuskulárně) tuto metabolickou bariéru kompletně obchází. Poskytuje 100% biologickou dostupnost bez tvorby TMAO. Během několika týdnů plně nasytí svalové zásoby karnitinu, čímž maximalizuje oxidaci tuků na energii, šetří svalový glykogen a dramaticky zvyšuje hustotu androgenních receptorů.",
+    "effects": [
+      "100% biologická dostupnost bez ztrát v trávicím traktu",
+      "nulová tvorba škodlivého metabolitu TMAO",
+      "masivní podpora transportu mastných kyselin s dlouhým řetězcem do mitochondrií",
+      "významné zvýšení hustoty androgenních receptorů",
+      "zlepšení regenerace a vytrvalosti"
+    ],
+    "dosage": {
+      "short": "200–500 mg subkutánně nebo i.m. denně před sacharidovým jídlem",
+      "long": "Aplikuje se 200 mg až 500 mg denně inzulínovou stříkačkou subkutánně do tuku nebo do svalu. Nejvhodnější čas je ráno nebo před tréninkem, ideálně před jídlem obsahujícím sacharidy (inzulín pumpuje karnitin do svalů)."
+    },
+    "warning": "Vyžaduje sterilní lékárenský nebo certifikovaný injekční roztok (obvykle 500 mg/ml nebo 600 mg/ml). Při aplikaci může lehce štípat (lze ředit fyziologickým roztokem nebo aplikovat pomalu).",
+    "mechanism": "Přímo zásobuje karnitin-palmitoyltransferázu I a II (CPT-1/2) na vnitřní mitochondriální membráně, čímž odstraňuje rychlostní limit oxidace mastných kyselin; upregulace AR exprese.",
+    "halfLife": "Plazmatický poločas cca 2–3 hodiny (tkáňové nasycení trvá týdny)",
+    "interactions": [
+      "Inzulín / Sacharidy (inzulín je podmínkou pro aktivaci svalového transportéru OCTN2)",
+      "Kofein (aditivní stimulace lipolýzy)"
+    ],
+    "naturalSources": [
+      "syntetický sterilní injekční roztok karnitinu"
+    ],
+    "bannedStatus": "legal (WADA omezuje i.v. infuze nad 100 ml/12 hod, standardní SubQ/i.m. injekce do 1 ml jsou legální)"
+  },
+  {
+    "id": 223,
+    "name": "Ecdysteron (20-Hydroxyecdyson)",
+    "categoryKey": "performance",
+    "tags": [
+      "anabolikum",
+      "fytosteroid",
+      "ER-beta",
+      "sila",
+      "svaly",
+      "prirodni"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní rostlinný fytosteroid stimulující proteosyntézu přes ER-beta bez hormonální suprese.",
+    "description": "Ecdysteron (20-hydroxyecdyson) je přirozeně se vyskytující fytosteroid nalezený v rostlinách jako špenát nebo leuzea šustivá (Rhaponticum carthamoides). Často je označován jako 'ruské tajemství olympijských vzpěračů'. V přelomové studii Freie Universität Berlin z roku 2019 prokázal ekdysteron u sportovců signifikantní nárůst svalové hmoty a síly. Klíčová přednost: nestimuluje androgenní receptory, nearomatizuje na estrogeny a nepotlačuje přirozenou osu HPTA (žádná atrofie varlat ani pokles testosteronu).",
+    "effects": [
+      "stimulace proteosyntézy ve svalových vláknech srovnatelná s mírnými anaboliky",
+      "významný nárůst maximální síly na benchpressu a dřepu",
+      "nulová vazba na androgenní receptory (nulové androgenní nežádoucí účinky)",
+      "nulová suprese přirozené produkce testosteronu a osy HPTA",
+      "zlepšení inzulínové senzitivity a snížení tělesného tuku"
+    ],
+    "dosage": {
+      "short": "300–600 mg standardizovaného extraktu denně s jídlem",
+      "long": "Užívejte 300 až 600 mg vysoce čistého ekdysteronu (standardizovaného na 90–95 %) denně rozděleně do 2 dávek s jídly bohatými na bílkoviny. Kúra trvá 8–12 týdnů."
+    },
+    "warning": "Trh je zaplaven nekvalitními extrakty s reálným obsahem ekdysteronu pod 5–10 % (kupujte pouze produkty s laboratorním HPLC certifikátem). WADA zařadila ekdysteron na 'Monitoring Program', v současnosti je však legální.",
+    "mechanism": "Specifický agonismus na estrogenním receptoru beta (ER-beta) ve svalových buňkách; aktivace intracelulární signální kaskády PI3K/Akt bez ovlivnění androgenního receptoru.",
+    "halfLife": "Cca 2–4 hodiny (vyžaduje rozdělení dávky 2x denně)",
+    "interactions": [
+      "Syrovátkový protein a EAA (nutný dostatek esenciálních aminokyselin jako stavebního materiálu)",
+      "Turkesteron (synergický fytosteroidní stack)"
+    ],
+    "naturalSources": [
+      "leuzea šustivá (Rhaponticum carthamoides)",
+      "špenát setý (Spinacia oleracea)"
+    ],
+    "bannedStatus": "legal (WADA Monitoring Program)"
+  },
+  {
+    "id": 224,
+    "name": "Turkesteron (Ajuga Turkestanica)",
+    "categoryKey": "performance",
+    "tags": [
+      "turkesteron",
+      "fytosteroid",
+      "sila",
+      "proteosyntéza",
+      "adaptogen"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Vysokoafinitní fytoecdysteroid z Ajuga turkestanica pro podporu svalové translace a síly.",
+    "description": "Turkesteron je specifický ecdysteroid izolovaný z vysokohorské rostliny Ajuga turkestanica, rostoucí ve Střední Asii. Od běžného ekdysteronu se liší přítomností další hydroxylové skupiny na pozici C-11, což zvyšuje jeho hydrofilní stabilitu a afinitu k membránovým receptorům. Je silným stimulátorem translace mRNA a retence dusíku ve svalových vláknech, působí adaptogenně, urychluje obnovu po svalovém vyčerpání a nezpůsobuje zadržování vody ani gynekomastii.",
+    "effects": [
+      "akcelerace syntézy svalových bílkovin a dusíkové bilance",
+      "podpora svalové síly a pracovní kapacity na tréninku",
+      "adaptogenní ochrana svalových vláken před katabolismem při dietě",
+      "žádná hormonální suprese – po skončení není nutné žádné PCT",
+      "podpora integrity kloubů a šlach"
+    ],
+    "dosage": {
+      "short": "500–1 000 mg standardizovaného extraktu denně s bílkovinami",
+      "long": "Dávkování 500 mg 1–2x denně (ideálně ráno a před tréninkem) vždy společně s proteinovým jídlem. Užívejte v cyklech 8–12 týdnů."
+    },
+    "warning": "Ujistěte se, že produkt využívá komplex s hydroxypropyl-beta-cyklodextrinem (komplexace dramaticky zvyšuje střevní absorpci turkesteronu).",
+    "mechanism": "Stimulace dráhy Akt/mTOR přes non-androgenní membránové receptory; zvýšení inkorporace leucinu a dalších aminokyselin do nově tvořených myofibril.",
+    "halfLife": "Cca 3–5 hodin",
+    "interactions": [
+      "Ecdysteron (duální fytosteroidní stack)",
+      "Kreatin Monohydrát (synergické zvýšení svalové síly)"
+    ],
+    "naturalSources": [
+      "zběhovec turkestánský (Ajuga turkestanica)"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 225,
+    "name": "Epicatechin (Extrakt z kakaa)",
+    "categoryKey": "performance",
+    "tags": [
+      "myostatin",
+      "follistatin",
+      "kakao",
+      "eNOS",
+      "vaskularita",
+      "vytrvalost"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní bioaktivní flavanol tlumící myostatin a zvyšující follistatin a oxid dusnatý.",
+    "description": "Epicatechin (konkrétně bioaktivní izomer (-)-epicatechin) je přírodní polyfenolický flavanol obsažený v hořké čokoládě a kakau. V průkopnických klinických studiích bylo prokázáno, že podávání epicatechinu sportovcům vede ke statisticky významnému snížení cirkulujícího myostatinu (o téměř 16 %) a současnému zvýšení jeho přirozeného inhibitoru follistatinu (o téměř 50 %). Zároveň silně stimuluje endoteliální syntázu oxidu dusnatého (eNOS), což vede k mohutné cévní vazodilataci, prokrvení svalů a mitochondriální biogenezi.",
+    "effects": [
+      "přirozená úprava poměru myostatin/follistatin ve prospěch svalového růstu",
+      "významná stimulace tvorby oxidu dusnatého (vaskularita a pumpa)",
+      "podpora mitochondriální biogeneze a kapilární hustoty ve svalech",
+      "zvýšení aerobní a anaerobní svalové vytrvalosti",
+      "silný antioxidační a kardioprotektivní účinek"
+    ],
+    "dosage": {
+      "short": "150–300 mg denně (ideálně 30–45 minut před tréninkem)",
+      "long": "Standardní dávka je 150 až 300 mg čistého (-)-epicatechinu denně. V tréninkové dny užít 45 minut před cvičením pro maximální napumpování a stimulaci eNOS. Kúra trvá 8–12 týdnů."
+    },
+    "warning": "Běžný kakaový prášek obsahuje minimum volného epicatechinu a spoustu kalorií – je nutné používat purifikovaný a standardizovaný extrakt.",
+    "mechanism": "Inhibice exprese myostatinu a aktivace syntézy follistatinu; fosforylace endoteliální syntázy oxidu dusnatého (eNOS) přes dráhu PI3K/Akt; stimulace sirtuinu 1 (SIRT1).",
+    "halfLife": "Cca 2–3 hodiny (vrchol plazmatické koncentrace za 1–2 hodiny)",
+    "interactions": [
+      "Citrulin a Glycerol (monstrózní vaskulární pumpa)",
+      "Kreatin (společná podpora svalové síly)"
+    ],
+    "naturalSources": [
+      "tmavá hořká čokoláda (kakaové boby Theobroma cacao)",
+      "zelený čaj"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 226,
+    "name": "Agmatin Sulfát",
+    "categoryKey": "performance",
+    "tags": [
+      "pumpa",
+      "eNOS",
+      "iNOS",
+      "neurotransmiter",
+      "vazodilatace",
+      "fokus"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Dekarboxylovaný arginin pro dlouhotrvající svalovou pumpu, modulaci bolesti a náladu.",
+    "description": "Agmatin sulfát je endogenní neuromodulátor vznikající v těle dekarboxylací aminokyseliny L-argininu enzymem arginin dekarboxylázou. V pre-workout suplementech je považován za krále svalové pumpy. Na rozdíl od běžného argininu (který neselektivně zvyšuje všechny enzymy NOS) působí agmatin selektivně: dramaticky stimuluje eNOS (rozšiřuje cévy a maximalizuje svalové prokrvení), zatímco tlumí iNOS (zánětlivý oxid dusnatý). Navíc působí na imidazolinové a NMDA receptory, čímž snižuje vnímání bolesti při sériích do selhání.",
+    "effects": [
+      "masivní, hluboké a dlouhotrvající napumpování svalů",
+      "selektivní stimulace eNOS a inhibice zánětlivého iNOS",
+      "zvýšení tolerance bolesti a oddálení svalového pálení při sériích",
+      "neuroprotekce a anxiolytické zklidnění tréninkového stresu",
+      "podpora inzulínové senzitivity v kosterním svalu"
+    ],
+    "dosage": {
+      "short": "500–1 500 mg 30 minut před tréninkem",
+      "long": "Užívejte 750 až 1 500 mg agmatin sulfátu přibližně 30 minut před tréninkem. Vynikající v kombinaci s citrulinem a glycerolem."
+    },
+    "warning": "Nekombinujte ve stejnou chvíli s čistým L-argininem nebo L-citrulinem ve stejné porci, pokud soutěží o stejný transportér (užijte agmatin cca 15 minut předem).",
+    "mechanism": "Selektivní allosterická aktivace endoteliální syntázy oxidu dusnatého (eNOS), inhibice iNOS a nNOS; agonismus na imidazolinových I1 a I2 receptorech a blokáda NMDA receptorových kanálů.",
+    "halfLife": "Cca 2 hodiny v plazmě (tkáňový efekt přetrvává podstatně déle)",
+    "interactions": [
+      "Kofein (agmatin zjemňuje periferní vazokonstrikci způsobenou stimulanty)",
+      "Glycerol (dokonalá kombinace osmotické a vazodilatační pumpy)"
+    ],
+    "naturalSources": [
+      "fermentované potraviny",
+      "stopová množství v pivovarských kvasnicích"
+    ],
+    "bannedStatus": "legal (v USA a EU populární složka pre-workoutů)"
+  },
+  {
+    "id": 227,
+    "name": "AstraGin",
+    "categoryKey": "performance",
+    "tags": [
+      "absorpce",
+      "streva",
+      "peptidy",
+      "aminokyseliny",
+      "biologicka-dostupnost"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Patentovaný rostlinný extrakt zvyšující střevní absorpci aminokyselin, peptidů a živin až o 50 %.",
+    "description": "AstraGin je patentovaný přírodní extrakt ze dvou vysoce purifikovaných tradičních bylin: kozince blanitého (Astragalus membranaceus) a ženšenu nepravého (Panax notoginseng). Působí na úrovni tenkého střeva, kde dramaticky upreguluje expresi klíčových transportních proteinů (jako jsou SGLT1 pro glukózu, CAT1 pro aminokyseliny či PEPT1 pro oligopeptidy). Zvyšuje absorpci argininu o 67 %, citrulinu o 45 %, kreatinu o 33 %, peptidů a vitamínů, a současně regeneruje střevní sliznici tím, že tlumí zánětlivé cytokiny.",
+    "effects": [
+      "zvýšení absorpce aminokyselin, kreatinu a peptidů ve střevě až o 40–60 %",
+      "upregulace střevních transportérů živin (SGLT1, CAT1, PEPT1)",
+      "obnova integrity střevních klků a slizniční bariéry",
+      "maximalizace účinnosti pre-workoutů, proteinů a biohackingových látek",
+      "podpora syntézy ATP v enterocytech"
+    ],
+    "dosage": {
+      "short": "25–50 mg současně s jídlem nebo doplňky stravy",
+      "long": "Dávkujte 50 mg AstraGinu společně s pre-workoutem, kreatinem, aminokyselinami nebo hlavními jídly. Běžně bývá součástí prémiových formulí."
+    },
+    "warning": "Zcela přírodní a bezpečný extrakt bez vedlejších účinků.",
+    "mechanism": "Upregulace mRNA a proteinové exprese transportérů živin v apikální membráně enterocytů; potlačení exprese TNF-alfa a IL-6 ve střevní stěně.",
+    "halfLife": "Cca 2–4 hodiny",
+    "interactions": [
+      "Kreatin a Citrulin (radikální nárůst jejich biologické dostupnosti)",
+      "BPC-157 orální (synergická regenerace střevní sliznice)"
+    ],
+    "naturalSources": [
+      "Astragalus membranaceus",
+      "Panax notoginseng"
+    ],
+    "bannedStatus": "legal"
   }
 ]

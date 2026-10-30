@@ -1250,5 +1250,410 @@
       "hovězí a rybí kůže a chrupavky"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 132,
+    "name": "Urolithin A (Mitopure)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "mitochondrie",
+      "mitofagie",
+      "svaly",
+      "vytrvalost"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní metabolit střevního mikrobiomu stimulující mitofágii a obnovu mitochondriální hustoty.",
+    "description": "Urolithin A je postbiotická sloučenina generovaná lidským mikrobiomem z ellagitanninů (obsažených v granátovém jablku, vlašských ořeších a lesních plodech). Je první známou látkou, která u lidí prokazatelně indukuje mitofágii – selektivní degradaci a recyklaci dysfunkčních a zestárlých mitochondrií. Klinické studie fáze I/II na lidech prokázaly významné zvýšení svalové vytrvalosti, buněčné bioenergetiky a snížení systémového zánětu u dospělých a seniorů.",
+    "effects": [
+      "selektivní aktivace mitofágie v kosterním svalu a myokardu",
+      "zvýšení svalové vytrvalosti a snížení únavy",
+      "stimulace biogeneze nových funkčních mitochondrií",
+      "snížení cirkulujících zánětlivých markerů (CRP)",
+      "ochrana buněk před věkem podmíněným metabolickým úpadkem"
+    ],
+    "dosage": {
+      "short": "500–1 000 mg denně ráno s jídlem",
+      "long": "Doporučená klinická dávka je 500 mg až 1 000 mg denně perorálně ráno se snídaní obsahující tuky pro optimální vstřebání. Doba užívání minimálně 2–4 měsíce pro znatelné zvýšení mitochondriální kapacity."
+    },
+    "warning": "Velmi bezpečný profil bez závažných vedlejších účinků v klinických studiích. Přirozená syntéza ze stravy je u 60–70 % populace nedostatečná kvůli absenci specifických kmenů střevních bakterií (Clostridium species).",
+    "mechanism": "Aktivace signální dráhy PINK1-Parkin a indukce autofagických procesů specifických pro mitochondrie (mitofágie); upregulace exprese PGC-1alfa a mitochondriálních respiračních enzymů komplexu I a IV.",
+    "halfLife": "Plazmatický poločas cca 17–24 hodin (glukuronidové a sulfátové metabolity)",
+    "interactions": [
+      "NMN / NR (mohutná synergie: Urolithin čistí staré mitochondrie a NMN dodává palivo pro nové)",
+      "Resveratrol (aditivní aktivace sirtuinů)",
+      "Koenzym Q10 (podpora elektronového transportního řetězce)"
+    ],
+    "naturalSources": [
+      "granátové jablko",
+      "vlašské ořechy",
+      "maliny",
+      "jahody (při přítomnosti specifického mikrobiomu)"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 133,
+    "name": "Apigenin (Lipozomální / Krystalický)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "CD38",
+      "NAD+",
+      "spanek",
+      "GABA",
+      "protizanetlivy"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní flavonoid, silný inhibitor enzymu CD38 chránící hladiny NAD+ a modulátor GABA-A.",
+    "description": "Apigenin (4',5,7-trihydroxyflavon) je bioaktivní rostlinný flavonoid hojně zastoupený v heřmánku a petrželi. V longevity medicíně je ceněn především jako jeden z nejúčinnějších přirozených inhibitorů glykoproteinu CD38 – enzymu, který s věkem rapidně roste a spotřebovává až 90 % buněčných zásob NAD+. Zároveň apigenin prochází hematoencefalickou bariérou a váže se na benzodiazepinová vazebná místa GABA-A receptorů, čímž působí relaxačně, anxiolyticky a prohlubuje fáze hlubokého spánku.",
+    "effects": [
+      "inhibice enzymu CD38 a záchrana buněčného NAD+",
+      "prohloubení hlubokých fází spánku (SWS / Slow-Wave Sleep)",
+      "alosterická modulace GABA-A receptorů a redukce úzkosti",
+      "protizánětlivý účinek potlačením NF-kB a COX-2",
+      "podpora autofagie a neuroprotekce"
+    ],
+    "dosage": {
+      "short": "50–100 mg před spaním (nebo 200–500 mg extraktu z heřmánku)",
+      "long": "Užívejte 50–100 mg čistého apigeninu přibližně 30–60 minut před ulehnutím ke spánku. Pro longevity účel (inhibice CD38) lze kombinovat ráno s NMN."
+    },
+    "warning": "Ve vysokých dávkách může vyvolat mírnou ranní ospalost nebo sedaci. Nekombinovat s farmaceutickými benzodiazepiny a barbituráty bez lékařského dohledu.",
+    "mechanism": "Nekompetitivní inhibice ektoenzymu CD38 NAD+ nukleosidázy; alosterická vazba na benzodiazepinové vazebné místo GABA-A receptorového komplexu; inhibice aromatázy (CYP19A1) a enzymů rodiny kináz (MAPK).",
+    "halfLife": "Cca 12 hodin (relativně pomalý rozpad uvolňovaný po celou noc)",
+    "interactions": [
+      "NMN / NAD+ (přímá synergie: apigenin zastaví rozpad NAD+ a NMN maximalizuje syntézu)",
+      "Magnesium Bisglycinát (ideální noční relaxační protokol)",
+      "L-Theanin (synergické zklidnění mozkových vln)"
+    ],
+    "naturalSources": [
+      "heřmánek pravý (Matricaria chamomilla)",
+      "petržel",
+      "celer",
+      "artyčok"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 134,
+    "name": "Quercetin Phytosome (Kvercetin)",
+    "categoryKey": "health",
+    "tags": [
+      "imunita",
+      "senolytikum",
+      "zinek",
+      "ionofor",
+      "antioxidant"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní flavonoid, zinkový ionofor a součást senolytických protokolů pro buněčnou očistu.",
+    "description": "Quercetin je polyfenolický flavonoid ze skupiny flavonolů. Působí jako mocný intracelulární zinkový ionofor – usnadňuje transport volných iontů zinku (Zn2+) přes lipidovou dvouvrstvu buněčné membrány do nitra buňky, kde zinek blokuje virovou RNA-dependentní RNA polymerázu. Ve vazbě na slunečnicový lecitin (Phytosome) má až 20x vyšší absorpci než standardní krystalický kvercetin. Spolu s fisetinem či dasatinibem je klíčovou součástí senolytických protokolů eliminujících senescentní zombie buňky.",
+    "effects": [
+      "zinkový ionofor (transport zinku přímo do nitra infikovaných buněk)",
+      "senolytický účinek (eliminace stárnoucích nefunkčních buněk)",
+      "stabilizace žírných buněk a redukce uvolňování histaminu (alergie)",
+      "antioxidační ochrana cévního endotelu",
+      "podpora mitochondriální biogeneze"
+    ],
+    "dosage": {
+      "short": "250–500 mg denně s jídlem (vždy současně se zinkem)",
+      "long": "Pro podporu imunity: 250 mg fytosomálního kvercetinu (nebo 500 mg běžného kvercetinu s bromelainem) denně spolu s 15–30 mg bisglycinátu zinku. V senolytických pulsech: 1 000 mg denně po dobu 2–3 po sobě jdoucích dnů jednou za měsíc."
+    },
+    "warning": "Ve vzácných případech může mírně zatěžovat ledviny při extrémních dávkách nad 2 000 mg denně. Opatrnost při současném užívání antibiotik (fluorochinolony).",
+    "mechanism": "Chelatace a translokace iontů Zn2+ přes plazmatickou membránu; inhibice anti-apoptotických drah BCL-2 a BCL-xL v senescentních buňkách; blokáda degradace histaminových granul v mastocytech.",
+    "halfLife": "Cca 11–28 hodin",
+    "interactions": [
+      "Zinek (esenciální synergie: kvercetin slouží jako klíč a zinek jako účinná antivirová látka)",
+      "Vitamín C (recykluje oxidovaný kvercetin zpět na aktivní formu)",
+      "Fisetin (senolytický stack)"
+    ],
+    "naturalSources": [
+      "červená cibule",
+      "kapary",
+      "jablka",
+      "borůvky",
+      "černý a zelený čaj"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 135,
+    "name": "TUDCA (Kyselina tauroursodeoxycholová)",
+    "categoryKey": "health",
+    "tags": [
+      "jatra",
+      "chaperon",
+      "ER-stres",
+      "mitochondrie",
+      "cholestaza"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Endogenní hydrofilní žlučová kyselina chránící játra a buněčné organely před stresem.",
+    "description": "TUDCA (Tauroursodeoxycholic acid) je konjugovaná forma ursodeoxycholové kyseliny s aminokyselinou taurinem. Je přirozeně produkována v mikroskopických množstvích v lidských játrech. Působí jako chemický chaperon – stabilizuje terciární strukturu proteinů v endoplazmatickém retikulu (ER), potlačuje ER-stres a zabraňuje aktivaci apoptózy mitochondrií (blokádou proteinu BAX). Je nejúčinnějším hepatoprotektivem při toxickém a cholestatickém poškození jater žlučovými solemi či 17-alfa-alkylovanými látkami.",
+    "effects": [
+      "hluboká ochrana jaterních hepatocytů a žlučových cest",
+      "řešení cholestázy a normalizace jaterních enzymů (ALT, AST, GGT)",
+      "potlačení stresu endoplazmatického retikula (ER stress)",
+      "neuroprotektivní účinek u neurodegenerativních onemocnění",
+      "zlepšení inzulínové senzitivity v játrech a svalech"
+    ],
+    "dosage": {
+      "short": "250–500 mg 1–2x denně s jídlem",
+      "long": "Běžná ochranná dávka: 250–500 mg denně. Při akutní jaterní zátěži nebo poškození žlučovodů: 500 mg 2x denně (ráno a večer) po dobu 4–8 týdnů. Užívat výhradně s jídlem."
+    },
+    "warning": "Neužívejte bezprostředně s konzumací alkoholu (může zvyšovat toxicitu). Při žlučových kamenech konzultujte lékaře.",
+    "mechanism": "Inhibice translokace proteinu BAX z cytosolu na vnější mitochondriální membránu, čímž brání uvolnění cytochromu c a spuštění kaspázové kaskády; indukce toku žluči přes stimulaci exportních transportérů žlučových solí (BSEP).",
+    "halfLife": "Plazmatický poločas cca 2–3 hodiny, vysoká enterohepatální recirkulace",
+    "interactions": [
+      "NAC (dvojitá jaterní ochrana: TUDCA na žlučovody a chaperon, NAC na syntézu glutathionu)",
+      "Ostropestřec mariánský (komplementární stabilizace membrán)"
+    ],
+    "naturalSources": [
+      "stopová množství v lidské žluči",
+      "tradičně žluč medvěda ušatého"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 136,
+    "name": "NACET (N-Acetylcystein Ethyl Ester)",
+    "categoryKey": "health",
+    "tags": [
+      "antioxidant",
+      "glutathion",
+      "plice",
+      "mitochondrie",
+      "biodostupnost"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Pokročilá lipofilní forma NAC s 10x vyšší buněčnou a mitochondriální penetrací.",
+    "description": "NACET (N-acetylcysteine ethyl ester) je esterifikovaný derivát N-acetylcysteinu vytvořený za účelem vyřešení jeho zásadní slabiny – velmi nízké orální biologické dostupnosti (pouze cca 4–9 % u běžného NAC). Díky esterifikaci ztrácí molekula negativní náboj, stává se vysoce lipofilní a snadno prostupuje buněčnými membránami do nitra erytrocytů, mitochondrií a přes hematoencefalickou bariéru do mozku. Uvnitř buňky je esterázami hydrolyzována na volný cystein, čímž dramaticky zvyšuje syntézu redukovaného glutathionu (GSH).",
+    "effects": [
+      "10x vyšší akumulace cysteinu a glutathionu v buňkách oproti NAC",
+      "efektivní přestup přes hematoencefalickou bariéru do mozku",
+      "masivní antioxidační ochrana mitochondrií a erytrocytů",
+      "mukolytický a plicní protektivní účinek",
+      "detoxikace těžkých kovů a xenobiotik"
+    ],
+    "dosage": {
+      "short": "50–100 mg 1–2x denně nalačno",
+      "long": "Vzhledem k mnohonásobně vyšší biodostupnosti stačí dávka 50–100 mg 1–2x denně (odpovídá 600–1 200 mg standardního NAC). Užívat na lačno, zapít sklenicí vody."
+    },
+    "warning": "Má charakteristický sirný zápach (zcela přirozený znak přítomnosti thiolové skupiny). Nepřekračovat doporučené dávkování.",
+    "mechanism": "Rychlá pasivní difuze lipofilní molekuly přes plazmatickou membránu a membrány mitochondrií; intracelulární enzymatická deesterifikace nespecifickými esterázami na NAC a cystein pro syntézu GSH.",
+    "halfLife": "Cca 2–4 hodiny (vysoká tkáňová retence)",
+    "interactions": [
+      "Glycin (ideální syntéza glutathionu – obdoba GlyNAC)",
+      "Vitamín C a Selen (kofaktory glutathion peroxidázy)"
+    ],
+    "naturalSources": [
+      "syntetický ester aminokyseliny L-cysteinu"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 137,
+    "name": "Kyselina R-alfa-lipoová (R-ALA)",
+    "categoryKey": "health",
+    "tags": [
+      "antioxidant",
+      "inzulin",
+      "mitochondrie",
+      "nervy",
+      "glukoza"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní bioaktivní R-enantiomer ALA pro mitochondriální metabolismus a citlivost na inzulín.",
+    "description": "Kyselina alfa-lipoová je unikátní univerzální antioxidant rozpustný ve vodě i v tucích. Zatímco běžné doplňky stravy obsahují syntetickou racemickou směs (50 % S-ALA a 50 % R-ALA), organismus přirozeně využívá výhradně R-enantiomer (R-ALA). R-ALA je klíčovým kofaktorem mitochondriálních multienzymových komplexů (pyruvátdehydrogenáza a alfa-ketoglutarátdehydrogenáza). Zvyšuje translokaci glukózových transportérů GLUT4 do svalových membrán a regeneruje ostatní antioxidanty (vitamín C, E, glutathion a CoQ10).",
+    "effects": [
+      "zvýšení inzulínové senzitivity a transportu glukózy do svalů (GLUT4)",
+      "univerzální antioxidační kapacita ve vodném i lipidovém prostředí",
+      "ochrana periferních nervů před diabetickou neuropatií",
+      "recyklace oxidovaného vitamínu C, E a glutathionu",
+      "podpora mitochondriální tvorby energie (ATP)"
+    ],
+    "dosage": {
+      "short": "100–300 mg denně 30 minut před jídlem",
+      "long": "Užívejte 100–300 mg stabilizovaného Na-R-ALA (sodná sůl R-ALA má výrazně vyšší stabilitu než volná kyselina) 30 minut před sacharidovým jídlem nalačno."
+    },
+    "warning": "U diabetiků může výrazně snížit glykémii. ALA chelatuje minerály – udržujte odstup 2 hodin od užívání železa, zinku a vápníku.",
+    "mechanism": "Kofaktorová vazba na lysinové zbytky enzymových komplexů Krebsova cyklu; stimulace fosforylace AMPK a p38 MAPK vedoucí k translokaci GLUT4; redukce thioredoxinu a glutathionu.",
+    "halfLife": "Cca 30 minut (intracelulární účinky na enzymy přetrvávají dlouhodobě)",
+    "interactions": [
+      "Karnitin (klasický mitochondriální rejuvenační protokol Ames)",
+      "Berberin / Metformin (aditivní snížení glykémie)"
+    ],
+    "naturalSources": [
+      "špenát",
+      "brokolice",
+      "hovězí játra a srdce"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 138,
+    "name": "Taurin (Kyselina 2-aminoethansulfonová)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "srdce",
+      "osmoregulace",
+      "mitochondrie",
+      "svaly"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Průlomová longevity molekula zvracející věkem podmíněný úpadek a chránící kardiovaskulární systém.",
+    "description": "Taurin je sulfonová aminokyselina hojně obsažená v myokardu, kosterním svalu, sítnici a mozku. Průlomová studie publikovaná v časopise Science v roce 2023 prokázala, že hladiny taurinu klesají během života až o 80 % a jeho suplementace prodloužila zdravý dojem života a medián přežití u savců až o 10–12 %. Taurin působí jako klíčový buněčný osmolyt, stabilizuje membrány, váže se na tRNA v mitochondriích a zajišťuje správnou translaci proteinů dýchacího řetězce.",
+    "effects": [
+      "prokázané prodloužení zdravé délky života v preklinických studiích",
+      "ochrana myokardu, snížení arteriálního krevního tlaku a pulzu",
+      "udržení buněčné hydratace a osmoregulace",
+      "tlumení oxidačního stresu a mitochondriální dysfunkce",
+      "prevence svalových křečí (včetně křečí způsobených stimulanty)"
+    ],
+    "dosage": {
+      "short": "1 000–3 000 mg denně rozděleně",
+      "long": "Pro longevity a kardiovaskulární zdraví: 1 500 až 3 000 mg denně rozděleno do dvou dávek (ráno a večer). Vynikající také v pre-workoutu pro buněčný objem."
+    },
+    "warning": "Extrémně bezpečný i při dávkách do 5–6 g denně. Velmi zřídka mírný žaludeční diskomfort při užití nalačno.",
+    "mechanism": "Tvorba 5-taurinomethyluridinu v mitochondriální tRNA-Leu, což je nezbytné pro syntézu proteinů komplexu I; modulace intracelulárního vápníku (Ca2+) a osmotického tlaku; agonismus na glycinových a GABA-A receptorech.",
+    "halfLife": "Cca 1–2 dny v tkáních",
+    "interactions": [
+      "Hořčík (vynikající kombinace pro kardiovaskulární stabilitu)",
+      "Beta-Alanin (při extrémních dávkách beta-alaninu může soutěžit o transportér TauT – doplňovat taurin)"
+    ],
+    "naturalSources": [
+      "maso",
+      "mořské plody",
+      "ryby",
+      "mateřské mléko"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 139,
+    "name": "Inositol (Myo-Inositol a D-Chiro-Inositol 40:1)",
+    "categoryKey": "health",
+    "tags": [
+      "inzulin",
+      "PCOS",
+      "hormony",
+      "mozek",
+      "serotonin"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Klíčový sekundární posel pro inzulínovou senzitivitu, hormonální balanc a neurotransmitery.",
+    "description": "Inositol (dříve označovaný jako vitamín B8) je karbocyklický cukr existující v 9 stereoizomerech, z nichž nejdůležitější jsou Myo-Inositol (MI) a D-Chiro-Inositol (DCI). Slouží jako strukturální základ pro sekundární posly (IP3 a inositol fosfoglykany) v signálních drahách inzulínu, FSH a TSH. Fyziologický poměr 40:1 (Myo:DCI) je celosvětovým zlatým standardem pro léčbu inzulínové rezistence, syndromu polycystických ovarií (PCOS), obnovu ovulace a regulaci serotoninergního přenosu v mozku.",
+    "effects": [
+      "obnova inzulínové senzitivity a stabilizace glykémie",
+      "normalizace ovulačního cyklu a snížení hyperandrogenismu u PCOS",
+      "zlepšení kvality oocytů a spermií",
+      "podpora serotoninergní a GABAergní signalizace (proti úzkostem)",
+      "snížení hladiny triglyceridů a krevního tlaku"
+    ],
+    "dosage": {
+      "short": "2 000–4 000 mg denně (poměr 40:1 Myo k D-Chiro)",
+      "long": "Pro metabolický syndrom a PCOS: 2 000 mg 2x denně (ráno a večer) rozpuštěné ve vodě. Pro psychickou pohodu a spánek: 3 000–6 000 mg večer před spaním."
+    },
+    "warning": "Při náhlém nasazení dávek nad 10 g může způsobit osmotický průjem a nadýmání. Titrujte dávku postupně.",
+    "mechanism": "Prekurzor fosfatidylinositol-4,5-bisfosfátu (PIP2), ze kterého vzniká IP3 aktivující uvolňování vápníku; DCI aktivuje glykogensyntázu, zatímco MI stimuluje buněčný příjem glukózy.",
+    "halfLife": "Cca několik hodin (intracelulární včlenění do membránových lipidů)",
+    "interactions": [
+      "Kyselina listová / Methylfolát (synergie v reprodukčních protokolech)",
+      "Berberin (zesílení inzulín-senzibilizujícího efektu)"
+    ],
+    "naturalSources": [
+      "citrusové plody",
+      "luštěniny",
+      "celozrnné obiloviny",
+      "ořechy"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 140,
+    "name": "Berberin Phytosome",
+    "categoryKey": "health",
+    "tags": [
+      "inzulin",
+      "AMPK",
+      "cholesterol",
+      "metabolismus",
+      "PCSK9"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Fytosomální berberin s až 4x vyšší biologickou dostupností pro aktivaci AMPK a kontrolu lipidů.",
+    "description": "Berberin je isochinolinový rostlinný alkaloid z dřišťálu (Berberis aristata). Tradiční berberin HCl trpí extrémně nízkou perorální biologickou dostupností (kolem 0.5 %) kvůli efluxnímu transportéru P-glykoproteinu ve střevě. Patentovaná fytosomální formulace (vázaná na fosfolipidy) dramaticky zvyšuje střevní absorpci bez dráždění žaludku. Berberin aktivuje enzym AMPK (enzym dlouhověkosti), potlačuje glukoneogenezi v játrech, zvyšuje expresi inzulínových receptorů a inhibuje PCSK9, čímž čistí aterogenní LDL částice z krve.",
+    "effects": [
+      "mohutná aktivace AMPK srovnatelná s farmakologickými biguanidy",
+      "snížení postprandiální glykémie a glykovaného hemoglobinu (HbA1c)",
+      "redukce LDL cholesterolu a apolipoproteinu B přes inhibici PCSK9",
+      "zlepšení jaterního steatózního profilu (ztučnění jater)",
+      "příznivá modulace střevního mikrobiomu"
+    ],
+    "dosage": {
+      "short": "550 mg 1–2x denně bezprostředně před jídlem",
+      "long": "Jedna kapsle fytosomálního berberinu (550 mg) před hlavními sacharidovými jídly (oběd a večeře). Odpovídá 1 500 mg běžného berberinu HCl."
+    },
+    "warning": "Neužívejte při hypoglykémii. Berberin mírně inhibuje cytochromy CYP3A4 a CYP2D6 – opatrnost při současném užívání léků na předpis.",
+    "mechanism": "Aktivace AMP-aktivované proteinkinázy (AMPK) nezávisle na inzulínu; stabilizace mRNA pro LDL receptor (LDLR) a downregulace proprotein konvertázy PCSK9 v hepatocytech.",
+    "halfLife": "Cca 4–6 hodin",
+    "interactions": [
+      "Metformin (aditivní efekt na glykémii – sledovat krevní cukr)",
+      "Ostropestřec mariánský / Silymarin (silymarin inhibuje P-glykoprotein a zvyšuje dostupnost berberinu)"
+    ],
+    "naturalSources": [
+      "dřišťál osinatý (Berberis aristata)",
+      "zlatobýl"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 141,
+    "name": "Metformin (Longevity protokol)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "metformin",
+      "AMPK",
+      "mTOR",
+      "glykemie",
+      "misfolding"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Základní lék pro metabolické zdraví a studovaná molekula pro zpomalení biologického stárnutí.",
+    "description": "Metformin (dimetylbiguanid) je historicky nejbezpečnější a celosvětově nejrozšířenější perorální antidiabetikum. V komunitě dlouhověkosti je předmětem masivního zájmu (včetně stěžejní americké klinické studie TAME – Targeting Aging with Metformin pod vedením Dr. Nira Barzilaie). Působí jako mírný a reverzibilní inhibitor komplexu I mitochondriálního dýchacího řetězce, což mění poměr AMP/ATP a spouští mohutnou kaskádu AMPK, potlačuje mTORC1, zlepšuje opravu DNA a snižuje incidenci kardiovaskulárních i nádorových onemocnění.",
+    "effects": [
+      "reverzibilní aktivace AMPK a regulace energetického senzoru buňky",
+      "potlačení nadměrné aktivity mTOR komplexu 1 (mTORC1)",
+      "snížení jaterní glukoneogeneze a zvýšení citlivosti periferních tkání",
+      "snížení systémového zánětu a hladin IGF-1 u hyperinzulinémie",
+      "prodloužení zdravého věku v populačních epidemiologických datech"
+    ],
+    "dosage": {
+      "short": "500–1 000 mg denně večer s jídlem (lékařský dohled)",
+      "long": "V longevity protokolech se běžně využívá forma s prodlouženým uvolňováním (XR) v dávce 500 až 1 000 mg jednou denně večer s večeří pro minimalizaci gastrointestinálního dyskomfortu. V netréninkové dny."
+    },
+    "warning": "Léčivý přípravek na lékařský předpis. Dlouhodobé užívání snižuje absorpci vitamínu B12 (nutno doplňovat B12!). Může mírně tlumit hypertrofickou adaptaci na těžký silový tréninek (neužívat bezprostředně po cvičení).",
+    "mechanism": "Mírná inhibice mitochondriálního respiračního komplexu I vedoucí ke zvýšení poměru cytoplazmatického AMP:ATP a následné allosterické aktivaci AMPK; inhibice jaterní fruktózo-1,6-bisfosfatázy.",
+    "halfLife": "Cca 4–6 hodin (běžná forma), cca 10–12 hodin (XR forma)",
+    "interactions": [
+      "Vitamín B12 (nutná kompenzace kvůli zhoršenému vstřebávání v ileu)",
+      "Alkohol (zvyšuje riziko laktátové acidózy – striktně se vyhnout)"
+    ],
+    "naturalSources": [
+      "původně odvozen z jestřabiny lékařské (Galega officinalis)"
+    ],
+    "bannedStatus": "prescription-only"
   }
 ]

@@ -1,11 +1,11 @@
 /**
  * SuppleZ Service Worker (sw.js)
- * Verze: 6.1 (Peptide protocol bridge & interactive reconstitution integration)
+ * Verze: 6.2 (319 comprehensive substances, expanded peptide & longevity database)
  * Strategie: Network-First pro aplikaci a data (vždy čerstvé změny),
  * s okamžitou zálohou v mezipaměti pro spolehlivý offline provoz.
  */
 
-const CACHE_NAME = 'supplez-cache-v6.1';
+const CACHE_NAME = 'supplez-cache-v6.2';
 
 const STATIC_ASSETS = [
     './',

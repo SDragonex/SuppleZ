@@ -569,5 +569,237 @@
     ],
     "bannedStatus": "prescription-only (léčivo), banned-sport WADA",
     "id": 414
+  },
+  {
+    "id": 415,
+    "name": "Rauwolscin (Alfa-Yohimbin)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "spalovac",
+      "alfa-2",
+      "stubborn-fat",
+      "termogeneze",
+      "energie"
+    ],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Vysoce selektivní antagonista alfa-2 receptorů pro uvolnění tuku z rezistentních partií.",
+    "description": "Rauwolscin (isoyohimbin / alfa-yohimbin) je diastereomer yohimbinu extrahovaný z rostliny Rauvolfia vomitoria. Vyznačuje se až 3x vyšší selektivitou vůči alfa-2 adrenergním receptorům oproti klasickému yohimbinu. V lidském těle fungují alfa-2 receptory jako 'brzda' lipolýzy – nacházejí se v obrovské koncentraci v tzv. rezistentním tuku (spodní břicho u mužů, boky a stehna u žen). Rauwolscin tuto brzdu spolehlivě odemyká, což umožňuje katecholaminům masivně spalovat tuk i při nízkých procentech tělesného tuku, s výrazně menším výskytem úzkosti než yohimbin.",
+    "effects": [
+      "selektivní blokáda alfa-2 adrenergních receptorů v rezistentním tuku",
+      "odemknutí lipolýzy ve spodním břiše, bocích a hýždích",
+      "zvýšení termogeneze a hladiny energie při tréninku",
+      "potlačení chuti k jídlu při půstu",
+      "čistší stimulační profil s menší kardiovaskulární zátěží než yohimbin HCl"
+    ],
+    "dosage": {
+      "short": "1–3 mg ráno nalačno před kardiem",
+      "long": "Užívejte 1 mg až maximálně 3 mg přibližně 30 minut před ranním tréninkem nalačno. KRITICKÉ: Užívat výhradně nalačno (i malé množství inzulínu po jídle kompletně eliminuje lipolytický účinek!). Začněte na 1 mg pro otestování tolerance."
+    },
+    "warning": "Zvyšuje krevní tlak a tepovou frekvenci. Nepoužívejte při kardiovaskulárních chorobách, panických atakách nebo v kombinaci s antidepresivy.",
+    "mechanism": "Vysoce selektivní kompetitivní antagonismus na presynaptických a postsynaptických alfa-2A a alfa-2B adrenergních receptorech, což zabraňuje inhibici adenylátcyklázy a udržuje vysoké hladiny cAMP v adipocytech.",
+    "halfLife": "Cca 1–2 hodiny",
+    "interactions": [
+      "Kofein (synergické zvýšení katecholaminů a blokáda fosfodiesterázy)",
+      "L-Karnitin (karnitin transportuje uvolněné mastné kyseliny do mitochondrií)"
+    ],
+    "naturalSources": [
+      "Rauvolfia vomitoria",
+      "Corynanthe yohimbe"
+    ],
+    "bannedStatus": "controlled / banned-sport (WADA S6)"
+  },
+  {
+    "id": 416,
+    "name": "Paradoxin (Aframomum melegueta - 6-paradol)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "hnedy-tuk",
+      "BAT",
+      "termogeneze",
+      "visceralni-tuk",
+      "bez-kofeinu"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Patentovaný extrakt ze zrnek ráje aktivující hnědý tuk (BAT) a spalování viscerálního tuku.",
+    "description": "Paradoxin je patentovaný standardizovaný extrakt ze semen rostliny Aframomum melegueta (zrnka ráje) z čeledi zázvorníkovitých, standardizovaný na bioaktivní fenolickou sloučeninu 6-paradol. Působí zcela unikátním nestimulačním mechanismem: aktivuje a zmnožuje hnědou tukovou tkáň (BAT – Brown Adipose Tissue). Hnědý tuk má obrovskou hustotu mitochondrií obsahujících protein termogenin (UCP-1). Aktivací BAT tělo přeměňuje uložené kalorie a viscerální tuk přímo na teplo bez zatížení srdce a nervového systému.",
+    "effects": [
+      "přímá aktivace a stimulace hnědého tuku (BAT)",
+      "významné zrychlení klidového energetického výdeje bez stimulantů",
+      "cílená redukce nebezpečného viscerálního tuku v dutině břišní",
+      "zvýšení termogeneze a oxidace lipidů po jídle",
+      "vhodný pro večerní užívání (nenarušuje spánek)"
+    ],
+    "dosage": {
+      "short": "40–50 mg 1–2x denně s jídlem",
+      "long": "Doporučená klinická dávka je 40 až 50 mg 1–2x denně (ideálně před tréninkem a před spaním). Pro maximální efekt užívejte nepřetržitě minimálně 4 týdny."
+    },
+    "warning": "Velmi bezpečný přírodní extrakt. Po požití může vyvolat příjemný pocit vnitřního tepla.",
+    "mechanism": "Aktivace TRPV1 (přechodný receptorový potenciál vaniloid 1) receptorů a stimulace sympatických nervových zakončení v hnědé tukové tkáni; upregulace exprese UCP-1 v mitochondriích.",
+    "halfLife": "Cca 2–3 hodiny (metabolický nárůst BAT přetrvává dlouhodobě)",
+    "interactions": [
+      "Capsimax / Kapsaicin (synergická aktivace TRPV1 receptorů)",
+      "Fucoxanthin (dvojitá stimulace UCP-1)"
+    ],
+    "naturalSources": [
+      "zrnka ráje (Aframomum melegueta)"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 417,
+    "name": "Higenamin (Norcoclaurin)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "beta-2",
+      "bronchodilatace",
+      "termogeneze",
+      "lipolyza",
+      "energie"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Přírodní selektivní beta-2 agonista rozšiřující průdušky a stimulující rozklad tuků.",
+    "description": "Higenamin (norcoclaurin) je přírodní benzylisochinolinový alkaloid nacházející se v rostlinách jako Nelumbo nucifera (lotos ořechonosný) a Aconitum. Funguje jako přirozený a selektivní agonista beta-2 adrenergních receptorů (podobně jako farmaceutický klenbuterol, ale s kratším poločasem a nižším rizikem desenzitizace). Vyvolává silnou bronchodilataci (rozšíření dýchacích cest), zvyšuje přísun kyslíku, aktivuje enzym adenylátcyklázu v tukových buňkách a spouští mohutnou lipolýzu.",
+    "effects": [
+      "silná stimulace lipolýzy přes beta-2 adrenergní receptory",
+      "bronchodilatace (rozšíření dýchacích cest a lepší oxygenace)",
+      "zvýšení energetického výdeje a tělesné teploty",
+      "podpora svalové síly a kardiovaskulární kapacity",
+      "rychlý nástup účinku vhodný do pre-workoutů"
+    ],
+    "dosage": {
+      "short": "20–50 mg 30 minut před tréninkem",
+      "long": "Dávka 20 až 50 mg přibližně 30 minut před tréninkem. Začněte na 20 mg pro ověření tolerance. Neužívejte večer."
+    },
+    "warning": "WADA zakazuje higenamin ve sportu v kategorii S3 (Beta-2 agonisté). Zvyšuje tepovou frekvenci, nevhodné pro osoby se srdečními vadami.",
+    "mechanism": "Selektivní vazba a stimulace beta-2 adrenergních receptorů; aktivace Gs proteinu, zvýšení intracelulárního cAMP a aktivace hormon-senzitivní lipázy (HSL) štěpící triglyceridy.",
+    "halfLife": "Cca 30–60 minut",
+    "interactions": [
+      "Kofein (synergické zesílení signálu cAMP)",
+      "Synefrin (komplementární stimulace beta-3 receptorů)"
+    ],
+    "naturalSources": [
+      "lotos ořechonosný (Nelumbo nucifera)",
+      "Nandina domestica"
+    ],
+    "bannedStatus": "banned-sport (WADA S3)"
+  },
+  {
+    "id": 418,
+    "name": "Fucoxanthin",
+    "categoryKey": "fatloss",
+    "tags": [
+      "karotenoid",
+      "UCP-1",
+      "bily-tuk",
+      "lipolyza",
+      "morske-rasy"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Mořský karotenoid z hnědých řas indukující expresi termogeninu v bílé tukové tkáni.",
+    "description": "Fucoxanthin je unikátní xantofylový karotenoid izolovaný z hnědých mořských řas (Undaria pinnatifida – Wakame). Je jedním z mála látek, které dokáží indukovat expresi mitochondriálního odpřahovacího proteinu 1 (UCP-1) přímo v buňkách bílého viscerálního tuku (WAT), kde se za normálních okolností UCP-1 nevyskytuje. Tím mění vlastnosti bílého tuku na metabolicky aktivní tuk spalující kalorie na teplo. Klinické studie potvrdily významný úbytek viscerálního břišního tuku a zlepšení jaterních enzymů.",
+    "effects": [
+      "upregulace termogeninu UCP-1 v bílé tukové tkáni (WAT)",
+      "cílená redukce břišního viscerálního tuku",
+      "potlačení diferenciace nových tukových buněk (antiadipogeneze)",
+      "snížení hladiny glukózy a jaterních triglyceridů",
+      "antioxidační a protizánětlivá ochrana cév"
+    ],
+    "dosage": {
+      "short": "2.4–5 mg čistého fucoxanthinu denně s jídlem",
+      "long": "Dávkujte 2.4 mg až 5 mg čistého fucoxanthinu denně s jídlem bohatým na tuky (tuky jsou nezbytné pro absorpci karotenoidu). Vyžaduje kumulativní užívání po dobu minimálně 8–16 týdnů pro plné nasycení tukové tkáně."
+    },
+    "warning": "Neúčinkuje okamžitě – vyžaduje dlouhodobé každodenní užívání. Pozor na levné extrakty z řas s vysokým obsahem jódu (nadbytek jódu může přetížit štítnou žlázu; hledejte purifikovaný fucoxanthin bez jódu).",
+    "mechanism": "Metabolit fucoxanthinol indukuje transkripci genu pro UCP-1 v abdominálním bílém tuku přes receptory PPAR-gama; downregulace lipogenních enzymů v játrech.",
+    "halfLife": "Dlouhá tkáňová akumulace v adipocytech (dny až týdny)",
+    "interactions": [
+      "Omega-3 rybí olej (dramaticky zvyšuje střevní absorpci fucoxanthinu)",
+      "Paradoxin (komplementární aktivace UCP-1)"
+    ],
+    "naturalSources": [
+      "hnědé mořské řasy Wakame (Undaria pinnatifida)",
+      "Kombu"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 419,
+    "name": "Dicaffeine Malate (Infinergy)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "kofein",
+      "energie",
+      "malat",
+      "zadny-crash",
+      "termogeneze",
+      "fokus"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Iontová vazba kofeinu a kyseliny jablečné poskytující plynulou 6hodinovou energii bez pádu.",
+    "description": "Dicaffeine Malate (patentovaný jako Infinergy) je inovativní sloučenina složená ze 75 % bezvodého kofeinu a 25 % kyseliny jablečné vázaných iontovou vazbou. Kyselina jablečná pufruje žaludeční kyselost, čímž eliminuje žaludeční nevolnost a pálení žáhy běžné u vysokých dávek standardního kofeinu. Navíc zpomaluje disociaci a vstřebávání kofeinu, což vede k postupnému nástupu stimulace, dlouhotrvající termogenezi (5–6 hodin) a kompletní absenci náhlého kofeinového vyčerpání (tzv. crash efektu).",
+    "effects": [
+      "dlouhotrvající stimulace a termogeneze po dobu 5–6 hodin",
+      "kompletní eliminace náhlého propadu energie (post-caffeine crash)",
+      "šetrný k žaludeční sliznici (pufruje překyselení)",
+      "stabilní mentální fokus a oddálení vnímání únavy",
+      "kyselina jablečná současně podporuje syntézu ATP v Krebsově cyklu"
+    ],
+    "dosage": {
+      "short": "100–300 mg (odpovídá 75–225 mg čistého kofeinu)",
+      "long": "Dávkujte 100 až 300 mg ráno nebo 45 minut před tréninkem. Vynikající jako druhá fáze stimulace v kombinaci s klasickým rychlým kofeinem (dual-release energetický profil)."
+    },
+    "warning": "Vzhledem k dlouhému poločasu působení neužívejte méně než 7 hodin před plánovaným spánkem.",
+    "mechanism": "Prodloužená kompetitivní blokáda adenosinových receptorů A1 a A2A v CNS; inhibice fosfodiesterázy; stimulace Krebsova cyklu kyselinou jablečnou.",
+    "halfLife": "Cca 5–7 hodin (pozvolnější eliminace)",
+    "interactions": [
+      "L-Theanin (vytváří dokonalé klidné a laserové soustředění)",
+      "Kofein Anhydrous (vytvoření dvou-fázového okamžitého i vytrvalého uvolňování)"
+    ],
+    "naturalSources": [
+      "syntetická iontová vazba kofeinu a kyseliny jablečné"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 420,
+    "name": "Capsimax (Kapsaicinoidy s řízeným uvolňováním)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "kapsaicin",
+      "TRPV1",
+      "termogeneze",
+      "paleni-tuku",
+      "chilli"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Mikrozapouzdřený extrakt pálivých papriček stimulující termogenezi bez podráždění žaludku.",
+    "description": "Capsimax je patentovaná formulace kapsaicinoidů z pálivých papriček (Capsicum annuum) využívající technologii OmniBead – mikroskopické zapouzdření s enterosolventním pláštěm. Běžný kapsaicin způsobuje při účinných dávkách nesnesitelné pálení v ústech, jícnu a žaludku. Capsimax projde žaludkem neporušený a kapsaicinoidy uvolní až v zásaditém prostředí tenkého střeva. Zde aktivují receptory TRPV1, což spouští uvolnění katecholaminů, masivně zvyšuje oxidaci mastných kyselin a pálí kalorie bez jakéhokoliv pálení žáhy.",
+    "effects": [
+      "zvýšení klidového energetického výdeje o dalších cca 100–150 kcal denně",
+      "významná podpora oxidace mastných kyselin před a po tréninku",
+      "potlačení chuti k jídlu a pocitu hladu",
+      "nulové pálení v ústech, jícnu a žaludku díky technologii zapouzdření",
+      "podpora oběhového systému a krevního toku"
+    ],
+    "dosage": {
+      "short": "100 mg denně ráno nebo před tréninkem s vodou",
+      "long": "Užívejte 100 mg Capsimaxu (standardizováno na 2 % kapsaicinoidů) ráno se snídaní nebo 30–45 minut před cvičením. Polykat celé, nekousat!"
+    },
+    "warning": "Kapsle se nesmí kousat ani otevírat (obsah by popálil sliznici úst).",
+    "mechanism": "Aktivace vaniloidních receptorů TRPV1 v senzorických neuronech střeva; reflexní stimulace sympatického nervového systému a uvolnění noradrenalinu aktivujícího beta-adrenergní termogenezi.",
+    "halfLife": "Cca 1–2 hodiny (termogenní stimulace trvá 3–4 hodiny)",
+    "interactions": [
+      "Zelený čaj / EGCG (výrazná synergie v oxidaci tuků)",
+      "Kofein (aditivní termogenní kaskáda)"
+    ],
+    "naturalSources": [
+      "paprička křovitá (Capsicum annuum / chilli)"
+    ],
+    "bannedStatus": "legal"
   }
 ]

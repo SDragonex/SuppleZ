@@ -102,6 +102,48 @@ const SYNERGIES = [
         title: 'Spermidin + NMN / Resveratrol',
         mechanism: 'Komplexní buněčné omlazení. NMN zvyšuje hladinu NAD+ pro aktivaci sirtuinů a opravy DNA enzymy PARP, zatímco spermidin spouští masivní buněčnou autofagii a recyklaci poškozených mitochondrií.',
         tags: ['longevity', 'autofagie', 'sirtuiny', 'buňky']
+    },
+    {
+        id: 'urolithin_nmn',
+        items: ['urolithin', 'nmn'],
+        title: 'Urolithin A + NMN (Mitofágie & Mitochondriální palivo)',
+        mechanism: 'Zlatý standard buněčného omlazení. Urolithin A selektivně odstraňuje staré a poškozené mitochondrie procesem mitofágie, zatímco NMN dodává enzymatické palivo (NAD+) pro biogenezi a dýchací řetězec nových mitochondrií.',
+        tags: ['longevity', 'mitofágie', 'NAD+', 'mitochondrie']
+    },
+    {
+        id: 'cagrisema',
+        items: ['cagrilintid', 'semaglutid'],
+        title: 'Cagrilintide + Semaglutid (CagriSema protokol)',
+        mechanism: 'Průlomový metabolický stack. Dlouhodobě působící analog amylinu a GLP-1 agonista spouštějí duální potlačení hladu přes kalcitoninové receptory v mozkovém kmeni i hypotalamická centra sytosti, což vede k úbytku hmotnosti přes 25 %.',
+        tags: ['peptidy', 'CagriSema', 'redukce', 'sytost']
+    },
+    {
+        id: 'ecdysteroids',
+        items: ['ecdysteron', 'turkesteron'],
+        title: 'Ecdysteron + Turkesteron (Duální fytoecdysteroidy)',
+        mechanism: 'Přírodní neandrogenní anabolická stimulace. Kombinace stimuluje svalovou proteosyntézu a retenci dusíku vazbou na estrogenní receptory beta (ER-beta) a translaci mRNA bez jakékoliv suprese vlastní osy HPTA.',
+        tags: ['výkon', 'síla', 'proteosyntéza', 'bez-suprese']
+    },
+    {
+        id: 'glycerol_citrulline',
+        items: ['glycerol', 'citrullin'],
+        title: 'Glycerol (GlycerPump) + Citrulin Malát',
+        mechanism: 'Ultimátní svalová pumpa. Citrulin maximalizuje syntézu oxidu dusnatého (eNOS) a rozšiřuje cévní lumen, zatímco glycerol osmoticky váže tekutinu přímo do krevního řečiště a svalových buněk (hyperhydratace).',
+        tags: ['výkon', 'pumpa', 'hyperhydratace', 'eNOS']
+    },
+    {
+        id: 'hmg_hcg',
+        items: ['hmg', 'hcg'],
+        title: 'hMG + hCG (Kompletní obnova fertility)',
+        mechanism: 'Kompletní andrologický protokol obnovy varlat. hCG stimuluje receptory pro LH v Leydigových buňkách (tvorba testosteronu) a hMG zásobuje Sertoliho buňky hormonem FSH, což obnovuje spermatogenezi a zrání spermií.',
+        tags: ['PCT', 'plodnost', 'FSH', 'LH', 'varlata']
+    },
+    {
+        id: 'apigenin_ps',
+        items: ['apigenin', 'fosfatidylserin'],
+        title: 'Apigenin + Fosfatidylserin (Ztišení osy HPA & Spánek)',
+        mechanism: 'Dokonalý večerní stack pro sportovce ve stavu přepětí. Fosfatidylserin přímo sráží hladinu nočního kortizolu a apigenin se váže na benzodiazepinová vazebná místa GABA-A, což přináší hluboké uvolnění a okamžitý spánek.',
+        tags: ['spánek', 'kortizol', 'GABA', 'regenerace']
     }
 ];
 
@@ -278,9 +320,42 @@ const PRESET_STACKS = [
         desc: 'Podpora sirtuinů, mitochondrií, epigenetických enzymů a buněčné očisty.',
         items: [
             { id: 120, name: 'NMN (Nikotinamid Mononukleotid)' },
+            { id: 132, name: 'Urolithin A (Mitopure)' },
             { id: 124, name: 'Spermidin' },
-            { id: 121, name: 'Resveratrol (Trans-Resveratrol)' },
             { id: 126, name: 'Ca-AKG (Alfa-ketoglutarát vápenatý)' }
+        ]
+    },
+    {
+        id: 'gut_healing',
+        name: 'Střevní bariéra & Leaky Gut',
+        desc: 'Obnova těsných spojů střevní sliznice, potlačení zánětu a regenerace mikroklků.',
+        items: [
+            { id: 757, name: 'BPC-157 Arginate (Stable Oral BPC)' },
+            { id: 115, name: 'Glutamin (L-Glutamin)' },
+            { id: 131, name: 'Kolagenní peptidy (Hydrolyzovaný kolagen)' },
+            { id: 104, name: 'Zinek (Bisglycinát)' }
+        ]
+    },
+    {
+        id: 'natural_anabolic',
+        name: 'Přírodní anabolismus & Síla',
+        desc: 'Stimulace proteosyntézy přes ER-beta a myostatinovou inhibici bez hormonální suprese.',
+        items: [
+            { id: 223, name: 'Ecdysteron (20-Hydroxyecdyson)' },
+            { id: 224, name: 'Turkesteron (Ajuga Turkestanica)' },
+            { id: 225, name: 'Epicatechin (Extrakt z kakaa)' },
+            { id: 200, name: 'Kreatin Monohydrát' }
+        ]
+    },
+    {
+        id: 'nocturnal_sleep',
+        name: 'Noční regenerace & Sražení kortizolu',
+        desc: 'Protokol pro sportovce trpící stavem tired-but-wired – ztišení mozku a hluboký spánek.',
+        items: [
+            { id: 311, name: 'Fosfatidylserin (Noční protokol)' },
+            { id: 133, name: 'Apigenin (Lipozomální / Krystalický)' },
+            { id: 102, name: 'Magnesium (Bisglycinát)' },
+            { id: 300, name: 'L-Theanin' }
         ]
     }
 ];

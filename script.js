@@ -211,16 +211,22 @@ function openCurrentItemInCalculator() {
         applyPeptideFullPreset(5, 2, 250, 'u100_1ml');
     } else if (nameLower.includes('tb-500') || nameLower.includes('tb 500')) {
         applyPeptideFullPreset(5, 2, 2000, 'u100_1ml');
-    } else if (nameLower.includes('retatrutid') || nameLower.includes('tirzepatid')) {
-        applyPeptideFullPreset(5, 2, 2000, 'u100_1ml');
+    } else if (nameLower.includes('retatrutid') || nameLower.includes('tirzepatid') || nameLower.includes('mazdutid') || nameLower.includes('survodutid')) {
+        applyPeptideFullPreset(10, 2, 2000, 'u100_1ml');
+    } else if (nameLower.includes('cagrilintid')) {
+        applyPeptideFullPreset(5, 2, 600, 'u100_1ml');
     } else if (nameLower.includes('semaglutid')) {
         applyPeptideFullPreset(5, 2, 500, 'u100_1ml');
     } else if (nameLower.includes('ghk')) {
-        applyPeptideFullPreset(50, 3, 1500, 'u100_1ml');
+        applyPeptideFullPreset(50, 5, 1500, 'u100_1ml');
     } else if (nameLower.includes('epithalon')) {
         applyPeptideFullPreset(10, 2, 5000, 'u100_1ml');
+    } else if (nameLower.includes('melanotan')) {
+        applyPeptideFullPreset(10, 2, 1000, 'u100_1ml');
+    } else if (nameLower.includes('mots-c')) {
+        applyPeptideFullPreset(10, 2, 2500, 'u100_1ml');
     } else if (nameLower.includes('ipamorelin') || nameLower.includes('cjc')) {
-        applyPeptideFullPreset(5, 2, 100, 'u100_1ml');
+        applyPeptideFullPreset(2, 2, 100, 'u100_1ml');
     } else {
         let doseMcg = 250;
         const doseText = (item.dosage?.short || "").toLowerCase();

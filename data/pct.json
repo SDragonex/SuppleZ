@@ -519,5 +519,242 @@
       "pouze syntetická farmaceutická látka"
     ],
     "bannedStatus": "banned-sport (WADA S4.1), prescription-only"
+  },
+  {
+    "id": 914,
+    "name": "hMG (Human Menopausal Gonadotropin)",
+    "categoryKey": "pct",
+    "tags": [
+      "hMG",
+      "FSH",
+      "LH",
+      "plodnost",
+      "spermiogeneze",
+      "PCT",
+      "varlata"
+    ],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Gonadotropin obsahující fyziologický poměr LH i FSH pro záchranu spermatogeneze a plodnosti.",
+    "description": "hMG (Human Menopausal Gonadotropin / Menotropin) je biologický gonadotropní přípravek purifikovaný z moči postmenopauzálních žen. Na rozdíl od hCG (který je pouze mimikem LH a stimuluje výhradně Leydigovy buňky k tvorbě testosteronu), obsahuje hMG jak luteinizační hormon (LH, cca 75 IU), tak klíčový folikuly stimulující hormon (FSH, cca 75 IU). Je nenahraditelným klinickým terapeutikem při hluboké atrofii varlat a neplodnosti po anabolických cyklech – stimuluje Sertoliho buňky, iniciuje zrání spermií a obnovuje plodnost tam, kde samotné hCG selhává.",
+    "effects": [
+      "přímá stimulace Sertoliho buněk a obnovení spermatogeneze",
+      "záchrana a obnova plodnosti (tvorba zralých funkčních spermií)",
+      "obnova objemu a plnosti testikulární tkáně",
+      "duální stimulace receptorů pro LH i FSH",
+      "zlatý standard v andrologii při těžkém hypogonadismu"
+    ],
+    "dosage": {
+      "short": "75 IU subkutánně obden po dobu 4–8 týdnů (lékařský dohled)",
+      "long": "V protokolul obnovy fertility a těžkého PCT: 75 IU subkutánně inzulínovou stříkačkou každý druhý den (často v kombinaci s 500–1 000 IU hCG). Ředění bakteriostatickou vodou, skladovat výhradně v chladničce při 2–8 °C."
+    },
+    "warning": "Lék na lékařský předpis. Vyžaduje pravidelné andrologické vyšetření a spermiogram. Zbytečně vysoké dávky mohou vést k desenzitizaci receptorů.",
+    "mechanism": "Přímá vazba na receptory pro FSH v Sertoliho buňkách varlat (indukce syntézy androgen-vázajícího proteinu ABP a spermatogeneze) a receptory pro LH v Leydigových buňkách (tvorba testosteronu).",
+    "halfLife": "FSH frakce cca 30–40 hodin, LH frakce cca 20 hodin",
+    "interactions": [
+      "hCG (klasický klinický fertilní protokol pro kompletní stimulaci Leydigových i Sertoliho buněk)",
+      "Enclomifen (následný krok pro udržení endogenní produkce LH/FSH hypofýzou)"
+    ],
+    "naturalSources": [
+      "biologický extrakt z moči postmenopauzálních žen"
+    ],
+    "bannedStatus": "banned-sport (WADA S2.1), na lékařský předpis"
+  },
+  {
+    "id": 915,
+    "name": "Pramipexol (Mirapex)",
+    "categoryKey": "pct",
+    "tags": [
+      "prolaktin",
+      "dopamin",
+      "D2",
+      "D3",
+      "trenbolon",
+      "nandrolon"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Silný dopaminový agonista pro rychlé potlačení patologicky zvýšeného prolaktinu.",
+    "description": "Pramipexol je syntetický nesteroidní dopaminový agonista s vysokou selektivitou k D2 a D3 receptorům. V kulturistice a endokrinologii se používá jako alternativa kabergolinu pro řešení hyperprolaktinémie. Anabolické steroidy ze skupiny 19-nor (jako Trenbolon a Nandrolon) mají progestagenní aktivitu a mohou dramaticky zvyšovat hladinu hormonu prolaktinu, což vede k prolaktinové gynekomastii, ztrátě libida a erektilní dysfunkci ('deca-dick'). Pramipexol stimuluje dopaminové receptory v adenohypofýze a okamžitě sráží prolaktin na fyziologickou úroveň.",
+    "effects": [
+      "okamžité a mohutné snížení sérového prolaktinu",
+      "prevence a léčba prolaktinové gynekomastie (výtok z bradavek, citlivost)",
+      "obnova libida a erektilní funkce utlumené 19-nor látkami",
+      "zkrácení refrakterní fáze po ejakulaci (rychlejší schopnost další erekce)",
+      "zvýšení noční sekrece růstového hormonu (HGH)"
+    ],
+    "dosage": {
+      "short": "0.125–0.25 mg večer před spaním (pomalá titrace)",
+      "long": "Zahajujte na minimální dávce 0.125 mg (čtvrtina 0.5mg tablety) večer těsně před spaním s lehkým jídlem. Po týdnu lze zvýšit na 0.25 mg denně. Neužívat přes den."
+    },
+    "warning": "Při náhlém nasazení vyšší dávky způsobuje silnou nauzeu a závratě. Způsobuje velmi živé sny. Může vyvolat poruchy kontroly impulzů (hazard, nutkavé chování).",
+    "mechanism": "Vysokoafinitní agonismus na dopaminových D2 a D3 receptorech v laktotropních buňkách předního laloku hypofýzy, což spouští tonickou inhibici sekrece prolaktinu.",
+    "halfLife": "Cca 8–12 hodin",
+    "interactions": [
+      "Kabergolin (neužívat současně – jedná se o alternativní dopaminové agonisty)",
+      "Alkohol (zvyšuje sedativní účinky a nevolnost)"
+    ],
+    "naturalSources": [
+      "syntetická chemická sloučenina"
+    ],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 916,
+    "name": "Glutathion (S-Acetyl-L-Glutathion)",
+    "categoryKey": "pct",
+    "tags": [
+      "antioxidant",
+      "glutathion",
+      "jatra",
+      "detoxikace",
+      "SAG",
+      "orální"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Acetylovaná perorální forma glutathionu se schopností přímo pronikat do buněk.",
+    "description": "S-Acetyl-L-Glutathion (SAG) je průlomová forma glutathionu – hlavního intracelulárního antioxidantu v lidském těle. Zatímco běžný orální glutathion je v trávicím traktu téměř kompletně zničen enzymem gama-glutamyltransferázou (GGT), acetylovaná skupina chrání molekulu před degradací. Umožňuje jí neporušené vstřebání do krevního oběhu a přímý průchod lipidovou membránou do buněk a mitochondrií. Během PCT a po anabolických cyklech bleskově obnovuje enzymatickou antioxidační bariéru jater a čistí reaktivní metabolity.",
+    "effects": [
+      "přímý transport intaktního glutathionu do jaterních buněk a mitochondrií",
+      "hluboká detoxikace hepatotoxických reziduí po orálních anabolikách",
+      "neutralizace lipidové peroxidace a oxidačního stresu",
+      "podpora fázové II detoxikace jater (konjugace s glutathionem)",
+      "posílení imunity a regenerace cévního endotelu"
+    ],
+    "dosage": {
+      "short": "100–300 mg denně nalačno",
+      "long": "Dávkujte 100 mg až 300 mg S-Acetyl-L-Glutathionu ráno nalačno se sklenicí vody. Během intenzivní jaterní očisty v PCT užívejte 200 mg 2x denně po dobu 4 týdnů."
+    },
+    "warning": "Velmi bezpečný profil bez toxicity. Má charakteristický mírně sirný zápach.",
+    "mechanism": "Přenáší se neporušený do cytosolu a mitochondrií, kde buněčné thioesterázy odštěpí acetylovou skupinu a uvolní redukovaný GSH přímo v místě potřeby.",
+    "halfLife": "Cca několik hodin v plazmě (intracelulární působení přetrvává)",
+    "interactions": [
+      "TUDCA (společná ochrana jater: TUDCA na žlučovody a SAG na buněčný redoxní stav)",
+      "Vitamín C a Selen (kofaktory recyklace glutathionu)"
+    ],
+    "naturalSources": [
+      "acetylovaná forma přirozeného tripeptidu GSH"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 917,
+    "name": "DIM (Diindolylmethan)",
+    "categoryKey": "pct",
+    "tags": [
+      "estrogen",
+      "DIM",
+      "prostata",
+      "metabolismus-estrogenu",
+      "prirodni"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní metabolit z brukvovité zeleniny optimalizující poměr prospěšných a rizikových estrogenů.",
+    "description": "Diindolylmethan (DIM) je přírodní bioaktivní sloučenina vznikající v žaludku trávením indol-3-karbinolu (I3C), obsaženého v brukvovité zelenině (brokolice, květák, růžičková kapusta). V endokrinologii a PCT je klíčovým regulátorem metabolismu estrogenů: posouvá metabolismus z problematické a mitogenní dráhy 16-alfa-hydroxyestronu a 4-hydroxyestronu směrem k bezpečnému a kardioprotektivnímu 2-hydroxyestronu. U mužů pomáhá udržet optimální hladinu volného testosteronu, chrání prostatu a tlumí estrogenní dominanci.",
+    "effects": [
+      "posun metabolismu estrogenů k bezpečnému metabolitu 2-hydroxyestronu",
+      "tlumení rizikového 16-alfa-hydroxyestronu (odpovědného za gynekomastii)",
+      "podpora zdraví a prevence hypertrofie prostaty",
+      "mírná kompetitivní inhibice aromatázy",
+      "optimalizace poměru volného a vázaného testosteronu"
+    ],
+    "dosage": {
+      "short": "100–200 mg denně s jídlem",
+      "long": "Užívejte 100 mg až 200 mg krystalického nebo biologicky vstřebatelného (BioResponse) DIM denně s jídlem. Vhodné užívat během PCT i v udržovacích fázích."
+    },
+    "warning": "Může způsobit neškodné ztmavnutí moči (jantarová barva). Užívejte vždy s jídlem.",
+    "mechanism": "Upregulace enzymu cytochromu P450 CYP1A1 (indukce 2-hydroxylace estrogenů) a downregulace CYP1B1 a CYP3A4; mírná vazba na arylhydrokarbonový receptor (AhR).",
+    "halfLife": "Cca 4–7 hodin",
+    "interactions": [
+      "Zinek a Bor (synergická hormonální optimalizace)",
+      "Tamoxifen / SERMy (komplementární kontrola estrogenních projevů)"
+    ],
+    "naturalSources": [
+      "brokolice",
+      "kapusta",
+      "květák",
+      "zelí"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 918,
+    "name": "Spironolakton",
+    "categoryKey": "pct",
+    "tags": [
+      "diuretikum",
+      "aldosteron",
+      "krevni-tlak",
+      "voda",
+      "androgeny"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Draslík šetřící antagonista aldosteronu pro eliminaci zadržené vody a snížení tlaku.",
+    "description": "Spironolakton je syntetický steroidní lék fungující jako kompetitivní antagonista mineralokortikoidních (aldosteronových) receptorů v ledvinách. V endokrinologii a medicíně se používá k léčbě hypertenze, městnavého srdečního selhání a hyperaldosteronismu. Po anabolických cyklech (zejména u látek silně zadržujících sodík a vodu) účinně vylučuje přebytečnou extracelulární tekutinu a sráží vysoký krevní tlak bez ztrát draslíku, který je kritický pro srdeční rytmus.",
+    "effects": [
+      "eliminace nadměrné retence vody v podkoží a cévách",
+      "rychlé snížení vysokého krevního tlaku vyvolaného zadržováním sodíku",
+      "šetření draslíku v krevní plazmě (prevence arytmií z hypokalémie)",
+      "blokáda androgenních receptorů v kůži (využíváno proti akné)",
+      "ochrana myokardu před aldosteronovou fibrózou"
+    ],
+    "dosage": {
+      "short": "25–50 mg denně ráno s jídlem (lékařský dohled)",
+      "long": "Běžná dávka je 25 mg až maximálně 50 mg jednou denně ráno po snídani. Neužívat dlouhodobě bez monitorování sérových elektrolytů (draslíku a sodíku)."
+    },
+    "warning": "Lék na lékařský předpis! Riziko nebezpečné hyperkalémie (nadbytku draslíku) – NIKDY při užívání spironolaktonu neužívejte doplňky stravy s draslíkem. Má antiandrogenní účinek (neužívat dlouhodobě u mužů).",
+    "mechanism": "Kompetitivní blokáda aldosteronových receptorů v distálním tubulu a sběrném kanálku nefronu; zvýšené vylučování vody a sodíku (Na+) při současném zadržování draslíku (K+) a vodíkových iontů.",
+    "halfLife": "Cca 1.4 hodiny (aktivní metabolit kanrenon má poločas 16–18 hodin)",
+    "interactions": [
+      "Draslík (striktně kontraindikován – riziko zástavy srdce z hyperkalémie!)",
+      "ACE inhibitory a sartany (Telmisartan) – vyžaduje přísné sledování draslíku"
+    ],
+    "naturalSources": [
+      "syntetický steroidní lakton"
+    ],
+    "bannedStatus": "banned-sport (WADA S5 - diuretika), na lékařský předpis"
+  },
+  {
+    "id": 919,
+    "name": "TUDCA pro PCT (Jaterní regenerační protokol)",
+    "categoryKey": "pct",
+    "tags": [
+      "jatra",
+      "TUDCA",
+      "cholestaza",
+      "detoxikace",
+      "enzymy",
+      "ALT",
+      "AST"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Cílený post-cyklový protokol hydrofilní žlučové kyseliny pro okamžitou léčbu cholestázy.",
+    "description": "Speciální terapeutický protokol TUDCA zaměřený na fázi post-cycle therapy (PCT). Užívání perorálních anabolických androgenních steroidů (17-alfa-alkylovaných, jako Dianabol, Anavar, Winstrol, Superdrol) způsobuje intrahepatální cholestázu – zástavu odtoku žluči a hromadění toxických hydrofobních žlučových kyselin, které rozleptávají buněčné membrány hepatocytů a vedou k masivnímu nárůstu ALT, AST a bilirubinu. TUDCA nahrazuje toxické žlučové kyseliny, ředí žluč, čistí jaterní enzymy a chrání buňky před nekrózou.",
+    "effects": [
+      "okamžité zředění žluči a obnovení fyziologického toku žlučovými cestami",
+      "radikální pokles patologicky zvýšených jaterních enzymů (ALT, AST, GGT)",
+      "vytesnění toxických hydrofobních žlučových solí z jaterní tkáně",
+      "stabilizace mitochondriálních membrán hepatocytů",
+      "zlepšení trávení tuků a vylučování metabolitů steroidů"
+    ],
+    "dosage": {
+      "short": "500–1 000 mg denně rozděleně s jídly po dobu 4–6 týdnů",
+      "long": "V intenzivním PCT protokolu: 500 mg 2x denně (ráno a večer) vždy společně s plnohodnotným jídlem po dobu 30 dnů. Následně pokračovat dávkou 250 mg denně do normalizace krevních testů."
+    },
+    "warning": "Neužívejte společně s alkoholem. Užívejte výhradně s jídlem.",
+    "mechanism": "Kompetitivní nahrazení toxických žlučových kyselin (kyseliny deoxycholové a litocholové) netoxickým hydrofilním konjugátem; stimulace exocytózy a exprese transportéru BSEP.",
+    "halfLife": "Cca 2–3 hodiny (opakovaná enterohepatální cirkulace)",
+    "interactions": [
+      "NAC a S-Acetyl-L-Glutathion (dokonalý trojitý zlatý standard jaterní regenerace)",
+      "Silymarin (komplementární stabilizace jaterních buněk)"
+    ],
+    "naturalSources": [
+      "endogenní metabolit žluči"
+    ],
+    "bannedStatus": "legal"
   }
 ]

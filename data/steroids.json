@@ -564,5 +564,200 @@
     ],
     "bannedStatus": "banned-sport (WADA S1)",
     "id": 814
+  },
+  {
+    "id": 815,
+    "name": "Mesterolon (Proviron)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "DHT",
+      "SHBG",
+      "libido",
+      "tvrdost",
+      "oralni"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Orální 1-methylovaný DHT derivát s extrémní afinitou k SHBG pro uvolnění volného testosteronu.",
+    "description": "Mesterolon (obchodní název Proviron) je perorální androgenní steroid odvozený od dihydrotestosteronu (1-methyl-5alfa-androstan-17beta-ol-3-on). Na rozdíl od většiny orálních steroidů není 17-alfa-alkylovaný (jeho biologická dostupnost je zajištěna 1-methylovou skupinou), a proto nezatěžuje játra. Nemá prakticky žádnou anabolickou aktivitu na svalový růst (je ve svalech rychle inaktivován enzymem 3alfa-HSD), avšak má mimořádně silnou afinitu k SHBG (Sex Hormone-Binding Globulin). Tím, že vytěsňuje testosteron z vazby na SHBG, radikálně zvyšuje hladinu biologicky aktivního volného testosteronu, zvyšuje tvrdost svalů a působí jako silný stimulátor libida.",
+    "effects": [
+      "extrémní afinita k SHBG a vytěsnění volného testosteronu do oběhu",
+      "výrazné zvýšení tvrdosti a hustoty svalů (antagonistický vliv na estrogeny)",
+      "silná stimulace libida, potence a mentální sebedůvěry",
+      "minimální jaterní toxicita (není 17-alfa-alkylovaný)",
+      "působí jako slabý inhibitor aromatázy (brání přeměně na estrogen)"
+    ],
+    "dosage": {
+      "short": "25–50 mg denně perorálně (lékařský dohled)",
+      "long": "Standardní dávkování v andrologii a sportu: 25 mg ráno a 25 mg večer s jídlem. Užívá se po dobu 4–8 týdnů během cyklu nebo v závěru přípravy."
+    },
+    "warning": "Anabolický androgenní steroid na lékařský předpis. Je zakázán WADA ve sportu. Může urychlit androgenní alopecii (vypadávání vlasů) u geneticky disponovaných jedinců a mírně zvětšovat prostatu.",
+    "mechanism": "Vysokoafinitní kompetitivní vazba na SHBG; vazba na androgenní receptory bez možnosti konverze na estrogeny přes aromatázu; inhibice aromatázy kompetitivní vazbou.",
+    "halfLife": "Cca 12–13 hodin",
+    "interactions": [
+      "Testosteron (masivní uvolnění volné frakce testosteronu)",
+      "Nandrolon (pomáhá udržet libido a erektilní funkci bez konverze na estrogeny)"
+    ],
+    "naturalSources": [
+      "syntetický derivát dihydrotestosteronu (DHT)"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
+  },
+  {
+    "id": 816,
+    "name": "Oxymetholon (Anadrol / Anapolon)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "anadrol",
+      "sila",
+      "objem",
+      "erytropoeza",
+      "17aa"
+    ],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Jeden z nejmocnějších orálních anabolických steroidů pro brutální sílu, objem a erytropoézu.",
+    "description": "Oxymetholon (Anadrol 50 / Anapolon) je 17-alfa-alkylovaný perorální steroid syntetizovaný v roce 1960 společností Syntex pro léčbu těžké anémie a svalové atrofie. Jedná se o modifikovaný derivát DHT s 2-hydroxymethylenovou skupinou. Je považován za jeden z vůbec nejsilnějších svalových a silových budovačů: stimuluje syntézu erytropoetinu (EPO) v ledvinách, čímž enormně zvyšuje počet červených krvinek a krevní objem. Vyvolává masivní retenci vody a glykogenu ve svalech, poskytuje obrovskou sílu a ochranu kloubů při extrémních vahách.",
+    "effects": [
+      "extrémní nárůst tělesné hmotnosti a brutální svalové síly během několika dnů",
+      "masivní stimulace syntézy červených krvinek (erytropoézy)",
+      "obrovská svalová pumpa a plnost v důsledku retence glykogenu",
+      "ochrana kloubních pouzder při těžkém silovém tréninku",
+      "silná podpora retence dusíku a proteosyntézy"
+    ],
+    "dosage": {
+      "short": "25–50 mg denně perorálně (maximálně 4–6 týdnů)",
+      "long": "Vzhledem k vysoké síle a zátěži jater se užívá 25 až 50 mg denně s jídlem po dobu maximálně 4 až 6 týdnů. Vyžaduje přísnou jaterní ochranu (TUDCA + NAC) a kontrolu krevního tlaku."
+    },
+    "warning": "Vysoká jaterní zátěž (17-alfa-alkylovaný)! Způsobuje zadržování vody a výrazný vzestup krevního tlaku. Ačkoliv nearomatizuje, může stimulovat estrogenní receptory sám o sobě (riziko gynekomastie). Vyžaduje lékařský dohled.",
+    "mechanism": "Plná aktivace androgenního receptoru v kosterním svalu; stimulace renální syntézy EPO a hematokritu; přímá interakce s estrogenními receptory bez účasti aromatázy.",
+    "halfLife": "Cca 8–9 hodin",
+    "interactions": [
+      "TUDCA a NAC (absolutní nutnost pro ochranu jaterních hepatocytů)",
+      "Telmisartan (ochrana kardiovaskulárního systému před vysokým tlakem)"
+    ],
+    "naturalSources": [
+      "syntetický anabolický steroid"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
+  },
+  {
+    "id": 817,
+    "name": "Fluoxymesteron (Halotestin)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "halotestin",
+      "sila",
+      "agrese",
+      "vaha",
+      "silovy-trojboj"
+    ],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Extrémně silný orální androgen maximalizující nervosvalovou sílu a agresi bez nárůstu hmotnosti.",
+    "description": "Fluoxymesteron (obchodní název Halotestin) je perorální derivát testosteronu s 9-alfa-fluoro, 11-beta-hydroxy a 17-alfa-methylovou substitucí. Vyznačuje se gigantickým androgenním indexem (až 850) a minimální anabolickou aktivitou. Nearomatizuje na estrogeny a nezadržuje ani kapku vody. Používá se silovými trojbojaři, vzpěrači a bojovníky v závěrečných týdnech před vážením a soutěží pro maximalizaci centrální nervové aktivace, explozivní síly, tvrdosti svalů a psychické tréninkové agresivity bez přibrání jediného gramu tělesné hmotnosti.",
+    "effects": [
+      "dramatický nárůst absolutní a explozivní síly bez nárůstu tělesné hmotnosti",
+      "extrémní tvrdost, hustota a vaskularita svalů (nulová retence vody)",
+      "masivní stimulace centrální nervové soustavy a bojové agresivity",
+      "nulová konverze na estrogeny a nulová gynekomastie",
+      "stimulace syntézy hemoglobinu"
+    ],
+    "dosage": {
+      "short": "10–20 mg denně perorálně (maximálně 2–4 týdny)",
+      "long": "Užívá se 10 až 20 mg denně rozděleně do dvou dávek (ráno a před tréninkem) po dobu maximálně 2 až 4 týdnů těsně před soutěží. Nikdy neužívat dlouhodobě."
+    },
+    "warning": "Jeden z nejvíce hepatotoxických orálních steroidů vůbec! Extrémní zátěž na játra, krevní lipidy (sráží HDL na minimum) a krevní tlak. Může vyvolat psychickou agresivitu a podrážděnost. Striktně zakázaná dopingová látka.",
+    "mechanism": "Vysokoafinitní vazba na androgenní receptory v CNS a kosterním svalu; stimulace nervosvalového přenosu motorických jednotek bez intracelulární retence vody.",
+    "halfLife": "Cca 9 hodin",
+    "interactions": [
+      "TUDCA (kritická jaterní ochrana)",
+      "Rybí olej / Omega-3 ve vysokých dávkách (ochrana cév a lipidového profilu)"
+    ],
+    "naturalSources": [
+      "syntetický halogenovaný steroid"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
+  },
+  {
+    "id": 818,
+    "name": "Nandrolon Fenylpropionát (NPP)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "NPP",
+      "nandrolon",
+      "klouby",
+      "anabolikum",
+      "19-nor"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Rychle působící ester nandrolonu pro svalovou hypertrofii a ochranu kloubů s nízkou retencí vody.",
+    "description": "Nandrolon Fenylpropionát (NPP / Durabolin) je injekční anabolický steroid ze skupiny 19-nortestosteronu (19-nor). Oproti klasickému dlouhému esteru Deca-Durabolin (nandrolon dekanoát) má NPP podstatně kratší poločas eliminace (cca 2.5–3 dny). To umožňuje bleskovou titraci hladin v krvi, rychlejší odeznění nežádoucích účinků a podstatně menší zadržování vody a nadýmání. Je proslulý svou schopností stimulovat syntézu kolagenu typu III a synoviální tekutiny v kloubních pouzdrech, čímž eliminuje chronickou bolest kloubů u těžce trénujících sportovců.",
+    "effects": [
+      "vynikající svalová anabolická hypertrofie s nízkým androgenním zatížením",
+      "hluboká regenerace a lubrikace kloubních pouzder a šlach",
+      "stimulace syntézy kolagenu a kostního minerálního obsahu",
+      "nižší retence vody a rychlejší vyloučení z těla oproti Deca-Durabolinu",
+      "podpora dusíkové bilance a syntézy glykogenu"
+    ],
+    "dosage": {
+      "short": "100–150 mg intramuskulárně každý druhý den (lékařský dohled)",
+      "long": "Aplikuje se intramuskulárně v dávce 100 mg obden (případně 300–400 mg týdně rozděleno do 3 aplikací). Vždy kombinovat se základní dávkou testosteronu (pro udržení fyziologické hladiny DHT a libida)."
+    },
+    "warning": "19-nor steroid s progestagenní aktivitou – může zvyšovat prolaktin (nutno mít po ruce kabergolin nebo pramipexol). Způsobuje silnou a dlouhodobou supresi přirozené osy HPTA.",
+    "mechanism": "Silná vazba na androgenní receptor; redukce enzymem 5alfa-reduktázou na slabší metabolit DHN (dihydronandrolon); agonismus na progesteronových receptorech (PR).",
+    "halfLife": "Cca 2.5–3 dny (vyžaduje aplikaci obden)",
+    "interactions": [
+      "Testosteron (povinný základ cyklu k prevenci ztráty libida a erekce)",
+      "Kabergolin (ochrana před prolaktinovou gynekomastií)"
+    ],
+    "naturalSources": [
+      "syntetický 19-nortestosteron ester"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
+  },
+  {
+    "id": 819,
+    "name": "Drostanolon Enanthát (Masteron Enanthate)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "masteron",
+      "enanthate",
+      "tvrdost",
+      "anti-estrogen",
+      "DHT"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Dlouhý ester Masteronu pro maximální hustotu a tvrdost svalů s anti-estrogenním profilem.",
+    "description": "Drostanolon Enanthát (Masteron Enanthate) je dlouhodobě působící injekční ester 2-alfa-methyldihydrotestosteronu. Na rozdíl od krátkého propionátu (který vyžaduje injekce obden) umožňuje enanthátový ester stabilní hladiny při aplikaci 1–2x týdně. Drostanolon je čistý DHT derivát: nemůže být enzymem aromatáza přeměněn na estrogen a naopak sám působí jako mírný antagonista estrogenních receptorů a blokátor aromatázy. Dodává svalům granitovou tvrdost, ostrost, žilnatost a eliminuje podkožní vodu u jedinců s nízkým procentem tělesného tuku.",
+    "effects": [
+      "extrémní vaskularita, tvrdost a separace svalových partií",
+      "přirozený anti-estrogenní efekt (potlačuje zadržování vody)",
+      "zvýšení hustoty svalů bez nárůstu zbytečné tělesné hmotnosti",
+      "podpora síly a centrální motivace přes androgenní receptory",
+      "pohodlné dávkování 1–2x týdně"
+    ],
+    "dosage": {
+      "short": "200–400 mg týdně intramuskulárně rozděleno do 2 dávek",
+      "long": "Aplikuje se hluboko intramuskulárně v dávce 200 až 400 mg týdně (např. 150–200 mg v pondělí a ve čtvrtek) po dobu 8–12 týdnů. Plný estetický efekt se projeví při tělesném tuku pod 10–12 %."
+    },
+    "warning": "Silný androgenní derivát DHT – u disponovaných jedinců způsobuje padání vlasů a akné. Zhoršuje lipidový profil (pokles HDL). Zakázaná dopingová substance pod WADA.",
+    "mechanism": "Přímá vazba na androgenní receptory; allosterická inhibice komplexu aromatázy a kompetitivní antagonismus na estrogenním receptoru alfa ve svalové a prsní tkáni.",
+    "halfLife": "Cca 7–8 dní",
+    "interactions": [
+      "Testosteron Enanthate (vytváří klasický synergický objemový i rýsovací stack)",
+      "TUDCA a Rybí olej (ochrana kardiovaskulárního systému a jater)"
+    ],
+    "naturalSources": [
+      "syntetický derivát dihydrotestosteronu"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
   }
 ]

@@ -2109,5 +2109,590 @@
       "tetrapeptid odvozený z bronchiální tkáně"
     ],
     "bannedStatus": "experimental / research chemical"
+  },
+  {
+    "id": 757,
+    "name": "BPC-157 Arginate (Stable Oral BPC)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "BPC-157",
+      "arginat",
+      "streva",
+      "zaludek",
+      "oralni"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Orálně stabilní arginátová sůl BPC-157 odolávající žaludeční kyselině pro střevní hojení.",
+    "description": "BPC-157 Arginát je patentovaná stabilizovaná sůl pentadekapeptidu BPC-157 s L-argininem. Běžný volný peptid BPC-157 se v žaludeční kyselině (pH 1–2) po 30–60 minutách začíná rozkládat. Arginátová forma prokázala stabilitu v agresivní žaludeční šťávě po více než 5 hodin s téměř 90% zachováním biologické integrity. Jedná se o ideální formu pro orální léčbu syndromu propustného střeva (leaky gut), Crohnovy choroby, ulcerózní kolitidy, GERD a zánětů trávicího traktu bez nutnosti injekčních aplikací.",
+    "effects": [
+      "vysoká odolnost vůči žaludeční kyselině a enzymatickému rozkladu v žaludku",
+      "obnova těsných spojů (tight junctions) střevní sliznice při leaky gut",
+      "rychlé hojení žaludečních a dvanáctníkových vředů a erozí",
+      "snížení lokálního střevního i systémového zánětu",
+      "systémový přenos do krevního oběhu pro hojení kloubů a šlach"
+    ],
+    "dosage": {
+      "short": "250–500 mcg 1–2x denně nalačno orálně",
+      "long": "Užívejte 250 mcg až 500 mcg v kapsli ráno nalačno 30 minut před jídlem a případně druhou dávku večer před spaním. Standardní kúra trvá 4–8 týdnů."
+    },
+    "warning": "Neužívejte při aktivních nádorových onemocněních (stimulace angiogeneze VEGF).",
+    "mechanism": "Upregulace exprese růstových faktorů VEGF, bFGF a syndekanu-1; stimulace syntézy mucinu a obnova ocludinu a claudinů v enterocytech střevního epitelu.",
+    "halfLife": "Orální stabilita v žaludku > 5 hodin, tkáňový regenerační signál několik dní",
+    "interactions": [
+      "Glutamin (synergická výživa pro enterocyty)",
+      "Kolagenní peptidy (stavební materiál pro regeneraci střevní stěny)"
+    ],
+    "naturalSources": [
+      "stabilizovaná sůl syntetického žaludečního peptidu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2.1)"
+  },
+  {
+    "id": 758,
+    "name": "Mazdutide (IBI362)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "GLP-1",
+      "glukagon",
+      "redukce",
+      "jatra",
+      "inovace"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Duální GLP-1 a glukagonový receptorový agonista pro dramatickou redukci tuku a MASH.",
+    "description": "Mazdutide (IBI362 / LY3305677) je syntetický peptid vyvinutý společnostmi Eli Lilly a Innovent Biologics. Jedná se o duální agonistu receptorů pro GLP-1 (glukagonu podobný peptid-1) a glukagon. Zatímco GLP-1 složka tlumí chuť k jídlu a stabilizuje hladinu inzulínu, glukagonová složka přímo stimuluje jaterní oxidaci mastných kyselin a zvyšuje klidový energetický výdej (termogenezi). V klinických studiích fáze III dosáhl Mazdutide mimořádného úbytku hmotnosti (přes 15–18 %) a bezprecedentního poklesu jaterního tuku až o 70–80 %.",
+    "effects": [
+      "mohutné potlačení chuti k jídlu a redukce viscerálního tuku",
+      "přímé zvýšení klidového energetického výdeje stimulací glukagonu",
+      "dramatický úbytek tuku v játrech při MASH/NASH jaterní steatóze",
+      "zlepšení lipidového profilu (pokles LDL, triglyceridů a jaterních enzymů)",
+      "výrazné zlepšení inzulínové senzitivity a glykémie"
+    ],
+    "dosage": {
+      "short": "3–9 mg jednou týdně subkutánně (titrační schéma)",
+      "long": "Aplikuje se subkutánně jednou týdně inzulínovou stříkačkou. Zahajuje se dávkou 3 mg týdně po dobu 4 týdnů, poté se titruje na 6 mg a u těžké obezity na 9 mg týdně."
+    },
+    "warning": "Časté počáteční gastrointestinální příznaky (nauzea, průjem), které odeznívají při postupné titraci. Zvyšuje srdeční tep o 3–5 tepů/min v důsledku glukagonové stimulace.",
+    "mechanism": "Současný plný agonismus na GLP-1 receptorech v hypotalamu a beta-buňkách pankreatu a na glukagonových receptorech (GCGR) v hepatocytech, stimulující lipolýzu a beta-oxidaci mastných kyselin.",
+    "halfLife": "Cca 110–120 hodin (umožňuje pohodlné podání 1x týdně)",
+    "interactions": [
+      "Inzulín a sulfonylmočoviny (nutná redukce dávky kvůli riziku hypoglykémie)",
+      "Perorální léky (zpomalené vyprazdňování žaludku ovlivňuje absorpci)"
+    ],
+    "naturalSources": [
+      "syntetický peptidový analog oxyntomodulinu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 759,
+    "name": "Survodutide (BI 456906)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "GLP-1",
+      "glukagon",
+      "MASH",
+      "fibroza",
+      "redukce"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Duální agonista GLP-1 a glukagonu od Boehringer Ingelheim pro léčbu MASH a obezity.",
+    "description": "Survodutide (BI 456906) je pokročilý duální receptorový agonista GLP-1 a glukagonu vyvinutý ve spolupráci společností Boehringer Ingelheim a Zealand Pharma. V přelomové studii fáze II publikované v The New England Journal of Medicine (NEJM 2024) dosáhl Survodutide u 83 % pacientů s MASH (metabolicky asociovanou steatohepatitidou) statisticky významného zlepšení zánětu jater a až u 65 % pacientů zvrátil jaterní fibrózu bez zhoršení stavu. Současně způsobuje úbytek tělesné hmotnosti kolem 15–19 %.",
+    "effects": [
+      "průlomové zvrácení jaterní fibrózy a zánětu u MASH/NASH",
+      "masivní redukce viscerálního a jaterního tuku",
+      "silné potlačení chuti k jídlu a navození sytosti",
+      "zvýšení klidového energetického výdeje přes glukagonové receptory",
+      "kardiovaskulární protekce a snížení krevního tlaku"
+    ],
+    "dosage": {
+      "short": "2.4–4.8 mg jednou týdně subkutánně (s pomalou titrací)",
+      "long": "Aplikace subkutánně 1x týdně. Začíná se na 0.6 mg týdně a dávka se zvyšuje každé 4 týdny (1.2 mg -> 2.4 mg -> 3.6 mg -> 4.8 mg) pro zamezení nauzey."
+    },
+    "warning": "Výzkumná substance ve fázi III klinických zkoušek. Může způsobovat počáteční zažívací potíže. Kontraindikován při rodinné anamnéze medulárního karcinomu štítné žlázy.",
+    "mechanism": "Agonismus na GLP-1R a GCGR s vyváženým poměrem afinit, což vede k duální regulaci energetického příjmu (centrální sytost) a energetického výdeje (jaterní ketogeneze a termogeneze).",
+    "halfLife": "Cca 6–8 dní",
+    "interactions": [
+      "Inzulín (přísně monitorovat glykémii)",
+      "Orální antikoncepce (zpomalené vstřebávání v prvních týdnech)"
+    ],
+    "naturalSources": [
+      "syntetický peptidový analog odvozený z oxyntomodulinu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 760,
+    "name": "Cagrilintide (AM833)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "amylin",
+      "CagriSema",
+      "redukce",
+      "hlad",
+      "synergie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Dlouhodobě působící analog amylinu; v kombinaci se semaglutidem tvoří CagriSema.",
+    "description": "Cagrilintide (AM833) je syntetický, dlouhodobě působící acylovaný analog amylinu vyvinutý společností Novo Nordisk. Amylin je fyziologický neuroendokrinní peptid ko-sekretovaný s inzulínem z beta-buněk pankreatu, který působí v mozkovém kmeni (area postrema) a indukuje sytost nezávisle na GLP-1 dráze. V kombinaci se semaglutidem (ve fixní kombinaci známé jako CagriSema) spouští duální neurochemické potlačení hladu s úbytkem hmotnosti přesahujícím 25 %, což se vyrovná bariatrické operaci.",
+    "effects": [
+      "nový non-GLP-1 mechanismus navození sytosti přes amylinové receptory",
+      "zpomalení žaludeční motility bez silné nevolnosti",
+      "dramatická synergie s agonisty GLP-1 (CagriSema protokol)",
+      "redukce viscerálního tuku s ochranou svalové hmoty",
+      "stabilizace postprandiální glykémie"
+    ],
+    "dosage": {
+      "short": "0.3–2.4 mg jednou týdně subkutánně",
+      "long": "Aplikace subkutánně 1x týdně ve stejný den. Titrační protokol: zahájení na 0.3 mg týdně, s postupným navyšováním po 4 týdnech na 0.6 mg, 1.2 mg až cílových 2.4 mg týdně."
+    },
+    "warning": "Výzkumná substance. Nekombinovat s pramlinitidem. Při titraci dodržovat dostatečný příjem tekutin a elektrolytů.",
+    "mechanism": "Plný agonismus na amylinových receptorech (komplexy kalcitoninového receptoru CTR s proteiny modifikujícími aktivitu receptoru RAMP1, RAMP2 a RAMP3) v area postrema a nucleus tractus solitarii.",
+    "halfLife": "Cca 170–180 hodin (přibližně 7–8 dní)",
+    "interactions": [
+      "Semaglutid (slavný CagriSema stack – nejúčinnější kombinace na trhu)",
+      "Tirzepatid (aditivní snížení chuti k jídlu)"
+    ],
+    "naturalSources": [
+      "syntetický acylovaný analog lidského amylinu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 761,
+    "name": "Orforglipron (LY-3502970)",
+    "categoryKey": "experimental",
+    "tags": [
+      "GLP-1",
+      "oralni",
+      "nepeptid",
+      "tableta",
+      "redukce",
+      "Lilly"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "První perorální nepeptidový plný agonista GLP-1 receptoru užívaný bez ohledu na jídlo a vodu.",
+    "description": "Orforglipron (LY3502970) od společnosti Eli Lilly představuje obrovský technologický skok v léčbě obezity a diabetu. Na rozdíl od perorálního semaglutidu (Rybelsus), který je peptidem a vyžaduje přísné požití na lačno s minimem vody kvůli speciálnímu nosiči SNAC, je Orforglipron malou syntetickou nepeptidovou molekulou. Má vysokou orální biologickou dostupnost a lze jej užívat kdykoliv během dne bez ohledu na příjem jídla a tekutin. V klinických studiích fáze II dosáhl průměrného úbytku hmotnosti 14.7 % za 36 týdnů.",
+    "effects": [
+      "plný účinek GLP-1 v jednoduché denní tabletě bez injekcí",
+      "žádná omezení ohledně příjmu jídla, vody či načasování",
+      "silné potlačení chuti k jídlu a 'food noise' (neustálých myšlenek na jídlo)",
+      "snížení glykovaného hemoglobinu HbA1c a stabilizace glukózy",
+      "pokles systolického krevního tlaku a triglyceridů"
+    ],
+    "dosage": {
+      "short": "12–45 mg jednou denně perorálně (v tabletě)",
+      "long": "Užívá se jedna tableta 1x denně ráno nebo večer. Titrační schéma začíná na 12 mg denně a po 4 týdnech se postupně navyšuje na 24 mg, 36 mg až cílových 45 mg denně."
+    },
+    "warning": "Nepeptidová nízkomolekulární látka ve fázi III klinického testování. Může vyvolat přechodnou nauzeu a zácpu při příliš rychlé titraci.",
+    "mechanism": "Nízkomolekulární nepeptidový alosterický a ortosterický plný agonista lidského GLP-1 receptoru; stimuluje intracelulární akumulaci cAMP a glukózo-dependentní sekreci inzulínu.",
+    "halfLife": "Cca 29–48 hodin (ideální pro stabilní 24h působení v 1 tabletě)",
+    "interactions": [
+      "Inzulín (riziko hypoglykémie – nutno redukovat dávku)",
+      "Léky s úzkým terapeutickým oknem (sledovat vstřebávání)"
+    ],
+    "naturalSources": [
+      "syntetická nepeptidová molekula"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 762,
+    "name": "Thymalin",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "bioregulator",
+      "brzlik",
+      "imunita",
+      "thymus",
+      "Khavinson"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní khavinsonův thymický bioregulační peptid pro obnovu imunitního systému.",
+    "description": "Thymalin je biologický peptidový extrakt z brzlíku (thymu) skotu, vyvinutý v Petrohradském institutu bioregulace a gerontologie profesorem Vladimírem Khavinsonem. Brzlík je klíčovým orgánem pro zrání a diferenciaci T-lymfocytů, avšak již od puberty podléhá masivní involuci (atrofii). Thymalin obnovuje buněčnou imunitu, normalizuje poměr pomocných a cytotoxických T-lymfocytů (CD4+/CD8+), stimuluje syntézu interferonu a zvrací věkem podmíněnou imunosenescenci u chronicky nemocných a stárnoucích jedinců.",
+    "effects": [
+      "obnova struktury a funkce imunitního systému po infekcích či ozáření",
+      "normalizace subpopulací T-lymfocytů (CD3+, CD4+, CD8+)",
+      "stimulace fagocytózy a produkce endogenních interferonů",
+      "snížení incidence virových a bakteriálních infekcí",
+      "geroprotektivní účinek a prodloužení aktivního věku"
+    ],
+    "dosage": {
+      "short": "10 mg denně intramuskulárně po dobu 10 dnů",
+      "long": "Standardní protokol prof. Khavinsona: 10 mg lyofilizovaného prášku rozpuštěného v 1–2 ml fyziologického roztoku (0.9% NaCl) denně do svalu (intramuskulárně) po dobu 10 po sobě jdoucích dnů. Kúra se opakuje 1–2x ročně."
+    },
+    "warning": "Přírodní polypeptidový komplex. Extrémně bezpečná historie užívání od 80. let. Zřídka možná mírná lokální reakce v místě vpichu.",
+    "mechanism": "Epigenetická aktivace transkripce genů v nezralých thymocytech; stimulace diferenciace kmenových buněk kostní dřeně na funkční imunokompetentní T-buňky.",
+    "halfLife": "Biochemická indukce buněčné diferenciace přetrvává 6–12 měsíců po ukončení kúry",
+    "interactions": [
+      "Epithalon (klasický Khavinsonův longevity protokol: Thymalin + Epithalon)",
+      "Thymosin Alpha-1 (aditivní stimulace protivirové imunity)"
+    ],
+    "naturalSources": [
+      "přírodní polypeptidový extrakt z tkáně brzlíku (thymu) mladého skotu"
+    ],
+    "bannedStatus": "legal (východoevropské lékopisy), výzkumná substance"
+  },
+  {
+    "id": 763,
+    "name": "Vilon (Lys-Glu)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "bioregulator",
+      "dipeptid",
+      "epigenetika",
+      "chromatin",
+      "imunita"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Ultrakrátký dipeptidový bioregulátor pro dekondenzaci heterochromatinu a expresi genů.",
+    "description": "Vilon je syntetický bioregulační dipeptid složený ze dvou aminokyselin: L-lysinu a L-glutamové kyseliny (Lys-Glu / KE). Byl syntetizován na základě analýzy aktivních frakcí thymového extraktu. Vyznačuje se schopností pronikat přímo do buněčného jádra a vázat se na specifická místa histonů a DNA. Výzkumy prokázaly, že Vilon indukuje dekondenzaci zahuštěného heterochromatinu u starých buněk, čímž 'odemkne' a reaktivuje geny potlačené v procesu stárnutí, stimuluje proliferaci lymfocytů a potlačuje spontánní karcinogenezi.",
+    "effects": [
+      "epigenetická dekondenzace heterochromatinu u stárnoucích buněk",
+      "reaktivace umlčených genů a obnova syntézy proteinů",
+      "imunomodulace a stimulace regenerace thymových epiteliálních buněk",
+      "potlačení tvorby volných radikálů a oxidačního poškození DNA",
+      "prodloužení maximální délky života v pokusech na hlodavcích"
+    ],
+    "dosage": {
+      "short": "10–20 mcg subkutánně denně (nebo 1 mg orálně)",
+      "long": "Injekční protokol: 10–20 mcg (mikrogramů!) subkutánně 1x denně po dobu 10–20 dnů. V orální formě se užívá 1–2 mg denně nalačno. Cyklus se opakuje 2x ročně."
+    },
+    "warning": "Velmi účinný v mikrogramových koncentracích. Přísně dodržovat stanovené ředění a sterilitu.",
+    "mechanism": "Specifická interakce aminokyselinových zbytků Lys a Glu s velkým žlábkem dvoušroubovice DNA v promotorových oblastech genů imunitní odpovědi a proteosyntézy; dekondenzace heterochromatinu.",
+    "halfLife": "Rychlý rozpad na aminokyseliny, epigenetické změny přetrvávají týdny",
+    "interactions": [
+      "Epithalon (společné epigenetické longevity protokoly)",
+      "Corticagen / Pinealon (synergická regenerace nervového a imunitního systému)"
+    ],
+    "naturalSources": [
+      "syntetický dipeptid odvozený z aminokyselinových sekvencí thymu"
+    ],
+    "bannedStatus": "legal, výzkumná substance"
+  },
+  {
+    "id": 764,
+    "name": "Chonluten (Glu-Asp-Arg)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "bioregulator",
+      "plice",
+      "dychani",
+      "bronchy",
+      "EDR"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Tripeptidový bioregulátor bronchiální sliznice a plicní tkáně pro zdravé dýchací cesty.",
+    "description": "Chonluten je syntetický peptidový bioregulátor tvořený třemi aminokyselinami: kyselinou glutamovou, kyselinou asparagovou a argininem (Glu-Asp-Arg / EDR). Byl vyvinut pro cílenou regeneraci a normalizaci buněčného metabolismu v epiteliálních buňkách průdušek a plicní tkáně. Obnovuje funkci řasinkového epitelu, stimuluje syntézu plicního surfaktantu, snižuje zánětlivou reakci při astmatu, CHOPN a urychluje rekonvalescenci plic po těžkých virových pneumoniích (včetně následků COVID-19).",
+    "effects": [
+      "obnova a regenerace epiteliálních buněk průdušek a plicních alveol",
+      "zvýšení syntézy plicního surfaktantu a plicní elasticity",
+      "zmírnění bronchospasmů a kašle u chronických respiračních onemocnění",
+      "zvýšení dechové kapacity a okysličení krve u sportovců",
+      "ochrana plic před toxiny z kouření a znečištěného ovzduší"
+    ],
+    "dosage": {
+      "short": "1–2 kapsle (nebo 10–20 mcg subkutánně) denně po dobu 10–30 dnů",
+      "long": "V orální formě se užívá 1–2 kapsle (100–200 mcg peptidového komplexu) ráno nalačno po dobu 20–30 dnů. Injekčně 10–20 mcg SubQ denně po dobu 10–14 dnů."
+    },
+    "warning": "Netoxický peptid bez vedlejších účinků. Nenahrazuje akutní inhalační záchrannou léčbu při těžkém astmatickém záchvatu.",
+    "mechanism": "Penetrace do jader bronchiálních epiteliálních buněk, vazba na histonové proteiny a aktivace exprese genů kódujících plicní surfaktantové proteiny (SP-A, SP-B) a antioxidační enzymy.",
+    "halfLife": "Rychlý plazmatický poločas, buněčná indukce přetrvává měsíce",
+    "interactions": [
+      "Bronchogen (často kombinován pro maximální regeneraci dýchacího traktu)",
+      "NAC (synergie v mukolýze a ochraně plicních alveolů)"
+    ],
+    "naturalSources": [
+      "syntetický tripeptid odvozený z tkáně dýchacího systému"
+    ],
+    "bannedStatus": "legal, výzkumná substance"
+  },
+  {
+    "id": 765,
+    "name": "Melanotan I (Afamelanotide / Scenesse)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "melanotan",
+      "opalovani",
+      "fotoprotekce",
+      "MC1R",
+      "FDA"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Lineární analog alfa-MSH pro selektivní stimulaci melanogeneze a fotoprotekci bez afrodiziakálních vlivů.",
+    "description": "Melanotan I (Afamelanotide, komerční lék Scenesse schválený FDA a EMA) je syntetický lineární 13-aminokyselinový peptid, analog přirozeného alfa-melanocyty stimulujícího hormonu (alfa-MSH). Na rozdíl od Melanotanu II (který je cyklický a neselektivně stimuluje MC3R a MC4R v mozku s rizikem nauzey, vysokého tlaku a spontánních erekcí), je Melanotan I vysoce selektivní vůči receptoru MC1R na melanocytech v kůži. Bezpečně spouští syntézu tmavého pigmentu eumelaninu bez vedlejších neuropsychických efektů.",
+    "effects": [
+      "selektivní stimulace produkce fotoprotektivního eumelaninu v pokožce",
+      "hluboké a rovnoměrné opálení s minimální nutností expozice UV záření",
+      "ochrana kožních buněk před spálením a fotopoškozením DNA",
+      "léčba fototoxicity a erytropoetické protoporfyrie (EPP)",
+      "absence erektilních a nauzeózních vedlejších účinků typických pro MT-2"
+    ],
+    "dosage": {
+      "short": "0.5–1.5 mg subkutánně před mírnou expozicí slunci",
+      "long": "Zahajovací protokol: 0.5 mg SubQ denně večer po dobu 3–5 dnů pro ověření snášenlivosti. Následně 1 mg až 1.5 mg obden v kombinaci s mírným sluněním (10–15 minut). Ředění: 10 mg lahvička + 2 ml BAC water (1 mg = 20 jednotek na U-100 inzulínce)."
+    },
+    "warning": "Může způsobit ztmavnutí stávajících mateřských znamének a pih (pravidelně kontrolovat u dermatologa!). Nepoužívat při anamnéze melanomu.",
+    "mechanism": "Vysoce afinitní selektivní agonismus na receptoru pro melanokortin typu 1 (MC1R) v membránách kožních melanocytů; aktivace adenylátcyklázy, zvýšení cAMP a aktivace enzymu tyrosinázy řídícího syntézu eumelaninu.",
+    "halfLife": "Cca 30–45 minut (stimulace pigmentace v melanocytech přetrvává dny až týdny)",
+    "interactions": [
+      "Tyrosin (doplnění aminokyselinového substrátu pro syntézu melaninu)",
+      "Astaxanthin (aditivní vnitřní fotoprotekce kůže)"
+    ],
+    "naturalSources": [
+      "syntetický lineární analog lidského hormonu alfa-MSH"
+    ],
+    "bannedStatus": "banned-sport (WADA S2.2), lék na předpis (Scenesse)"
+  },
+  {
+    "id": 766,
+    "name": "ACE-031 (Ramatercept)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "myostatin",
+      "hypertrofie",
+      "svaly",
+      "sila",
+      "ActRIIB"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Rozpustný fúzní receptor ActRIIB blokující myostatin a stimulující masivní růst svalů.",
+    "description": "ACE-031 (Ramatercept) je rekombinantní fúzní protein tvořený extracelulární vazebnou doménou lidského activinového receptoru typu IIB (ActRIIB) spojenou s Fc fragmentem lidského imunoglobulinu IgG1. Funguje jako solubilní 'návnada' (decoy receptor) – váže na sebe cirkulující myostatin, GDF-11 a activiny A a B v krevním oběhu dříve, než se stihnou navázat na svalové receptory. Odstraněním myostatinové brzdy vyvolává masivní a rychlý růst kosterního svalstva zcela nezávisle na androgenních receptorech.",
+    "effects": [
+      "odstranění fyziologické myostatinové brzdy růstu svalové tkáně",
+      "masivní svalová hypertrofie bez androgenních vedlejších účinků",
+      "významný nárůst absolutní svalové síly a hustoty kostí",
+      "nulová konverze na estrogeny a nulová toxicita pro prostatu",
+      "zkoumán pro léčbu Duchennovy svalové dystrofie (DMD)"
+    ],
+    "dosage": {
+      "short": "1 mg/kg tělesné hmotnosti jednou za 1–2 týdny subkutánně",
+      "long": "V experimentálních protokolech: 1–3 mg subkutánně jednou za 7 až 14 dnů po dobu maximálně 3–4 týdnů. Vysoce nákladná a vzácná sloučenina."
+    },
+    "warning": "V klinických studiích fáze II byly u dětských pacientů zaznamenány reverzibilní epistaxe (krvácení z nosu) a dilatace kožních kapilár (telangiektázie) v důsledku blokády endoteliálních activinů. Striktně experimentální látka.",
+    "mechanism": "Vysokoafinitní vazba a neutralizace ligandů rodiny TGF-beta (myostatin, activin A/B, GDF-11), což brání aktivaci signální dráhy Smad2/3 a uvolňuje fosforylaci Akt/mTOR ve svalových buňkách.",
+    "halfLife": "Cca 10–14 dní (díky IgG1-Fc fúznímu nosiči)",
+    "interactions": [
+      "Follistatin-344 (společné cílení na myostatinovou kaskádu)",
+      "Testosteron / Anabolika (synergický nárůst svalové syntézy přes dva zcela odlišné mechanismy)"
+    ],
+    "naturalSources": [
+      "rekombinantní fúzní protein ActRIIB-Fc"
+    ],
+    "bannedStatus": "banned-sport (WADA S4.4), výzkumná substance"
+  },
+  {
+    "id": 767,
+    "name": "Follistatin-315",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "follistatin",
+      "myostatin",
+      "svaly",
+      "rust",
+      "FST-315"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Přirozená cirkulující izoforma follistatinu s prodlouženým systémovým poločasem.",
+    "description": "Follistatin-315 (FST-315) je primární cirkulující izoforma glykoproteinu follistatinu v lidské krevní plazmě. Oproti kratší izoformě Follistatin-344 (která se rychle štěpí na tkáňově vázanou FST-288 s vysokou afinitou k heparansulfátu) má FST-315 neutrální C-terminální prodloužení. To mu umožňuje volně cirkulovat v systémovém oběhu, vázat volný myostatin v krvi a vykazovat delší biologický poločas. Je klíčovým inhibitorem svalové atrofie a stimulátorem satelitních svalových buněk.",
+    "effects": [
+      "systémová blokáda cirkulujícího myostatinu a activinů v krevní plazmě",
+      "stimulace proliferace a diferenciace svalových satelitních buněk",
+      "delší setrvání v krevním oběhu oproti kratším formám follistatinu",
+      "významná svalová hypertrofie a nárůst čisté svalové hmoty",
+      "protizánětlivý vliv na klouby a pojivové tkáně"
+    ],
+    "dosage": {
+      "short": "100 mcg denně subkutánně po dobu 10–20 dnů",
+      "long": "Aplikuje se 100 mcg subkutánně denně po dobu 10 až maximálně 20 po sobě jdoucích dnů. Poté je nutná pauza minimálně 2–3 měsíce."
+    },
+    "warning": "Experimentální substance. Může dočasně oslabit pevnost šlachových úponů v důsledku extrémně rychlého růstu svalových bříšek (nutno dbát na adekvátní regeneraci šlach např. pomocí BPC-157).",
+    "mechanism": "Tvorba ireverzibilního ekvimolárního komplexu s myostatinem (GDF-8) a activiny, což znemožňuje jejich interakci s receptory ActRIIB; aktivace dráhy IGF-1/Akt/mTOR.",
+    "halfLife": "Cca několik hodin v aktivní formě, vazba na myostatin je ireverzibilní",
+    "interactions": [
+      "BPC-157 / TB-500 (ochrana šlach a vazů před rychlým nárůstem svalové síly)",
+      "Kreatin (synergická podpora buněčné hydratace a síly)"
+    ],
+    "naturalSources": [
+      "rekombinantní izoforma lidského follistatinu"
+    ],
+    "bannedStatus": "banned-sport (WADA S4.4), výzkumná substance"
+  },
+  {
+    "id": 768,
+    "name": "Adropin",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "metabolismus",
+      "cevy",
+      "eNOS",
+      "inzulin",
+      "ENHO"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Peptidový hormon kódovaný genem ENHO chránící cévy a řídící spalování tuků.",
+    "description": "Adropin (z latinského 'aduro' - zapálit, a 'pinquis' - tuk) je 76-aminokyselinový peptidový hormon kódovaný genem ENHO (Energy Homeostasis Associated), syntetizovaný především v játrech a mozku. Jeho hladina v krvi prudce klesá u obezity a inzulínové rezistence. Adropin funguje jako hlavní metabolický přepínač: stimuluje endoteliální syntézu oxidu dusnatého (eNOS) přes receptory NB-3/Notch, chrání cévy před aterosklerózou a v játrech a svalech přepíná metabolismus z utilizace glukózy na spalování mastných kyselin.",
+    "effects": [
+      "masivní stimulace endoteliální syntézy oxidu dusnatého (eNOS)",
+      "zlepšení elasticity cév a snížení kardiovaskulárního rizika",
+      "přepnutí mitochondriálního metabolismu na spalování mastných kyselin",
+      "významné zlepšení inzulínové senzitivity a glukózové homeostázy",
+      "neuroprotektivní účinek na hematoencefalickou bariéru"
+    ],
+    "dosage": {
+      "short": "100–300 mcg denně subkutánně (výzkumný protokol)",
+      "long": "V preklinických a experimentálních modelech: 100 až 300 mcg subkutánně 1x denně ráno po dobu 2–4 týdnů. Ředění v bakteriostatické vodě, skladovat v chladničce při 2–8 °C."
+    },
+    "warning": "Experimentální metabolický peptid ve stadiu preklinických studií. Přísně dbát na sterilitu a skladování v chladu.",
+    "mechanism": "Vazba na membránový receptor neural cell adhesion molecule Contactin-6 (NB-3/CNTN6) a aktivace signalizace Notch1; upregulace transkripce endoteliální syntázy oxidu dusnatého (eNOS) přes dráhu Akt/VEGFR2.",
+    "halfLife": "Cca 2–3 hodiny",
+    "interactions": [
+      "MOTS-c (synergický mitochondriální a metabolický stack)",
+      "Citrulin / Arginin (doplnění substrátu pro adropinem stimulovanou eNOS)"
+    ],
+    "naturalSources": [
+      "přirozený lidský peptidový hormon jater a mozku"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 769,
+    "name": "GDF11 (Growth Differentiation Factor 11)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "longevity",
+      "omlazeni",
+      "srdce",
+      "neurogeneze",
+      "Harvard"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Cirkulující protein ze skupiny TGF-beta spojovaný s omlazením srdce a neurogenezí.",
+    "description": "GDF11 (Growth Differentiation Factor 11) je signální protein rodiny TGF-beta. V roce 2013–2014 vzbudil celosvětovou senzaci po publikaci výzkumů Harvardovy univerzity (laboratoř Dr. Amy Wagersové), které v modelech heterochronní parabiózy (propojení krevního oběhu mladé a staré myši) identifikovaly GDF11 jako klíčový faktor mládí. Podání GDF11 vedlo k reverzi věkem podmíněné hypertrofie levé komory srdeční, obnově neurogeneze a vaskulatury v mozku a zvýšení svalové regenerace.",
+    "effects": [
+      "reverze věkem podmíněné kardiomyopatie a hypertrofie myokardu",
+      "stimulace neurogeneze a proliferace kmenových buněk v hipokampu",
+      "omlazení mozkové vaskulatury a cerebrálního krevního toku",
+      "obnova funkčnosti satelitních svalových buněk u starších jedinců",
+      "zkoumán pro prodloužení funkční délky života"
+    ],
+    "dosage": {
+      "short": "10–50 mcg subkutánně 1–3x týdně (mikrodávkování)",
+      "long": "V biohackingových protokolech se využívá výhradně ultra-nízké mikrodávkování: 10 až 50 mcg SubQ 1–2x týdně. Vyšší dávky mohou působit antianabolicky, proto je přesná titrace kritická."
+    },
+    "warning": "Dvousečná zbraň – fyziologické hladiny omlazují tkáně, avšak vysoké supraterapeutické dávky inhibují svalovou regeneraci a mohou vést k anémii. Vyžaduje přesné laboratorní monitorování krevního obrazu.",
+    "mechanism": "Vazba na receptory ALK4/ALK5 a ActRIIA/ActRIIB; modulace fosforylace Smad2/3; stimulace endoteliální angiogeneze v neurogenních nikách mozku.",
+    "halfLife": "Cca 4–6 hodin",
+    "interactions": [
+      "SS-31 (synergická mitochondriální kardiální protekce)",
+      "Epithalon (komplexní gerontologický protokol)"
+    ],
+    "naturalSources": [
+      "přirozený cirkulující lidský protein"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 770,
+    "name": "Livagen (Lys-Glu-Asp-Ala)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "bioregulator",
+      "jatra",
+      "chromatin",
+      "detoxikace",
+      "Khavinson"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Krátký peptidový bioregulátor jater pro reaktivaci genů a regeneraci hepatocytů.",
+    "description": "Livagen je syntetický bioregulační tetrapeptid složený ze 4 aminokyselin: L-lysinu, L-glutamové kyseliny, L-asparagové kyseliny a L-alaninu (Lys-Glu-Asp-Ala). Byl vyvinut v Petrohradském institutu bioregulace pro stimulaci jaterní tkáně a imunitního systému. V cytogenetických studiích Livagen prokázal schopnost aktivovat ribozomální geny a deheterochromatizovat zahuštěné oblasti chromozomů v buňkách starých osob, což dramaticky stimuluje proteosyntézu a regeneraci jater po virových infekcích, toxickém poškození či cirhóze.",
+    "effects": [
+      "aktivace ribozomálních genů a syntézy proteinů v hepatocytech",
+      "dekondenzace heterochromatinu u stárnoucích jaterních buněk",
+      "urychlení regenerace jater po toxickém a medikamentózním poškození",
+      "normalizace hladin jaterních transamináz (ALT, AST)",
+      "podpora detoxikační a metabolické kapacity jater"
+    ],
+    "dosage": {
+      "short": "10–20 mcg subkutánně denně po dobu 10–20 dnů (nebo 1–2 mg orálně)",
+      "long": "Subkutánně 10–20 mcg denně inzulínovou stříkačkou po dobu 10–14 dnů. Orálně 1–2 mg denně nalačno po dobu 20 dnů. Cyklus opakovat 2x ročně."
+    },
+    "warning": "Netoxický fyziologický peptid. Žádné hlášené vedlejší účinky v klinických studiích.",
+    "mechanism": "Epigenetická vazba tetrapeptidu na DNA a histonové proteiny v jádrech hepatocytů, vedoucí k odbalení heterochromatinu a transkripci enzymů jaterního metabolismu.",
+    "halfLife": "Rychlý rozklad na aminokyseliny, epigenetické nastavení přetrvává měsíce",
+    "interactions": [
+      "TUDCA (dokonalý synergický stack pro ochranu a regeneraci jater)",
+      "Vesugen (obnova jaterního i vaskulárního endotelu)"
+    ],
+    "naturalSources": [
+      "syntetický tetrapeptid odvozený z aminokyselinových sekvencí jaterní tkáně"
+    ],
+    "bannedStatus": "legal, výzkumná substance"
+  },
+  {
+    "id": 771,
+    "name": "Testagen (Lys-Glu-Asp-Gly)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "bioregulator",
+      "varlata",
+      "testosteron",
+      "spermiogeneze",
+      "Khavinson"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Khavinsonův tetrapeptidový bioregulátor varlat stimulující spermatogenezi a testosteron.",
+    "description": "Testagen je syntetický krátký bioregulační peptid složený z L-lysinu, L-glutamové kyseliny, L-asparagové kyseliny a L-glycinu (Lys-Glu-Asp-Gly). Působí tkáňově specificky na samčí reprodukční systém – konkrétně na Leydigovy a Sertoliho buňky varlat. Normalizuje funkci varlat narušenou stárnutím, toxickými vlivy, přetížením nebo poškozením osy HPTA. Zvyšuje motilitu a počet zdravých spermií a podporuje přirozenou syntézu endogenního testosteronu bez rizika negativní zpětné vazby na hypofýzu.",
+    "effects": [
+      "tkáňově specifická podpora a regenerace tkáně varlat",
+      "stimulace spermatogeneze (zvýšení počtu a motility spermií)",
+      "podpora fyziologické syntézy testosteronu v Leydigových buňkách",
+      "ochrana testikulární tkáně před oxidačním stresem a toxiny",
+      "nulová suprese přirozené hormonální osy HPTA"
+    ],
+    "dosage": {
+      "short": "10–20 mcg subkutánně denně po dobu 10–20 dnů (nebo 1–2 mg orálně)",
+      "long": "Subkutánní aplikace 10–20 mcg 1x denně ráno po dobu 10–14 dnů. Orální forma: 1–2 mg denně nalačno po dobu 20–30 dnů. Vhodné jako součást regeneračních protokolů a PCT."
+    },
+    "warning": "Netoxický peptid bez hormonální supresivní aktivity. Nezpůsobuje atrofii varlat (naopak stimuluje jejich přirozenou tkáň).",
+    "mechanism": "Interakce s DNA v Leydigových a Sertoliho buňkách, stimulace exprese enzymů steroidogeneze (CYP11A1, 3beta-HSD) a receptorů pro LH.",
+    "halfLife": "Rychlý plazmatický poločas, indukce tkáňové regenerace trvá měsíce",
+    "interactions": [
+      "Enclomifen (ideální PCT synergie: Enclomifen stimuluje LH/FSH a Testagen obnovuje varlata)",
+      "Zinek a Bor (doplnění minerálních kofaktorů syntézy testosteronu)"
+    ],
+    "naturalSources": [
+      "syntetický tetrapeptid zkoumaný v Petrohradském institutu gerontologie"
+    ],
+    "bannedStatus": "legal, výzkumná substance"
   }
 ]
