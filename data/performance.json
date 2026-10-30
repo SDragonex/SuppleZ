@@ -1088,5 +1088,242 @@
       "Panax notoginseng"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 228,
+    "name": "Fosfatidová kyselina (Phosphatidic Acid / Mediator)",
+    "categoryKey": "performance",
+    "tags": [
+      "anabolismus",
+      "mTOR",
+      "sila",
+      "hypertrofie",
+      "fosfolipid",
+      "bez-hormonu"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Lipidový sekundární posel přímo aktivující kinázu mTORC1 mechanickým tréninkovým stimulem.",
+    "description": "Fosfatidová kyselina (Phosphatidic Acid / patentovaná jako Mediator PA) je unikátní lipidový posel. Při silovém tréninku svalová vlákna registrují mechanické napětí, což aktivuje enzym fosfolipázu D (PLD), která syntetizuje fosfatidovou kyselinu. Kyselina fosfatidová se přímo váže na doménu FRB kinázy mTORC1, čímž spouští svalovou proteosyntézu zcela nezávisle na hormonech, inzulínu či růstových faktorech. V placebem kontrolovaných studiích na trénovaných atletech vedla suplementace 750 mg PA k dvojnásobnému nárůstu čisté svalové hmoty a síly.",
+    "effects": [
+      "přímá allosterická aktivace kinázy mTORC1 nezávisle na hormonech",
+      "významný nárůst svalové hypertrofie a maximální síly na legpressu a benchpressu",
+      "zesílení anabolického signálu z mechanického napětí činek",
+      "žádný vliv na přirozenou hladinu hormonů (testosteron, estrogen, štítná žláza)",
+      "vhodná pro muže i ženy v naturální přípravě"
+    ],
+    "dosage": {
+      "short": "750 mg denně (v tréninkové dny 30–60 min před cvičením)",
+      "long": "Dávkujte 750 mg standardizované fosfatidové kyseliny (Mediator PA) přibližně 45 minut před silovým tréninkem společně s lehkým proteinovým jídlem. V netréninkové dny užívejte 750 mg ráno se snídaní."
+    },
+    "warning": "Zcela přírodní a bezpečný lipid. Vyžaduje dostatečný stimul z těžkého silového tréninku (bez mechanického napětí je efekt minimální).",
+    "mechanism": "Přímá allosterická vazba na doménu vázající FKBP12-rapamycin (FRB) kinázy mTORC1; stimulace fosforylace p70S6K a 4E-BP1 vedoucí k translaci svalových bílkovin.",
+    "halfLife": "Cca 4–6 hodin (vrchol aktivace mTOR během tréninku a po něm)",
+    "interactions": [
+      "Leucin / Syrovátkový protein (synergie: leucin aktivuje Sestrin2 a PA přímo mTOR)",
+      "Kreatin Monohydrát (ideální silový a hypertrofický stack)"
+    ],
+    "naturalSources": [
+      "sójový a slunečnicový lecitin"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 229,
+    "name": "Peak ATP (Disodná sůl adenosintrifosfátu)",
+    "categoryKey": "performance",
+    "tags": [
+      "ATP",
+      "sila",
+      "objem",
+      "vazodilatace",
+      "unava",
+      "Peak-ATP"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Patentovaná orální disodná sůl ATP zvyšující průtok krve svaly a vápníkovou kontraktilitu.",
+    "description": "Peak ATP je patentovaná stabilní disodná sůl adenosintrifosfátu (ATP). Tradičně se věřilo, že orální ATP nemá smysl, protože se rozloží v žaludku. Výzkumy z University of Tampa však odhalily, že perorálně podaný Peak ATP zvyšuje hladiny extracelulárního ATP v krevním řečišti. Tento extracelulární ATP se váže na purinergní P2Y receptory v cévním endotelu, stimuluje uvolnění oxidu dusnatého (NO) a prostacyklinu, dramaticky rozšiřuje cévy v pracujícím svalu a zvyšuje influx vápníku, což oddaluje svalové selhání.",
+    "effects": [
+      "zvýšení počtu opakování v sérii do selhání a celkového tréninkového objemu",
+      "masivní vazodilatace a prokrvení svalů během zátěže (hyperémie)",
+      "zlepšení svalové dráždivosti a kinetiky vápníku (kontrakce myocytů)",
+      "urychlení odplavování laktátu a metabolického odpadu",
+      "významný nárůst svalové tloušťky a síly v klinických studiích"
+    ],
+    "dosage": {
+      "short": "400 mg 30 minut před tréninkem nalačno",
+      "long": "Užívejte 400 mg Peak ATP přibližně 30 minut před tréninkem na lačno se sklenicí vody. V netréninkové dny užívejte 400 mg ráno nalačno."
+    },
+    "warning": "Užívejte nalačno (jídlo může snížit vazodilatační odezvu). Bezpečný doplněk bez stimulačních vedlejších účinků na srdce.",
+    "mechanism": "Vazba extracelulárního ATP na endoteliální purinergní receptory P2Y2, aktivace eNOS a syntéza NO; zvýšení vychytávání glukózy a influxu Ca2+ do myoplazmy.",
+    "halfLife": "Rychlý metabolický obrat (endoteliální stimulace trvá 1–2 hodiny)",
+    "interactions": [
+      "Kreatin Monohydrát (kreatin zásobuje intracelulární ATP a Peak ATP extracelulární)",
+      "Beta-Alanin (synergické oddálení svalového vyčerpání)"
+    ],
+    "naturalSources": [
+      "univerzální energetické platidlo všech živých buněk"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 230,
+    "name": "Nitrosigine (Inositol-stabilizovaný arginin silikát)",
+    "categoryKey": "performance",
+    "tags": [
+      "pumpa",
+      "NO",
+      "vazodilatace",
+      "kremik",
+      "fokus",
+      "Nitrosigine"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Patentovaný komplex argininu a křemíku zvyšující oxid dusnatý po dobu až 6 hodin.",
+    "description": "Nitrosigine (Inositol-stabilized Arginine Silicate / ASI) je patentovaný komplex aminokyseliny L-argininu, křemíku a inositolu. Běžný L-arginin je v játrech masivně ničen enzymem arginázou (má orální dostupnost pod 20 %). Vazba na křemík a inositol chrání arginin před degradací arginázou. Nitrosigine zvyšuje hladiny argininu v krvi již za 15 minut a udržuje zvýšenou produkci oxidu dusnatého (NO) až 6 hodin (mnohem déle než citrulin). Navíc křemík posiluje elasticitu cévních stěn a zlepšuje kognitivní soustředění na tréninku.",
+    "effects": [
+      "rychlý nástup vazodilatace již za 15 minut a trvání až 6 hodin",
+      "významné zvýšení průměru cév a prokrvení kosterního svalstva",
+      "ochrana cévní výstelky křemíkem a podpora elasticity arterií",
+      "prokázané zlepšení mentálního fokusu a rychlosti zpracování informací",
+      "snížení markerů svalového poškození po těžkém tréninku"
+    ],
+    "dosage": {
+      "short": "750–1 500 mg 15–30 minut před tréninkem",
+      "long": "Dávkujte 1 500 mg Nitrosiginu rozmíchaného ve vodě 20–30 minut před tréninkem. Vynikající v kombinaci s citrulinem a glycerolem."
+    },
+    "warning": "Velmi bezpečný doplněk stravy s klinickou certifikací FDA GRAS.",
+    "mechanism": "Stabilizovaný komplex obchází degradaci jaterní arginázou; dramaticky zvyšuje biologickou dostupnost L-argininu v plazmě pro endoteliální syntázu NO (eNOS); křemík stimuluje syntézu elastinu.",
+    "halfLife": "Cca 6 hodin kontinuální stimulace NO",
+    "interactions": [
+      "Citrulin Malát (extrémní duální NO stack – okamžitý i dlouhotrvající vrchol)",
+      "Glycerol (kombinace obří vazodilatace s osmotickou pumpou)"
+    ],
+    "naturalSources": [
+      "patentovaný komplex minerálního křemíku, inositolu a argininu"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 231,
+    "name": "Palatinóza (Isomaltulóza)",
+    "categoryKey": "performance",
+    "tags": [
+      "sacharidy",
+      "vytrvalost",
+      "glykemie",
+      "stabilni-energie",
+      "izomaltuloza"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Pomalý disacharid s nízkým glykemickým indexem (GI 32) pro stabilní vytrvalostní energii.",
+    "description": "Palatinóza (funkční sacharid isomaltulóza) je přírodní disacharid složený z glukózy a fruktózy spojených alfa-1,6-glykosidickou vazbou (na rozdíl od sacharózy, která má vazbu alfa-1,2). Tato silnější vazba se v tenkém střevě enzymaticky štěpí 4–5x pomaleji. Výsledkem je velmi nízký glykemický index (GI pouhých 32), minimální vyplavení inzulínu a plynulé, rovnoměrné uvolňování glukózy do krve po dobu několika hodin. Umožňuje sportovcům současně pálit tuky a mít stabilní dodávku sacharidů bez hypoglykemických pádů.",
+    "effects": [
+      "dlouhodobý a stabilní přísun energie po dobu 2–3 hodin bez propadu",
+      "velmi nízký glykemický a inzulínový index (GI 32)",
+      "zachování vysoké míry oxidace tuků při vytrvalostním výkonu",
+      "šetrnost k zubní sklovině (nekazí zuby)",
+      "vynikající žaludeční tolerance bez nadýmání a křečí"
+    ],
+    "dosage": {
+      "short": "30–50 g v iontovém nápoji před a během vytrvalostního výkonu",
+      "long": "Rozmíchejte 30 až 50 gramů Palatinózy v 500–750 ml vody a popíjejte před vytrvalostním tréninkem nebo v průběhu dlouhé zátěže (běh, cyklistika, triatlon)."
+    },
+    "warning": "Nehodí se jako rychlý potréninkový cukr pro okamžitou anabolizaci (k tomu slouží maltodextrin/glukóza). Je určena primárně na vytrvalost a stabilní energii.",
+    "mechanism": "Pomalá enzymatická hydrolýza isomaltulázovým komplexem v kartáčovém lemu tenkého střeva; pomalá absorpce glukózy přes SGLT1 a fruktózy přes GLUT5 bránící prudkému vzestupu inzulínu.",
+    "halfLife": "Doba trávení a absorpce cca 2–3 hodiny",
+    "interactions": [
+      "Elektrolyty (optimální vytrvalostní hydratační nápoj)",
+      "BCAA / EAA (ochrana svalů při dlouhotrvající zátěži)"
+    ],
+    "naturalSources": [
+      "cukrová řepa",
+      "cukrová třtina",
+      "med"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 232,
+    "name": "Čistý fermentovaný L-Citrulin (Free form)",
+    "categoryKey": "performance",
+    "tags": [
+      "citrulin",
+      "pumpa",
+      "NO",
+      "sila",
+      "cista-forma",
+      "fermentovany"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "100% čistá volná aminokyselina bez kyseliny jablečné pro maximální koncentraci citrulinu.",
+    "description": "Zatímco Citrulin Malát obsahuje přibližně 33 až 50 % kyseliny jablečné (malátu), čistý fermentovaný L-Citrulin (Free form) představuje 100% čistou volnou neesenciální aminokyselinu vyrobenou přírodní bakteriální fermentací. L-Citrulin se v ledvinách enzymaticky konvertuje na L-arginin a následně na oxid dusnatý (NO). Užívání čisté volné formy umožňuje přijmout vyšší reálné množství aktivního citrulinu v menším objemu prášku bez kyselé chuti malátu, což ocení sportovci s citlivým žaludkem.",
+    "effects": [
+      "100% čistá účinná látka bez příměsi kyseliny jablečné",
+      "masivní zvýšení plazmatického argininu a syntézy oxidu dusnatého",
+      "brutální svalová pumpa, vaskularita a transport živin do svalů",
+      "šetrný k žaludku (nemá kyselé pH malátových solí)",
+      "podpora recyklace amoniaku v močovinovém cyklu"
+    ],
+    "dosage": {
+      "short": "4–6 g 30–45 minut před tréninkem",
+      "long": "Dávkujte 4 až 6 gramů čistého volného L-citrulinu (odpovídá cca 8–10 g citrulin malátu 2:1) 30–45 minut před cvičením. Lze kombinovat s elektrolyty a glycerolem."
+    },
+    "warning": "Při dávkách nad 10 g čisté volné formy může u citlivých jedinců vyvolat mírné nutkání na stolici.",
+    "mechanism": "Konverze na argininosukcinát enzymem argininosukcinát syntázou v ledvinách a následné štěpení na L-arginin, který zásobuje eNOS; přímá účast v močovinovém cyklu.",
+    "halfLife": "Cca 1 hodina (zvýšení argininu trvá 4–5 hodin)",
+    "interactions": [
+      "Glycerol (vrcholná kombinace vazodilatační a tekutinové pumpy)",
+      "Kofein a Tyrosin (pre-workout synergický komplex)"
+    ],
+    "naturalSources": [
+      "vodní meloun (Citrullus lanatus)",
+      "fermentace kukuřice"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 233,
+    "name": "Vytrvalostní elektrolytový komplex (Sodík, Draslík, Hořčík)",
+    "categoryKey": "performance",
+    "tags": [
+      "elektrolyty",
+      "sodik",
+      "draslik",
+      "krece",
+      "hydratace",
+      "kardio"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Vědecky vyvážený poměr iontů (1000 mg Na+, 200 mg K+, 60 mg Mg2+) pro prevenci hyponatrémie.",
+    "description": "Vytrvalostní elektrolytový protokol vychází z moderních poznatků sportovní medicíny o složení potu. Sportovci při intenzivní zátěži ztrácejí především sodík (cca 800–1 500 mg sodíku na litr potu) a pouze malé množství draslíku a hořčíku. Pití čisté vody bez elektrolytů vede k nebezpečnému naředění krve (diluční hyponatrémii), poklesu výkonu a svalovým křečím. Tento vědecký poměr (1 000 mg sodíku z mořské soli, 200 mg draslíku a 60 mg vysoce vstřebatelného chelátovaného hořčíku) udržuje buněčný osmotický tlak a nervosvalovou dráždivost.",
+    "effects": [
+      "prevence diluční hyponatrémie a svalových křečí při těžkém pocení",
+      "udržení objemu cirkulující krve a krevního tlaku při kardiu",
+      "optimalizace funkce sodíko-draselné pumpy (Na+/K+-ATPázy) ve svalech",
+      "oddálení centrální i periferní únavy v horkém prostředí",
+      "zlepšení absorpce vody a glukózy v tenkém střevě přes SGLT1"
+    ],
+    "dosage": {
+      "short": "1 dávka (1000 mg Na, 200 mg K, 60 mg Mg) na 750–1000 ml vody",
+      "long": "Rozpusťte 1 dávku v 750 až 1 000 ml vody a popíjejte během tréninku nebo před těžkou fyzickou aktivitou v teple. V ranním vstávání slouží jako okamžitý restart buněčné hydratace."
+    },
+    "warning": "Při sedavém způsobu života bez pocení není nutné dodávat vysoké dávky sodíku. U hypertoniků konzultovat s lékařem.",
+    "mechanism": "Udržení extracelulární osmolarity ionty Na+ a Cl-; udržení intracelulární polarity ionty K+; podpora kotransportu živin transportérem SGLT1; kofaktorová stabilizace ATP ionty Mg2+.",
+    "halfLife": "Rychlá regulace ledvinami a aldosteronem",
+    "interactions": [
+      "Glycerol (extrémní nárůst retence tekutin ve svalu)",
+      "Palatinóza / Sacharidy (urychlení rehydratace přes střevní kotransport)"
+    ],
+    "naturalSources": [
+      "keltská a himalájská mořská sůl",
+      "kokosová voda"
+    ],
+    "bannedStatus": "legal"
   }
 ]

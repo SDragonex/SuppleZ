@@ -2477,5 +2477,125 @@
       "přirozený endogenní steroidní hormon kůry nadledvin a gonád"
     ],
     "bannedStatus": "legal (endogenní biomarker)"
+  },
+  {
+    "id": 568,
+    "name": "Kisspeptin-54 (Metastin)",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "peptid",
+      "kisspeptin",
+      "GnRH",
+      "LH",
+      "plodnost",
+      "HPTA"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přirozený 54-aminokyselinový prekurzor řídící pulzní sekreci GnRH a celou osu fertility.",
+    "description": "Kisspeptin-54 (původně známý jako Metastin) je přirozený 54-aminokyselinový peptidový hormon kódovaný genem KISS1. Představuje 'hlavní vypínač' celého lidského reprodukčního systému. Působí na kisspeptinové receptory (KISS1R / GPR54) v hypotalamu, kde přímo řídí a koordinuje pulzní uvolňování gonadoliberinu (GnRH). Na rozdíl od kratšího fragmentu Kisspeptin-10 má Kisspeptin-54 podstatně delší biologický poločas v krevním řečišti, vyvolává mohutnější a fyziologičtější pulzy LH a FSH a v klinických reprodukčních studiích se využívá k bezpečnému spuštění ovulace bez rizika ovariálního hyperstimulačního syndromu (OHSS).",
+    "effects": [
+      "nejvyšší fyziologický regulátor osy hypotalamus-hypofýza-gonády (HPTA)",
+      "stimulace pulzního uvolňování GnRH s následným vyplavením LH a FSH",
+      "obnova fertility a přirozené tvorby testosteronu u hypogonadismu",
+      "bezpečné spuštění ovulace a zrání folikulů v asistované reprodukci",
+      "delší poločas rozpadu a stabilnější odezva oproti Kisspeptinu-10"
+    ],
+    "dosage": {
+      "short": "6.4–9.6 nmol/kg subkutánně (klinické protokoly)",
+      "long": "V klinických studiích asistované reprodukce a endokrinologie: subkutánní injekce předplněným roztokem v dávce 6.4 až 9.6 nmol/kg tělesné hmotnosti. V biohackingu je zkoumán pro bezpečný restart hormonální osy."
+    },
+    "warning": "Výzkumná a klinická substance. Dlouhodobé kontinuální podávání vysokých dávek může vést k desenzitizaci receptoru KISS1R (musí být podáván pulzně nebo krátkodobě).",
+    "mechanism": "Vazba na G-protein spřažený receptor KISS1R (GPR54) na GnRH neuronech v nucleus arcuatus a preoptické oblasti hypotalamu; aktivace Gq/11 proteinu, stimulace fosfolipázy C (PLC) a influx Ca2+ vedoucí k exocytóze GnRH.",
+    "halfLife": "Cca 28–32 minut (výrazně delší než Kisspeptin-10 s poločasem cca 4 minuty)",
+    "interactions": [
+      "GnRH a Gonadotropiny (přímá fyziologická kaskáda)",
+      "Enclomifen (synergická stimulace hypotalamo-hypofyzární osy)"
+    ],
+    "naturalSources": [
+      "endogenní lidský peptid kódovaný genem KISS1 v hypotalamu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2.2.3), výzkumná substance"
+  },
+  {
+    "id": 569,
+    "name": "IGF-BP3 (Insulin-Like Growth Factor Binding Protein 3)",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "protein",
+      "IGF-1",
+      "nosic",
+      "stabilita",
+      "HGH",
+      "biomarker"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Hlavní cirkulující nosičový protein vázající přes 80 % IGF-1 a řídící jeho biologickou dostupnost.",
+    "description": "IGF-BP3 (Insulin-like Growth Factor Binding Protein 3) je hlavní vazebný glykoprotein ze skupiny šesti známých IGF-vazebných proteinů. V krevním oběhu vytváří vysokomolekulární ternární komplex (společně s molekulou IGF-1 a acid-labilní podjednotkou ALS). Tento komplex váže více než 80 až 90 % veškerého cirkulujícího IGF-1 v lidském těle. Chrání IGF-1 před předčasným enzymatickým rozkladem (prodlužuje jeho poločas z pouhých 10 minut na více než 16 hodin) a slouží jako nejdůležitější stabilní krevní biomarker sekrece růstového hormonu (HGH), protože na rozdíl od samotného HGH nepodléhá pulzním výkyvům.",
+    "effects": [
+      "prodloužení biologického poločasu IGF-1 v krevním oběhu z minut na 16–20 hodin",
+      "hlavní stabilní laboratorní biomarker celkové sekrece růstového hormonu",
+      "řízená tkáňově specifická distribuce a pomalé uvolňování IGF-1 do svalů a kostí",
+      "nezávislý antiproliferativní a proapoptotický účinek na poškozené nádorové buňky",
+      "regulace inzulínové senzitivity a metabolické homeostázy"
+    ],
+    "dosage": {
+      "short": "Laboratorní diagnostický biomarker (odběr žilní krve z krevního séra)",
+      "long": "Fyziologické referenční rozmezí u dospělých: přibližně 3.5–7.0 mg/l (mikrogramů/ml). Hladina klesá při deficitu růstového hormonu, podvýživě a stárnutí. Zkoumán jako rekombinantní lék SomatoKine (komplex rhIGF-1/rhIGFBP-3)."
+    },
+    "warning": "Endogenní regulační protein a klíčový biomarker. Samotná suplementace volného IGF-1 bez dostatku IGF-BP3 vede k hypoglykémii a rychlé degradaci.",
+    "mechanism": "Tvorba 150-kDa ternárního komplexu IGF-1/IGFBP-3/ALS; vazba na specifické jaderné a membránové receptory nezávislé na IGF-1R, indukce apoptózy mutovaných buněk přes dráhu p53.",
+    "halfLife": "Ternární komplex má poločas eliminace cca 16–20 hodin",
+    "interactions": [
+      "HGH (Růstový hormon přímo stimuluje syntézu IGF-BP3 v hepatocytech)",
+      "IGF-1 (přirozený vazebný partner)"
+    ],
+    "naturalSources": [
+      "endogenní glykoprotein syntetizovaný v játrech"
+    ],
+    "bannedStatus": "legal (endogenní biomarker), rekombinantní formy zakázány WADA S2"
+  },
+  {
+    "id": 570,
+    "name": "BNP (B-typ natriuretický peptid)",
+    "categoryKey": "hormones",
+    "tags": [
+      "hormon",
+      "peptid",
+      "srdce",
+      "komory",
+      "tlak",
+      "biomarker",
+      "hypertrofie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Srdeční komorový hormon vylučovaný při přetížení myokardu – nejdůležitější biomarker selhání srdce.",
+    "description": "BNP (Brain Natriuretic Peptide / B-typ natriuretický peptid) je 32-aminokyselinový peptidový hormon syntetizovaný a vylučovaný převážně kardiomyocyty srdečních komor v přímé reakci na zvýšené napětí komorové stěny (wall stress) a objemové či tlakové přetížení srdce. Působí jako přirozený obranný mechanismus: stimuluje vylučování sodíku a vody ledvinami (natriuréza a diuréza), rozšiřuje periferní cévy a tlumí sympatický systém a systém RAAS. V kardiologii a u těžce trénujících atletů užívajících anabolika je měření NT-proBNP / BNP klíčovým zlatým standardem pro včasné odhalení hypertrofie a přetížení levé komory srdeční.",
+    "effects": [
+      "nejcitlivější klinický krevní biomarker přetížení myokardu a srdečního selhání",
+      "fyziologické snížení krevního tlaku systémovou vazodilatací cév",
+      "stimulace vylučování přebytečného sodíku a vody ledvinami (natriuréza)",
+      "potlačení škodlivého vlivu renin-angiotenzin-aldosteronového systému (RAAS)",
+      "antifibrotický a antihypertrofický ochranný účinek na srdeční svalovinu"
+    ],
+    "dosage": {
+      "short": "Laboratorní diagnostický biomarker z krve (hodnota pod 100 pg/ml = fyziologická)",
+      "long": "Klinické referenční hodnoty: BNP pod 100 pg/ml (nebo NT-proBNP pod 125 pg/ml) vylučuje srdeční selhání. Hodnoty nad 300–400 pg/ml indikují závažné komorové přetížení a vyžadují okamžité kardiologické echo vyšetření."
+    },
+    "warning": "Klíčový kardiální biomarker! U sportovců užívajících anabolické steroidy signalizuje vzestup BNP nebezpečné zbytnění myokardu (koncentrickou hypertrofii levé komory) a vyžaduje redukci dávek a normalizaci krevního tlaku.",
+    "mechanism": "Vazba na natriuretický peptidový receptor A (NPR-A) v cévním endotelu a renálních tubulech; aktivace vázané guanylylcyklázy a prudké zvýšení intracelulárního cGMP; relaxace hladké svaloviny a blokáda reabsorpce Na+.",
+    "halfLife": "Cca 20 minut (stabilnější neaktivní fragment NT-proBNP má poločas cca 60–120 minut)",
+    "interactions": [
+      "Telmisartan a Nebivolol (snižují srdeční afterload a normalizují hladinu BNP)",
+      "Spironolakton (aditivní natriuréza a ochrana myokardu)"
+    ],
+    "naturalSources": [
+      "endogenní hormon syntetizovaný v kardiomyocytech srdečních komor"
+    ],
+    "bannedStatus": "legal (endogenní diagnostický biomarker)"
   }
 ]

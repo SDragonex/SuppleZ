@@ -14,8 +14,9 @@ const { healthAdditions, nootropicsAdditions, pctAdditions } = require('./enrich
 const { hormonesData } = require('./enrichments-hormones');
 const { experimentalData } = require('./enrichments-peptides');
 const wave2Data = require('./enrichments-wave2');
+const wave3Data = require('./enrichments-wave3');
 
-console.log('=== [SuppleZ Database Master Enrichment (Wave 1 + Wave 2)] ===\n');
+console.log('=== [SuppleZ Database Master Enrichment (Wave 1 + Wave 2 + Wave 3)] ===\n');
 
 // 1. Enrich health.json
 const healthPath = path.join(DATA_DIR, 'health.json');
@@ -121,6 +122,26 @@ console.log(`✓ fatloss.json updated: ${fatloss.length} items.`);
 // === 8. APPLY WAVE 2 ENRICHMENTS (71 new substances) ===
 console.log('\n--- Merging Wave 2 Enrichments (71 substances) ---');
 for (const [catKey, items] of Object.entries(wave2Data)) {
+  const filePath = path.join(DATA_DIR, `${catKey}.json`);
+  let catData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+  items.forEach(newItem => {
+    const existingIdx = catData.findIndex(x => x.id === newItem.id || x.name === newItem.name);
+    if (existingIdx >= 0) {
+      catData[existingIdx] = newItem;
+    } else {
+      catData.push(newItem);
+    }
+  });
+
+  catData.sort((a, b) => a.id - b.id);
+  fs.writeFileSync(filePath, JSON.stringify(catData, null, 2), 'utf8');
+  console.log(`✓ ${catKey}.json expanded: now ${catData.length} items.`);
+}
+
+// === 8b. APPLY WAVE 3 ENRICHMENTS (51 new substances) ===
+console.log('\n--- Merging Wave 3 Enrichments (51 substances) ---');
+for (const [catKey, items] of Object.entries(wave3Data)) {
   const filePath = path.join(DATA_DIR, `${catKey}.json`);
   let catData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 

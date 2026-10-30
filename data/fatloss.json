@@ -801,5 +801,200 @@
       "paprička křovitá (Capsicum annuum / chilli)"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 421,
+    "name": "Tesofensin (NS-2330)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "SNDRI",
+      "anorektikum",
+      "redukce",
+      "dopamin",
+      "noradrenalin",
+      "vyzkum"
+    ],
+    "rating": 5,
+    "colorType": "yellow",
+    "shortDesc": "Trojitý inhibitor zpětného vychytávání monoaminů s úbytkem přes 10–12 kg v klinických testech.",
+    "description": "Tesofensin (NS-2330) je syntetická sloučenina ze třídy fenyltropanů, původně zkoumaná pro léčbu Parkinsonovy a Alzheimerovy choroby. V klinických zkouškách však prokázala bezprecedentní schopnost redukovat tělesnou hmotnost. Jedná se o trojitý inhibitor zpětného vychytávání monoaminů (SNDRI) – současně blokuje re-uptake noradrenalinu, dopaminu a serotoninu v poměru cca 1:4:12. Výsledkem je masivní potlačení chuti k jídlu, vymizení hladu a současné zvýšení 24hodinového energetického výdeje stimulací sympatiku.",
+    "effects": [
+      "masivní úbytek hmotnosti (10–12 kg za 24 týdnů v klinických studiích)",
+      "dramatické centrální potlačení hladu a chuti na sladké",
+      "zvýšení bazálního metabolismu a oxidace tuků o cca 15 %",
+      "zvýšení dopaminové motivace a mentální bdělosti",
+      "zlepšení hladin krevního cukru a inzulínové rezistence"
+    ],
+    "dosage": {
+      "short": "0.25–0.5 mg jednou denně ráno",
+      "long": "V klinických testech se užívá 0.25 mg (nízká dávka s minimem vedlejších účinků) až 0.5 mg 1x denně ráno se snídaní. Dávky 1 mg se nepoužívají z důvodu nespavosti a zvýšení tepové frekvence."
+    },
+    "warning": "Výzkumná látka ve fázi III klinických studií. Může způsobit nespavost, sucho v ústech a mírné zvýšení krevního tlaku a tepu. Nekombinovat s antidepresivy (SSRI, SNRI, IMAO – riziko serotoninového syndromu!).",
+    "mechanism": "Inhibice presynaptických transportérů pro noradrenalin (NET), dopamin (DAT) a serotonin (SERT); stimulace centrálních alfa-1 a dopaminových D1/D2 drah v hypotalamických centrech hladu.",
+    "halfLife": "Cca 220 hodin (extrémně dlouhý poločas rozpadu cca 8–9 dní!)",
+    "interactions": [
+      "Antidepresiva (striktně kontraindikováno – riziko fatálního serotoninového syndromu)",
+      "Kofein (může zesílit tachykardii – omezit příjem stimulantů)"
+    ],
+    "naturalSources": [
+      "syntetický derivát azabicyklooktanu"
+    ],
+    "bannedStatus": "výzkumná substance (clinical trial), doping WADA S6"
+  },
+  {
+    "id": 422,
+    "name": "Sibutramin (Meridia)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "anorektikum",
+      "SNRI",
+      "Meridia",
+      "sytost",
+      "termogeneze",
+      "historie"
+    ],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Historické centrální anorektikum tlumící hlad přes zpětné vychytávání serotoninu a noradrenalinu.",
+    "description": "Sibutramin (obchodní název Meridia / Reductil) je orální lék na obezitu syntetizovaný v 80. letech. Působí v centrálním nervovém systému jako inhibitor zpětného vychytávání noradrenalinu a serotoninu (SNRI). Zvyšuje pocit nasycení po jídle a současně stimuluje termogenezi aktivací beta-3 adrenergních receptorů v tukové tkáni. V roce 2010 byl v EU a USA stažen z trhu na základě studie SCOUT, která prokázala zvýšené kardiovaskulární riziko (infarkty a cévní mozkové příhody) u pacientů s preexistujícím srdečním onemocněním.",
+    "effects": [
+      "silné potlačení chuti k jídlu a rychlý nástup pocitu sytosti",
+      "zvýšení energetického výdeje aktivací hnědé a bílé tukové tkáně",
+      "redukce tělesné hmotnosti o 5–10 % během léčebné kúry",
+      "zvýšení periferní stimulace sympatického nervového systému",
+      "historický milník farmakoterapie obezity před érou GLP-1"
+    ],
+    "dosage": {
+      "short": "10–15 mg jednou denně ráno nalačno (historický protokol)",
+      "long": "Původní terapeutické dávkování bylo 10 mg denně ráno. Pokud po 4 týdnech nedošlo k úbytku hmotnosti alespoň 2 kg, dávka se zvyšovala na 15 mg denně. Doba užívání byla omezena na maximálně 1 rok."
+    },
+    "warning": "Léčivý přípravek stažený z trhu kvůli kardiovaskulární toxicitě! Zvyšuje krevní tlak a tepovou frekvenci. Časté bolesti hlavy, nespavost a zácpa. Nelegálně se vyskytuje v nebezpečných padělcích 'čajů na hubnutí'.",
+    "mechanism": "Aktivní metabolity M1 a M2 inhibují re-uptake noradrenalinu (54 %) a serotoninu (73 %) v synapsích hypotalamu; stimulace centrální sytosti a periferní sympatické termogeneze.",
+    "halfLife": "Mateřská látka cca 1 hodina, aktivní metabolity M1 a M2 cca 14–16 hodin",
+    "interactions": [
+      "Antidepresiva (riziko serotoninového syndromu)",
+      "Stimulanty (riziko hypertenzní krize)"
+    ],
+    "naturalSources": [
+      "syntetická sloučenina odvozená od cyklobutanfenetylaminu"
+    ],
+    "bannedStatus": "zakázané léčivo (staženo z trhu), WADA S6 (zakázáno ve sportu)"
+  },
+  {
+    "id": 423,
+    "name": "T3 (Liothyronin sodný / Cytomel)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "stitna-zlaza",
+      "T3",
+      "metabolismus",
+      "termoregulace",
+      "lipolyza",
+      "Cytomel"
+    ],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Aktivní syntetický hormon štítné žlázy pro brutální zrychlení bazálního metabolismu.",
+    "description": "Liothyronin sodný (T3 / obchodní název Cytomel) je syntetická forma trijodtyroninu – primárního, plně biologicky aktivního hormonu štítné žlázy. V těle vzniká přirozeně z prohormonu T4 enzymem dejodázou. T3 vstupuje přímo do jader všech buněk v těle a váže se na thyroidní receptory, což dramaticky zrychluje bazální metabolismus (BMR), zvyšuje spotřebu kyslíku, oxidaci tuků, sacharidů i bílkovin a tělesnou teplotu. V kulturistice je Cytomel zneužíván pro bleskové vysekání podkožního tuku před soutěží.",
+    "effects": [
+      "masivní zrychlení bazálního metabolismu (BMR) a klidového výdeje kalorií",
+      "radikální spalování tukové tkáně i při nulové aerobní aktivitě",
+      "zvýšení tělesné teploty a rychlosti obratu živin",
+      "upregulace beta-adrenergních receptorů v srdci a cévách",
+      "okamžitý nástup účinku (nevyžaduje enzymatickou konverzi z T4)"
+    ],
+    "dosage": {
+      "short": "12.5–50 mcg denně rozděleně (přísná lékařská kontrola)",
+      "long": "Substituční dávka při hypotyreóze je 12.5–25 mcg denně. V extrémních sportovních protokolech se dávka pomalu titruje po 12.5 mcg každé 4–5 dní až na maximálně 50 mcg denně (rozděleno na 2 dávky). Kúra nesmí přesáhnout 4–6 týdnů."
+    },
+    "warning": "Extrémně nebezpečná látka při nesprávném užití! Spaluje nejen tuk, ale i svalovou hmotu (silně katabolická bez současné anabolické ochrany). Způsobuje tachykardii, palpitace, pocení a třes. Po vysazení hrozí dočasné utlumení vlastní štítné žlázy.",
+    "mechanism": "Přímá vazba na jaderné thyroidní receptory TR-alfa a TR-beta; stimulace transkripce genů kódujících Na+/K+-ATPázu, dýchací enzymy mitochondrií a odpřahovací proteiny (UCP).",
+    "halfLife": "Cca 1–2.5 dne (24–36 hodin)",
+    "interactions": [
+      "Klenbuterol / Efedrin (extrémní kardiovaskulární riziko arytmií a tachykardie)",
+      "Anabolické steroidy (využívány sportovci k ochraně svalů před silným katabolismem T3)"
+    ],
+    "naturalSources": [
+      "endogenní hormon štítné žlázy"
+    ],
+    "bannedStatus": "na lékařský předpis, WADA S4 (hormonální modulátory)"
+  },
+  {
+    "id": 424,
+    "name": "T4 (Levothyroxin sodný / Euthyrox)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "stitna-zlaza",
+      "T4",
+      "prohormon",
+      "metabolismus",
+      "Euthyrox",
+      "dejodace"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Stabilní prohormon štítné žlázy s fyziologickou konverzí na aktivní T3 v tkáních.",
+    "description": "Levothyroxin sodný (T4 / Euthyrox, Letrox) je syntetická forma tyroxinu – hlavního prohormonu vylučovaného štítnou žlázou. T4 sám o sobě vykazuje jen minimální biologickou aktivitu; v játrech, ledvinách a periferních tkáních je enzymem 5'-dejodázou postupně zbaven jednoho atomu jódu a přeměněn na plně aktivní T3. Díky dlouhému poločasu eliminace (kolem 7 dní) zajišťuje T4 velmi stabilní, vyrovnanou a bezpečnou hladinu hormonů štítné žlázy bez dramatických teplotních a kardiovaskulárních skoků typických pro čistý T3.",
+    "effects": [
+      "stabilní a fyziologická normalizace bazálního metabolismu",
+      "postupná periferní konverze na aktivní metabolit T3 podle potřeb tkání",
+      "eliminace únavy, zimomřivosti a otoků způsobených hypotyreózou",
+      "podpora spalování tuků a lipidového profilu",
+      "dlouhodobý poločas eliminace (vyrovnaná hladina při dávkování 1x denně)"
+    ],
+    "dosage": {
+      "short": "25–100 mcg denně ráno nalačno (lékařský dohled)",
+      "long": "Užívá se 1x denně ráno na lačno, minimálně 30 minut před snídaní a kávou se sklenicí vody. Dávka se přesně řídí laboratorní hladinou TSH a volného T4 (fT4)."
+    },
+    "warning": "Léčivý přípravek na lékařský předpis. Káva, vápník a železo vážou T4 v trávicím traktu a blokují jeho absorpci (nutný odstup minimálně 2–4 hodiny!). Předávkování vede k tyreotoxikóze.",
+    "mechanism": "Dejodace enzymy selenodejodázami typu 1 (D1) a typu 2 (D2) na aktivní trijodtyronin (T3); následná vazba T3 na jaderné receptory.",
+    "halfLife": "Cca 6–7 dní (umožňuje pohodlné dávkování 1x denně ráno)",
+    "interactions": [
+      "Vápník, Železo, Káva (blokují vstřebávání T4 v žaludku – dodržet odstup)",
+      "Selen (nezbytný stopový kofaktor dejodáz pro konverzi T4 na T3)"
+    ],
+    "naturalSources": [
+      "endogenní hormon syntetizovaný ve folikulárních buňkách štítné žlázy"
+    ],
+    "bannedStatus": "na lékařský předpis, WADA monitoring"
+  },
+  {
+    "id": 425,
+    "name": "Meldonium (Mildronát)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "mildronat",
+      "metabolismus",
+      "karnitin",
+      "srdce",
+      "ischemie",
+      "WADA"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Lotyšské kardioprotektivum omezující oxidaci tuků ve prospěch bezpečné glykolýzy.",
+    "description": "Meldonium (obchodní název Mildronát vyvinutý v Lotyšském ústavu organické syntézy profesorem Ivarsem Kalvinsem) je metabolický modulátor. Působí jako kompetitivní inhibitor enzymu gama-butyrobetain hydroxylázy (BBOX), čímž tlumí endogenní syntézu L-karnitinu v těle a blokuje transport mastných kyselin do mitochondrií. Při ischemii (nedostatku kyslíku v srdci či svalu při extrémní zátěži) je oxidace mastných kyselin toxická a neefektivní. Meldonium přepíná energetický metabolismus na oxidaci glukózy, která vyžaduje o 12 % méně kyslíku na jednotku ATP, čímž chrání srdce před infarktem a zvyšuje odolnost organismu.",
+    "effects": [
+      "metabolické přepnutí myokardu na energeticky úspornější oxidaci glukózy",
+      "ochrana srdečního svalu a mozku před ischemickým poškozením při hypoxii",
+      "zrychlení regenerace a obnovy glykogenových zásob po extrémní zátěži",
+      "snížení akumulace toxických intermediátů mastných kyselin v mitochondriích",
+      "zvýšení vytrvalostní pracovní kapacity při nedostatku kyslíku"
+    ],
+    "dosage": {
+      "short": "500–1 000 mg denně rozděleně ráno a v poledne",
+      "long": "V klinické praxi: 250 až 500 mg 2x denně (ráno a v poledne) s jídlem po dobu 4–6 týdnů. Neužívat večer (má mírný stimulační vliv)."
+    },
+    "warning": "Od 1. ledna 2016 je Meldonium zařazeno na seznam zakázaných dopingových látek WADA (kategorie S4.5.3 - Modulátory metabolismu; proslavila jej aféra tenistky Marie Šarapovové). Má velmi dlouhou terminální renální eliminaci (metabolity lze detekovat v moči měsíce po vysazení).",
+    "mechanism": "Inhibice enzymu gama-butyrobetain hydroxylázy a inhibice renálního transportéru OCTN2; snížení hladiny karnitinu v buňkách a potlačení transportéru CPT-1; aktivace aerobní glykolýzy.",
+    "halfLife": "Cca 4–6 hodin (terminální metabolity se vylučují z hlubokých tkání až 100 dní)",
+    "interactions": [
+      "L-Karnitin (přímý protichůdný mechanismus – karnitin eliminuje účinek meldonia)",
+      "Nitráty a Sartany (může mírně zvyšovat hypotenzní účinek)"
+    ],
+    "naturalSources": [
+      "syntetický strukturní analog gama-butyrobetainu"
+    ],
+    "bannedStatus": "banned-sport (WADA S4.5.3), na lékařský předpis v zemích východní Evropy"
   }
 ]

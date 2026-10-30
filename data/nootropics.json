@@ -1214,5 +1214,280 @@
       "syntetická výzkumná chemikálie"
     ],
     "bannedStatus": "controlled"
+  },
+  {
+    "id": 632,
+    "name": "Galantamin (Reminyl)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "acetylcholin",
+      "AChEI",
+      "alfa-7",
+      "lucidni-sneni",
+      "pamet",
+      "nootropikum"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Reverzibilní inhibitor acetylcholinesterázy a allosterický modulátor nikotinových receptorů.",
+    "description": "Galantamin je terciární alkaloid izolovaný ze sněženky podsněžníku (Galanthus nivalis). V medicíně je schváleným léčivem Alzheimerovy choroby, v biohackingu a nootropní komunitě je legendou pro stimulaci kognice a vyvolávání vědomého lucidního snění (lucid dreaming). Působí duálním mechanismem: reverzibilně inhibuje enzym acetylcholinesterázu (čímž zabraňuje rozkladu acetylcholinu) a současně allostericky senzibilizuje nikotinové acetylcholinové receptory alfa-7, čímž dramaticky zostřuje paměť, vybavování a živost snů v REM fázi.",
+    "effects": [
+      "mohutné zvýšení synaptické koncentrace acetylcholinu v mozku",
+      "allosterická potenciace presynaptických nAChR alfa-7 receptorů",
+      "zlatý standard pro navození lucidního snění (při podání ve 4–5 ráno)",
+      "významné zlepšení prostorové a epizodické paměti",
+      "neuroprotektivní účinek proti toxicitě beta-amyloidu"
+    ],
+    "dosage": {
+      "short": "4–8 mg ráno (nebo po 4.5 hodinách spánku pro lucidní snění)",
+      "long": "Pro kognitivní účely: 4 mg ráno po snídani, po týdnu lze zvýšit na 8 mg. Pro lucidní snění (protokol WBTB – Wake Back To Bed): nastavit budík na 4.5 hodiny po usnutí, vstát, požít 4–8 mg s cholinem a jít spát do REM periody."
+    },
+    "warning": "Při užití těsně před spaním může narušit usnutí (silně stimuluje REM fázi a bdělost). Neužívejte častěji než 1–2x týdně pro lucidní snění (jinak vzniká tolerance). Může vyvolat lehkou nevolnost nalačno.",
+    "mechanism": "Reverzibilní kompetitivní inhibice acetylcholinesterázy (AChE) a allosterická modulace nikotinových receptorů typu alfa-4/beta-2 a alfa-7; zvýšení intracelulárního vstupu vápníku a uvolňování neurotransmiterů.",
+    "halfLife": "Cca 7–8 hodin",
+    "interactions": [
+      "Alfa-GPC / Citicolin (povinný donor cholinu pro maximální syntézu ACh)",
+      "Huperzin A (nekombinovat ve stejný den – obojí jsou inhibitory AChE)"
+    ],
+    "naturalSources": [
+      "sněženka podsněžník (Galanthus nivalis)",
+      "bledule jarní"
+    ],
+    "bannedStatus": "controlled / na lékařský předpis (Reminyl)"
+  },
+  {
+    "id": 633,
+    "name": "Memantin (Namenda)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "NMDA",
+      "antagonista",
+      "glutamat",
+      "tolerance",
+      "neuroprotekce",
+      "fokus"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Nekompetitivní nízkoafinitní NMDA antagonista chránící mozek před excitotoxicitou a tolerancí.",
+    "description": "Memantin je derivát adamantanu vyvinutý pro léčbu demence a neurodegenerace. Je unikátním 'chytrým' antagonistou glutamátových NMDA receptorů: má nízkou až střední afinitu a velmi rychlou kinetiku blokády kanálu. Za normálních okolností blokuje patologický chronický tonický únik vápníku (chrání neurony před pomalou excitotoxickou smrtí a zvrací toleranci na stimulanty), avšak při fyziologickém signálu (učení a myšlení) se z kanálu okamžitě uvolní a umožní normální synaptický přenos bez disociativních a psychotických stavů typických pro ketamin či PCP.",
+    "effects": [
+      "specifická ochrana neuronů před chronickou glutamátovou excitotoxicitou",
+      "reset a prevence vzniku tolerance na dopaminergní stimulanty a opioidy",
+      "zlepšení nálady a zmírnění obsedantně-kompulzivního přemítání (OCD)",
+      "stabilizace kognitivního výkonu u osob s chronickým stresem",
+      "velmi dlouhý poločas umožňující stabilní plazmatickou hladinu"
+    ],
+    "dosage": {
+      "short": "5–10 mg denně ráno (pomalá titrace od 2.5 mg)",
+      "long": "V nootropních protokolech: zahájit na 2.5–5 mg ráno po dobu 1–2 týdnů (pro zamezení počáteční mozkové mlhy). Následně udržovací dávka 5 až 10 mg denně ráno."
+    },
+    "warning": "Léčivo na lékařský předpis. V prvních dnech užívání může vyvolat přechodnou desorientaci nebo 'mozkovou mlhu' v důsledku adaptace NMDA receptorů. Má extrémně dlouhý poločas rozpadu.",
+    "mechanism": "Nekompetitivní, napěťově závislý antagonismus s rychlou kinetikou na kanálu NMDA receptoru (blokuje patologický influx Ca2+ při klidovém membránovém potenciálu); antagonismus na 5-HT3 receptorech.",
+    "halfLife": "Cca 60–100 hodin (extrémně dlouhý poločas rozpadu)",
+    "interactions": [
+      "Stimulanty (Memantin zabraňuje downregulaci dopaminových receptorů)",
+      "Dextrometorfan / Ketamin (aditivní blokáda NMDA – nekombinovat)"
+    ],
+    "naturalSources": [
+      "syntetický derivát adamantanu"
+    ],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 634,
+    "name": "Armodafinil (Nuvigil)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "eugeroikum",
+      "bdelost",
+      "fokus",
+      "dopamin",
+      "R-enantiomer",
+      "laser"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Čistý R-enantiomer modafinilu pro stabilní 12–15hodinovou bdělost bez odpoledního propadu.",
+    "description": "Armodafinil (obchodní název Nuvigil) je izolovaný čistý R-enantiomer racemického modafinilu (který obsahuje 50 % S-modafinilu a 50 % R-modafinilu). Zatímco S-enantiomer má krátký poločas (cca 4 hodiny) a rychle se metabolizuje, R-enantiomer má poločas eliminace kolem 15 hodin a podstatně vyšší afinitu k dopaminovému transportéru. Armodafinil poskytuje konzistentnější, plynulejší a čistší stav neochvějné mentální bdělosti po celý den bez odpoledního 'nárazu do zdi' a s nižší potřebnou dávkou oproti modafinilu.",
+    "effects": [
+      "extrémně čistá a dlouhotrvající mentální bdělost (12–15 hodin)",
+      "odstranění subjektivního pocitu spánkové deprivace a únavy",
+      "zvýšení dopaminu v prefrontálním kortexu (motivace a exekutivní funkce)",
+      "plynulý profil bez kolísání energie a bez třesu",
+      "zlepšení pracovní paměti a rychlosti reakcí"
+    ],
+    "dosage": {
+      "short": "75–150 mg jednou denně brzy ráno",
+      "long": "Užívejte 75 mg až 150 mg jednou denně ráno po probuzení (150 mg odpovídá cca 200–250 mg klasického modafinilu). Neužívejte po 10. hodině dopoledne, jinak znemožní noční spánek."
+    },
+    "warning": "Léčivý přípravek na předpis. Způsobuje silnou nespavost při pozdním požití. Snižuje účinnost perorální hormonální antikoncepce (indukuje enzym CYP3A4). WADA jej striktně zakazuje v kategorii S6 (Stimulancia).",
+    "mechanism": "Selektivní reverzibilní inhibice dopaminového transportéru (DAT) vedoucí ke zvýšení extracelulárního dopaminu; nepřímá stimulace orexinergního a histaminergního systému v hypotalamu.",
+    "halfLife": "Cca 15 hodin",
+    "interactions": [
+      "Orální antikoncepce (výrazné snížení účinnosti – nutná bariérová ochrana)",
+      "Kofein (aditivní stimulace – doporučeno snížit příjem kávy)"
+    ],
+    "naturalSources": [
+      "syntetická chemická sloučenina"
+    ],
+    "bannedStatus": "banned-sport (WADA S6), na lékařský předpis"
+  },
+  {
+    "id": 635,
+    "name": "Atomoxetin (Strattera)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "ADHD",
+      "noradrenalin",
+      "NET",
+      "prefrontalni-kortex",
+      "pozornost",
+      "exekutiva"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Selektivní inhibitor zpětného vychytávání noradrenalinu pro soustředění bez zneužitelnosti.",
+    "description": "Atomoxetin (Strattera) je nesteroidní ne-stimulační léčivo schválené pro terapii poruchy pozornosti s hyperaktivitou (ADHD). Působí jako vysoce selektivní inhibitor presynaptického noradrenalinového transportéru (NET). V prefrontálním kortexu je koncentrace dopaminového transportéru (DAT) zanedbatelná, a dopamin je zde vychytáván právě transportérem pro noradrenalin. Inhibicí NET tak atomoxetin dramaticky zvyšuje koncentraci jak noradrenalinu, tak dopaminu specificky v prefrontální kůře, aniž by zvyšoval dopamin v mozkových centrech odměny (nucleus accumbens), což eliminuje riziko vzniku závislosti.",
+    "effects": [
+      "významné zlepšení schopnosti udržet dlouhodobou pozornost",
+      "potlačení motorické i mentální impulzivity a těkavosti myšlenek",
+      "zvýšení noradrenalinu a dopaminu selektivně v prefrontálním kortexu",
+      "nulový euforický potenciál a nulové riziko zneužívání a závislosti",
+      "stabilní 24hodinový terapeutický efekt bez výkyvů nálady"
+    ],
+    "dosage": {
+      "short": "25–80 mg denně ráno s jídlem (lékařský dohled)",
+      "long": "Zahajovací dávka je 25–40 mg ráno po dobu 7–14 dnů, s následnou titrací na cílových 60–80 mg denně. Vyžaduje kontinuální každodenní užívání po dobu 3–6 týdnů pro dosažení plného terapeutického účinku."
+    },
+    "warning": "Léčivý přípravek na lékařský předpis. Zvyšuje srdeční frekvenci a krevní tlak. Může způsobit sucho v ústech, nechutenství a přechodnou nauzeu. Neužívat s inhibitory MAO.",
+    "mechanism": "Vysokoafinitní selektivní blokáda noradrenalinového transportéru (NET); sekundární zvýšení extracelulárních koncentrací noradrenalinu a dopaminu v prefrontální mozkové kůře bez ovlivnění striata.",
+    "halfLife": "Cca 5 hodin (u rychlých metabolizátorů CYP2D6) až 20 hodin (u pomalých metabolizátorů)",
+    "interactions": [
+      "Inhibitory CYP2D6 (Bupropion, Fluoxetin – dramaticky zvyšují koncentraci atomoxetinu)",
+      "Sympatomimetika (aditivní vliv na krevní tlak a tep)"
+    ],
+    "naturalSources": [
+      "syntetická molekula odvozená od fenoxypropylaminů"
+    ],
+    "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 636,
+    "name": "IDRA-21",
+    "categoryKey": "nootropics",
+    "tags": [
+      "AMPA",
+      "ampakin",
+      "pamet",
+      "LTP",
+      "uceni",
+      "vyzkum",
+      "potence"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Mimořádně silný benzothiadiazinový ampakin stimulující dlouhodobou potenciaci v hipokampu.",
+    "description": "IDRA-21 je syntetická nootropní sloučenina ze třídy benzothiadiazinů, odvozená od diuretika hydrochlorothiazidu (avšak s kompletní absencí diuretického účinku). Je přibližně 10–30x účinnější než aniracetam při allosterické stimulaci AMPA receptorů. Působí tak, že dramaticky blokuje desenzitizaci AMPA receptoru po navázání glutamátu. U laboratorních zvířat i v biohackingu vyvolává dlouhotrvající stav extrémního zrychlení učení, usnadňuje tvorbu dlouhodobé paměti a zvrací kognitivní deficity způsobené únavou.",
+    "effects": [
+      "silná potenciace dlouhodobé paměti a kapacity pro učení",
+      "blokáda desenzitizace AMPA receptorů pro glutamát",
+      "rychlé zvrácení kognitivních deficitů vyvolaných scopolaminem",
+      "dlouhotrvající účinek přetrvávající až 48 hodin po jediné dávce",
+      "významné zostření kognitivního vnímání"
+    ],
+    "dosage": {
+      "short": "5–10 mg sublinguálně nebo orálně (přísně vážit!)",
+      "long": "Dávkujte 5 až maximálně 10 mg jednou za 24 až 48 hodin. Vzhledem k extrémnímu poločasu a síle sloučeniny neaplikujte častěji než 2–3x týdně. Vyžaduje miligramovou analytickou váhu."
+    },
+    "warning": "Experimentální výzkumná substance. Vzhledem k silné blokádě desenzitizace AMPA receptorů existuje při předávkování nebo kombinaci s vysokými dávkami stimulantů riziko excitotoxicity.",
+    "mechanism": "Pozitivní allosterická vazba na dimerní rozhraní podjednotek AMPA receptoru, která brání konformační změně vedoucí k desenzitizaci kanálu v přítomnosti glutamátu.",
+    "halfLife": "Cca 48 hodin (extrémně dlouhý biologický poločas)",
+    "interactions": [
+      "Memantin (ochranná kontrola před nadměrnou NMDA aktivací)",
+      "Cholinové donory (Alfa-GPC)"
+    ],
+    "naturalSources": [
+      "syntetická výzkumná chemikálie"
+    ],
+    "bannedStatus": "controlled, výzkumná substance"
+  },
+  {
+    "id": 637,
+    "name": "Triacetyluridin (TAU)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "uridin",
+      "TAU",
+      "lipofilni",
+      "dopamin",
+      "synaptogeneze",
+      "biodostupnost"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Vysoce lipofilní proléčivo uridinu s až 7x vyšší orální biologickou dostupností.",
+    "description": "Triacetyluridin (TAU) je acetylovaný derivát nukleosidu uridinu. Běžný uridin monofosfát (UMP) je hydrofilní a v trávicím traktu a játrech podléhá rychlému rozkladu, což omezuje jeho prostup do centrálního nervového systému. TAU je naproti tomu vysoce lipofilní molekula: snadno prochází střevní stěnou a hematoencefalickou bariérou do neuronů. V těle se deacetyluje na volný uridin, který stimuluje Kennedyho cyklus syntézy membránových fosfolipidů, podporuje tvorbu dendritických trnů a zvyšuje hustotu dopaminových D2 receptorů.",
+    "effects": [
+      "až 7x vyšší biologická dostupnost v mozku oproti běžnému uridinu UMP",
+      "masivní stimulace syntézy fosfatidylcholinu a synaptogeneze",
+      "upregulace hustoty a senzitivity dopaminových D2 receptorů",
+      "zlepšení nálady, motivace a exekutivní mentální kapacity",
+      "podpora neuroplasticity a myelinizace nervových vláken"
+    ],
+    "dosage": {
+      "short": "25–50 mg 1–2x denně s jídlem",
+      "long": "Vzhledem k vysoké účinnosti stačí dávkování 25 mg až 50 mg 1–2x denně společně s jídlem obsahujícím tuky (odpovídá 250–500 mg běžného uridinu)."
+    },
+    "warning": "Velmi dobře snášen. Při vysokých dávkách (>100 mg) může způsobit lehkou ospalost nebo únavu.",
+    "mechanism": "Deacetylace tkáňovými esterázami na volný uridin; fosforylace na UTP a CTP, které jsou limitujícím substrátem v biosyntéze fosfatidylcholinu v neurálních membránách (Kennedyho cyklus).",
+    "halfLife": "Cca 4–6 hodin",
+    "interactions": [
+      "Alfa-GPC a DHA (slavný 'Mr. Happy Stack' pro neurální růst)",
+      "B-Komplex (vitamíny B6, B9 a B12 jako kofaktory metylace)"
+    ],
+    "naturalSources": [
+      "acetylovaný derivát nukleosidu přítomného v mateřském mléce a pivu"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 638,
+    "name": "Amyloban 3399 (Lion's Mane specializovaný)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "hericium",
+      "NGF",
+      "myelin",
+      "amyloban",
+      "hericenon",
+      "neurogeneze"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Patentovaný japonský extrakt korálovce standardizovaný na amycenon pro syntézu myelinu a NGF.",
+    "description": "Amyloban 3399 je celosvětově nejuznávanější vědecký patentovaný extrakt z plodnic korálovce ježatého (Hericium erinaceus), vyvinutý japonskou společností Mushroom Wisdom. Na rozdíl od běžných houbových prášků obsahuje standardizovanou kombinaci amycenonu (unikátní sloučenina chránící neurony před toxicitou beta-amyloidu) a hericenonů. Stimuluje syntézu nervového růstového faktoru (NGF) v hipokampu, urychluje myelinizaci nervových drah a vykazuje klinicky prokázaný efekt na zlepšení kognitivních funkcí a nálady u seniorů.",
+    "effects": [
+      "standardizovaná stimulace produkce nervového růstového faktoru (NGF)",
+      "obnova a regenerace myelinových pochev poškozených nervů",
+      "ochrana mozkových buněk před toxickým působením beta-amyloidu",
+      "zlepšení paměťové plasticity a verbální plynulosti",
+      "snížení depresivních symptomů a úzkosti regulací mikroglií"
+    ],
+    "dosage": {
+      "short": "650–1 300 mg denně s jídlem",
+      "long": "Dávkujte 2 tablety (celkem cca 650 mg) 1–2x denně po jídle. Kúra by měla trvat minimálně 8–12 týdnů pro prokazatelnou strukturální přestavbu nervových drah."
+    },
+    "warning": "Bezpečný přírodní extrakt. Pozor při vzácné alergii na houby. Může mírně ředit krev.",
+    "mechanism": "Hericenony a amycenon stimulují expresi mRNA pro NGF v astrocytech mozkové kůry; aktivace signální dráhy TrkA a podpora přežití cholinergních neuronů bazálního předního mozku.",
+    "halfLife": "Cca 4–6 hodin (neurotrofické remodelace trvají týdny)",
+    "interactions": [
+      "Magnesium L-Threonát (aditivní synaptická hustota v hipokampu)",
+      "PQQ (synergická stimulace NGF a biogeneze mitochondrií)"
+    ],
+    "naturalSources": [
+      "korálovec ježatý (Hericium erinaceus / Lion's Mane)"
+    ],
+    "bannedStatus": "legal"
   }
 ]

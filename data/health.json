@@ -1655,5 +1655,248 @@
       "původně odvozen z jestřabiny lékařské (Galega officinalis)"
     ],
     "bannedStatus": "prescription-only"
+  },
+  {
+    "id": 142,
+    "name": "Lithium Orotát (Microdose Lithium)",
+    "categoryKey": "health",
+    "tags": [
+      "longevity",
+      "GSK-3",
+      "BDNF",
+      "mozek",
+      "neuroprotekce",
+      "nalada"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Mikrodávkovaný stopový prvek s mimořádným neuroprotektivním a geroprotektivním účinkem.",
+    "description": "Lithium orotát je chelatovaná forma lithia s kyselinou orotovou, která umožňuje efektivní průchod iontů lithia (Li+) přes hematoencefalickou bariéru při mikrogramových až nízkých miligramových dávkách (1–5 mg elementárního lithia). To je 50–100x méně než toxické psychiatrické dávky uhličitanu lithného (900–1200 mg). Mikrodávky lithia působí jako silný inhibitor enzymu glykogensyntázakinázy-3 beta (GSK-3beta), stimulují syntézu BDNF, indukují autofagii a v epidemiologických studiích korelují s delší délkou života a nižším výskytem Alzheimerovy choroby.",
+    "effects": [
+      "inhibice enzymu GSK-3beta a ochrana neuronů před apoptózou",
+      "významná stimulace syntézy BDNF (Brain-Derived Neurotrophic Factor)",
+      "indukce buněčné autofagie nezávisle na mTOR dráze",
+      "ochrana telomer a stabilizace nálady bez otupění emocí",
+      "neuroprotekce před excitotoxicitou glutamátu"
+    ],
+    "dosage": {
+      "short": "1–5 mg elementárního lithia denně večer",
+      "long": "Dávkujte 1 až 5 mg čistého elementárního lithia (odpovídá cca 25–130 mg lithium orotátu) 1x denně večer s vodou. Pro geroprotekci stačí 1 mg denně, pro stabilizaci nálady a neuroprotekci 5 mg denně."
+    },
+    "warning": "Při mikrodávkách (1–5 mg) je extrémně bezpečné a nevyžaduje monitorování hladiny v krvi. Nezvyšujte dávky nad 15 mg bez lékařského dozoru.",
+    "mechanism": "Přímá kompetitivní a nepřímá inhibice kinázy GSK-3beta přes fosforylaci Ser9; stimulace exprese neurotrofinů BDNF a NGF v hipokampu; snížení enzymu inositolfosfatázy (IMPázy).",
+    "halfLife": "Cca 18–24 hodin (renální vylučování)",
+    "interactions": [
+      "Trehalóza (synergická aktivace autofagie nezávislé na mTOR)",
+      "Magnesium L-Threonát (dokonalá neuroprotektivní kombinace)"
+    ],
+    "naturalSources": [
+      "minerální prameny",
+      "pitná voda v některých regionech",
+      "obiloviny"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 143,
+    "name": "Trehalóza (Trehalose)",
+    "categoryKey": "health",
+    "tags": [
+      "autofagie",
+      "TFEB",
+      "chaperon",
+      "misfolding",
+      "mozek",
+      "cukr"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní disacharid indukující TFEB-dependentní autofagii a čištění toxických proteinů.",
+    "description": "Trehalóza je přírodní disacharid složený ze dvou molekul glukózy spojených alfa,alfa-1,1-glykosidickou vazbou. V přírodě umožňuje mikroorganismům a pouštním rostlinám přežít kompletní dehydrataci (anhydrobióza). V biomedicíně je přelomovou látkou: působí jako chemický chaperon zabraňující agregaci špatně poskládaných proteinů (misfolded proteins) a spouští mohutnou buněčnou autofagii aktivací transkripčního faktoru TFEB, a to zcela nezávisle na mTORC1 (autofagie běží i v přítomnosti živin).",
+    "effects": [
+      "indukce buněčné autofagie přes translokaci faktoru TFEB do jádra",
+      "odbourávání toxických proteinových agregátů (alfa-synuklein, beta-amyloid, tau)",
+      "chemický chaperon stabilizující nativní strukturu proteinů",
+      "ochrana endotelu a snížení tuhosti cév u stárnoucích jedinců",
+      "mírná sladká chuť (cca 45 % sacharózy) s nižším glykemickým indexem"
+    ],
+    "dosage": {
+      "short": "5–10 g denně rozpuštěno v nápoji",
+      "long": "Užívejte 5 až 10 gramů čistého prášku trehalózy denně rozpuštěného ve vodě, čaji nebo kávě. Pro kardiovaskulární a senolytické účinky užívejte 10 g denně po dobu 8–12 týdnů."
+    },
+    "warning": "V trávicím traktu je štěpena enzymem trehalázou. U osob s deficitem trehalázy může vyšší dávka vyvolat plynatost nebo průjem.",
+    "mechanism": "Inhibice transportérů glukózy SLC2A (GLUT1–4), což vyvolává intracelulární signál pseudostarvace a způsobuje translokaci TFEB (Transcription Factor EB) z cytosolu do jádra s následnou transkripcí lysozomálních a autofagických genů (CLEAR síť).",
+    "halfLife": "Cca 1–2 hodiny v krvi (autofagická transkripce přetrvává déle)",
+    "interactions": [
+      "Spermidin (aditivní autofagický impuls)",
+      "Lithium Orotát (dvojitá mTOR-nezávislá indukce buněčné očisty)"
+    ],
+    "naturalSources": [
+      "houby (shiitake)",
+      "kvasinky",
+      "med"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 144,
+    "name": "Akkermansia Muciniphila (Pasterizovaná)",
+    "categoryKey": "health",
+    "tags": [
+      "mikrobiom",
+      "postbiotikum",
+      "streva",
+      "GLP-1",
+      "mucin",
+      "metabolismus"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přelomové metabolické postbiotikum posilující střevní bariéru a přirozenou sekreci GLP-1.",
+    "description": "Akkermansia muciniphila je striktně anaerobní bakterie kolonizující mucinovou vrstvu lidského tenkého a tlustého střeva. Klinické studie prof. Patrice Caniho (Université Catholique de Louvain) prokázaly, že pasterizovaná forma (postbiotikum) je ještě bezpečnější a účinnější než živá kultura. Specifický membránový protein Amuc_1100 přetrvává pasterizaci, váže se na Toll-like receptor 2 (TLR2) v enterocytech, obnovuje těsné spoje střeva, snižuje hladinu lipopolysacharidů (LPS endotoxémii) a stimuluje přirozenou endogenní sekreci GLP-1.",
+    "effects": [
+      "obnova tloušťky a integrity hlenové (mucinové) bariéry střeva",
+      "významné snížení střevní permeability a průniku endotoxinů (LPS)",
+      "stimulace endogenní produkce střevního hormonu GLP-1",
+      "zlepšení inzulínové senzitivity a redukce viscerálního tuku",
+      "snížení chronického nízkostupňového zánětu u metabolického syndromu"
+    ],
+    "dosage": {
+      "short": "1 kapsle denně (cca 30 miliard pasterizovaných buněk) s jídlem",
+      "long": "Užívejte 1 kapsli denně (obsahující standardizovaných 30 miliard pasterizovaných bakterií) ráno se snídaní. Doba užívání minimálně 3 měsíce."
+    },
+    "warning": "Schválená nová potravina (Novel Food) v EU od roku 2022. Žádné závažné vedlejší účinky.",
+    "mechanism": "Interakce vnějšího membránového proteinu Amuc_1100 s receptorem TLR2 na střevních epiteliálních buňkách; indukce exprese claudinu-1, occludinu a ZO-1; stimulace L-buněk k uvolňování GLP-1.",
+    "halfLife": "Stabilní biologické postbiotikum s lokálním působením ve střevě",
+    "interactions": [
+      "Berberin (zvyšuje endogenní růst přirozené Akkermansie v mikrobiomu)",
+      "BPC-157 Arginate (synergická regenerace slizniční bariéry)"
+    ],
+    "naturalSources": [
+      "fyziologická součást zdravého lidského střevního mikrobiomu"
+    ],
+    "bannedStatus": "legal (EU Novel Food schváleno)"
+  },
+  {
+    "id": 145,
+    "name": "Fosfatidylcholin (Polyenylfosfatidylcholin / PPC)",
+    "categoryKey": "health",
+    "tags": [
+      "jatra",
+      "fosfolipid",
+      "membrany",
+      "cholin",
+      "cholesterol",
+      "Essentiale"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Esenciální fosfolipid bohatý na kyselinu linolovou pro opravu membrán hepatocytů.",
+    "description": "Polyenylfosfatidylcholin (PPC / čištěný fosfatidylcholin, známý z léčiva Essentiale) je vysoce purifikovaný extrakt ze sójových bobů obsahující vysokou koncentraci 1,2-dilinoleoylfosfatidylcholinu (DLPC). Fosfatidylcholin je hlavní strukturní jednotkou všech buněčných a mitochondriálních membrán. Při jaterním poškození toxiny, alkoholem či léky dochází k degradaci membránových fosfolipidů. PPC se přímo včleňuje do poškozených membrán hepatocytů, obnovuje jejich fluiditu, regeneruje jaterní tkáň a ředí žluč.",
+    "effects": [
+      "přímé včlenění do narušených membrán jaterních buněk (membránová reparace)",
+      "zlepšení membránové fluidity a transportních jaterních systémů",
+      "ochrana jater před steatózou (ztučněním) a toxickou fibrózou",
+      "podpora emulgace a toku žluči (prevence žlučových kamenů)",
+      "vysoce biodostupný zdroj cholinu pro syntézu acetylcholinu v mozku"
+    ],
+    "dosage": {
+      "short": "600–1 800 mg denně s jídlem",
+      "long": "Při jaterní zátěži: 600 mg 3x denně (celkem 1 800 mg) s jídlem po dobu 2–3 měsíců. Pro udržení zdraví jater a mozku: 600–900 mg denně."
+    },
+    "warning": "Velmi bezpečný lékopisný fosfolipid. Velmi vzácně může při vysokých dávkách způsobit měkčí stolici.",
+    "mechanism": "Přímá inkorporace molekul DLPC do lipidové dvouvrstvy plazmatické a mitochondriální membrány hepatocytů; potlačení aktivace jaterních hvězdicových buněk (HSC) a syntézy kolagenu I (antifibrotický účinek).",
+    "halfLife": "Cca 24–48 hodin (tkáňová membránová retence)",
+    "interactions": [
+      "TUDCA (dokonalá synergie: PPC opravuje membránu a TUDCA žlučové cesty a ER-stres)",
+      "Silymarin (komplementární antioxidační ochrana)"
+    ],
+    "naturalSources": [
+      "sójový lecitin",
+      "vaječné žloutky",
+      "játra"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 146,
+    "name": "Glukosamin & Chondroitin Sulfát",
+    "categoryKey": "health",
+    "tags": [
+      "klouby",
+      "chrupavka",
+      "glykosaminoglykany",
+      "artroza",
+      "synovie"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Strukturální stavební kameny kloubní chrupavky stimulující syntézu proteoglykanů.",
+    "description": "Glukosamin sulfát a Chondroitin sulfát jsou základní glykosaminoglykany (GAG) tvořící extracelulární matrix kloubní chrupavky a synoviální tekutiny. Glukosamin slouží jako biochemický prekurzor pro syntézu chondroitinu, kyseliny hyaluronové a keratan sulfátu, zatímco chondroitin svými negativními náboji elektrostaticky váže vodu, čímž dodává chrupavce pružnost, houževnatost a schopnost tlumit nárazy. Klinické zkoušky potvrzují zpomalení zužování kloubní štěrbiny u osteoartrózy při dlouhodobém užívání.",
+    "effects": [
+      "stavební substrát pro novotvorbu proteoglykanů a kolagenu v chrupavce",
+      "zadržování vody a lubrikace kloubního pouzdra synoviální tekutinou",
+      "inhibice katabolických enzymů degradujících chrupavku (metaloproteináz MMP)",
+      "snížení chronické bolesti kloubů u těžce trénujících sportovců",
+      "zpomalení strukturální progrese osteoartrózy"
+    ],
+    "dosage": {
+      "short": "1 500 mg glukosaminu + 800–1 200 mg chondroitinu denně s jídlem",
+      "long": "Dávkujte 1 500 mg krystalického glukosamin sulfátu (nejlépe 2KCl forma) spolu s 1 000 mg nízkomolekulárního chondroitin sulfátu denně najednou nebo rozděleně do 2 dávek s jídlem. Kúra musí trvat minimálně 2–3 měsíce."
+    },
+    "warning": "Glukosamin se běžně vyrábí z krunýřů korýšů (pozor při těžké alergii na mořské plody; k dispozici jsou i fermentované veganské formy). Mírný vliv na glukózový metabolismus při extrémních dávkách.",
+    "mechanism": "Inkorporace do syntézy aggrekanu chondrocyty; inhibice exprese prozánětlivých cytokinů IL-1beta a TNF-alfa a enzymů kolagenázy a aggrekanázy v synoviální membráně.",
+    "halfLife": "Cca 15 hodin (glukosamin), cca 6–10 hodin (chondroitin)",
+    "interactions": [
+      "Kolagenní peptidy (společné dodání aminokyselin i polysacharidové matrix)",
+      "Kyselina hyaluronová (kompletní viskoelastická kloubní ochrana)"
+    ],
+    "naturalSources": [
+      "chrupavky žraloků a skotu",
+      "krunýře korýšů (krabi, krevety)"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 147,
+    "name": "Kyselina nikotinová (Niacin Flush Protokol)",
+    "categoryKey": "health",
+    "tags": [
+      "niacin",
+      "flush",
+      "cholesterol",
+      "cevy",
+      "longevity",
+      "HGH"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Vysokodávková kyselina nikotinová pro cévní vazodilataci, vyplavení prostaglandinů a lipidy.",
+    "description": "Kyselina nikotinová (pravý Niacin / vitamín B3) se zásadně liší od 'non-flush' niacinamidu. Po požití dávek nad 50–100 mg aktivuje receptor GPR109A (HCA2) na kožních buňkách, což vyvolává mohutné uvolnění prostaglandinů D2 a E2 provázené intenzivním zčervenáním a horkostí kůže (tzv. Niacin Flush). Tento fenomén masivně rozšiřuje periferní kapilární řečiště, čistí toxiny, zlepšuje lipidový profil (zvyšuje HDL a snižuje aterogenní lipoprotein (a)), a při podání večer nalačno vyvolává rebound efekt volných mastných kyselin s mohutným pulzem růstového hormonu (HGH).",
+    "effects": [
+      "masivní vazodilatace periferních kapilár a prokrvení pokožky (Flush)",
+      "významné zvýšení HDL 'dobrého' cholesterolu (až o 20–30 %)",
+      "snížení hladiny vysoce rizikového lipoproteinu(a) a triglyceridů",
+      "indukce nočního pulzu růstového hormonu (HGH) při večerním protokolu nalačno",
+      "prekurzor pro syntézu koenzymu NAD+ v buňkách"
+    ],
+    "dosage": {
+      "short": "100–500 mg nalačno (postupná adaptace na flush)",
+      "long": "Zahajujte na 50–100 mg nalačno. Niacin flush (zčervenání a svědění) nastupuje za 15–20 minut a trvá 30–60 minut (je zcela neškodný). Po adaptaci lze dávku zvýšit na 250–500 mg večer před spaním (minimálně 3 hodiny po jídle pro stimulaci HGH)."
+    },
+    "warning": "Nezaměňovat s niacinamidem (niacinamid nezpůsobuje flush, ale ve vysokých dávkách tlumí sirtuiny!). Nepoužívat formy s 'pomalým uvolňováním' (timed-release) – ty mohou být hepatotoxické. Okamžitě se uvolňující kyselina nikotinová je při dodržení dávek bezpečná.",
+    "mechanism": "Aktivace receptoru spřaženého s Gi-proteinem HCA2 (GPR109A) v adipocytech a Langerhansových buňkách kůže; inhibice lipolýzy v tukové tkáni následovaná prudkým uvolněním PGD2 a PGE2 vyvolávajícím vazodilataci.",
+    "halfLife": "Cca 1 hodina (krátký plazmatický poločas)",
+    "interactions": [
+      "Aspirin (blokuje syntézu prostaglandinů a potlačuje flush – užívat bez aspirinu, pokud je flush žádoucí)",
+      "Statinová léčba (vyžaduje monitorování jaterních testů)"
+    ],
+    "naturalSources": [
+      "krůtí a kuřecí maso",
+      "tuňák",
+      "hovězí játra",
+      "arašídy"
+    ],
+    "bannedStatus": "legal"
   }
 ]

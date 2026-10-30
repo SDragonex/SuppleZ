@@ -2694,5 +2694,474 @@
       "syntetický tetrapeptid zkoumaný v Petrohradském institutu gerontologie"
     ],
     "bannedStatus": "legal, výzkumná substance"
+  },
+  {
+    "id": 772,
+    "name": "Amycretin (Novo Nordisk)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "GLP-1",
+      "amylin",
+      "Novo-Nordisk",
+      "redukce",
+      "blokbuster"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Revoluční unimolekulární ko-agonista GLP-1 a amylinu s 13% úbytkem váhy za pouhých 12 týdnů.",
+    "description": "Amycretin je přelomová molekula nové generace vyvinutá dánskou společností Novo Nordisk. Jedná se o první syntetický unimolekulární peptid, který v jediném řetězci integruje plný agonismus jak na GLP-1 receptorech, tak na amylinových receptorech. V březnu 2024 prezentovala společnost Novo Nordisk data z klinické studie fáze I, kde orální forma Amycretinu dosáhla senzačního úbytku tělesné hmotnosti 13.1 % za pouhých 12 týdnů (oproti cca 6 % u Wegovy za stejnou dobu). Působí na dva odlišné neurochemické okruhy sytosti v hypotalamu a mozkovém kmeni.",
+    "effects": [
+      "bezprecedentní rychlost redukce tuku (13.1 % úbytek za 12 týdnů)",
+      "synergický unimolekulární agonismus na receptorech GLP-1 a amylinu",
+      "kompletní ztišení chuti k jídlu a obsedantních myšlenek na jídlo",
+      "vynikající zachování svalové hmoty ve srovnání s monoterapiemi",
+      "vyvíjen jak v orální tabletové formě, tak v týdenní subkutánní injekci"
+    ],
+    "dosage": {
+      "short": "Týdenní injekční schéma (nebo denní orální tableta ve výzkumných fázích)",
+      "long": "V klinickém vývoji: subkutánní aplikace 1x týdně s postupnou titrací dávky od nízkých miligramových frakcí pro prevenci nauzey. Přísně experimentální substance."
+    },
+    "warning": "Výzkumný peptid ve fázi II klinických zkoušek. Může způsobit přechodnou gastrointestinální nevolnost při rychlé titraci.",
+    "mechanism": "Simultánní vazba a aktivace GLP-1 receptorů v beta-buňkách a hypotalamu a komplexních amylinových receptorů (CTR/RAMP) v area postrema mozkového kmene.",
+    "halfLife": "Prodloužený poločas cca 7–9 dní (injekční forma)",
+    "interactions": [
+      "Inzulín (přísně monitorovat glykémii)",
+      "BPC-157 (ochrana žaludeční sliznice)"
+    ],
+    "naturalSources": [
+      "syntetický ko-agonistický peptid Novo Nordisk"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 773,
+    "name": "Pemvidutide (ALT-801)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "GLP-1",
+      "glukagon",
+      "MASH",
+      "svaly",
+      "lean-mass"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Duální GLP-1 a glukagonový agonista s bezkonkurenčním zachováním svalové hmoty.",
+    "description": "Pemvidutide (ALT-801) je vysoce specifický duální peptidový agonista receptorů pro GLP-1 a glukagon od společnosti Altimmune, vyvinutý pro léčbu metabolické jaterní steatohepatitidy (MASH) a obezity. Zásadním průlomem Pemvidutidu je poměr úbytku tkání: v klinické studii MOMENTUM tvořil úbytek čistého tuku neuvěřitelných 78 % z celkového váhového úbytku a pouze 22 % tvořila beztuková tkáň (u semaglutidu a tirzepatidu bývá ztráta svalů až 35–40 %). Glukagonová komponenta navíc čistí jaterní tuk a nezpůsobuje tachykardii.",
+    "effects": [
+      "extrémní zachování svalové hmoty při masivním úbytku tělesného tuku",
+      "rychlé snížení obsahu jaterního tuku o více než 75 % u MASH",
+      "významný pokles celkového a LDL cholesterolu i triglyceridů",
+      "zvýšení klidového energetického výdeje bez zvýšení tepové frekvence",
+      "potlačení chuti k jídlu a inzulínová senzibilizace"
+    ],
+    "dosage": {
+      "short": "1.2–2.4 mg jednou týdně subkutánně",
+      "long": "Aplikuje se subkutánně 1x týdně inzulínovou stříkačkou. Běžné klinické dávky jsou 1.2 mg, 1.8 mg nebo 2.4 mg týdně po dobu 24–48 týdnů."
+    },
+    "warning": "Výzkumný peptid ve fázi II/III klinických studií. Dodržovat sterilitu a chladové podmínky 2–8 °C.",
+    "mechanism": "Vyvážený agonismus v poměru 1:1 na GLP-1R a GCGR; stimulace jaterní beta-oxidace mastných kyselin a ketogeneze spojená s centrální hypotalamickou sytostí.",
+    "halfLife": "Cca 6–8 dní",
+    "interactions": [
+      "Inzulín (riziko hypoglykémie)",
+      "Silový trénink + Protein (synergická maximalizace udržení svalové hmoty)"
+    ],
+    "naturalSources": [
+      "syntetický peptidový analog oxyntomodulinu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 774,
+    "name": "Petrelintide (ZP8396)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "amylin",
+      "Zealand",
+      "redukce",
+      "bez-nevolnosti",
+      "inovace"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Dlouhodobě působící analog amylinu od Zealand Pharma s minimálním výskytem nevolnosti.",
+    "description": "Petrelintide (ZP8396) je inovativní syntetický peptidový analog amylinu vyvinutý dánskou biotechnologickou společností Zealand Pharma. Hlavní vizí Petrelintidu je poskytnout alternativu k inkretinům (GLP-1), která přináší srovnatelný úbytek hmotnosti, ale s nesrovnatelně lepším profilem snášenlivosti (téměř nulová nevolnost a zvracení typické pro GLP-1). V klinických studiích fáze Ib dosáhl po 16 týdnech úbytku hmotnosti přes 8.6 % s excelentní snášenlivostí a zachováním kvality života.",
+    "effects": [
+      "fyziologické navození sytosti přes amylinové dráhy bez nauzey",
+      "významný úbytek tělesné hmotnosti srovnatelný s první generací GLP-1",
+      "přirozené zpomalení vyprazdňování žaludku bez gastrointestinálního stresu",
+      "možnost kombinace s GLP-1/GIP látkami pro maximální synergii",
+      "týdenní stabilní dávkovací profil"
+    ],
+    "dosage": {
+      "short": "0.6–4.8 mg jednou týdně subkutánně (klinická titrace)",
+      "long": "Aplikuje se 1x týdně subkutánně. Titruje se postupně od nízkých dávek 0.6 mg až po terapeutické dávky 2.4–4.8 mg týdně."
+    },
+    "warning": "Výzkumná substance ve fázi II klinického vývoje. Přísně experimentální charakter.",
+    "mechanism": "Selektivní vysokoafinitní plný agonismus na kalcitoninových/RAMP komplexech amylinového receptoru v area postrema centrálního nervového systému.",
+    "halfLife": "Cca 7–10 dní",
+    "interactions": [
+      "Tirzepatid / Semaglutid (potenciální super-stack)",
+      "Inzulín (sledovat postprandiální glykémii)"
+    ],
+    "naturalSources": [
+      "syntetický peptidový analog lidského amylinu"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
+  },
+  {
+    "id": 775,
+    "name": "Icotrokinra (JNJ-2113)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "oralni",
+      "IL-23",
+      "psoriaza",
+      "IBD",
+      "protizanetlivy"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "První perorální cílený peptidový antagonista IL-23 receptoru pro léčbu psoriázy a IBD.",
+    "description": "Icotrokinra (kódové označení JNJ-2113 / JNJ-77242113) vyvinutá společnostmi Johnson & Johnson a Protagonist Therapeutics je historicky prvním perorálním cíleným peptidovým inhibitorem receptoru pro interleukin-23 (IL-23R). Doposud byla biologická léčba blokující IL-23 (jako guselkumab, risankizumab) dostupná výhradně ve formě injekcí monoklonálních protilátek. Icotrokinra je vysoce stabilní cyklický peptid v denní tabletě, který se selektivně váže na IL-23R s pikomolární afinitou a zcela blokuje produkci zánětlivého IL-17.",
+    "effects": [
+      "orální biologická léčba v jedné tabletě bez nutnosti injekcí",
+      "selektivní blokáda signální dráhy IL-23 / IL-17",
+      "dramatické vyčištění kůže u psoriázy (studie fáze III FRONTIER)",
+      "hluboký protizánětlivý účinek u Crohnovy choroby a ulcerózní kolitidy",
+      "vysoká bezpečnost bez široké imunosuprese"
+    ],
+    "dosage": {
+      "short": "25–100 mg 1–2x denně perorálně (v tabletě)",
+      "long": "V klinických studiích se užívá 100 mg jednou denně ráno nebo 50 mg 2x denně nalačno se sklenicí vody. Přísně experimentální lék ve fázi III."
+    },
+    "warning": "Výzkumná látka ve fázi III registrace. Nemá systémové vedlejší účinky monoklonálních protilátek, přesto vyžaduje sledování zánětlivých parametrů.",
+    "mechanism": "Vysoce selektivní kompetitivní vazba na extracelulární doménu receptoru pro IL-23 (IL-23R), čímž brání vazbě cytokinu IL-23 a následné aktivaci kináz Jak2/Tyk2 a fosforylaci STAT3.",
+    "halfLife": "Cca 12–15 hodin",
+    "interactions": [
+      "Biologická léčiva (nekombinovat s injekčními anti-IL23 protilátkami)",
+      "Imunosupresiva (sledovat reakci imunitního systému)"
+    ],
+    "naturalSources": [
+      "syntetický cyklický peptidový antagonista"
+    ],
+    "bannedStatus": "výzkumná substance (clinical trial phase III)"
+  },
+  {
+    "id": 776,
+    "name": "Palopegteriparatide (TransCon PTH / Yorvipath)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "PTH",
+      "vapnik",
+      "kosti",
+      "parathormon",
+      "FDA-2024"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Dlouhodobě působící proléčivo parathormonu (PTH 1-34) schválené FDA v roce 2024.",
+    "description": "Palopegteriparatide (obchodní název Yorvipath / TransCon PTH vyvinutý společností Ascendis Pharma, schválený FDA a EMA v roce 2024) je revoluční peptidové proléčivo lidského parathormonu (fragment PTH 1-34). Nativní parathormon má v krvi poločas pouhé 2–4 minuty, což dosud znemožňovalo efektivní substituční léčbu hypoparatyreózy bez rizika kalcifikace ledvin a osteoporózy. Technologie TransCon kontinuálně a pomalu uvolňuje aktivní PTH(1-34) po dobu 24 hodin, čímž udržuje stabilní hladinu vápníku a fosforu v normálním fyziologickém rozmezí.",
+    "effects": [
+      "stabilní 24hodinová fyziologická hladina parathormonu bez výkyvů",
+      "normalizace sérového vápníku a fosfátů v krevní plazmě",
+      "eliminace nutnosti konzumace obřích dávek vápníku a aktivního vitamínu D",
+      "ochrana ledvin před nefrokalcinózou a ledvinovými kameny",
+      "obnova normální kostní remodelace a hustoty kostní hmoty"
+    ],
+    "dosage": {
+      "short": "6–30 mcg subkutánně jednou denně (přesné titrační pero)",
+      "long": "Aplikuje se subkutánně 1x denně předplněným perem Yorvipath. Zahajuje se na 18 mcg denně a dávka se titruje podle hladiny sérového vápníku. Vyžaduje přísný lékařský dohled endokrinologa."
+    },
+    "warning": "Schválený lék na lékařský předpis. Vyžaduje pravidelné laboratorní měření vápníku, fosforu a kreatininu. Riziko hyperkalcémie při předávkování.",
+    "mechanism": "Pomalé autokatalytické uvolňování bioaktivního peptidu PTH(1-34) z inertního polyethylenglykolového (PEG) nosiče; vazba na receptor PTH1R v kostech a renálních tubulech.",
+    "halfLife": "Poločas uvolňování z proléčiva cca 60 hodin (umožňuje hladké stabilní krytí 24h)",
+    "interactions": [
+      "Vápník a Vitamín D (při zahájení léčby je nutné snížit jejich suplementaci)",
+      "Digoxin (riziko toxicity při změnách vápníku)"
+    ],
+    "naturalSources": [
+      "rekombinantní peptidové proléčivo"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), lék na předpis (FDA/EMA 2024)"
+  },
+  {
+    "id": 777,
+    "name": "Enlicitide Decanoate (MK-0616)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "oralni",
+      "PCSK9",
+      "cholesterol",
+      "LDL",
+      "Merck"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "První perorální makrocyklický peptidový inhibitor PCSK9 snižující LDL o 60 % v tabletě.",
+    "description": "Enlicitide Decanoate (MK-0616) je průlomový perorální makrocyklický peptid vyvinutý společností Merck & Co. (MSD). Dosavadní inhibitory PCSK9 (evolokumab, alirokumab) byly dostupné pouze jako velmi drahé injekční monoklonální protilátky. Enlicitide je malý cyklický peptid syntetizovaný s promotores vstřebávání, který lze užívat orálně v jedné denní tabletě. Váže se přímo na protein PCSK9 a zabraňuje mu v degradaci LDL receptorů na povrchu hepatocytů, což vede k senzačnímu poklesu 'špatného' LDL cholesterolu o 60–65 %.",
+    "effects": [
+      "pokles aterogenního LDL cholesterolu o 60–65 % v denní tabletě",
+      "snížení apolipoproteinu B (ApoB) a non-HDL cholesterolu",
+      "orální alternativa k injekčním monoklonálním protilátkám proti PCSK9",
+      "obrovská redukce kardiovaskulárního rizika a aterosklerózy",
+      "vynikající bezpečnostní profil bez svalových bolestí známých ze statinů"
+    ],
+    "dosage": {
+      "short": "10–30 mg jednou denně perorálně nalačno",
+      "long": "V klinických studiích fáze III se užívá 1x denně ráno nalačno se sklenicí vody, minimálně 30 minut před jídlem a ostatními léky."
+    },
+    "warning": "Výzkumná substance ve fázi III klinických zkoušek. Užívat přesně nalačno pro zajištění konzistentní absorpce.",
+    "mechanism": "Vysokoafinitní vazba makrocyklického peptidu na vazebné místo PCSK9 pro LDLR; zablokování degradace LDL receptorů v lysozomech a jejich recyklace zpět na membránu hepatocytu.",
+    "halfLife": "Cca 20–24 hodin",
+    "interactions": [
+      "Statiny a Ezetimib (mohutný synergický pokles LDL až o 80–85 %)",
+      "Jídlo (příjem potravy těsně po požití snižuje absorpci – dodržet odstup)"
+    ],
+    "naturalSources": [
+      "syntetický makrocyklický peptid"
+    ],
+    "bannedStatus": "výzkumná substance (fáze III)"
+  },
+  {
+    "id": 778,
+    "name": "Motixafortide (Aphexda / BL-8040)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "kmenove-bunky",
+      "CXCR4",
+      "mobilizace",
+      "regenerace",
+      "FDA-2023"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Vysokoafinitní peptidový antagonista CXCR4 pro masivní mobilizaci kmenových buněk.",
+    "description": "Motixafortide (Aphexda / BL-8040, schválený FDA v září 2023) je syntetický 14-aminokyselinový cyklický peptid vyvinutý společností BioLineRx. Je nejsilnějším známým antagonistou chemokinového receptoru CXCR4. Za normálních okolností drží chemokin CXCL12 kmenové buňky uzamčené v kostní dření. Jediná subkutánní injekce Motixafortidu vyvolá okamžité uvolnění obrovského množství hematopoetických a mezenchymálních kmenových buněk (HSC a MSC) do periferního krevního oběhu, což umožňuje jejich odběr nebo cílené hojení těžce poškozených orgánů.",
+    "effects": [
+      "masivní mobilizace hematopoetických a mezenchymálních kmenových buněk do krve",
+      "nejvyšší afinita k receptoru CXCR4 ze všech známých sloučenin",
+      "přímé navození apoptózy leukemických buněk a senzibilizace k chemoterapii",
+      "podpora hluboké systémové tkáňové regenerace pomocí kmenových buněk",
+      "FDA schválení v kombinaci s filgrastimem (G-CSF)"
+    ],
+    "dosage": {
+      "short": "1.25 mg/kg subkutánně (nemocniční protokol)",
+      "long": "Aplikuje se subkutánně v dávce 1.25 mg na kg tělesné hmotnosti. V biohackingu a regenerativní medicíně je zkoumán pro 'autologní kmenovou mobilizaci' před regeneračními terapiemi."
+    },
+    "warning": "Vysoce potentní léčivo. Způsobuje masivní leukocytózu (prudký nárůst bílých krvinek v krvi). V místě vpichu může vyvolat přechodné zarudnutí a svědění.",
+    "mechanism": "Vysokoafinitní antagonistická vazba na chemokinový receptor CXCR4 (Kd ~ 1 nM) a jeho prodloužená okupace po dobu >48 hodin, což přetrhává osu CXCL12/CXCR4 kotvící kmenové buňky ve stromatu kostní dřeně.",
+    "halfLife": "Cca 20–24 hodin (receptorová okupace přetrvává až 72 hodin)",
+    "interactions": [
+      "G-CSF (Filgrastim – synergická kombinace pro maximální mobilizaci buněk)",
+      "Imunosupresiva"
+    ],
+    "naturalSources": [
+      "syntetický cyklický peptid"
+    ],
+    "bannedStatus": "schválený lék na předpis (FDA 2023), výzkumná substance"
+  },
+  {
+    "id": 779,
+    "name": "GK-2 (Hexapeptidový NGF mimetik)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "NGF",
+      "TrkA",
+      "mozek",
+      "nervy",
+      "neurogeneze",
+      "Rusko"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Dimeric hexapeptidový mimetik nervového růstového faktoru (NGF) pro opravu nervů.",
+    "description": "GK-2 (bis-(N-sukcynyl-L-glutamyl-L-lysin) hexamethylendiamid) je syntetický dipeptidový dimer vytvořený v Ústavu farmakologie V. V. Zachusova v Moskvě pod vedením akademika S. B. Seredenina. Jedná se o designovaný mimetik čtvrté smyčky přirozeného nervového růstového faktoru (NGF). Běžný protein NGF nedokáže překonat hematoencefalickou bariéru a vyvolává bolestivé reakce. GK-2 naproti tomu snadno prochází do mozku, aktivuje tyrosinkinázové receptory TrkA, stimuluje růst axonů, přežití neuronů a chrání mozek před následky mrtvice, traumatu a diabetické neuropatie.",
+    "effects": [
+      "aktivace receptorů TrkA a napodobení účinků nervového růstového faktoru",
+      "ochrana neuronů před ischemií, hypoxií a excitotoxicitou",
+      "stimulace růstu nervových výběžků (axonů a dendritů)",
+      "obnova kognitivních funkcí po cévních mozkových příhodách",
+      "absence algogenních (bolestivých) vedlejších účinků nativního NGF"
+    ],
+    "dosage": {
+      "short": "0.5–2 mg subkutánně nebo intramuskulárně denně",
+      "long": "Aplikuje se 1 mg denně subkutánně nebo do svalu po dobu 14–30 dnů. Vhodné pro rehabilitaci po poranění periferních nervů nebo kraniotraumatu."
+    },
+    "warning": "Výzkumná substance. Přísně dodržovat sterilitu roztoku.",
+    "mechanism": "Selektivní vazba na homodimerní tyrosinkinázový receptor TrkA; autofosforylace receptoru a stimulace dráhy PI3K/Akt bez aktivace 'smrtícího' receptoru p75NTR.",
+    "halfLife": "Cca 1–2 hodiny (intracelulární neurotrofický signál přetrvává dny)",
+    "interactions": [
+      "Semax / Cerebrolysin (komplementární neurotrofický stack)",
+      "Alfa-GPC (substrát pro nově rostoucí cholinergní neurony)"
+    ],
+    "naturalSources": [
+      "syntetický mimetik NGF vyvinutý v Rusku"
+    ],
+    "bannedStatus": "výzkumná substance"
+  },
+  {
+    "id": 780,
+    "name": "GSB-106 (Dipeptidový BDNF mimetik)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "BDNF",
+      "TrkB",
+      "antidepresivum",
+      "pamet",
+      "neuroplasticita"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Nízkomolekulární dipeptidový mimetik BDNF aktivující receptor TrkB s rychlým antidepresivním efektem.",
+    "description": "GSB-106 (bis-(N-monosukcynyl-L-seryl-L-lysin) hexamethylendiamid) je syntetický mimetik mozkového neurotrofického faktoru (BDNF), vyvinutý stejným ruským vědeckým týmem jako GK-2. Cílí na čtvrtou smyčku molekuly BDNF. Aktivuje receptor TrkB, který řídí synaptickou plasticitu, tvorbu dlouhodobé paměti a náladu. V preklinických modelech vykazuje GSB-106 rychlý a mohutný antidepresivní a anxiolytický účinek, stimuluje hipokampální neurogenezi a zvrací poškození mozku způsobené chronickým stresem.",
+    "effects": [
+      "selektivní aktivace receptoru TrkB (přímé mimetikum BDNF)",
+      "silný a rychlý antidepresivní účinek zprostředkovaný neuroplasticitou",
+      "stimulace tvorby nových synapsí v hipokampu a prefrontálním kortexu",
+      "obnova kognitivních schopností poškozených chronickým stresem",
+      "vysoká biologická dostupnost a schopnost přestupu do mozku"
+    ],
+    "dosage": {
+      "short": "0.5–1 mg subkutánně nebo orálně denně",
+      "long": "Dávkujte 0.5 mg až 1 mg subkutánně inzulínovou stříkačkou 1x denně ráno po dobu 14–21 dnů. Kúru lze po měsíční pauze opakovat."
+    },
+    "warning": "Výzkumná sloučenina. Neužívejte při aktivních nádorech centrální nervové soustavy.",
+    "mechanism": "Specifický agonismus na tyrosinkinázovém receptoru TrkB, indukce fosforylace MAPK/ERK a Akt drah odpovědných za přežití neuronů a synaptickou plasticitu.",
+    "halfLife": "Cca 2 hodiny",
+    "interactions": [
+      "Magnesium L-Threonát (stabilizace nově tvořených synapsí)",
+      "Selank (anxiolytická a neurochemická synergie)"
+    ],
+    "naturalSources": [
+      "syntetický dipeptidový mimetik"
+    ],
+    "bannedStatus": "výzkumná substance"
+  },
+  {
+    "id": 781,
+    "name": "Cortagen (Ala-Glu-Asp-Pro)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "bioregulator",
+      "mozek",
+      "nervy",
+      "Khavinson",
+      "kortex"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Khavinsonův tetrapeptid mozkové kůry pro regeneraci periferních nervů a mozkové tkáně.",
+    "description": "Cortagen je syntetický bioregulační tetrapeptid složený ze čtyř aminokyselin: L-alaninu, L-glutamové kyseliny, L-asparagové kyseliny a L-prolinu (Ala-Glu-Asp-Pro). Byl vyvinut v Petrohradském institutu bioregulace jako strukturální analog přírodního mozkového extraktu Cortexinu. Působí tkáňově specificky na neurony mozkové kůry a periferní nervová vlákna. Výzkumy prokázaly, že Cortagen dramaticky stimuluje expresi endogenních neurotrofinů (NGF, BDNF), urychluje regeneraci přerušených periferních nervů a normalizuje bioelektrickou aktivitu mozku po úrazech.",
+    "effects": [
+      "významná stimulace regenerace periferních nervových vláken a míchy",
+      "upregulace exprese neurotrofických faktorů v neuronech kortexu",
+      "antioxidační a neuroprotektivní ochrana mozkové tkáně",
+      "zlepšení kognitivních procesů a bioelektrické aktivity EEG",
+      "obnova funkčnosti po kraniocerebrálních traumatech a ischemii"
+    ],
+    "dosage": {
+      "short": "10–20 mcg subkutánně denně (nebo 1–2 mg orálně) po dobu 10–20 dnů",
+      "long": "Aplikuje se subkutánně 10 až 20 mcg 1x denně ráno po dobu 10–14 po sobě jdoucích dnů. V orální formě 1–2 mg nalačno po dobu 20 dnů."
+    },
+    "warning": "Netoxický fyziologický peptid bez vedlejších účinků v klinických zkouškách.",
+    "mechanism": "Penetrace přes jadernou membránu neuronů, vazba na histony a epigenetická stimulace exprese genů kódujících neurotrofiny a proteiny neuronálního cytoskeletu.",
+    "halfLife": "Rychlý rozpad na aminokyseliny, epigenetický stimulační efekt přetrvává měsíce",
+    "interactions": [
+      "Pinealon (dokonalý synergický stack pro mozek: Cortagen + Pinealon)",
+      "Cerebrolysin (komplexní neurorehabilitace)"
+    ],
+    "naturalSources": [
+      "syntetický tetrapeptid odvozený z Cortexinu"
+    ],
+    "bannedStatus": "legal, výzkumná substance"
+  },
+  {
+    "id": 782,
+    "name": "Pancragen (Lys-Glu-Asp-Trp)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "bioregulator",
+      "slinivka",
+      "pankreas",
+      "inzulin",
+      "enzymy"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Tetrapeptidový bioregulátor slinivky břišní pro regeneraci beta-buněk a enzymatickou funkci.",
+    "description": "Pancragen je syntetický krátký bioregulační peptid složený ze 4 aminokyselin: L-lysinu, L-glutamové kyseliny, L-asparagové kyseliny a L-tryptofanu (Lys-Glu-Asp-Trp). Je navržen pro cílenou normalizaci a regeneraci buněk pankreatu. Působí jak na exokrinní část (stimuluje syntézu a sekreci trávicích enzymů – amylázy, lipázy a proteáz), tak na endokrinní část v Langerhansových ostrůvcích (chrání beta-buňky před toxickým poškozením a apoptózou, zlepšuje citlivost k inzulínu a normalizuje glykémii u diabetu 2. typu).",
+    "effects": [
+      "tkáňově specifická regenerace buněk slinivky břišní",
+      "ochrana a podpora integrity beta-buněk produkujících inzulín",
+      "normalizace syntézy a vylučování trávicích enzymů pankreatu",
+      "zlepšení glukózové tolerance a inzulínové senzitivity",
+      "terapeutická podpora při chronické pankreatitidě a metabolickém syndromu"
+    ],
+    "dosage": {
+      "short": "10–20 mcg subkutánně denně (nebo 1–2 mg orálně) po dobu 10–20 dnů",
+      "long": "Subkutánně 10–20 mcg denně inzulínovou stříkačkou po dobu 10–14 dnů. Orálně 1–2 mg denně ráno nalačno po dobu 20–30 dnů. Kúru opakovat 2x ročně."
+    },
+    "warning": "Fyziologický netoxický bioregulátor. Nenahrazuje okamžité podání inzulínu u diabetu 1. typu.",
+    "mechanism": "Epigenetická vazba tetrapeptidu na DNA pankreatických buněk; aktivace exprese transkripčního faktoru PDX-1 řídícího diferenciaci a přežití beta-buněk.",
+    "halfLife": "Rychlý rozklad na volné aminokyseliny, epigenetické nastavení trvá měsíce",
+    "interactions": [
+      "Berberin / Metformin (synergická stabilizace glukózové homeostázy)",
+      "Livagen (komplexní obnova jaterně-pankreatické osy)"
+    ],
+    "naturalSources": [
+      "syntetický tetrapeptid Khavinsonova institutu"
+    ],
+    "bannedStatus": "legal, výzkumná substance"
+  },
+  {
+    "id": 783,
+    "name": "TB4-Frag (Ac-LKKTETQ)",
+    "categoryKey": "experimental",
+    "tags": [
+      "peptid",
+      "TB-500",
+      "aktin",
+      "fragment",
+      "hojeni",
+      "šlachy"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Minimální bioaktivní 7-aminokyselinový fragment thymosinu beta-4 pro vazbu aktinu a hojení.",
+    "description": "TB4-Frag (Ac-Leu-Lys-Lys-Thr-Glu-Thr-Gln / Ac-LKKTETQ) představuje minimální esenciální bioaktivní doménu celého 43-aminokyselinového proteinu thymosinu beta-4. Zatímco celý protein i velký peptid TB-500 (17-38 fragment) obsahují další sekvence, právě tento heptapeptid je přímo zodpovědný za sekvestraci a polymeraci G-aktinu a stimulaci endoteliální migrace buněk. Vyznačuje se vynikající stabilitou, rychlou tkáňovou difuzí a mohutným účinkem na hojení natržených šlach, vazů a rohovkových či kožních defektů bez zbytečné imunogenicity.",
+    "effects": [
+      "vysoká afinita k monomernímu G-aktinu a řízení cytoskeletu",
+      "extrémně rychlá migrace reparačních buněk do ložiska zranění",
+      "urychlení hojení šlach, svalových vláken a kloubních chrupavek",
+      "prevence tvorby tuhých nefunkčních jizev (antifibrotický účinek)",
+      "vynikající stabilita a snížené riziko degradace"
+    ],
+    "dosage": {
+      "short": "500–1 000 mcg subkutánně 2–3x týdně",
+      "long": "Aplikuje se 500 až 1 000 mcg (0.5–1 mg) subkutánně inzulínovou stříkačkou v blízkosti zranění nebo do břišního tuku 2–3x týdně po dobu 4–6 týdnů."
+    },
+    "warning": "Výzkumná substance. Neužívat při podezření na onkologické procesy (stimulace buněčné motility). WADA zakazuje látky odvozené od thymosinu beta-4.",
+    "mechanism": "Vazba na rozhraní subdomén 1 a 3 monomerního G-aktinu, inhibice spontánní nukleace a řízená polymerace na F-aktinová filamenta; downregulace TGF-beta a metaloproteináz.",
+    "halfLife": "Cca 2–4 hodiny (systémový buněčný efekt trvá 24–48 hodin)",
+    "interactions": [
+      "BPC-157 (slavný Wolverine protokol nové generace)",
+      "GHK-Cu (aditivní syntéza nového kolagenu)"
+    ],
+    "naturalSources": [
+      "syntetický aktivní fragment thymosinu beta-4"
+    ],
+    "bannedStatus": "banned-sport (WADA S2), výzkumná substance"
   }
 ]

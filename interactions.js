@@ -144,6 +144,41 @@ const SYNERGIES = [
         title: 'Apigenin + Fosfatidylserin (Ztišení osy HPA & Spánek)',
         mechanism: 'Dokonalý večerní stack pro sportovce ve stavu přepětí. Fosfatidylserin přímo sráží hladinu nočního kortizolu a apigenin se váže na benzodiazepinová vazebná místa GABA-A, což přináší hluboké uvolnění a okamžitý spánek.',
         tags: ['spánek', 'kortizol', 'GABA', 'regenerace']
+    },
+    {
+        id: 'lithium_trehalose',
+        items: ['lithium', 'trehaloza'],
+        title: 'Lithium Orotát + Trehalóza (mTOR-nezávislá autofagie)',
+        mechanism: 'Průlomová biohackingová kombinace pro neuroprotekci. Trehalóza aktivuje nukleární translokaci TFEB a spouští lysosomální biogenezi nezávisle na mTOR, zatímco mikrodávka lithia inhibuje enzym GSK-3beta a IMPázu. Dochází k akcelerovanému čištění agregovaných tau proteinů a amyloidních plaků.',
+        tags: ['longevity', 'autofagie', 'TFEB', 'neuroprotekce']
+    },
+    {
+        id: 'nebivolol_telmisartan',
+        items: ['nebivolol', 'telmisartan'],
+        title: 'Nebivolol + Telmisartan (Klinická kardioprotekce)',
+        mechanism: 'Zlatý standard kardiovaskulární ochrany. Telmisartan blokuje receptory AT1, aktivuje PPAR-gamma a chrání ledviny i cévní endotel. Nebivolol jako superselektivní beta-1 blokátor stimuluje syntézu oxidu dusnatého (eNOS) přes beta-3 receptory bez útlumu srdečního výdeje a erektilní dysfunkce.',
+        tags: ['kardioprotekce', 'tlak', 'eNOS', 'endotel', 'PCT']
+    },
+    {
+        id: 'galantamine_cholin',
+        items: ['galantamin', 'cholin'],
+        title: 'Galantamin + Cholin / Alfa-GPC (Lucidní snění & Paměť)',
+        mechanism: 'Maximální stimulace acetylcholinergní transmise. Galantamin reverzibilně inhibuje acetylcholinesterázu (AChE) a alostericky moduluje nikotinové receptory. Dodání donorů cholinu (Alfa-GPC nebo Citicolin) brání vyčerpání neurotransmiteru a maximalizuje REM fázi i kognitivní ostrost.',
+        tags: ['nootropika', 'lucid-dreaming', 'acetylcholin', 'REM']
+    },
+    {
+        id: 'phosphatidic_acid_creatine',
+        items: ['fosfatidova kyselina', 'kreatin'],
+        title: 'Fosfatidová kyselina + Kreatin (Maximální anabolismus)',
+        mechanism: 'Duální stimulace svalového růstu. Fosfatidová kyselina (Mediator PA) přímo aktivuje fosforylaci mTORC1 prostřednictvím domény FRB nezávisle na hormonech, zatímco kreatin maximalizuje intracelulární zásobu ATP pro mechanické přetížení a proteosyntézu.',
+        tags: ['výkon', 'mTORC1', 'hypertrofie', 'ATP']
+    },
+    {
+        id: 'tesofensine_berberine',
+        items: ['tesofensin', 'berberin'],
+        title: 'Tesofensin + Berberin (Metabolický a anorektický synergismus)',
+        mechanism: 'Kombinace centrální a periferní metabolické regulace. Tesofensin silně tlumí chuť k jídlu inhibicí reuptake dopaminu, serotoninu a noradrenalinu v CNS, zatímco Berberin aktivuje AMPK v játrech a svalech, zvyšuje citlivost na inzulín a brání ukládání viscerálního tuku.',
+        tags: ['tuky', 'metabolismus', 'AMPK', 'sytost']
     }
 ];
 
@@ -355,6 +390,39 @@ const PRESET_STACKS = [
             { id: 311, name: 'Fosfatidylserin (Noční protokol)' },
             { id: 133, name: 'Apigenin (Lipozomální / Krystalický)' },
             { id: 102, name: 'Magnesium (Bisglycinát)' },
+            { id: 300, name: 'L-Theanin' }
+        ]
+    },
+    {
+        id: 'cardio_shield',
+        name: 'Kardiovaskulární štít & Orgánová ochrana',
+        desc: 'Klinická kontrola krevního tlaku, ochrana ledvin a endotelu při zátěži.',
+        items: [
+            { id: 914, name: 'Telmisartan (Micardis)' },
+            { id: 921, name: 'Nebivolol (Bystolic)' },
+            { id: 130, name: 'Citrus Bergamot (Bergamonte)' },
+            { id: 111, name: 'Coenzyme Q10 (Ubiquinol)' }
+        ]
+    },
+    {
+        id: 'autophagy_deep',
+        name: 'Hloubková autofagie & Neuroprotekce',
+        desc: 'mTOR-nezávislá stimulace TFEB a mitofágie pro buněčnou očistu a longevity.',
+        items: [
+            { id: 143, name: 'Trehalóza (Trehalose - TFEB autofagie)' },
+            { id: 142, name: 'Lithium Orotát (Microdose)' },
+            { id: 124, name: 'Spermidin' },
+            { id: 132, name: 'Urolithin A (Mitopure)' }
+        ]
+    },
+    {
+        id: 'lucid_dreaming',
+        name: 'Lucidní snění & Kognitivní paměť',
+        desc: 'Maximalizace acetylcholinergní signalizace a konsolidace REM spánku.',
+        items: [
+            { id: 632, name: 'Galantamin (Reminyl - lucid dreaming & AChEI)' },
+            { id: 600, name: 'Alfa-GPC' },
+            { id: 316, name: 'Melatonin (Mikrodávkovaný 0.3 mg vs farmakologický 3–5 mg)' },
             { id: 300, name: 'L-Theanin' }
         ]
     }

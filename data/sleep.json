@@ -635,5 +635,165 @@
       "přirozená syntéza v lidských ledvinách"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 316,
+    "name": "Melatonin (Mikrodávkovaný 0.3 mg vs 3–5 mg)",
+    "categoryKey": "sleep",
+    "tags": [
+      "melatonin",
+      "cirkadian",
+      "pineal",
+      "mikrodavkovani",
+      "spanek",
+      "antioxidant"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Epifýzový hormon s revolučním rozdílem mezi fyziologickým mikrodávkováním a vysokými dávkami.",
+    "description": "Melatonin (N-acetyl-5-methoxytryptamin) je neurohormon syntetizovaný epifýzou z aminokyseliny L-tryptofanu za tmy. Moderní chronobiologie (studie z MIT pod vedením Dr. Richarda Wurtmana) odhalila zásadní paradox: běžně prodávané komerční dávky (3 až 10 mg) jsou suprafyziologické (až 50x vyšší než tělo potřebuje) a vedou k desenzitizaci melatoninových receptorů MT1 a MT2, nočním můrám a ranní otupělosti. Naproti tomu fyziologické mikrodávkování (0.3 mg / 300 mcg) napodobuje přirozenou produkci těla, obnovuje cirkadiánní rytmus bez ranní kocoviny a desenzitizace.",
+    "effects": [
+      "fyziologická synchronizace vnitřních cirkadiánních hodin (SCN v hypotalamu)",
+      "zkrácení latence usnutí a přirozený signál tělu k nočnímu režimu",
+      "mikrodávka (0.3 mg) zachovává citlivost receptorů MT1 a MT2 bez tolerance",
+      "silná mitochondriální antioxidační kapacita (vychytává volné radikály přímo v matrix)",
+      "ideální nástroj pro překonání pásmové nemoci (jet lag) a práci na směny"
+    ],
+    "dosage": {
+      "short": "0.3 mg (300 mcg) 60–90 min před spaním (nebo 3–5 mg pro silnou antioxidační terapii)",
+      "long": "Pro zdravý cirkadiánní rytmus: 300 mcg (0.3 mg) sublinguálně nebo v kapkách 60 minut před ulehnutím v zatemněné místnosti. Suprafyziologické dávky (3–5 mg) užívejte pouze krátkodobě při těžkém jet lagu nebo v onkologických antioxidačních protokolech."
+    },
+    "warning": "Vyhněte se modrému světlu z displejů (modré světlo o vlnové délce 460–480 nm okamžitě blokuje přirozenou sekreci melatoninu). Neužívejte před řízením motorových vozidel.",
+    "mechanism": "Agonismus na receptoru MT1 (indukuje spavost a zpomaluje neuronální aktivitu v SCN) a MT2 (řídí fázový posun cirkadiánního rytmu); přímá neutralizace hydroxylových a peroxylových radikálů v mitochondriích.",
+    "halfLife": "Cca 30–45 minut (rychlý rozpad v játrech přes CYP1A2)",
+    "interactions": [
+      "Kofein (antagonizuje účinek melatoninu – kofein vysadit 8–10h předem)",
+      "Magnesium Bisglycinát (synergický noční rituál)"
+    ],
+    "naturalSources": [
+      "višně (Montmorency tart cherries)",
+      "vlašské ořechy",
+      "pistácie"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 317,
+    "name": "L-Ornithin (Ornithin proti nočnímu amoniaku)",
+    "categoryKey": "sleep",
+    "tags": [
+      "ornithin",
+      "amoniak",
+      "spanek",
+      "kortizol",
+      "mocovinovy-cyklus",
+      "regenerace"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Aminokyselina močovinového cyklu odbourávající noční amoniak a srážející stres.",
+    "description": "L-Ornithin je neproteinogenní aminokyselina hrající ústřední roli v močovinovém cyklu (urea cycle) v játrech, kde slouží k detoxikaci toxického amoniaku (vznikajícího odbouráváním bílkovin a těžkým tréninkem). Zvýšená hladina amoniaku v krvi prochází do mozku, narušuje syntézu neurotransmiterů a vyvolává noční probouzení a neklid. Klinické dvojitě zaslepené studie prokázaly, že večerní dávka L-ornithinu urychluje clearance amoniaku, významně snižuje noční kortizol, zkracuje dobu usnutí a eliminuje ranní pocit únavy po probuzení.",
+    "effects": [
+      "urychlení jaterní detoxikace amoniaku na močovinu",
+      "významné snížení hladiny kortizolu při nočním probuzení",
+      "hluboký a nepřerušovaný spánek u sportovců na vysokoproteinové dietě",
+      "snížení ranní únavy a pocitu nevyspání",
+      "podpora syntézy růstového hormonu v kombinaci s argininem"
+    ],
+    "dosage": {
+      "short": "2 000–4 000 mg (2–4 g) před spaním s vodou",
+      "long": "Užívejte 2 až 4 gramy čistého L-ornithinu HCl přibližně 30–45 minut před spaním nalačno. Zvláště vhodné pro těžce trénující sportovce s vysokým příjmem bílkovin."
+    },
+    "warning": "Velmi bezpečná aminokyselina. Při dávkách nad 8 g může u citlivých osob způsobit gastrointestinální diskomfort.",
+    "mechanism": "Aktivace enzymu ornitintranskarbamylázy (OTC) v mitochondriích hepatocytů, což urychluje konverzi toxického amoniaku na močovinu; snížení poměru kortizol/DHEA po stresu.",
+    "halfLife": "Cca 1.5–2 hodiny",
+    "interactions": [
+      "Fosfatidylserin (dvojité potlačení nočního stresu a kortizolu)",
+      "L-Arginin (synergie v močovinovém cyklu a podpoře HGH)"
+    ],
+    "naturalSources": [
+      "maso",
+      "ryby",
+      "mléčné výrobky"
+    ],
+    "bannedStatus": "legal"
+  },
+  {
+    "id": 318,
+    "name": "Agomelatin (Valdoxan)",
+    "categoryKey": "sleep",
+    "tags": [
+      "antidepresivum",
+      "melatonin",
+      "5-HT2C",
+      "cirkadian",
+      "Valdoxan",
+      "spanek"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Melatoninergní antidepresivum synchronizující cirkadiánní rytmus bez sexuálních dysfunkcí.",
+    "description": "Agomelatin (obchodní název Valdoxan) je inovativní antidepresivum se zcela odlišným mechanismem od klasických SSRI. Působí jako vysoce afinitní agonista melatoninových receptorů MT1 a MT2 a současně jako specifický antagonista serotoninových 5-HT2C receptorů. Blokádou 5-HT2C receptorů odbrzďuje uvolňování dopaminu a noradrenalinu specificky v prefrontálním kortexu. Výsledkem je obnova přirozené architektury spánku, rychlé usnutí, synchronizace cirkadiánního rytmu a antidepresivní účinek bez sexuálních dysfunkcí a přibírání na váze.",
+    "effects": [
+      "obnova fyziologické architektury spánku a fází pomalých vln (SWS)",
+      "silný a stabilní antidepresivní účinek srovnatelný s klasickými léky",
+      "selektivní zvýšení dopaminu a noradrenalinu v prefrontální kůře",
+      "kompletní absence sexuálních nežádoucích účinků typických pro SSRI",
+      "žádný vliv na tělesnou hmotnost a žádný abstinenční syndrom"
+    ],
+    "dosage": {
+      "short": "25–50 mg večer před spaním (lékařský dohled)",
+      "long": "Doporučená dávka je 25 mg jednou denně večer těsně před ulehnutím ke spánku. V případě nedostatečné odpovědi lze po 2 týdnech zvýšit na 50 mg večer. Vyžaduje lékařský předpis."
+    },
+    "warning": "Léčivý přípravek na předpis. Může zatěžovat játra – je povinné provést jaterní testy před zahájením a pravidelně po 3, 6, 12 a 24 týdnech léčby. Kontraindikován při jaterním poškození.",
+    "mechanism": "Duální profil: plný agonismus na melatoninových receptorech MT1 a MT2 v suprachiasmatickém jádře (SCN) a selektivní antagonismus na serotoninových receptorech 5-HT2C.",
+    "halfLife": "Cca 1–2 hodiny (krátký poločas zajišťuje cirkadiánní synchronizaci bez denní sedace)",
+    "interactions": [
+      "Inhibitory CYP1A2 (Ciprofloxacin, Fluvoxamin – striktně kontraindikovány, mnohonásobně zvyšují hladinu agomelatinu!)",
+      "Alkohol (zvyšuje riziko jaterního poškození)"
+    ],
+    "naturalSources": [
+      "syntetický analog melatoninu"
+    ],
+    "bannedStatus": "na lékařský předpis (Valdoxan)"
+  },
+  {
+    "id": 319,
+    "name": "Lemborexant / Suvorexant (DORA Orexin Antagonisté)",
+    "categoryKey": "sleep",
+    "tags": [
+      "DORA",
+      "orexin",
+      "hypocretin",
+      "nespavost",
+      "insomnie",
+      "revoluce"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Revoluční duální antagonisté orexinu vypínající signál bdělosti bez vlivu na GABA.",
+    "description": "Lemborexant (Dayvigo) a Suvorexant (Belsomra) představují největší revoluci v léčbě nespavosti za posledních 40 let. Patří do třídy DORA (Dual Orexin Receptor Antagonists). Všechna tradiční hypnotika (benzodiazepiny, Zolpidem) působí tak, že uměle tlumí celý mozek zesílením neurotransmitéru GABA, což vede k závislosti, toleranci, zmatenosti a ranní kocovině. DORA látky fungují obráceně: neuspávají mozek násilím, ale selektivně blokují orexinergní receptory (OX1R a OX2R), které v mozku udržují stav bdělosti. Vypnutím 'vypínače bdělosti' navozují přirozený, fyziologický spánek bez narušení REM fází a bez rizika závislosti.",
+    "effects": [
+      "přirozený fyziologický spánek bez potlačení REM a hlubokých fází",
+      "nulová interakce s GABA systémem – žádné riziko závislosti a tolerance",
+      "snadné ranní probuzení bez motorické nekoordinace a kognitivního útlumu",
+      "významné zkrácení doby usnutí i nočních probuzení (WASO)",
+      "bezpečné pro dlouhodobé užívání u chronické insomnie"
+    ],
+    "dosage": {
+      "short": "5–10 mg večer těsně před spaním (lékařský dohled)",
+      "long": "Užívá se 5 mg až maximálně 10 mg jednou denně večer bezprostředně před ulehnutím do postele. Vyžaduje vyhrazený čas na spánek minimálně 7 hodin."
+    },
+    "warning": "Moderní léčivý přípravek na lékařský předpis. Neužívejte po těžkém tučném jídle (zpomaluje nástup účinku). Velmi vzácně může vyvolat přechodnou spánkovou paralýzu.",
+    "mechanism": "Reverzibilní kompetitivní duální antagonismus na orexinových receptorech typu 1 (OX1R) a typu 2 (OX2R) v laterálním hypotalamu, což tlumí transmisi neuropeptidů orexinu A a orexinu B.",
+    "halfLife": "Lemborexant cca 17–19 hodin, Suvorexant cca 12 hodin",
+    "interactions": [
+      "Inhibitory CYP3A4 (Ketokonazol, Klarithromycin – zvyšují expozici DORA)",
+      "Alkohol (nekombinovat – prohlubuje útlum dýchání)"
+    ],
+    "naturalSources": [
+      "syntetické nízkomolekulární molekuly"
+    ],
+    "bannedStatus": "na lékařský předpis (Dayvigo / Belsomra)"
   }
 ]

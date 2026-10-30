@@ -759,5 +759,161 @@
       "syntetický derivát dihydrotestosteronu"
     ],
     "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
+  },
+  {
+    "id": 820,
+    "name": "Oral Turinabol (4-Chlorodehydromethyltestosteron)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "turinabol",
+      "OT",
+      "sila",
+      "cisty-objem",
+      "DDR"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Legendární východoněmecký perorální steroid budující čistou svalovou sílu bez retence vody.",
+    "description": "Oral Turinabol (chemicky 4-chloro-17alfa-methyl-17beta-hydroxyandrosta-1,4-dien-3-on) je perorální anabolický steroid syntetizovaný v 60. letech ve Východním Německu (Jenapharm) pro státní dopingový program olympioniků (státní plán 14.25). Jedná se o unikátní hybrid Dianabolu a Clostebolu: zavedení atomu chloru na pozici C-4 zcela eliminuje schopnost enzymu aromatáza přeměnit látku na estrogen. Poskytuje kvalitní, tvrdé svalové přírůstky, obrovský nárůst rychlostní síly, nulovou retenci vody a nulovou gynekomastii.",
+    "effects": [
+      "nárůst čisté svalové hmoty bez zadržování podkožní vody",
+      "výrazné zvýšení absolutní i explozivní svalové síly",
+      "nulová konverze na estrogeny (aromatizace je chemicky znemožněna)",
+      "vysoká afinita k SHBG (uvolňuje více volného testosteronu do krve)",
+      "velmi nízká androgenní aktivita (minimální akné a padání vlasů)"
+    ],
+    "dosage": {
+      "short": "20–50 mg denně perorálně po dobu 6–8 týdnů",
+      "long": "Dávkování 30 až 50 mg denně rozděleno do dvou dávek s jídlem po dobu 6 až maximálně 8 týdnů. U žen v atletice se historicky využívalo mikrodávkování 5–10 mg denně."
+    },
+    "warning": "17-alfa-alkylovaný perorální steroid – zatěžuje játra a vyžaduje současné podávání TUDCA a NAC. Zhoršuje lipidový profil (pokles HDL). Zakázaný doping pod WADA s dlouhodobě detekovatelnými metabolity M3/M4.",
+    "mechanism": "Vazba na androgenní receptor v kosterním svalu; 4-chlorová substituce zabraňuje interakci s aromatázu i 5alfa-reduktázou.",
+    "halfLife": "Cca 16 hodin (umožňuje dávkování 1–2x denně)",
+    "interactions": [
+      "TUDCA a NAC (nutná ochrana jater před cholestázou)",
+      "Testosteron (ideální synergická kombinace pro objem i sílu)"
+    ],
+    "naturalSources": [
+      "syntetický 17aa chlorovaný anabolický steroid"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), kontrolovaná substance"
+  },
+  {
+    "id": 821,
+    "name": "Parabolan (Trenbolon Hexahydrobenzylkarbonát)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "trenbolon",
+      "parabolan",
+      "sila",
+      "tvrdost",
+      "francouzsky"
+    ],
+    "rating": 5,
+    "colorType": "red",
+    "shortDesc": "Legendární francouzský dlouhodobě působící ester trenbolonu s poločasem 14 dní.",
+    "description": "Parabolan (Trenbolon Hexahydrobenzylkarbonát / trenbolon cyclohexylmethylkarbonát) byl jediný oficiální lékárenský trenbolon určený pro humánní medicínu, vyráběný legendární francouzskou farmaceutickou společností Negma v 80. a 90. letech. Trenbolon je 5x silnější než testosteron jak v anabolickém, tak v androgenním indexu (500:500). Tento unikátní pomalu se uvolňující ester zajišťuje stabilní plazmatické hladiny po dobu téměř 2 týdnů. Poskytuje brutální nárůst svalové hustoty, cévnatosti, síly a spalování tuků.",
+    "effects": [
+      "extrémní anabolická potence (5x silnější než testosteron)",
+      "nulová aromatizace na estrogeny s masivním efektem tvrdosti svalů",
+      "přímé spalování tuků vazbou na androgenní receptory v adipocytech",
+      "obrovský nárůst svalové síly a agresivity při tréninku",
+      "pohodlná injekční frekvence (1x za 5–7 dní)"
+    ],
+    "dosage": {
+      "short": "150–300 mg týdně intramuskulárně (extrémní substance)",
+      "long": "Aplikuje se hluboko do svalu v dávce 150 až 300 mg týdně (např. 76 mg 2x týdně nebo 150 mg jednou za 5 dní) po dobu maximálně 8–10 týdnů. Vždy vyžaduje testosteronový základ."
+    },
+    "warning": "Mimořádně silná substance s vysokou neurotoxicitou a kardiovaskulární zátěží! Způsobuje nespavost, noční pocení ('tren-sweats'), zvýšení prolaktinu a psychickou podrážděnost. Striktně zakázaný doping.",
+    "mechanism": "Vysokoafinitní vazba na androgenní receptor; vazba na progesteronové receptory; stimulace lokální syntézy IGF-1 ve svalech a inhibice vazby glukokortikoidů (kortizolu) na jejich receptory.",
+    "halfLife": "Cca 10–14 dní",
+    "interactions": [
+      "Kabergolin / Pramipexol (ochrana před prolaktinovou gynekomastií)",
+      "Testosteron (nutný fyziologický základ)"
+    ],
+    "naturalSources": [
+      "syntetický 19-nor steroid"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), kontrolovaná substance"
+  },
+  {
+    "id": 822,
+    "name": "Methenolon Acetát (Primobolan orální)",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "primobolan",
+      "acetat",
+      "oralni",
+      "bez-17aa",
+      "bezpecnost"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Bezpečný ne-alkylovaný perorální steroid chránící svaly před katabolismem při dietě.",
+    "description": "Methenolon Acetát (orální Primobolan) je perorální dihydrotestosteronový (DHT) derivát vyvinutý společností Schering. Je jedním z mála orálních steroidů, který NENÍ 17-alfa-alkylovaný (jeho biologická dostupnost je zajištěna 1-methylovou skupinou a 17-beta acetátovým esterem), což znamená, že prakticky nezatěžuje játra. Byl oblíbeným steroidem zlaté éry kulturistiky (včetně Arnolda Schwarzeneggera) pro rýsovací fáze. Vyniká schopností chránit svalovou hmotu před katabolismem i při extrémním kalorickém deficitu bez retence vody.",
+    "effects": [
+      "vynikající ochrana čisté svalové hmoty v přísné redukční dietě",
+      "minimální jaterní toxicita (není 17-alfa-alkylovaný)",
+      "nulová konverze na estrogeny a nulové riziko gynekomastie",
+      "zlepšení imunitního systému a retence dusíku",
+      "velmi mírný vliv na krevní tlak a vlastní hormonální osu"
+    ],
+    "dosage": {
+      "short": "50–100 mg denně perorálně s jídlem",
+      "long": "Běžná dávka je 50 až 100 mg denně rozděleně do 2 dávek s jídlem po dobu 6–8 týdnů. U žen se využívá opatrné dávkování 10–25 mg denně."
+    },
+    "warning": "Vyšší finanční nákladnost a vysoký výskyt padělků na černém trhu. Vyžaduje vyšší miligramové dávkování oproti injekčnímu enanthátu.",
+    "mechanism": "Vazba na androgenní receptor s vysokou retencí dusíku v buňkách; nemožnost aromatizace na estrogeny.",
+    "halfLife": "Cca 5–6 hodin",
+    "interactions": [
+      "Testosteron (synergický základ cyklu)",
+      "Oxandrolon (oblíbená rýsovací kombinace bez retence vody)"
+    ],
+    "naturalSources": [
+      "syntetický 1-methylovaný derivát DHT"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
+  },
+  {
+    "id": 823,
+    "name": "Methyltestosteron",
+    "categoryKey": "steroids",
+    "tags": [
+      "steroid",
+      "methyltestosteron",
+      "historie",
+      "agrese",
+      "sila",
+      "17aa"
+    ],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Historicky první syntetický perorální 17-alfa-alkylovaný androgen s vysokou agresivitou.",
+    "description": "Methyltestosteron (chemicky 17alfa-methyltestosteron) byl syntetizován v roce 1935 a stal se historicky vůbec prvním perorálně aktivním syntetickým anabolickým androgenním steroidem na světě. Přidáním 17-alfa-methylové skupiny byl testosteron ochráněn před rychlou degradací v játrech. Má velmi silné androgenní a centrální stimulační účinky. Rychle aromatizuje na vysoce potentní 17-alfa-methylestradiol (který je odolný vůči rozkladu a způsobuje masivní retenci vody a gynekomastii). Dnes se používá zřídka, převážně pro okamžité zvýšení agresivity před zápasem.",
+    "effects": [
+      "historicky první perorálně biologicky dostupný androgen",
+      "rychlý nástup agresivity a centrální nervové motivace před zátěží",
+      "okamžité zvýšení síly a libida",
+      "masivní nárůst retence dusíku",
+      "historický a výzkumný význam v endokrinologii"
+    ],
+    "dosage": {
+      "short": "10–25 mg sublinguálně nebo perorálně před výkonem",
+      "long": "Užívá se 10 až 25 mg přibližně 30–45 minut před sportovním či bojovým výkonem. Z důvodu vysoké toxicity a estrogenní konverze se neužívá souvisle déle než 2–3 týdny."
+    },
+    "warning": "Vysoká jaterní toxicita (17aa)! Konvertuje na 17alfa-methylestradiol, který způsobuje těžkou gynekomastii a zadržování vody. Způsobuje psychickou podrážděnost a akné. WADA zakazuje ve sportu.",
+    "mechanism": "Přímá aktivace androgenního receptoru v mozku a svalech; aromatizace enzymem CYP19A1 na biologicky vysoce rezistentní 17alfa-methylestradiol.",
+    "halfLife": "Cca 2.5–3 hodiny",
+    "interactions": [
+      "Inhibitory aromatázy (Arimidex / Letrozol – nutnost při jakémkoliv užití)",
+      "TUDCA (ochrana jater před 17aa zátěží)"
+    ],
+    "naturalSources": [
+      "syntetický 17aa testosteronový derivát"
+    ],
+    "bannedStatus": "banned-sport (WADA S1), na lékařský předpis"
   }
 ]

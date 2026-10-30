@@ -756,5 +756,161 @@
       "endogenní metabolit žluči"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 920,
+    "name": "Toremifen (Fareston)",
+    "categoryKey": "pct",
+    "tags": [
+      "SERM",
+      "estrogen",
+      "PCT",
+      "Fareston",
+      "bezpecnost",
+      "HPTA"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "SERM druhé generace pro obnovu osy HPTA s nižším rizikem retinální a jaterní toxicity.",
+    "description": "Toremifen citrát (obchodní název Fareston) je selektivní modulátor estrogenových receptorů (SERM) druhé generace, strukturně odvozený od tamoxifenu s přidaným atomem chloru. V post-cyklové terapii (PCT) se používá jako modernější a bezpečnější alternativa tamoxifenu. Blokuje estrogenové receptory v hypotalamu a hypofýze, čímž ruší negativní zpětnou vazbu a vyvolává masivní vyplavení LH a FSH. Oproti tamoxifenu má výrazně příznivější profil: nepředstavuje riziko poškození oční sítnice (okulární toxicity) a má příznivější vliv na lipidový profil.",
+    "effects": [
+      "rychlá stimulace sekrece hypofyzárního LH a FSH pro obnovu testosteronu",
+      "spolehlivá prevence a léčba estrogenní gynekomastie",
+      "významně nižší riziko retinální toxicity a šedého zákalu oproti tamoxifenu",
+      "zlepšení lipidového profilu (zvyšuje HDL a snižuje LDL cholesterol)",
+      "žádné estrogenní metabolity poškozující játra"
+    ],
+    "dosage": {
+      "short": "30–60 mg denně perorálně po dobu 4 týdnů",
+      "long": "V PCT protokolu: zahájit na 60 mg denně po dobu prvních 14 dnů, následně snížit na 30 mg denně po dobu dalších 14 dnů. Užívat ráno s jídlem."
+    },
+    "warning": "Léčivý přípravek na lékařský předpis. Ve vysokých dávkách může mírně prodlužovat QT interval na EKG. WADA zakazuje toremifen ve sportu.",
+    "mechanism": "Kompetitivní vazba na estrogenní receptory ER-alfa a ER-beta; antagonistické působení v prsní tkáni a hypofýze; agonistické působení v kostech a cévách.",
+    "halfLife": "Cca 5 dní",
+    "interactions": [
+      "Enclomifen / Clomid (alternativní SERMy – nekombinovat současně)",
+      "Inhibitory CYP3A4 (zvyšují koncentraci toremifenu)"
+    ],
+    "naturalSources": [
+      "syntetický chlorovaný derivát trifenylethylenu"
+    ],
+    "bannedStatus": "banned-sport (WADA S4), na lékařský předpis"
+  },
+  {
+    "id": 921,
+    "name": "Nebivolol (Bystolic)",
+    "categoryKey": "pct",
+    "tags": [
+      "tlak",
+      "beta-blokator",
+      "eNOS",
+      "srdce",
+      "erekce",
+      "kardioprotekce"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Vysoce kardioselektivní beta-blokátor 3. generace stimulující syntézu NO bez erektilní dysfunkce.",
+    "description": "Nebivolol (Bystolic / Nebilet) je nejpokročilejší kardioselektivní beta-blokátor třetí generace. V medicíně i sportovní farmakologii je naprostým králem pro kontrolu krevního tlaku. Na rozdíl od starých neselektivních beta-blokátorů (jako Metoprolol či Propranolol), které způsobují únavu, bronchokonstrikci a těžkou erektilní dysfunkci, má Nebivolol unikátní duální mechanismus: je vysoce selektivní k beta-1 receptorům v srdci a zároveň přes beta-3 receptory přímo stimuluje endoteliální syntézu oxidu dusnatého (eNOS). Výsledkem je snížení tlaku a pulzu se současným zlepšením erekce a elasticity cév.",
+    "effects": [
+      "vysoce selektivní snížení tepové frekvence a krevního tlaku bez útlumu",
+      "přímá stimulace syntézy vaskulárního oxidu dusnatého (eNOS vazodilatace)",
+      "kompletní absence erektilní dysfunkce (naopak zlepšuje erekci stimulací NO)",
+      "antioxidační a antiaterosklerotická ochrana cévního endotelu",
+      "žádný negativní vliv na metabolismus glukózy a lipidů"
+    ],
+    "dosage": {
+      "short": "2.5–5 mg jednou denně ráno (lékařský dohled)",
+      "long": "Zahajovací dávka je 2.5 mg jednou denně ráno. V případě potřeby lze po 2 týdnech zvýšit na standardních 5 mg denně. Užívat pravidelně ve stejný čas."
+    },
+    "warning": "Léčivý přípravek na lékařský předpis. WADA zakazuje beta-blokátory v přesnostních sportech (střelba, lukostřelba). Neužívat při těžké bradykardii (tep pod 50 bpm) a kardiogenním šoku.",
+    "mechanism": "Vysoce selektivní kompetitivní blokáda kardiálních beta-1 adrenergních receptorů (d-enantiomer); stimulace syntézy NO v cévním endotelu přes dráhu beta-3 adrenergních receptorů a L-argininu (l-enantiomer).",
+    "halfLife": "Cca 10 hodin (u rychlých metabolizátorů) až 30 hodin (u pomalých)",
+    "interactions": [
+      "Telmisartan (zlatý standard kardiovaskulární protekce: Nebivolol + Telmisartan)",
+      "Inhibitory CYP2D6 (Fluoxetin, Paroxetin – zvyšují hladinu nebivololu)"
+    ],
+    "naturalSources": [
+      "syntetický racemát d- a l-nebivololu"
+    ],
+    "bannedStatus": "na lékařský předpis, WADA P1 (zakázáno v konkrétních sportech)"
+  },
+  {
+    "id": 922,
+    "name": "Ketokonazol (Vysokodávkový blokátor steroidogeneze)",
+    "categoryKey": "pct",
+    "tags": [
+      "kortizol",
+      "CYP17A1",
+      "steroidogeneze",
+      "blokator",
+      "Cushing"
+    ],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Nespecifický inhibitor enzymů cytochromu P450 pro akutní blokádu syntézy kortizolu a androgenů.",
+    "description": "Ketokonazol je syntetický imidazolový derivát primárně vyvinutý jako antimykotikum. V endokrinologii je však v perorálních vysokých dávkách (400–1 200 mg) využíván jako silný neselektivní inhibitor enzymů steroidogeneze (CYP11A1, CYP17A1 a CYP11B1). Dokáže bleskově zablokovat syntézu všech steroidních hormonů v nadledvinách i varlatech. Využívá se při léčbě těžkého Cushingova syndromu (extrémní nadbytek kortizolu) nebo k akutnímu sražení hormonální hladiny při refrakterních stavech.",
+    "effects": [
+      "okamžitá a mohutná blokáda biosyntézy kortizolu v kůře nadledvin",
+      "současná blokáda tvorby testosteronu a androgenů v Leydigových buňkách",
+      "léčba patologického hyperkortizolismu (Cushingův syndrom)",
+      "inhibice aromatázy a enzymu štěpícího cholesterol (CYP11A1)",
+      "vysoká systémová potence vyžadující striktní dohled"
+    ],
+    "dosage": {
+      "short": "200–400 mg 2–3x denně (výhradně přísný nemocniční dohled)",
+      "long": "V endokrinologii se dávkuje 400 mg až 800 mg denně rozděleně do 2–3 dávek pod přísnou kontrolou sérového kortizolu a jaterních testů. V biohackingu se neužívá vnitřně z důvodu vysoké toxicity!"
+    },
+    "warning": "Extrémní hepatotoxické riziko (vyžaduje pravidelné jaterní testy)! Silný inhibitor enzymu CYP3A4 – dramaticky zvyšuje toxicitu většiny ostatních léků. Může vyvolat adrenální nedostatečnost (Addisonovskou krizi).",
+    "mechanism": "Koordinovaná vazba atomu dusíku v imidazolovém kruhu na hemové železo enzymů cytochromu P450 (konkrétně 17alfa-hydroxylázy/17,20-lyázy CYP17A1 a 11beta-hydroxylázy CYP11B1), což zastavuje syntézu steroidů.",
+    "halfLife": "Cca 2–4 hodiny (při vyšších dávkách až 8 hodin)",
+    "interactions": [
+      "Statiny a většina léků (silná inhibice CYP3A4 – hrozí fatální lékové interakce!)",
+      "Alkohol (silná zátěž na játra)"
+    ],
+    "naturalSources": [
+      "syntetický imidazolový derivát"
+    ],
+    "bannedStatus": "na lékařský předpis (per os vyžaduje zvláštní dohled)"
+  },
+  {
+    "id": 923,
+    "name": "Kyselina ursodeoxycholová (UDCA / Ursosan)",
+    "categoryKey": "pct",
+    "tags": [
+      "jatra",
+      "UDCA",
+      "žluč",
+      "Ursosan",
+      "cholestáza",
+      "ochrana"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní hydrofilní žlučová kyselina pro léčbu cholestázy a ochranu hepatocytů.",
+    "description": "Kyselina ursodeoxycholová (UDCA / lékopisný Ursosan) je přirozeně se vyskytující terciární žlučová kyselina, která tvoří cca 3 % lidské žluči. Na rozdíl od toxických hydrofobních žlučových kyselin (kyselina deoxycholová a lithocholová) je UDCA zcela netoxická a hydrofilní. Vytěsňuje agresivní žlučové soli z jaterních buněk, stimuluje sekreci žluči (choleretický účinek), rozpouští cholesterolové žlučové kameny a chrání buněčné membrány hepatocytů před apoptózou. Je zlatým standardem medicínské léčby jaterní cholestázy po steroidních kúrách.",
+    "effects": [
+      "rozpuštění a zředění stagnující žluči při intrahepatální cholestáze",
+      "ochrana membrán jaterních buněk a cholangiocytů před toxickými solemi",
+      "rychlá normalizace patologicky zvýšených hodnot jaterních enzymů (GGT, ALP, ALT)",
+      "rozpouštění cholesterolových konkrementů (žlučových kamenů)",
+      "imunomodulační a protizánětlivý vliv na jaterní tkáň"
+    ],
+    "dosage": {
+      "short": "250–500 mg 2x denně s jídlem (nebo 10–15 mg/kg)",
+      "long": "Doporučená terapeutická dávka je 10 až 15 mg na kg tělesné hmotnosti denně, rozděleno do 2 dávek (ráno a večer) s jídlem. Kúra trvá 1–3 měsíce do úplné normalizace jaterních markerů."
+    },
+    "warning": "Léčivý přípravek na předpis. Kontraindikován při akutním zánětu žlučníku a kompletní neprůchodnosti žlučových cest. Neužívat současně s antacidy obsahujícími hliník (snižují vstřebávání UDCA).",
+    "mechanism": "Nahrazení toxických hydrofobních žlučových kyselin v enterohepatálním oběhu; stimulace exprese hepatobiliárních transportérů BSEP a MDR3; inhibice mitochondriální cesty apoptózy.",
+    "halfLife": "Cca 3.5–5.8 dne (díky intenzivní enterohepatální recirkulaci)",
+    "interactions": [
+      "TUDCA (příbuzný taurinový konjugát – výborná kompatibilita)",
+      "Antacida s hliníkem (vážou UDCA v žaludku – neužívat současně)"
+    ],
+    "naturalSources": [
+      "endogenní žlučová kyselina lidského těla",
+      "původně extrahována z medvědí žluči"
+    ],
+    "bannedStatus": "legal, na lékařský předpis (Ursosan)"
   }
 ]

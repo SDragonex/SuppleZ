@@ -1,11 +1,11 @@
 /**
  * SuppleZ Service Worker (sw.js)
- * Verze: 6.2 (319 comprehensive substances, expanded peptide & longevity database)
+ * Verze: 6.3 (370 comprehensive substances, wave 3 expansion, new synergies & preset stacks)
  * Strategie: Network-First pro aplikaci a data (vždy čerstvé změny),
  * s okamžitou zálohou v mezipaměti pro spolehlivý offline provoz.
  */
 
-const CACHE_NAME = 'supplez-cache-v6.2';
+const CACHE_NAME = 'supplez-cache-v6.3';
 
 const STATIC_ASSETS = [
     './',
