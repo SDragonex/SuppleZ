@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sdragonex.github.io/SuppleZ/sitemap.xml
