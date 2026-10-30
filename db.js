@@ -122,6 +122,7 @@ class SuppleZDatabase {
         try {
             const tx = this.db.transaction(['supplements'], 'readwrite');
             const store = tx.objectStore('supplements');
+            store.clear();
             for (const item of items) {
                 store.put(item);
             }
