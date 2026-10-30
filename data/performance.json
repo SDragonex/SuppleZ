@@ -3,12 +3,23 @@
     "id": 200,
     "name": "Kreatin Monohydrát",
     "categoryKey": "performance",
-    "tags": ["síla", "svaly", "ATP", "kognice", "bezpečné"],
+    "tags": [
+      "síla",
+      "svaly",
+      "ATP",
+      "kognice",
+      "bezpečné"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Nejprostudovanější suplement pro sílu a svalovou hmotu.",
     "description": "Kreatin monohydrát je nejprostudovanější a nejefektivnější legální suplement pro zvýšení svalové fosfokreatinové zásoby. Umožňuje rychlejší regeneraci ATP při intenzivních anaerobních aktivitách (1–10s). Také nootropní efekty (zásoby mozkového kreatinu). Bezpečný pro zdravé ledviny.",
-    "effects": ["zvýšení síly", "svalová hypertrofie", "rychlejší regenerace ATP", "neuroprotekce"],
+    "effects": [
+      "zvýšení síly",
+      "svalová hypertrofie",
+      "rychlejší regenerace ATP",
+      "neuroprotekce"
+    ],
     "dosage": {
       "short": "3–5g denně",
       "long": "3–5g denně (monohydrát). Není nutný loading phase (20g/5 dní), ale urychluje saturaci. Užívat kdykoliv, konzistence je klíčová. Vegetariáni mají nižší zásoby a lepší odpověď."
@@ -16,21 +27,38 @@
     "warning": "Retence vody v svalových buňkách (1–2kg hmotnosti). Teoreticky dehydratace při nedostatečném pitném režimu. Vzácně zažívací potíže (řešit mikronizovanou formou nebo rozdělením dávek).",
     "mechanism": "Zvýšení intramuskulárního fosfokreatinu (PCr) pro rychlou regeneraci ATP přes kreatin kinázu",
     "halfLife": "3–5 hodin (v plazmě), svalová saturace trvá 3–4 týdny",
-    "interactions": ["kofein (může snižovat efektivitu u některých jedinců)", "NSAID (teoreticky nefrotoxický efekt)"],
+    "interactions": [
+      "kofein (může snižovat efektivitu u některých jedinců)",
+      "NSAID (teoreticky nefrotoxický efekt)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["hovězí maso", "ryby (tuna, salmon)", "vejce"],
+    "naturalSources": [
+      "hovězí maso",
+      "ryby (tuna, salmon)",
+      "vejce"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 201,
     "name": "Beta-Alanin",
     "categoryKey": "performance",
-    "tags": ["vytrvalost", "karnosin", "svaly", "kyselina"],
+    "tags": [
+      "vytrvalost",
+      "karnosin",
+      "svaly",
+      "kyselina"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Prekurzor karnosinu, buffer intramuskulárního pH.",
     "description": "Beta-alanin je limitující aminokyselina pro syntézu karnosinu (dipeptid) ve svalové tkáni. Karnosin působí jako intracelulární buffer kyseliny (H+ iontů) během intenzivního cvičení (>60s), oddaluje svalovou acidózu a únavu. Efektivní pro aktivitu 1–4 minut.",
-    "effects": ["zvýšení vytrvalosti", "oddálení únavy", "svalová ochrana", "antioxidant"],
+    "effects": [
+      "zvýšení vytrvalosti",
+      "oddálení únavy",
+      "svalová ochrana",
+      "antioxidant"
+    ],
     "dosage": {
       "short": "3–5g denně",
       "long": "3–5g denně rozděleno do dávek po 1–2g (snížení parestézie). Doba saturace 4–6 týdnů. Sustained-release formy (SR CarnoSyn) eliminují brnění."
@@ -38,21 +66,38 @@
     "warning": "Parestézie (brnění/štípání kůže) při jednorázových dávkách >800mg. Dlouhodobě bezpečný. Teoreticky taurinový deficit při vysokých dávkách (soutěží o transport).",
     "mechanism": "Syntéza karnosinu (beta-alanin + histidin), intracelulární pH buffering (pKa 6.8)",
     "halfLife": "3–4 hodiny",
-    "interactions": ["taurin (soutěž o transport)", "kreatin (synergický efekt)"],
+    "interactions": [
+      "taurin (soutěž o transport)",
+      "kreatin (synergický efekt)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["krůtí maso", "kuře", "ryby"],
+    "naturalSources": [
+      "krůtí maso",
+      "kuře",
+      "ryby"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 202,
     "name": "Citrullin Malát (2:1)",
     "categoryKey": "performance",
-    "tags": ["pumpa", "vytrvalost", "amoniak", "regenerace"],
+    "tags": [
+      "pumpa",
+      "vytrvalost",
+      "amoniak",
+      "regenerace"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Zvyšuje NO, snižuje amoniak, zlepšuje výdrž.",
     "description": "Citrullin je aminokyselina konvertovaná na arginin a oxid dusnatý (NO) v ledvinách. Efektivnější než přímá suplementace argininu (první pass metabolismus). Malát (jablečnan) je intermediát Krebsova cyklu. Kombinace zvyšuje vasodilataci (pumpa), snižuje amoniak a zlepšuje energetický metabolismus.",
-    "effects": ["vasodilatace", "snížení únavy", "odstranění amoniaku", "ATP produkce"],
+    "effects": [
+      "vasodilatace",
+      "snížení únavy",
+      "odstranění amoniaku",
+      "ATP produkce"
+    ],
     "dosage": {
       "short": "6–8g denně",
       "long": "6–8g citrullin malátu (2:1) denně, 30–60 min před tréninkem. Nebo 3g L-citrullinu. Vyšší dávky pro redukci DOMS (8g)."
@@ -60,21 +105,40 @@
     "warning": "Vzácně zažívací potíže při vysokých dávkách. Arginin může aktivovat herpes virus (teoreticky i citrullin).",
     "mechanism": "Konverze na arginin → NO syntáza → NO. Malát jako intermediát TCA cyklu (anaplerotický efekt)",
     "halfLife": "1–2 hodiny (citrullin), 3–4 hodiny (malát)",
-    "interactions": ["PDE5 inhibitory (sildenafil)", "antihypertenziva"],
+    "interactions": [
+      "PDE5 inhibitory (sildenafil)",
+      "antihypertenziva"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["meloun (Citrullus lanatus)", "okurky", "dýně"],
+    "naturalSources": [
+      "meloun (Citrullus lanatus)",
+      "okurky",
+      "dýně"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 203,
     "name": "Kofein (Anhydrous)",
     "categoryKey": "performance",
-    "tags": ["energie", "síla", "focus", "fatloss", "stimulant"],
+    "tags": [
+      "energie",
+      "síla",
+      "focus",
+      "fatloss",
+      "stimulant"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Nejpopulárnější stimulant pro výkon a alertnost.",
     "description": "Kofein je methylxanthin, antagonista adenosinových receptorů (A1, A2A), inhibice fosfodiesterázy a mobilizace vápníku. Zvyšuje alertnost, snižuje vnímanou námahu (RPE), zvyšuje sílu a vytrvalost. Tolerance se vyvíjí rychle (adenosinová receptorová upregulace).",
-    "effects": ["zvýšení energie", "snížení vnímané námahy", "zvýšení síly", "lipolýza", "kognice"],
+    "effects": [
+      "zvýšení energie",
+      "snížení vnímané námahy",
+      "zvýšení síly",
+      "lipolýza",
+      "kognice"
+    ],
     "dosage": {
       "short": "3–6mg/kg tělesné hmotnosti",
       "long": "3–6mg/kg (200–400mg pro 70kg) 30–60 min před výkonem. Cyklovat (4 týdny ON, 1–2 týdny OFF) pro udržení citlivosti. Maximálně 400mg/den."
@@ -82,21 +146,42 @@
     "warning": "Insomnie, úzkost, tachykardie, hypertenze. Závislost a abstinenční příznaky (bolest hlavy). Kontraindikace: arytmie, úzkostné poruchy, GERD, těhotenství.",
     "mechanism": "Antagonismus adenosinu (A1/A2A), inhibice PDE → zvýšení cAMP, mobilizace intracelulárního Ca2+",
     "halfLife": "3–6 hodin (geneticky variabilní CYP1A2)",
-    "interactions": ["sympatomimetika", "MAO inhibitory", "theanin (synergický)", "ephedrin (nebezpečný)"],
+    "interactions": [
+      "sympatomimetika",
+      "MAO inhibitory",
+      "theanin (synergický)",
+      "ephedrin (nebezpečný)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["káva", "čaj", "kakao", "guarana", "yerba mate"],
+    "naturalSources": [
+      "káva",
+      "čaj",
+      "kakao",
+      "guarana",
+      "yerba mate"
+    ],
     "bannedStatus": "legal (limit 12μg/ml moči WADA)"
   },
   {
     "id": 204,
     "name": "HMB (β-hydroxy β-methylbutyrát)",
     "categoryKey": "performance",
-    "tags": ["svaly", "proteolýza", "regenerace", "katabolismus"],
+    "tags": [
+      "svaly",
+      "proteolýza",
+      "regenerace",
+      "katabolismus"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Metabolit leucinu, potlačuje svalový rozpad.",
     "description": "HMB je aktivní metabolit leucinu (keto-izokapronát), který potlačuje proteolýzu (rozklad proteinů) vlivem na ubiquitin-proteazomový systém. Stimuluje syntézu proteinů (mTOR pathway). Efektivní pro prevenci svalového úbytku u začátečníků a starších, méně pro trénované sportovce.",
-    "effects": ["snížení svalového rozkladu", "podpora syntézy proteinů", "regenerace", "síla"],
+    "effects": [
+      "snížení svalového rozkladu",
+      "podpora syntézy proteinů",
+      "regenerace",
+      "síla"
+    ],
     "dosage": {
       "short": "3g denně",
       "long": "3g denně (rozděleno do 3 dávek po 1g nebo 2x 1.5g). Calcium-HMB má lepší vstřebání než volná kyselina. Užívat mezi jídly."
@@ -104,21 +189,38 @@
     "warning": "Vzácně zažívací potíže. Teoreticky může interferovat s cholesterolovým metabolismem (omezené důkazy).",
     "mechanism": "Inhibice ubiquitin-proteazomové dráhy (proteolýza), aktivace mTOR, stabilizace membrán",
     "halfLife": "2–4 hodiny",
-    "interactions": ["leucin (redundance)", "kortikosteroidy (může antagonizovat katabolismus)"],
+    "interactions": [
+      "leucin (redundance)",
+      "kortikosteroidy (může antagonizovat katabolismus)"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": [" grapefruit", "zelenina (stopová množství)", "syntéza z leucinu v těle"],
+    "naturalSources": [
+      " grapefruit",
+      "zelenina (stopová množství)",
+      "syntéza z leucinu v těle"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 205,
     "name": "EAA (Esenciální aminokyseliny)",
     "categoryKey": "performance",
-    "tags": ["svaly", "protein", "regenerace", "syntéza"],
+    "tags": [
+      "svaly",
+      "protein",
+      "regenerace",
+      "syntéza"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Kompletní spektrum esenciálních aminokyselin.",
     "description": "EAA obsahují všech 9 esenciálních aminokyselin (včetně 3 BCAA), které tělo nemůže syntetizovat. Leucin iniciuje svalovou syntézu proteinů (mTOR), ostatní EAA poskytují substrát. Efektivnější než samotné BCAA (vyžaduje všechny EAA pro syntézu). Ideální mezi jídly nebo při tréninku v deficitu.",
-    "effects": ["svalová syntéza proteinů", "prevence katabolismu", "regenerace", "energie"],
+    "effects": [
+      "svalová syntéza proteinů",
+      "prevence katabolismu",
+      "regenerace",
+      "energie"
+    ],
     "dosage": {
       "short": "10–15g denně",
       "long": "10–15g mezi jídly nebo během tréninku. Poměr leucin:valin:isoleucin 2:1:1. Obsahovat by měly ~3g leucinu pro aktivaci mTOR."
@@ -126,21 +228,40 @@
     "warning": "Vzácně zažívací potíže. Při onemocněních ledvin opatrnost (dusíkaté zatížení).",
     "mechanism": "Substrát pro svalovou syntézu proteinů, leucin jako mTOR agonista",
     "halfLife": "2–3 hodiny",
-    "interactions": ["leucin (synergický)", "proteinové příjmy (redundance)"],
+    "interactions": [
+      "leucin (synergický)",
+      "proteinové příjmy (redundance)"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["maso", "vejce", "ryby", "sója", "whey protein"],
+    "naturalSources": [
+      "maso",
+      "vejce",
+      "ryby",
+      "sója",
+      "whey protein"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 206,
     "name": "Taurin",
     "categoryKey": "performance",
-    "tags": ["srdce", "CNS", "osmoregulace", "antioxidant"],
+    "tags": [
+      "srdce",
+      "CNS",
+      "osmoregulace",
+      "antioxidant"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Podmíněně esenciální aminokyselina pro srdce a CNS.",
     "description": "Taurin (2-aminoethansulfonová kyselina) je běžná aminokyselina koncentrovaná ve svalové tkáni, srdci a CNS. Reguluje osmolaritu, vápníkovou homeostázu a je antioxidant. Snižuje kortizolovou odpověď na stres. Synergický efekt s kofeinem (vyvážení kardiovaskulárních efektů).",
-    "effects": ["kardiovaskulární zdraví", "osmoregulace", "antioxidant", "modulace GABA"],
+    "effects": [
+      "kardiovaskulární zdraví",
+      "osmoregulace",
+      "antioxidant",
+      "modulace GABA"
+    ],
     "dosage": {
       "short": "1–3g denně",
       "long": "1–3g denně, ideálně s kofeinem (energetické nápoje). Vyšší dávky (3–6g) pro snížení krevního tlaku."
@@ -148,21 +269,38 @@
     "warning": "Vzácně zažívací potíže. Teoreticky může zhoršit bipolární poruchu (interakce s lithiem).",
     "mechanism": "Regulace Ca2+ homeostázy, osmoregulace, modulace GABA-A receptorů",
     "halfLife": "4–6 hodin",
-    "interactions": ["kofein (synergický)", "lithium (antagonizmus)"],
+    "interactions": [
+      "kofein (synergický)",
+      "lithium (antagonizmus)"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["mořské plody", "maso", "mléčné výrobky"],
+    "naturalSources": [
+      "mořské plody",
+      "maso",
+      "mléčné výrobky"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 207,
     "name": "Betain (Trimethylglycin)",
     "categoryKey": "performance",
-    "tags": ["síla", "metabolismus", "játra", "methylace"],
+    "tags": [
+      "síla",
+      "metabolismus",
+      "játra",
+      "methylace"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Osmolyt a methyl-donor pro výkon a zdraví jater.",
     "description": "Betain je osmolyt (regulace buněčné hydratace) a methyl-donor (konverze homocysteinu na methionin). Zvyšuje svalovou sílu a vytrvalost (studie u cyklistů a kulturistů). Podporuje funkci jater a snižuje homocystein.",
-    "effects": ["zvýšení síly", "snížení homocysteinu", "osmoregulace", "jaterní funkce"],
+    "effects": [
+      "zvýšení síly",
+      "snížení homocysteinu",
+      "osmoregulace",
+      "jaterní funkce"
+    ],
     "dosage": {
       "short": "2.5–5g denně",
       "long": "2.5–5g denně, rozděleno do 2 dávek. Užívat s jídlem pro lepší toleranci. Dlouhodobá bezpečnost prokázána."
@@ -170,21 +308,40 @@
     "warning": "Vzácně zažívací potíže (nevolnost). Teoreticky může zvýšit cholesterol (diskutabilní).",
     "mechanism": "Methyl-donor (konverze Hcy→Met), osmolytická ochrana buněk",
     "halfLife": "6–8 hodin",
-    "interactions": ["folát", "B12", "B6 (methylační cyklus)"],
+    "interactions": [
+      "folát",
+      "B12",
+      "B6 (methylační cyklus)"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["červená řepa", "špenát", "obiloviny", "korýši"],
+    "naturalSources": [
+      "červená řepa",
+      "špenát",
+      "obiloviny",
+      "korýši"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 208,
     "name": "Tyrosin",
     "categoryKey": "performance",
-    "tags": ["focus", "stres", "katecholaminy", "kognice"],
+    "tags": [
+      "focus",
+      "stres",
+      "katecholaminy",
+      "kognice"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Prekurzor dopaminu, noradrenalinu a adrenalinu.",
     "description": "L-tyrosin je aminokyselina prekurzor katecholaminů (dopamin, noradrenalin, adrenalin) a thyroxinu. Zvyšuje kognitivní flexibilitu a odolnost vůči stresu (akutnímu). Efektivní při stresu, chladu, nedostatku spánku nebo duševní náročnosti. Není stimulant, ale podporuje neurotransmisi.",
-    "effects": ["kognitivní flexibilita", "odolnost vůči stresu", "focus", "termogeneze"],
+    "effects": [
+      "kognitivní flexibilita",
+      "odolnost vůči stresu",
+      "focus",
+      "termogeneze"
+    ],
     "dosage": {
       "short": "500–2000mg",
       "long": "500–2000mg 30–60 min před náročnou situací (trénink, stres). Vyšší dávky (2–3g) pro akutní stres. Užívat nalačno."
@@ -192,21 +349,42 @@
     "warning": "Kontraindikace: hyperthyreóza, melanom (prekurzor melaninu), MAO inhibitory. Může zvýšit krevní tlak u citlivých jedinců.",
     "mechanism": "Substrát pro tyrosin hydroxylázu (rate-limiting pro DA, NE, EPI)",
     "halfLife": "2–3 hodiny",
-    "interactions": ["MAO inhibitory", "L-DOPA (konkurence)", "5-HTP"],
+    "interactions": [
+      "MAO inhibitory",
+      "L-DOPA (konkurence)",
+      "5-HTP"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["maso", "ryby", "vejce", "sýry", "sója", "mandle"],
+    "naturalSources": [
+      "maso",
+      "ryby",
+      "vejce",
+      "sýry",
+      "sója",
+      "mandle"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 209,
     "name": "Citrát Hořečnatý (Pre-workout)",
     "categoryKey": "performance",
-    "tags": ["pumpa", "svaly", "energie", "vytrvalost"],
+    "tags": [
+      "pumpa",
+      "svaly",
+      "energie",
+      "vytrvalost"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Rychle vstřebatelný zdroj hořčíku a energie.",
     "description": "Citrát hořečnatý je organická sůl hořčíku s vysokou biodostupností (lepší než oxid). Citrát je intermediát Krebsova cyklu (energetický metabolismus). Používá se pro podporu svalové funkce, prevenci křečí a energetický metabolismus. Mírný laxativní efekt.",
-    "effects": ["prevence křečí", "svalová relaxace", "energetický metabolismus", "pumpa"],
+    "effects": [
+      "prevence křečí",
+      "svalová relaxace",
+      "energetický metabolismus",
+      "pumpa"
+    ],
     "dosage": {
       "short": "200–400mg Mg",
       "long": "200–400mg elementárního hořčíku (1–2g citrátu) před tréninkem. Užívat 30 min před výkonem. Pro spánek užívat večer."
@@ -214,21 +392,36 @@
     "warning": "Průjem při vysokých dávkách. Opatrnost při renální insuficienci.",
     "mechanism": "Kofaktor ATPázy, citrát jako intermediát TCA cyklu",
     "halfLife": "4–6 hodin",
-    "interactions": ["antibiotika", "bisphosphonáty"],
+    "interactions": [
+      "antibiotika",
+      "bisphosphonáty"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["listová zelenina", "ořechy"],
+    "naturalSources": [
+      "listová zelenina",
+      "ořechy"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 210,
     "name": "D-Ribóza",
     "categoryKey": "performance",
-    "tags": ["ATP", "srdce", "regenerace", "vytrvalost"],
+    "tags": [
+      "ATP",
+      "srdce",
+      "regenerace",
+      "vytrvalost"
+    ],
     "rating": 3,
     "colorType": "green",
     "shortDesc": "Pentózový cukr pro rychlou regeneraci ATP.",
     "description": "D-ribóza je pentózový cukr, který je rychlým prekurzorem syntézy ATP (5-fosforibosyl-1-pyrophosphate pathway). Používá se pro kardiovaskulární zdraví a regeneraci po intenzivním výkonu. Zvláště efektivní pro sportovce s vysokým objemem tréninku.",
-    "effects": ["rychlá regenerace ATP", "kardiovaskulární podpora", "snížení únavy"],
+    "effects": [
+      "rychlá regenerace ATP",
+      "kardiovaskulární podpora",
+      "snížení únavy"
+    ],
     "dosage": {
       "short": "5–10g denně",
       "long": "5–10g denně, rozděleno do 2–3 dávek. Užívat s jídlem pro snížení hypoglykemického efektu. Po tréninku 5g."
@@ -236,9 +429,335 @@
     "warning": "Hypoglykémie při nalačno (stimuluje insulin). Vzácně zažívací potíže. Drahý suplement s omezenými daty u zdravých sportovců.",
     "mechanism": "Salvage pathway pro syntézu ATP, bypassuje pomalý de novo pathway",
     "halfLife": "2–3 hodiny",
-    "interactions": ["hypoglykemika", "insulin"],
+    "interactions": [
+      "hypoglykemika",
+      "insulin"
+    ],
     "evidenceLevel": "C",
-    "naturalSources": ["maso", "mléčné výrobky", "houby"],
+    "naturalSources": [
+      "maso",
+      "mléčné výrobky",
+      "houby"
+    ],
     "bannedStatus": "legal"
+  },
+  {
+    "name": "Syrovátkový Protein (Whey)",
+    "categoryKey": "performance",
+    "tags": [
+      "bílkoviny",
+      "regenerace",
+      "svalový růst",
+      "aminokyseliny"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Rychlý a plnohodnotný zdroj bílkovin s vysokou biologickou hodnotou.",
+    "description": "Syrovátkový protein (Whey Concentrate / Isolate) je rychle stravitelný mléčný protein s nejvyšším obsahem esenciálních aminokyselin (EAA) a leucinu. Rychle spouští signální dráhu mTOR a svalovou proteosyntézu (MPS) po tréninku.",
+    "effects": [
+      "stimulace proteosyntézy (mTOR)",
+      "urychlení regenerace",
+      "ochrana svalové hmoty"
+    ],
+    "dosage": {
+      "short": "25–40g po tréninku",
+      "long": "25–40g prášku (obsahující cca 20–30g čistých bílkovin) smíchaného s vodou do 60 min po silovém tréninku nebo jako svačina."
+    },
+    "warning": "U osob s intolerancí laktózy může způsobit nadýmání (doporučen Whey Isolate nebo Hydrolyzát).",
+    "mechanism": "Rychlé zvýšení plazmatické hladiny aminokyselin (hyperaminoacidémie), stimulace mTORC1 komplexu",
+    "halfLife": "1.5–2 hodiny",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "kravské mléko",
+      "syrovátka"
+    ],
+    "bannedStatus": "legal",
+    "id": 211
+  },
+  {
+    "name": "Glycerol (HydroMax)",
+    "categoryKey": "performance",
+    "tags": [
+      "hydratace",
+      "pumpa",
+      "vytrvalost",
+      "hyperhydratace"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Osmolyt pro extrémní vnitrobuněčnou hydrataci a plnost svalů.",
+    "description": "Glycerol zvyšuje osmotický tlak v krevním řečišti a svalových buňkách, čímž dočasně zadržuje vodu v intracelulárním prostoru (hyperhydratace). Oddaluje dehydrataci při vytrvalostním tréninku a dodává masivní 'vodní pumpu'.",
+    "effects": [
+      "buněčná hyperhydratace",
+      "svalová plnost",
+      "termoregulace",
+      "oddálení únavy"
+    ],
+    "dosage": {
+      "short": "2–5g 45 min před tréninkem",
+      "long": "2–5g prášku (nebo 1g/kg tekutého glycerolu) rozpuštěného v 750–1000 ml vody cca 45–60 minut před tréninkem. Vyžaduje vysoký příjem vody."
+    },
+    "warning": "Při požití bez dostatku vody může způsobit žaludeční křeče, nevolnost nebo průjem.",
+    "mechanism": "Zvýšení plazmatické osmolality, reabsorpce vody v renálních tubulech bez ztráty elektrolytů",
+    "halfLife": "3–4 hodiny",
+    "interactions": [
+      "diuretika (kontraindikace)",
+      "kreatin (synergie)"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "rostlinné a živočišné tuky (triglyceridy)"
+    ],
+    "bannedStatus": "legal (WADA dříve sledovala jako maskovací látku, nyní povoleno)",
+    "id": 212
+  },
+  {
+    "name": "Arginin A.K.G. (AAKG)",
+    "categoryKey": "performance",
+    "tags": [
+      "pumpa",
+      "vazodilatace",
+      "oxid dusnatý",
+      "regenerace"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Vazodilatátor stimulující produkci oxidu dusnatého (NO).",
+    "description": "Arginin alfa-ketoglutarát váže esenciální aminokyselinu L-arginin na molekulu alfa-ketoglutarátu. Funguje jako přímý substrát pro enzym NO-syntázu (eNOS), což vede k relaxaci hladkého svalstva cév a svalové vazodilataci.",
+    "effects": [
+      "svalová pumpa",
+      "lepší transport živin",
+      "podpora hojení tkání"
+    ],
+    "dosage": {
+      "short": "3–5g před tréninkem",
+      "long": "3–5g cca 30–45 minut před zátěží nalačno pro maximální absorpci."
+    },
+    "warning": "Při dávkách nad 10g hrozí průjem. Může aktivovat virus Herpes simplex u nositelů.",
+    "mechanism": "Substrát pro syntézu NO přes endoteliální eNOS, stimulace cGMP dráhy",
+    "halfLife": "1–2 hodiny",
+    "interactions": [
+      "léky na erektilní dysfunkci (PDE-5 inhibitory – riziko hypotenze)"
+    ],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "červené maso",
+      "dýňová semínka",
+      "drůbež"
+    ],
+    "bannedStatus": "legal",
+    "id": 213
+  },
+  {
+    "name": "Betain Anhydrous (TMG)",
+    "categoryKey": "performance",
+    "tags": [
+      "síla",
+      "výkon",
+      "methylace",
+      "homocystein"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Donor methylových skupin a osmolyt zvyšující sílu a výkon.",
+    "description": "Trimethylglycin (TMG) slouží jako buněčný osmolyt chránící buňky před stresem a jako hlavní dárce methylových skupin pro konverzi homocysteinu na methionin. Klinické studie prokazují zvýšení počtu opakování v benchpressu a výskoku.",
+    "effects": [
+      "zvýšení výbušné síly",
+      "snížení homocysteinu",
+      "buněčná hydratace",
+      "podpora jater"
+    ],
+    "dosage": {
+      "short": "2.5g denně",
+      "long": "1.25–2.5g denně, ideálně rozděleno do 2 dávek před a po tréninku."
+    },
+    "warning": "Mírný zápach potu nebo trávicí obtíže při vysokých jednorázových dávkách.",
+    "mechanism": "Methylace homocysteinu enzymem BHMT, osmoregulace a syntéza kreatinu",
+    "halfLife": "14 hodin",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "červená řepa",
+      "špenát",
+      "pšeničné otruby"
+    ],
+    "bannedStatus": "legal",
+    "id": 214
+  },
+  {
+    "name": "Extrakt z Červené řepy (Dusičnany)",
+    "categoryKey": "performance",
+    "tags": [
+      "dusičnany",
+      "vytrvalost",
+      "oxid dusnatý",
+      "mitochondrie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní zdroj anorganických dusičnanů pro aerobní vytrvalost.",
+    "description": "Obsahuje vysokou koncentraci dusičnanů (NO3-), které ústní bakterie redukují na dusitany (NO2-) a v žaludku na oxid dusnatý (NO). Zlepšuje mitochondriální efektivitu a snižuje spotřebu kyslíku (VO2) při submMaximálním výkonu.",
+    "effects": [
+      "snížení spotřeby kyslíku",
+      "oddálení vyčerpání",
+      "zvýšení krevního průtoku"
+    ],
+    "dosage": {
+      "short": "400–500mg nitrátů 2h před zátěží",
+      "long": "Dávka odpovídající 400–500mg dusičnanů (cca 70ml koncentrovaného řepného shotu) 2–3 hodiny před závodem. Nepoužívat antibakteriální ústní vodu!"
+    },
+    "warning": "Může způsobit červené zabarvení moči a stolice (zcela neškodné beeturia).",
+    "mechanism": "Alternativní dráha dusičnan-dusitan-NO nezávislá na kyslíku",
+    "halfLife": "6–8 hodin",
+    "interactions": [
+      "antihypertenziva",
+      "antibakteriální ústní vody (blokují účinek)"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "červená řepa",
+      "rucola",
+      "špenát"
+    ],
+    "bannedStatus": "legal",
+    "id": 215
+  },
+  {
+    "name": "Jedlá soda (Sodium Bicarbonate)",
+    "categoryKey": "performance",
+    "tags": [
+      "pufr",
+      "laktát",
+      "anaerobní výkon",
+      "kyselost"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Extracelulární pufr neutralizující vodíkové ionty při intenzivním výkonu.",
+    "description": "Hydrogenuhličitan sodný zvyšuje pufrační kapacitu krve (zvyšuje pH a bikarbonát). Umožňuje rychlejší eflux vodíkových iontů (H+) z pracujících svalů, čímž oddaluje svalové selhání a 'pálení' při anaerobním výkonu trvajícím 1–10 minut.",
+    "effects": [
+      "oddálení svalového zakyselení",
+      "zvýšení anaerobní kapacity",
+      "opakovaný sprintový výkon"
+    ],
+    "dosage": {
+      "short": "0.3g na kg váhy",
+      "long": "0.2–0.3g na kg tělesné hmotnosti rozpuštěné v 500ml vody cca 60–90 min před výkonem. Rozdělit dávku snižuje gastrointestinální potíže."
+    },
+    "warning": "Vysoké riziko průjmu a zvracení při rychlém požití. Zvyšuje příjem sodíku.",
+    "mechanism": "Zvýšení extracelulárního pufrování H+ iontů přes bikarbonátový pufrační systém",
+    "halfLife": "2–3 hodiny",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "minerální prameny",
+      "bikarbonát sodný"
+    ],
+    "bannedStatus": "legal",
+    "id": 216
+  },
+  {
+    "name": "Cyclic Dextrin (HBCD)",
+    "categoryKey": "performance",
+    "tags": [
+      "sacharidy",
+      "intra-workout",
+      "glykogen",
+      "energie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Vysoko rozvětvený cyklický dextrin s bleskovým vyprázdněním žaludku.",
+    "description": "HBCD (Cluster Dextrin) má vysokou molekulární hmotnost a velmi nízkou osmolalitu. Prochází žaludkem podstatně rychleji než dextróza či maltodextrin bez pocitu plného břicha a zajišťuje stabilní přísun glukózy do krve během tréninku.",
+    "effects": [
+      "kontinuální dodávka energie",
+      "ochrana glykogenu",
+      "žádné žaludeční potíže"
+    ],
+    "dosage": {
+      "short": "25–50g během tréninku",
+      "long": "25–50g rozpuštěno v intra-workout nápoji společně s EAA a elektrolyty."
+    },
+    "warning": "Nadbytečný příjem sacharidů může vést k ukládání tuku při absenci adekvátního energetického výdeje.",
+    "mechanism": "Nízká osmolalita urychluje žaludeční evakuaci, postupné štěpení alfa-amylázou",
+    "halfLife": "1–2 hodiny",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "kukuřičný škrob enzymaticky upravený"
+    ],
+    "bannedStatus": "legal",
+    "id": 217
+  },
+  {
+    "name": "BCAA (2:1:1)",
+    "categoryKey": "performance",
+    "tags": [
+      "leucin",
+      "regenerace",
+      "antikatabolismus"
+    ],
+    "rating": 3,
+    "colorType": "green",
+    "shortDesc": "Větvené aminokyseliny leucin, isoleucin a valin.",
+    "description": "BCAA stimulují syntézu bílkovin primárně přes leucinový 'trigger'. Nicméně bez přítomnosti zbylých 6 esenciálních aminokyselin (EAA) je novotvorba svalů limitována. Výborné pro trénink nalačno jako ochrana před katabolismem.",
+    "effects": [
+      "antikatabolický efekt nalačno",
+      "snížení vnímání únavy (soutěž s tryptofanem)"
+    ],
+    "dosage": {
+      "short": "5–10g kolem tréninku",
+      "long": "5–10g před nebo během tréninku, ideálně v poměru 2:1:1."
+    },
+    "warning": "Při dostatečném příjmu bílkovin ve stravě mají BCAA minimální přidaný benefit.",
+    "mechanism": "Přímá aktivace sestavy mTORC1 leucinem, soutěž o LNAA transportér v mozku",
+    "halfLife": "2 hodiny",
+    "interactions": [],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "maso",
+      "vejce",
+      "mléčné výrobky"
+    ],
+    "bannedStatus": "legal",
+    "id": 218
+  },
+  {
+    "name": "Theacrine (Teacrine)",
+    "categoryKey": "performance",
+    "tags": [
+      "stimulant",
+      "energie",
+      "bez tolerance",
+      "dopamin"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Purinový alkaloid podobný kofeinu, ale bez vzniku rychlé tolerance.",
+    "description": "Theacrin se nachází v čaji Kucha (Camellia kucha). Působí podobně jako kofein antagonizací adenosinových receptorů, ale zároveň silně aktivuje dopaminergní signalizaci. Klinicky neprokazuje budování tolerance po 8 týdnech užívání.",
+    "effects": [
+      "dlouhotrvající energie (4–6h)",
+      "žádný náhlý 'crash'",
+      "zvýšení motivace"
+    ],
+    "dosage": {
+      "short": "100–200mg před zátěží",
+      "long": "100–200mg cca 45 min před výkonem. Vhodné kombinovat s nižší dávkou kofeinu pro synergický nástup."
+    },
+    "warning": "Neužívat v pozdních odpoledních hodinách (poločas delší než kofein).",
+    "mechanism": "Antagonismus adenosinu A1 a A2A, alosterická modulace D1/D2 dopaminových receptorů",
+    "halfLife": "16–20 hodin",
+    "interactions": [
+      "kofein (synergie)",
+      "sedativa (antagonismus)"
+    ],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "čaj Kucha",
+      "ovoce Cupuaçu"
+    ],
+    "bannedStatus": "legal",
+    "id": 219
   }
 ]
