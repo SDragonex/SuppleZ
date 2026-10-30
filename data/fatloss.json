@@ -3,12 +3,22 @@
     "id": 400,
     "name": "Kofein (Termogenní)",
     "categoryKey": "fatloss",
-    "tags": ["termogeneze", "lipolýza", "energie", "metabolismus"],
+    "tags": [
+      "termogeneze",
+      "lipolýza",
+      "energie",
+      "metabolismus"
+    ],
     "rating": 5,
     "colorType": "green",
     "shortDesc": "Stimulant zvyšující energetický výdej a lipolýzu.",
     "description": "Kofein zvyšuje termogenezi (TEE) o 3–11% a lipolýzu mobilizací volných mastných kyselin (FFA) z adipocytů (antagonismus adenosinu). Zvyšuje bazální metabolickou frekvenci (BMR). Tolerance se vyvíjí na lipolytický efekt pomaleji než na stimulační efekt.",
-    "effects": ["zvýšení BMR", "lipolýza", "termogeneze", "snížení chuti k jídlu"],
+    "effects": [
+      "zvýšení BMR",
+      "lipolýza",
+      "termogeneze",
+      "snížení chuti k jídlu"
+    ],
     "dosage": {
       "short": "100–200mg 2–3x denně",
       "long": "100–200mg 2–3x denně mezi jídly. Maximálně 400mg/den. Cyklovat 2 týdny ON, 1 týden OFF pro udržení citlivosti adenosinových receptorů."
@@ -16,21 +26,40 @@
     "warning": "Tachykardie, hypertenze, insomnie, úzkost. Závislost. Kontraindikace: kardiovaskulární onemocnění, úzkostné poruchy, těhotenství.",
     "mechanism": "Antagonismus A1/A2 adenosin receptorů → zvýšení cAMP → aktivace PKA → HSL (hormone-sensitive lipase)",
     "halfLife": "3–6 hodin",
-    "interactions": ["synefrin", "yohimbin", "theanin", "beta-blokátory"],
+    "interactions": [
+      "synefrin",
+      "yohimbin",
+      "theanin",
+      "beta-blokátory"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["káva", "čaj", "guarana"],
+    "naturalSources": [
+      "káva",
+      "čaj",
+      "guarana"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 401,
     "name": "Zelený čaj (EGCG)",
     "categoryKey": "fatloss",
-    "tags": ["termogeneze", "antioxidant", "insulin", "metabolismus"],
+    "tags": [
+      "termogeneze",
+      "antioxidant",
+      "insulin",
+      "metabolismus"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Katechiny zvyšující termogenezi a oxidaci tuků.",
     "description": "Epigalokatechin galát (EGCG) je hlavní katechin v zeleném čaji. Zvyšuje termogenezi (synergicky s kofeinem) a oxidaci tuků. Inhibice COMT (enzym degradující katecholaminy) prodlužuje účinek adrenalinu na lipolýzu. Také zlepšuje insulinovou senzitivitu.",
-    "effects": ["termogeneze", "oxidace tuků", "zlepšení insulinové senzitivity", "antioxidant"],
+    "effects": [
+      "termogeneze",
+      "oxidace tuků",
+      "zlepšení insulinové senzitivity",
+      "antioxidant"
+    ],
     "dosage": {
       "short": "400–800mg EGCG denně",
       "long": "400–800mg EGCG denně (odpovídá 3–5 šálkům silného zeleného čaje), rozděleno do 2–3 dávek. Užívat s jídlem pro snížení rizika jaterní toxicity."
@@ -38,21 +67,37 @@
     "warning": "Vysoké dávky (>800mg EGCG) na lačno mohou být hepatotoxické (zřídka). Interakce s warfarinem (vitamín K). Snižuje vstřebávání železa.",
     "mechanism": "Inhibice COMT (prodlužuje působení katecholaminů), aktivace AMPK, zvýšení noradrenalinu",
     "halfLife": "3–6 hodin",
-    "interactions": ["warfarin", "železo (snižuje vstřebání)", "nadolol"],
+    "interactions": [
+      "warfarin",
+      "železo (snižuje vstřebání)",
+      "nadolol"
+    ],
     "evidenceLevel": "A",
-    "naturalSources": ["Camellia sinensis (zelený čaj)"],
+    "naturalSources": [
+      "Camellia sinensis (zelený čaj)"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 402,
     "name": "Synefrin (Hořký pomeranč)",
     "categoryKey": "fatloss",
-    "tags": ["termogeneze", "energie", "adrenergní", "stimulant"],
+    "tags": [
+      "termogeneze",
+      "energie",
+      "adrenergní",
+      "stimulant"
+    ],
     "rating": 4,
     "colorType": "yellow",
     "shortDesc": "Adrenergní stimulant z Citrus aurantium.",
     "description": "Synefrin (p-synefrin) je alkaloid z Citrus aurantium (hořký pomeranč). Strukturálně podobný adrenalinu, ale méně potentní. Agonista beta-3 adrenergních receptorů (termogeneze v adipose tissue). Mírně zvyšuje krevní tlak a srdeční frekvenci.",
-    "effects": ["termogeneze", "lipolýza", "energie", "snížení chuti k jídlu"],
+    "effects": [
+      "termogeneze",
+      "lipolýza",
+      "energie",
+      "snížení chuti k jídlu"
+    ],
     "dosage": {
       "short": "20–50mg denně",
       "long": "20–50mg synefrinu denně, rozděleno do 2–3 dávek. Standardizovaný extrakt z hořkého pomeranče (6–10%). Užívat před tréninkem nebo ráno."
@@ -60,21 +105,38 @@
     "warning": "Zvýšení krevního tlaku a srdeční frekvence. Interakce s kofeinem (synergický kardiovaskulární stres). Kontraindikace: kardiovaskulární onemocnění, MAO inhibitory.",
     "mechanism": "Agonismus β3-adrenergních receptorů (adipocyty), částečný α1 agonizmus",
     "halfLife": "2–3 hodiny",
-    "interactions": ["kofein", "yohimbin", "MAO inhibitory", "antihypertenziva"],
+    "interactions": [
+      "kofein",
+      "yohimbin",
+      "MAO inhibitory",
+      "antihypertenziva"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["Citrus aurantium (hořký pomeranč)"],
+    "naturalSources": [
+      "Citrus aurantium (hořký pomeranč)"
+    ],
     "bannedStatus": "legal (omezeno v některých sportech)"
   },
   {
     "id": 403,
     "name": "Yohimbin (Yohimbe)",
     "categoryKey": "fatloss",
-    "tags": ["lipolýza", "alfa-2", "termogeneze", "afrodisiakum"],
+    "tags": [
+      "lipolýza",
+      "alfa-2",
+      "termogeneze",
+      "afrodisiakum"
+    ],
     "rating": 3,
     "colorType": "red",
     "shortDesc": "Alfa-2 antagonista pro mobilizaci tuku z problematických zón.",
     "description": "Yohimbin je alkaloid z kůry Yohimbe (Pausinystalia yohimbe). Selektivní antagonista alfa-2 adrenergních receptorů, které inhibují lipolýzu v problematických oblastech (břicho, stehna). Uvolňuje blokádu lipolýzy vysokými hladinami inzulínu/katecholaminů. Také afrodisiakum.",
-    "effects": ["mobilizace tuku z problematických zón", "lipolýza", "termogeneze", "vasodilatace"],
+    "effects": [
+      "mobilizace tuku z problematických zón",
+      "lipolýza",
+      "termogeneze",
+      "vasodilatace"
+    ],
     "dosage": {
       "short": "0.2mg/kg tělesné hmotnosti",
       "long": "0.2mg/kg (14mg pro 70kg) v době nejnižší inzulinové hladiny (nalačno ráno nebo před fasted tréninkem). Cyklovat 2 týdny ON, 2 týdny OFF."
@@ -82,21 +144,38 @@
     "warning": "Anxieta, hypertenze, tachykardie, tremory. Kontraindikace: kardiovaskulární onemocnění, úzkostné poruchy, onemocnění jater/kel, těhotenství. Interakce s MAO inhibitory, stimulanty.",
     "mechanism": "Antagonismus α2-adrenergních receptorů (pre-synaptická blokáda) → zvýšení noradrenalinu → lipolýza",
     "halfLife": "2–3 hodiny",
-    "interactions": ["MAO inhibitory", "kofein", "synefrin", "antidepresiva", "antihypertenziva"],
+    "interactions": [
+      "MAO inhibitory",
+      "kofein",
+      "synefrin",
+      "antidepresiva",
+      "antihypertenziva"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["Pausinystalia yohimbe (kůra)"],
+    "naturalSources": [
+      "Pausinystalia yohimbe (kůra)"
+    ],
     "bannedStatus": "controlled (předpis v některých zemích), banned některé sportovní organizace"
   },
   {
     "id": 404,
     "name": "L-Karnitin (Tartrát)",
     "categoryKey": "fatloss",
-    "tags": ["transport tuku", "mitochondrie", "energie"],
+    "tags": [
+      "transport tuku",
+      "mitochondrie",
+      "energie"
+    ],
     "rating": 3,
     "colorType": "green",
     "shortDesc": "Transportér mastných kyselin do mitochondrií.",
     "description": "L-karnitin je kondicionálně esenciální látka (aminokyselinový derivát) transportující dlouhé řetězce mastných kyselin do mitochondrií pro beta-oxidaci. Také akumuluje acetyl-CoA. Efektivní pouze u osob s deficitem (vegetariáni, starší) nebo při vysoké dávce (3–5g). Propionyl-L-karnitin má lepší vstřebání do svalů.",
-    "effects": ["transport FFA do mitochondrií", "energie", "regenerace", "androgen receptor density"],
+    "effects": [
+      "transport FFA do mitochondrií",
+      "energie",
+      "regenerace",
+      "androgen receptor density"
+    ],
     "dosage": {
       "short": "2–3g denně",
       "long": "2–3g denně (L-karnitin L-tartrát), rozděleno do 2–3 dávek. Užívat s jídlem obsahujícím sacharidy (insulin zvyšuje vstřebání). Acetyl-L-karnitin pro mozek (1–2g)."
@@ -104,21 +183,39 @@
     "warning": "Vzácně TMAO produkce (riziko kardiovaskulárních onemocnění, diskutabilní). Zápach ryb (TMA). Interakce s warfarinem (zvyšuje INR).",
     "mechanism": "Carnitine shuttle system (CPT1/CPT2) pro transport acyl-CoA do mitochondrií",
     "halfLife": "2–3 hodiny",
-    "interactions": ["warfarin (zvyšuje INR)", "thyroidní hormony"],
+    "interactions": [
+      "warfarin (zvyšuje INR)",
+      "thyroidní hormony"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["hovězí maso", "jehněčí", "ryby", "mléčné výrobky"],
+    "naturalSources": [
+      "hovězí maso",
+      "jehněčí",
+      "ryby",
+      "mléčné výrobky"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 405,
     "name": "ALCAR (Acetyl-L-karnitin)",
     "categoryKey": "fatloss",
-    "tags": ["mozek", "mitochondrie", "kognice", "energie"],
+    "tags": [
+      "mozek",
+      "mitochondrie",
+      "kognice",
+      "energie"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Acetylovaná forma karnitinu pro CNS a mitochondrie.",
     "description": "ALCAR je acetylovaná forma L-karnitinu, která překonává hematoencefalickou bariéru. Podporuje mitochondriální funkci v mozku, syntézu acetylcholinu a má neuroprotektivní vlastnosti. Používá se pro kognitivní podporu, únavu a depresi (geriatrická).",
-    "effects": ["mitochondriální podpora", "kognitivní funkce", "energie", "neuroprotekce"],
+    "effects": [
+      "mitochondriální podpora",
+      "kognitivní funkce",
+      "energie",
+      "neuroprotekce"
+    ],
     "dosage": {
       "short": "500–1500mg denně",
       "long": "500–1500mg denně, rozděleno do 2–3 dávek. Užívat ráno (energie) nebo před tréninkem. Nalačno pro lepší vstřebání do mozku."
@@ -126,21 +223,35 @@
     "warning": "Insomnie při večerním užívání (energie). Vzácně nevolnost. Interakce s warfarinem (zvyšuje INR). Teoreticky interferuje s thyroidní funkcí.",
     "mechanism": "Dodávka acetyl skupin (acetyl-CoA), transport mastných kyselin do mitochondrií, antioxidant",
     "halfLife": "4–6 hodin",
-    "interactions": ["warfarin", "thyroidní hormony", "chemoterapie"],
+    "interactions": [
+      "warfarin",
+      "thyroidní hormony",
+      "chemoterapie"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["žádné významné zdroje (doplněk)"],
+    "naturalSources": [
+      "žádné významné zdroje (doplněk)"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 406,
     "name": "CLA (konjugovaná kyselina linolová)",
     "categoryKey": "fatloss",
-    "tags": ["tělesná kompozice", "metabolismus", "zánět"],
+    "tags": [
+      "tělesná kompozice",
+      "metabolismus",
+      "zánět"
+    ],
     "rating": 3,
     "colorType": "green",
     "shortDesc": "Mastná kyselina ovlivňující tělesnou kompozici.",
     "description": "CLA je směs izomerů kyseliny linolové (c9,t11 a t10,c12). Zvyšuje oxidaci tuků a snižuje lipogenezi v adipocytech (aktivace PPAR-α). Efekty na redukci tuku jsou mírné (1–2kg za 6 měsíců). t10,c12 izomer může způsobit insulinovou rezistenci.",
-    "effects": ["mírná redukce tuku", "zachování svalové hmoty", "protizánětlivé (c9,t11)"],
+    "effects": [
+      "mírná redukce tuku",
+      "zachování svalové hmoty",
+      "protizánětlivé (c9,t11)"
+    ],
     "dosage": {
       "short": "3–6g denně",
       "long": "3–6g denně (směs izomerů), rozděleno do 2–3 dávek. Užívat s jídlem. Vyšší dávky mohou být prozánětlivé (t10,c12)."
@@ -148,21 +259,37 @@
     "warning": "t10,c12 izomer může způsobit insulinovou rezistenci a zánět jater (při vysokých dávkách). Interakce s antikoagulanty (ředění krve).",
     "mechanism": "Aktivace PPAR-α (oxidace tuků), inhibice LPL (lipoprotein lipáza)",
     "halfLife": "6–8 hodin",
-    "interactions": ["antikoagulancia", "antidiabetika"],
+    "interactions": [
+      "antikoagulancia",
+      "antidiabetika"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["hovězí maso", "jehněčí", "mléčné výrobky (maslo)"],
+    "naturalSources": [
+      "hovězí maso",
+      "jehněčí",
+      "mléčné výrobky (maslo)"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 407,
     "name": "Capsaicin",
     "categoryKey": "fatloss",
-    "tags": ["termogeneze", "sytost", "metabolismus"],
+    "tags": [
+      "termogeneze",
+      "sytost",
+      "metabolismus"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Aktivní látka chilli papriček zvyšující termogenezi.",
     "description": "Capsaicin je alkaloid z Capsicum (chilli papričky). Aktivuje TRPV1 receptory (vaniloidní), což zvyšuje termogenezi a oxidaci tuků. Také snižuje chuť k jídlu a zvyšuje sytost. Efektivní pro krátkodobou termogenezi (akutní).",
-    "effects": ["termogeneze", "snížení chuti k jídlu", "oxidace tuků", "sytost"],
+    "effects": [
+      "termogeneze",
+      "snížení chuti k jídlu",
+      "oxidace tuků",
+      "sytost"
+    ],
     "dosage": {
       "short": "2–6mg denně",
       "long": "2–6mg denně (30 000–100 000 SHU), rozděleno do jídel. Enterosolventní formy pro snížení žaludečního podráždění. Užívat s jídlem."
@@ -170,21 +297,38 @@
     "warning": "Žaludeční podráždění, pálení, reflux. Interakce s antikoagulanty (ředění krve). Teoreticky zvýšení krevního tlaku při vysokých dávkách.",
     "mechanism": "Aktivace TRPV1 receptorů → zvýšení cAMP → termogeneze, zvýšení noradrenalinu",
     "halfLife": "2–3 hodiny",
-    "interactions": ["antikoagulancia", "antihypertenziva", "antidiabetika"],
+    "interactions": [
+      "antikoagulancia",
+      "antihypertenziva",
+      "antidiabetika"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["chilli papričky", "kajenský pepř"],
+    "naturalSources": [
+      "chilli papričky",
+      "kajenský pepř"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 408,
     "name": "Forskolin (Coleus forskohlii)",
     "categoryKey": "fatloss",
-    "tags": ["cAMP", "termogeneze", "testosteron", "tuk"],
+    "tags": [
+      "cAMP",
+      "termogeneze",
+      "testosteron",
+      "tuk"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Aktivátor adenylyl cyklázy zvyšující cAMP.",
     "description": "Forskolin je diterpen z kořene Coleus forskohlii. Přímý aktivátor adenylyl cyklázy → zvýšení cAMP → aktivace PKA → lipolýza (HSL). Také zvyšuje štítné hormony a testosteron u mužů. Používán pro redukci tělesného tuku a zachování svalové hmoty.",
-    "effects": ["zvýšení cAMP", "lipolýza", "zachování svalové hmoty", "zlepšení TK"],
+    "effects": [
+      "zvýšení cAMP",
+      "lipolýza",
+      "zachování svalové hmoty",
+      "zlepšení TK"
+    ],
     "dosage": {
       "short": "250mg (20% forskolinu)",
       "long": "250mg extraktu standardizovaného na 10–20% forskolinu (25–50mg forskolinu) denně, rozděleno do 2 dávek. Užívat nalačno."
@@ -192,21 +336,36 @@
     "warning": "Snížení krevního tlaku (hypotenze). Zvýšení žaludeční kyseliny (reflux). Interakce s antikoagulanty (antitrombotický efekt). Teoreticky zvýšení štítných hormonů.",
     "mechanism": "Aktivace adenylyl cyklázy → zvýšení cAMP → aktivace PKA → lipolýza (HSL) + syntéza proteinů",
     "halfLife": "4–6 hodin",
-    "interactions": ["antihypertenziva", "antikoagulancia", "léky na štítnou žlázu"],
+    "interactions": [
+      "antihypertenziva",
+      "antikoagulancia",
+      "léky na štítnou žlázu"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["Coleus forskohlii (kořen)"],
+    "naturalSources": [
+      "Coleus forskohlii (kořen)"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 409,
     "name": "Chromium Picolinate",
     "categoryKey": "fatloss",
-    "tags": ["insulin", "glukóza", "chutě", "metabolismus"],
+    "tags": [
+      "insulin",
+      "glukóza",
+      "chutě",
+      "metabolismus"
+    ],
     "rating": 3,
     "colorType": "green",
     "shortDesc": "Stopový prvek pro insulinovou senzitivitu.",
     "description": "Chrom je esenciální stopový prvek pro funkci chromodulinu (protein zvyšující citlivost na insulin). Zlepšuje vstřebávání glukózy do buněk a snižuje chutě na sacharidy. Efekty na hubnutí jsou mírné až žádné u osob s normálním příjmem chromu.",
-    "effects": ["zlepšení insulinové senzitivity", "snížení chutí na sladké", "regulace glukózy"],
+    "effects": [
+      "zlepšení insulinové senzitivity",
+      "snížení chutí na sladké",
+      "regulace glukózy"
+    ],
     "dosage": {
       "short": "200–400 mcg denně",
       "long": "200–400 mcg denně (chromium picolinate nebo chromium polynicotinate). Užívat s jídlem obsahujícím sacharidy. Nepřekračovat 1000 mcg/den."
@@ -214,21 +373,39 @@
     "warning": "Vysoké dávky (>1000mcg) mohou být toxické pro DNA (oxidativní poškození). Interakce s antidiabetiky (hypoglykémie).",
     "mechanism": "Součást chromodulinu (GTF), zvyšuje aktivitu insulin receptorů (tyrosin kináza)",
     "halfLife": "6–8 hodin",
-    "interactions": ["antidiabetika", "NSAID (zvyšují vylučování)"],
+    "interactions": [
+      "antidiabetika",
+      "NSAID (zvyšují vylučování)"
+    ],
     "evidenceLevel": "C",
-    "naturalSources": ["brokolice", "hrozny", "celozrnné obiloviny", "maso"],
+    "naturalSources": [
+      "brokolice",
+      "hrozny",
+      "celozrnné obiloviny",
+      "maso"
+    ],
     "bannedStatus": "legal"
   },
   {
     "id": 410,
     "name": "Glucomannan",
     "categoryKey": "fatloss",
-    "tags": ["sytost", "vláknina", "chutě", "GIT"],
+    "tags": [
+      "sytost",
+      "vláknina",
+      "chutě",
+      "GIT"
+    ],
     "rating": 4,
     "colorType": "green",
     "shortDesc": "Rozpustná vláknina z konjacu pro sytost.",
     "description": "Glucomannan je rozpustná vláknina (polysacharid) z kořene konjacu (Amorphophallus konjac). Absorbuje vodu (až 50x své hmotnosti), tvoří gel v žaludku, zpomaluje vyprazdňování a zvyšuje sytost. Snížení celkového kalorického příjmu.",
-    "effects": ["zvýšení sytosti", "snížení chuti k jídlu", "regulace střevní mikrobioty", "snížení cholesterolu"],
+    "effects": [
+      "zvýšení sytosti",
+      "snížení chuti k jídlu",
+      "regulace střevní mikrobioty",
+      "snížení cholesterolu"
+    ],
     "dosage": {
       "short": "1–3g před jídlem",
       "long": "1–3g 30 min před jídlem s velkým množstvím vody (250–500ml). Maximálně 6g/den. Nutné zapijet dostatečným množstvím vody."
@@ -236,9 +413,158 @@
     "warning": "Riziko ucpání jícnu/při nedostatečném zapíjení. Průjem, nadýmání, křeče. Interakce s léky (snížení vstřebání – užívat 2h před nebo po léčivech).",
     "mechanism": "Viskózní gel v GIT → zpomalení gastric emptying → zvýšení sytosti (GLP-1, PYY)",
     "halfLife": "6–8 hodin (v GIT)",
-    "interactions": ["perorální léky (snížení vstřebání)", "antidiabetika (ovlivňuje glukózu)"],
+    "interactions": [
+      "perorální léky (snížení vstřebání)",
+      "antidiabetika (ovlivňuje glukózu)"
+    ],
     "evidenceLevel": "B",
-    "naturalSources": ["kořen konjacu"],
+    "naturalSources": [
+      "kořen konjacu"
+    ],
     "bannedStatus": "legal"
+  },
+  {
+    "name": "DMAA (1,3-Dimethylamylamine)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "hardcore stim",
+      "energie",
+      "termogeneze",
+      "focus",
+      "doping"
+    ],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Legendární extrémně silný sympatomimetický stimulant.",
+    "description": "Alifatický amin původně vyvinutý jako nosní dekongestiv (Geranamine). Masivně stimuluje uvolňování noradrenalinu a dopaminu, způsobuje periferní vazokonstrikci, extrémní euforii, soustředění a potlačení chuti k jídlu.",
+    "effects": [
+      "extrémní energetický nárůst",
+      "vysoká termogeneze",
+      "potlačení hladu",
+      "laser focus"
+    ],
+    "dosage": {
+      "short": "25–50mg před výkonem",
+      "long": "25–50mg maximálně 1x denně před extrémní zátěží. Nikdy nekombinovat s alkoholem ani vysokými dávkami jiných stimulantů."
+    },
+    "warning": "Vysoké riziko arytmií, hypertenzní krize, mozkové mrtvice a těžkého popůlnočního 'crashe'. Návykové!",
+    "mechanism": "Nepřímé sympatomimetikum, zpětné vychytávání a masivní uvolnění noradrenalinu",
+    "halfLife": "8–12 hodin",
+    "interactions": [
+      "antidepresiva",
+      "stimulanty",
+      "kofein"
+    ],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "údajně pelargonie (ve skutečnosti syntetický)"
+    ],
+    "bannedStatus": "banned-sport (striktně zakázáno WADA, prodej v doplňcích nelegální)",
+    "id": 411
+  },
+  {
+    "name": "DMHA (Octodrine / 2-amino-6-methylheptane)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "stimulant",
+      "energie",
+      "termogeneze",
+      "euforie"
+    ],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Moderní nástupce DMAA s delším a vyhlazenějším stimulačním profilem.",
+    "description": "Strukturně příbuzný DMAA. Zvyšuje hladiny monoaminů (dopamin a noradrenalin), potlačuje chuť k jídlu a výrazně rozšiřuje dýchací cesty pro vyšší příjem kyslíku.",
+    "effects": [
+      "silná stimulace",
+      "bronchodilatace",
+      "zvýšený výdej kalorií"
+    ],
+    "dosage": {
+      "short": "75–150mg před tréninkem",
+      "long": "75–150mg cca 30–45 minut před intenzivním tréninkem."
+    },
+    "warning": "Tachykardie, zvýšený krevní tlak, nespavost, rychlý rozvoj tolerance.",
+    "mechanism": "Receptorový agonismus TAAR1, uvolňování katecholaminů",
+    "halfLife": "6–9 hodin",
+    "interactions": [
+      "stimulanty",
+      "IMAO"
+    ],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "extrakt z kůry Juglans regia (vlašský ořech)"
+    ],
+    "bannedStatus": "banned-sport (WADA S6)",
+    "id": 412
+  },
+  {
+    "name": "Cardarine (GW-501516)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "vytrvalost",
+      "spalování",
+      "ppar-delta",
+      "tuky"
+    ],
+    "rating": 4,
+    "colorType": "red",
+    "shortDesc": "Agonista PPAR-delta přepínající tělo na primární spalování tuků.",
+    "description": "Původně vyvíjen pro léčbu metabolického syndromu. Není to SARM, ale selektivní agonista receptorů PPAR-delta. Přepíná energetický metabolismus ze sacharidů na mastné kyseliny, dramaticky zvyšuje počet pomalých svalových vláken typu I a extrémně zvyšuje aerobní vytrvalost.",
+    "effects": [
+      "raketový nárůst vytrvalosti",
+      "rychlé spalování tuku bez ztráty svalů",
+      "zlepšení HDL cholesterolu"
+    ],
+    "dosage": {
+      "short": "10–20mg denně",
+      "long": "10–20mg denně ráno nebo před tréninkem. Cyklovat maximálně 8–12 týdnů."
+    },
+    "warning": "Klinický vývoj byl ukončen farmaceutickou firmou kvůli zjištěnému zvýšenému výskytu tumorů u hlodavců při vysokých celoživotních dávkách.",
+    "mechanism": "Aktivace transkripčního faktoru PPAR-delta, stimulace genů pro beta-oxidaci mastných kyselin",
+    "halfLife": "24 hodin",
+    "interactions": [],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "syntetická výzkumná látka"
+    ],
+    "bannedStatus": "banned-sport (WADA S4/S2, kontrolovaná látka)",
+    "id": 413
+  },
+  {
+    "name": "Clenbuterol (Klenbuterol)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "beta-2",
+      "termogeneze",
+      "spalovač",
+      "bronchodilatátor"
+    ],
+    "rating": 3,
+    "colorType": "red",
+    "shortDesc": "Veterinární beta-2 agonista pro masivní termogenezi a lipolýzu.",
+    "description": "Silný a dlouhodobě působící sympatomimetický beta-2 adrenergní agonista. Zvyšuje tělesnou teplotu o 0.5–1 °C a bazální metabolismus o 10–15 %. Má mírné antikatabolické vlastnosti u zvířat.",
+    "effects": [
+      "drastické zrychlení spalování tuků",
+      "bronchodilatace",
+      "zvýšení bazálního metabolismu"
+    ],
+    "dosage": {
+      "short": "20–80 mcg denně",
+      "long": "Začínat na 20mcg denně a postupně navyšovat dle tolerance. Cyklus 2 týdny ON / 2 týdny OFF (rychlá downregulace beta-2 receptorů) nebo s Ketotifenem."
+    },
+    "warning": "Svalový třes, křeče (vyčerpává taurin a draslík v srdci), srdeční hypertrofie při dlouhodobém zneužívání.",
+    "mechanism": "Selektivní stimulace beta-2 adrenergních receptorů, aktivace adenylátcyklázy a cAMP",
+    "halfLife": "36–39 hodin",
+    "interactions": [
+      "beta-blokátory",
+      "stimulanty"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "syntetické léčivo"
+    ],
+    "bannedStatus": "prescription-only (léčivo), banned-sport WADA",
+    "id": 414
   }
 ]
