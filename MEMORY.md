@@ -36,6 +36,9 @@
 | 2026-10-30 | Implementace SEO architektury | Doplnění Open Graph, Twitter Cards, Schema.org (JSON-LD), `robots.txt`, `sitemap.xml` a dynamického deep-linkingu (#item/ID). |
 | 2026-10-30 | Přechod na nový systém databáze (IndexedDB + Storage Layer) | Náhrada omezeného `localStorage` (limit 5 MB, blokování vlákna) za IndexedDB s automatickou migrací a Repository abstrakcí. |
 | 2026-10-30 | Zavedení `tools/build-database.js` | Automatická validace schématu všech JSON souborů, generování jednotného bundlu a sitemap. |
+| 2026-10-30 | Implementace Interaktivního Stack Builderu & Analýzy interakcí (`interactions.js`) | Reálná analýza synergií, absorpčních kompetic a kritických lékových varování bez emoji (čisté Material Icons). |
+| 2026-10-30 | Implementace Kalkulačky ředění peptidů (`calculator.js`) | Dynamický výpočet dávek a koncentrace s interaktivní SVG vizualizací inzulínové stříkačky U-100 a U-40. |
+| 2026-10-30 | Implementace Cirkadiánního rozvrhu (Denní protokol) | Automatické rozřazení látek ze stacku do 4 denních bloků (nalačno, s tuky, před tréninkem, před spaním). |
 
 ## 5. Work State & Roadmap
 - [x] Hloubková analýza architektury a odhalení skrytých vad databáze
@@ -45,8 +48,13 @@
 - [x] URL deep-linking a dynamická změna titulku stránky pro vyhledávače i uživatele
 - [x] Databázová vrstva IndexedDB (`db.js`) s automatickou migrací z `localStorage`
 - [x] Validační a bundle skript `tools/build-database.js`
+- [x] Interaktivní Stack Builder s kontrolou synergií, kompetic a varování
+- [x] Kalkulačka ředění peptidů s interaktivní SVG stříkačkou
+- [x] Cirkadiánní rozvrh denního protokolu
+- [x] 1-Click akce v detailu suplementu (Přidat do stacku, Zapsat do deníku)
 - [ ] Volitelná E2EE cloud synchronizace (Supabase / Cloudflare D1)
 
 ## 6. Gotchas & Known Constraints
-- GitHub Pages nepodporuje server-side rendering (SSR). Veškeré SEO pro jednotlivé položky musí být podpořeno buď statickou sitemapou a hash/param routováním s dynamickým DOM updatem, nebo staticky předgenerovanými stránkami.
-- Při úpravách souborů je nutné inkrementovat verzi cache v `sw.js` (např. `supplez-cache-v4.1`), aby se uživatelům projevily změny.
+- Žádné emoji v UI: striktní zákaz emoji ikon (🟢, 🟡, 🔴, 🌅, 💊 atd.) v rozhraní; vždy používat sémantické Material Icons s přesnými neonovými barvami (`--neon-green`, `--neon-yellow`, `--neon-red`, `--ui-accent`).
+- GitHub Pages nepodporuje server-side rendering (SSR). Veškeré SEO pro jednotlivé položky je podpořeno statickou sitemapou a hash/param routováním s dynamickým DOM updatem.
+- Při úpravách souborů je nutné inkrementovat verzi cache v `sw.js` (nyní `supplez-cache-v4.2`), aby se uživatelům projevily změny.
