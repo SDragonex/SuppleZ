@@ -113,6 +113,13 @@
 					</button>
 				</div>
 
+				<!-- Rychlé horizontální přepínání kategorií (optimalizované pro mobil, tablet i desktop) -->
+				<div class="category-pills-scroll-container">
+					<div id="wiki-category-pills" class="category-pills-bar">
+						<!-- Dynamicky generováno s počty látek: Vše (270), Hormony (96), Peptidy (65)... -->
+					</div>
+				</div>
+
 				<div id="filter-modal" class="filter-overlay hidden">
 					<div class="filter-content">
 						<div class="filter-header">
@@ -144,6 +151,19 @@
 				</div>
 
 				<div id="cards-grid" class="cards-grid"></div>
+
+				<!-- Stav načítání a ruční načtení dalších látek -->
+				<div id="wiki-pagination-bar" class="wiki-pagination-bar">
+					<div id="wiki-count-status" class="wiki-count-status">Načítání encyklopedie...</div>
+					<div class="wiki-pagination-actions">
+						<button id="load-more-btn" class="btn-load-more" onclick="loadMoreCards()">
+							<span class="material-icons">expand_more</span> Načíst další látky
+						</button>
+						<button id="load-all-btn" class="btn-load-all" onclick="loadAllCards()">
+							<span class="material-icons">all_inclusive</span> Zobrazit vše
+						</button>
+					</div>
+				</div>
 			</section>
 
 			<section id="view-detail" class="view hidden">
