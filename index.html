@@ -7,7 +7,73 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
 		<meta name="google-site-verification" content="RpU0YnihxO-e2ZrodRtZ7zSEdZaUQjjRcVXY1FUNCU8" />
-		<title>SuppleZ</title>
+		<title>SuppleZ | Wiki & Databáze Suplementů, Nootropik a Peptidů</title>
+		
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Kompletní a nezávislá encyklopedie suplementů, nootropik, peptidů a biohackingu. Vědecky podložené mechanismy účinku, poločas rozpadu, dávkování, interakce látek a osobní offline deník." />
+		<meta name="keywords" content="suplementy, nootropika, peptidy, biohacking, zdraví, spánek, hormony, steroidy, PCT, dávkování suplementů, interakce léků, suplementační deník" />
+		<meta name="author" content="Dany Chaker & Marek Polák" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://sdragonex.github.io/SuppleZ/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://sdragonex.github.io/SuppleZ/" />
+		<meta property="og:title" content="SuppleZ | Wiki & Databáze Suplementů, Nootropik a Peptidů" />
+		<meta property="og:description" content="Nezávislá encyklopedie suplementů, nootropik, peptidů a biohackingu. Vědecké informace, mechanismy, interakce a osobní deník." />
+		<meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3063/3063212.png" />
+		<meta property="og:site_name" content="SuppleZ" />
+		<meta property="og:locale" content="cs_CZ" />
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:url" content="https://sdragonex.github.io/SuppleZ/" />
+		<meta name="twitter:title" content="SuppleZ | Encyklopedie Suplementů & Biohacking" />
+		<meta name="twitter:description" content="Vědecky podložená encyklopedie suplementů, nootropik a peptidů s osobním offline deníkem." />
+		<meta name="twitter:image" content="https://cdn-icons-png.flaticon.com/512/3063/3063212.png" />
+
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "WebApplication",
+					"@id": "https://sdragonex.github.io/SuppleZ/#app",
+					"name": "SuppleZ",
+					"url": "https://sdragonex.github.io/SuppleZ/",
+					"description": "Minimalistická progresivní webová aplikace (PWA) pro biohacking, suplementy a nootropika bez reklam a sledování.",
+					"applicationCategory": "HealthApplication",
+					"operatingSystem": "All",
+					"inLanguage": "cs",
+					"offers": {
+						"@type": "Offer",
+						"price": "0",
+						"priceCurrency": "CZK"
+					},
+					"author": {
+						"@type": "Person",
+						"name": "Dany Chaker",
+						"url": "https://github.com/SDragonex"
+					}
+				},
+				{
+					"@type": "MedicalWebPage",
+					"@id": "https://sdragonex.github.io/SuppleZ/#webpage",
+					"url": "https://sdragonex.github.io/SuppleZ/",
+					"name": "SuppleZ – Encyklopedie suplementů a nootropik",
+					"description": "Strukturovaná databáze suplementů stravy, peptidů, nootropik a hormonální optimalizace.",
+					"inLanguage": "cs",
+					"about": {
+						"@type": "MedicalEntity",
+						"name": "Dietary Supplements & Nootropics"
+					},
+					"disclaimer": "Informace v aplikaci mají pouze informativní charakter. Nejedná se o lékařskou radu."
+				}
+			]
+		}
+		</script>
+
 		<link rel="stylesheet" href="style.css" />
 		<link rel="manifest" href="manifest.json" />
 		<meta name="theme-color" content="#00f3ff" />
@@ -275,6 +341,7 @@
 			</button>
 		</nav>
 
+		<script src="db.js"></script>
 		<script src="script.js"></script>
 		<script>
 			if ("serviceWorker" in navigator) {
