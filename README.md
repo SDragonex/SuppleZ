@@ -36,12 +36,13 @@ Aplikace funguje **offline**, nevyžaduje registraci a ukládá veškerá data p
 
 | Technologie | Popis |
 |-------------|-------|
-| **HTML5** | Sémantická struktura, ARIA |
+| **HTML5** | Sémantická struktura, Open Graph, Schema.org (JSON-LD), ARIA |
 | **CSS3** | Flexbox, Grid, CSS proměnné, animace, glassmorphism |
-| **Vanilla JS (ES6+)** | Routing, rendering, lazy loading, LocalStorage |
-| **JSON** | Databáze suplementů (database.json) |
-| **Service Worker** | Offline režim, Network First strategie |
-| **PWA** | Manifest, instalace, cache API |
+| **Vanilla JS (ES6+)** | Routing, deep-linking, rendering, lazy loading |
+| **IndexedDB & LocalStorage** | Rychlé asynchronní úložiště (`db.js`) s automatickou migrací |
+| **JSON Databáze** | Modulární kategorie v `data/` a sjednocený bundle (`supplements.bundle.json`) |
+| **Service Worker (v4.1)** | Offline režim, Cache API, Network First strategie |
+| **PWA & SEO** | Manifest, robots.txt, sitemap.xml, instalace jako nativní aplikace |
 
 ---
 
@@ -138,13 +139,16 @@ Každý suplement obsahuje kompletní informace:
 
 ```
 SuppleZ/
-├─ index.html          # Hlavní UI
-├─ style.css           # Design (glassmorphism)
-├─ script.js           # Logika aplikace
-├─ database.json       # Databáze suplementů
-├─ sw.js               # Service Worker (offline)
-├─ manifest.json       # PWA konfigurace
-└─ assets/             # Ikony, obrázky
+├─ index.html               # Hlavní UI s kompletním SEO a Schema.org
+├─ style.css                # Design (glassmorphism & neonové indikátory)
+├─ script.js                # Aplikační logika a hash routing
+├─ db.js                    # IndexedDB úložiště a migrační vrstva
+├─ sw.js                    # Service Worker (Cache API, v4.1)
+├─ manifest.json            # PWA konfigurace
+├─ robots.txt               # SEO indexační pravidla
+├─ sitemap.xml              # XML mapa stránek pro vyhledávače
+├─ data/                    # JSON databáze (9 kategorií + supplements.bundle.json)
+└─ tools/                   # Skripty pro validaci a sestavení databáze
 ```
 
 ---
