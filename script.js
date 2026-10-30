@@ -11,6 +11,9 @@ const ITEMS_PER_BATCH = 20;
 let currentCategory = "Vše";
 let currentSort = "rating";
 
+const DEFAULT_PAGE_TITLE = "SuppleZ | Wiki & Databáze Suplementů, Nootropik a Peptidů";
+const DEFAULT_PAGE_DESC = "Kompletní a nezávislá encyklopedie suplementů, nootropik, peptidů a biohackingu. Vědecky podložené mechanismy účinku, poločas rozpadu, dávkování, interakce látek a osobní offline deník.";
+
 const categoryLabels = {
     "health": "Zdraví",
     "performance": "Výkon", 
@@ -35,20 +38,86 @@ const DATA_FILES = [
     './data/pct.json'
 ];
 
-Promise.all(DATA_FILES.map(url => 
-    fetch(url).then(res => res.json()).catch(() => [])
-))
-.then(results => {
-    globalData = results.flat();
-    initFilters();
-    loadMoreCards();
-})
-.catch(error => {
-    console.error('Chyba:', error);
-    if(cardsGrid) {
-        cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px">Chyba databáze.</p>';
+function slugify(text) {
+    return (text || "")
+        .toString()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+/**
+ * Inicializace a načtení databáze suplementů
+ * Preferuje IndexedDB cache / unified bundle, s fallbackem na jednotlivé JSON soubory.
+ */
+async function initDatabaseAndLoad() {
+    // 1. Inicializovat IndexedDB vrstvu (pokud je dostupná)
+    if (window.SuppleZ_DB) {
+        try {
+            await window.SuppleZ_DB.init();
+            const cachedItems = await window.SuppleZ_DB.getAllSupplements();
+            if (cachedItems && cachedItems.length > 0) {
+                globalData = cachedItems;
+                initFilters();
+                loadMoreCards();
+                handleUrlRouting();
+            }
+        } catch (dbErr) {
+            console.warn('[Data] Selhal start IndexedDB cache:', dbErr);
+        }
     }
-});
+
+    // 2. Načíst data ze sjednoceného bundlu nebo jednotlivých JSON souborů
+    try {
+        let loadedData = null;
+        try {
+            const bundleRes = await fetch('./data/supplements.bundle.json');
+            if (bundleRes.ok) {
+                const bundle = await bundleRes.json();
+                if (Array.isArray(bundle) && bundle.length > 0) {
+                    loadedData = bundle;
+                }
+            }
+        } catch (e) {
+            console.log('[Data] Sjednocený bundle nedostupný, použijí se jednotlivé soubory.');
+        }
+
+        if (!loadedData) {
+            const results = await Promise.all(DATA_FILES.map(url => 
+                fetch(url).then(res => res.json()).catch(err => {
+                    console.error('Chyba čtení ' + url, err);
+                    return [];
+                })
+            ));
+            loadedData = results.flat();
+        }
+
+        if (Array.isArray(loadedData) && loadedData.length > 0) {
+            globalData = loadedData;
+
+            // Uložit / synchronizovat do IndexedDB pro okamžitý offline přístup
+            if (window.SuppleZ_DB) {
+                window.SuppleZ_DB.syncSupplements(globalData);
+            }
+
+            initFilters();
+            displayedCount = 0;
+            if (cardsGrid) cardsGrid.innerHTML = "";
+            loadMoreCards();
+            handleUrlRouting();
+        }
+    } catch (error) {
+        console.error('Kritická chyba načítání databáze:', error);
+        if (cardsGrid && (!globalData || globalData.length === 0)) {
+            cardsGrid.innerHTML = '<p style="color:red; text-align:center; margin-top:20px">Chyba databáze při načítání.</p>';
+        }
+    }
+}
+
+// Spuštění načítání databáze
+initDatabaseAndLoad();
 
 function switchTab(viewId, navElement) {
     document.querySelectorAll(".view").forEach((el) => {
@@ -72,11 +141,52 @@ function switchTab(viewId, navElement) {
 window.addEventListener('popstate', (event) => {
     if (document.body.classList.contains('detail-active')) {
         closeDetailView(false);
+    } else {
+        handleUrlRouting();
     }
 });
 
-function openDetailView(item) {
-    window.history.pushState({ view: 'detail' }, '', '#detail');
+window.addEventListener('hashchange', () => {
+    handleUrlRouting();
+});
+
+function handleUrlRouting() {
+    const hash = window.location.hash;
+    if (hash.startsWith('#item=')) {
+        const rawId = hash.replace('#item=', '').split('-')[0];
+        const numId = Number(rawId);
+        if (!isNaN(numId) && globalData.length > 0) {
+            const found = globalData.find(item => item.id === numId);
+            if (found) {
+                openDetailView(found, false);
+                return;
+            }
+        }
+    } else if (hash.startsWith('#category=')) {
+        const catKey = hash.replace('#category=', '');
+        if (categoryLabels[catKey]) {
+            const targetBtn = document.querySelector(`.cat-select-btn[data-key="${catKey}"]`);
+            selectCategory(catKey, targetBtn || document.createElement("button"));
+        }
+    } else if (document.body.classList.contains('detail-active') && !hash.startsWith('#item=')) {
+        closeDetailView(false);
+    }
+}
+
+function openDetailView(item, updateHistory = true) {
+    const slug = item.slug || slugify(item.name);
+    const targetHash = `#item=${item.id}-${slug}`;
+
+    if (updateHistory && window.location.hash !== targetHash) {
+        window.history.pushState({ view: 'detail', id: item.id }, '', targetHash);
+    }
+
+    // SEO: Dynamická úprava titulku a popisku stránky
+    document.title = `${item.name} – Dávkování, účinky a rizika | SuppleZ`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && item.shortDesc) {
+        metaDesc.setAttribute('content', item.shortDesc);
+    }
 
     let themeColor = "var(--ui-accent)";
     let glowColor = "rgba(0, 243, 255, 0.4)";
@@ -209,10 +319,18 @@ function openDetailView(item) {
 }
 
 function closeDetailView(goBack = true) {
+    // SEO: Návrat k původnímu titulku a popisu
+    document.title = DEFAULT_PAGE_TITLE;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', DEFAULT_PAGE_DESC);
+
     if (goBack) {
-        window.history.back();
-        return; 
+        if (window.location.hash.startsWith('#item=')) {
+            window.history.back();
+            return;
+        }
     }
+
     document.getElementById("view-detail").classList.remove("active");
     document.getElementById("view-detail").classList.add("hidden");
     document.getElementById("view-wiki").classList.remove("hidden");
@@ -272,13 +390,15 @@ function initFilters() {
 
 function selectCategory(catKey, btnElement) {
     document.querySelectorAll(".cat-select-btn").forEach(b => b.classList.remove("active"));
-    btnElement.classList.add("active");
+    if (btnElement && btnElement.classList) {
+        btnElement.classList.add("active");
+    }
     
     currentCategory = catKey;
     updateActiveFilterUI();
     
     displayedCount = 0;
-    cardsGrid.innerHTML = "";
+    if (cardsGrid) cardsGrid.innerHTML = "";
     loadMoreCards();
     
     const filterModal = document.getElementById("filter-modal");
@@ -299,7 +419,7 @@ function setSort(type) {
     }
 
     displayedCount = 0;
-    cardsGrid.innerHTML = "";
+    if (cardsGrid) cardsGrid.innerHTML = "";
     loadMoreCards();
 }
 
@@ -325,15 +445,16 @@ function resetFilters() {
     });
 
     displayedCount = 0;
-    cardsGrid.innerHTML = "";
+    if (cardsGrid) cardsGrid.innerHTML = "";
     loadMoreCards();
 }
 
 function loadMoreCards() {
-    const term = searchInput ? searchInput.value.toLowerCase() : "";
+    const term = searchInput ? searchInput.value.toLowerCase().trim() : "";
     
     let filteredData = globalData.filter(item => {
-        const matchesSearch = item.name.toLowerCase().includes(term);
+        const matchesSearch = item.name.toLowerCase().includes(term) ||
+                              (Array.isArray(item.tags) && item.tags.some(t => t.toLowerCase().includes(term)));
         const itemCat = item.categoryKey || item.category;
         const matchesCategory = currentCategory === "Vše" || itemCat === currentCategory;
         return matchesSearch && matchesCategory;
@@ -342,7 +463,7 @@ function loadMoreCards() {
     if (currentSort === 'rating') {
         filteredData.sort((a, b) => b.rating - a.rating);
     } else if (currentSort === 'az') {
-        filteredData.sort((a, b) => a.name.localeCompare(b.name));
+        filteredData.sort((a, b) => a.name.localeCompare(b.name, 'cs'));
     }
 
     const nextBatch = filteredData.slice(displayedCount, displayedCount + ITEMS_PER_BATCH);
@@ -398,23 +519,23 @@ window.addEventListener('scroll', () => {
 if(searchInput) {
     searchInput.addEventListener("input", () => {
         displayedCount = 0;
-        cardsGrid.innerHTML = "";
+        if (cardsGrid) cardsGrid.innerHTML = "";
         loadMoreCards();
     });
 }
 
-let myDiary = JSON.parse(localStorage.getItem("supplez_diary_v2")) || [];
+// --- LOGIKA DENÍKU (S IndexedDB PODPOROU) ---
 
-function addDiaryEntry(moodColor) {
+async function addDiaryEntry(moodColor) {
     const nameInput = document.getElementById("diary-name");
     const doseInput = document.getElementById("diary-dose");
     const cycleInput = document.getElementById("diary-cycle");
     const noteInput = document.getElementById("diary-note");
 
-    const name = nameInput.value;
-    const dose = doseInput.value;
-    const cycle = cycleInput.value || "Obecné";
-    const note = noteInput.value;
+    const name = nameInput.value.trim();
+    const dose = doseInput.value.trim();
+    const cycle = cycleInput.value.trim() || "Obecné";
+    const note = noteInput.value.trim();
 
     if (!name) { alert("Napiš název látky!"); return; }
 
@@ -425,31 +546,49 @@ function addDiaryEntry(moodColor) {
         name, dose, cycle, note, color: moodColor,
     };
 
-    myDiary.unshift(entry);
-    saveData();
-    renderDiary();
+    if (window.SuppleZ_DB) {
+        await window.SuppleZ_DB.saveDiaryEntry(entry);
+    } else {
+        let diary = JSON.parse(localStorage.getItem("supplez_diary_v2")) || [];
+        diary.unshift(entry);
+        localStorage.setItem("supplez_diary_v2", JSON.stringify(diary));
+    }
+
+    await renderDiary();
 
     nameInput.value = "";
     doseInput.value = "";
     noteInput.value = "";
 }
 
-function deleteEntry(id) {
+async function deleteEntry(id) {
     if (confirm("Smazat záznam?")) {
-        myDiary = myDiary.filter((e) => e.id !== id);
-        saveData();
-        renderDiary();
+        if (window.SuppleZ_DB) {
+            await window.SuppleZ_DB.deleteDiaryEntry(id);
+        } else {
+            let diary = JSON.parse(localStorage.getItem("supplez_diary_v2")) || [];
+            diary = diary.filter((e) => e.id !== id);
+            localStorage.setItem("supplez_diary_v2", JSON.stringify(diary));
+        }
+        await renderDiary();
     }
 }
 
-function renderDiary() {
+async function renderDiary() {
     const list = document.getElementById("diary-list");
     const filterSelect = document.getElementById("cycle-filter");
     
     if(!list) return;
 
+    let myDiary = [];
+    if (window.SuppleZ_DB) {
+        myDiary = await window.SuppleZ_DB.getDiaryEntries();
+    } else {
+        myDiary = JSON.parse(localStorage.getItem("supplez_diary_v2")) || [];
+    }
+
     const filterVal = filterSelect ? filterSelect.value : "all";
-    updateFilterDropdown();
+    updateFilterDropdown(myDiary);
 
     list.innerHTML = "";
     const filteredData = filterVal === "all" ? myDiary : myDiary.filter((e) => e.cycle === filterVal);
@@ -480,11 +619,11 @@ function renderDiary() {
     });
 }
 
-function updateFilterDropdown() {
+function updateFilterDropdown(diaryList) {
     const select = document.getElementById("cycle-filter");
     if(!select) return;
     const currentVal = select.value;
-    const uniqueCycles = [...new Set(myDiary.map((item) => item.cycle))];
+    const uniqueCycles = [...new Set((diaryList || []).map((item) => item.cycle))];
     
     select.innerHTML = '<option value="all">Zobrazit vše</option>';
     uniqueCycles.forEach((c) => {
@@ -499,10 +638,15 @@ function updateFilterDropdown() {
     }
 }
 
-function saveData() { localStorage.setItem("supplez_diary_v2", JSON.stringify(myDiary)); }
+async function exportData() {
+    let entries = [];
+    if (window.SuppleZ_DB) {
+        entries = await window.SuppleZ_DB.getDiaryEntries();
+    } else {
+        entries = JSON.parse(localStorage.getItem("supplez_diary_v2")) || [];
+    }
 
-function exportData() {
-    const dataStr = JSON.stringify(myDiary, null, 2);
+    const dataStr = JSON.stringify(entries, null, 2);
     const blob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -517,28 +661,35 @@ function importData(inputElement) {
     const file = inputElement.files[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = function (e) {
+    reader.onload = async function (e) {
         try {
             const importedData = JSON.parse(e.target.result);
             if (Array.isArray(importedData)) {
                 if (confirm("Tímto přepíšeš aktuální deník. Pokračovat?")) {
-                    myDiary = importedData;
-                    saveData();
-                    renderDiary();
-                    alert("Data nahrána!");
+                    if (window.SuppleZ_DB) {
+                        await window.SuppleZ_DB.importDiaryData(importedData);
+                    } else {
+                        localStorage.setItem("supplez_diary_v2", JSON.stringify(importedData));
+                    }
+                    await renderDiary();
+                    alert("Data úspěšně nahrána!");
                 }
-            } else { alert("Špatný formát."); }
-        } catch (err) { alert("Chyba souboru."); }
+            } else { alert("Špatný formát (očekáváno pole)."); }
+        } catch (err) { alert("Chyba souboru: " + err.message); }
     };
     reader.readAsText(file);
 }
 
-function clearAllData() {
-    if (confirm("OPRAVDU SMAZAT VŠE?")) {
-        localStorage.removeItem("supplez_diary_v2");
-        myDiary = [];
-        renderDiary();
+async function clearAllData() {
+    if (confirm("OPRAVDU SMAZAT VŠECHNA DATA?")) {
+        if (window.SuppleZ_DB) {
+            await window.SuppleZ_DB.clearAllDiaryEntries();
+        } else {
+            localStorage.removeItem("supplez_diary_v2");
+        }
+        await renderDiary();
     }
 }
 
+// Počáteční vykreslení deníku
 renderDiary();
