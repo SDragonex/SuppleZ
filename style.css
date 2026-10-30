@@ -794,7 +794,514 @@ body.detail-active {
         padding: 12px;
     }
     
-    .stat-box .material-icons {
-        font-size: 1.2rem;
+}
+
+/* --- STACK BUILDER & INTERAKCE --- */
+.subtab-switcher {
+    display: flex;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 20px;
+    gap: 4px;
+}
+
+.subtab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.subtab-btn.active {
+    background: var(--card-bg);
+    color: var(--ui-accent);
+    box-shadow: 0 0 12px rgba(0, 243, 255, 0.2);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+}
+
+.stack-search-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.stack-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 50;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+.suggestion-item {
+    padding: 10px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.suggestion-item:hover {
+    background: rgba(0, 243, 255, 0.1);
+    color: var(--ui-accent);
+}
+
+.suggestion-cat {
+    font-size: 0.75rem;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.presets-container {
+    margin-bottom: 15px;
+}
+
+.presets-label {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.presets-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.preset-chip {
+    background: #111;
+    border: 1px solid #333;
+    color: #ccc;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.preset-chip:hover {
+    border-color: var(--ui-accent);
+    color: var(--ui-accent);
+    background: rgba(0, 243, 255, 0.08);
+}
+
+.active-stack-box {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.stack-chips-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 38px;
+    align-items: center;
+}
+
+.stack-item-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 243, 255, 0.12);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.remove-chip-btn {
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.remove-chip-btn:hover {
+    color: var(--neon-red);
+}
+
+.clear-stack-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.clear-stack-btn:hover {
+    color: var(--neon-red);
+}
+
+/* Interakční karty */
+.interaction-summary-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #111;
+    border-radius: 8px;
+    border-left: 3px solid var(--ui-accent);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.interaction-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.interaction-card.synergy {
+    border-color: rgba(0, 255, 65, 0.35);
+    background: rgba(0, 255, 65, 0.04);
+}
+
+.interaction-card.conflict {
+    border-color: rgba(255, 234, 0, 0.35);
+    background: rgba(255, 234, 0, 0.04);
+}
+
+.interaction-card.warning {
+    border-color: rgba(255, 0, 60, 0.45);
+    background: rgba(255, 0, 60, 0.06);
+}
+
+.interaction-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.interaction-card-header h4 {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.15rem;
+    margin: 0;
+    color: #fff;
+}
+
+.interaction-card.synergy .interaction-card-header .material-icons {
+    color: var(--neon-green);
+}
+.interaction-card.conflict .interaction-card-header .material-icons {
+    color: var(--neon-yellow);
+}
+.interaction-card.warning .interaction-card-header .material-icons {
+    color: var(--neon-red);
+}
+
+.interaction-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #bbb;
+    margin-bottom: 6px;
+}
+
+.interaction-advice {
+    font-size: 0.85rem;
+    color: var(--neon-yellow);
+    font-weight: 500;
+}
+
+/* Cirkadiánní rozvrh */
+.timeline-slot {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.slot-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #222;
+}
+
+.slot-header h3 {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.25rem;
+    margin: 0;
+    color: #fff;
+}
+
+.slot-time-badge {
+    margin-left: auto;
+    font-size: 0.75rem;
+    background: #1a1a1a;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #888;
+}
+
+.slot-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.slot-item-card {
+    background: #111;
+    border: 1px solid #282828;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slot-item-name {
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.slot-item-reason {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* --- KALKULAČKA PEPTIDŮ --- */
+.calc-card {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.calc-field label {
+    display: block;
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.calc-quick-btns {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.calc-pill {
+    background: #161616;
+    border: 1px solid #333;
+    color: #bbb;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.calc-pill:hover {
+    border-color: var(--ui-accent);
+    color: var(--ui-accent);
+}
+
+.syringe-visual-card {
+    background: #080808;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.syringe-svg {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.syringe-highlight-result {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--neon-green);
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+    margin-top: 15px;
+}
+
+.syringe-highlight-sub {
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.calc-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.calc-metric-box {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.metric-title {
+    font-size: 0.75rem;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.metric-val {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ui-accent);
+}
+
+.safety-tips-box {
+    background: rgba(0, 243, 255, 0.05);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.safety-tips-box h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ui-accent);
+    margin-bottom: 10px;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.safety-tips-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.safety-tips-box li {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 6px;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.safety-tips-box li::before {
+    content: "•";
+    color: var(--ui-accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Detail action buttons */
+.detail-actions-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.btn-detail-action {
+    background: #121212;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-detail-action.stack-btn {
+    border-color: rgba(0, 243, 255, 0.4);
+    color: var(--ui-accent);
+}
+
+.btn-detail-action.stack-btn:hover {
+    background: rgba(0, 243, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.btn-detail-action.diary-btn {
+    border-color: rgba(0, 255, 65, 0.4);
+    color: var(--neon-green);
+}
+
+.btn-detail-action.diary-btn:hover {
+    background: rgba(0, 255, 65, 0.15);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+@media (max-width: 600px) {
+    .calc-grid {
+        grid-template-columns: 1fr;
+    }
+    .calc-metrics-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .detail-actions-bar {
+        flex-direction: column;
     }
 }
+
