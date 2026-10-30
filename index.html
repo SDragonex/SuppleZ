@@ -159,6 +159,15 @@
 					<div class="detail-header-info">
 						<h1 id="detail-main-title">Název Látky</h1>
 					</div>
+
+					<div class="detail-actions-bar">
+						<button class="btn-detail-action stack-btn" onclick="addCurrentItemToStack()">
+							<span class="material-icons">layers</span> Přidat do stacku
+						</button>
+						<button class="btn-detail-action diary-btn" onclick="addCurrentItemToDiary()">
+							<span class="material-icons">edit_note</span> Zapsat do deníku
+						</button>
+					</div>
 				</div>
 
 				<div class="detail-body">
@@ -229,6 +238,149 @@
 						</h3>
 						<p id="detail-warning-long">...</p>
 					</div>
+				</div>
+			</section>
+ 
+			<section id="view-stack" class="view hidden">
+				<h2 class="section-title">Stack & Protokol</h2>
+
+				<div class="subtab-switcher">
+					<button id="subtab-interactions-btn" class="subtab-btn active" onclick="switchStackSubtab('interactions')">
+						<span class="material-icons">layers</span> Interakce & Synergie
+					</button>
+					<button id="subtab-circadian-btn" class="subtab-btn" onclick="switchStackSubtab('circadian')">
+						<span class="material-icons">schedule</span> Cirkadiánní rozvrh
+					</button>
+				</div>
+
+				<div class="stack-search-wrapper">
+					<input type="text" id="stack-search-input" placeholder="Vyhledat a přidat látku do stacku..." autocomplete="off" />
+					<div id="stack-suggestions" class="stack-suggestions hidden"></div>
+				</div>
+
+				<div class="presets-container">
+					<div class="presets-label"><span class="material-icons" style="font-size:0.9rem">auto_awesome</span> Předvolené stacky:</div>
+					<div class="presets-chips" id="preset-chips-container"></div>
+				</div>
+
+				<div class="active-stack-box">
+					<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+						<span style="font-size:0.85rem; color:#888; text-transform:uppercase; letter-spacing:0.5px;">Aktivní stack (<span id="stack-count">0</span>):</span>
+						<button class="clear-stack-btn" onclick="clearStack()" style="margin:0;">Vyčistit vše</button>
+					</div>
+					<div id="stack-chips-list" class="stack-chips-list">
+						<span style="color:#666; font-size:0.85rem;">Žádné látky ve stacku. Přidejte látky výše nebo vyberte předvolený stack.</span>
+					</div>
+				</div>
+
+				<!-- Podsekce 1: Interakce & Synergie -->
+				<div id="stack-subview-interactions">
+					<div id="interaction-summary" class="interaction-summary-bar">
+						<div style="display:flex; align-items:center; gap:8px;">
+							<span class="material-icons" style="color:var(--ui-accent)">tune</span>
+							<span id="interaction-summary-text">Vyberte alespoň 2 látky pro spuštění analýzy.</span>
+						</div>
+					</div>
+
+					<div id="interactions-results-container"></div>
+				</div>
+
+				<!-- Podsekce 2: Cirkadiánní rozvrh -->
+				<div id="stack-subview-circadian" class="hidden">
+					<p style="font-size:0.9rem; color:#888; margin-bottom:15px; line-height:1.5;">
+						Inteligentní harmonogram dne sestavený z vašeho aktivního stacku na základě farmakokinetiky a receptorové afinity:
+					</p>
+
+					<div id="circadian-timeline-container"></div>
+				</div>
+			</section>
+
+			<section id="view-calculator" class="view hidden">
+				<h2 class="section-title">Kalkulačka ředění peptidů</h2>
+
+				<div class="calc-card">
+					<div class="calc-grid">
+						<div class="calc-field">
+							<label for="calc-vial-mg">Množství peptidu (vialka)</label>
+							<div style="display:flex; align-items:center; gap:8px;">
+								<input type="number" id="calc-vial-mg" value="5" min="0.1" step="0.5" />
+								<span style="color:#aaa; font-weight:bold;">mg</span>
+							</div>
+							<div class="calc-quick-btns">
+								<button class="calc-pill" onclick="setCalcPreset('vial', 2)">2 mg</button>
+								<button class="calc-pill" onclick="setCalcPreset('vial', 5)">5 mg</button>
+								<button class="calc-pill" onclick="setCalcPreset('vial', 10)">10 mg</button>
+							</div>
+						</div>
+
+						<div class="calc-field">
+							<label for="calc-water-ml">Bakteriostatická voda (BAC)</label>
+							<div style="display:flex; align-items:center; gap:8px;">
+								<input type="number" id="calc-water-ml" value="2" min="0.5" step="0.5" />
+								<span style="color:#aaa; font-weight:bold;">ml</span>
+							</div>
+							<div class="calc-quick-btns">
+								<button class="calc-pill" onclick="setCalcPreset('water', 1)">1 ml</button>
+								<button class="calc-pill" onclick="setCalcPreset('water', 2)">2 ml</button>
+								<button class="calc-pill" onclick="setCalcPreset('water', 3)">3 ml</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="calc-grid">
+						<div class="calc-field">
+							<label for="calc-dose-mcg">Požadovaná jednotlivá dávka</label>
+							<div style="display:flex; align-items:center; gap:8px;">
+								<input type="number" id="calc-dose-mcg" value="250" min="10" step="10" />
+								<span style="color:#aaa; font-weight:bold;">mcg</span>
+							</div>
+							<div class="calc-quick-btns">
+								<button class="calc-pill" onclick="setCalcPreset('dose', 100)">100 mcg</button>
+								<button class="calc-pill" onclick="setCalcPreset('dose', 250)">250 mcg</button>
+								<button class="calc-pill" onclick="setCalcPreset('dose', 500)">500 mcg</button>
+							</div>
+						</div>
+
+						<div class="calc-field">
+							<label for="calc-syringe-type">Typ inzulínové stříkačky</label>
+							<select id="calc-syringe-type" onchange="runPeptideCalculation()">
+								<option value="u100_1ml" selected>U-100 (1.0 ml / 100 jednotek)</option>
+								<option value="u100_05ml">U-100 (0.5 ml / 50 jednotek)</option>
+								<option value="u100_03ml">U-100 (0.3 ml / 30 jednotek)</option>
+								<option value="u40_1ml">U-40 (1.0 ml / 40 jednotek)</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="syringe-visual-card">
+					<div id="syringe-svg-container"></div>
+					<div id="syringe-units-output" class="syringe-highlight-result">Natáhněte 10 jednotek</div>
+					<div id="syringe-sub-output" class="syringe-highlight-sub">Dílek 10 na U-100 stříkačce (0.10 ml tekutiny)</div>
+				</div>
+
+				<div class="calc-metrics-row">
+					<div class="calc-metric-box">
+						<div class="metric-title">Koncentrace roztoku</div>
+						<div id="metric-concentration" class="metric-val">2 500 mcg / ml</div>
+					</div>
+					<div class="calc-metric-box">
+						<div class="metric-title">Objem dávky</div>
+						<div id="metric-volume" class="metric-val">0.10 ml</div>
+					</div>
+					<div class="calc-metric-box">
+						<div class="metric-title">Počet dávek ve vialce</div>
+						<div id="metric-doses" class="metric-val">20 dávek</div>
+					</div>
+				</div>
+
+				<div class="safety-tips-box">
+					<h4><span class="material-icons">info</span> Protokol bezpečné manipulace</h4>
+					<ul>
+						<li>Vodu nechte stékat velmi pomalu po vnitřní stěně lahvičky. Peptidové vazby jsou křehké – nikdy vialkou netřeste, pouze ji jemně krouživým pohybem promíchejte.</li>
+						<li>Po naředění uchovávejte výhradně v chladničce při 2–8 °C a chraňte před UV světlem.</li>
+						<li>Naředěný peptid spotřebujte do 30–40 dní, poté klesá jeho stabilita a biologická účinnost.</li>
+					</ul>
 				</div>
 			</section>
 
@@ -333,6 +485,12 @@
 			<button class="nav-item active" onclick="switchTab('view-wiki', this)">
 				<span class="material-icons">science</span><span>Wiki</span>
 			</button>
+			<button class="nav-item" onclick="switchTab('view-stack', this)">
+				<span class="material-icons">layers</span><span>Stack</span>
+			</button>
+			<button class="nav-item" onclick="switchTab('view-calculator', this)">
+				<span class="material-icons">biotech</span><span>Peptidy</span>
+			</button>
 			<button class="nav-item" onclick="switchTab('view-diary', this)">
 				<span class="material-icons">edit_note</span><span>Deník</span>
 			</button>
@@ -342,6 +500,8 @@
 		</nav>
 
 		<script src="db.js"></script>
+		<script src="interactions.js"></script>
+		<script src="calculator.js"></script>
 		<script src="script.js"></script>
 		<script>
 			if ("serviceWorker" in navigator) {
