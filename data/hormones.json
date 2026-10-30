@@ -2145,5 +2145,172 @@
       "long": "Používá se experimentálně, sledovat IGF-1 a metabolismus."
     },
     "warning": "Experimentální použití, riziko nadměrného růstu tkání a hormonální nerovnováhy."
+  },
+  {
+    "name": "Tongkat Ali (Eurycoma longifolia)",
+    "categoryKey": "hormones",
+    "tags": [
+      "testosteron",
+      "libido",
+      "shbg",
+      "volný testosteron"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Přírodní bylina uvolňující vázaný testosteron z bílkoviny SHBG.",
+    "description": "Malajský ženšen obsahující eurycomanon. Klinické studie potvrzují snížení hladiny pohlavní hormony vázajícího globulinu (SHBG), což vede k dramatickému zvýšení biologicky aktivního volného testosteronu a libida.",
+    "effects": [
+      "zvýšení volného testosteronu",
+      "stimulace libida a erektilní funkce",
+      "snížení kortizolu"
+    ],
+    "dosage": {
+      "short": "200–400mg extraktu denně",
+      "long": "200–400mg standardizovaného extraktu (100:1 nebo min. 1–2% eurycomanonu) denně s ranním jídlem. Cyklovat 5 dní ON, 2 dny OFF."
+    },
+    "warning": "Může způsobit nespavost a mírnou agresivitu při užití pozdě odpoledne.",
+    "mechanism": "Inhibice aromatázy, snížení vazebné afinity SHBG, stimulace LH",
+    "halfLife": "4–6 hodin",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "Eurycoma longifolia (kořen)"
+    ],
+    "bannedStatus": "legal",
+    "id": 591
+  },
+  {
+    "name": "Fadogia Agrestis",
+    "categoryKey": "hormones",
+    "tags": [
+      "testosteron",
+      "lh",
+      "varlata",
+      "steroidogeneze"
+    ],
+    "rating": 4,
+    "colorType": "yellow",
+    "shortDesc": "Africká bylina stimulující luteinizační hormon (LH) a Leydigovy buňky.",
+    "description": "Středoafrický keř používaný jako afrodiziakum. Výzkum ukazuje schopnost stimulovat uvolňování LH z hypofýzy, což přímo signalizuje varlatům zvýšení produkce vlastního testosteronu.",
+    "effects": [
+      "stimulace sekrece LH",
+      "zvýšení celkového testosteronu",
+      "zvětšení objemu varlat"
+    ],
+    "dosage": {
+      "short": "300–600mg denně",
+      "long": "300–600mg extraktu denně po dobu maximálně 4–6 týdnů, poté nutná pauza 2–3 týdny (šetřit játra a ledviny)."
+    },
+    "warning": "Ve studiích na hlodavcích při vysokých dávkách prokázána toxicita pro ledviny a varlata. Vždy cyklovat!",
+    "mechanism": "Zvýšení hladiny luteinizačního hormonu (LH) v hypotalamo-hypofyzární ose",
+    "halfLife": "Neznámý",
+    "interactions": [],
+    "evidenceLevel": "B",
+    "naturalSources": [
+      "Fadogia agrestis (rostlina)"
+    ],
+    "bannedStatus": "legal",
+    "id": 592
+  },
+  {
+    "name": "Shilajit (Mumio)",
+    "categoryKey": "hormones",
+    "tags": [
+      "minerály",
+      "kyselina fulvová",
+      "testosteron",
+      "mitochondrie"
+    ],
+    "rating": 5,
+    "colorType": "green",
+    "shortDesc": "Himálajská pryskyřice bohatá na kyselinu fulvovou a 84+ minerálů.",
+    "description": "Přírodní minerální smůla vznikající tisíce let rozkladem rostlinné hmoty pod tlakem himálajských pohoří. Obsahuje kyselinu fulvovou, která funguje jako nano-transportér minerálů přímo do mitochondrií. Klinicky prokázané zvýšení celkového i volného testosteronu a DHEA o 20 %.",
+    "effects": [
+      "zvýšení testosteronu a spermatogeneze",
+      "mitochondriální energie ATP",
+      "antioxidant"
+    ],
+    "dosage": {
+      "short": "250–500mg pryskyřice denně",
+      "long": "250–500mg purifikované pryskyřice (velikost zrnka rýže) rozpuštěné v teplé nechlorované vodě nebo čaji nalačno."
+    },
+    "warning": "Kupovat výhradně purifikované laboratorně testované pryskyřice na těžké kovy.",
+    "mechanism": "Transport stopových prvků přes kyselinu fulvovou, podpora syntézy CoQ10 v mitochondriích",
+    "halfLife": "Kumulativní účinek",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "vysokohorské skalní pukliny v Himálaji a Altaji"
+    ],
+    "bannedStatus": "legal",
+    "id": 593
+  },
+  {
+    "name": "Maca Peruánská (Lepidium meyenii)",
+    "categoryKey": "hormones",
+    "tags": [
+      "libido",
+      "plodnost",
+      "energie",
+      "adaptogen"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Andský kořen pro libido, vitalitu a hormonální rovnováhu.",
+    "description": "Kořen z vysokých poloh And bohatý na macamidy a macaeny. Nezvyšuje přímo hladinu testosteronu, ale výrazně stimuluje sexuální touhu, kvalitu erekce a motilitu spermií působením na centrální nervovou soustavu.",
+    "effects": [
+      "stimulace libida",
+      "zvýšení počtu a pohyblivosti spermií",
+      "snížení úzkosti a únavy"
+    ],
+    "dosage": {
+      "short": "2–5g želatinizovaného prášku",
+      "long": "2000–5000mg želatinizovaného prášku (zbaveného těžce stravitelného škrobu) ráno se snídaní."
+    },
+    "warning": "Neželatinizovaný surový prášek může způsobit nadýmání a žaludeční křeče.",
+    "mechanism": "Modulace endokanabinoidního systému přes macamidy (inhibice FAAH)",
+    "halfLife": "2–3 hodiny",
+    "interactions": [],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "Lepidium meyenii (Andský kořen)"
+    ],
+    "bannedStatus": "legal",
+    "id": 594
+  },
+  {
+    "name": "Saw Palmetto (Serenoa plazivá)",
+    "categoryKey": "hormones",
+    "tags": [
+      "dht",
+      "prostata",
+      "vlasy",
+      "5-alfa reduktáza"
+    ],
+    "rating": 4,
+    "colorType": "green",
+    "shortDesc": "Přírodní inhibitor 5-alfa reduktázy pro zdraví prostaty a proti padání vlasů.",
+    "description": "Extrakt z bobulí trpasličí palmy Serenoa repens bohatý na mastné kyseliny a fytosteroly. Blokuje enzym 5-alfa reduktázu, který konvertuje testosteron na potentní dihydrotestosteron (DHT). Zmírňuje benigní hyperplazii prostaty (BPH) a androgenní alopecii.",
+    "effects": [
+      "snížení DHT",
+      "prevence zbytnění prostaty",
+      "zpomalení řídnutí vlasů"
+    ],
+    "dosage": {
+      "short": "160–320mg standardizovaného extraktu",
+      "long": "160mg 2x denně (nebo 320mg 1x denně) s jídlem. Standardizace na 85–95% mastných kyselin."
+    },
+    "warning": "Může mírně snížit libido u citlivých jedinců v důsledku potlačení DHT.",
+    "mechanism": "Nekompetitivní inhibice izoforem enzymu 5-alfa reduktázy typu 1 a 2",
+    "halfLife": "12 hodin",
+    "interactions": [
+      "finasterid / dutasterid (aditivní efekt)"
+    ],
+    "evidenceLevel": "A",
+    "naturalSources": [
+      "Serenoa repens (plody)"
+    ],
+    "bannedStatus": "legal",
+    "id": 595
   }
 ]
