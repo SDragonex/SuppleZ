@@ -26,7 +26,15 @@ body {
 	background-color: var(--bg-color);
 	color: var(--text-main);
 	font-family: "Roboto", sans-serif;
-	padding-bottom: calc(var(--nav-height) + 20px);
+	padding-bottom: calc(var(--nav-height) + env(safe-area-inset-bottom, 0px) + 25px);
+	overflow-x: hidden;
+}
+
+#main-content {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 16px 16px;
 }
 
 /* --- HEADER & UI --- */
@@ -86,8 +94,8 @@ select:focus {
 /* --- WIKI CARDS (GRID) --- */
 .cards-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-	gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 18px;
 	padding-bottom: 20px;
 }
 
@@ -359,8 +367,10 @@ select:focus {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: var(--nav-height);
-	background: #000;
+	height: calc(var(--nav-height) + env(safe-area-inset-bottom, 0px));
+	padding-bottom: env(safe-area-inset-bottom, 0px);
+	background: rgba(0, 0, 0, 0.95);
+	backdrop-filter: blur(10px);
 	border-top: 1px solid #222;
 	display: flex;
 	justify-content: space-around;
@@ -607,37 +617,132 @@ select:focus {
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
 }
 
-/* --- FILTRY KATEGORIÍ (SCROLL) --- */
-.category-scroll {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    /* Skrytí posuvníku */
-    scrollbar-width: none; 
+/* --- HORIZONTÁLNÍ LIŠTA KATEGORIÍ (PILLS) --- */
+.category-pills-scroll-container {
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	margin-bottom: 20px;
+	padding: 4px 0 6px 0;
 }
-.category-scroll::-webkit-scrollbar { display: none; }
-
-.filter-chip {
-    background: #111;
-    border: 1px solid #333;
-    color: #888;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: 0.2s;
-    font-weight: 600;
-    text-transform: uppercase;
+.category-pills-scroll-container::-webkit-scrollbar {
+	display: none;
+}
+.category-pills-bar {
+	display: flex;
+	gap: 8px;
+	width: max-content;
+	padding: 2px 2px;
+}
+.category-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: #111;
+	border: 1px solid #282828;
+	color: #bbb;
+	padding: 8px 14px;
+	border-radius: 24px;
+	font-family: "Rajdhani", sans-serif;
+	font-size: 0.95rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+	user-select: none;
+}
+.category-pill:hover {
+	background: #181818;
+	border-color: rgba(0, 243, 255, 0.5);
+	color: #fff;
+	transform: translateY(-1px);
+}
+.category-pill.active {
+	background: rgba(0, 243, 255, 0.12);
+	border-color: var(--ui-accent);
+	color: var(--ui-accent);
+	box-shadow: 0 0 12px rgba(0, 243, 255, 0.25);
+}
+.pill-count {
+	font-size: 0.72rem;
+	font-weight: 700;
+	padding: 2px 7px;
+	border-radius: 12px;
+	background: #1e1e1e;
+	color: #888;
+	border: 1px solid #333;
+}
+.category-pill.active .pill-count {
+	background: var(--ui-accent);
+	color: #000;
+	border-color: var(--ui-accent);
 }
 
-.filter-chip.active {
-    background: var(--ui-accent); /* Modrá aktivní */
-    color: #000;
-    border-color: var(--ui-accent);
-    box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+/* --- WIKI STRÁNKOVÁNÍ A STATUS --- */
+.wiki-pagination-bar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	padding: 25px 10px 40px 10px;
+	text-align: center;
+}
+.wiki-count-status {
+	font-family: "Rajdhani", sans-serif;
+	font-size: 1rem;
+	color: #777;
+	letter-spacing: 0.5px;
+	font-weight: 600;
+}
+.wiki-pagination-actions {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.btn-load-more {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: #141414;
+	border: 1px solid var(--ui-accent);
+	color: var(--ui-accent);
+	padding: 10px 22px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-family: "Rajdhani", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	transition: all 0.2s ease;
+	box-shadow: 0 0 10px rgba(0, 243, 255, 0.15);
+}
+.btn-load-more:hover {
+	background: rgba(0, 243, 255, 0.18);
+	box-shadow: 0 0 20px rgba(0, 243, 255, 0.35);
+	transform: translateY(-1px);
+}
+.btn-load-all {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: #101010;
+	border: 1px solid #333;
+	color: #aaa;
+	padding: 10px 18px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-family: "Rajdhani", sans-serif;
+	font-size: 0.95rem;
+	font-weight: 600;
+	transition: all 0.2s ease;
+}
+.btn-load-all:hover {
+	border-color: #555;
+	color: #fff;
+	background: #181818;
 }
 
 /* --- VELKÉ HVĚZDY V DETAILU --- */
@@ -1152,18 +1257,21 @@ body.detail-active {
     background: #080808;
     border: 1px solid #222;
     border-radius: 12px;
-    padding: 20px 15px;
+    padding: 24px 15px 20px 15px;
     text-align: center;
     margin-bottom: 20px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .syringe-svg {
     width: 100%;
-    max-width: 650px;
+    max-width: 760px;
+    min-width: 320px;
     height: auto;
     display: block;
     margin: 0 auto;
+    overflow: visible;
 }
 
 .syringe-highlight-result {
@@ -1292,7 +1400,47 @@ body.detail-active {
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
 
+/* ========================================================
+   RESPONZIVNÍ OPTIMALIZACE: MOBIL, TABLET & PC ENCYKLOPEDIE
+   ======================================================== */
+
+/* 1. MOBILNÍ TELEFONY (do 600px) - Primární mobilní zážitek */
 @media (max-width: 600px) {
+    #main-content {
+        padding: 10px 10px;
+    }
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding-bottom: 15px;
+    }
+    .card {
+        padding: 12px 10px;
+        border-radius: 12px;
+        min-height: 120px;
+    }
+    .card h3 {
+        font-size: 1.02rem;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+    .card-rating {
+        font-size: 0.72rem;
+        padding: 2px 5px;
+    }
+    .card-category {
+        font-size: 0.62rem;
+        margin-bottom: 4px;
+    }
+    .card-desc {
+        font-size: 0.75rem;
+        line-height: 1.35;
+        -webkit-line-clamp: 2;
+    }
+    .category-pill {
+        padding: 6px 11px;
+        font-size: 0.88rem;
+    }
     .calc-grid {
         grid-template-columns: 1fr;
     }
@@ -1302,6 +1450,67 @@ body.detail-active {
     }
     .detail-actions-bar {
         flex-direction: column;
+    }
+    .stats-grid.three-cols {
+        grid-template-columns: 1fr;
+    }
+    .hero-stars {
+        font-size: 2.8rem;
+    }
+    .btn-detail-action {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* 2. TABLETY (601px až 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #main-content {
+        padding: 16px 20px;
+    }
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+    .card {
+        padding: 15px 14px;
+    }
+    .card h3 {
+        font-size: 1.15rem;
+    }
+    .card-desc {
+        -webkit-line-clamp: 3;
+    }
+    .calc-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .calc-metrics-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 3. DESKTOP (od 1025px) - Přehledná čistá encyklopedie */
+@media (min-width: 1025px) {
+    #main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px 24px;
+    }
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+    .card {
+        padding: 18px 16px;
+        min-height: 140px;
+    }
+    .card h3 {
+        font-size: 1.25rem;
+    }
+    .card-desc {
+        -webkit-line-clamp: 3;
+        font-size: 0.85rem;
+        color: #999;
     }
 }
 
