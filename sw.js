@@ -1,11 +1,15 @@
-const CACHE_NAME = 'supplez-cache-v4.0';
+const CACHE_NAME = 'supplez-cache-v4.1';
 
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
     './style.css',
     './script.js',
+    './db.js',
     './manifest.json',
+    './robots.txt',
+    './sitemap.xml',
+    './data/supplements.bundle.json',
     './data/health.json',
     './data/performance.json',
     './data/sleep.json',
