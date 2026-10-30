@@ -1,4 +1,4 @@
-const CACHE_NAME = 'supplez-cache-v4.1';
+const CACHE_NAME = 'supplez-cache-v4.2';
 
 const ASSETS_TO_CACHE = [
     './',
@@ -6,6 +6,8 @@ const ASSETS_TO_CACHE = [
     './style.css',
     './script.js',
     './db.js',
+    './interactions.js',
+    './calculator.js',
     './manifest.json',
     './robots.txt',
     './sitemap.xml',
