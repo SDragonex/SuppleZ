@@ -56,14 +56,15 @@ class PeptideCalculator {
         const targetUnits = Math.min(Math.max(calcResults.units, 0), maxUnits);
         const fillPercentage = maxUnits > 0 ? (targetUnits / maxUnits) : 0;
 
-        // Geometrie horizontální stříkačky
-        const svgWidth = 650;
-        const svgHeight = 120;
-        const barrelStartX = 80;
-        const barrelEndX = 540;
+        // Geometrie horizontální stříkačky (dostatek prostoru nahoře pro ukazatel IU)
+        const svgWidth = 760;
+        const svgHeight = 160;
+        const barrelStartX = 85;
+        const barrelEndX = 625;
         const barrelWidth = barrelEndX - barrelStartX;
-        const barrelTopY = 25;
-        const barrelHeight = 70;
+        const barrelTopY = 50;
+        const barrelHeight = 60;
+        const centerY = barrelTopY + (barrelHeight / 2); // 80px
 
         // Pozice naplnění tekutiny (zleva doprava)
         const fillWidth = barrelWidth * fillPercentage;
@@ -74,17 +75,20 @@ class PeptideCalculator {
         const step = maxUnits <= 50 ? 5 : 10;
         for (let u = 0; u <= maxUnits; u += (step / 5)) {
             const x = barrelStartX + (u / maxUnits) * barrelWidth;
-            const isMajor = (u % step === 0);
-            const isMedium = (u % (step / 2) === 0);
-            const tickH = isMajor ? 18 : (isMedium ? 12 : 7);
+            const isMajor = (Math.round(u * 10) % (step * 10) === 0);
+            const isMedium = (Math.round(u * 10) % ((step / 2) * 10) === 0);
+            const tickH = isMajor ? 14 : (isMedium ? 9 : 5);
 
             ticksHtml += `<line x1="${x}" y1="${barrelTopY}" x2="${x}" y2="${barrelTopY + tickH}" stroke="#888" stroke-width="${isMajor ? 2 : 1}" />`;
             ticksHtml += `<line x1="${x}" y1="${barrelTopY + barrelHeight}" x2="${x}" y2="${barrelTopY + barrelHeight - tickH}" stroke="#888" stroke-width="${isMajor ? 2 : 1}" />`;
 
             if (isMajor && u > 0 && u < maxUnits) {
-                ticksHtml += `<text x="${x}" y="${barrelTopY + (barrelHeight / 2) + 4}" fill="#aaa" font-size="11" font-family="'Rajdhani', sans-serif" font-weight="600" text-anchor="middle">${u}</text>`;
+                ticksHtml += `<text x="${x}" y="${centerY + 4}" fill="#aaa" font-size="11" font-family="'Rajdhani', sans-serif" font-weight="600" text-anchor="middle">${Math.round(u)}</text>`;
             }
         }
+
+        // Zajištění, aby ukazatel a text nepřetékaly okraj stříkačky
+        const clampedTextX = Math.min(Math.max(plungerX, 110), svgWidth - 110);
 
         return `
         <svg viewBox="0 0 ${svgWidth} ${svgHeight}" class="syringe-svg" xmlns="http://www.w3.org/2000/svg">
@@ -99,9 +103,9 @@ class PeptideCalculator {
                 </filter>
             </defs>
 
-            <!-- Jehla a koncovka -->
-            <line x1="15" y1="60" x2="65" y2="60" stroke="#ccc" stroke-width="2" stroke-linecap="round" />
-            <polygon points="65,52 80,48 80,72 65,68" fill="#555" stroke="#777" />
+            <!-- Jehla a koncovka (zarovnané na střed Y=${centerY}) -->
+            <line x1="20" y1="${centerY}" x2="70" y2="${centerY}" stroke="#ccc" stroke-width="2" stroke-linecap="round" />
+            <polygon points="70,${centerY - 8} 85,${centerY - 12} 85,${centerY + 12} 70,${centerY + 8}" fill="#555" stroke="#777" />
 
             <!-- Tělo stříkačky (Barrel) -->
             <rect x="${barrelStartX}" y="${barrelTopY}" width="${barrelWidth}" height="${barrelHeight}" rx="4" fill="#0d0d0d" stroke="#444" stroke-width="2" />
@@ -114,13 +118,13 @@ class PeptideCalculator {
 
             <!-- Píst (Plunger Seal & Shaft) -->
             <rect x="${plungerX}" y="${barrelTopY}" width="14" height="${barrelHeight}" rx="2" fill="#222" stroke="#555" stroke-width="2" />
-            <line x1="${plungerX + 2}" y1="${barrelTopY}" x2="${plungerX + 2}" y2="${barrelTopY + barrelHeight}" stroke="var(--neon-green)" stroke-width="2" />
-            <rect x="${plungerX + 14}" y="52" width="${Math.max(svgWidth - plungerX - 35, 10)}" height="16" fill="#1c1c1c" stroke="#333" />
-            <rect x="${svgWidth - 20}" y="42" width="10" height="36" rx="2" fill="#333" stroke="#666" />
+            <line x1="${plungerX + 2}" y1="${barrelTopY}" x2="${plungerX + 2}" y2="${barrelTopY + barrelHeight}" stroke="var(--neon-green)" stroke-width="2.5" />
+            <rect x="${plungerX + 14}" y="${centerY - 8}" width="${Math.max(svgWidth - plungerX - 45, 10)}" height="16" fill="#1c1c1c" stroke="#333" />
+            <rect x="${svgWidth - 25}" y="${centerY - 20}" width="10" height="40" rx="3" fill="#333" stroke="#666" />
 
-            <!-- Ryska a ukazatel cílové hodnoty -->
-            <polygon points="${plungerX},${barrelTopY - 8} ${plungerX - 6},${barrelTopY - 18} ${plungerX + 6},${barrelTopY - 18}" fill="var(--neon-green)" />
-            <text x="${plungerX}" y="${barrelTopY - 22}" fill="var(--neon-green)" font-size="13" font-family="'Rajdhani', sans-serif" font-weight="700" text-anchor="middle">
+            <!-- Ryska a ukazatel cílové hodnoty (dostatek místa nahoře) -->
+            <polygon points="${plungerX},${barrelTopY - 4} ${plungerX - 6},${barrelTopY - 14} ${plungerX + 6},${barrelTopY - 14}" fill="var(--neon-green)" />
+            <text x="${clampedTextX}" y="${barrelTopY - 18}" fill="var(--neon-green)" font-size="14" font-family="'Rajdhani', sans-serif" font-weight="700" text-anchor="middle">
                 ${calcResults.units} IU
             </text>
         </svg>
