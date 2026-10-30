@@ -1325,5 +1325,79 @@
       "kokosová voda"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 234,
+    "name": "ZMA / ZMB6 (Zinek + Hořčík + Vitamín B6)",
+    "categoryKey": "performance",
+    "tags": [
+      "regenerace",
+      "spánek",
+      "testosteron",
+      "zinek",
+      "hořčík",
+      "GymBeam",
+      "bestseller"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-cyan",
+    "shortDesc": "Kultovní patentovaná noční minerální formule kombinující zinek monomethionin, aspartát hořečnatý a pyridoxin pro hlubokou regeneraci.",
+    "description": "ZMA (nebo ZMB6) je jednou z celosvětově nejprodávanějších fitness formulí pro noční regeneraci. Původní patentovaná směs obsahuje přesný poměr zinku vázaného na aminokyselinu methionin (Zinek monomethionin a aspartát - 30 mg), hořčíku (Magnesium aspartát - 450 mg) a vitamínu B6 (Pyridoxin HCl - 10,5 mg). Tvrdý trénink a pocení vedou k masivní depleci zinku a hořčíku, což sráží syntézu testosteronu, IGF-1 a oslabuje imunitu. Podání ZMA 30–60 minut před spaním nalačno maximalizuje biologickou dostupnost, navozuje svalové uvolnění přes GABAergní receptory a optimalizuje hormonální profil během spánku.",
+    "effects": [
+      "Prohloubení pomalovlnného spánku (SWS) a urychlení neuromuskulární regenerace",
+      "Prevence poklesu volného testosteronu a IGF-1 po vyčerpávajícím tréninku",
+      "Snížení nočních svalových křečí a oxidativního stresu ve svalech",
+      "Podpora syntézy neurotransmiterů a imunitní obrany"
+    ],
+    "dosage": {
+      "short": "Muži: 3 kapsle (30 mg Zn, 450 mg Mg, 10,5 mg B6); Ženy: 2 kapsle 30–60 min před spaním",
+      "long": "Užívejte 30 až 60 minut před ulehnutím do postele na prázdný žaludek. KRITICKY DŮLEŽITÉ: Neužívejte společně s mléčnými výrobky, vápníkem nebo kaseinovým proteinem, protože vápník kompletně blokuje absorpci zinku!"
+    },
+    "warning": "Při užití s vápníkem ztrácí formule účinek. Vitamín B6 může u některých lidí vyvolat velmi živé a intenzivní sny.",
+    "mechanism": "Aspartát hořečnatý blokuje NMDA receptory a uvolňuje svalový tonus; zinek monomethionin slouží jako kofaktor pro 17beta-HSD enzymy steroidogeneze a thymulin v imunitním systému; B6 působí jako koenzym dekarboxyláz aminokyselin.",
+    "halfLife": "Dlouhodobá tkáňová homeostáza minerálů",
+    "interactions": [
+      "Vápník a Mléčné výrobky (přísný antagonista – blokuje vstřebávání, dodržet odstup min. 2 hodiny)",
+      "Ashwagandha (synergické zklidnění večerního kortizolu a noční anabolismus)",
+      "L-Theanin a Glycin (dokonalý stack pro hluboký spánek)"
+    ],
+    "naturalSources": "Kombinace doplňku; zinek a hořčík se vyskytují v dýňových semínkách, hovězím mase a ořeších.",
+    "bannedStatus": "Povoleno WADA, volně prodejná minerální formule."
+  },
+  {
+    "id": 235,
+    "name": "Cordyceps CS-4 / Sinensis (Kyselina cordycepsová)",
+    "categoryKey": "performance",
+    "tags": [
+      "vytrvalost",
+      "kyslík",
+      "ATP",
+      "VO2max",
+      "adaptogen",
+      "GymBeam"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-yellow",
+    "shortDesc": "Standardizovaný myceliální extrakt z housenice čínské stimulující buněčnou syntézu ATP a využití kyslíku při vytrvalostním výkonu.",
+    "description": "Cordyceps sinensis (housenice čínská) je vysoce ceněná parazitická houba tibetských náhorních plošin. Fermentovaný myceliální kmen CS-4 obsahuje vysokou koncentraci adenosinu, cordycepinu (3-deoxyadenosin) a kyseliny cordycepsové (D-mannitol). Cordyceps prokazatelně zvyšuje buněčnou fosforylaci a intracelulární poměr ATP/anorganický fosfát až o 45–55 %. Zároveň zlepšuje difuzní kapacitu plicních sklípků, stimuluje erytropoézu a zvyšuje ventilaci a maximální spotřebu kyslíku (VO2 max) u vytrvalostních sportovců, běžců a cyklistů.",
+    "effects": [
+      "Zvýšení maximální spotřeby kyslíku (VO2 max) a oddálení laktátového prahu",
+      "Stimulace mitochondriální syntézy ATP a buněčné bioenergetiky",
+      "Zlepšení bronchiální dilatace a kyslíkové výměny v plicích",
+      "Podpora vitality, libida a snížení únavy při extrémní fyzické zátěži"
+    ],
+    "dosage": {
+      "short": "1 000 – 2 000 mg standardizovaného extraktu CS-4 (min. 7–10 % polysacharidů, 0,2 % adenosinu) denně",
+      "long": "Užívejte 1 000 až 1 500 mg ráno a 500–1 000 mg cca 45 minut před vytrvalostním tréninkem. Užívejte s vodou nalačno nebo s lehkým sacharidovým jídlem. Pro kumulativní nárůst VO2 max je nutné užívat alespoň 3–4 týdny."
+    },
+    "warning": "Cordyceps má mírné imunostimulační a hypoglykemické účinky. Diabetici na inzulínu by měli monitorovat glykémii.",
+    "mechanism": "Cordycepin strukturálně napodobuje adenosin a moduluje adenosinové A1/A2 receptory; stimulace AMPK a aktivace mitochondriální syntázy ATP; zvýšení NO-dependentní vazodilatace v plicním řečišti.",
+    "halfLife": "T1/2 adenosinových derivátů cca 2–4 hodiny",
+    "interactions": [
+      "Extrakt z červené řepy a Citrulin (extrémní synergie pro oxid dusnatý a kyslíkovou kapacitu)",
+      "Rhodiola Rosea (adaptogenní synergismus pro odolnost vůči hypoxii a stresu)"
+    ],
+    "naturalSources": "Mycelium Cordyceps sinensis a plodnice Cordyceps militaris pěstované na substrátech.",
+    "bannedStatus": "Povoleno WADA, přírodní medicinální houba."
   }
 ]

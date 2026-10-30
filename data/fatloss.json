@@ -996,5 +996,77 @@
       "syntetický strukturní analog gama-butyrobetainu"
     ],
     "bannedStatus": "banned-sport (WADA S4.5.3), na lékařský předpis v zemích východní Evropy"
+  },
+  {
+    "id": 426,
+    "name": "Zelená káva (Kyselina chlorogenová / Svetol)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "metabolismus",
+      "glukóza",
+      "spalovač",
+      "kyselina-chlorogenová",
+      "GymBeam",
+      "lékárna"
+    ],
+    "rating": 4.6,
+    "colorType": "neon-green",
+    "shortDesc": "Standardizovaný extrakt z nepražených zelených kávových zrn s kyselinou chlorogenovou tlumící enzym glukózo-6-fosfatázu.",
+    "description": "Extrakt ze zelené kávy (Green Coffee Bean Extract) se získává z nepražených zrn kávovníku Coffea canephora/arabica. Na rozdíl od pražené kávy, kde pražení rozloží většinu termolabilních polyfenolů, si zelená káva uchovává vysoký obsah kyselin chlorogenových (zejména 5-caffeoylchinové kyseliny). Kyselina chlorogenová je specifickým kompetitivním inhibitorem jaterního enzymu glukózo-6-fosfatázy, čímž snižuje uvolňování glukózy z jaterního glykogenu do krve. Současně tlumí absorpci sacharidů v tenkém střevě, což nutí organismus využívat tukové zásoby jako primární zdroj energie pro bazální metabolismus.",
+    "effects": [
+      "Snížení glykémie a postprandiálního inzulínového píku po jídle",
+      "Podpora oxidace mastných kyselin a redukce viscerálního tuku",
+      "Inhibice glukózo-6-fosfatázy v játrech",
+      "Silný antioxidační účinek na kardiovaskulární systém"
+    ],
+    "dosage": {
+      "short": "400 – 800 mg standardizovaného extraktu (min. 45–50 % kyseliny chlorogenové) 30 min před jídlem",
+      "long": "Užívejte 200–400 mg extraktu 2x denně (ideálně před snídaní a před obědem) zapité sklenicí vody. Obsahuje pouze nepatrné množství přirozeného kofeinu (kolem 2–4 %), takže nezpůsobuje nervozitu ani třes."
+    },
+    "warning": "Velmi dobrá snášenlivost. U diabetiků může vést ke snížení potřeby inzulínu nebo perorálních antidiabetik (monitorujte glykémii).",
+    "mechanism": "Inhibice glukózo-6-fosfáttranslokázy v játrech; aktivace AMPK v kosterních svalech; zpomalení střevní absorpce glukózy inhibicí Na+/glukózového kotransportéru SGLT1.",
+    "halfLife": "T1/2 metabolitů kyseliny chlorogenové (kyselina kávová a ferulová) cca 2–4 hodiny",
+    "interactions": [
+      "Berberin a Chrom (trojkombinace pro dokonalou kontrolu inzulínové senzitivity)",
+      "Zelený čaj EGCG (synergická stimulace termogeneze)"
+    ],
+    "naturalSources": "Nepražená zelená zrna kávovníku (Coffea arabica / canephora).",
+    "bannedStatus": "Povoleno WADA, bezpečný přírodní rostlinný extrakt."
+  },
+  {
+    "id": 427,
+    "name": "Extrakt z bílých fazolí (Phaseolus vulgaris / Blokátor sacharidů)",
+    "categoryKey": "fatloss",
+    "tags": [
+      "sacharidy",
+      "škroby",
+      "blokátor",
+      "amyláza",
+      "lékárna",
+      "GymBeam"
+    ],
+    "rating": 4.5,
+    "colorType": "neon-yellow",
+    "shortDesc": "Přírodní glykoproteinový extrakt (Phase 2 / Phaseolamin) blokující alfa-amylázu a zabraňující štěpení komplexních škrobů na cukry.",
+    "description": "Extrakt z bílých fazolí (Phaseolus vulgaris) je celosvětově nejznámějším a klinicky ověřeným přírodním blokátorem sacharidů (Carb Blocker). Obsahuje specifický rostlinný glykoprotein phaseolamin, který funguje jako přirozený inhibitor slinné a pankreatické alfa-amylázy. Alfa-amyláza je klíčový trávicí enzym odpovědný za štěpení komplexních škrobů (chléb, těstoviny, rýže, brambory) na vstřebatelné jednoduché cukry. Zablokováním tohoto enzymu projdou nestrávené škroby tenkým střevem do tlustého střeva, aniž by se vstřebaly do krevního oběhu, kde fungují jako prebiotická vláknina.",
+    "effects": [
+      "Snížení kalorického příjmu z komplexních škrobových sacharidů až o 60–65 %",
+      "Zploštění glykemické křivky po bohatém sacharidovém jídle",
+      "Prevence ukládání přebytečných sacharidů do tukových polštářů",
+      "Podpora sytosti a prebiotické výživy tlustého střeva"
+    ],
+    "dosage": {
+      "short": "500 – 1 500 mg standardizovaného extraktu (Phase 2) těsně před jídlem bohatým na sacharidy",
+      "long": "Užívejte 1 až 3 kapsle (500–1 500 mg) 5–10 minut před velkým sacharidovým jídlem (pizza, těstoviny, pečivo, rýže) zapité velkou sklenicí vody. Blokuje POUZE komplexní škroby, NEFUNGUJE na jednoduché cukry (sladkosti, slazené nápoje, ovoce)!"
+    },
+    "warning": "Nestrávené škroby mohou při prvních užitích v tlustém střevě kvasit a způsobit plynatost nebo kručení v břiše. Začínejte na menší dávce (500 mg).",
+    "mechanism": "Reverzibilní vazba phaseolaminu na aktivní místo pankreatické alfa-amylázy brání vazbě molekuly škrobu a jeho enzymatické hydrolýze na maltózu a dextriny.",
+    "halfLife": "Působí lokálně v trávicím traktu po dobu průchodu potravy (cca 2–4 hodiny)",
+    "interactions": [
+      "Chromium Picolinate (kontrola chuti na sladké)",
+      "Glucomannan (synergické navození pocitu sytosti a zpomalení vyprazdňování žaludku)"
+    ],
+    "naturalSources": "Bílé fazole (Phaseolus vulgaris). Surové fazole obsahují toxický lektin fytohemaglutinin, proto se užívá výhradně čištěný standardizovaný extrakt.",
+    "bannedStatus": "Povoleno WADA, volně prodejný doplněk stravy."
   }
 ]

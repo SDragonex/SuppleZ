@@ -1,11 +1,11 @@
 /**
  * SuppleZ Service Worker (sw.js)
- * Verze: 6.3 (370 comprehensive substances, wave 3 expansion, new synergies & preset stacks)
+ * Verze: 6.4 (400 comprehensive substances, pharmacy/GymBeam/US staples, expanded interactions and presets)
  * Strategie: Network-First pro aplikaci a data (vždy čerstvé změny),
  * s okamžitou zálohou v mezipaměti pro spolehlivý offline provoz.
  */
 
-const CACHE_NAME = 'supplez-cache-v6.3';
+const CACHE_NAME = 'supplez-cache-v6.4';
 
 const STATIC_ASSETS = [
     './',

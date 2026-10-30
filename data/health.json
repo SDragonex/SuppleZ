@@ -1898,5 +1898,759 @@
       "arašídy"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 148,
+    "name": "MSM (Methylsulfonylmethan)",
+    "categoryKey": "health",
+    "tags": [
+      "klouby",
+      "chrupavky",
+      "síra",
+      "zánět",
+      "GymBeam",
+      "lékárna"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-cyan",
+    "shortDesc": "Organická biologicky dostupná forma síry nezbytná pro tvorbu disulfidových můstků v kolagenu, integritu chrupavek a tlumení zánětu.",
+    "description": "MSM (Methylsulfonylmethan) je přirozeně se vyskytující organická sloučenina síry (obsahuje cca 34 % elementární síry). V těle slouží jako primární donor síry pro syntézu aminokyselin methioninu a cysteinu, kolagenu a keratinu. Působí jako silný lapač volných radikálů a inhibitor transkripčního faktoru NF-kB, čímž snižuje produkci zánětlivých cytokinů IL-6 a TNF-alfa v kloubních pouzdrech. Je základním kamenem všech špičkových kloubních výživ (Alavis, Animal Flex, GymBeam Joint Max).",
+    "effects": [
+      "Snížení bolesti a ztuhlosti kloubů při osteoartróze",
+      "Podpora syntézy kolagenu a zpevnění vazů a šlach",
+      "Zlepšení kvality vlasů, nehtů a kůže (tvorba keratinu)",
+      "Potlačení zánětu a urychlení regenerace po tréninku"
+    ],
+    "dosage": {
+      "short": "1 500 – 3 000 mg denně s jídlem",
+      "long": "Standardní terapeutická dávka je 1 500 až 3 000 mg rozdělená do 2 dávek (např. 1 000–1 500 mg ráno a v poledne s jídlem). Při akutních kloubních potížích lze krátkodobě zvýšit až na 5 000 mg denně. Doporučuje se kombinovat s vitamínem C pro maximální podporu hydroxylace kolagenu."
+    },
+    "warning": "Velmi bezpečný profil. U citlivých jedinců může vysoká počáteční dávka nalačno vyvolat mírné nadýmání nebo řidší stolici. Začínejte na 1 000 mg a postupně navyšujte.",
+    "mechanism": "Dodává organické sulfhydrylové a disulfidové vazby nezbytné pro terciární strukturu kolagenu a glykosaminoglykanů; inhibuje expresi COX-2, iNOS a NF-kB, snižuje hladinu synoviálních prostaglandinů PGE2.",
+    "halfLife": "T1/2 cca 12 hodin (eliminace močí)",
+    "interactions": [
+      "Vitamín C (esenciální synergie pro syntézu kolagenu)",
+      "Glukosamin a Chondroitin sulfát (zlatý standard kloubní trojkombinace)",
+      "Boswellia serrata (synergické potlačení kloubního zánětu)"
+    ],
+    "naturalSources": "Stopové množství v syrové zelenině, ovoci, kravském mléce a obilovinách; vařením a zpracováním se většina MSM odpařuje.",
+    "bannedStatus": "Povoleno WADA, běžně dostupný volně prodejný doplněk stravy."
+  },
+  {
+    "id": 149,
+    "name": "Boswellia Serrata (Kyselina boswellová / 5-LOX inhibitor)",
+    "categoryKey": "health",
+    "tags": [
+      "klouby",
+      "artróza",
+      "5-LOX",
+      "zánět",
+      "bylina",
+      "lékárna"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-green",
+    "shortDesc": "Standardizovaný pryskyřičný extrakt z kadidlovníku pilovitého s obsahem AKBA, nejsilnějšího přírodního inhibitoru 5-lipoxygenázy.",
+    "description": "Boswellia serrata (kadidlovník pilovitý) je tradiční ajurvédská dřevina, jejíž pryskyřice obsahuje pentacyklické triterpenové kyseliny boswellové, zejména 3-O-acetyl-11-keto-beta-boswellovou kyselinu (AKBA). AKBA je vysoce specifický nekompetitivní inhibitor enzymu 5-lipoxygenázy (5-LOX), který zastavuje kaskádu tvorby prozánětlivých leukotrienů (LTB4). Na rozdíl od běžných nesteroidních antirevmatik (NSAID) nedráždí žaludeční sliznici a nepoškozuje glykosaminoglykany v kloubní chrupavce.",
+    "effects": [
+      "Rychlá úleva od bolesti kloubů a ranní ztuhlosti",
+      "Specifická inhibice 5-lipoxygenázy a leukotrienů",
+      "Ochrana synoviální chrupavky před enzymatickou degradací",
+      "Podpora při chronických zánětech střev (IBD, Crohnova choroba)"
+    ],
+    "dosage": {
+      "short": "300 – 500 mg standardizovaného extraktu (min. 30–65 % kyselin boswellových) 2x denně",
+      "long": "Užívejte 300 až 500 mg standardizovaného extraktu dvakrát denně vždy s jídlem obsahujícím tuky (lipofilní látka). U patentovaných fosfolipidových či mikronizovaných forem (např. AprèsFlex / 5-Loxin s 20–30 % AKBA) postačuje 100 mg denně."
+    },
+    "warning": "Může mírně ovlivňovat jaterní enzymy CYP2C9 a CYP3A4. Těhotné a kojící ženy by měly užívání konzultovat s lékařem.",
+    "mechanism": "Přímá alosterická vazba AKBA na enzym 5-lipoxygenázu blokuje přeměnu kyseliny arachidonové na leukotrien A4 (LTA4) a B4 (LTB4); inhibice elastázy lidských leukocytů (HLE).",
+    "halfLife": "T1/2 cca 6 hodin",
+    "interactions": [
+      "Kurkumin (duální blokáda zánětu: Kurkumin tlumí COX-2, Boswellia tlumí 5-LOX)",
+      "MSM a Glukosamin (komplexní podpora chrupavek)"
+    ],
+    "naturalSources": "Pryskyřice stromu Boswellia serrata (kadidlovník) rostoucího v suchých oblastech Indie a severní Afriky.",
+    "bannedStatus": "Povoleno WADA, volně prodejný standardizovaný bylinný extrakt."
+  },
+  {
+    "id": 150,
+    "name": "Železo (Bisglycinát železnatý / Ferritin)",
+    "categoryKey": "health",
+    "tags": [
+      "krev",
+      "anémie",
+      "hemoglobin",
+      "energie",
+      "minerál",
+      "lékárna"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-orange",
+    "shortDesc": "Chelátová forma esenciálního stopového prvku pro syntézu hemoglobinu, myoglobinu a enzymů buněčného dýchání bez zácpy.",
+    "description": "Železo je klíčový esenciální stopový prvek lidského těla. Tvoří centrální koordinační atom hemu v molekule hemoglobinu (transport kyslíku z plic do tkání) a myoglobinu (svalové zásobení kyslíkem). Železo je rovněž nezbytné pro cytochromy v mitochondriálním dýchacím řetězci (tvorba ATP) a enzymy syntézy neurotransmiterů. Aminokyselinový chelát (bisglycinát železnatý, Ferrochel) má násobně vyšší biologickou dostupnost než anorganický síran železnatý a nezpůsobuje zácpu, křeče ani podráždění žaludku.",
+    "effects": [
+      "Obnova tvorby červených krvinek a zvýšení hladiny hemoglobinu",
+      "Odstranění chronické únavy, slabosti a dušnosti způsobené anémií",
+      "Zlepšení termoregulace a kognitivních funkcí",
+      "Podpora imunitního systému a enzymatické obrany"
+    ],
+    "dosage": {
+      "short": "14 – 28 mg elementárního železa denně nalačno s vitamínem C",
+      "long": "Preventivní dávka u ohrožených skupin (ženy s těžkou menstruací, vytrvalostní sportovci, vegani) je 14 až 20 mg elementárního železa denně. Při prokázané sideropenické anémii (nízký ferritin) se užívá 28 až 50 mg denně. Užívejte ráno nalačno nebo mezi jídly společně se 100–250 mg vitamínu C pro zajištění redukce Fe3+ na vstřebatelnou formu Fe2+."
+    },
+    "warning": "Nadbytek železa je vysoce toxický (Fentonova reakce generující hydroxylové radikály) a tělo nemá aktivní vylučovací mechanismus pro železo. Užívejte pouze na základě krevních testů (krevní obraz, sérové železo, ferritin). Kontraindikováno při hemochromatóze.",
+    "mechanism": "Vstřebává se v duodenu přes transportér DMT-1 (Divalent Metal Transporter 1) nebo jako intaktní chelát bisglycinátu; v enterocytu se váže na ferritin nebo je přes ferroportin uvolňováno do krve navázané na transferrin pro erytropoézu v kostní dřeni.",
+    "halfLife": "Recykluje se v těle (zánik erytrocytů po 120 dnech v makrofázích sleziny)",
+    "interactions": [
+      "Vitamín C (zvyšuje vstřebávání železa až 3násobně)",
+      "Vápník a Mléčné výrobky (přímý kompetitor na transportéru DMT-1, nutný odstup min. 2 hodiny)",
+      "Káva a Čaj / Taniny a Fytáty (chelatují železo a blokují jeho absorpci)"
+    ],
+    "naturalSources": "Hemové železo: hovězí játra, červené maso, ústřice; Nehemové železo: čočka, špenát, dýňová semínka, quinoa.",
+    "bannedStatus": "Povoleno WADA, volně prodejný registrovaný minerální doplněk."
+  },
+  {
+    "id": 151,
+    "name": "Vápník (Citrát vápenatý / Aquamin)",
+    "categoryKey": "health",
+    "tags": [
+      "kosti",
+      "minerál",
+      "zuby",
+      "svaly",
+      "lékárna"
+    ],
+    "rating": 4.6,
+    "colorType": "neon-cyan",
+    "shortDesc": "Klíčový makrominerál pro hustotu kostní tkáně, neuromuskulární transmisi a svalovou kontrakci v organicky vázané formě.",
+    "description": "Vápník (Calcium) je nejrozšířenější minerál v lidském těle. Přibližně 99 % celkového vápníku je uloženo v hydroxyapatitových krystalech kostí a zubů, zbývající 1 % cirkuluje v krevní plazmě a intracelulární tekutině, kde řídí akční potenciály srdce, svalovou kontrakci (vazba na troponin C) a krevní srážlivost. Organické formy (Citrát vápenatý nebo bioaktivní multiminerální komplex z červených mořských řas Aquamin) nevyžadují silně kyselé žaludeční pH pro rozpuštění a mají podstatně vyšší absorpci než levný uhličitan vápenatý.",
+    "effects": [
+      "Udržení normální hustoty a mineralizace kostí a zubů (prevence osteoporózy)",
+      "Nezbytný kofaktor pro normální svalové stahy včetně srdečního myokardu",
+      "Neuromuskulární signalizace a uvolňování neurotransmiterů",
+      "Účast na kaskádě srážení krve (faktor IV)"
+    ],
+    "dosage": {
+      "short": "500 – 1 000 mg elementárního vápníku denně rozděleně s jídlem",
+      "long": "Doporučený denní příjem ze stravy a suplementace je 1 000 mg (u žen v menopauze a seniorů 1 200 mg). Jednorázová dávka by neměla překročit 500 mg, protože vstřebávací kapacita střeva se při vyšších jednorázových dávkách prudce snižuje. Vždy kombinujte s vitamínem D3 a K2!"
+    },
+    "warning": "Samotný vápník bez dostatku vitamínu K2 a D3 zvyšuje riziko kardiovaskulární kalcifikace cév a ledvinových kamenů. Neužívejte společně s hořčíkem nebo železem ve stejné dávce.",
+    "mechanism": "Střevní absorpce probíhá aktivním transcelulárním transportem závislým na kalcitriolu (vitamín D3) přes kanál TRPV6 a kalbindin-D9k, a pasivním paracelulárním transportem.",
+    "halfLife": "Dynamický kostní obrat (remodelace kostry cca 10 % ročně)",
+    "interactions": [
+      "Vitamín D3 a Vitamín K2 MK-7 (kritická synergie pro správnou depozici vápníku do kostí místo cév)",
+      "Hořčík (antagonista a kompetitor na transportních systémech, užívat odděleně)",
+      "Železo a Zinek (kompetice o DMT-1 transportér)"
+    ],
+    "naturalSources": "Mléčné výrobky, tvrdé sýry (Parmezán), mák (extrémní obsah vápníku), sardinky s kostmi, mořské řasy, tofu.",
+    "bannedStatus": "Povoleno WADA, esenciální makrominerál."
+  },
+  {
+    "id": 152,
+    "name": "Vitamín A (Retinyl palmitát & Beta-karoten)",
+    "categoryKey": "health",
+    "tags": [
+      "zrak",
+      "imunita",
+      "pleť",
+      "vitamín",
+      "lékárna"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-yellow",
+    "shortDesc": "Esenciální v tucích rozpustný vitamín pro fotochemickou transdukci zraku (rodopsin), regeneraci epitelů a slizniční imunitu.",
+    "description": "Vitamín A je souhrnný název pro skupinu retinoidů (retinol, retinal, kyselina retinová) a provitamínových karotenoidů (zejména beta-karoten). V oční sítnici se 11-cis-retinal váže na protein opsin za vzniku rodopsinu – zrakového pigmentu tyčinek odpovědného za vidění za šera. Kyselina retinová funguje jako hormonální ligand pro nukleární receptory RAR a RXR, kterými reguluje transkripci stovek genů pro buněčný růst, diferenciaci kůže, epitelů dýchacích a močových cest a tvorbu T-lymfocytů.",
+    "effects": [
+      "Podpora zraku, adaptace na tmu a prevence šerosleposti",
+      "Udržení integrity sliznic dýchacího, trávicího a urogenitálního traktu",
+      "Podpora diferenciace a hojení pokožky (akné, epitelizace)",
+      "Zásadní role v imunitní odpovědi a obraně proti infekcím"
+    ],
+    "dosage": {
+      "short": "800 – 1 500 mcg RAE (cca 2 500 – 5 000 IU) denně s jídlem obsahujícím tuky",
+      "long": "Běžná denní dávka je 700–900 mcg RAE (cca 3 000 IU). V doplňcích stravy je ideální kombinace předtvořeného retinolu (např. retinyl palmitát 1 500 IU) s přírodním beta-karotenem (3 000 IU), který si tělo konvertuje na retinol pouze podle aktuální potřeby."
+    },
+    "warning": "Předtvořený vitamín A (retinol) se kumuluje v játrech a ve vysokých dávkách (>10 000 IU denně dlouhodobě) je teratogenní a hepatotoxický! Těhotné ženy nesmí překračovat doporučenou denní dávku retinolu. Beta-karoten je netoxický, ale u kuřáků se nedoporučují izolované vysoké dávky.",
+    "mechanism": "Aktivace jaderných receptorů RAR (Retinoic Acid Receptor) a RXR (Retinoid X Receptor) moduluje expresi genů pro keratinocyty a imunitní buňky; retinal v tyčinkách podléhá fotoizomerizaci na trans-retinal.",
+    "halfLife": "T1/2 v játrech několik měsíců (hlavní zásoba těla)",
+    "interactions": [
+      "Zinek (esenciální pro syntézu proteinu RBP vázajícího retinol a konverzi retinolu na retinal)",
+      "Vitamín D3 (RXR receptory vytvářejí heterodimery s VDR receptory pro vitamín D)"
+    ],
+    "naturalSources": "Hovězí játra, tresčí játra, vaječný žloutek, máslo (retinol); mrkev, sladké brambory, dýně, špenát (beta-karoten).",
+    "bannedStatus": "Povoleno WADA, esenciální vitamín."
+  },
+  {
+    "id": 153,
+    "name": "Vitamín E (Kompletní spektrum Tokoferolů & Tokotrienolů)",
+    "categoryKey": "health",
+    "tags": [
+      "antioxidant",
+      "cévy",
+      "membrány",
+      "vitamín",
+      "lékárna"
+    ],
+    "rating": 4.6,
+    "colorType": "neon-green",
+    "shortDesc": "Hlavní v tucích rozpustný antioxidant lidského těla chránící buněčné membrány a LDL částice před peroxidací lipidů.",
+    "description": "Vitamín E není jediná sloučenina, nýbrž rodina osmi příbuzných izomerů: čtyř tokoferolů (alfa, beta, gama, delta) a čtyř tokotrienolů. Je primárním řetězec-přerušujícím antioxidantem v lipidových dvouvrstvách buněčných membrán a v krevních lipoproteinech (LDL a HDL). Zabraňuje volnoradikálové peroxidaci polynenasycených mastných kyselin (PUFA), čímž udržuje elasticitu cév, chrání endotel před aterosklerózou a podporuje reprodukční systém. Nejúčinnější doplňky obsahují přírodní směs d-alfa-tokoferolu obohacenou o tokotrienoly z palmového oleje nebo annatta.",
+    "effects": [
+      "Vychytávání volných peroxylových radikálů v buněčných membránách",
+      "Prevence oxidace LDL cholesterolu a ochrana endotelu cév",
+      "Podpora mikrocirkulace a snížení agregace krevních destiček",
+      "Ochrana pokožky před fotostárnutím a oxidačním poškozením UV zářením"
+    ],
+    "dosage": {
+      "short": "100 – 400 IU (cca 67 – 268 mg) přírodního d-alfa tokoferolu se směsnými tokoferoly s jídlem",
+      "long": "Běžná preventivní dávka je 100 až 200 IU denně. U sportovců a při kardiovaskulární ochraně se užívá 400 IU přírodní formy (označované jako d-alfa-tokoferol, nikoliv syntetický dl-alfa). Užívejte vždy s tučným jídlem."
+    },
+    "warning": "Ve velmi vysokých dávkách (>800 IU denně) antagonizuje vitamín K a prodlužuje dobu srážení krve. Neužívejte vysoké dávky před plánovanými chirurgickými zákroky nebo společně s warfarinem bez lékařského dohledu.",
+    "mechanism": "Reaguje s lipidovými peroxylovými radikály (LOO•) rychleji než nenasycené mastné kyseliny, tvoří tokoferylový radikál, který je následně regenerován zpět vitamínem C a glutathionem.",
+    "halfLife": "T1/2 alfa-tokoferolu cca 48 hodin v plazmě",
+    "interactions": [
+      "Vitamín C (regeneruje oxidovaný tokoferylový radikál zpět na aktivní vitamín E)",
+      "Omega-3 mastné kyseliny (vitamín E zabraňuje oxidaci křehkých molekul EPA a DHA)",
+      "Antikoagulancia / Warfarin (zvýšené riziko krvácivosti při vysokých dávkách)"
+    ],
+    "naturalSources": "Olej z pšeničných klíčků, slunečnicová semínka, mandle, lískové ořechy, avokádo, olivový olej.",
+    "bannedStatus": "Povoleno WADA, esenciální vitamín."
+  },
+  {
+    "id": 154,
+    "name": "Draslík (Citrát draselný)",
+    "categoryKey": "health",
+    "tags": [
+      "krevní tlak",
+      "elektrolyty",
+      "srdce",
+      "minerál",
+      "lékárna"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-blue",
+    "shortDesc": "Hlavní intracelulární elektrolyt nezbytný pro membránový klidový potenciál, srdeční rytmus a kontrolu krevního tlaku.",
+    "description": "Draslík (Potassium) je dominantní kationt uvnitř lidských buněk (cca 98 % celkového draslíku je intracelulárně v koncentraci kolem 140–150 mmol/l). V součinnosti se sodíkem udržuje membránový klidový potenciál přes enzym Na+/K+-ATPázu, což je základem vedení vzruchů v neuronech, srdečních převodních vláknech a kosterních svalech. Adekvátní příjem draslíku stimuluje natriurézu (vylučování přebytečného sodíku ledvinami), snižuje periferní cévní odpor a prokazatelně normalizuje krevní tlak. Citrátová sůl navíc alkalizuje moč a působí jako silná prevence urátových a kalcium-oxalátových ledvinových kamenů.",
+    "effects": [
+      "Regulace krevního tlaku a snížení napětí v cévních stěnách",
+      "Prevence svalových křečí a rychlá neuromuskulární repolarizace",
+      "Udržení stabilního srdečního rytmu a prevence arytmií",
+      "Prevence vzniku ledvinových kamenů (alkalizace moči citrátem)"
+    ],
+    "dosage": {
+      "short": "200 – 400 mg elementárního draslíku v jedné dávce s vodou a jídlem",
+      "long": "Doporučený denní příjem draslíku ze stravy je 3 500 až 4 700 mg. V doplňcích stravy je legislativní limit na jednu tabletu obvykle 99 mg až 300 mg elementárního draslíku, aby se zabránilo lokálnímu podráždění střevní stěny. Rozmíchejte práškový citrát draselný ve větším objemu vody (500 ml) a popíjejte s jídlem."
+    },
+    "warning": "Přísně kontraindikováno při chronickém renálním selhání (snížená glomerulární filtrace nedokáže vylučovat draslík, hrozí smrtelná hyperkalémie a zástava srdce). Zvýšená opatrnost při užívání ACE inhibitorů, sartanů (ARB) a draslík šetřících diuretik (Spironolakton).",
+    "mechanism": "Aktivace Na+/K+-ATPázy; v cévním hladkém svalu otevírá draslíkové kanály Kir a KCa, což vede k hyperpolarizaci membrány, uzavření napěťově řízených vápníkových kanálů a vazodilataci.",
+    "halfLife": "Rychlý renální obrat, poločas plazmatické rovnováhy 1–2 hodiny",
+    "interactions": [
+      "Hořčík (nezbytný kofaktor pro funkci Na+/K+-ATPázy, bez hořčíku dochází k úniku draslíku z buněk)",
+      "Sodík (vyvážený poměr K:Na cca 2:1 až 4:1 je základem kardiovaskulárního zdraví)",
+      "Telmisartan a ACE inhibitory (riziko hyperkalémie, monitorovat sérové hladiny)"
+    ],
+    "naturalSources": "Brambory pečené ve slupce, banány, avokádo, kokosová voda, sušené meruňky, fazole, listová zelenina.",
+    "bannedStatus": "Povoleno WADA, esenciální elektrolyt."
+  },
+  {
+    "id": 155,
+    "name": "D-Manóza (D-Mannose / Blokurima)",
+    "categoryKey": "health",
+    "tags": [
+      "močové cesty",
+      "infekce",
+      "e-coli",
+      "lékárna",
+      "bestseller"
+    ],
+    "rating": 4.9,
+    "colorType": "neon-cyan",
+    "shortDesc": "Přírodní monosacharid, který se nemetabolizuje na glukózu, nýbrž se vylučuje ledvinami a mechanicky vyplavuje bakterie E. coli.",
+    "description": "D-Manóza je přirozeně se vyskytující jednoduchý cukr (aldohexóza), strukturní izomer glukózy. Po perorálním požití se téměř vůbec nemetabolizuje na glykogen ani energii a neovlivňuje glykémii. Během 30–60 minut je v intaktní formě přefiltrována glomerulární membránou do močových cest. Tam funguje jako kompetitivní návnada pro lektinové adheziny FimH na povrchu fimbrií uropatogenních kmenů Escherichia coli (původce >90 % všech infekcí močového měchýře). Bakterie se naváží na volnou D-manózu namísto stěny močového měchýře a jsou přirozeně a bezbolestně vyplaveny močí.",
+    "effects": [
+      "Okamžitá mechanická eliminace bakterií E. coli z močového traktu",
+      "Rychlá úleva od pálení, řezání a častého nutkání na močení",
+      "Prevence recidivujících zánětů močového měchýře (cystitid)",
+      "Nevyvolává bakteriální rezistenci a neničí přirozený mikrobiom jako antibiotika"
+    ],
+    "dosage": {
+      "short": "Akutně: 2 000 mg každé 2–3 hodiny první 2 dny; Prevence: 2 000 mg 1x denně před spaním",
+      "long": "Při akutním zánětu: 2 000 mg (1 sáček či odměrka rozpuštěná ve sklenici vody) každé 2–3 hodiny po dobu prvních 48 hodin. Po vypití 45 minut nepijte, aby manóza působila v měchýři v koncentrované formě, poté se vymočte a doplňte tekutiny. Preventivní dlouhodobý režim: 2 000 mg denně večer před spaním po vymočení."
+    },
+    "warning": "Bezpečný i pro těhotné ženy a diabetiky. Pokud se příznaky zánětu nezlepší do 48 hodin nebo se objeví horečka a bolest v bedrech (riziko pyelonefritidy), neprodleně vyhledejte lékaře.",
+    "mechanism": "Vysokoafinitní vazba na FimH adhesin typu 1 fimbrií uropatogenní E. coli; zabraňuje adhezi bakterie k uroplakinům uroepitelu a biofilmu.",
+    "halfLife": "T1/2 cca 30–90 minut (rychlá renální exkrece)",
+    "interactions": [
+      "Extrakt z kanadských brusinek / Proanthokyanidiny (synergická inhibice adheze bakterií)",
+      "Probiotika (Lactobacillus rhamnosus a reuteri pro urogenitální kolonizaci)"
+    ],
+    "naturalSources": "Broskve, jablka, pomeranče, brusinky a bobulovité ovoce v nepatrném množství.",
+    "bannedStatus": "Povoleno WADA, volně prodejný doplněk stravy a zdravotnický prostředek."
+  },
+  {
+    "id": 156,
+    "name": "Rutin & Hesperidin (Ascorutin komplex)",
+    "categoryKey": "health",
+    "tags": [
+      "cévy",
+      "žíly",
+      "křečové žíly",
+      "kapiláry",
+      "bioflavonoidy",
+      "lékárna"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-yellow",
+    "shortDesc": "Klíčové rostlinné bioflavonoidy zpevňující kapilární stěnu, snižující její propustnost a podporující žilní návrat.",
+    "description": "Rutin (rutosid) a hesperidin jsou citrusové a pohankové glykosidické bioflavonoidy tradičně označované jako vitamín P. Zvyšují tonus žilních stěn a lymfatických cév, inhibují enzym hyaluronidázu (která štěpí mezibuněčný cement cévní stěny) a chrání endotel před volnými radikály. Tím dramaticky snižují křehkost a permeabilitu krevních vlásečnic (kapilár), brání tvorbě petechií, modřin, epistaxe (krvácení z nosu) a otoků dolních končetin při chronické žilní insuficienci a hemoroidech. V lékárnách je nejznámější kombinace s vitamínem C (Ascorutin).",
+    "effects": [
+      "Zpevnění cévní stěny a snížení křehkosti a lámavosti kapilár",
+      "Prevence a úleva při křečových žilách, otocích nohou a těžkých nohou",
+      "Léčba a prevence hemoroidálních uzlů a zánětů žil",
+      "Zastavení krvácivosti z dásní a spontánního krvácení z nosu"
+    ],
+    "dosage": {
+      "short": "500 – 1 000 mg rutinu denně rozděleně do 2 dávek společně s vitamínem C",
+      "long": "Běžná dávka je 500 mg 1x až 2x denně s jídlem. Vždy kombinujte s minimálně 200–500 mg vitamínu C, se kterým bioflavonoidy vykazují silný synergismus v syntéze a stabilizaci kolagenu v cévním endotelu."
+    },
+    "warning": "Velmi dobrá snášenlivost. Opatrnost při souběžném užívání silných antikoagulancií vzhledem k mírnému antiagregačnímu působení.",
+    "mechanism": "Inhibice hyaluronidázy a katechol-O-methyltransferázy (COMT), ochrana endogenního noradrenalinu vedoucí k udržení venózního tonu; potlačení oxidační degradace kolagenu.",
+    "halfLife": "T1/2 metabolitů rutinu (kvercetin glukuronidů) cca 11–18 hodin",
+    "interactions": [
+      "Vitamín C (esenciální synergie pro ochranu kolagenu v cévách)",
+      "Diosmin a Mikronizovaný Hesperidin (klinický zlatý standard pro žilní insuficienci / Detralex)"
+    ],
+    "naturalSources": "Pohanka (Fagopyrum esculentum - nejbohatší zdroj), kůra citrusových plodů, jablka, aronie, černý rybíz.",
+    "bannedStatus": "Povoleno WADA, volně prodejný bioflavonoid."
+  },
+  {
+    "id": 157,
+    "name": "Česnekový extrakt (Allicin standardizovaný)",
+    "categoryKey": "health",
+    "tags": [
+      "srdce",
+      "tlak",
+      "cholesterol",
+      "imunita",
+      "lékárna"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-green",
+    "shortDesc": "Koncentrovaný extrakt z česneku se standardizovaným potenciálem uvolnění allicinu pro snížení krevního tlaku a lipidů.",
+    "description": "Česnek setý (Allium sativum) obsahuje sirnou aminokyselinu alliin a enzym alliinázu, které při narušení buněčné stěny syntetizují nestabilní, avšak vysoce bioaktivní sloučeninu allicin (diallyldisulfid). Allicin a jeho metabolity stimulují produkci sirovodíku (H2S) a oxidu dusnatého (NO) v cévním řečišti, což vyvolává hyperpolarizaci hladké svaloviny cév a snížení krevního tlaku srovnatelné s monoterapií mírnými antihypertenzivy. Současně allicin inhibuje klíčový enzym syntézy cholesterolu v játrech (HMG-CoA reduktázu) a působí jako širokospektrální přírodní antimikrobiotikum.",
+    "effects": [
+      "Průkazné snížení systolického i diastolického krevního tlaku (o 5–10 mmHg)",
+      "Snížení celkového a oxidovaného LDL cholesterolu v plazmě",
+      "Prevence tvorby aterosklerotických plátů a krevních sraženin",
+      "Antimikrobiální, protiplísňový a antiparazitární účinek v trávicím traktu"
+    ],
+    "dosage": {
+      "short": "600 – 1 200 mg extraktu se standardizací na min. 1,2 % allicinu (cca 6–10 mg allicinu) denně s jídlem",
+      "long": "Užívejte enterosolventní tablety nebo zrající extrakt z černého česneku (Aged Garlic Extract / Kyolic v dávce 600–1 200 mg denně). Enterosolventní potah chrání enzym alliinázu před zničením kyselinou chlorovodíkovou v žaludku a zabraňuje nepříjemnému zápachu z úst."
+    },
+    "warning": "Česnek mírně ředí krev inhibicí agregace trombocytů. Vysaďte 7–10 dní před plánovanou operací nebo porodem. Neužívejte vysoké dávky s léky proti srážlivosti krve bez konzultace s lékařem.",
+    "mechanism": "Reakce s thiolovou skupinou enzymu HMG-CoA reduktázy a skvalenmonoxygenázy; uvolňování H2S a aktivace endoteliální syntázy oxidu dusnatého (eNOS).",
+    "halfLife": "T1/2 allicinu v krvi je velmi krátký (minuty), aktivní metabolity přetrvávají 12–24 hodin",
+    "interactions": [
+      "Koenzym Q10 (synergická kardioprotekce a podpora endotelu)",
+      "Antikoagulancia a antiagregancia (mírné zvýšení rizika krvácivosti)"
+    ],
+    "naturalSources": "Čerstvý rozdrcený stroužek česneku (nechat 10 minut na vzduchu pro aktivaci alliinázy), zrající černý česnek.",
+    "bannedStatus": "Povoleno WADA, tradiční potravina a doplněk stravy."
+  },
+  {
+    "id": 158,
+    "name": "Betain HCL s Pepsinem",
+    "categoryKey": "health",
+    "tags": [
+      "trávení",
+      "žaludek",
+      "kyselina",
+      "bílkoviny",
+      "americké doplňky"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-orange",
+    "shortDesc": "Hydrochlorid betainu s proteolytickým enzymem pepsinem pro obnovu optimálního kyselého žaludečního pH a štěpení bílkovin.",
+    "description": "Betain hydrochlorid (Betaine HCL) je kyselá forma betainu, která se v žaludeční tekutině okamžitě disociuje na volný betain a kyselinu chlorovodíkovou (HCL). Drtivá většina lidí trpících pálením žáhy a refluxem po 30. roce života netrpí překyselením, nýbrž hypochlorhydrií (nedostatkem žaludeční kyseliny), což brání uzavření dolního jícnového svěrače (LES). Betain HCL sráží pH žaludku do optimálního rozmezí 1,5–2,0, což aktivuje neaktivní pepsinogen na proteolytický pepsin, zahajuje denaturaci bílkovin a umožňuje ionizaci a vstřebávání vitamínu B12, železa, zinku a vápníku.",
+    "effects": [
+      "Rychlé odstranění refluxu, pálení žáhy a pocitu těžkého žaludku po jídle",
+      "Kompletní rozštěpení zkonzumovaných bílkovin na peptidy a aminokyseliny",
+      "Likvidace patogenních bakterií v potravě (antimikrobiální bariéra žaludku)",
+      "Obnova vstřebávání mikronutrientů (vitamín B12, železo, hořčík, vápník)"
+    ],
+    "dosage": {
+      "short": "650 – 1 300 mg (1–2 kapsle) uprostřed velkého bílkovinného jídla",
+      "long": "Užívejte VŽDY v průběhu nebo bezprostředně po jídle obsahujícím pevné bílkoviny (maso, vejce, sýry). Začněte 1 kapslí (cca 650 mg). Pokud necítíte mírné teplo v žaludku, můžete při dalším velkém jídle navýšit na 2 kapsle. NIKDY neužívejte nalačno nebo před jídlem!"
+    },
+    "warning": "Přísně kontraindikováno při aktivním žaludečním nebo dvanáctníkovém vředu a při souběžném užívání nesteroidních antirevmatik (Ibalgin, Aspirin, Diklofenak) a kortikosteroidů (riziko perforace žaludeční sliznice).",
+    "mechanism": "Exogenní dodání H+ iontů do žaludečního lumen; acidifikace spouští autokatalytickou přeměnu pepsinogenu na pepsin a stimuluje uvolňování sekretinu v duodenu.",
+    "halfLife": "Působí lokálně v žaludku po dobu trávení chymu (1–3 hodiny)",
+    "interactions": [
+      "Trávicí enzymy pankreatu (kyselý chymus po přechodu do duodena stimuluje slinivku břišní)",
+      "Železo a Vitamín B12 (dramaticky zlepšuje jejich absorpci)",
+      "Antacida a inhibitory protonové pumpy / Omeprazol (přímý protichůdný účinek)"
+    ],
+    "naturalSources": "Betain se nachází v červené řepě, špenátu a celozrnných obilovinách; chlorovodíková forma HCL je vyráběna synteticky.",
+    "bannedStatus": "Povoleno WADA, volně prodejný trávicí doplněk."
+  },
+  {
+    "id": 159,
+    "name": "Komplex trávicích enzymů (Pankreatin, Bromelain, Papain)",
+    "categoryKey": "health",
+    "tags": [
+      "trávení",
+      "enzymy",
+      "slinivka",
+      "nadýmání",
+      "GymBeam",
+      "lékárna"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-cyan",
+    "shortDesc": "Širokospektrální směs proteáz, amyláz, lipáz a rostlinných enzymů pro rozklad bílkovin, tuků a sacharidů bez nadýmání.",
+    "description": "Komplexní enzymatické formule kombinují pankreatické enzymy (proteáza, amyláza, lipáza z pankreatinu) s odolnými rostlinnými proteolytickými enzymy (bromelain z ananasu a papain z papáji). Pomáhají enzymaticky rozložit komplexní makronutrienty v tenkém střevě: proteázy štěpí bílkoviny na peptidy, amylázy hydrolyzují škroby na jednoduché cukry a lipázy emulgují triacylglyceroly na mastné kyseliny a glycerol. Zabraňují přechodu nerozštěpených zbytků potravy do tlustého střeva, kde by jinak podléhaly hnilobným a kvasným procesům za vzniku plynů, křečí a toxinů.",
+    "effects": [
+      "Odstranění plynatosti, nadýmání a pocitu plnosti po vydatném jídle",
+      "Maximalizace vstřebávání živin a anabolického využití bílkovin u sportovců",
+      "Podpora funkce slinivky břišní při enzymatické insuficienci",
+      "Systémový protizánětlivý účinek bromelainu při užití nalačno"
+    ],
+    "dosage": {
+      "short": "1 – 2 kapsle na začátku nebo v průběhu každého hlavního jídla",
+      "long": "Užívejte 1 až 2 kapsle těsně před prvním soustem nebo uprostřed jídla zapité trochou vody. Pro systémový protizánětlivý účinek na otoky a šlachy (enzymoterapie) se bromelain užívá naopak nalačno 45 minut před jídlem."
+    },
+    "warning": "Neotevírejte kapsle a nevysypávejte obsah do úst (proteázy mohou podráždit sliznici ústní dutiny a jícnu). Alergici na ananas by se měli vyhnout bromelainu.",
+    "mechanism": "Hydrolytické štěpení peptidových, glykosidických a esterových vazeb v makromolekulách potravy v duodenu a jejunu při neutrálním až mírně zásaditém pH (6,5–8,0).",
+    "halfLife": "Lokální enzymatická aktivita v GIT cca 2–4 hodiny",
+    "interactions": [
+      "Betain HCL (připravuje natráveninu v žaludku před působením střevních enzymů)",
+      "Probiotika (zdravé trávení podporuje symbiotickou střevní mikroflóru)"
+    ],
+    "naturalSources": "Ananas (bromelain), papája (papain), slinivka břišní skotu/vepřů (pankreatin).",
+    "bannedStatus": "Povoleno WADA, volně prodejný trávicí doplněk."
+  },
+  {
+    "id": 160,
+    "name": "Calcium D-Glucarát",
+    "categoryKey": "health",
+    "tags": [
+      "játra",
+      "detoxikace",
+      "estrogen",
+      "glukuronidace",
+      "americké doplňky"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-green",
+    "shortDesc": "Vápenatá sůl kyseliny D-glukarové inhibující enzym beta-glukuronidázu pro efektivní vyloučení estrogenu a toxinů játry.",
+    "description": "Calcium D-Glucarát je v doplňcích stravy vápenatá sůl kyseliny glukarové. V těle slouží jako prekurzor D-glukaro-1,4-laktonu – přirozeného a silného inhibitoru enzymu beta-glukuronidázy. Během fáze II jaterní detoxikace (glukuronidace) játra navazují kyselinu glukuronovou na toxiny, karcinogeny a nadbytečné steroidní hormony (zejména metabolity estrogenu E1 a E2), které jsou následně žlučí vyloučeny do střeva. Přemnožené nezdravé střevní bakterie však produkují beta-glukuronidázu, která tento vazebný svazek rozštěpí a umožní volnému toxickému estrogenu reabsorbovat se zpět do krve (enterohepatální cirkulace). Calcium D-Glucarát tomu spolehlivě zabraňuje.",
+    "effects": [
+      "Odstranění nadbytečného estrogenu a úprava estrogenové dominance u mužů i žen",
+      "Prevence vzniku gynekomastie a zadržování vody u sportovců",
+      "Podpora fáze II jaterní detoxikace a eliminace chemických karcinogenů",
+      "Snížení hladiny celkového a LDL cholesterolu v plazmě"
+    ],
+    "dosage": {
+      "short": "500 – 1 000 mg 1x až 2x denně s jídlem",
+      "long": "Standardní dávkování je 500 mg ráno a 500 mg večer s jídlem. Při akutní estrogenové dominanci nebo v průběhu anabolických cyklů lze užívat až 1 500–2 000 mg denně rozděleně."
+    },
+    "warning": "Protože urychluje clearance látek eliminovaných glukuronidací, může mírně snižovat plazmatické hladiny některých léčiv (např. paracetamol, statiny, hormonální přípravky).",
+    "mechanism": "Konverze na D-glukaro-1,4-lakton v kyselém prostředí; kompetitivní inhibice enzymu beta-glukuronidázy v játrech, žlučových cestách a střevním lumen brání dekonjugaci toxinů a estrogenu.",
+    "halfLife": "T1/2 cca 4–6 hodin",
+    "interactions": [
+      "DIM (Diindolylmethan - DIM optimalizuje poměr metabolitů 2-OH vs 16-OH, Glucarát zajistí jejich finální vyloučení ze střeva)",
+      "TUDCA a Silymarin (kompletní jaterní ochrana a obnova žlučových cest)"
+    ],
+    "naturalSources": "Jablka, grapefruity, pomeranče, brokolice, růžičková kapusta a zelí v nepatrném množství.",
+    "bannedStatus": "Povoleno WADA, volně prodejný doplněk stravy."
+  },
+  {
+    "id": 161,
+    "name": "Butyrát sodný (Kyselina máselná enterosolventní)",
+    "categoryKey": "health",
+    "tags": [
+      "střeva",
+      "IBS",
+      "mikrobiom",
+      "leaky-gut",
+      "lékárna",
+      "bestseller"
+    ],
+    "rating": 4.9,
+    "colorType": "neon-yellow",
+    "shortDesc": "Enterosolventní forma mastné kyseliny s krátkým řetězcem (SCFA), primární palivo pro kolonocyty a regeneraci střevní bariéry.",
+    "description": "Kyselina máselná (Butyrát) je mastná kyselina s krátkým řetězcem (SCFA), kterou přirozeně produkují symbiotické střevní bakterie fermentací prebiotické vlákniny v tlustém střevě. Butyrát pokrývá více než 70 % energetických nároků buněk střevní sliznice (kolonocytů). Působí jako silný inhibitor histondeacetylázy (HDAC), čímž stimuluje genovou expresi proteinů těsných spojů (claudin, occludin) a obnovuje narušenou střevní bariéru (Leaky Gut Syndrome). Současně stimuluje diferenciaci regulačních T-lymfocytů (Treg), čímž potlačuje zánět u syndromu dráždivého tračníku (IBS) a ulcerózní kolitidy. Enterosolventní mikropelety zabraňují vstřebání v žaludku a uvolňují butyrát až v tlustém střevě.",
+    "effects": [
+      "Obnova celistvosti a těsných spojů střevní sliznice (léčba Leaky Gut)",
+      "Rychlé zklidnění křečí, průjmů a nepravidelné stolice u IBS",
+      "Inhibice prozánětlivých cytokinů a podpora regulačních imunitních buněk",
+      "Prevence poškození střevní sliznice při užívání antibiotik a NSAID"
+    ],
+    "dosage": {
+      "short": "150 – 300 mg čistého butyrátu sodného 1–2x denně po jídle",
+      "long": "Užívejte 1 enterosolventní kapsli ráno a 1 večer po jídle, zapijte dostatečným množstvím vlažné vody. Kapsle se nesmí kousat ani drtit, aby se nerozpadl speciální obal chránící zápach a účinek před žaludeční kyselinou."
+    },
+    "warning": "Neotevírejte kapsle – samotná kyselina máselná má velmi intenzivní, nepříjemný zápach zkaženého másla. Jinak má preparát vynikající bezpečnostní profil.",
+    "mechanism": "Inhibice enzymu HDAC (histondeacetyláza) vede k hyperacetylaci histonů a aktivaci transkripce protizánětlivých genů; primární substrát pro beta-oxidaci a syntézu ATP v kolonocytech.",
+    "halfLife": "T1/2 v krvi několik minut (téměř kompletně spotřebován enterocyty a játry)",
+    "interactions": [
+      "Glutamin (duální výživa střeva: Glutamin sytí tenké střevo, Butyrát tlusté střevo)",
+      "BPC-157 (maximální akcelerace hojení střevních zánětů a erozí)",
+      "Probiotika a Prebiotika (komplexní obnova mikrobiální eubiózy)"
+    ],
+    "naturalSources": "Máslo a přepuštěné máslo (Ghee - obsahuje cca 3–4 % butyrátu), fermentované sýry; přirozeně vzniká fermentací vlákniny.",
+    "bannedStatus": "Povoleno WADA, bezpečný fyziologický metabolit a doplněk stravy."
+  },
+  {
+    "id": 162,
+    "name": "Komplex probiotik (Laktobacily & Bifidobakterie)",
+    "categoryKey": "health",
+    "tags": [
+      "imunita",
+      "mikrobiom",
+      "střeva",
+      "lékárna",
+      "bestseller"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-cyan",
+    "shortDesc": "Širokospektrální komplex živých kultur se zárukou CFU pro kolonizaci střev, modulaci imunity a prevenci dysbiózy.",
+    "description": "Širokospektrální probiotické formule obsahují desítky miliard CFU (jednotek tvořících kolonie) pečlivě vybraných kmenů rodů Lactobacillus (L. acidophilus, L. rhamnosus GG, L. plantarum, L. casei) a Bifidobacterium (B. lactis, B. longum, B. bifidum). Tyto komenzální mikroorganismy kolonizují hlenovou vrstvu střevního epitelu, produkují kyselinu mléčnou, peroxid vodíku a bakteriociny, které brání přemnožení kvasinek (Candida albicans) a patogenů. Přes Peyerovy plaky modulují slizniční imunitu GALT (tvorba sekretorického IgA) a přes bloudivý nerv (nervus vagus) komunikují přímo s centrální nervovou soustavou (osa střevo-mozek).",
+    "effects": [
+      "Obnova střevní mikroflóry během a po antibiotické léčbě",
+      "Posílení slizniční i celkové imunity a tvorby sekretorického IgA",
+      "Prevence cestovatelských a infekčních průjmů",
+      "Zlepšení nálady a snížení úzkosti přes osu střevo-mozek (psychobiotický efekt)"
+    ],
+    "dosage": {
+      "short": "10 – 50 miliard CFU denně s lehkým jídlem nebo nalačno",
+      "long": "Užívejte 1 kapsli denně, ideálně s lehkým studeným jídlem nebo ráno 20 minut před snídaní. Při užívání antibiotik užívejte probiotika s odstupem minimálně 2–3 hodin po požití antibiotika a pokračujte ještě alespoň 3–4 týdny po dobrání léků."
+    },
+    "warning": "Nezapíjejte horkými nápoji ani alkoholem, které živé bakterie usmrcují. U pacientů s těžkou imunosupresí (po transplantaci, akutní chemoterapie) je nutný dohled ošetřujícího lékaře.",
+    "mechanism": "Kompeticí o vazebná místa na enterocytech vytěsňují patogeny; stimulace produkce mucinu (MUC2), sekrece sIgA a down-regulace zánětlivých signálů TLR4 a NF-kB.",
+    "halfLife": "Vyžaduje pravidelné doplňování pro udržení kolonizační denzity",
+    "interactions": [
+      "Prebiotika (Inulin, FOS, rezistentní škrob jako potrava pro probiotické kmeny)",
+      "Antibiotika (antagonistický efekt, nutný časový odstup min. 3 hodiny)"
+    ],
+    "naturalSources": "Kefír, živý bílý jogurt, kysané zelí, kimchi, kombucha, tempeh.",
+    "bannedStatus": "Povoleno WADA, esenciální součást lidského mikrobiomu."
+  },
+  {
+    "id": 163,
+    "name": "Zelené superpotraviny (Chlorella & Spirulina)",
+    "categoryKey": "health",
+    "tags": [
+      "detoxikace",
+      "chlorofyl",
+      "antioxidanty",
+      "GymBeam",
+      "lékárna"
+    ],
+    "rating": 4.6,
+    "colorType": "neon-green",
+    "shortDesc": "Kombinace sladkovodní řasy s rozbitou buněčnou stěnou a modrozelené sinice bohaté na chlorofyl, fykocyanin a mikronutrienty.",
+    "description": "Chlorella vulgaris a Spirulina platensis představují nejpopulárnější zelené superpotraviny na světě. Chlorella je jednobuněčná sladkovodní řasa s mimořádně vysokou koncentrací chlorofylu a specifickým růstovým faktorem (CGF). Její zmechanizovaně rozbitá buněčná stěna (mechanická desintegrace) funguje v trávicím traktu jako přírodní iontoměnič a absorbent těžkých kovů a xenobiotik. Spirulina je modrozelená sinice bohatá na kompletní rostlinné bílkoviny (až 65 % sušiny), beta-karoten, železo a unikátní antioxidační pigment fykocyanin, který inhibuje enzym NADPH oxidázu (NOX).",
+    "effects": [
+      "Vychytávání a chelatace těžkých kovů a toxinů v trávicím traktu",
+      "Podpora krvetvorby díky strukturální podobnosti chlorofylu s hemem",
+      "Silný antioxidační a protizánětlivý účinek fykocyaninu",
+      "Podpora vitality, energetického metabolismu a alkalizace organismu"
+    ],
+    "dosage": {
+      "short": "3 – 5 gramů (6–10 tablet) denně zapít sklenicí vody",
+      "long": "Užívejte 3 až 5 g denně (cca 6–10 malých tablet nebo 1 vrchovatá čajová lžička prášku) 15–30 minut před jídlem. Začněte na poloviční dávce (1–2 g), aby si trávicí trakt přivykl na vysoký obsah chlorofylu a vlákniny."
+    },
+    "warning": "Kupujte výhradně produkty s certifikací čistoty na těžké kovy a microcystiny (toxiny sinic z nekontrolovaných vod). Vzhledem k vysokému obsahu vitamínu K opatrnost při léčbě warfarinem.",
+    "mechanism": "Fykocyanin selektivně inhibuje NADPH oxidázu a COX-2; chlorofylin tvoří nerozpustné komplexy s polycyklickými aromatickými uhlovodíky a aflatoxiny, čímž brání jejich vstřebání.",
+    "halfLife": "T1/2 trávicí eliminace 24–48 hodin",
+    "interactions": [
+      "Vitamín C (zvyšuje absorpci obsaženého nehemového železa)",
+      "Ostropestřec mariánský (komplexní detoxikační synergie jater a střev)"
+    ],
+    "naturalSources": "Kultivované sladkovodní nádrže a bioreaktory v ekologicky čistých oblastech s vysokým slunečním svitem.",
+    "bannedStatus": "Povoleno WADA, přírodní potravina a doplněk stravy."
+  },
+  {
+    "id": 164,
+    "name": "C8 MCT Olej (Kyselina kaprylová)",
+    "categoryKey": "health",
+    "tags": [
+      "ketóza",
+      "energie",
+      "mozek",
+      "tuky",
+      "BrainMarket",
+      "GymBeam"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-yellow",
+    "shortDesc": "100% čistá frakce triglyceridů se středním řetězcem (C8 kyselina kaprylová) pro okamžitou tvorbu mozkových ketonů bez trávení žlučí.",
+    "description": "C8 MCT olej je vysoce purifikovaná frakce kyseliny kaprylové (oktanové kyseliny, 8 atomů uhlíku), získávaná z kokosového oleje. Na rozdíl od běžných tuků s dlouhým řetězcem (LCT) i delší kyseliny kaprinové (C10) a laurové (C12) nevyžaduje C8 emulgaci žlučovými kyselinami ani štěpení pankreatickou lipázou. Ze střeva putuje portální žílou přímo do jater, kde je okamžitě metabolizován na ketolátky: acetoacetát a beta-hydroxybutyrát (BHB). Ty snadno překonávají hematoencefalickou bariéru a poskytují neuronům a srdečnímu myokardu okamžitý, čistý zdroj ATP nezávislý na inzulínu a glukóze.",
+    "effects": [
+      "Rychlý vzestup hladiny krevních ketonů (BHB) během 15–30 minut",
+      "Okamžitá mentální jasnost, fokus a odstranění mozkové mlhy",
+      "Stabilní energie bez kolísání krevního cukru a inzulínových píků",
+      "Potlačení chuti k jídlu stimulací hormonů sytosti leptinu a peptidu YY"
+    ],
+    "dosage": {
+      "short": "5 – 15 ml (1 lžička až 1 polévková lžíce) do kávy, čaje nebo jídla",
+      "long": "Začněte opatrně na 1 čajové lžičce (5 ml) denně. Po adaptaci trávicího traktu (3–5 dní) zvyšte na 1 polévkovou lžíci (10–15 ml) 1x až 2x denně. Oblíbené v tzv. Bulletproof kávě (káva + C8 olej + máslo/ghee) nebo zamíchané do proteinového nápoje."
+    },
+    "warning": "Příliš vysoká počáteční dávka (>15 ml bez předchozí adaptace) vyvolá prudký osmotický efekt v tenkém střevě a akutní průjem (disaster pants). Vždy začínejte pozvolna!",
+    "mechanism": "Přednostní beta-oxidace v mitochondriální matrici hepatocytů; nadbytek acetyl-CoA je směrován do ketogeneze za vzniku acetoacetátu a beta-hydroxybutyrátu (BHB).",
+    "halfLife": "Tmax ketonů v krvi 30–60 minut po požití, clearance 3–4 hodiny",
+    "interactions": [
+      "Kofein (synergický stimulant: kofein stimuluje lipolýzu a C8 dodává okamžité ketony pro mozek)",
+      "L-Karnitin (podpora transportu mastných kyselin)",
+      "Nootropika (Alfa-GPC, Tyrosin pro maximální ranní soustředění)"
+    ],
+    "naturalSources": "Kokosový olej (obsahuje cca 6–7 % C8), palmojádrový tuk, mateřské mléko.",
+    "bannedStatus": "Povoleno WADA, zdravý funkční lipid."
+  },
+  {
+    "id": 165,
+    "name": "Zázvorový extrakt (Standardizované Gingeroly & Shogaoly)",
+    "categoryKey": "health",
+    "tags": [
+      "trávení",
+      "žaludek",
+      "kinetóza",
+      "zánět",
+      "imunita",
+      "lékárna"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-orange",
+    "shortDesc": "Standardizovaný extrakt ze zázvoru lékařského s prokinetickým účinkem na žaludeční motilitu a inhibicí receptorů 5-HT3.",
+    "description": "Zázvor lékařský (Zingiber officinale) obsahuje fenolické bioaktivní látky gingeroly (v čerstvém oddenku) a shogaoly (ve vysušeném extraktu). Působí jako vysoce účinné přírodní prokinetikum – urychluje vyprazdňování žaludku a stimuluje antrální kontrakce, čímž odstraňuje pocit plnosti a městnání potravy. Současně funguje jako periferní i centrální antagonista serotoninových receptorů 5-HT3 v chemorecepční spouštěcí zóně mozkového kmene, což z něj činí nejspolehlivější přírodní lék proti nevolnosti, kinetóze (nevolnost při cestování), těhotenské ranní nevolnosti a pooperační nauzee.",
+    "effects": [
+      "Rychlá eliminace nevolnosti, kinetózy a žaludečního diskomfortu",
+      "Zrychlení žaludeční motility a vyprázdnění potravy do střeva",
+      "Protizánětlivý účinek srovnatelný s mírnými NSAID přes inhibici COX-2 a 5-LOX",
+      "Snížení svalové bolesti a úponových zánětů po těžkém tréninku"
+    ],
+    "dosage": {
+      "short": "500 – 1 000 mg standardizovaného extraktu (min. 5 % gingerolů) denně s jídlem",
+      "long": "Preventivně proti kinetóze: 1 000 mg extraktu 30–60 minut před cestou. Pro podporu trávení: 500 mg před nebo s velkým jídlem. Při zánětech kloubů a svalů: 500 mg 2x denně dlouhodobě."
+    },
+    "warning": "Ve velmi vysokých dávkách může mírně ředit krev a dráždit jícen při nedostatečném zapití. Opatrnost při žlučových kamenech (zázvor zvyšuje sekreci žluči).",
+    "mechanism": "Antagonismus na 5-HT3 a cholinergních M3 receptorech v GIT; potlačení exprese cyklooxygenázy-2 (COX-2) a syntézy prostaglandinů PGE2 a leukotrienů.",
+    "halfLife": "T1/2 gingerolů cca 1–3 hodiny",
+    "interactions": [
+      "Kurkumin a Piperin (mohutná protizánětlivá synergie pro klouby a střeva)",
+      "Trávicí enzymy a Betain HCL (komplexní podpora celého trávicího traktu)"
+    ],
+    "naturalSources": "Čerstvý a sušený oddenek zázvoru lékařského (Zingiber officinale).",
+    "bannedStatus": "Povoleno WADA, běžné koření a bezpečný doplněk stravy."
+  },
+  {
+    "id": 166,
+    "name": "Vitamín B12 (Methylkobalamin & Adenosylkobalamin)",
+    "categoryKey": "health",
+    "tags": [
+      "krev",
+      "nervy",
+      "únava",
+      "B12",
+      "lékárna",
+      "americké doplňky"
+    ],
+    "rating": 4.9,
+    "colorType": "neon-cyan",
+    "shortDesc": "Dvě biologicky aktivní koenzymové formy vitamínu B12 pro syntézu DNA, myelinových pochev neuronů a tvorbu erytrocytů.",
+    "description": "Vitamín B12 (Kobalamin) je esenciální ve vodě rozpustný vitamín s komplexní korinoidní strukturou obsahující atom kobaltu. V lidském těle funguje ve dvou bioaktivních koenzymových formách: Methylkobalamin (nezbytný pro enzym methioninsyntázu, remethylaci toxického homocysteinu na methionin a syntézu SAMe) a Adenosylkobalamin (působí v mitochondriích pro enzym methylmalonyl-CoA mutázu, metabolismus mastných kyselin a syntézu myelinu chránícího nervová vlákna). Běžný lékárenský kyanokobalamin obsahuje kyanidovou skupinu a vyžaduje enzymatickou dekyanaci. Sublingvální pastilky s methylkobalaminem obcházejí nutnost vnitřního faktoru (intrinsic factor) v žaludku a vstřebávají se přímo přes bukální sliznici.",
+    "effects": [
+      "Okamžitá prevence a léčba makrocytární megaloblastické anémie",
+      "Podpora tvorby myelinových pochev a regenerace periferních nervů",
+      "Dramatické snížení hladiny kardiotoxického homocysteinu v krvi",
+      "Odstranění únavy, mozkové mlhy a podpora neurologických funkcí"
+    ],
+    "dosage": {
+      "short": "500 – 1 000 mcg sublingválně denně nebo obden",
+      "long": "Nechte sublingvální pastilku nebo kapky volně rozpustit pod jazykem po dobu 1–2 minut, aby došlo k maximální transmukózní absorpci přímo do krevního oběhu. U vegetariánů, veganů, seniorů a osob užívajících Metformin nebo inhibitory protonové pumpy (Omeprazol) je sublingvální suplementace B12 kriticky nezbytná."
+    },
+    "warning": "Extrémně bezpečný vitamín bez horní hranice toxicity (přebytek se vylučuje močí). U aknózní pleti mohou megadávky (>5 000 mcg týdně) přechodně stimulovat kožní bakterie Cutibacterium acnes.",
+    "mechanism": "Methylkobalamin předává methylovou skupinu homocysteinu za vzniku methioninu v Kennedyho cyklu; adenosylkobalamin přeměňuje methylmalonyl-CoA na sukcinyl-CoA pro Krebsův cyklus.",
+    "halfLife": "T1/2 jaterních zásob je 1 až 4 roky (jediný vitamín rozpustný ve vodě s masivní jaterní rezervou)",
+    "interactions": [
+      "Kyselina listová / Methylfolát (nerozlučná synergie v metylačním cyklu)",
+      "Metformin a Omeprazol (blokují vstřebávání B12 ze stravy, vyžadují suplementaci)"
+    ],
+    "naturalSources": "Hovězí játra, hovězí maso, losos, vejce, sýry (živočišné produkty; rostlinná strava B12 neobsahuje).",
+    "bannedStatus": "Povoleno WADA, esenciální vitamín."
+  },
+  {
+    "id": 167,
+    "name": "Hloh obecný (Crataegus oxyacantha / Oligomerní procyanidiny)",
+    "categoryKey": "health",
+    "tags": [
+      "srdce",
+      "tlak",
+      "cévy",
+      "arytmie",
+      "bylina",
+      "lékárna"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-green",
+    "shortDesc": "Královský kardioprotektivní fytoterapeutický extrakt z listů a květů hlohu pro posílení myokardu a mikrocirkulace věnčitých tepen.",
+    "description": "Hloh obecný a jednosemenný (Crataegus oxyacantha / monogyna) je v evropské fytoterapii a lékárenství nejuznávanějším přírodním kardiotonikem. Standardizovaný extrakt (WS 1442) z listů a květů obsahuje oligomerní proanthokyanidiny (OPC) a flavonoidy (vitexin-rhamnosid, hyperosid). Hloh vykazuje mírný pozitivně inotropní účinek (zvyšuje sílu srdečního stahu bez zvýšení spotřeby kyslíku), negativně dromotropní (stabilizuje převodní systém myokardu a tlumí arytmie) a koronárně vazodilatační efekt. Je oficiálně schválen pro podporu srdeční funkce při mírném srdečním selhávání (NYHA I a II), stařeckém srdci a hypertenzi.",
+    "effects": [
+      "Zvýšení síly a efektivity srdečních stahů a ejekční frakce",
+      "Vazodilatace koronárních cév a zlepšení prokrvení myokardu",
+      "Zklidnění nervózního bušení srdce (palpitací) a nočních arytmií",
+      "Mírné snížení periferního cévního odporu a krevního tlaku"
+    ],
+    "dosage": {
+      "short": "300 – 900 mg standardizovaného extraktu (min. 18–20 % proanthokyanidinů) denně s jídlem",
+      "long": "Užívejte 300 mg dvakrát až třikrát denně s jídlem. Hloh působí jemně a kumulativně – plný terapeutický nástup vyžaduje kontinuální užívání po dobu minimálně 6 až 12 týdnů."
+    },
+    "warning": "Pokud užíváte digoxin, beta-blokátory nebo jiné léky na srdce, užívejte hloh pouze po konzultaci s kardiologem (může zesilovat jejich účinek).",
+    "mechanism": "Inhibice enzymu fosfodiesterázy (PDE-III) vede ke zvýšení cAMP v kardiomyocytech a zvýšení kontraktility; stimulace syntézy endoteliálního NO v cévách; antioxidační ochrana myokardu.",
+    "halfLife": "T1/2 flavonoidních metabolitů cca 4–8 hodin",
+    "interactions": [
+      "Koenzym Q10 (ultimátní synergie pro mitochondriální bioenergetiku myokardu)",
+      "Draslík a Hořčík (stabilizace srdečního rytmu a prevence křečí)"
+    ],
+    "naturalSources": "Listy, květy a zralé červené plody hlohu obecného (Crataegus).",
+    "bannedStatus": "Povoleno WADA, volně prodejná tradiční léčivá rostlina."
+  },
+  {
+    "id": 168,
+    "name": "Mladý ječmen (Green Barley - Sušená bio šťáva)",
+    "categoryKey": "health",
+    "tags": [
+      "antioxidanty",
+      "enzymy",
+      "chlorofyl",
+      "imunita",
+      "lékárna",
+      "bestseller"
+    ],
+    "rating": 4.6,
+    "colorType": "neon-green",
+    "shortDesc": "Vakuově sušená šťáva z mladých lístků ječmene bohatá na enzym superoxiddismutázu (SOD), chlorofyl a bioflavonoid 2-O-GIV.",
+    "description": "Mladý ječmen (Hordeum vulgare) sklizený v době raného růstu (před fází tvorby zrn) představuje jeden z celosvětově nejpopulárnějších zelených elixírů (Green Ways apod.). Špičkové přípravky neobsahují drcenou celulózovou trávu, nýbrž vylisovanou a za studena usušenou šťávu, která je 100% rozpustná a nezatěžuje trávicí trakt. Obsahuje vysoké koncentrace živých antioxidačních enzymů (především superoxiddismutázu - SOD a katalázu), chlorofyl, široké spektrum vitamínů skupiny B, beta-karoten, draslík a unikátní antioxidační glykosid 2-O-glycosylisovitexin (2-O-GIV), který vykazuje vyšší antioxidační potenciál proti peroxidaci lipidů než samotný vitamín E.",
+    "effects": [
+      "Silná neutralizace superoxidových volných radikálů díky enzymu SOD",
+      "Podpora acidobazické rovnováhy a alkalizace tkání",
+      "Zrychlení hojení zánětů sliznic a epitelů díky chlorofylu",
+      "Přirozená enzymatická podpora buněčné energie a detoxikace"
+    ],
+    "dosage": {
+      "short": "1 čajová lžička (cca 3–5 g) prášku rozmíchaná v chladné vodě 1–2x denně nalačno",
+      "long": "Rozmíchejte 1 lžičku ve sklenici vlažné nebo studené vody (nikdy teplé, aby se nezničily termolabilní enzymy) a vypijte ráno 20 minut před snídaní. Popíjejte po doušcích."
+    },
+    "warning": "Bezpečný i pro celiaky (v době raného růstu lístků neobsahuje ječmen lepek – lepek vzniká až v zrnech). Začínejte na poloviční dávce, abyste předešli přechodné detoxikační reakci.",
+    "mechanism": "Enzymatická dismutace superoxidového radikálu enzymem SOD na peroxid vodíku a vodu; bioflavonoid 2-O-GIV inhibuje oxidaci buněčných lipidových membrán; chlorofyl chelatuje cizorodé látky.",
+    "halfLife": "Enzymatická a trávicí aktivita v těle cca 12–24 hodin",
+    "interactions": [
+      "Chlorella a Spirulina (dokonalá synergie pro celkovou očistu organismu)",
+      "Vitamín C (zesílení antioxidační bariéry)"
+    ],
+    "naturalSources": "Mladé zelené výhonky ječmene setého pěstovaného v ekologickém zemědělství.",
+    "bannedStatus": "Povoleno WADA, přírodní zelená potravina."
   }
 ]

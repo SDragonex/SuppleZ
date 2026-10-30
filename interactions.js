@@ -179,6 +179,41 @@ const SYNERGIES = [
         title: 'Tesofensin + Berberin (Metabolický a anorektický synergismus)',
         mechanism: 'Kombinace centrální a periferní metabolické regulace. Tesofensin silně tlumí chuť k jídlu inhibicí reuptake dopaminu, serotoninu a noradrenalinu v CNS, zatímco Berberin aktivuje AMPK v játrech a svalech, zvyšuje citlivost na inzulín a brání ukládání viscerálního tuku.',
         tags: ['tuky', 'metabolismus', 'AMPK', 'sytost']
+    },
+    {
+        id: 'msm_joint_stack',
+        items: ['msm', 'glukosamin', 'vitamin c'],
+        title: 'MSM + Glukosamin & Chondroitin + Vitamín C (Kloubní trojkombinace)',
+        mechanism: 'Zlatý standard kloubní péče. MSM dodává organickou síru pro disulfidové vazby v kolagenu, glukosamin a chondroitin stimulují proteoglykany v chrupavce a vitamín C je nepostradatelným kofaktorem pro enzymy prolyl- a lysylhydroxylázu.',
+        tags: ['klouby', 'chrupavky', 'kolagen', 'synergie']
+    },
+    {
+        id: 'iron_vitc',
+        items: ['zelezo', 'vitamin c'],
+        title: 'Železo + Vitamín C (Maximální absorpce)',
+        mechanism: 'Askorbát v žaludečním chymu redukuje trojmocné železo (Fe3+) na vysoce rozpustné a vstřebatelné dvojmocné železo (Fe2+) a zabraňuje tvorbě nerozpustných hydroxidů železa v duodenu, čímž zvyšuje absorpci až o 300 %.',
+        tags: ['krev', 'ferritin', 'absorpce', 'synergie']
+    },
+    {
+        id: 'betaine_enzymes',
+        items: ['betain hcl', 'enzym'],
+        title: 'Betain HCL + Trávicí enzymy (Pankreatin / Bromelain)',
+        mechanism: 'Dvoufázové trávení potravy: Betain HCL acidifikuje žaludek na pH 1,5–2,0 a zahajuje denaturaci bílkovin pepsinem. Následný kyselý chymus stimuluje sekreci slinivky břišní, kde enzymatický komplex dokončuje štěpení živin.',
+        tags: ['trávení', 'žaludek', 'slinivka', 'vstřebávání']
+    },
+    {
+        id: 'butyrate_glutamine',
+        items: ['butyrat', 'glutamin'],
+        title: 'Butyrát sodný + L-Glutamin (Kompletní střevní obnova)',
+        mechanism: 'Duální palivo pro celý gastrointestinální trakt: Glutamin sytí a regeneruje enterocyty tenkého střeva, zatímco Butyrát sodný pokrývá energetické nároky kolonocytů v tlustém střevě a obnovuje těsné spoje (tight junctions) střevní bariéry.',
+        tags: ['střeva', 'mikrobiom', 'leaky-gut', 'IBS']
+    },
+    {
+        id: 'ginkgo_ginseng',
+        items: ['ginkgo', 'zensen'],
+        title: 'Ginkgo Biloba + Ženšen pravý (Cerebrální vitalita)',
+        mechanism: 'Klasická nootropní adaptogenní synergie. Ginkgo biloba rozšiřuje mozkové mikrovlásečnice a snižuje viskozitu krve ginkgolidy, zatímco ginsenosidy ze ženšenu stimulují syntézu acetylcholinu a normalizují stresovou osu HPA.',
+        tags: ['mozek', 'paměť', 'cirkulace', 'vitalita']
     }
 ];
 
@@ -217,10 +252,38 @@ const TIMING_CONFLICTS = [
         title: 'Vysoké dávky Kofeinu s Kreatinem bezprostředně před zátěží',
         conflict: 'Akutní vysoké dávky kofeinu (>5 mg/kg) mohou u citlivých jedinců interferovat se svalovou relaxační fází podporovanou fosfokreatinem.',
         advice: 'Kreatin užívejte stabilně ráno nebo po tréninku, kofein pouze jako akutní stimulant před výkonem.'
+    },
+    {
+        id: 'iron_calcium',
+        items: ['zelez', 'vapnik'],
+        title: 'Železo a Vápník / Mléčné výrobky současně',
+        conflict: 'Vápník přímo soutěží se železem o společný transportér DMT-1 v tenkém střevě a snižuje vstřebávání železa až o 60 %.',
+        advice: 'Užívejte s odstupem minimálně 2–3 hodin: Železo ráno nalačno s vitamínem C, Vápník k polednímu nebo večernímu jídlu.'
+    },
+    {
+        id: 'zma_calcium',
+        items: ['zma', 'vapnik'],
+        title: 'ZMA a Vápník / Kaseinový protein před spaním',
+        conflict: 'Vápník kompletně blokuje absorpci zinku a hořčíku na střevních transportérech, čímž eliminuje regenerační účinek formule ZMA.',
+        advice: 'ZMA užívejte na lačný žaludek před spaním a vyhněte se mléku, sýrům nebo kaseinovým nočním proteinům ve stejnou chvíli.'
     }
 ];
 
 const CRITICAL_WARNINGS = [
+    {
+        id: 'st_johns_wort_contraception',
+        items: ['trezalka', 'antikoncepce'],
+        title: 'Kritické selhání hormonální antikoncepce (Třezalka tečkovaná)',
+        warning: 'Třezalka tečkovaná je nejsilnější známý přírodní induktor jaterního enzymu CYP3A4 a P-glykoproteinu. Masivně zrychluje eliminaci ethinylestradiolu a progestinů z krve, což vede k fatálnímu selhání perorální antikoncepce a nechtěnému otěhotnění!',
+        severity: 'high'
+    },
+    {
+        id: 'st_johns_wort_ssri',
+        items: ['trezalka', 'ssri', 'antidepresiva'],
+        title: 'Život ohrožující serotoninový syndrom (Třezalka + Antidepresiva)',
+        warning: 'Hyperforin z třezalky inhibuje reuptake serotoninu. V kombinaci se syntetickými antidepresivy (SSRI, SNRI, IMAO, TCA) hrozí akutní serotoninový syndrom (třes, hypertermie, zmatenost, kardiovaskulární kolaps). Přísně kontraindikováno!',
+        severity: 'high'
+    },
     {
         id: 'serotonin_syndrome',
         items: ['5-htp', 'l-tryptofan', 'antidepresiva', 'ssri'],
@@ -265,7 +328,7 @@ const CIRCADIAN_RULES = {
         icon: 'wb_twilight',
         timeHint: 'Ihned po probuzení, 30 min před jídlem',
         color: 'var(--ui-accent)',
-        keywords: ['tyrosin', 'b-komplex', 'alcar', 'karnitin', 'bpc-157', 'glutamin', 'jód'],
+        keywords: ['tyrosin', 'b-komplex', 'alcar', 'karnitin', 'bpc-157', 'glutamin', 'jód', 'zelez', 'd-manoz', 'jecmen', 'b12'],
         reason: 'Vyžaduje kyselé prostředí žaludku a absenci soutěžících aminokyselin z potravy.'
     },
     morning_with_food: {
@@ -273,7 +336,7 @@ const CIRCADIAN_RULES = {
         icon: 'restaurant',
         timeHint: 'Společně s prvním jídlem obsahujícím lipidy',
         color: 'var(--neon-green)',
-        keywords: ['vitamín d3', 'vitamín k2', 'omega-3', 'coenzyme q10', 'kurkumin', 'cholin', 'křemík', 'selen'],
+        keywords: ['vitamín d3', 'vitamín k2', 'omega-3', 'coenzyme q10', 'kurkumin', 'cholin', 'křemík', 'selen', 'vitamin a', 'vitamin e', 'ginkgo', 'zensen', 'msm', 'boswellia', 'cesnek', 'enzym'],
         reason: 'Lipofilní látky vyžadují přítomnost žlučových kyselin a dietního tuku pro vstřebání.'
     },
     pre_workout: {
@@ -281,7 +344,7 @@ const CIRCADIAN_RULES = {
         icon: 'bolt',
         timeHint: '30–45 minut před fyzickým nebo duševním výkonem',
         color: 'var(--neon-yellow)',
-        keywords: ['kofein', 'citrullin', 'beta-alanin', 'alfa-gpc', 'rhodiola', 'phenylpiracetam', 'noopept'],
+        keywords: ['kofein', 'citrullin', 'beta-alanin', 'alfa-gpc', 'rhodiola', 'phenylpiracetam', 'noopept', 'cordyceps', 'zelena kava', 'fazole'],
         reason: 'Vrchol plazmatické koncentrace (Tmax) a vazodilatační stimulace v době maximální zátěže.'
     },
     evening_sleep: {
@@ -289,7 +352,7 @@ const CIRCADIAN_RULES = {
         icon: 'bedtime',
         timeHint: '30–60 minut před ulehnutím do postele',
         color: '#bf5af2',
-        keywords: ['magnesium', 'glycin', 'apigenin', 'melatonin', 'ashwagandha', 'gaba', 'tryptofan', 'cbd'],
+        keywords: ['magnesium', 'glycin', 'apigenin', 'melatonin', 'ashwagandha', 'gaba', 'tryptofan', 'cbd', 'zma', 'zmb6', 'trezalka', 'passiflora', 'mucka'],
         reason: 'Aktivace parasympatiku, modulace GABA receptorů a podpora architektury hlubokého spánku.'
     }
 };
@@ -424,6 +487,39 @@ const PRESET_STACKS = [
             { id: 600, name: 'Alfa-GPC' },
             { id: 316, name: 'Melatonin (Mikrodávkovaný 0.3 mg vs farmakologický 3–5 mg)' },
             { id: 300, name: 'L-Theanin' }
+        ]
+    },
+    {
+        id: 'joint_shield',
+        name: 'Kloubní trojkombinace & Regenerace chrupavek',
+        desc: 'Kompletní regenerace šlach, kloubního pouzdra a tlumení zánětu bez NSAID.',
+        items: [
+            { id: 148, name: 'MSM (Methylsulfonylmethan)' },
+            { id: 146, name: 'Glukosamin & Chondroitin Sulfát' },
+            { id: 149, name: 'Boswellia Serrata (Kyselina boswellová / 5-LOX inhibitor)' },
+            { id: 105, name: 'Vitamín C (Kyselina askorbová)' }
+        ]
+    },
+    {
+        id: 'gut_microbiome',
+        name: 'Obnova střevní stěny & Mikrobiom (Leaky Gut)',
+        desc: 'Duální výživa enterocytů a kolonocytů s obnovou těsných spojů a eubiózy.',
+        items: [
+            { id: 161, name: 'Butyrát sodný (Kyselina máselná enterosolventní)' },
+            { id: 162, name: 'Komplex probiotik (Laktobacily & Bifidobakterie)' },
+            { id: 115, name: 'Glutamin (L-Glutamin)' },
+            { id: 104, name: 'Zinek (Bisglycinát)' }
+        ]
+    },
+    {
+        id: 'vitality_immunity',
+        name: 'Lékárenská imunita & Vitalita',
+        desc: 'Zlatý lékárenský standard pro imunitní bariéru a ochranu buněk před viry.',
+        items: [
+            { id: 105, name: 'Vitamín C (Kyselina askorbová)' },
+            { id: 104, name: 'Zinek (Bisglycinát)' },
+            { id: 100, name: 'Vitamín D3 (Cholecalciferol)' },
+            { id: 157, name: 'Česnekový extrakt (Allicin standardizovaný)' }
         ]
     }
 ];

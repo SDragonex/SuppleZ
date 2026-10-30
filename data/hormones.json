@@ -2597,5 +2597,40 @@
       "endogenní hormon syntetizovaný v kardiomyocytech srdečních komor"
     ],
     "bannedStatus": "legal (endogenní diagnostický biomarker)"
+  },
+  {
+    "id": 571,
+    "name": "DAA (Kyselina D-asparagová / D-Aspartic Acid)",
+    "categoryKey": "hormones",
+    "tags": [
+      "testosteron",
+      "LH",
+      "plodnost",
+      "GymBeam",
+      "bestseller"
+    ],
+    "rating": 4.6,
+    "colorType": "neon-orange",
+    "shortDesc": "Endogenní D-enantiomer aminokyseliny stimulující uvolňování GnRH a LH a přímou syntézu testosteronu v Leydigových buňkách.",
+    "description": "Kyselina D-asparagová (DAA) je přirozeně se vyskytující D-aminokyselina, která se fyziologicky akumuluje v neuroendokrinních tkáních: v hypotalamu, adenohypofýze a varlatech. V hypotalamu aktivuje NMDA receptory, což spouští pulzní sekreci gonadoliberinu (GnRH). V hypofýze stimuluje uvolňování luteinizačního hormonu (LH) a růstového hormonu (GH). V Leydigových buňkách varlat DAA přímo upreguluje protein StAR (Steroidogenic Acute Regulatory Protein), který přenáší cholesterol přes mitochondriální membránu, což je rychlost určující krok celé steroidogeneze. U mužů s hraničním testosteronem prokazatelně zvyšuje hladinu volného testosteronu a hustotu spermií.",
+    "effects": [
+      "Akutní vzestup luteinizačního hormonu (LH) a celkového testosteronu (o 30–45 %)",
+      "Zvýšení počtu, motility a kvality spermií u subfertilních mužů",
+      "Podpora svalové síly, libida a tréninkové agresivity",
+      "Stimulace proteinu StAR a mitochondriálního transportu cholesterolu ve varlatech"
+    ],
+    "dosage": {
+      "short": "3 000 mg (3 g) denně ráno nalačno nebo před tréninkem",
+      "long": "Standardní klinicky ověřená dávka je 3 000 mg rozpuštěná ve vodě ráno nalačno. Zásadní je DAA cyklovat: užívejte 12 až 14 dní v kuse, poté zařaďte 10–14 dní pauzu. Tělo po cca 2 týdnech aktivuje kompenzační enzym D-aspartát oxidázu (D-ASPO), která DAA odbourává."
+    },
+    "warning": "Při kontinuálním užívání bez pauz ztrácí účinnost a může vést ke zvýšení aromatizace na estradiol nebo mírnému vzestupu prolaktinu. Vždy dodržujte cyklování!",
+    "mechanism": "Aktivace NMDA receptorů v hypotalamu; up-regulace exprese mRNA proteinu StAR a cytochromu P450scc v mitochondriích Leydigových buněk.",
+    "halfLife": "T1/2 cca 4–6 hodin (rychle metabolizováno enzymem D-aspartát oxidázou)",
+    "interactions": [
+      "Zinek a Bor (synergie pro snížení SHBG a podporu volného testosteronu)",
+      "DIM (Diindolylmethan - prevence aromatizace nově vytvořeného testosteronu na estrogen)"
+    ],
+    "naturalSources": "V nepatrném stopovém množství ve fermentovaných potravinách a klíčcích; pro suplementaci se syntetizuje.",
+    "bannedStatus": "Povoleno WADA, volně prodejná aminokyselina."
   }
 ]

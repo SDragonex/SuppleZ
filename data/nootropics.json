@@ -1489,5 +1489,79 @@
       "korálovec ježatý (Hericium erinaceus / Lion's Mane)"
     ],
     "bannedStatus": "legal"
+  },
+  {
+    "id": 639,
+    "name": "Ginkgo Biloba (Standardizovaný extrakt EGb 761)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "paměť",
+      "prokrvení",
+      "tinitus",
+      "mikrocirkulace",
+      "lékárna",
+      "bestseller"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-cyan",
+    "shortDesc": "Globální lékárenský bestseller standardizovaný na 24 % flavonových glykosidů a 6 % terpenolaktonů pro prokrvení mozku a vnitřního ucha.",
+    "description": "Ginkgo biloba (jinan dvoulaločný) je prehistorický strom, jehož listy poskytují celosvětově nejprodávanější fytoterapeutický nootropní extrakt (klinický standard EGb 761). Extrakt je přesně standardizován na 24 % ginkgoflavonových glykosidů (kvercetin, kempferol) a 6 % terpenických laktonů (ginkgolidy A, B, C a bilobalid). Ginkgolid B je vysoce specifický antagonista faktoru aktivujícího krevní destičky (PAF), čímž snižuje viskozitu krve a brání mikrotrombózám. Bilobalid chrání mitochondrie neuronů před ischémií. Ginkgo prokazatelně zvyšuje perfuzi a mikrocirkulaci v mozkové kůře a vláskových buňkách vnitřního ucha, což z něj činí lék volby pro tinitus (pískání v uších), závratě a vaskulární kognitivní deficit.",
+    "effects": [
+      "Zlepšení mozkové mikrocirkulace, oxygenace a dodávky glukózy do neuronů",
+      "Léčba a zmírnění tinitu (hučení a pískání v uších) a závratí vaskulárního původu",
+      "Podpora krátkodobé paměti, rychlosti zpracování informací a pozornosti",
+      "Ochrana cévního endotelu a prevence syndromu studených rukou a nohou"
+    ],
+    "dosage": {
+      "short": "120 – 240 mg standardizovaného extraktu (24/6) denně rozděleně s jídlem",
+      "long": "Standardní klinické dávkování je 60–120 mg dvakrát denně s jídlem (ráno a v poledne). Nástup znatelného klinického účinku na tinitus a kognici vyžaduje minimálně 4 až 8 týdnů kontinuálního užívání."
+    },
+    "warning": "Vzhledem k inhibici PAF mírně prodlužuje dobu krvácení. Neužívejte s warfarinem, nesteroidními antirevmatiky nebo před operacemi bez konzultace s lékařem.",
+    "mechanism": "Inhibice destičkového aktivačního faktoru (PAF) ginkgolidy snižuje viskozitu krve a agregaci destiček; stimulace endoteliální syntézy NO a prostacyklinu vede k mikrovazodilataci; bilobalid udržuje mitochondriální respiraci a syntézu ATP.",
+    "halfLife": "T1/2 ginkgolidu A a B je cca 4 hodiny, bilobalidu cca 3 hodiny",
+    "interactions": [
+      "Vinpocetin (synergická cerebrální vazodilatace a perfuze)",
+      "Bacopa Monnieri a Lion's Mane (komplexní neuroprotekce a konsolidace paměti)",
+      "Antikoagulancia a Warfarin (zvýšené riziko krvácivosti)"
+    ],
+    "naturalSources": "Listy jinanu dvoulaločného (Ginkgo biloba); surové listy a plody obsahují toxické ginkgolové kyseliny, proto se užívá výhradně čištěný extrakt.",
+    "bannedStatus": "Povoleno WADA, volně prodejný standardizovaný bylinný lék a doplněk."
+  },
+  {
+    "id": 640,
+    "name": "Ženšen pravý (Panax Ginseng / C.A. Meyer)",
+    "categoryKey": "nootropics",
+    "tags": [
+      "energie",
+      "vitalita",
+      "adaptogen",
+      "imunita",
+      "lékárna",
+      "americké doplňky"
+    ],
+    "rating": 4.8,
+    "colorType": "neon-yellow",
+    "shortDesc": "Král asijských adaptogenů, standardizovaný korejský červený ženšen s obsahem ginsenosidů pro mentální energii a odolnost vůči stresu.",
+    "description": "Panax ginseng (ženšen pravý, korejský červený ženšen) je nejznámějším a historicky nejvíce ceněným adaptogenem asijské medicíny. Za své účinky vděčí skupině triterpenoidních saponinů nazývaných ginsenosidy (protopanaxadioly Rb1, Rc, Rd a protopanaxatrioly Rg1, Re), které zráním a napařováním kořene přecházejí na vysoce bioaktivní vzácné ginsenosidy (Rg3, Rh2, Compound K). Ženšen normalizuje osu hypotalamus-hypofýza-nadledviny (HPA), zvyšuje citlivost na inzulín, stimuluje syntézu oxidu dusnatého v endotelu a centrálně moduluje neurotransmisi acetylcholinu a dopaminu.",
+    "effects": [
+      "Odstranění chronické mentální i fyzické vyčerpanosti a únavy",
+      "Zvýšení pracovní kapacity, soustředění a psychické odolnosti pod tlakem",
+      "Podpora erektilní funkce a libida díky stimulaci endoteliálního NO",
+      "Posílení vrozené imunity a fagocytární aktivity makrofágů"
+    ],
+    "dosage": {
+      "short": "200 – 400 mg standardizovaného extraktu (min. 4–10 % ginsenosidů) ráno se snídaní",
+      "long": "Užívejte 200 až 400 mg kvalitního extraktu ráno nebo dopoledne s jídlem. U fermentovaných forem ženšenu (bohatých na Compound K) postačuje 100–200 mg. Doporučuje se cyklovat: 6–8 týdnů užívání následovaných 2 týdny pauzy."
+    },
+    "warning": "Neužívejte pozdě odpoledne nebo večer (může způsobit nespavost). Opatrnost u lidí s neléčenou hypertenzí.",
+    "mechanism": "Modulace osy HPA a glukokortikoidních receptorů; aktivace eNOS stimuluje vazodilataci; ginsenosid Rg1 stimuluje uvolňování acetylcholinu v hippocampu.",
+    "halfLife": "T1/2 ginsenosidů 2–4 hodiny, finální metabolit Compound K cca 12–18 hodin",
+    "interactions": [
+      "Rhodiola Rosea (ultimátní adaptogenní stack proti stresu a vyhoření)",
+      "Ginkgo Biloba (klasická synergie pro mentální energii a krevní oběh)",
+      "Kofein (ženšen prodlužuje a stabilizuje energetický účinek kofeinu bez propadu)"
+    ],
+    "naturalSources": "Kořen rostliny Panax ginseng (ideálně 6letý korejský červený ženšen).",
+    "bannedStatus": "Povoleno WADA, volně prodejný přírodní adaptogen."
   }
 ]

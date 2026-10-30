@@ -795,5 +795,78 @@
       "syntetické nízkomolekulární molekuly"
     ],
     "bannedStatus": "na lékařský předpis (Dayvigo / Belsomra)"
+  },
+  {
+    "id": 320,
+    "name": "Třezalka tečkovaná (Hypericum perforatum / St. John's Wort)",
+    "categoryKey": "sleep",
+    "tags": [
+      "nálada",
+      "deprese",
+      "spánek",
+      "CYP3A4",
+      "kritické-interakce",
+      "lékárna"
+    ],
+    "rating": 4.5,
+    "colorType": "neon-yellow",
+    "shortDesc": "Tradiční bylinné antidepresivum s hypericinem a hyperforinem; KRITICKÝ lékárenský induktor jaterního enzymu CYP3A4 a P-glykoproteinu.",
+    "description": "Třezalka tečkovaná (Hypericum perforatum) je nejznámější a klinicky nejprozkoumanější léčivá bylina pro léčbu mírné až středně těžké deprese, úzkosti a sezónní afektivní poruchy. Její bioaktivní složka hyperforin neselektivně inhibuje reuptake serotoninu, dopaminu, noradrenalinu, GABA a L-glutamátu. Zásadní medicínský význam třezalky však spočívá v tom, že je nejsilnějším známým přírodním aktivátorem pregnanového X receptoru (PXR), čímž masivně indukuje jaterní a střevní enzym cytochrom P450 CYP3A4 a efluxní pumpu P-glykoprotein (P-gp). Tím dramaticky urychluje odbourávání stovek léčiv (od antikoncepce přes antidepresiva až po léky na srdce), což může způsobit fatální selhání léčby!",
+    "effects": [
+      "Prokazatelné zlepšení nálady, útlum úzkosti a vnitřního neklidu",
+      "Podpora architektury spánku a regulace cirkadiánního rytmu",
+      "Neselektivní inhibice zpětného vychytávání monoaminových neurotransmiterů",
+      "Kritická farmakologická indukce enzymu CYP3A4 a P-glykoproteinu"
+    ],
+    "dosage": {
+      "short": "300 mg standardizovaného extraktu (0,3 % hypericinu) 2x až 3x denně s jídlem",
+      "long": "Standardní klinická dávka je 300 mg extraktu třikrát denně s jídlem (nebo 900 mg v jedné denní dávce). Nástup plného antidepresivního účinku vyžaduje 2 až 4 týdny pravidelného užívání. PŘED ZAHÁJENÍM UŽÍVÁNÍ ZKONTROLUJTE VŠECHNY UŽÍVANÉ LÉKY!"
+    },
+    "warning": "KRITICKÁ VAROVÁNÍ: 1. Přísně zakázáno kombinovat se syntetickými antidepresivy (SSRI, SNRI, IMAO) – hrozí život ohrožující SEROTONINOVÝ SYNDROM! 2. Způsobuje selhání perorální hormonální antikoncepce (nechtěné otěhotnění). 3. Vyvolává fotosenzitivitu kůže (snadné spálení na slunci).",
+    "mechanism": "Hyperforin moduluje sodíkové gradienty a blokuje synaptosomální reuptake serotoninu a dopaminu; aktivace nukleárního receptoru PXR spouští masivní transkripci genu CYP3A4 a ABCB1 (P-glykoprotein).",
+    "halfLife": "T1/2 hyperforinu cca 9 hodin, T1/2 hypericinu cca 24–48 hodin",
+    "interactions": [
+      "Hormonální antikoncepce (masivní indukce CYP3A4 způsobuje selhání antikoncepce)",
+      "SSRI / Antidepresiva (extrémní riziko serotoninového syndromu)",
+      "Warfarin, Cyklosporin, Digoxin, Statiny (prudký pokles účinnosti léčiv)"
+    ],
+    "naturalSources": "Kvetoucí nať třezalky tečkované (Hypericum perforatum).",
+    "bannedStatus": "Povoleno WADA, volně prodejná léčivá bylina podléhající lékovým varováním."
+  },
+  {
+    "id": 321,
+    "name": "Mučenka pletní (Passiflora incarnata - Extrakt)",
+    "categoryKey": "sleep",
+    "tags": [
+      "úzkost",
+      "spánek",
+      "GABA",
+      "zklidnění",
+      "bylina",
+      "lékárna"
+    ],
+    "rating": 4.7,
+    "colorType": "neon-cyan",
+    "shortDesc": "Jemný bylinný anxiolytický a sedativní extrakt s obsahem vitexinu modulující GABA-A receptory bez návykovosti a ranní otupělosti.",
+    "description": "Mučenka pletní (Passiflora incarnata) je tradiční americká léčivá liána, jejíž kvetoucí nať obsahuje bioaktivní flavonoidy (vitexin, isovitexin, orientin) a harmanové alkaloidy. Extrakt z mučenky se váže přímo na GABA-A receptorový komplex (na odlišné vazebné místo než benzodiazepiny) a usnadňuje vazbu kyseliny gama-aminomáselné. Tím tlumí neuronální excitabilitu v limbickém systému a amygdale, eliminuje roztěkanost, somatické projevy stresu a noční přemýšlení (racing thoughts), což umožňuje přirozený a ničím nerušený přechod do hlubokého spánku bez rizika tolerance či ranní kocoviny.",
+    "effects": [
+      "Rychlé odbourání psychického napětí, stresu a generalizované úzkosti",
+      "Zkrácení doby usínání a zlepšení kvality a kontinuity spánku",
+      "Neuvolňuje svaly natolik, aby způsobila slabost, nezpůsobuje závislost",
+      "Synergická součinnost s ostatními spánkovými bylinami (kozlík, meduňka)"
+    ],
+    "dosage": {
+      "short": "250 – 500 mg standardizovaného suchého extraktu 30–60 minut před spaním",
+      "long": "Užívejte 250 až 500 mg extraktu zapitého vodou 30–60 minut před ulehnutím do postele. Při denní úzkosti a nervozitě lze užívat menší dávku 150–200 mg 2x denně."
+    },
+    "warning": "Nekombinujte s alkoholem a silnými sedativy (benzodiazepiny, z-hypnotika). Neužívejte před řízením motorových vozidel.",
+    "mechanism": "Pozitivní allosterická modulace GABA-A receptorů; mírná inhibice monoaminooxidázy (MAO) alkaloidy harmanové řady v nepatrném rozsahu.",
+    "halfLife": "T1/2 flavonoidních metabolitů cca 4–6 hodin",
+    "interactions": [
+      "Kozlík lékařský a Meduňka (osvědčená lékárenská trojkombinace pro spánek)",
+      "L-Theanin a Magnesium Bisglycinát (komplexní večerní ztišení mozku)"
+    ],
+    "naturalSources": "Kvetoucí nadzemní část liány Passiflora incarnata.",
+    "bannedStatus": "Povoleno WADA, bezpečná léčivá bylina."
   }
 ]
